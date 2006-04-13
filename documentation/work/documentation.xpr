@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <meta>
+        <filters directoryPatterns="" filePatterns=""/>
+    </meta>
+    <projectTree name="documentation.xpr">
+        <folder name="documentation">
+            <folder name="chapters">
+                <file name="chapters/admin_guide.xml"/>
+                <file name="chapters/glossary.xml"/>
+                <file name="chapters/moderator_guide.xml"/>
+                <file name="chapters/quick_start_guide.xml"/>
+                <file name="chapters/upgrade_guide.xml"/>
+                <file name="chapters/user_guide.xml"/>
+            </folder>
+            <file name="olympus_doc.xml"/>
+        </folder>
+    </projectTree>
+</project>

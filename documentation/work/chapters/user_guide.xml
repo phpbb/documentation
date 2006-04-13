@@ -1,0 +1,358 @@
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<chapter id="user_guide">
+    <title>User Guide</title>
+    <abstract>
+        <para>This chapter is targeted at the forum users. It explains all user facing functions
+            that are needed to use phpBB 3.0.</para>
+    </abstract>
+    <section id="user_permissions">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>AdamR</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>How user permissions affect forum experience</title>
+        <para>phpBB3 uses permissions, on a per-user or per-usergroup basis, to allow or disallow
+            users to access certain functions or features which the bulletin board has to offer.
+            Such things include posting in forums, having an avatar, or being able to communicate
+            through private messages, along with tons of other options. All of the permissions are
+            definable through the Administration Panel.</para>
+        <para>Permissions can also be set to allow users or appointed members to perform special
+            tasks or have special abilities on the bulletin board. Permissions allow the
+            Administrator to define which moderation functions and in which forums certain users or
+            groups of users are allowed to use. The administrator can also allow users to gain
+            access to defined sections of the Administration panel, keeping important settings or
+            functions restricted and safe.</para>
+    </section>
+    <section id="user_registering">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>zeroK</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Registering on a phpBB3 board</title>
+        <para>The basic procedure of registering an account on a phpBB3 board consists in the
+            simplest case of only two steps: <orderedlist>
+                <listitem>
+                    <para>After following the "Register" link you should see the board rules. If you
+                        agree to these terms the registration process continues. If you don't agree
+                        you can't register your account</para>
+                </listitem>
+                <listitem>
+                    <para>Now you see a short form for entering your user information where you can
+                        specify your username, e-mail address, password, language and
+                    timezone.</para>
+                </listitem>
+
+            </orderedlist>
+        </para>
+        <para>As mentioned above, this is only the simplest case. The board can be configured to add
+            some additional steps to the registration process. </para>
+        <itemizedlist>
+            <listitem>
+                <para>If you get a site where you have to select whether you were born before or
+                    after a specified date, the administrator has enabled this to comply with the
+                    U.S. <emphasis>COOPA</emphasis> act. If you are younger than 13 years, your
+                    account will stay inactive until it is approved by a parent or guardian. You
+                    will receive an e-mail where the next steps required for your account activation
+                    are described. </para>
+            </listitem>
+            <listitem>
+                <para>If you see in the form where you can specify your username, password etc. a
+                    graphic with some wierd looking characters, then you see the so called
+                        <emphasis>Visual Confirmation</emphasis>. Simply enter these characters into
+                    the <guilabel>Confirmation code</guilabel> field and proceed with the
+                    registration. </para>
+            </listitem>
+            <listitem>
+                <para>Another option is the account activation. Here the administrator can make it a
+                    requirement that you have to follow and link mailed to you after registering
+                    before your account is activated. In this case you will see a message similiar
+                    to this one: <blockquote>
+                        <para> Your account has been created. However, this forum requires account
+                            activation, an activation key has been sent to the e-mail address you
+                            provided. Please check your e-mail for further information </para>
+                    </blockquote>
+                </para>
+                <para>It is also possible that the administrator himself/herself has to activate the
+                    account. <blockquote>
+                        <para> Your account has been created. However, this forum requires account
+                            activation by the administrator. An e-mail has been sent to them and you
+                            will be informed when your account has been activated. </para>
+                    </blockquote> In this case please have some patience with the administrators to
+                    review your registration and activate your account. </para>
+            </listitem>
+        </itemizedlist>
+    </section>
+    <section id="user_control_panel">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>Heimidal</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Orienting Yourself in the User Control Panel</title>
+        <para>The User Control Panel (UCP) allows you to alter personal preferences, manage posts
+            you are watching, send and receive private messages, and change the way information
+            about you appears to other users. To view the UCP, click the 'User Control Panel' link
+            that appears after logging in.</para>
+        <para>The UCP is separated into seven tabs: Overview, Private Messages, Profile,
+            Preferences, Friends and Foes, Attachments, and Groups. Within each tab are several sub
+            pages, accessed by clicking the desired link on the left side of the UCP interface. Some
+            of these areas may not be available depending on the permissions set for you by the
+            administrator.</para>
+        <para>Every page of the UCP displays your Friends List on the left side. To send a private
+            message to a friend, click their user name.</para>
+        <para>TODO: Note that Private messaging will be discussed in its own section</para>
+        <section id="ucp_overview">
+            <title>Overview</title>
+            <para>The Overview displays a snapshot of information about your posting habits such as
+                the date you joined the forum, your most active topic, and how many total posts you
+                have submitted. Overview sub pages include Subscriptions, Bookmarks, and Drafts.</para>
+            <mediaobject>
+                <imageobject>
+                    <imagedata format="PNG" fileref="../images/user_guide/ucp_overview.png"/>
+                </imageobject>
+                <caption>
+                    <para>The UCP Overview section - example screenshot</para>
+                </caption>
+            </mediaobject>
+            <section id="ucp_subscriptions">
+                <title>Subscriptions</title>
+                <para>Subscriptions are forums or individual topics that you have elected to watch
+                    for any new posts. Whenever a new post is made inside an area you have
+                    subscribed to, an e-mail will be sent you to informing you of the new addition.
+                    To create a subscription, visit the forum or topic you would like to subscribe
+                    to and click the 'Subscribe' link located at the bottom of the page.</para>
+                <para>To remove a subscription, check the box next to the subscription you would
+                    like to remove and click the 'Unsubscribe' button.</para>
+            </section>
+            <section id="ucp_bookmarks">
+                <title>Bookmarks</title>
+                <para>Bookmarks, much like subscriptions, are topics you've chosen to watch.
+                    However, there are two key differences: 1) only individual topics may be
+                    bookmarked, and 2) an e-mail will not be sent to inform you of new posts.</para>
+                <para>To create a bookmark, visit the topic you would like to watch and click the
+                    'Bookmark Topic' link located at the bottom of the page.</para>
+                <para>To remove a bookmark, check the box next to the bookmark you would like to
+                    remove and click the 'Remove marked bookmarks' button.</para>
+            </section>
+            <section id="ucp_drafts">
+                <title>Drafts</title>
+                <para>Drafts are created when you click the 'Save' button on the New Post or Post
+                    Reply page. Displayed are the title of your post, the forum or topic that the
+                    draft was made in, and the date you saved it.</para>
+                <para>To continue editing a draft for future submission, click the 'View/Edit' link.
+                    If you plan to finish and post the message, click 'Load Draft'. To delete a
+                    draft, check the box next to the draft you wish to remove and click 'Delete
+                    Marked'.</para>
+            </section>
+        </section>
+        <section id="ucp_profile">
+            <title>Profile</title>
+            <para>TODO: Short explanation of what this section is for. Needs to be clear why Profile
+                and Preferences are separated.</para>
+            <section>
+                <title>Personal settings</title>
+                <para>TODO: Explain the settings you can edit here. </para>
+            </section>
+            <section>
+                <title>Registration details</title>
+                <para>TODO: Explain the settings you can edit here.</para>
+            </section>
+            <section id="ucp_signature">
+                <title>Signature</title>
+                <para>TODO: Explain the settings you can edit here. Link to the BBcode explanation
+                    of the Posting section would be best.</para>
+            </section>
+            <section id="ucp_avatar">
+                <title>Avatar</title>
+                <para>TODO: Explain the settings you can edit here. Experience may differ on forum
+                    settings again. Short paragraph about the avatar gallery.</para>
+            </section>
+        </section>
+        <section id="ucp_preferences">
+            <title>Preferences</title>
+            <para>TODO: Short explanation of what this section is for.</para>
+            <section id="ucp_personal">
+                <title>Personal</title>
+                <para>TODO: Explain the settings you can edit here. The date setting will offer
+                    presets, so a link to the <ulink url="http://www.php.net/date">php.net date
+                        function</ulink> for advanced users should be enough.</para>
+            </section>
+            <section id="ucp_viewing">
+                <title>Viewing</title>
+                <para>TODO: Explain the settings you can edit here. </para>
+            </section>
+            <section id="ucp_posting">
+                <title>Posting</title>
+                <para>TODO: Explain the settings you can edit here. </para>
+            </section>
+        </section>
+        <section id="ucp_friends_foes">
+            <title>Friends and Foes</title>
+            <para>TODO: (Not sure if this deserves its own section yet. For 3.0 this does not have
+                much of an influence on the overall forum experience, this might change with 3.2, so
+                leaving it here for now.) Write a detailed explanation about what Friends and Foes
+                are and how they affect the forum like hiding posts of foes, adding users to the
+                friends list for fast access / online checks, and so forth.</para>
+        </section>
+        <section id="ucp_attachments">
+            <title>Attachments</title>
+            <para>TODO: The attachment section of the UCP shows you a list of all attachments that
+                you have uploaded to the board so far ... </para>
+        </section>
+        <section id="ucp_usergroups">
+            <title>Usergroups</title>
+            <para>TODO: Work in progress, might change, so not sure how this is going to be
+                structured.</para>
+        </section>
+    </section>
+    <section id="user_posting">
+        <title>Mastering the Posting Screen</title>
+        <para>TODO: How to write a new post and how to reply. Special items like attachments or
+            polls are subsections. Don't forget to mention the "someone has replied before you
+            replied" feature, the topic review, and so forth. Topic icons, smilies, post options,
+            usage of HTML ... it would probably best to add a screenshot with arrows to the
+            different sections.</para>
+        <para>Posting is the purpose of bulletin boards and the forums contained within them.
+            Posting allows you to start a new topic for discussion or reply to an existing one which
+            another user has created. There are a few things you may want to know about posting
+            before you get started.</para>
+        <para>To post a new topic or reply to an existing one, first you must enter the forum you
+            wish to post in by clicking its link on the index. On the forum's page, you will see one
+            button at the top-left corner above the topics already existing. To begin a new topic,
+            click this button labled, "New Topic." In order to reply to an existing topic, from the
+            forum's page, click a topic's link to enter its page. Here you will see two buttons at
+            the top-left corner above the posts. To reply to this topic, hit the "New Reply" button.
+            Clicking the "New Topic" button on this page will create a new topic in the forum you
+            are currently in.</para>
+        <para>Clicking either of these buttons will bring you to the posting page. Here you have
+            several options as to how you'd like your topic or reply to be displayed on the topic
+            page. When creating a new topic, you must enter a subject in the subject field. However,
+            if you are replying to a topic, only a message is required. Hitting submit after
+            entering a message (and subject for new topics) without any extra settings. Will simply
+            enter your message using your profile's and/or the board's default settings. The special
+            features in posting are examined below.</para>
+        <section id="posting_bbcodes">
+            <title>BBcodes</title>
+            <para>TODO: What are BBcodes. Again, permission based which ones you can use. Explain
+                syntax of the default ones (quote and URL for instance). How to disable BBcode by
+                default, how to disable/enable it for one post.</para>
+            <para>BBCode stands for Bulletin Board Code. BBCodes are a way for you to format your
+                message's text and how its content is displayed. BBCode is much like HTML but
+                simplified for use on bulletin boards. Whether or not users can use BBCode is up to
+                the permissions set by the Administrator on the board. If you are allowed to use
+                BBCode when posting messages, you will see "BBCode is ON" under "Options" to the
+                left side below the message box.</para>
+            <para>You can also control whether or not you wish to see other user's BBCode in your
+                persoanl account preferences.. For more information about changing these settings,
+                see the <link linkend="ucp_preferences">UCP Perferences</link> section.</para>
+            <para>BBCode is used by placing the text you wish to format in between two BBCode tags.
+                To make text bold, you would enclose it in B tags: [b]bolded text[/b]. Italisized
+                text uses the [i][/i] tags, and to underline, you would use the [u][/u] tags. Some
+                tags, such as quote and URL, allow for attributes to be used. Attributes gain
+                further control to be gained over the appearance of the text.</para>
+            <para>For example, to quote another user or perhaps something else you wish to specify,
+                you can enter [quote="person being quoted"]Here is the text which will be
+                quoted![/quote] into the message box. This will, when the message is posted, display
+                in its own box set off from the rest of your message, letting users know this is a
+                quote, and showing who or what it is quoted from.</para>
+            <para>As another example, to make text a hyperlink to another page, you can use the URL
+                BBCode tag and it's attribute, which is the URL you wish to point the text
+                hyperlinked to. Entering [URL=http://www.phpbb.com]Click here to go to phpBB[/URL]
+                into the message box would display the text "Click here to go to phpBB" as a
+                hyperlink. When someone clicks this link, they will be taken to www.phpbb.com.</para>
+            <para>Custom BBCodes can be crated by the Administrator of the forum.</para>
+
+        </section>
+        <section id="posting_attachments">
+            <title>Attachments</title>
+            <para>TODO: How to add attachments, what restrictions might there be. Note that one
+                needs to have the permission to use attachments. How to add more than one file, and
+                so forth.</para>
+        </section>
+        <section id="posting_polls">
+            <title>Polls</title>
+            <para>TODO: Again, permission based should be noted. Explain how to add the different
+                options, allow for multiple votes, vote changing, and so forth.</para>
+        </section>
+        <section id="posting_drafts">
+            <title>Drafts</title>
+            <para>TODO: Explain how to load and save drafts. A link to the UCP drafts section should
+                be added for reference. Not sure if permission based.</para>
+        </section>
+    </section>
+    <section id="user_pm">
+        <title>Communicate with Private Messages</title>
+        <para>phpBB 3.0 allows its users to communicate privately by using Private Messages. To
+            visit the Private Messages section, you either can click on the [X new messages] link on
+            the left hand side below the forum header, or you can directly access it through the
+                <link linkend="user_control_panel">User Control Panel.</link>.</para>
+        <para>Depending on your [settings], there are 3 ways of being notified that a new Private
+            Message has arrived:</para>
+        <orderedlist>
+            <listitem>
+                <para>By receiving an e-mail or Jabber message</para>
+            </listitem>
+            <listitem>
+                <para>While browsing the forum a notification window will pop up</para>
+            </listitem>
+            <listitem>
+                <para>The [X new messages] link will show the number of currently unread
+                messages</para>
+            </listitem>
+        </orderedlist>
+        <para>You can set the options to your liking in the <link linkend="ucp_prefrences"
+                >Preferences section</link>. Note, that for the popup window notification to work,
+            your will have to add the forum you are visiting to your browser’s popup blocker white
+            list.</para>
+        <para>You can choose to not receive Private Messages by other users in your <link
+                linkend="ucp_prefrences"> Preferences</link>. Note, that moderators and
+            administrators will still be able send you Private Messages, even if you have disabled
+            them.</para>
+        <para>[To use this feature, you have to be a registered user and need the to have the
+            correct permissions.]</para>
+        <section id="pm_display">
+            <title>Message display</title>
+            <para>The Inbox is the default incoming folder, which contains a list
+                of your recently received Private Messages. </para>
+        </section>
+        <section id="pm_new">
+            <title>Composing a new message</title>
+            <para>TODO: Similar to the posting screen, so a reference for the basic functions should
+                be enough. What needs to be explained are the To and Bcc fields, how they integrate
+                with the friends list and how to find members (which could also be a link to the
+                memberlist section).</para>
+        </section>
+        <section id="pm_folders">
+            <title>Message folders</title>
+            <para>TODO: How to manage folders, how to create new ones, how to delete them. How to
+                move messages between folders. What happens if a folder is full, what are the
+                options to influence that? Also how to mark messages as important, how to delete
+                messages (not sure about that one)?</para>
+        </section>
+        <section id="pm_filters">
+            <title>Message filters</title>
+            <para>TODO: How to work with message filters. That is quite a complex system</para>
+        </section>
+    </section>
+    <section id="user_search">
+        <title>Search - How to Find What You are Looking For</title>
+        <para>TODO: Explain how to use the search system. This should also include the results page,
+            and the refine function. Also note, that the title (Search: search term) is a link that
+            one can copy and paste into a post to directly link to the results. Egosearch and the
+            global search field should also be included here.</para>
+    </section>
+    <section id="user_memberlist">
+        <title>The Memberlist - More Than Meets the Eye</title>
+        <para>TODO: Give a short introduction into how to search for someone on the memberlist, how
+            you can sort the table using the table headers, and so forth.</para>
+    </section>
+</chapter>

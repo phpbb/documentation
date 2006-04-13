@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<chapter id="admin_guide">
+    <title>Admin Guide</title>
+    <abstract>
+        <para>This chapter describes the phpBB 3.0 admin controls.</para>
+    </abstract>
+    <section>
+        <title>The Admin Control Panel (ACP)</title>
+        <para>Some information about the admin control panel.</para>
+    </section>
+</chapter>

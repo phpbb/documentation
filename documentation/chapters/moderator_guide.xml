@@ -1,0 +1,100 @@
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<chapter id="moderator_guide">
+    <title>Moderator Guide</title>
+    <abstract>
+        <para>This chapter describes the phpBB 3.0 forum moderation controls.</para>
+    </abstract>
+    <section id="moderator_edit">
+        <title>Editing posts</title>
+        <para>TODO: When are moderators allowed to edit posts, how are edited posts displayed. Which
+            further options does the moderator have in the posting screen (preventing further
+            editing for instance).</para>
+    </section>
+    <section id="moderator_modtools">
+        <title>Moderation tools</title>
+        <para>TODO: A short description of the mod tools locking, deleting, copy, move, change topic
+            type (with link to section about topic types in the Userguide) first, then the more
+            advanced split, merge functions.</para>
+        <section id="modtools_lock">
+            <title>Locking a topic or post</title>
+            <para>TODO: A description of how to lock a topic. Also needs a link or description of
+                the difference between locking a topic and a post.</para>
+        </section>
+        <section id="modtools_delete">
+            <title>Deleting a topic or post</title>
+            <para>TODO: A description of how to delete topics and posts. Needs warning that deleting
+                is as of yet (unless the developers add the recycle bin feature)
+            irreversible.</para>
+        </section>
+        <section id="modtools_move">
+            <title>Moving a topic into another forum</title>
+            <para>TODO: A description of how to move topics into another forum. What are shadow
+                topics, how do I remove shadow topics. Note that for moving only selected posts of a
+                topic, you need the split function.</para>
+        </section>
+        <section id="modtools_copy">
+            <title>Duplicating a topic</title>
+            <para>TODO: How to copy / duplicate a given topic.</para>
+        </section>
+        <section id="modtools_type">
+            <title>Announcements and stickies</title>
+            <para>TODO: How to change the topic type, link to the topic type overview that the
+                Userguide needs.</para>
+        </section>
+        <section id="modtools_split">
+            <title>Splitting posts off a topic</title>
+            <para>TODO: How to split posts, as this will lead the moderator to the MCP a link to the
+                    <link linkend="moderator_queue">Forum moderation MCP section</link> is
+            needed.</para>
+        </section>
+        <section id="modtools_mergetopics">
+            <title>Merge topics</title>
+            <para>TODO: How to merge topics, as this will lead the moderator to the MCP a link to the
+                <link linkend="moderator_queue">Forum moderation MCP section</link> is
+                needed.</para>
+        </section>
+        <section id="modtools_mergeposts">
+            <title>Merge posts into another topic</title>
+            <para>TODO: How to merge selected posts of one topic into another topic, as this will lead the moderator to the MCP a link to the
+                <link linkend="moderator_queue">Forum moderation MCP section</link> is
+                needed.</para>
+        </section>          
+    </section>
+    <section id="moderator_queue">
+        <title>What is the 'Moderation queue'?</title>
+        <para>TODO: Short description of what the moderation queue is, and how a moderator can
+            recognise that a post or topic is in it, and how to approve / disapprove in the forum
+            view. <link linkend="mcp_queue">Link to the MCP section that deals with
+        it.</link></para>
+    </section>
+    <section id="moderator_reported">
+        <title>What are 'Reported posts'?</title>
+        <para>TODO: Short description of what reported posts are, how they are displayed in the
+            forum / topic view and how to work with them. <link linkend="mcp_reported">Link to the
+                MCP section about Reported posts.</link></para>
+    </section>
+    <section id="moderator_mcp">
+        <title>The Moderator Control Panel (MCP)</title>
+        <para>TODO: Some information about the moderator control panel.</para>
+        <section id="mcp_queue">
+            <title>Moderation queue</title>
+            <para>TODO: <link linkend="moderator_queue">Link to the "WHat is the Moderation Queue
+                    description.</link> and some further explanation for what can be done and see in
+                the MCP section for this.</para>
+        </section>
+        <section id="mcp_reported">
+            <title>Reported posts</title>
+            <para>TODO: <link linkend="moderator_reported">Link to the reported posts
+                description.</link> and some further explanation for what can be done and see in the
+                MCP section for this.</para>
+        </section>
+        <section id="mcp_forum">
+            <title>Forum moderation</title>
+            <para>TODO: Description of this 'meta-view' of the forum structure. No need to explain
+                the specific moderation abilities you have here, as they have their own sections,
+                but a link (related sections?) to those moderation functions should be
+            included.</para>
+        </section>
+    </section>
+</chapter>
