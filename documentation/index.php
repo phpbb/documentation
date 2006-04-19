@@ -1,5 +1,5 @@
 <?php
 
-echo "This is an empty page. testing ,,, neee naar";
+echo "This is an empty page.";
 
 ?>
