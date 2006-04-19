@@ -37,26 +37,34 @@
     </section>
     <section id="quick_support">
         <title>Obtaining support</title>
-        <para>The phpBB Team provides many options for users to find support for their phpBB install.
-		In addition to this very documentation, the support forum on www.phpbb.com has many answers
-		that users like you are searching for. Therefore, we highly recommend the use of the search
-		feature before asking a new question. If you are unable to find an answer, feel free to post
-		a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we
-		know about what is happening, the faster we can provide you with the answer you are looking for.
-		Be sure to fill out the Support Request Template [tid 128123] with the information it asks for.</para>
+        <para>The phpBB Team provides many options for users to find support for their phpBB
+            install. In addition to this very documentation, the <ulink
+                url="http://www.phpbb.com/phpBB/viewforum.php?f=1">support forum on
+            www.phpbb.com</ulink>has many answers that users like you are searching for. Therefore,
+            we highly recommend the use of the search feature before asking a new question. If you
+            are unable to find an answer, feel free to post a new topic asking for help. Be sure to
+            be descriptive when explaining your problem! The more we know about what is happening,
+            the faster we can provide you with the answer you are looking for. Be sure to fill out
+            the <ulink url="http://www.phpbb.com/phpBB/viewtopic.php?t=128123">Support Request
+                Template</ulink> with the information it asks for.</para>
 
-	<para>In addition to the support forum on www.phpbb.com, we provide a Knowledge Base [KB] for users to read and
-		submit articles on common answers to questions. Our community has taken a lot of time in writing these
-		articles, so be sure to check them out.</para>
+        <para>In addition to the support forum on www.phpbb.com, we provide a <ulink
+                url="http://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit
+            articles on common answers to questions. Our community has taken a lot of time in
+            writing these articles, so be sure to check them out.</para>
 
-	<para>We provide realtime support in #phpBB on the popular Open Source IRC network, irc.freenode.net.
-		[irc://irc.freenode.net/phpbb]. You can typically find someone from each of the teams in here,
-		as well as fellow users who are more than happy to help you out. Be sure to read the IRC rules
-		before joining the channel, as we have a few basic netiquette rules that we ask users to follow.
-		[IRC Rules]. At any given time, there are well over 60 users in the channel, so you are almost certain
-		to find someone there to help you.</para>
+        <para>We provide realtime support in <ulink url="irc://irc.freenode.net/phpbb"
+            >#phpBB</ulink> on the popular Open Source IRC network, irc.freenode.net. . You can
+            typically find someone from each of the teams in here, as well as fellow users who are
+            more than happy to help you out. Be sure to read the <ulink
+                url="http://www.phpbb.com/support/irc/">IRC rules</ulink> before joining the
+            channel, as we have a few basic netiquette rules that we ask users to follow. At any
+            given time, there are well over 60 users in the channel, so you are almost certain to
+            find someone there to help you.</para>
 
-	<para>English is not your native language? Not a problem! We also provide an International Support page with links
-		to various websites that provide support in Espanol, Deutsch, Francais, and more. [Intl page].</para>
+        <para>English is not your native language? Not a problem! We also provide an <ulink
+                url="http://www.phpbb.com/support/intl/">International Support page</ulink> with
+            links to various websites that provide support in Espanol, Deutsch, Francais, and
+        more.</para>
     </section>
 </chapter>
