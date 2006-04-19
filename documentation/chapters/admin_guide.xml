@@ -2,12 +2,252 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="admin_guide">
-    <title>Admin Guide</title>
+    <title>Administration Guide</title>
     <abstract>
         <para>This chapter describes the phpBB 3.0 admin controls.</para>
     </abstract>
-    <section>
-        <title>The Admin Control Panel (ACP)</title>
-        <para>Some information about the admin control panel.</para>
+    <section id="admin_control_panel">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>The Administration Control Panel</title>
+        <para>Even more so than its predecessor phpBB 3.0 Olympus is highly configurable. You can
+            tune, adjust, or turn off almost all features. To make this load of settings as
+            accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
+        <para>Click on the "Administration Control Panel" link on the bottom of the default forum
+            style to visit the ACP. TODO: Screenshot</para>
+        <para>The Admin Control Panel has seven different sections by default with each containing a
+            number of subsections. We will discuss each section in this Admin Guide. </para>
+        <para>TODO: Screenshot and explanation of the layout</para>
+    </section>
+    <section id="acp_general">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>General Configuration and Front Page</title>
+        <para>The General section is the first screen you see each time you log into the Admin
+            Control Panel. It contains some basic statistics and information about your forum. It
+            also has a subsection called "Quick Access". It provides a quick access to some of the
+            more often visited admin pages like <link linkend="acp_usergroups">User
+            Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will
+            discuss its items later in their specific sections.</para>
+        <para>We will concentrate on the other three subsections: Board Configuration, Client
+            Communication, and Server Configuration.</para>
+        <section id="acp_general_board">
+            <sectioninfo>
+                <authorgroup>
+                    <author>
+                        <othername>dhn</othername>
+                    </author>
+                </authorgroup>
+            </sectioninfo>
+            <title>Board Configuration</title>
+            <para>This subsection contains items to adjust the overall features and settings of the
+                forum. </para>
+            <section id="acp_general_settings">
+                <sectioninfo>
+                    <authorgroup>
+                        <author>
+                            <othername>dhn</othername>
+                        </author>
+                    </authorgroup>
+                </sectioninfo>
+                <title>Board Settings</title>
+                <para>The <guimenuitem>Board Settings</guimenuitem> allow you to change the most
+                    important setting of your forum installation: the name of your forum. Put the
+                    name on your site into the <guilabel>Site Name</guilabel> text field and it will
+                    be shown on the header of the default style and will be the prefix to the window
+                    title of your browser.</para>
+                <para>The <guilabel>Site Description</guilabel> is the slogan or tag line of your
+                    forum. It will appear below the <guilabel>Site Name</guilabel> on the default
+                    style's header.</para>
+                <para>If you need to close your whole forum to do maintenance work, for instance,
+                    you can do it by using the <guilabel>Disable Board</guilabel> switch. This will
+                    keep any members of your forum that are not Administrators or Moderators unable
+                    from accessing the board. They will either see a default message instead of the
+                    forum or you can add your own one in the text field below the check boxes.
+                    Administrators and Moderators will still be able to browse forums and use their
+                    specific control panels.</para>
+                <para>You need to set the <guilabel>Default Language</guilabel> of your board. This
+                    is the language guests will see when they visit the board. You can allow users
+                    to choose other languages. By default there is only <guilabel>English
+                    [UK]</guilabel> installed but you can <ulink
+                        url="http://www.phpbb.com/languages">download more languages on the phpBB
+                        website</ulink>. Find out more about working with languages in the <link
+                        linkend="acp_system">Language Pack configuration</link>.</para>
+                <para>TODO: Write about date format and timezone, may change, so leaving this out
+                    for now.</para>
+                <para>The board will appear to your guests and members in the <guilabel>Default
+                        Style</guilabel>. In the standard phpBB installtion two Styles are available
+                    (TODO: write more about them?). You can either allow users to select another
+                    Style than the default by selecting <guilabel>No</guilabel> in the
+                        <guilabel>Override User Style</guilabel> setting or disallow it. Please
+                    visit the <link linkend="acp_styles">Styles section</link> to find out how to
+                    add new Styles and where to find them.</para>
+                <para>Moderators can send warnings to users that break the forum rules. The value of
+                        <guilabel>Warning Duration</guilabel> defines the number of days a warning
+                    is valid until it expires. Read more about warnings in the Moderator Control
+                    Panel. TODO: Add link to this section.</para>
+            </section>
+            <section id="acp_board_features">
+                <sectioninfo>
+                    <authorgroup>
+                        <author>
+                            <othername>dhn</othername>
+                        </author>
+                    </authorgroup>
+                </sectioninfo>
+                <title>Board Features</title>
+                <para>Through the <guimenuitem>Board Features</guimenuitem> section you can enable
+                    or disable several features board-wide. Note that any feature you disable here
+                    will not be available on your forum, even if you give your users permissions to
+                    use them.</para>
+            </section>
+            <section id="acp_board_attachments">
+                <sectioninfo>
+                    <authorgroup>
+                        <author>
+                            <othername>dhn</othername>
+                        </author>
+                    </authorgroup>
+                </sectioninfo>
+                <title>Attachment Settings</title>
+                <para>TODO: Write about attachment settings.</para>
+            </section>
+            <section id="acp_board_avatars">
+                <sectioninfo>
+                    <authorgroup>
+                        <author>
+                            <othername>dhn</othername>
+                        </author>
+                    </authorgroup>
+                </sectioninfo>
+                <title>Avatar Settings</title>
+                <para>Avatars are generally small, unique images a user can associate with
+                    themselves. Depending on the style they are usually displayed below the user
+                    name when viewing topics. Here you can determine how users can define their
+                    avatars.</para>
+                <para>There are three different ways a user can add an avatar to their profile. The
+                    first way is through an avatar gallery you provide. Note, that there is no avatar
+                    gallery available in a default phpBB installation. The <guilabel>Avatar
+                        Gallery Path</guilabel> is the path to the gallery images. The default path
+                    is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not
+                    exist in the default installation so you have to add it manually if you want to
+                    use it.</para>
+                <para>The images you want to make use for your gallery need to be in a folder inside
+                    the gallery path. Images directly in the gallery path won't be recognised.
+                    There is also no support for sub folders inside the gallery folder.
+                </para>
+                <para>The second approach to avatars is through <guilabel>Remote
+                    Avatars</guilabel>. This are simply images linked from another website. Your
+                    members can add a link to the image they want to use in their profile. To give
+                    you some control over the size of the avatars you can define the minimum and
+                    maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not
+                    able to control the file size.</para>
+                <para>The third approach to avatars is through <guilabel>Avatar
+                    Uploading</guilabel>. Your members can upload an image form their local system
+                    which will be stored on your server. They will be uploaded into the
+                    <guilabel>Avatar Storage Path</guilabel> you can define. The default path is
+                    <guilabel>images/avatars/upload</guilabel> abd does already exist after
+                    installation. You have to make sure that it is server writeable (TODO: a link to
+                    a FAQ that explains this). The file format of the images has to be
+                    either gif, jpeg, or png, and the avatars will be automatically checked for their
+                    file and image size after the upload. You can adjust the <guilabel>Maximum
+                        Avatar File Size</guilabel> and images that are bigger than the allowed
+                    value will be discarded.</para>
+            </section>
+        </section>
+    </section>
+
+    <section id="acp_forums">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Forum Admin</title>
+        <para>TODO: Stuff about forum admin</para>
+    </section>
+
+    <section id="acp_posting">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Posting Settings</title>
+        <para>TODO: Stuff about the posting settings</para>
+    </section>
+
+    <section id="acp_usergroups">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Users and Groups Management</title>
+        <para>TODO: Stuff about users and groups</para>
+    </section>
+
+    <section id="acp_permissions">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Permission Overload</title>
+        <para>TODO: Stuff about permissions</para>
+    </section>
+
+    <section id="acp_styles">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Styles</title>
+        <para>TODO: Stuff about Styles</para>
+    </section>
+
+    <section id="acp_maintenance">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>Board Maintenance</title>
+        <para>TODO: Stuff about maintenance</para>
+    </section>
+
+    <section id="acp_system">
+        <sectioninfo>
+            <authorgroup>
+                <author>
+                    <othername>dhn</othername>
+                </author>
+            </authorgroup>
+        </sectioninfo>
+        <title>System Configuration</title>
+        <para>TODO: Stuff about system configuration</para>
     </section>
 </chapter>
