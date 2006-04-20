@@ -155,13 +155,55 @@
                     Uploading</guilabel>. Your members can upload an image form their local system
                     which will be stored on your server. They will be uploaded into the
                         <guilabel>Avatar Storage Path</guilabel> you can define. The default path is
-                        <guilabel>images/avatars/upload</guilabel> abd does already exist after
-                    installation. You have to make sure that it is server writeable (TODO: a link to
+                        <guilabel>images/avatars/upload</guilabel> and does already exist after
+                    installation. You have to make sure that it is server writable (TODO: a link to
                     a FAQ that explains this). The file format of the images has to be either gif,
                     jpeg, or png, and the avatars will be automatically checked for their file and
                     image size after the upload. You can adjust the <guilabel>Maximum Avatar File
                         Size</guilabel> and images that are bigger than the allowed value will be
                     discarded.</para>
+            </section>
+            <section id="acp_board_pms">
+                <sectioninfo>
+                    <authorgroup>
+                        <author>
+                            <othername>dhn</othername>
+                        </author>
+                    </authorgroup>
+                </sectioninfo>
+                <title>Private Messaging</title>
+                <para> Private Messages are a way for registered members to communicate privately
+                    through your board without the need to fall back to e-mail or instant messaging. </para>
+                <para> You can disable this feature with the <guilabel>Private Messaging</guilabel>
+                    setting. This will keep the feature turned off for the whole board. You can
+                    disable Private Messages for selected users or groups with <link
+                        linkend="acp_permissions">Permissions</link>. Please see the <link
+                        linkend="acp_permissions">Permissions section</link> for more information. </para>
+                <para> Olympus allows users to create own personal folders to organise Private
+                    Messages. The <guilabel>"Max Private Messages Per Box"</guilabel> setting
+                    defines the number of message folders they can create. The default value is
+                        <guilabel>4</guilabel>. You can disable the feature with setting value to
+                        <guilabel>0</guilabel>. </para>
+                <para>
+                    <guilabel>Max Private Messages Per Box</guilabel> sets the number of Private
+                    Messages each folder can contain. The default value is <guilabel>50</guilabel>,
+                    Set it to <guilabel>0</guilabel> to allow unlimited messages per folder. </para>
+                <para> If you limit the number of messages users can store in their folders, you
+                    need to define a default action that is taken once a folder is full. This can be
+                    changed in the "Full Folder Default Action" list. The oldest message gets
+                    deleted or the new message will be held back until the folder has place for it.
+                    Note that users will be able to choose this for themselves in their PM options
+                    and this setting only changes the default value they face. This will not
+                    override the action a user chosen. </para>
+                <para> When sending a Private Message it is still possible to edit the message until
+                    the recipient reads it. After it was read, editing the message is no longer
+                    possible. To limit the time a message can be edited before the recipient reads
+                    it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value
+                    is <guilabel>0</guilabel> which allows editing until the message is read. Note
+                    that you can disallow users or groups to edit Private Messages after sending
+                    through <link linkend="acp_permissions">Permissions</link>. If the permission to
+                    edit messages is denied, it will override this setting. </para>
+                <para>TODO: Permission options</para>
             </section>
         </section>
     </section>
