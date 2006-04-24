@@ -6,8 +6,17 @@
         <para>Do you want to upgrade your phpBB 2.0 forum to version 3.0? This chapter will tell and
             show you how it is done.</para>
     </abstract>
-    <section>
-        <title>Updating from 2.0 to 3.0</title>
-        <para>Some information about how to update.</para>
+    <section id="upgrade">
+	<sectioninfo>
+		<authorgroup>
+			<author>
+				<othername>Techie-Micheal</othername>
+			</author>
+		<authorgroup>
+	</sectioninfo>
+        <title>Upgrading from 2.0 to 3.0</title>
+        <para>The upgrade process from 2.0.x to 3.0.x is a straight-forward, simplified process.</para>
+	<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.0.x.</para>
+	<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>
     </section>
 </chapter>
