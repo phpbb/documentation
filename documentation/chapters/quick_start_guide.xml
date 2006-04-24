@@ -45,16 +45,16 @@
             question. If you are unable to find an answer, feel free to post a new topic asking for
             help. Be sure to be descriptive when explaining your problem! The more we know about
             what is happening, the faster we can provide you with the answer you are looking for. Be
-            sure to fill out the <ulink url="http://www.phpbb.com/phpBB/viewtopic.php?t=128123"
-                >Support Request Template</ulink> with the information it asks for.</para>
+            sure to fill out the <ulink url="http://www.phpbb.com/phpBB/viewtopic.php?t=128123">Support Request Template
+		</ulink> with the information it asks for.</para>
 
         <para>In addition to the support forum on www.phpbb.com, we provide a <ulink
                 url="http://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit
             articles on common answers to questions. Our community has taken a lot of time in
             writing these articles, so be sure to check them out.</para>
 
-        <para>We provide realtime support in <ulink url="irc://irc.freenode.net/phpbb"
-            >#phpBB</ulink> on the popular Open Source IRC network, irc.freenode.net. . You can
+        <para>We provide realtime support in <ulink url="irc://irc.freenode.net/phpbb">#phpBB</ulink> 
+		on the popular Open Source IRC network, irc.freenode.net. You can
             typically find someone from each of the teams in here, as well as fellow users who are
             more than happy to help you out. Be sure to read the <ulink
                 url="http://www.phpbb.com/support/irc/">IRC rules</ulink> before joining the
