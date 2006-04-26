@@ -6,31 +6,31 @@
                          <!ENTITY % local.common.attrib "xml:base CDATA #IMPLIED" >
                          ]>
 <book>
-    <bookinfo>
-        <title>phpBB 3.0 <emphasis>Olympus</emphasis> Documentation</title>
-        <abstract>
-            <para>The detailed documentation for phpBB 3.0 <emphasis>Olympus</emphasis>. </para>
-        </abstract>
-        <authorgroup>
-            <editor>
-                <firstname>Dominik</firstname>
-                <surname>Dröscher</surname>
-            </editor>
-            <editor>
-                <firstname>Graham</firstname>
-                <surname>Eames</surname>
-            </editor>
-        </authorgroup>
-        <copyright>
-            <year>2005</year>
-            <holder> phpBB Group </holder>
-        </copyright>
-        <orgname>phpBB Group</orgname>
-    </bookinfo>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/quick_start_guide.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/upgrade_guide.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/admin_guide.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/moderator_guide.xml"/>
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/user_guide.xml"/>    
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/glossary.xml"/>    
+	<bookinfo>
+		<title>phpBB 3.0 <emphasis>Olympus</emphasis> Documentation</title>
+		<abstract>
+			<para>The detailed documentation for phpBB 3.0 <emphasis>Olympus</emphasis>. </para>
+		</abstract>
+		<authorgroup>
+			<editor>
+				<firstname>Dominik</firstname>
+				<surname>Dröscher</surname>
+			</editor>
+			<editor>
+				<firstname>Graham</firstname>
+				<surname>Eames</surname>
+			</editor>
+		</authorgroup>
+		<copyright>
+			<year>2005</year>
+			<holder> phpBB Group </holder>
+		</copyright>
+		<orgname>phpBB Group</orgname>
+	</bookinfo>
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/quick_start_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/upgrade_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/admin_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/moderator_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/user_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/glossary.xml" />
 </book>
