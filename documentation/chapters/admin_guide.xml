@@ -36,7 +36,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>General Configuration and Front Page</title>
-		<para>The General section is the first screen you see each time you log into the Admin Control Panel. It contains some basic statistics and information about your forum. It also has a subsection called "Quick Access". It provides a quick access to some of the more often visited admin pages like <link linkend="acp_usergroups">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
+		<para>The General section is the first screen you see each time you log into the Admin Control Panel. It contains some basic statistics and information about your forum. It also has a subsection called <guimenuitem>Quick Access</guimenuitem>. It provides a quick access to some of the more often visited admin pages like <link linkend="acp_usergroups">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
 		<para>We will concentrate on the other three subsections: Board Configuration, Client Communication, and Server Configuration.</para>
 		<section id="acp_general_board">
 			<sectioninfo>
@@ -57,12 +57,12 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Board Settings</title>
-				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change the most important setting of your forum installation: the name of your forum. Put the name on your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style and will be the prefix to the window title of your browser.</para>
+				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change the most important setting of your forum installation: the name of your forum. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style and will be the prefix to the window title of your browser.</para>
 				<para>The <guilabel>Site Description</guilabel> is the slogan or tag line of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para>
-				<para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. This will keep any members of your forum that are not Administrators or Moderators unable from accessing the board. They will either see a default message instead of the forum or you can add your own one in the text field below the check boxes. Administrators and Moderators will still be able to browse forums and use their specific control panels.</para>
+				<para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. This will keep any members of your forum that are not Administrators or Moderators unable from accessing the board. They will either see a default message instead of the forum or you can add your own message in the text field below the check boxes. Administrators and Moderators will still be able to browse forums and use their specific control panels.</para>
 				<para>You need to set the <guilabel>Default Language</guilabel> of your board. This is the language guests will see when they visit the board. You can allow users to choose other languages. By default there is only <guilabel>English [UK]</guilabel> installed but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink>. Find out more about working with languages in the <link linkend="acp_system">Language Pack configuration</link>.</para>
 				<para>TODO: Write about date format and timezone, may change, so leaving this out for now.</para>
-				<para>The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installtion two Styles are available (TODO: write more about them?). You can either allow users to select another Style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">Styles section</link> to find out how to add new Styles and where to find them.</para>
+				<para>The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation two Styles are available (TODO: write more about them?). You can either allow users to select another Style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">Styles section</link> to find out how to add new Styles and where to find them.</para>
 				<para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. Read more about warnings in the Moderator Control Panel. TODO: Add link to this section.</para>
 			</section>
 			<section id="acp_board_features">
@@ -113,12 +113,29 @@
 				<title>Private Messaging</title>
 				<para> Private Messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
 				<para> You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable Private Messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
-				<para> Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>"Max Private Messages Per Box"</guilabel> setting defines the number of message folders they can create. The default value is <guilabel>4</guilabel>. You can disable the feature with setting value to <guilabel>0</guilabel>. </para>
+				<para> Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
 				<para>
-					<guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to <guilabel>0</guilabel> to allow unlimited messages per folder. </para>
+					<guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
 				<para> If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the "Full Folder Default Action" list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
-				<para> When sending a Private Message it is still possible to edit the message until the recipient reads it. After it was read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is <guilabel>0</guilabel> which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
-				<para>TODO: Permission options</para>
+				<para> When sending a Private Message it is still possible to edit the message until the recipient reads it. After it was read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0 which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
+				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. <itemizedlist>
+						<listitem>
+							<para><guilabel>Allow Mass PMs:</guilabel> enables the sending of Private Messages to multiple recipients. This feature is enabled by default. Disabling it will also disallow sending of Private Messages to groups. </para>
+							<tip>
+								<para>See the <link linkend="acp_usergroups">Groups section</link> for information on how to enable the ability to send a message to a whole group.</para>
+							</tip>
+						</listitem>
+						<listitem>
+							<para>By default <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> are allowed in Private Messages.</para>
+							<tip>
+								<para>Even if enabled, you can still disallow users or groups to use <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> in Private Messages through <link linkend="acp_permissions">Permissions</link>.</para>
+							</tip>
+						</listitem>
+						<listitem>
+							<para>We don't allow attachments by default. Further settings for attachments in Private Messages are in the <link linkend="acp_board_attachments">Attachment Settings</link>. There you can define the number of attachments per message for instance.</para>
+						</listitem>
+					</itemizedlist>
+				</para>
 			</section>
 		</section>
 	</section>
