@@ -17,6 +17,6 @@ xmlns:xi            CDATA       #FIXED "http://www.w3.org/2001/XInclude" >
 <!ENTITY % local.divcomponent.mix "| xi:include" >
 <!ENTITY % local.para.char.mix    "| xi:include" >
 <!ENTITY % local.info.class       "| xi:include" >
-<!ENTITY % local.common.attrib    "xml:base CDATA #IMPLIED
-xmlns:xi            CDATA       #FIXED       'http://www.w3.org/2001/XInclude'" >
+<!ENTITY % local.common.attrib    "xmlns:xi            CDATA       #FIXED       
+'http://www.w3.org/2001/XInclude'" >
 
