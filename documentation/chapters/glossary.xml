@@ -1,6 +1,7 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="glossary">
+	<?dbhtml dir="glossary" ?>
 	<title>Glossary</title>
 	<abstract>
 		<para>A guide to the terms used in the phpBB Documentation and on the forums.</para>

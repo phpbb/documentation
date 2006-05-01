@@ -1,6 +1,7 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="user_guide">
+	<?dbhtml dir="userguide" ?>
 	<title>User Guide</title>
 	<abstract>
 		<para>This chapter is targeted at the forum users. It explains all user facing functions that are needed to use phpBB 3.0.</para>

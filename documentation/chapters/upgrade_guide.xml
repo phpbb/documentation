@@ -1,6 +1,7 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="upgrade_guide">
+	<?dbhtml dir="upgradeguide" ?>
 	<title>Upgrade Guide</title>
 	<abstract>
 		<para>Do you want to upgrade your phpBB 2.0 forum to version 3.0? This chapter will tell and show you how it is done.</para>
