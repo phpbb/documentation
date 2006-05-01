@@ -6,11 +6,10 @@
 
 <!-- Link to the stylesheet -->
 <xsl:param name="html.stylesheet" select="''"/>
-<xsl:param name="admon.graphics" select="1"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
-<xsl:param name="chunk.first.sections" select="0"/>
+<xsl:param name="chunk.first.sections" select="1"/>
 
 <!-- Enumerate sections -->
 <xsl:param name="section.autolabel" select="1"/>
