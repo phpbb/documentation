@@ -5,7 +5,7 @@
 <xsl:import href="xhtml/chunk.xsl"/>
 
 <!-- Link to the stylesheet -->
-<xsl:param name="html.stylesheet" select="''"/>
+<xsl:param name="html.stylesheet" select="'/output/style.css'"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
