@@ -25,14 +25,14 @@
 		<title>General settings</title>
 		<para>In this section you will learn how to change some of the basic settings of your new board.</para>
 		<para>Right after the installation you will be redirected to the so called "Administration Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
-		<section id="quick_settings_boardsettings">
+		<section id="img_quick_settings_boardsettings">
 			<title>Board Settings</title>
 			<para>The first section of the <acronym>ACP</acronym> you will probably want to visit right after the installation is "Board Settings". Here you can first of all change the name (<guilabel>Site name</guilabel>) and description (<guilabel>Site description</guilabel>) of your board.</para>
 			<figure id="quick_settings_sitename">
 				<title>Board Settings</title>
 				<mediaobject>
 					<imageobject>
-						<imagedata fileref="images/quick_start_guide/settings_sitename.png" format="PNG" />
+						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
 					</imageobject>
 					<caption>
 						<para>Here you can edit the Site name and Site description of your board.</para>
@@ -45,14 +45,14 @@
 			<!--TODO: Correct ACP link-->
 		</section>
 		<!--/board_settings-->
-		<section id="quick_settings_boardfeatures">
+		<section id="img_quick_settings_boardfeatures">
 			<title>Board Features</title>
 			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
 			<figure>
 				<title>Board Features</title>
 				<mediaobject>
 					<imageobject>
-						<imagedata fileref="images/quick_start_guide/settings_features.png" format="PNG" />
+						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
 					</imageobject>
 					<caption>
 						<para>Enabling and disabling basic features with just 2 clicks</para>
@@ -73,6 +73,13 @@
 		<para>TODO: A short step by step explanation into how to create a new forum and categories. Probably not necessary to go into subforums at this point. They should be mentioned, but a link to the respective admin section for further information should be enough. </para>
 	</section>
 	<section id="quick_permissions">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>dhn</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>		
 		<title>Setting permissions</title>
 		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance.</para>
 		<para>Permissions have their own section in the Admin Control Panel (TODO: Screenshot). There are two permission categories:</para>
@@ -87,18 +94,18 @@
 		<section>
 			<title>Setting permissions for your forums</title>
 			<para>To set the permissions for your new forum we need the Forum Based Permissions. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the Group or User Forum Permissions. They will allow you to select a single group or user, and then select the forums you want to set the permissions on. But for this Quick Start Guide we will concentrate on the Forum Permissions. Instead of selecting a user or group, you select the forums you want to change first. The next screen lets you to set the permissions for multiple users or groups at once, which will make life easier when you need to manage a lot of groups. </para>
-			<figure id="quick_permissions_select">
+			<figure id="img_quick_permissions_select">
 				<title>Select Groups</title>
 				<mediaobject>
 					<imageobject>
-						<imagedata format="PNG" fileref="images/quick_start_guide/permissions_select.png" />
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
 					</imageobject>
 					<caption>
 						<para>Select Groups or Users to set Forum Permissions</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>The Forum Permissions screen shows you two columns, one for users and one for groups to select (see <xref linkend="quick_permissions_select" />). The top lists on both columns labelled as "Manage Users / Groups" show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the "Set Permissions" button, or delete them from the list. Deleting them will lead to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
+			<para>The Forum Permissions screen shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as "Manage Users / Groups" show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the "Set Permissions" button, or delete them from the list. Deleting them will lead to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
 			<para>To set or change permissions for groups, select one or more groups either in the top or the bottom list (this works similar with users, but if you want to add new users, you have to type them in manually in the bottom text box or use the "Find a member" function). "Set Permissions" will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
 		</section>
 	</section>
