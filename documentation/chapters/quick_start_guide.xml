@@ -16,48 +16,53 @@
 	</section>
 	<section id="quick_settings">
 		<sectioninfo>
-	      <authorgroup>
-	         <author>
-	            <othername>zeroK</othername>
-	         </author>
-	      </authorgroup>
+			<authorgroup>
+				<author>
+					<othername>zeroK</othername>
+				</author>
+			</authorgroup>
 		</sectioninfo>
 		<title>General settings</title>
 		<para>In this section you will learn how to change some of the basic settings of your new board.</para>
-		<para>Right after the installation you will be redirected to the so called "Administation Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
+		<para>Right after the installation you will be redirected to the so called "Administration Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
 		<section id="quick_settings_boardsettings">
 			<title>Board Settings</title>
 			<para>The first section of the <acronym>ACP</acronym> you will probably want to visit right after the installation is "Board Settings". Here you can first of all change the name (<guilabel>Site name</guilabel>) and description (<guilabel>Site description</guilabel>) of your board.</para>
-			<figure id="quick_settings">
+			<figure id="quick_settings_sitename">
 				<title>Board Settings</title>
-				<imageobject>
-					<imagedata fileref="images/quick_start_guide/settings_sitename.png" format="PNG"/>
-				</imageobject>
-				<caption>
-					<para>Here you can edit the Site name and Site description of your board.</para>
-				</caption>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/quick_start_guide/settings_sitename.png" format="PNG" />
+					</imageobject>
+					<caption>
+						<para>Here you can edit the Site name and Site description of your board.</para>
+					</caption>
+				</mediaobject>
 			</figure>
 			<para>This form also holds the options for changing things like the timezone (<guilabel>System timezone</guilabel>) as well as the date format used to render dates/times (<guilabel>Date format</guilabel>).</para>
 			<para>There you can also select a new style (after having installed it) for your board and enforce it on all members ignoring whatever style they've selected in their "User Control Panel". The style will also be used for all forums where you haven't specified a different one. For details on where to get new styles and how to install them, please read [insert link here].</para>
-			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default phpBB3 only ships with the English language pack. So before using this field, you will have to download the language pack for the language you want to use and install it. For details please read <xref linkend="acp_system"/> .</para>
+			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default phpBB3 only ships with the English language pack. So before using this field, you will have to download the language pack for the language you want to use and install it. For details please read <xref linkend="acp_system" /> .</para>
 			<!--TODO: Correct ACP link-->
-		</section><!--/board_settings-->
+		</section>
+		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">
 			<title>Board Features</title>
 			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
 			<figure>
 				<title>Board Features</title>
-				<imageobject>
-					<imagedata fileref="images/quick_start_guide/settings_features.png" format="PNG"/>
-				</imageobject>
-				<caption>
-					<para>Enabling and disabling basic features with just 2 clicks</para>
-				</caption>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="images/quick_start_guide/settings_features.png" format="PNG" />
+					</imageobject>
+					<caption>
+						<para>Enabling and disabling basic features with just 2 clicks</para>
+					</caption>
+				</mediaobject>
 			</figure>
 			<para>Disabling BBCode completely is a little bit to harsh for your taste but you don't want your users to abuse the signature field for tons of images? Simply set <guilabel>Allow use of IMG BBCode Tag in user signatures</guilabel> to "No". If you want to be a little bit more specific on what you want to allow and disallow in users' signatures, have a look at the "Signature Settings" form.</para>
 			<para>The "Board Features" form offers you a great way to control the features in an all-or-nothing way. If you want to get into the details on each feature, there is for everything also a separated form which let's you specify everything from the maximum number of characters allowed in a post (<guilabel>Max characters per post</guilabel> in "Post Settings") to how large a user's avatar can be (<guilabel>Maximum Avatar Dimensions</guilabel> in "Avatar Settings").</para>
 			<important>
-				<para>If you disable features, these will also be unavailable to users who would normally have them according to their respective permissions. For details on the permissions system please read <xref linkend="quick_permissions"/> or the in-depth guide in the Administrator Guide.</para>
+				<para>If you disable features, these will also be unavailable to users who would normally have them according to their respective permissions. For details on the permissions system please read <xref linkend="quick_permissions" /> or the in-depth guide in the Administrator Guide.</para>
 				<!-- TODO: Link to admin guide -->
 			</important>
 		</section>
@@ -69,7 +74,33 @@
 	</section>
 	<section id="quick_permissions">
 		<title>Setting permissions</title>
-		<para>TODO: This shouldn't be too detailed. Just go through the steps that are needed to set permissions for the default usergroups and members. It can contain a short paragraph about usergroups and how Olympus handles them, but there is no need to explain them in detail. </para>
+		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance.</para>
+		<para>Permissions have their own section in the Admin Control Panel (TODO: Screenshot). There are two permission categories:</para>
+		<itemizedlist>
+			<listitem>
+				<para>Global Permissions</para>
+			</listitem>
+			<listitem>
+				<para>Forum Based Permissions</para>
+			</listitem>
+		</itemizedlist>
+		<section>
+			<title>Setting permissions for your forums</title>
+			<para>To set the permissions for your new forum we need the Forum Based Permissions. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the Group or User Forum Permissions. They will allow you to select a single group or user, and then select the forums you want to set the permissions on. But for this Quick Start Guide we will concentrate on the Forum Permissions. Instead of selecting a user or group, you select the forums you want to change first. The next screen lets you to set the permissions for multiple users or groups at once, which will make life easier when you need to manage a lot of groups. </para>
+			<figure id="quick_permissions_select">
+				<title>Select Groups</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="images/quick_start_guide/permissions_select.png" />
+					</imageobject>
+					<caption>
+						<para>Select Groups or Users to set Forum Permissions</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>The Forum Permissions screen shows you two columns, one for users and one for groups to select (see <xref linkend="quick_permissions_select" />). The top lists on both columns labelled as "Manage Users / Groups" show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the "Set Permissions" button, or delete them from the list. Deleting them will lead to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
+			<para>To set or change permissions for groups, select one or more groups either in the top or the bottom list (this works similar with users, but if you want to add new users, you have to type them in manually in the bottom text box or use the "Find a member" function). "Set Permissions" will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
+		</section>
 	</section>
 	<section id="quick_support">
 		<title>Obtaining support</title>
