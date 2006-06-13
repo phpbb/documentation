@@ -79,20 +79,65 @@
 					<othername>dhn</othername>
 				</author>
 			</authorgroup>
-		</sectioninfo>		
+		</sectioninfo>
 		<title>Setting permissions</title>
-		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance.</para>
-		<para>Permissions have their own section in the Admin Control Panel (TODO: Screenshot). There are two permission categories:</para>
-		<itemizedlist>
-			<listitem>
-				<para>Global Permissions</para>
-			</listitem>
-			<listitem>
-				<para>Forum Based Permissions</para>
-			</listitem>
-		</itemizedlist>
+		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB3 Olympus can be adjusted with permissions.</para>
+		<para>There are two ways to assign permissions: You can set them manually or use predefined "Permission Roles" for a simpler but less powerful way. You can switch between both approaches any time you want, so there is no need to decide which way to go now. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running. But remember that "Permission Roles" do only offer a small crumb of what the "Permission System" has to offer and we believe that to be a good Olympus administrator, you have to fully grasp permissions. </para>
+		<para>Both types only differ in the way you set them. They both share the same interface</para>
+		<section id="quick_permissions_manual">
+			<title>Manual permissions</title>
+			<para>This is the most important aspect of permissions. You need to understand this to properly work with them. There are three different values that a permission can take:</para>
+			<itemizedlist>
+				<listitem>
+					<para><guilabel>YES</guilabel> will allow a permission setting <emphasis>unless</emphasis> it is overwritten by a <guilabel>NO</guilabel>.</para>
+				</listitem>
+				<listitem>
+					<para><guilabel>UNSET</guilabel> will be seen as <guilabel>NO</guilabel>, <emphasis>unless</emphasis> it is overwritten by a <guilabel>YES</guilabel>.</para>
+				</listitem>
+				<listitem>
+					<para><guilabel>NO</guilabel> will never be allowed for a user. It <emphasis>cannot</emphasis> be overwritten by a <guilabel>YES</guilabel>.</para>
+				</listitem>
+			</itemizedlist>
+			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>No</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>No</guilabel> overrides any <guilabel>Yes</guilabel> they have . Leave the setting at <guilabel>Unset</guilabel> instead. <guilabel>Unset</guilabel> is a weak <guilabel>No</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
+			<figure id="img_quick_permissions_manual">
+				<title>Manual permissions</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_manual.png" />
+					</imageobject>
+					<caption>
+						<para>Setting permissions manually</para>
+					</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section id="quick_permissions_roles">
+			<title>Permissions roles</title>
+			<para>phpBB3 Olympus ships with a number of default permission roles, that give you a </para>
+			<para>But permission roles are not only a quick and easy way to set permissions, they are also a powerful tool for experienced board administrators to manage permissions on bigger boards. You can create your own roles and edit existing ones. Roles are dynamic, so when you edit a role, all groups and users that have the role assigned will automatically be updated.</para>
+			<figure id="img_quick_permissions_roles">
+				<title>Permission roles</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_roles.png" />
+					</imageobject>
+					<caption>
+						<para>Setting permissions with roles</para>
+					</caption>
+				</mediaobject>
+			</figure>
+		</section>
 		<section>
 			<title>Setting permissions for your forums</title>
+			<para> there are two permission categories:</para>
+			<itemizedlist>
+				<listitem>
+					<para>Global Permissions</para>
+				</listitem>
+				<listitem>
+					<para>Forum Based Permissions</para>
+				</listitem>
+			</itemizedlist>
 			<para>To set the permissions for your new forum we need the Forum Based Permissions. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the Group or User Forum Permissions. They will allow you to select a single group or user, and then select the forums you want to set the permissions on. But for this Quick Start Guide we will concentrate on the Forum Permissions. Instead of selecting a user or group, you select the forums you want to change first. The next screen lets you to set the permissions for multiple users or groups at once, which will make life easier when you need to manage a lot of groups. </para>
 			<figure id="img_quick_permissions_select">
 				<title>Select Groups</title>
@@ -105,7 +150,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>The Forum Permissions screen shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as "Manage Users / Groups" show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the "Set Permissions" button, or delete them from the list. Deleting them will lead to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
+			<para>The Forum Permissions screen shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users / Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Set Permissions</guilabel> button, or delete them from the list. Deleting them will lead to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
 			<para>To set or change permissions for groups, select one or more groups either in the top or the bottom list (this works similar with users, but if you want to add new users, you have to type them in manually in the bottom text box or use the "Find a member" function). "Set Permissions" will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
 		</section>
 	</section>
