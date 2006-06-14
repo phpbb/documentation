@@ -8,7 +8,55 @@
 	</abstract>
 	<section id="quick_requirements">
 		<title>Requirements</title>
-		<para>TODO: An overview of the requirements.</para>
+		<para>phpBB has a few requirements which must be met before you are able to install and use it. In this section, these requirements are explained.</para>
+		<itemizedlist>
+			<listitem>
+				<para>A webserver or web hosting account running on any major Operating System with support for PHP</para>
+			</listitem>
+			<listitem>
+				<para>A SQL database system, one of:</para>
+				<itemizedlist>
+					<listitem>
+						<para>FireBird</para>
+					</listitem>
+					<listitem>
+						<para>MySQL 3.23 or above</para>
+					</listitem>
+					<listitem>
+						<para>MS SQL Server 2000 or above (directly or via ODBC)</para>
+					</listitem>
+					<listitem>
+						<para>Oracle</para>
+					</listitem>
+					<listitem>
+						<para>PostgreSQL 7.x</para>
+					</listitem>
+					<listitem>
+						<para>SQLite</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+			<listitem>
+				<para>PHP 4.3.3 or above with support for the database you intend to use. The optional presence of the following modules within PHP will provide access to additional features, but they are not required.</para>
+				<itemizedlist>
+					<listitem>
+						<para>zlib Compression support</para>
+					</listitem>
+					<listitem>
+						<para>Remote FTP support</para>
+					</listitem>
+					<listitem>
+						<para>XML support</para>
+					</listitem>
+					<listitem>
+						<para>Imagemagick support</para>
+					</listitem>
+				</itemizedlist>
+			</listitem>
+		</itemizedlist>
+		<para>
+			The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installing" />.
+		</para>
 	</section>
 	<section id="quick_installing">
 		<title>Installing</title>
