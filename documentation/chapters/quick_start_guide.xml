@@ -7,6 +7,13 @@
 		<para>TODO: A quick guide through the first steps of setting up your very own phpBB 3.0 forum.</para>
 	</abstract>
 	<section id="quick_requirements">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Graham</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
 		<title>Requirements</title>
 		<para>phpBB has a few requirements which must be met before you are able to install and use it. In this section, these requirements are explained.</para>
 		<itemizedlist>
@@ -56,9 +63,95 @@
 		</itemizedlist>
 		<para> The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installing" />. </para>
 	</section>
-	<section id="quick_installing">
-		<title>Installing</title>
-		<para>TODO: Detailing the installation process step by step. Explanation of all items on the install pages.</para>
+	<section id="quick_installation">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>dhn</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Installation</title>
+		<para>phpBB 3.0 Olympus has an easy to use installation system that will guide you through the installation process.</para>
+		<!--BETA SPECIFIC /-->
+		<note>
+			<para>phpBB 3.0 Beta 1 will not yet have the ability to upgrade from phpBB 2.0.x or to convert from a different software package. This will be included in the later Beta or <acronym>RC</acronym> stages.</para>
+		</note>
+		<para>After you have uploaded phpBB3 to the location you want it to be, you have to enter the <acronym>URL</acronym> into your browser to get to the installation screen. It is enough to point the browser to the folder where you moved it to (<uri>http://www.example.com/phpBB3</uri> for instance). phpBB will automatically detect that it is not yet installed and forward you to the installation screen.</para>
+		<figure id="img_quick_installation_intro">
+			<title>Introduction</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
+				</imageobject>
+				<caption>
+					<para>The introduction page of the installation system.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<section>
+			<title id="quick_installation_intro">Introduction</title>
+			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (<!--- TODO ADD LINK TO LICENSE SECTION/-->General Public License) and provides information about how you can receive support. To start the installation, use the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
+		</section>
+		<section id="quick_installation_requirements">
+			<title>Requirements</title>
+			<important>
+				<para>Please read the <link linkend="quick_requirements">section on Requirements</link>, to find out more about the phpBB 3.0's minimum requirements.</para>
+			</important>
+			<para>The first page you will see after starting the installation is the <guilabel>Requirements</guilabel> list. phpBB 3.0 checks automatically whether everything that it needs to run properly is installed on your server. You need to have at least the minimum <acronym>PHP</acronym> version installed, and at least one database available to continue the installation. Also important, is that all shown folders are available and do have the correct permissions. Please see the description of each section to find out whether they are optional or required for phpBB 3.0 to run. If everything is in order, you can continue the installation with <guilabel>Start Install</guilabel>. </para>
+		</section>
+		<section id="quick_installation_database">
+			<title>Database settings</title>
+			<para>You now have to decide which database to use. See the <link linkend="quick_requirements">Requirements section</link> for information on which databases are supported. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</para>
+			<itemizedlist>
+				<listitem>
+					<para>The <guilabel>Database Type</guilabel> - the database you will be using.</para>
+				</listitem>
+				<listitem>
+					<para>The <guilabel>Database server hostname or DSN</guilabel> - the address of the database server.</para>
+				</listitem>
+				<listitem>
+					<para>The <guilabel>Database server port</guilabel> - the port of the database server (most of the time this is not needed).</para>
+				</listitem>
+				<listitem>
+					<para>The <guilabel>Database name</guilabel>- the name of the database on the server.</para>
+				</listitem>
+				<listitem>
+					<para>The <guilabel>Database username</guilabel> and <guilabel>Database password</guilabel> - the login data to access the database.</para>
+				</listitem>
+			</itemizedlist>
+			<figure id="img_quick_installation_database">
+				<title>Database settings</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
+					</imageobject>
+					<caption>
+						<para>The database settings screen, please make sure to have all the required data available</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multipe phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
+			<para>After you entered your details, you can continue with the <guilabel>Proceed to next step</guilabel> button. Now phpBB 3.0 will check whether the data you entered will lead to a successful database connection and whether tables with the same prefix already exist.</para>
+			<para>A <guilabel>Could not connect to the database</guilabel> error means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
+			<para>If you installed another version of phpBB before on the same database with the same prefix, phpBB will inform you and you just need to enter a different database prefix.</para>
+			<para>If you see the <guilabel>Successful Connection</guilabel> message, you can continue to the next step.</para>
+		</section>
+		<section id="quick_installation_admin">
+			<title>Administrator details</title>
+			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla phpBB 3.0 installation we only include <guilabel>English [UK]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+		</section>
+		<section id="quick_installation_config">
+			<title>Configuration file</title>
+			<para>In this step, phpBB will try to write the configuration file automatically. The forum needs the configuration to run properly. It contains all database settings, so without it, phpBB will not be able to access the database.</para>
+			<para>Usually writing the configuration file automatically works fine. But in some cases it can fail due to wrong file permissions, for instance. In this case, you need to upload the file manually. phpBB asks you to <guilabel>download</guilabel> the config.php file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, use <guilabel>Done</guilabel> to get to the last step. If <guilabel>Done</guilabel> returns you to the same page as before, and does not return a success message, you did not upload the file correctly.</para>
+		</section>
+		<section id="quick_installation_advanced">
+			<title>Advanced settings</title>
+			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later. So if you are not sure what these settings mean, proceed to the final step and finish the installation.</para>
+			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.0 successfully. But there is still a lot of work ahead!</para>
+			<para>If you are unable to get phpBB 3.0 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
+		</section>
 	</section>
 	<section id="quick_settings">
 		<sectioninfo>
@@ -128,7 +221,7 @@
 		</sectioninfo>
 		<title>Setting permissions</title>
 		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB3 Olympus can be adjusted with permissions.</para>
-		
+
 		<section id="quick_permissions_types">
 			<title>Permission types</title>
 			<para>There are four different types of permissions:</para>
@@ -146,7 +239,7 @@
 					<para>Forum permissions (local) - e.g. allow to see a forum or post topics</para>
 				</listitem>
 			</orderedlist>
-			<para>Each permission type consists of a different set of permissions and can apply either locally or globally. A global permission type is set for your whole bulletin board. If you disallow one of your users to send Private Messages, for instance, you have to do this with the global user permission.  Administrator permission are also global.</para>
+			<para>Each permission type consists of a different set of permissions and can apply either locally or globally. A global permission type is set for your whole bulletin board. If you disallow one of your users to send Private Messages, for instance, you have to do this with the global user permission. Administrator permission are also global.</para>
 			<figure id="img_quick_permissions_types">
 				<title>Global and local permissions</title>
 				<mediaobject>
@@ -161,7 +254,7 @@
 			<para>On the other hand local permissions do only apply to specific forums. So if you disallow someone to post in one forum, for instance, it will not impact the rest of the board. The user will still be able to post in any other forum he has the local permission to post.</para>
 			<para>You can appoint moderators either globally or locally. If you trust some of your users enough, you can make them Global Moderators. They can moderate all forums they have access to with the permissions you assign to them. Compared to that, local moderators will only be able to moderate the number of forums you select for them. They can also have different moderator permissions for different forums. While they are able to delete topics in one forum, they may not be allowed to do it in another. Global moderators will have the same permissions for all forums.</para>
 		</section>
-		<section>
+		<section id="quick_permissions_forum">
 			<title>Setting forum permissions</title>
 			<para>To set the permissions for your new forum we need the local <guilabel>Forum Based Permissions</guilabel>. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the <guilabel>Group</guilabel> or <guilabel>User Forum Permissions</guilabel>. They will allow you to select one group or user, and then select the forums you want to set the permissions for. </para>
 			<para>But for this Quick Start Guide we will concentrate on the <guilabel>Forum Permissions</guilabel>. Instead of selecting a user or group, you select the forums you want to change first. You can select them either by selecting the forums manually in the top list, or by single forum and single forum plus subforums respectively in the lower pull down menus. <guilabel>Submit</guilabel> will bring you to the next page.</para>
@@ -176,7 +269,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>The <guilabel>Forum Permissions</guilabel> page shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users</guilabel> and  <guilabel> Manage Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Edit Permissions</guilabel> button, or use <guilabel>Remove Permissions</guilabel> to remove them  which leads to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
+			<para>The <guilabel>Forum Permissions</guilabel> page shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users</guilabel> and <guilabel> Manage Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Edit Permissions</guilabel> button, or use <guilabel>Remove Permissions</guilabel> to remove them which leads to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
 			<para>To add permissions for groups, select one or more groups either in the <guilabel>Add Groups</guilabel> list (this works similar with users, but if you want to add new users, you have to type them in manually in the <guilabel>Add Users</guilabel> text box or use the <guilabel>Find a member</guilabel> function). <guilabel>Add Permissions</guilabel> will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
 			<para>There are two ways to assign permissions: You can set them manually or use predefined <guilabel>Permission Roles</guilabel> for a simpler but less powerful way. You can switch between both approaches any time you want. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running as quickly as possible. But remember that permission roles do only offer a small bit of what the permission system has to offer and we believe that to be a good Olympus administrator, you have to fully grasp permissions. </para>
 			<para>Both ways only differ in the way you set them. They both share the same interface.</para>
@@ -210,8 +303,7 @@
 		</section>
 		<section id="quick_permissions_roles">
 			<title>Permissions roles</title>
-			<para>phpBB3 Olympus ships with a number of default permission roles, that give you a </para>
-			<para>But permission roles are not only a quick and easy way to set permissions, they are also a powerful tool for experienced board administrators to manage permissions on bigger boards. You can create your own roles and edit existing ones. Roles are dynamic, so when you edit a role, all groups and users that have the role assigned will automatically be updated.</para>
+			<para>phpBB3 Olympus ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
 			<figure id="img_quick_permissions_roles">
 				<title>Permission roles</title>
 				<mediaobject>
@@ -223,6 +315,16 @@
 					</caption>
 				</mediaobject>
 			</figure>
+			<para>But permission roles are not only a quick and easy way to set permissions, they are also a powerful tool for experienced board administrators to manage permissions on bigger boards. You can create your own roles and edit existing ones. Roles are dynamic, so when you edit a role, all groups and users that have the role assigned will automatically be updated.</para>
+		</section>
+		<section id="quick_permissions_moderators">
+			<title>Assign moderators to forums</title>
+			<para>TODO</para>
+		</section>
+
+		<section id="quick_permissions_global">
+			<title>Setting global permissions</title>
+			<para>TODO</para>
 		</section>
 
 	</section>
