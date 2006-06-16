@@ -54,9 +54,7 @@
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
-		<para>
-			The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installing" />.
-		</para>
+		<para> The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installing" />. </para>
 	</section>
 	<section id="quick_installing">
 		<title>Installing</title>
@@ -130,8 +128,59 @@
 		</sectioninfo>
 		<title>Setting permissions</title>
 		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB3 Olympus can be adjusted with permissions.</para>
-		<para>There are two ways to assign permissions: You can set them manually or use predefined "Permission Roles" for a simpler but less powerful way. You can switch between both approaches any time you want, so there is no need to decide which way to go now. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running. But remember that "Permission Roles" do only offer a small crumb of what the "Permission System" has to offer and we believe that to be a good Olympus administrator, you have to fully grasp permissions. </para>
-		<para>Both types only differ in the way you set them. They both share the same interface</para>
+		
+		<section id="quick_permissions_types">
+			<title>Permission types</title>
+			<para>There are four different types of permissions:</para>
+			<orderedlist>
+				<listitem id="quick_permission_types_user">
+					<para>User/Group permissions (global) - e.g. disallow changing avatar</para>
+				</listitem>
+				<listitem id="quick_permission_types_admin">
+					<para>Administrator permissions (global) - e.g. allow to manage forums</para>
+				</listitem>
+				<listitem id="quick_permission_types_moderator">
+					<para>Moderator permissions (global or local) - e.g. allow to lock topics or ban users (only global)</para>
+				</listitem>
+				<listitem id="quick_permission_types_forum">
+					<para>Forum permissions (local) - e.g. allow to see a forum or post topics</para>
+				</listitem>
+			</orderedlist>
+			<para>Each permission type consists of a different set of permissions and can apply either locally or globally. A global permission type is set for your whole bulletin board. If you disallow one of your users to send Private Messages, for instance, you have to do this with the global user permission.  Administrator permission are also global.</para>
+			<figure id="img_quick_permissions_types">
+				<title>Global and local permissions</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
+					</imageobject>
+					<caption>
+						<para>Global and local permissions</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>On the other hand local permissions do only apply to specific forums. So if you disallow someone to post in one forum, for instance, it will not impact the rest of the board. The user will still be able to post in any other forum he has the local permission to post.</para>
+			<para>You can appoint moderators either globally or locally. If you trust some of your users enough, you can make them Global Moderators. They can moderate all forums they have access to with the permissions you assign to them. Compared to that, local moderators will only be able to moderate the number of forums you select for them. They can also have different moderator permissions for different forums. While they are able to delete topics in one forum, they may not be allowed to do it in another. Global moderators will have the same permissions for all forums.</para>
+		</section>
+		<section>
+			<title>Setting forum permissions</title>
+			<para>To set the permissions for your new forum we need the local <guilabel>Forum Based Permissions</guilabel>. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the <guilabel>Group</guilabel> or <guilabel>User Forum Permissions</guilabel>. They will allow you to select one group or user, and then select the forums you want to set the permissions for. </para>
+			<para>But for this Quick Start Guide we will concentrate on the <guilabel>Forum Permissions</guilabel>. Instead of selecting a user or group, you select the forums you want to change first. You can select them either by selecting the forums manually in the top list, or by single forum and single forum plus subforums respectively in the lower pull down menus. <guilabel>Submit</guilabel> will bring you to the next page.</para>
+			<figure id="img_quick_permissions_select">
+				<title>Select Groups</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
+					</imageobject>
+					<caption>
+						<para>Select Groups or Users to set Forum Permissions</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>The <guilabel>Forum Permissions</guilabel> page shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users</guilabel> and  <guilabel> Manage Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Edit Permissions</guilabel> button, or use <guilabel>Remove Permissions</guilabel> to remove them  which leads to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
+			<para>To add permissions for groups, select one or more groups either in the <guilabel>Add Groups</guilabel> list (this works similar with users, but if you want to add new users, you have to type them in manually in the <guilabel>Add Users</guilabel> text box or use the <guilabel>Find a member</guilabel> function). <guilabel>Add Permissions</guilabel> will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
+			<para>There are two ways to assign permissions: You can set them manually or use predefined <guilabel>Permission Roles</guilabel> for a simpler but less powerful way. You can switch between both approaches any time you want. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running as quickly as possible. But remember that permission roles do only offer a small bit of what the permission system has to offer and we believe that to be a good Olympus administrator, you have to fully grasp permissions. </para>
+			<para>Both ways only differ in the way you set them. They both share the same interface.</para>
+		</section>
 		<section id="quick_permissions_manual">
 			<title>Manual permissions</title>
 			<para>This is the most important aspect of permissions. You need to understand this to properly work with them. There are three different values that a permission can take:</para>
@@ -175,32 +224,7 @@
 				</mediaobject>
 			</figure>
 		</section>
-		<section>
-			<title>Setting permissions for your forums</title>
-			<para> there are two permission categories:</para>
-			<itemizedlist>
-				<listitem>
-					<para>Global Permissions</para>
-				</listitem>
-				<listitem>
-					<para>Forum Based Permissions</para>
-				</listitem>
-			</itemizedlist>
-			<para>To set the permissions for your new forum we need the Forum Based Permissions. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the Group or User Forum Permissions. They will allow you to select a single group or user, and then select the forums you want to set the permissions on. But for this Quick Start Guide we will concentrate on the Forum Permissions. Instead of selecting a user or group, you select the forums you want to change first. The next screen lets you to set the permissions for multiple users or groups at once, which will make life easier when you need to manage a lot of groups. </para>
-			<figure id="img_quick_permissions_select">
-				<title>Select Groups</title>
-				<mediaobject>
-					<imageobject>
-						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
-					</imageobject>
-					<caption>
-						<para>Select Groups or Users to set Forum Permissions</para>
-					</caption>
-				</mediaobject>
-			</figure>
-			<para>The Forum Permissions screen shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users / Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Set Permissions</guilabel> button, or delete them from the list. Deleting them will lead to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
-			<para>To set or change permissions for groups, select one or more groups either in the top or the bottom list (this works similar with users, but if you want to add new users, you have to type them in manually in the bottom text box or use the "Find a member" function). "Set Permissions" will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
-		</section>
+
 	</section>
 	<section id="quick_support">
 		<title>Obtaining support</title>
