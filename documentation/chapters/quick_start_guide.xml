@@ -341,8 +341,50 @@
 			<para>But permission roles are not only a quick and easy way to set permissions, they are also a powerful tool for experienced board administrators to manage permissions on bigger boards. You can create your own roles and edit existing ones. Roles are dynamic, so when you edit a role, all groups and users that have the role assigned will automatically be updated.</para>
 		</section>
 		<section id="quick_permissions_moderators">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>zeroK</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Assign moderators to forums</title>
-			<para>TODO</para>
+			<para>A quite common usecase for permissions and roles are forum moderation. phpBB3 makes assigning users as moderators of forums really simple.</para>
+			<para>As you might have already guessed, moderation of specific forums is a local settings, so you can find "Forum Moderators" in the section for "Forum Based Permissions". First of all you will have to select for forum (or forums) you want to assign new moderators to. This form is devided into 3 areas. In the first one you can select multiple forums (select multiple by holding Ctrl or Cmd (under MacOSX)), where the moderator settings you will set in the following form will only apply to exactly these forums. The second area allows you to select only one forum but all the following settings will apply not only to this forum but also all its subforums. And finally the third area's selection will only affect exactly this forum.</para>
+			<para>After selecting the forums and hitting <guilabel>Submit</guilabel> you will be greated by a form you should already be familiar with from one of the previous sections in this guide: <xref linkend="img_quick_permissions_select"/>. Here you can select the users or groups that should get some kind of moderation power over the selected forums. So go ahead: Select some users and/or groups and hit the <guilabel>Set Permissions</guilabel> button.</para>
+			<para>In the next form you can choose, what moderator permissions the selected users/groups should receive. First of all, there are some predefined roles from which you can select:</para>
+			<variablelist>
+				<varlistentry>
+					<term>Standard Moderator</term>
+					<listitem>
+						<para>A Standard Moderator can approve, edit and delete posts, delete or close reports, but not necessarily chnage the owner of a post.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Simple Moderator</term>
+					<listitem>
+						<para>A Simple Moderator can edit posts and close and delete reports.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Queue Moderator</term>
+					<listitem>
+						<para>As a Queue Moderator you can only approve posts that landed in the moderator queue and edit posts.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<figure id="img_quick_permissions_moderator">
+				<title>The Forum Moderator's Permissions</title>
+				<mediaobject>
+					<imageobject>
+			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
+					</imageobject>
+				</mediaobject>
+				<caption>
+					<para>Set the moderator's permissions</para>
+				</caption>
+			</figure>
+			<para>When you're done simply hit <guilabel>Apply all Permissions</guilabel>. All the permissions mentioned here can also be selected from the right side of the form to give you more granular options.</para>
 		</section>
 
 		<section id="quick_permissions_global">
