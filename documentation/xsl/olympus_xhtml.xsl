@@ -30,4 +30,8 @@
   </xsl:if>
 </xsl:template>
 
+<xsl:template name="user.footer.navigation">
+	<div class="copyright" align="center">(c) 2006 phpBB Group - Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
+</xsl:template>
+
 </xsl:stylesheet>
