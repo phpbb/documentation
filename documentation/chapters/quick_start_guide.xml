@@ -184,7 +184,7 @@
 			<!--TODO: Correct ACP link-->
 		</section>
 		<!--/board_settings-->
-		<section id="img_quick_settings_boardfeatures">
+		<section id="quick_settings_boardfeatures">
 			<title>Board Features</title>
 			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
 			<figure>
@@ -357,19 +357,25 @@
 				<varlistentry>
 					<term>Standard Moderator</term>
 					<listitem>
-						<para>A Standard Moderator can approve, edit and delete posts, delete or close reports, but not necessarily chnage the owner of a post.</para>
+						<para>A Standard Moderator can approve, edit and delete posts, delete or close reports, but not necessarily chnage the owner of a post. This kind of moderator can also issue warnings and view details of a post.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Simple Moderator</term>
 					<listitem>
-						<para>A Simple Moderator can edit posts and close and delete reports.</para>
+						<para>A Simple Moderator can edit posts and close and delete reports and can also view post details.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Queue Moderator</term>
 					<listitem>
 						<para>As a Queue Moderator you can only approve posts that landed in the moderator queue and edit posts.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Full Moderator</term>
+					<listitem>
+						<para>Full Moderators can do everything, even banning users.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
@@ -388,8 +394,24 @@
 		</section>
 
 		<section id="quick_permissions_global">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>zeroK</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Setting global permissions</title>
-			<para>TODO</para>
+			<para>Local Permissions are too local for you? Well, then phpBB3 has something to offer for you, too: Global Permissions:</para>
+			<orderedlist>
+				<listitem>Users Permissions</listitem>
+				<listitem>Groups Permissions</listitem>
+				<listitem>Administrators</listitem>
+				<listitem>Global Moderators</listitem>
+			</orderedlist>
+			<para>In "User Permissions" and "Group Permissions" you can allow and disallow features like attachments, signatures and avatars for specific users and user groups. Note that some of these settings only matter, if the respective feature is enabled in the "Board Features" (see <xref linkend="quick_settings_boardfeatures"/> for details).</para>
+			<para>Under "Administrators" you can give users or groups administrator privileges like the ability to manage forums or change user permissions. For details on these settings please read the <xref linkend="acp_permissions"/>.</para>
+			<para>The "Global Moderators" form offers you the same settings as the forum specific form (described in <xref linkend="quick_permissions_moderators"/>) but applies to all forums on your baord.</para>
 		</section>
 
 	</section>
