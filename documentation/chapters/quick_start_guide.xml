@@ -379,10 +379,10 @@
 					<imageobject>
 			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
 					</imageobject>
+					<caption>
+						<para>Set the moderator's permissions</para>
+					</caption>
 				</mediaobject>
-				<caption>
-					<para>Set the moderator's permissions</para>
-				</caption>
 			</figure>
 			<para>When you're done simply hit <guilabel>Apply all Permissions</guilabel>. All the permissions mentioned here can also be selected from the right side of the form to give you more granular options.</para>
 		</section>
