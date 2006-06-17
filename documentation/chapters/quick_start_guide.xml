@@ -61,7 +61,7 @@
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
-		<para> The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installing" />. </para>
+		<para> The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installation" />. </para>
 	</section>
 	<section id="quick_installation">
 		<sectioninfo>
