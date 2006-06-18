@@ -165,7 +165,7 @@
 		<para>TODO: Stuff about the posting settings</para>
 	</section>
 
-	<section id="acp_usergroups">
+	<section id="acp_users">
 		<sectioninfo>
 			<authorgroup>
 				<author>
@@ -173,8 +173,88 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Users and Groups Management</title>
+		<title>User management</title>
+		<para>TODO: Stuff about users</para>
+	</section>
+
+	<section id="acp_groups">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>dhn</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Group management</title>
 		<para>TODO: Stuff about users and groups</para>
+		<section id="acp_groups_types">
+			<title>Group types</title>
+			<para>There are two types of groups:</para>
+			<variablelist>
+				<varlistentry>
+					<term>Pre-defined groups</term>
+					<listitem>
+						<para>This are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users" for instance. Do not try to remove them manually through the database or your board will no longer function properly. </para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>User defined groups</term>
+					<listitem>
+						<para>The groups you create by yourself, are called "User defined groups". This are the groups similar to 2.0. You may create as many as you want, can remove them, set group leaders and change their attributes (description, colour, rank, avatar, and so forth)</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>The "Manage groups" section in the "Administrator Control Panel" shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
+<!-- TODO: LIST OF ALL PRE-DEFINED GROUPS AND THEIR FUNCTION -->
+			
+		</section>
+		<section id="acp_groups_edit">
+			<title>Group attributes</title>
+			<para>A list of attributes a group can have:</para>
+			<variablelist>
+				<varlistentry>
+					<term>Group name</term>
+					<listitem><para>The name of your group.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Group description</term>
+					<listitem><para>The description of the group that will be displayed on the group overview list..</para></listitem>
+				</varlistentry>
+				<varlistentry id="acp_groups_edit_legend">
+					<term>Display group in legend:</term>
+					<listitem><para>This will enable the display of  the name of the group in the legend of the "Who is Online" list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Group able to receive private messages</term>
+					<listitem><para>This will allow the sending of Private Messages to this group. Please note, that it can be dangerous to allow this for Registered Users, for instance. There is no permission to deny the sending to groups, so anyone who is able to send Private Messages will be able to send a message to this group!</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Group private message limit per folder</term>
+					<listitem><para>This setting overrides the per-user folder message limit. A value of 0 means the user default limit will be used. <!-- TODO: ADD LINK TO PM SETTINGS --></para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Group colour</term>
+					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default"/>) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the "Who is Online" listing.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Group rank</term>
+					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default"/>) will have this rank below his username. Note, that you can change the rank of this member  to a different one that overrides the group setting.<!-- TODO: ADD LINK TO RANK SETTINGS --></para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Group avatar</term>
+					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default"/>) will use this avatar. Note, that a member can change his avatar to a different one, if he has the permission to do so.<!-- TODO: ADD LINK TO AVATAR SETTINGS --></para></listitem>
+				</varlistentry>				
+			</variablelist>
+			
+		</section>
+		<section id="acp_groups_default">
+			<title>Default groups</title>
+			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit" />, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
+			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
+			<important><para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para></important>
+			<para>You can change default groups in two ways. Either through the user management (see <xref linkend="acp_users"/>) <!-- TODO: LINK  TO MANAGE USERS /--> or directly through the groups management (<guilabel>Manage groups</guilabel>). Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the "Registered Users" group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of "Registered Users".</para>
+			<important><para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para></important>
+		</section>
 	</section>
 
 	<section id="acp_permissions">
