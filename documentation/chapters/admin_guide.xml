@@ -2,7 +2,7 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="admin_guide">
-	<?dbhtml dir="adminguide" ?>
+	<?dbhtml dir="adminguide" filename="index.html" ?>
 	<chapterinfo>
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
