@@ -5,7 +5,7 @@ body {
 	font-family: Verdana, Helvetica, Arial, sans-serif;
 	padding: 10px;
 	background-color: #e4edf0;
-	font-size: 1em;
+	font-size: 0.9em;
 	line-height: 1.3em;
 }
 div.section, div.chapter {
@@ -137,4 +137,18 @@ h1, h2, h3, h4 {
 
 .list-of-figures {
 	display: none;
+}
+
+.variablelist dt {
+	font-weight: bold;
+	margin: 0;
+}
+.variablelist dd p {
+	font-style: italic;
+	margin: 0;
+	padding: 0;
+}
+.variablelist  dd {
+	margin-bottom: 1em;
+	margin-left: 0;
 }
