@@ -23,7 +23,8 @@ div.section div.section {
 div.author h3 {
 	display: none;
 }
-div.tip, div.important {
+
+div.tip, div.important, div.note {
 	margin: 0 !important;
 	font-family: Trebuchet MS;
 	border: 1px solid #ddd;
@@ -37,13 +38,14 @@ div.tip {
 div.important {
 	background-color: #f90;
 }
-div.tip h3, div.important h3 {
+div.tip h3, div.important h3, div.note h3 {
 	margin: 0;
 	padding: 0;
 }
 
-div.tip p, div.important p {
-	font-size: 0.8em;
+
+div.tip p, div.important p, div.note p {
+	margin-bottom: 0;
 }
 
 ul li p, ol li p{
@@ -55,18 +57,16 @@ hr {
 }
 div.navheader, div.navfooter {
 	background-color: #ffffff;
-	padding: 0.4em 1em;
+	padding: 0.4em 0;
 	color: #333;
 	border: solid 1px #a9b8c2;
 	-moz-border-radius: 10px 10px 10px 10px;
 }
+div.navheader td, div.navfooter td{
+	padding: 0em 1em;
+}
 div.navheader a, div.navfooter a {
-	color: #000;
-	font-family: Trebuchet MS;
-	background-color: #eee;
-	padding: 0em 0.4em;
-	text-decoration: none;
-	font-size: 0.8em;
+	font-family: Arial;
 	
 	
 }
@@ -77,15 +77,14 @@ div.navfooter {
 
 .figure {
 	float: left;
-	margin: 10px;
-	margin-right: 0;
+	margin: 10px 0;
 	clear: both;
 	margin-top: 20px;	
 
 
 }
 .figure .title {
-	font-family: Trebuchet MS;
+	font-family: Arial;
 	margin: 0;
 
 	margin-left: 10px;
@@ -99,6 +98,7 @@ div.navfooter {
 	font-weight: normal;
 }
 .mediaobject img {
+	display: block;
 	background-color: #e1ebf2;	
 	padding: 10px;
 	-moz-border-radius: 10px;
@@ -111,7 +111,6 @@ div.navfooter {
 	margin: 0;
 	padding: 0;
 	margin-top: 5px;
-	font-family: Trebuchet MS;
 	font-style: italic;
 	
 }
@@ -127,4 +126,15 @@ p {
 
 h1, h2, h3, h4 {
 	clear: both;
+}
+.copyright {
+	font-size: 0.6em;
+	margin-top: 1em;
+	line-height: 1em;
+	margin: 1em 50px;
+	font-family: Arial;
+}
+
+.list-of-figures {
+	display: none;
 }
