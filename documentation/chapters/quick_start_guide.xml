@@ -139,7 +139,7 @@
 		</section>
 		<section id="quick_installation_admin">
 			<title>Administrator details</title>
-			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla phpBB 3.0 installation we only include <guilabel>English [UK]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
 		</section>
 		<section id="quick_installation_config">
 			<title>Configuration file</title>
