@@ -164,10 +164,10 @@
 		<title>General settings</title>
 		<para>In this section you will learn how to change some of the basic settings of your new board.</para>
 		<para>Right after the installation you will be redirected to the so called "Administration Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
-		<section id="img_quick_settings_boardsettings">
+		<section id="quick_settings_boardsettings">
 			<title>Board Settings</title>
 			<para>The first section of the <acronym>ACP</acronym> you will probably want to visit right after the installation is "Board Settings". Here you can first of all change the name (<guilabel>Site name</guilabel>) and description (<guilabel>Site description</guilabel>) of your board.</para>
-			<figure id="quick_settings_sitename">
+			<figure id="img_quick_settings_sitename">
 				<title>Board Settings</title>
 				<mediaobject>
 					<imageobject>
@@ -187,7 +187,7 @@
 		<section id="quick_settings_boardfeatures">
 			<title>Board Features</title>
 			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
-			<figure id="quick_settings_features">
+			<figure id="img_quick_settings_features">
 				<title>Board Features</title>
 				<mediaobject>
 					<imageobject>
