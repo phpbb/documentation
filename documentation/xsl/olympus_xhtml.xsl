@@ -30,8 +30,13 @@
   </xsl:if>
 </xsl:template>
 
+<!-- Copyright -->
 <xsl:template name="user.footer.navigation">
 	<div class="copyright" align="center">(c) 2006 phpBB Group - Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
 </xsl:template>
 
+<!-- Prevent image links breaking on yavin -->
+<xsl:template match="@fileref">
+	<xsl:value-of select="."/>
+</xsl:template>
 </xsl:stylesheet>
