@@ -8,13 +8,36 @@ body {
 	font-size: 0.9em;
 	line-height: 1.3em;
 }
-div.section, div.chapter {
+div.section, div.chapter, div.titlepage, div.toc {
    	background-color: #fff;
 	padding: 0.4em 1em;
 	margin: 0.5em 0em;
 	border: solid 1px #a9b8c2;
 	-moz-border-radius: 10px 10px 10px 10px;
 }
+div.titlepage {
+        margin-bottom: 0;
+	-moz-border-radius: 10px 10px 0px 0px;
+	border-bottom: none;
+}
+
+div.toc{
+        margin-top: 0;
+	-moz-border-radius: 0px 0px 10px 10px;
+	border-top: none;
+	padding-top: 0;
+}
+div.toc p {
+	margin-top: 0;
+}
+
+div.section div.titlepage, div.chapter div.toc, div.chapter div.titlepage {
+	border: none;
+	padding: 0;
+	margin: 0;
+	-moz-border-radius: 0;
+}
+
 div.section div.section {
 	padding: 0;
 	border: solid 1px #a9b8c2;
@@ -38,6 +61,9 @@ div.tip {
 div.important {
 	background-color: #f90;
 }
+div.note {
+	background-color: #ff9;
+}
 div.tip h3, div.important h3, div.note h3 {
 	margin: 0;
 	padding: 0;
@@ -45,7 +71,7 @@ div.tip h3, div.important h3, div.note h3 {
 
 
 div.tip p, div.important p, div.note p {
-	margin-bottom: 0;
+	margin: 0;
 }
 
 ul li p, ol li p{
@@ -127,7 +153,7 @@ p {
 h1, h2, h3, h4 {
 	clear: both;
 }
-.copyright {
+div.copyright {
 	font-size: 0.6em;
 	margin-top: 1em;
 	line-height: 1em;
