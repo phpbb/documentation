@@ -120,6 +120,9 @@
 					<para>The <guilabel>Database username</guilabel> and <guilabel>Database password</guilabel> - the login data to access the database.</para>
 				</listitem>
 			</itemizedlist>
+			<tip>
+				<para>If you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
+			</tip>
 			<figure id="img_quick_installation_database">
 				<title>Database settings</title>
 				<mediaobject>
