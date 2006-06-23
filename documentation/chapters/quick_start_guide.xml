@@ -123,9 +123,6 @@
 			<tip>
 				<para>If you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
 			</tip>
-			<tip>
-				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
-			</tip>
 			<figure id="img_quick_installation_database">
 				<title>Database settings</title>
 				<mediaobject>
@@ -140,6 +137,9 @@
 			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multipe phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
 			<para>After you entered your details, you can continue with the <guilabel>Proceed to next step</guilabel> button. Now phpBB 3.0 will check whether the data you entered will lead to a successful database connection and whether tables with the same prefix already exist.</para>
 			<para>A <guilabel>Could not connect to the database</guilabel> error means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
+			<tip>
+				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
+			</tip>
 			<para>If you installed another version of phpBB before on the same database with the same prefix, phpBB will inform you and you just need to enter a different database prefix.</para>
 			<para>If you see the <guilabel>Successful Connection</guilabel> message, you can continue to the next step.</para>
 		</section>
