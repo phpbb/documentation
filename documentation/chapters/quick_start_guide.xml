@@ -123,6 +123,9 @@
 			<tip>
 				<para>If you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
 			</tip>
+			<tip>
+				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
+			</tip>
 			<figure id="img_quick_installation_database">
 				<title>Database settings</title>
 				<mediaobject>
