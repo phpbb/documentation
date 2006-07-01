@@ -300,7 +300,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Forum Logs</title>
-			<para>The <guilabel>Forum Log</guilable> section of the administration panel provdes an overview of what has been happening on the board. There are four types of logs:</para>
+			<para>The <guilabel>Forum Log</guilabel> section of the administration panel provdes an overview of what has been happening on the board. There are four types of logs:</para>
 			<variablelist>
 				<varlistentry>
 					<term>Admin Log</term>
