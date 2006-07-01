@@ -194,7 +194,7 @@
 				<varlistentry>
 					<term>Pre-defined groups</term>
 					<listitem>
-						<para>This are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users" for instance. Do not try to remove them manually through the database or your board will no longer function properly. </para>
+						<para>These are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users" for instance. Do not try to remove them manually through the database or your board will no longer function properly. </para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -291,6 +291,44 @@
 		</sectioninfo>
 		<title>Board Maintenance</title>
 		<para>TODO: Stuff about maintenance</para>
+		<section id="acp_maintenance_logs">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>Graham</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Forum Logs</title>
+			<para>The <guilabel>Forum Log</guilable> section of the administration panel provdes an overview of what has been happening on the board. There are four types of logs:</para>
+			<variablelist>
+				<varlistentry>
+					<term>Admin Log</term>
+					<listitem>
+						<para>This log records all actions carried out within the administration panel itself.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Moderator Log</term>
+					<listitem>
+						<para>This logs records the actions performed by moderators of your board. Whenever a topic is moved or locked it will be recorded here, allowing you to see who carried out a particular action.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>User Log</term>
+					<listitem>
+						<para>This log records all important actions carried out either by users or on users. All email and password changes are recorded within this log.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Error Log</term>
+					<listitem>
+						<para>This log shows you any errors arising out of actions taken by the board itself, such as errors sending emails. If you are having problems with a particular feature not working, this log is a good place to start. If enabled, addtional debugging information may be written to this log.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			<para>If you have appropriate permissions, you are able to remove any or all log entries from the above sections.</para>
+		</section>
 	</section>
 
 	<section id="acp_system">
