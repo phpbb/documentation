@@ -157,6 +157,7 @@
 			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later. So if you are not sure what these settings mean, proceed to the final step and finish the installation.</para>
 			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.0 successfully. But there is still a lot of work ahead!</para>
 			<para>If you are unable to get phpBB 3.0 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
+			<para>At this point if you are upgrading from phpBB 2.0, you should refer to the <link linkend="upgrade_guide">upgrade guide</link> for further information. If not, you should remove the install directory from your server as you will only be able to access the Administration Control Panel whilst it is present</para>
 		</section>
 	</section>
 	<section id="quick_settings">
