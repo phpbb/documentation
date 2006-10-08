@@ -24,7 +24,7 @@
 				<para>A SQL database system, one of:</para>
 				<itemizedlist>
 					<listitem>
-						<para>FireBird 1.5 or above</para>
+						<para>FireBird 2.0 or above</para>
 					</listitem>
 					<listitem>
 						<para>MySQL 3.23 or above</para>
