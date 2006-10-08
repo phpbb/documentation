@@ -252,6 +252,54 @@
 		</sectioninfo>
 		<title>User management</title>
 		<para>TODO: Stuff about users</para>
+		<section id="acp_users_manage">
+			<title>Manage Users</title>
+		</section>
+		<section id="acp_users_inactive">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>Graham</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Inactive Users</title>
+			<para>Here you are able to view details of all users who are currently marked as inactive along with the reason their account is marked as inactive and when this occurred.</para>
+			<para>Using the checkboxes on this page it is possible to perform bulk actions on the users, these include activating the accounts, sending them a reminder email indicating that they need to activate their account or deleting the account.</para>
+			<para>There are 5 reasons which may be indicated for an account being inactive:</para>
+			<variablelist>
+				<varlistentry>
+					<term>Account deactivated by administrator</term>
+					<listitem>
+						<para>This account has been manually deactivated by an administrator via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Profile details changed</term>
+					<listitem>
+						<para>The board is configured to require user activation and this user has changed key information related to their account such as the email address and is required to reactivate the account to confirm these changes.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Newly registered account</term>
+					<listitem>
+						<para>The board is configured to require user activation and either the user or an administrator (depending on the settings) has not yet activated this new account.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Forced user account reactivation</term>
+					<listitem>
+						<para>An administrator has forced this user to reactivate their account via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Unknown</term>
+					<listitem>
+						<para>No reason was recorded for this user being inactive, it is likely that the change was made by an external application or that this user was added from another source.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+		</section>
 	</section>
 
 	<section id="acp_groups">
