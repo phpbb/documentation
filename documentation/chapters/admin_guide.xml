@@ -485,11 +485,13 @@
 			<title>Language Packs</title>
 		</section>
 		<section id="acp_system_phpinfo">
-			<authorgroup>
-				<author>
-					<othername>Graham</othername>
-				</author>
-			</authorgroup>
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>Graham</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>PHP Information</title>
 			<para>This option will provide you with information about the version of PHP installed on your server along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
 			<para>Please note that some hosting providers may limit the information which is available to you on this page for reasons of security.</para>
