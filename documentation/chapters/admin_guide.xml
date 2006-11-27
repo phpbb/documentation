@@ -247,13 +247,20 @@
 			<authorgroup>
 				<author>
 					<othername>dhn</othername>
+					<othername>MennoniteHobbit</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>User management</title>
-		<para>TODO: Stuff about users</para>
 		<section id="acp_users_manage">
 			<title>Manage Users</title>
+			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users.. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
+				
+			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guilabel>Users and Groups</guilabel>  to reach the necessary page. If you do not see <guilabel>User Administration</guilabel> , simply find and click on <guilabel>Manage Users</guilabel> in the navigation menu on the left side of the page.</para>
+				
+			<para>To continue and manage a user, you must know the username(s) that you want to manage. In the textbox for the <guilabel>"Find a member:"</guilabel> field, type in the username of the user whose information and settings you wish to manage. On the other hand, if you want to find a member, click on <guilabel>[ Find a Member ]</guilabel> (which is below the textbox) and follow all the steps appropriate to select a user. If you wish to manage the information and settings for the Anonymous user, check the checkbox labeled "Select Anonymous User". Once you have selected a user, click the Submit button.</para>
+				
+			<para>There are many sections relating to a user's settings. These sections are: Overview, Feedback, Profile, Preferences, Avatar, Rank, Signature, Groups, Permissions, and Attachments. Each section allows you to manage specific settings for the user you have selected.</para>
 		</section>
 		<section id="acp_users_inactive">
 			<sectioninfo>
