@@ -6,9 +6,173 @@
 	<abstract>
 		<para>A guide to the terms used in the phpBB Documentation and on the forums.</para>
 	</abstract>
-	<section>
-		<title>Abbreviations</title>
-		<para>Some information on the common abbreviations.</para>
-
+	
+	<section id="terms">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>MennoniteHobbit</othername>
+				</author>
+				
+				<author>
+					<othername>Techie-Micheal</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		
+		<title>Terms</title>
+		<para>There are quite a few terms that are commonly used throughout phpBB and the support forums. Here is some information on these terms.</para>
+		
+		<!-- TODO: Add links to sections on the respective item for whichever terms need it. For example, the ACP bit needs to link to the section of the Admin Guide. -->
+		
+		<variablelist>
+			<varlistentry>
+				<term>ACP</term>
+				<listitem>
+					<para>The <acronym>ACP</acronym>, which stands for "Administration Control Panel",  is the main place from which you, the administrator, can control every aspect of your forum.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>ASCII</term>
+				<listitem>
+					<para><acronym>ASCII</acronym>, or "American Standard Code for Information Interchange", is a common way of encoding data to transfer it to a different computer. <acronym>FTP</acronym> clients have ASCII as a mode to transfer files. All phpBB files (files with the file extensions .php, .inc, .sql, .cfg, .htm and .tpl), except for the image files, should be uploaded in ASCII mode.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Avatar</term>
+				<listitem>
+					<para>Avatars are small images that are displayed next to a username. Avatars can be changed in your profile and settings (such as allow/disallow uploading) edited from the <acronym>ACP</acronym>.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Binary</term>
+				<listitem>
+					<para>Within phpBB, "binary" usually refers to another common way of encoding data for transfer (the other being <acronym>ASCII</acronym>. This is often found as a mode in an <acronym>FTP</acronym> clients to upload files. All of phpBB's images (found in the images/ and templates/subSilver/images/ directories) should be uploaded in binary mode. </para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Cache</term>
+				<listitem>
+					<para>Cache is a way of storing frequently-accessed data. By storing this data, your server will have less load put on it, allowing it to process other tasks. By default, phpBB caches its templates when they are compiled and used.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>chmod</term>
+				<listitem>
+					<para><abbrev>chmod</abbrev> is a way of changing the permissions of a file on a *nix (UNIX, Linux, etc.) server. Files in phpBB should be chmodded 644. Directories should be chmodded to 755. Avatar upload directories and templates cache directories should be chmodded to 777. For more information regarding chmod, please consult your <acronym>FTP</acronym> client's documentation.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Cookie</term>
+				<listitem>
+					<para>A cookie is a small piece of data put onto the user's computer. Cookies are used with phpBB to store login information (used for automatic logins).</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Database</term>
+				<listitem>
+					<para>A database is a collection stored in a structured, organized manner (with different tables and row and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.0 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, categories. Data stored in a database can usually be backed up and restored easily.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>DBAL</term>
+				<listitem>
+					<para><acronym>DBAL</acronym>, or "Database Abstraction Layer", is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>DBMS</term>
+				<listitem>
+					<para>A <acronym>DBMS</acronym>, or "Database Management System", is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>FTP</term>
+				<listitem>
+					<para><acronym>FTP</acronym> stands for "File Transfer Protocol". It is a protocol which allows files to be transferred between computers. <acronym>FTP</acronym> clients are programs that are used to transfer files via <acronym>FTP</acronym>.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Gzip</term>
+				<listitem>
+					<para>Gzip is a compression method often used in web applications and software such as phpBB to improve speed. Most modern browsers support this on-the-fly algorithm. Gzip is also used to compress an archive of files. Higher compression levels, however, will increase server load.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>MD5</term>
+				<listitem>
+					<para><acronym>MD5</acronym> (Message Digest algorithm 5) is a commonly-used hash function used by phpBB. MD5 is an algorithm which takes an input of any length and outputs a message digest of a fixed length (128-bit, 32 characters). MD5 is used in phpBB to turn the users' passwords into a one-way hash, meaning that you cannot "decrypt" (reverse) an MD5 hash and get users' passwords. User passwords are stored as MD5 hashes in the database.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>MOD</term>
+				<listitem>
+					<para>A <abbrev>MOD</abbrev> is a code modification for phpBB that either adds, changes, or in some other way enhances, phpBB. <abbrev>MODs</abbrev> are written by third-party authors; as such, the phpBB Group does not assume any responsibility for MODs.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>PHP</term>
+				<listitem>
+					<para><acronym>PHP</acronym>, or "PHP: Hypertext Preprocessor", is a commonly-used open-source scripting language. phpBB is written in <acronym>PHP</acronym> and requires the <acronym>PHP</acronym> runtime engine to be installed and properly configured on the server phpBB is run on. For more information about <acronym>PHP</acronym>, please see the <ulink url="http://www.php.net">PHP</ulink> home page.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>phpMyAdmin</term>
+				<listitem>
+					<para>phpMyAdmin is a popular open-source program that is used to manage MySQL databases. When <abbrev>MODding</abbrev> phpBB or otherwise changing it, you may have to edit your database. phpMyAdmin is one such tool that will allow you to do so. For more information regarding phpMyAdmin, please see the <ulink url="http://www.phpmyadmin.net">phpMyAdmin project home page</ulink>.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Session</term>
+				<listitem>
+					<para>A session is a visit to your phpBB forums. For phpBB, a session is how long you spend on the forums. It is created when you login deleted when you log off. Session <acronym>IDs</acronym> are usually stored in a cookie, but if phpBB is unable to get cookie information from your computer, then a session <acronym>ID</acronym> is appended to the URL (e.g. index.php?sid=999). This session <acronym>ID</acronym> preserves the user's session without use of a cookie. If sessions were not preserved, then you would find yourself being logged out every time you clicked on a link in the forum.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>SMTP</term>
+				<listitem>
+					<para><acronym>SMTP</acronym> stands for "Simple Mail Transfer Protocol". It is a protocol for sending email. By default, phpBB uses <acronym>PHP</acronym>'s built-in <ulink url="http://www.php.net/manual/en/function.mail.php">mail()</ulink> function to send email. However, phpBB will use <acronym>SMTP</acronym> to send emails if the required <acronym>SMTP</acronym> data is correctly set up.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Style</term>
+				<listitem>
+					<para>A style is made up of a template set, image set, and stylesheet. A style controls the overall look of your forum.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Template</term>
+				<listitem>
+					<para>A template is what controls the layout of a style. phpBB 3.0 template files have the .html file extension. These template files contain mostly <acronym>HTML</acronym> (no <acronym>PHP</acronym>, however), with some variables that phpBB uses (contained in braces: { and }).</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Usergroup</term>
+				<listitem>
+					<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating perissions separately). A usergroup has a usergroup moderator, who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open.</para>
+					<para>phpBB 3.0 has a few default usergroups.</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
 	</section>
 </chapter>
