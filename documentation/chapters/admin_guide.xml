@@ -24,7 +24,7 @@
 		</sectioninfo>
 		<title>The Administration Control Panel</title>
 		<para>Even more so than its predecessor, phpBB 3.0 Olympus is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
-		<para>Click on the "Administration Control Panel" link on the bottom of the default forum style to visit the ACP. TODO: Screenshot</para>
+		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>. TODO: Screenshot</para>
 		<para>The Admin Control Panel has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 		<para>TODO: Screenshot and explanation of the layout</para>
 	</section>
@@ -213,9 +213,9 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Sub-forums</title>
-			<para>One of the many new features in Olympus are sub-forums. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
+			<para>One of the many new features in phpBB 3.0 are sub-forums. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
 			<para>If you have a forum about pets for instance, you are able to put sub-forums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category.  In this example, only the "Pets" forum will be listed on the index like a normal forum. Its sub-forums will appear as simple links below the forum description (unless you disabled this). (TODO: Screenshot) </para>
-			<para>This system does allow (theoretically) unlimited levels of sub-forums. You can put as many sub-forums inside sub-forums as you like, or at least make sense. But please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use sub-forums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
+			<para>This system theoretically allows unlimited levels of sub-forums. You can put as many sub-forums inside sub-forums as you like, or at least make sense. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use sub-forums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
 			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create sub-forums.</para>
 		</section>
 		<section id="acp_forums_manage">
@@ -264,7 +264,7 @@
 				
 			<para>To continue and manage a user, you must know the username(s) that you want to manage. In the textbox for the <guilabel>"Find a member:"</guilabel> field, type in the username of the user whose information and settings you wish to manage. On the other hand, if you want to find a member, click on <guilabel>[ Find a Member ]</guilabel> (which is below the textbox) and follow all the steps appropriate to find and select a user. If you wiant to manage the information and settings for the Anonymous user (any visitor who is not logged in is set as the Anonymous user), check the checkbox labeled <guilabel>"Select Anonymous User"</guilabel>. Once you have selected a user, click <guilabel>Submit</guilabel>.</para>
 				
-			<para>There are many sections relating to a user's settings. The following are subsections containing further information  on each form. Each form allows you to manage specific settings for the user you have selected. When you are done with editing the data on each form, click <guilabel>Submit</guilabel>  (located at the bottom of each form) to submit your changes.</para>
+			<para>There are many sections relating to a user's settings. The following are subsections that have more information on each form. Each form allows you to manage specific settings for the user you have selected. When you are done with editing the data on each form, click <guilabel>Submit</guilabel>  (located at the bottom of each form) to submit your changes.</para>
 			
 			<section id="acp_users_manage_overview">
 				<sectioninfo>
@@ -347,7 +347,7 @@
 						<term>Warnings</term>
 						<listitem>
 							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
-							<para>For more information about warnings, see <link linkend="mcp_warnings">Section x.x Warnings</link>.</para>
+							<para>For more information about warnings, see <xref linkend="mcp_warnings">Section x.x Warnings</xref>.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -400,6 +400,19 @@
 						<listitem><para><guilabel>Birthday:</guilabel> can be set with three different drop-down selection boxes: <guilabel>Day:</guilabel>, <guilabel>Month:</guilabel>, and <guilabel>Year:</guilabel>, respectively. Setting a year will list the user's age when it is his or her birthday.</para></listitem>
 					</itemizedlist>
 				</para>
+			</section>
+			
+			<section id="acp_users_manage_preferences">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>User Preferences</title>
+				
+				<para>Users have many settings they can use for their account. As an administrator, you can change any of these settings. The user settings (also known as preferences) are grouped into three main categories: <guilabel>Global Settings</guilabel>, <guilabel>Posting Defaults</guilabel>, and <guilabel>Display Options</guilabel>.</para>
 			</section>
 		</section>
 		<section id="acp_users_inactive">
@@ -455,18 +468,73 @@
 				<author>
 					<othername>dhn</othername>
 				</author>
+				
+				<author>
+					<othername>MennoniteHobbit</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
+		
 		<title>Group management</title>
-		<para>TODO: Stuff about users and groups</para>
+		
+		<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
+		
 		<section id="acp_groups_types">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>dhn</othername>
+					</author>
+					
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			
 			<title>Group types</title>
 			<para>There are two types of groups:</para>
+			
+			<!-- TODO: More info on each pre-defined group? -->
 			<variablelist>
 				<varlistentry>
 					<term>Pre-defined groups</term>
 					<listitem>
-						<para>These are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users", for instance. Do not try to remove them manually through the database, or your board will no longer function properly. </para>
+						<para>These are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar, and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users", for instance. Do not try to remove them manually through the database, or your board will no longer function properly.
+						
+							<variablelist>
+								<varlistentry>
+									<term>Administrators</term>
+									<listitem><para>This usergroup contains all of the administrators on your board. All founders are administrators, but not all administrators are founders. You can control what administrators can do by managing this group.</para></listitem>
+								</varlistentry>
+								
+								<varlistentry>
+									<term>Bots</term>
+									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.0 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
+								</varlistentry>
+								
+								<varlistentry>
+									<term>Global Moderators</term>
+									<listitem><para>Global moderators are moderators that have moderator permissions for every forum in your board. You can edit what permissions these moderators have by managing this group.</para></listitem>
+								</varlistentry>
+								
+								<varlistentry>
+									<term>Guests</term>
+									<listitem><para>Guests are visitors to your board who aren't logged in. You can limit what guests can do by managing this usergroup.</para></listitem>
+								</varlistentry>
+								
+								<varlistentry>
+									<term>Registered Users</term>
+									<listitem><para>Registered users are a big part of your board. Registered users have already registered on your board. To control what registered users can do, manage this usergroup.</para></listitem>
+								</varlistentry>
+								
+								<varlistentry>
+									<term>Registered COPPA Users</term>
+									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users.  <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
+								</varlistentry>
+							</variablelist>
+							
+						</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -476,8 +544,7 @@
 					</listitem>
 				</varlistentry>
 			</variablelist>
-			<para>The "Manage groups" section in the "Administrator Control Panel" shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
-<!-- TODO: LIST OF ALL PRE-DEFINED GROUPS AND THEIR FUNCTION -->
+			<para>The "Manage groups" section in the <acronym>ACP</acronym> shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
 			
 		</section>
 		<section id="acp_groups_edit">
@@ -547,10 +614,35 @@
 				<author>
 					<othername>dhn</othername>
 				</author>
+				
+				<author>
+					<othername>MennoniteHobbit</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Styles</title>
-		<para>TODO: Stuff about Styles</para>
+		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
+		
+		<para>phpBB 3.0 styles have three main parts: templates, themes, and imagesets.
+			<variablelist>
+				<varlistentry>
+					<term>Templates</term>
+					<listitem><para>Templates are the HTML files responsible for the layout of the style.</para></listitem>
+				</varlistentry>
+				
+				<varlistentry>
+					<term>Themes</term>
+					<listitem><para>Themes are a combination of colour schemes and images that define the basic look of your forum.</para></listitem>
+				</varlistentry>
+				
+				<varlistentry>
+					<term>Imagesets</term>
+					<listitem><para>Imagesets are groups of images that are used throughout your board. Imagesets are comprised of all of the non-style specific images used by your board.</para></listitem>
+				</varlistentry>
+			</variablelist>
+		</para>
+		
+		<!-- TODO: More stuff about styles -->
 	</section>
 
 	<section id="acp_maintenance">
@@ -559,10 +651,18 @@
 				<author>
 					<othername>dhn</othername>
 				</author>
+				
+				<author>
+					<othername>MennoniteHobbit</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Board Maintenance</title>
-		<para>TODO: Stuff about maintenance</para>
+		
+		<para>Running a phpBB 3.0 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
+		
+		<para><guimenuitem>Board Maintenance</guimenuitem> is a section in the <acronym>ACP</acronym> that allows you to keep track of internal phpBB information, such as logs, as well as maintaining your database (which holds your phpBB-related data), such as backing up and restoring data.</para>
+		
 		<section id="acp_maintenance_logs">
 			<sectioninfo>
 				<authorgroup>
@@ -572,7 +672,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Forum Logs</title>
-			<para>The <guilabel>Forum Log</guilabel> section of the administration panel provdes an overview of what has been happening on the board. There are four types of logs:</para>
+			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. There are four types of logs:</para>
 			<variablelist>
 				<varlistentry>
 					<term>Admin Log</term>
@@ -595,7 +695,7 @@
 				<varlistentry>
 					<term>Error Log</term>
 					<listitem>
-						<para>This log shows you any errors arising out of actions taken by the board itself, such as errors sending emails. If you are having problems with a particular feature not working, this log is a good place to start. If enabled, addtional debugging information may be written to this log.</para>
+						<para>This log shows you any errors that were caused by actions done by the board itself, such as errors sending emails. If you are having problems with a particular feature not working, this log is a good place to start. If enabled, addtional debugging information may be written to this log.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
