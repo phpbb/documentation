@@ -119,11 +119,12 @@
 					<guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
 				<para> If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the "Full Folder Default Action" list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
 				<para> When sending a Private Message it is still possible to edit the message until the recipient reads it. After it was read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0 which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
-				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. <itemizedlist>
+				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. 
+					<itemizedlist>
 						<listitem>
 							<para><guilabel>Allow Mass PMs:</guilabel> enables the sending of Private Messages to multiple recipients. This feature is enabled by default. Disabling it will also disallow sending of Private Messages to groups. </para>
 							<tip>
-								<para>See the <link linkend="acp_usergroups">Groups section</link> for information on how to enable the ability to send a message to a whole group.</para>
+								<para>See the <link linkend="acp_groups">Groups section</link> for information on how to enable the ability to send a message to a whole group.</para>
 							</tip>
 						</listitem>
 						<listitem>
@@ -257,7 +258,7 @@
 		<title>User management</title>
 		<section id="acp_users_manage">
 			<title>Manage Users</title>
-			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users.. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
+			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
 				
 			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem>  to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
 				
@@ -330,9 +331,9 @@
 						<term>New password</term>
 						<listitem>
 							<para>As an administrator, you cannot see any of your users' password. However, it is possible to change passwords. To change the user's password, type in a new password in the <guilabel>New password:</guilabel> textbox. The new password has to be between six and thirty characters long.</para>
-						</listitem>
 						
-						<important><para>Before submitting any changes to the user, make sure this field is blank, unless you really want to change the user's password. If you accidentally change the user's password, the original password cannot be recovered!</para></important>
+							<important><para>Before submitting any changes to the user, make sure this field is blank, unless you really want to change the user's password. If you accidentally change the user's password, the original password cannot be recovered!</para></important>
+						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
@@ -357,6 +358,48 @@
 						</listitem>
 					</varlistentry>
 				</variablelist>
+			</section>
+			
+			<section id="acp_users_manage_feedback">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>User Feedback</title>
+				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
+				
+				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued.  <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
+			
+				<para>Another way of managing a user's feedback data is by adding feedback. Simply find the section entitled <guilabel>Add feedback</guilabel> and enter your message into the <guilabel>FEEDBACK</guilabel> text area. When you are done, click <guilabel>Submit</guilabel> to add the feedback.</para>
+			</section>
+			
+			<section id="acp_users_manage_profile">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>User Profile</title>
+				
+				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
+					<itemizedlist>
+						<listitem><para><guilabel>ICQ Number:</guilabel> has to be a number at least three digits long.</para></listitem>
+						<listitem><para><guilabel>AOL Instant Messenger:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>MSN Messenger:</guilabel> can have any alphanumeric characters, but should look similar to an email address (x@x.tld).</para></listitem>
+						<listitem><para><guilabel>Yahoo Messenger:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Jabber address:</guilabel> can have any alphanumeric characters, but needs to look like an email address would (x@x.tld).</para></listitem>
+						<listitem><para><guilabel>Website:</guilabel> can have any alphanumeric characters and symbols, but must have the protocol included (ex. http://).</para></listitem>
+						<listitem><para><guilabel>Location:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Occupation:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Interests:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Birthday:</guilabel> can be set with three different drop-down selection boxes: <guilabel>Day:</guilabel>, <guilabel>Month:</guilabel>, and <guilabel>Year:</guilabel>, respectively. Setting a year will list the user's age when it is his or her birthday.</para></listitem>
+					</itemizedlist>
+				</para>
 			</section>
 		</section>
 		<section id="acp_users_inactive">
@@ -597,8 +640,8 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>PHP Information</title>
-			<para>This option will provide you with information about the version of PHP installed on your server along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
-			<para>Please note that some hosting providers may limit the information which is available to you on this page for reasons of security.</para>
+			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
+			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
 		</section>
 		<section id="acp_system_reports">
 			<title>Manage reasons for reporting and denying posts</title>
