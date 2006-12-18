@@ -23,10 +23,22 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>The Administration Control Panel</title>
-		<para>Even more so than its predecessor, phpBB 3.0 Olympus is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
+		<para>Even more so than its predecessor, phpBB 3.0 "Olympus" is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>. TODO: Screenshot</para>
-		<para>The Admin Control Panel has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
-		<para>TODO: Screenshot and explanation of the layout</para>
+		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
+		
+		<figure id="admin_control_panel_index">
+			<title>Administration Control Panel Index</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
+				</imageobject>
+				<caption>
+					<para>The Administration Control Panel Index, the home of managing your phpBB board. Administration functions are grouped into eight different categories: <guimenuitem>General</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Posting</guimenuitem>, <guimenuitem>Users and Groups</guimenuitem>, <guimenuitem>Permissions</guimenuitem>, <guimenuitem>Styles</guimenuitem>, <guimenuitem>Maintenance</guimenuitem>, and <guimenuitem>System</guimenuitem>. Each category is a tab located at the top of the page. After picking the category, specific functions can be found in the left-hand sidebar of each page.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+			
 	</section>
 	<section id="acp_general">
 		<sectioninfo>
@@ -115,8 +127,7 @@
 				<para> Private Messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
 				<para> You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable Private Messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
 				<para> Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
-				<para>
-					<guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
+				<para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
 				<para> If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the "Full Folder Default Action" list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
 				<para> When sending a Private Message it is still possible to edit the message until the recipient reads it. After it was read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0 which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
 				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. 
@@ -182,7 +193,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Explanation of forum types</title>
-			<para>In Olympus there are three forum types. A forum can be a normal forum where people can post in, it can be a category that contains forums, or it can be a simple link.</para>
+			<para>In phpBB 3.0 there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
 			<variablelist>
 				<varlistentry>
 					<term>Forum</term>
@@ -213,7 +224,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Sub-forums</title>
-			<para>One of the many new features in phpBB 3.0 are sub-forums. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
+			<para>One of the many new features in phpBB 3.0 are <glossterm>sub-forums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
 			<para>If you have a forum about pets for instance, you are able to put sub-forums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category.  In this example, only the "Pets" forum will be listed on the index like a normal forum. Its sub-forums will appear as simple links below the forum description (unless you disabled this). (TODO: Screenshot) </para>
 			<para>This system theoretically allows unlimited levels of sub-forums. You can put as many sub-forums inside sub-forums as you like, or at least make sense. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use sub-forums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
 			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create sub-forums.</para>
@@ -477,7 +488,7 @@
 		
 		<title>Group management</title>
 		
-		<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
+		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
 		
 		<section id="acp_groups_types">
 			<sectioninfo>
@@ -544,7 +555,7 @@
 					</listitem>
 				</varlistentry>
 			</variablelist>
-			<para>The "Manage groups" section in the <acronym>ACP</acronym> shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
+			<para>The <guimenuitem>Manage Groups</guimenuitem> section in the <acronym>ACP</acronym> shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
 			
 		</section>
 		<section id="acp_groups_edit">
