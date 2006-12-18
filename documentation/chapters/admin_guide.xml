@@ -34,7 +34,7 @@
 					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
 				</imageobject>
 				<caption>
-					<para>The Administration Control Panel Index, the home of managing your phpBB board. Administration functions are grouped into eight different categories: <guimenuitem>General</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Posting</guimenuitem>, <guimenuitem>Users and Groups</guimenuitem>, <guimenuitem>Permissions</guimenuitem>, <guimenuitem>Styles</guimenuitem>, <guimenuitem>Maintenance</guimenuitem>, and <guimenuitem>System</guimenuitem>. Each category is a tab located at the top of the page. After picking the category, specific functions can be found in the left-hand sidebar of each page.</para>
+					<para>The Administration Control Panel Index, the home of managing your phpBB board. Administration functions are grouped into eight different categories: <guimenuitem>General</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Posting</guimenuitem>, <guimenuitem>Users and Groups</guimenuitem>, <guimenuitem>Permissions</guimenuitem>, <guimenuitem>Styles</guimenuitem>, <guimenuitem>Maintenance</guimenuitem>, and <guimenuitem>System</guimenuitem>. Each category is a tab located at the top of the page. Specific functions of the category you're in can be found in the left-hand sidebar of each page.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -110,7 +110,7 @@
 				</sectioninfo>
 				<title>Avatar Settings</title>
 				<para>Avatars are generally small, unique images a user can associate with themselves. Depending on the style they are usually displayed below the user name when viewing topics. Here you can determine how users can define their avatars.</para>
-				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note, that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
+				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
 				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised. There is also no support for sub folders inside the gallery folder. </para>
 				<para>The second approach to avatars is through <guilabel>Remote Avatars</guilabel>. This are simply images linked from another website. Your members can add a link to the image they want to use in their profile. To give you some control over the size of the avatars you can define the minimum and maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not able to control the file size.</para>
 				<para>The third approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image form their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is server writable (TODO: a link to a FAQ that explains this). The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
@@ -358,7 +358,7 @@
 						<term>Warnings</term>
 						<listitem>
 							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
-							<para>For more information about warnings, see <xref linkend="mcp_warnings">Section x.x Warnings</xref>.</para>
+							<para>For more information about warnings, see <link linkend="mcp_warnings">Section x.x Warnings</link>.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -401,10 +401,10 @@
 					<itemizedlist>
 						<listitem><para><guilabel>ICQ Number:</guilabel> has to be a number at least three digits long.</para></listitem>
 						<listitem><para><guilabel>AOL Instant Messenger:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>MSN Messenger:</guilabel> can have any alphanumeric characters, but should look similar to an email address (x@x.tld).</para></listitem>
+						<listitem><para><guilabel>MSN Messenger:</guilabel> can have any alphanumeric characters, but should look similar to an email address (joebloggs@example.com).</para></listitem>
 						<listitem><para><guilabel>Yahoo Messenger:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Jabber address:</guilabel> can have any alphanumeric characters, but needs to look like an email address would (x@x.tld).</para></listitem>
-						<listitem><para><guilabel>Website:</guilabel> can have any alphanumeric characters and symbols, but must have the protocol included (ex. http://).</para></listitem>
+						<listitem><para><guilabel>Jabber address:</guilabel> can have any alphanumeric characters, but needs to look like an email address would (joebloggs@example.com).</para></listitem>
+						<listitem><para><guilabel>Website:</guilabel> can have any alphanumeric characters and symbols, but must have the protocol included (ex. http://www.example.com).</para></listitem>
 						<listitem><para><guilabel>Location:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
 						<listitem><para><guilabel>Occupation:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
 						<listitem><para><guilabel>Interests:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
@@ -424,6 +424,57 @@
 				<title>User Preferences</title>
 				
 				<para>Users have many settings they can use for their account. As an administrator, you can change any of these settings. The user settings (also known as preferences) are grouped into three main categories: <guilabel>Global Settings</guilabel>, <guilabel>Posting Defaults</guilabel>, and <guilabel>Display Options</guilabel>.</para>
+			</section>
+			
+			<section id="acp_users_manage_avatar">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>User Avatar</title>
+				
+				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
+				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
+				<note>
+					<para>The changes you make to the user's avatar still has to comply with the limitations you've set in the avatar settings.</para>
+				</note>
+				<para>To delete the avatar image, simply check the <guilabel>Delete image</guilabel> checkbox underneath the avatar image.</para>
+				<para>When you are done choosing what avatar the user will have, click <guilabel>Submit</guilabel> to update the user's avatar.</para>
+			</section>
+			
+			<section id="acp_users_manage_rank">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>User Rank</title>
+				
+				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
+				<para>For more information about ranks, see <link linkend="acp_ranks">Ranks</link>.</para>
+				<!-- TODO: Add a specific section on ranks of course. -->
+			</section>
+			
+			<section id="acp_users_manage_signature">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>User Signature</title>
+				
+				<para>Here you can add, edit, or delete the user's <glossterm>signature</glossterm>.</para>
+				<para>The user's current signature should be displayed in the <guilabel>Signature</guilabel> form. Just edit the signature by typing whatever you want into the text area. You can use <glossterm>BBCode</glossterm> and any other special formatting with what's provided. When you are done editing the user's signature, click <guilabel>Submit</guilabel> to update the user's signature.</para>
+				<note>
+					<para>The signature that you set has to obey the board's signature limitations that you currently have set.</para>
+				</note>
 			</section>
 		</section>
 		<section id="acp_users_inactive">
