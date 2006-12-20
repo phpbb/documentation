@@ -203,8 +203,96 @@
 			<para>TODO: Similar to the posting screen, so a reference for the basic functions should be enough. What needs to be explained are the To and Bcc fields, how they integrate with the friends list and how to find members (which could also be a link to the memberlist section).</para>
 		</section>
 		<section id="pm_folders">
-			<title>Message folders</title>
-			<para>TODO: How to manage folders, how to create new ones, how to delete them. How to move messages between folders. What happens if a folder is full, what are the options to influence that? Also how to mark messages as important, how to delete messages (not sure about that one)?</para>
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>dhn</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Message Folders</title>
+			<para>Just like in your e-mail client, all <glossterm>private messages</glossterm> are stored in folders. Working with folders is similar to working with forums in phpBB 3.0. The <guilabel>Inbox</guilabel> is your default incoming message folder. All messages you receive will appear in here.</para>
+			<para><guilabel>Sent messages</guilabel> will appear in either the <guilabel>Outbox</guilabel> or the <guilabel>Sent messages</guilabel> folder. As long as the recipient(s) have not yet read the message, it will stay in the <guilabel>Outbox</guilabel>. As soon as someone reads the message it will be archived to the <guilabel>Sent messages</guilabel> folder. If the administrator allows it, you can edit messages after sending them as long as they are in the <guilabel>Outbox</guilabel> and the recipients have not yet read them.</para>
+			<para>Each folder, including <guilabel>Sent messages</guilabel> and <guilabel>Outbox</guilabel>, can hold a board-defined amount of messages. This is a global setting that only a board administrator can change. An info text displays the current number of allowed messages and the current percentage of space your messages are using at the top of each folder. If no restriction is displayed, you are allowed unlimited messages in each folder.</para>
+			<note>
+				<para>Please note that the total amount of messages allowed is a per-folder setting. You can have multiple folders which each allow 50 messages for instance. If you have 3 folders, your actual global limit is 150 messages, but each folder can only contain up to 50 messages by itself. It is not possible to merge folders and have one with more messages than the limit.</para>
+			</note>
+			
+			<section id="pm_folders_custom">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>dhn</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Custom Folders</title>
+				
+				<para>If the administrator allows it, you can create your own custom<glossterm>private message</glossterm> folders in phpBB 3.0. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
+				<para>To add a new folder, enter the folder’s name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_filters">Private Message Filters</link> for more information about filters) to automatically do it for you.</para>
+			</section>
+			
+			<section id="pm_folders_moving">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>dhn</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Moving Messages</title>
+				
+				<para>It wouldn’t make sense to have custom folders if you weren’t able to move messages between them. To do exactly that, visit the folder from which you want to move the messages away. Select the messages you want to move, and use the <guilabel>Moved marked</guilabel> pull-down menu to select the destination folder.</para>
+				<note>
+					<para>Please note that if after the move, the destination folder would have more messages in it than the message limit allows, you will receive an error message and the move will be discarded.</para>
+				</note>
+			</section>
+			
+			<section id="pm_folders_marking">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>dhn</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Message Markers</title>
+				
+				<para>Messages inside folders can have colour markings. Please refer to the <guilabel>Message colours</guilabel> legend to see what each colour means. The exact type of colouring depends on the used theme. Coloured messages can have four different meanings:</para>
+				<variablelist>
+					<varlistentry>
+						<term>Marked message</term>
+						<listitem>
+							<para>You can set a message as marked with the <guilabel>Mark as important</guilabel> option from the pull-down menu.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Replied to message</term>
+						<listitem>
+							<para>If you reply to a message, the message will be marked as this. This way, you can keep hold of which messages still need your attention and which messages you have already replied to.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Message from a friend</term>
+						<listitem>
+							<para>If the sender of a message is in your friends list (see the section on <link linkend="ucp_friends_foes">Friends &amp; Foes</link> for more information), this colour will highlight the message.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Message from a foe</term>
+						<listitem>
+							<para>If the sender of a message is one of your foes, this colour will highlight this.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+				
+				<note>
+					<para>Please note that a message can only have one label, and it will always be the last action you take. If you mark a message as <guilabel>important</guilabel> and reply to it afterwards, for instance, the <guilabel>replied to</guilabel> label will overwrite the <guilabel>important</guilabel> label.</para>
+				</note>
+			</section>
 		</section>
 		<section id="pm_filters">
 			<title>Message filters</title>

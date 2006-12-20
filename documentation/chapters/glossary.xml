@@ -153,6 +153,13 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>Private Messages</term>
+				<listitem>
+					<para>Private messages are messages that can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>Rank</term>
 				<listitem>
 					<para>A rank is a sort of title that is assigned to a user. Ranks can be added, edited, and deleted by administrators.</para>
