@@ -41,6 +41,13 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>Attachments</term>
+				<listitem>
+					<para>Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>Avatar</term>
 				<listitem>
 					<para>Avatars are small images that are displayed next to a username. Avatars can be changed in your profile and settings (such as allow/disallow uploading) edited from the <acronym>ACP</acronym>.</para>
@@ -155,7 +162,7 @@
 			<varlistentry>
 				<term>Private Messages</term>
 				<listitem>
-					<para>Private messages are messages that can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient.</para>
+					<para>Private messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient.</para>
 				</listitem>
 			</varlistentry>
 			

@@ -24,7 +24,7 @@
 		</sectioninfo>
 		<title>The Administration Control Panel</title>
 		<para>Even more so than its predecessor, phpBB 3.0 "Olympus" is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
-		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>. TODO: Screenshot</para>
+		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 		
 		<figure id="admin_control_panel_index">
@@ -49,7 +49,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>General Configuration and Front Page</title>
-		<para>The General section is the first screen you see each time you log into the Admin Control Panel. It contains some basic statistics and information about your forum. It also has a subsection called <guimenuitem>Quick Access</guimenuitem>. It provides a quick access to some of the more often visited admin pages like <link linkend="acp_users">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
+		<para>The <guimenuitem>General</guimenuitem> section is the first screen you see each time you log into the <acronym>ACP</acronym>. It contains some basic statistics and information about your forum. It also has a subsection called <guimenuitem>Quick Access</guimenuitem>. It provides quick access to some of the admin pages that are frequently used, like <link linkend="acp_users">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
 		<para>We will concentrate on the other three subsections: <link linkend="acp_general_board">Board Configuration</link>, <link linkend="acp_general_client">Client Communication</link>, and <link linkend="acp_general_server">Server Configuration</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
@@ -98,7 +98,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Attachment Settings</title>
-				<para>One of the many new  features in Olympus is Attachments.</para>
+				<para>One of the many new  features in phpBB 3.0 is <glossterm>Attachments</glossterm>.</para>
 			</section>
 			<section id="acp_board_avatars">
 				<sectioninfo>
@@ -109,7 +109,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Avatar Settings</title>
-				<para>Avatars are generally small, unique images a user can associate with themselves. Depending on the style they are usually displayed below the user name when viewing topics. Here you can determine how users can define their avatars.</para>
+				<para>Avatars are generally small, unique images a user can associate with themselves. Depending on the style, they are usually displayed below the user name when viewing topics. Here you can determine how users can define their avatars.</para>
 				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
 				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised. There is also no support for sub folders inside the gallery folder. </para>
 				<para>The second approach to avatars is through <guilabel>Remote Avatars</guilabel>. This are simply images linked from another website. Your members can add a link to the image they want to use in their profile. To give you some control over the size of the avatars you can define the minimum and maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not able to control the file size.</para>
@@ -124,12 +124,12 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Private Messaging</title>
-				<para> Private Messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
-				<para> You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable Private Messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
-				<para> Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
+				<para><glossterm>Private Messages</glossterm> are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
+				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
+				<para>Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
 				<para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
-				<para> If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the "Full Folder Default Action" list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
-				<para> When sending a Private Message it is still possible to edit the message until the recipient reads it. After it was read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0 which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
+				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the "Full Folder Default Action" list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
+				<para>When sending a private message, it is still possible to edit the message until the recipient reads it. After a sent private message has been read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0, which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
 				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. 
 					<itemizedlist>
 						<listitem>
@@ -139,7 +139,7 @@
 							</tip>
 						</listitem>
 						<listitem>
-							<para>By default <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> are allowed in Private Messages.</para>
+							<para>By default, <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> are allowed in Private Messages.</para>
 							<tip>
 								<para>Even if enabled, you can still disallow users or groups to use <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> in Private Messages through <link linkend="acp_permissions">Permissions</link>.</para>
 							</tip>
@@ -358,7 +358,7 @@
 						<term>Warnings</term>
 						<listitem>
 							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
-							<para>For more information about warnings, see <link linkend="mcp_warnings">Section x.x Warnings</link>.</para>
+							<para>For more information about warnings, see <xref linkend="mcp_warnings" />.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -399,16 +399,16 @@
 				
 				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
 					<itemizedlist>
-						<listitem><para><guilabel>ICQ Number:</guilabel> has to be a number at least three digits long.</para></listitem>
-						<listitem><para><guilabel>AOL Instant Messenger:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>MSN Messenger:</guilabel> can have any alphanumeric characters, but should look similar to an email address (joebloggs@example.com).</para></listitem>
-						<listitem><para><guilabel>Yahoo Messenger:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Jabber address:</guilabel> can have any alphanumeric characters, but needs to look like an email address would (joebloggs@example.com).</para></listitem>
-						<listitem><para><guilabel>Website:</guilabel> can have any alphanumeric characters and symbols, but must have the protocol included (ex. http://www.example.com).</para></listitem>
-						<listitem><para><guilabel>Location:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Occupation:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Interests:</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Birthday:</guilabel> can be set with three different drop-down selection boxes: <guilabel>Day:</guilabel>, <guilabel>Month:</guilabel>, and <guilabel>Year:</guilabel>, respectively. Setting a year will list the user's age when it is his or her birthday.</para></listitem>
+						<listitem><para><guilabel>ICQ Number</guilabel> has to be a number at least three digits long.</para></listitem>
+						<listitem><para><guilabel>AOL Instant Messenger</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>MSN Messenger</guilabel> can have any alphanumeric characters, but should look similar to an email address (joebloggs@example.com).</para></listitem>
+						<listitem><para><guilabel>Yahoo Messenger</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Jabber address</guilabel> can have any alphanumeric characters, but needs to look like an email address would (joebloggs@example.com).</para></listitem>
+						<listitem><para><guilabel>Website</guilabel> can have any alphanumeric characters and symbols, but must have the protocol included (ex. http://www.example.com).</para></listitem>
+						<listitem><para><guilabel>Location</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Occupation</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Interests</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
+						<listitem><para><guilabel>Birthday</guilabel> can be set with three different drop-down selection boxes: <guilabel>Day:</guilabel>, <guilabel>Month:</guilabel>, and <guilabel>Year:</guilabel>, respectively. Setting a year will list the user's age when it is his or her birthday.</para></listitem>
 					</itemizedlist>
 				</para>
 			</section>
@@ -456,7 +456,7 @@
 				<title>User Rank</title>
 				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
-				<para>For more information about ranks, see <link linkend="acp_ranks">Ranks</link>.</para>
+				<para>For more information about ranks, see <xref linkend="acp_ranks" />.</para>
 				<!-- TODO: Add a specific section on ranks of course. -->
 			</section>
 			
@@ -475,6 +475,52 @@
 				<note>
 					<para>The signature that you set has to obey the board's signature limitations that you currently have set.</para>
 				</note>
+			</section>
+			
+			<section id="acp_users_manage_groups">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Groups</title>
+				
+				<para>Here you can see all of the <glossterm>usergroups</glossterm> that the user is in. From this page you can easily remove the user from any usergroup, or add the user to an existing group. The table entitled <guilabel>Special groups user is a member of</guilabel> lists out the usergroups the user is currently a member of.</para>
+				<para>Adding the user to a new usergroup is very easy. To do so, find the pull-down menu labeled <guilabel>Add user to group:</guilabel> and select a usergroup from that menu. Once the usergroup is selected, click <guilabel>Submit</guilabel>. Your addition will immediately take effect.</para>
+				<para>To delete the user from a group he/she is currently a member of, find the row that the usergroup is in, and click <guilabel>Delete</guilabel>. You will be greeted with a confirmation screen; if you want to go ahead and do so, click <guilabel>Yes</guilabel>.</para>
+			</section>
+			
+			<section id="acp_users_manage_permissions">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Permissions</title>
+				
+				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions" />.</para>
+			</section>
+			
+			<section id="acp_users_manage_attachments">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Attachments</title>
+				
+				<para>Depending on the current attachments settings, your users may already have <glossterm>attachments</glossterm> posted. If the user has already uploaded at least one attachment, you can see the listing of the attachment(s) in the table. The data available for each attachment consist of: <guilabel>Filename</guilabel>, <guilabel>Topic title</guilabel>, <guilabel>Post time</guilabel>, <guilabel>Filesize</guilabel>, and <guilabel>Downloads</guilabel>.</para>
+				<para>To help you in managing the user's attachment(s), you can choose the sorting order of the attachments list. Find the <guilabel>Sort by:</guilabel> pull-down menu and pick the category you want to use the sort the list (the possible options are <guimenuitem>Filename</guimenuitem>, <guimenuitem>Extension</guimenuitem>, <guimenuitem>Filesize</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Post time</guimenuitem>, and <guimenuitem>Topic title</guimenuitem>. To choose the sorting order, choose either <guimenuitem>Descending</guimenuitem> or <guimenuitem>Ascending</guimenuitem> from the pull-down menu besides the sorting category. Once you are done, click <guilabel>Go</guilabel>.</para>
+				<para>To view the attachment, click on the attachment's filename. The attachment will open in the same browser window. You can also view the topic in which the attachment was posted by clicking on the link besides the <guilabel>Topic:</guilabel> label, which is below the filename. Deleting the user's attachment(s) is very easy. In the attachments listing, check the checkboxes that are next to the attachment(s) you want to delete. When everything you want has been selected, click <guilabel>Delete marked</guilabel>, which is located below the attachments listing.</para>
+				<tip>
+					<para>To select all of the attachments shown on the page, click the <guilabel>Mark all</guilabel> link, which is below the attachments listing. This helps especially if you want to delete all of the attachments shown on the page at once.</para>
+				</tip>
 			</section>
 		</section>
 		<section id="acp_users_inactive">
