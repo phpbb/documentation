@@ -228,8 +228,8 @@
 				</sectioninfo>
 				<title>Custom Folders</title>
 				
-				<para>If the administrator allows it, you can create your own custom<glossterm>private message</glossterm> folders in phpBB 3.0. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
-				<para>To add a new folder, enter the folder’s name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_filters">Private Message Filters</link> for more information about filters) to automatically do it for you.</para>
+				<para>If the administrator allows it, you can create your own custom <glossterm>private message</glossterm> folders in phpBB 3.0. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
+				<para>To add a new folder, enter the folder's name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_filters">Private Message Filters</link> for more information about filters) to automatically do it for you.</para>
 			</section>
 			
 			<section id="pm_folders_moving">
@@ -242,7 +242,7 @@
 				</sectioninfo>
 				<title>Moving Messages</title>
 				
-				<para>It wouldn’t make sense to have custom folders if you weren’t able to move messages between them. To do exactly that, visit the folder from which you want to move the messages away. Select the messages you want to move, and use the <guilabel>Moved marked</guilabel> pull-down menu to select the destination folder.</para>
+				<para>It wouldn't make sense to have custom folders if you weren't able to move messages between them. To do exactly that, visit the folder from which you want to move the messages away. Select the messages you want to move, and use the <guilabel>Moved marked</guilabel> pull-down menu to select the destination folder.</para>
 				<note>
 					<para>Please note that if after the move, the destination folder would have more messages in it than the message limit allows, you will receive an error message and the move will be discarded.</para>
 				</note>
