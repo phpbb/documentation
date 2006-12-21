@@ -239,7 +239,7 @@
 			</sectioninfo>
 			<title>Manage forums</title>
 			<para>Here you can add, edit, delete, and reorder the forums, categories, and links. (TODO: Icon legend)</para>
-			<para>The initial <guilabel>Manage forums</guilabel> page shows you a list of your top level forums and categories. Note, that this is not analogue to the forum index, as categories are not expanded here. So if you want to reorder the forums inside a category, you have to open the category first.</para>
+			<para>The initial <guilabel>Manage forums</guilabel> page shows you a list of your top level forums and categories. Note, that this is not analogue to the forum index, as categories are not expanded here. If you want to reorder the forums inside a category, you have to open the category first.</para>
 		</section>
 	</section>
 	<section id="acp_posting">
@@ -248,10 +248,47 @@
 				<author>
 					<othername>dhn</othername>
 				</author>
+				
+				<author>
+					<othername>MennoniteHobbit</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Posting Settings</title>
-		<para>TODO: Stuff about the posting settings</para>
+		
+		<para>Forums are nothing without content. Content is created and posted by your users; as such, it is very important to have the right posting settings that control how the content is posted. You can reach this section by clicking the <guimenuitem>Posting</guimenuitem> navigation tab.</para>
+		<para>The first page you are greeted with after getting to the <guimenuitem>Posting Settings</guimenuitem> section is <guilabel>BBCodes</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
+	
+		<section id="acp_posting_bbcodes">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>dhn</othername>
+					</author>
+					
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>BBCodes</title>
+			
+			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
+			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
+			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
+				<code>[font={FONTNAME}]{TEXT}[/font]</code>
+				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>,while <guilabel>FONTNAME</guilabel> represents whatever font name the user types in.
+			</para>
+			<para>In the <guilabel>HTML Replacement</guilabel>form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
+				<code>&lt;span style="font-family: {FONTNAME}"&gt;{TEXT}&lt;span&gt;</code>
+				This HTML code will be used to actually format the user's text.
+			</para>
+			<para>The third option to consider when adding a custom BBCode is what sort of help message you want to display to your users if they choose to use the new BBCode. Ideally, the helpline message is a short note or tip for the user using the BBCode. This message will be displayed below the BBCode row on the posting screens.</para>
+			<note>
+				<para>If the next option described, <guilabel>Display on posting</guilabel>, isn't enabled, the helpline message will not be displayed.</para>
+			</note>
+			<para>Lastly, when adding a new BBCode, you can decide whether or not you want an actual BBCode button for your new BBCode to be displayed on the posting screens. If you want this, then check the <guilabel>Display on posting</guilabel> checkbox.</para>
+		</section>
 	</section>
 
 	<section id="acp_users">
