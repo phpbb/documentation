@@ -289,6 +289,40 @@
 			</note>
 			<para>Lastly, when adding a new BBCode, you can decide whether or not you want an actual BBCode button for your new BBCode to be displayed on the posting screens. If you want this, then check the <guilabel>Display on posting</guilabel> checkbox.</para>
 		</section>
+		
+		<section id="acp_posting_pm_settings">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Private message settings</title>
+			
+			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+			<itemizedlist>
+				<listitem><para><guilabel>Private messaging</guilabel>: You can enable to disable your board's private messaging system. If you want to enable it, select <guilabel>Yes</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Max private message folders</guilabel>: This is the maximum number of new private message folders your users can each create.</para></listitem>
+				<listitem><para><guilabel>Max private messages per box</guilabel>: This is the maximum number of private messages your users can have in each of their folders.</para></listitem>
+				<listitem><para><guilabel>Full folder default action</guilabel>: Sometimes your users want to send each other a private message, but the intended recipient has a full folder. This setting will define exactly what will happen to the sent message. You can either set it so that an old message will be deleted to make room for the new message, or the new messages will be held back until the recipient makes room in his inbox. Note that the default action for the <guilabel>Sentbox</guilabel> is the deletion of old messages.</para></listitem>
+				<listitem><para><guilabel>Limit editing time</guilabel>: Users are usually allowed to edit their sent private messages before the recipient reads it, even if it's already in their outbox. You can control the amount of time your users have to edit sent private messages.</para></listitem>
+				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.0, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
+				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
+				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow attachments to be used in private messages.</para></listitem>
+				<listitem><para><guilabel>Allow signature in private messages</guilabel>: Select <guilabel>Yes</guilabel> to let your users include their <glossterm>signature</glossterm> in their private messages..</para></listitem>
+				<listitem><para><guilabel>Allow print view in private messages</guilabel>: Another new feature in phpBB 3.0 is a printer-friendly view. Select <guilabel>Yes</guilabel> to allow your users to view any of their PMs in print view.</para></listitem>
+				<listitem><para><guilabel>Allow forwarding in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow your users to forward private messages.</para></listitem>
+				<listitem><para><guilabel>Allow use of [img] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline images in their private messages.</para></listitem>
+				<listitem><para><guilabel>Allow use of [flash] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline Macromedia Flash objects in their private messages.</para></listitem>
+				<listitem><para><guilabel>Enable use of topic icons in private messages</guilabel>: Select <guilabel>Yes</guilabel> if you want to enable your users to include topic icons with their private messages. (Topic icons are displayed next to the private messages' titles.).</para></listitem>
+			</itemizedlist>
+			
+			<tip>
+				<para>If you want to set any of the above numerical settings so that the setting will allow unlimited amounts of the item, set the numerical setting to 0.</para>
+			</tip>
+		</section>
 	</section>
 
 	<section id="acp_users">
