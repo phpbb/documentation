@@ -80,6 +80,13 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>Category</term>
+				<listitem>
+					<para>A category is a group of forums.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>chmod</term>
 				<listitem>
 					<para><abbrev>chmod</abbrev> is a way of changing the permissions of a file on a *nix (UNIX, Linux, etc.) server. Files in phpBB should be chmodded 644. Directories should be chmodded to 755. Avatar upload directories and templates cache directories should be chmodded to 777. For more information regarding chmod, please consult your <acronym>FTP</acronym> client's documentation.</para>
