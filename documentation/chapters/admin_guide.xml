@@ -323,6 +323,87 @@
 				<para>If you want to set any of the above numerical settings so that the setting will allow unlimited amounts of the item, set the numerical setting to 0.</para>
 			</tip>
 		</section>
+		
+		<section id="acp_posting_topic_icons">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Topic icons</title>
+			
+			<para>A new feature in phpBB3 is the ability to assign icons to topics. On this page, you can manage what topic icons are available for use on your board. You can add, edit, delete, or move topic icons. The <guilabel>Topic Icons</guilabel> form displays the topic icons currently installed on your board. You can add topic icons manually, install a premade icons pack, export or download an icons pack file, or edit your currently installed topic icons.</para>
+		
+			<para>Your first option to add topic icons to your board is to use a premade icons pack. Icon packs have the file extension <filename>pak</filename>. To install an icons pack, you must first download an icons pack. Upload the icon files themselves and the pack file into the <filename>/images/icons/</filename> directory. Then, click <guilabel>Install icons pak</guilabel>. The <guilabel>Install icons pak</guilabel> form displays all of the options you have regarding topic icon installation. Select the icon pack you wish to add (you may only install one icon pack at a time). You then have the option of what to do with currently installed topic icons if the new icon pack has icons that may conflict with them. You can either keep the existing icon(s) (there may be duplicates), replace the matches (overwriting the icon(s) that already exist), or just delete all of the conflicting icons. Once you have selected the proper option, click <guilabel>Install icons pak</guilabel>.</para>
+			
+			<para>To add topic icon(s) manually, you must first upload the icons into the icons directory of your site. Navigate to the <guimenuitem>Topic icons</guimenuitem> page. Click <guilabel>Add multiple icons</guilabel>, which is located in the <guilabel>Topic Icons</guilabel> form. If you correctly uploaded your new desired topic icon(s) into the proper <filename>/images/icons/</filename> directory, you should see a row of settings for each new icon you uploaded. The following has a description on what each field is for. Once you are done with adding the topic icon(s), click, <guilabel>Submit</guilabel> to submit your additions.</para>
+			
+			<itemizedlist>
+				<listitem><para><guilabel>Icon image file</guilabel>: This column will display the actual icon itself.</para></listitem>
+				<listitem><para><guilabel>Icon location</guilabel>: This column will display the path that the icon is located in, relative to the <filename>/images/icons/</filename> directory.</para></listitem>
+				<listitem><para><guilabel>Icon width</guilabel>: This is the width (in pixels) you want the icon to be stretched to.</para></listitem>
+				<listitem><para><guilabel>Icon height</guilabel>: This is the height (in pixels) you want the icon to be stretched to.</para></listitem>
+				<listitem><para><guilabel>Display on posting</guilabel>: If this checkbox is checked, the topic icon will actually be displayed on the posting screen.</para></listitem>
+				<listitem><para><guilabel>Icon order</guilabel>: You can also set what order that the topic icon will be displayed. You can either set the topic icon to be the first, or after any other topic icon currently installed.</para></listitem>
+				<listitem><para><guilabel>Add</guilabel>: If you are satisfied with the settings for adding your new topic icon, check this box.</para></listitem>
+			</itemizedlist>
+			
+			<para>You may also edit your currently installed topic icons' settings. To do so, click <guilabel>Edit icons</guilabel>. You will see the <guilabel>Icon configuration</guilabel> form. For more information regarding each field, see the above paragraph regarding adding topic icons.</para>
+		
+			<para>Lastly, you may also reorder the topic icons, edit a topic icon's settings, or remove a topic icon. To reorder a topic icon, click the appropriate "move up" or "move down" icon. To edit a topic icon's current settings, click the "settings" button. To delete a topic icon, click the red "delete" button.</para>
+		</section>
+		
+		<section id="acp_posting_smilies">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Smilies</title>
+			
+			<para>Smilies or emoticons are typically small, sometimes animated images used to convey an emotion or feeling. You can manage the smilies on your board via this page. To add smilies, you have the option to either install a premade smilies pack, or add smilies manually. Locate the <guilabel>Smilies</guilabel> form, which lists the smilies currently installed on your board, on the page. </para>
+		
+			<para>Your first option to add smilies to your board is to use a premade smilies pack. Smilies packs have the file extension <filename>pak</filename>. To install a smilies pack, you must first download a smilies pack. Upload the smilies files themselves and the pack file into the <filename>/images/smilies/</filename> directory. Then, click <guilabel>Install smilies pak</guilabel>. The <guilabel>Install smilies pak</guilabel> form displays all of the options you have regarding smilies installation. Select the smilies pack you wish to add (you may only install one smilies pack at a time). You then have the option of what to do with currently installed smilies if the new smilies pack has icons that may conflict with them. You can either keep the existing smilies (there may be duplicates), replace the matches (overwriting the smilies that already exist), or just delete all of the conflicting smilies. Once you have selected the proper option, click <guilabel>Install smilies pak</guilabel>.</para>
+			
+			<para>To add a smiley to your board manually, you must first upload the smilies into the <filename>/images/smilies/</filename> directory. Then, click on <guilabel>Add multiple smilies</guilabel>. From here, you can add a smilie and configure it. The following are the settings you can set for the new smilies. Once you are done adding a smiley, click <guilabel>Submit</guilabel>.</para>
+		
+			<itemizedlist>
+				<listitem><para><guilabel>Smiley image file</guilabel>: This is what the smiley actually looks like.</para></listitem>
+				<listitem><para><guilabel>Smiley location</guilabel>: This is where the smiley is located, relative to the <filename>/images/smilies/</filename> directory.</para></listitem>
+				<listitem><para><guilabel>Smiley code</guilabel>: This is the text that will be replaced with the smiley.</para></listitem>
+				<listitem><para><guilabel>Emotion</guilabel>: This is the smiley's title.</para></listitem>
+				<listitem><para><guilabel>Smiley width</guilabel>: This is the width in pixels that the smiley will be stretched to.</para></listitem>
+				<listitem><para><guilabel>Smiley height</guilabel>: This is the height in pixels that the smiley will be stretched to.</para></listitem>
+				<listitem><para><guilabel>Display on posting</guilabel>: If this checkbox is checked, this smiley will actually be displayed on the posting screen.</para></listitem>
+				<listitem><para><guilabel>Smiley order</guilabel>: You can also set what order that the smiley will be displayed. You can either set the smiley to be the first, or after any other smiley currently installed.</para></listitem>
+				<listitem><para><guilabel>Add</guilabel>: If you are satisfied with the settings for adding your new smiley, check this box.</para></listitem>
+			</itemizedlist>
+			
+			<para>You may also edit your currently installed smilies' settings. To do so, click <guilabel>Edit smilies</guilabel>. You will see the <guilabel>Smiley configuration</guilabel> form. For more information regarding each field, see the above paragraph regarding adding smilies.</para>
+			
+			<para>Lastly, you may also reorder the smilies, edit a smiley's settings, or remove a smiley. To reorder a smiley, click the appropriate "move up" or "move down" icon. To edit a smiley's current settings, click the "settings" button. To delete a smiley, click the red "delete" button.</para>
+		</section>
+		
+		<section id="acp_posting_censors">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Word censoring</title>
+			
+			<para>On some forums, a certain level of appropriate, profanity-speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
+			
+			<para>To add a new word censor, click <guilabel>Add new word</guilabel>. There are two fields: <guilabel>Word</guilabel> and <guilabel>Replacement</guilabel>. Type in the word that you want automatically censored in the <guilabel>Word</guilabel> text field. (Note that you can use wildcards (*).) Then, type in the text you want the censored word to be replaced with in the <guilabel>Replacement</guilabel> text field. Once you are done, click <guilabel>Submit</guilabel> to add the new censored word to your board.</para>
+			
+			<para>To edit an existing word censor, locate the censored word's row. Click the "edit" icon located in that row, and proceed with changing the censored word's settings.</para>
+		</section>
 	</section>
 
 	<section id="acp_users">
