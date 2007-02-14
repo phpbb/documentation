@@ -160,7 +160,7 @@
 		<section id="posting_form">
 			<title>Posting Form</title>
 			<para>You will be taken to the posting form when you decide to post either a new topic or reply, where you can enter your post content.</para>
-			<para><emphasis role="strong">Topic/Post Icon</emphasis: The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para>
+			<para><emphasis role="strong">Topic/Post Icon</emphasis> - The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para>
 			<para><emphasis role="strong">Subject</emphasis> - If you are creating a new topic with your post, the subject is required and will become the title of the topic. If you are replying to an existing topic, this is optional, but it can be changed.</para>
 			<para><emphasis role="strong">Post Content</emphasis> - While not being labled, the large text bos is where your actual post content will be entered. Here, along with your text, you may use things like <emphasis role="strong">Smilies or BBCode</emphasis> if the board administrator has them enabled.</para>
 			<para><emphasis role="strong">Smilies</emphasis> - Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. If Smilies are enabled, you will see the text "Smilies are ON" to the righthand of the Post Content box. Otherwise, you will see the text "Smilies are OFF." See <link linkend="posting_smilies">Posting Smilies</link> for further details.</para>
