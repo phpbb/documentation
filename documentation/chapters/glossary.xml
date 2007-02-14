@@ -40,7 +40,7 @@
 			<varlistentry>
 				<term>ASCII</term>
 				<listitem>
-					<para><acronym>ASCII</acronym>, or "American Standard Code for Information Interchange", is a common way of encoding data to transfer it to a different computer. <acronym>FTP</acronym> clients have ASCII as a mode to transfer files. All phpBB files (files with the file extensions .php, .inc, .sql, .cfg, .htm and .tpl), except for the image files, should be uploaded in ASCII mode.</para>
+					<para><acronym>ASCII</acronym>, or "American Standard Code for Information Interchange", is a common way of encoding data to transfer it to a different computer. <acronym>FTP</acronym> clients have ASCII as a mode to transfer files. All phpBB files (files with the file extensions .php, .inc, .sql, .cfg, .htm, and .tpl), except for the image files, should be uploaded in ASCII mode.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -227,6 +227,13 @@
 				<term>Template</term>
 				<listitem>
 					<para>A template is what controls the layout of a style. phpBB 3.0 template files have the .html file extension. These template files contain mostly <acronym>HTML</acronym> (no <acronym>PHP</acronym>, however), with some variables that phpBB uses (contained in braces: { and }).</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>UNIX Timestamp</term>
+				<listitem>
+					<para>phpBB stores all times in the <ulink url="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</ulink> format for easy conversion to other time zones and time formats.</para>
 				</listitem>
 			</varlistentry>
 			
