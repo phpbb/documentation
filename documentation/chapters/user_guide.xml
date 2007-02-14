@@ -15,8 +15,8 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>How user permissions affect forum experience</title>
-		<para>phpBB3 uses permissions, on a per-user or per-usergroup basis, to allow or disallow users to access certain functions or features which the bulletin board has to offer. Such things include posting in forums, having an avatar, or being able to communicate through private messages, along with tons of other options. All of the permissions are definable through the Administration Panel.</para>
-		<para>Permissions can also be set to allow users or appointed members to perform special tasks or have special abilities on the bulletin board. Permissions allow the Administrator to define which moderation functions and in which forums certain users or groups of users are allowed to use. The administrator can also allow users to gain access to defined sections of the Administration panel, keeping important settings or functions restricted and safe.</para>
+		<para>phpBB3 uses permissions on a per-user or per-usergroup basis to allow or disallow users access to certain functions or features which software offers. These may include the ability to post in certain forums, having an avatar, or being able to communicate through private messages. All of the permissions can be set through the Administration Panel.</para>
+		<para>Permissions can also be set allowing appointed members to perform special tasks or have special abilities on the bulletin board. Permissions allow the Administrator to define which moderation functions and in which forums certain users or groups of users are allowed to use. This allows for appointed users to become moderators on the bulletin board. The administrator can also give users access to certain sections of the Administration panel, keeping important settings or functions restricted and safe from malicious acts. For example, a select group of moderators could be allowed to modify a user's avatar or signature if said avatar or signature is not allowed under a paticular forum's rules. Without these abilities set, the moderator would need to notify an administrator in order to have the user's profile changed.</para>
 	</section>
 	<section id="user_registering">
 		<sectioninfo>
@@ -147,11 +147,26 @@
 		</section>
 	</section>
 	<section id="user_posting">
+	<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>AdamR</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
 		<title>Mastering the Posting Screen</title>
 		<para>TODO: How to write a new post and how to reply. Special items like attachments or polls are subsections. Don't forget to mention the "someone has replied before you replied" feature, the topic review, and so forth. Topic icons, smilies, post options, usage of HTML ... it would probably best to add a screenshot with arrows to the different sections.</para>
-		<para>Posting is the purpose of bulletin boards and the forums contained within them. Posting allows you to start a new topic for discussion or reply to an existing one which another user has created. There are a few things you may want to know about posting before you get started.</para>
-		<para>To post a new topic or reply to an existing one, first you must enter the forum you wish to post in by clicking its link on the index. On the forum's page, you will see one button at the top-left corner above the topics already existing. To begin a new topic, click this button labled, "New Topic." In order to reply to an existing topic, from the forum's page, click a topic's link to enter its page. Here you will see two buttons at the top-left corner above the posts. To reply to this topic, hit the "New Reply" button. Clicking the "New Topic" button on this page will create a new topic in the forum you are currently in.</para>
-		<para>Clicking either of these buttons will bring you to the posting page. Here you have several options as to how you'd like your topic or reply to be displayed on the topic page. When creating a new topic, you must enter a subject in the subject field. However, if you are replying to a topic, only a message is required. Hitting submit after entering a message (and subject for new topics) without any extra settings. Will simply enter your message using your profile's and/or the board's default settings. The special features in posting are examined below.</para>
+		<para>Posting is the primary purpose of bulletin boards. There are two main types of posts you can make: a topic or a reply. Selecting the <emphasis role="bold">New Topic</emphasis> button in a forum button will take you to the posting screen. After submitting your post, a new topic will appear in that forum with your post as the first displayed. Other users (and you as well) are now able to reply to your topic by using the <emphasis role="bold">Post Reply</emphasis> button. This will once again bring you to the posting screen, allowying you to enter your post.</para>
+		<section id="posting_form">
+			<title>Posting Form</title>
+			<para>You will be taken to the posting form when you decide to post either a new topic or reply, where you can enter your post content.</para>
+			<para><emphasis role="strong">Topic/Post Icon</emphasis: The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para>
+			<para><emphasis role="strong">Subject</emphasis> - If you are creating a new topic with your post, the subject is required and will become the title of the topic. If you are replying to an existing topic, this is optional, but it can be changed.</para>
+			<para><emphasis role="strong">Post Content</emphasis> - While not being labled, the large text bos is where your actual post content will be entered. Here, along with your text, you may use things like <emphasis role="strong">Smilies or BBCode</emphasis> if the board administrator has them enabled.</para>
+			<para><emphasis role="strong">Smilies</emphasis> - Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. If Smilies are enabled, you will see the text "Smilies are ON" to the righthand of the Post Content box. Otherwise, you will see the text "Smilies are OFF." See <link linkend="posting_smilies">Posting Smilies</link> for further details.</para>
+			<para><emphasis role="strong">BBCode</emphasis> - BBCode is a type of formatting that can be applied to your post content if BBCode has been enabled by the board administrator. If BBCode is enabled, you will see the text "BBCode is ON" to the righthand of the Post Content box. Otherwise, you will see the text "BBCode is OFF." See <link linkend="posting_bbcodes">Posting BBCode</link> for further details.</para>
+		</section>
+		
 		<section id="posting_bbcodes">
 			<title>BBcodes</title>
 			<para>TODO: What are BBcodes. Again, permission based which ones you can use. Explain syntax of the default ones (quote and URL for instance). How to disable BBcode by default, how to disable/enable it for one post.</para>
