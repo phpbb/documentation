@@ -318,8 +318,44 @@
 		<title>Search - How to Find What You are Looking For</title>
 		<para>TODO: Explain how to use the search system. This should also include the results page, and the refine function. Also note, that the title (Search: search term) is a link that one can copy and paste into a post to directly link to the results. Egosearch and the global search field should also be included here.</para>
 	</section>
+	
 	<section id="user_memberlist">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>pentapenguin</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
 		<title>The Memberlist - More Than Meets the Eye</title>
-		<para>TODO: Give a short introduction into how to search for someone on the memberlist, how you can sort the table using the table headers, and so forth.</para>
+		<para>phpBB3 introduces several new ways to search for users.</para>
+		
+		<varlistentry>
+			<term>Sort By Username</term>
+			<listitem>
+				<para>If you want to find all members whose usernames start with a certain letter, then you may select the letter from the drop down box and click the Display button to show only users with usernames that begin with that letter.</para>
+			</listitem>
+		</varlistentry>
+		
+		<varlistentry>
+			<term>Sort By Column Headers</term>
+			<listitem>
+				<para>To sort the memberlist ascending, you may click on the column headers like "Username", "Joined", "Posts", etc. If you click on the same column again, then the memberlist will be sorted descending.</para>
+			</listitem>
+		</varlistentry>
+		
+		<varlistentry>
+			<term>Sort By Other Options</term>
+			<listitem>
+				<para>You may also sort the memberlist by using the drop down boxes on the bottom of the page.</para>
+			</listitem>
+		</varlistentry>
+		
+		<varlistentry>
+			<term>Find a Member Search Tool</term>
+			<listitem>
+				<para>With the "Find a member" search tool, you can fine tune your search for members. You must fill out at least one field. If you don't know exactly what you are looking for, you may use the asterisk symbol (*) as a wildcard on any field.</para>
+			</listitem>
+		</varlistentry>
 	</section>
 </chapter>
