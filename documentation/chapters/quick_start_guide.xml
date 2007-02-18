@@ -1,7 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="quick_start_guide">
 	<?dbhtml  dir="quickstart" filename="index.html" ?>
+	<chapterinfo>
+		<releaseinfo>$Id$</releaseinfo>
+		<copyright>
+			<year>2006</year>
+			<holder>phpBB Group</holder>
+		</copyright>
+	</chapterinfo>
 	<title>Quick Start Guide</title>
 	<abstract>
 		<para>A quick guide through the first steps of installing and configuring up your very own phpBB 3.0 forum.</para>

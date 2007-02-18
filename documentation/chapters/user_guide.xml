@@ -4,7 +4,7 @@
 <chapter id="user_guide">
 	<?dbhtml dir="userguide" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id:</releaseinfo>
+		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2006</year>
 			<holder>phpBB Group</holder>
@@ -373,32 +373,34 @@
 		<title>The Memberlist - More Than Meets the Eye</title>
 		<para>phpBB3 introduces several new ways to search for users.</para>
 		
-		<varlistentry>
-			<term>Sort By Username</term>
-			<listitem>
-				<para>If you want to find all members whose usernames start with a certain letter, then you may select the letter from the drop down box and click the Display button to show only users with usernames that begin with that letter.</para>
-			</listitem>
-		</varlistentry>
-		
-		<varlistentry>
-			<term>Sort By Column Headers</term>
-			<listitem>
-				<para>To sort the memberlist ascending, you may click on the column headers like "Username", "Joined", "Posts", etc. If you click on the same column again, then the memberlist will be sorted descending.</para>
-			</listitem>
-		</varlistentry>
-		
-		<varlistentry>
-			<term>Sort By Other Options</term>
-			<listitem>
-				<para>You may also sort the memberlist by using the drop down boxes on the bottom of the page.</para>
-			</listitem>
-		</varlistentry>
-		
-		<varlistentry>
-			<term>Find a Member Search Tool</term>
-			<listitem>
-				<para>With the "Find a member" search tool, you can fine tune your search for members. You must fill out at least one field. If you don't know exactly what you are looking for, you may use the asterisk symbol (*) as a wildcard on any field.</para>
-			</listitem>
-		</varlistentry>
+		<variablelist>
+			<varlistentry>
+				<term>Sort By Username</term>
+				<listitem>
+					<para>If you want to find all members whose usernames start with a certain letter, then you may select the letter from the drop down box and click the Display button to show only users with usernames that begin with that letter.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Sort By Column Headers</term>
+				<listitem>
+					<para>To sort the memberlist ascending, you may click on the column headers like "Username", "Joined", "Posts", etc. If you click on the same column again, then the memberlist will be sorted descending.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Sort By Other Options</term>
+				<listitem>
+					<para>You may also sort the memberlist by using the drop down boxes on the bottom of the page.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Find a Member Search Tool</term>
+				<listitem>
+					<para>With the "Find a member" search tool, you can fine tune your search for members. You must fill out at least one field. If you don't know exactly what you are looking for, you may use the asterisk symbol (*) as a wildcard on any field.</para>
+				</listitem>
+			</varlistentry>
+		</variablelist>
 	</section>
 </chapter>
