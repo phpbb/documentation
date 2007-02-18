@@ -1,7 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="user_guide">
 	<?dbhtml dir="userguide" filename="index.html" ?>
+	<chapterinfo>
+		<releaseinfo>$Id:</releaseinfo>
+		<copyright>
+			<year>2006</year>
+			<holder>phpBB Group</holder>
+		</copyright>
+	</chapterinfo>
 	<title>User Guide</title>
 	<abstract>
 		<para>This chapter is targeted at the forum users. It explains all user facing functions that are needed to use phpBB 3.0.</para>
@@ -99,7 +107,7 @@
 		</section>
 		<section id="ucp_profile">
 			<title>Profile</title>
-			<para>TODO: Short explanation of what this section is for. Needs to be clear why Profile and Preferences are separated.</para>
+			<para>This section lets you set your profile information. Your profile information contains general information that other users on the board will able to see. Think of your profile as a sign of your public presence. This section is separated from your preferences. (Preferences are the individual settings that you set and manage on your own, and control your forum experience. Thus, this is separated from your profile settings.)</para>
 			<section>
 				<title>Personal settings</title>
 				<para>TODO: Explain the settings you can edit here. </para>
