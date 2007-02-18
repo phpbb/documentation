@@ -143,6 +143,13 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>IP address</term>
+				<listitem>
+					<para>An IP address, or Internet Protocol address, is a unique address that identifies a specific computer or user.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>MD5</term>
 				<listitem>
 					<para><acronym>MD5</acronym> (Message Digest algorithm 5) is a commonly-used hash function used by phpBB. MD5 is an algorithm which takes an input of any length and outputs a message digest of a fixed length (128-bit, 32 characters). MD5 is used in phpBB to turn the users' passwords into a one-way hash, meaning that you cannot "decrypt" (reverse) an MD5 hash and get users' passwords. User passwords are stored as MD5 hashes in the database.</para>

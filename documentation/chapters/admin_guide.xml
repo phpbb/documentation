@@ -398,11 +398,116 @@
 			</sectioninfo>
 			<title>Word censoring</title>
 			
-			<para>On some forums, a certain level of appropriate, profanity-speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
+			<para>On some forums, a certain level of appropriate, profanity-free speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
 			
 			<para>To add a new word censor, click <guilabel>Add new word</guilabel>. There are two fields: <guilabel>Word</guilabel> and <guilabel>Replacement</guilabel>. Type in the word that you want automatically censored in the <guilabel>Word</guilabel> text field. (Note that you can use wildcards (*).) Then, type in the text you want the censored word to be replaced with in the <guilabel>Replacement</guilabel> text field. Once you are done, click <guilabel>Submit</guilabel> to add the new censored word to your board.</para>
 			
 			<para>To edit an existing word censor, locate the censored word's row. Click the "edit" icon located in that row, and proceed with changing the censored word's settings.</para>
+		</section>
+		
+		<section id="acp_attach_settings">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Attachment Settings</title>
+			
+			<para>If you allow your users to post attachments, it is important to be able to control your board's attachments settings. Here, you can configure the main settings for attachments and the associated special categories. When you are done configuring your board's attachments settings, click <guilabel>Submit</guilabel>.</para>
+			
+			<itemizedlist>
+				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select "Yes".</para></listitem>
+				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select "Yes".</para></listitem>
+				<listitem><para><guilabel>Upload directory</guilabel>: The directory that attachments will be uploaded to. The default directory is <filename>/files/</filename>.</para></listitem>
+				<listitem><para><guilabel>Attachment display order</guilabel>: The order that attachments will be displayed, based on the time the attachment was posted.</para></listitem>
+				<listitem><para><guilabel>Total attachment quota</guilabel>: The maximum drive space that will be available for all of your board's attachments. If you want this quota to be unlimited, use a value of 0.</para></listitem>
+				<listitem><para><guilabel>Maximum filesize</guilabel>: The maximum filesize of an attachment allowed. If you want this value to be unlimited, use a value of 0.</para></listitem>
+				<listitem><para><guilabel>Maximum filesize messaging</guilabel>: The maximum drive space that will be available per user for attachments posted in private messages. If you want this quota to be unlimited, use a value of 0.</para></listitem>
+				<listitem><para><guilabel>Max attachments per post</guilabel>: The maximum number of attachments that can be posted in a post. If you want this value to be unlimited, use a value of 0.</para></listitem>
+				<listitem><para><guilabel>Max attachments per message</guilabel>: The maximum number of attachments that can be posted in a private message. If you want this value to be unlimited, use a value of 0.</para></listitem>
+				<listitem><para><guilabel>Enable secure downloads</guilabel>: If you want to be able to only allow attachments to be available to specific <glossterm>IP address</glossterm>es or hostnames, this option should be enabled. You can further configure secure downloads once you have enabled them here; the secure downloads-specific settings are located in the <guilabel>Define allowed IPs/Hostnames</guilabel> and <guilabel>Remove or un-exclude allowed IPs/hostnames</guilabel> forms at the bottom of the page.</para></listitem>
+				<listitem><para><guilabel>Allow/Deny list</guilabel>: This allows you to configure the default behaviour when secure downloads are enabled. A whitelist (<guilabel>Allow</guilabel>) only allows <glossterm>IP address</glossterm>es or hostnames to access downloads, while a blacklist (<guilabel>Deny</guilabel>) allows all users except those who have an <glossterm>IP address</glossterm> or hostname located on the blacklist. <emphasis>This setting only applies if secure downloads are enabled.</emphasis></para></listitem>
+				<listitem><para><guilabel>Allow empty referrer</guilabel>: Secure downloads are based on referrers.This setting controls if downloads are allowed for those omitting the referrer information. <emphasis>This setting only applies if secure downloads are enabled.</emphasis></para></listitem>
+				
+				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to "No", a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
+				<listitem><para><guilabel>Create thumbnail</guilabel>: This setting configures your board to either create a thumbnail for every image attached, or not.</para></listitem>
+				<listitem><para><guilabel>Maximum thumbnail width in pixels</guilabel>: This is the maximum width in pixels for the created thumbnails.</para></listitem>
+				<listitem><para><guilabel>Maximum thumbnail filesize</guilabel>: Thumbnails will not be created for images if the created thumbnail filesize exceeds this value, in bytes. This is useful for particularly large images that are posted.</para></listitem>
+				<listitem><para><guilabel>Imagemagick path</guilabel>: If you have Imagemagick installed and would like to set your board to use it, specify the full path to your Imagemagick convert application. An example is <filename>/usr/bin/</filename>.</para></listitem>
+				<listitem><para><guilabel>Maximum image dimensions</guilabel>: The maximum size of image attachments, in pixels. If you would like to disable dimension checking (and thereby allow image attachments of any dimensions), set each value to 0.</para></listitem>
+				<listitem><para><guilabel>Image link dimensions</guilabel>: If an image attachment is larger than these dimensions (in pixels), a link to the image will be displayed in the post instead. If you want images to be displayed inline regardless of dimensions, set each value to 0.</para></listitem>
+			
+				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: If you have secure downloads enabled, you can specify the <glossterm>IP address</glossterm>es or hostnames allowed or disallowed. If you specify more than one <glossterm>IP address</glossterm> or hostname, each <glossterm>IP address</glossterm> or hostname should be on its own line. Entered values can have wildcards (*). To specify a range for an <glossterm>IP address</glossterm>, separate the start and end with a hyphen (-).</para></listitem>
+				<listitem><para><guilabel>Exclude IP from [dis]allowed IPs/hostnames</guilabel>: Enable this to exclude the entered IP(s)/hostname(s).</para></listitem>
+			</itemizedlist>
+		</section>
+		
+		<section id="acp_attach_extensions">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Manage extensions</title>
+			
+			<para>You can further configure your board's attachments settings by controlling what file extensions attached files can have to be uploaded. It is recommended that you do not allow scripting file extensions (such as php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, and so forth) for security reasons. You can find this page by clicking <guimenuitem>Manage extensions</guimenuitem> once you're in the <glossterm>ACP</glossterm>.</para>
+			
+			<para>To add an allowed file extension, find the <guilabel>Add Extension</guilabel> form on the page. In the field labeled <guilabel>Extension</guilabel>, type in the file extension. Do not include the period before the file extension. Then, select the extension group that this new file extension should be added to via the <guilabel>Extension group</guilabel> selection menu. Then, click <guilabel>Submit</guilabel>.</para>
+		
+			<para>You can also view your board's current allowed file extensions. On the page, you should see a table listing all of the allowed file extensions. To change the group that an extension belongs to, select a new extension group from the selection menu located in the extension's row. To delete an extension, check the checkbox in the <guilabel>Delete</guilabel> column. When you're done managing your board's current file extensions, click <guilabel>Submit</guilabel> at the bottom of the page.</para>
+		</section>
+		
+		<section id="acp_attach_extension_groups">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Manage extension groups</title>
+			
+			<para>Allowed file extensions can be placed into groups for easy management and viewing. To manage the extension groups, click <guimenuitem>Manage extension groups</guimenuitem> once you get into the <guilabel>Posting</guilabel> settings part of the <glossterm>ACP</glossterm>. You can configure specific settings regarding each extension group.</para>
+			
+			<para>To add a new file extension group, find the textbox that corresponds to the <guilabel>Create new group</guilabel> button. Type in the name of the extension group, then click <guilabel>Submit</guilabel>. You will be greeted with the extension group settings form. The following contains descriptions for each option available, and applies to extension groups that either already exist or are being added.</para>
+		
+			<itemizedlist>
+				<listitem><para><guilabel>Group name</guilabel>: The name of the extension group.</para></listitem>
+				<listitem><para><guilabel>Special category</guilabel>: Files in this extension group can be displayed differently. Select a special category from this selection menu to change the way the attachments in this extension group is presented within a post.</para></listitem>
+				<listitem><para><guilabel>Allowed</guilabel>: Enable this if you want to allow attachments that belong in this extension group.</para></listitem>
+				<listitem><para><guilabel>Allowed in private messaging</guilabel>: Enable this if you want to allow attachments that belong in this extension group in private messages.</para></listitem>
+				<listitem><para><guilabel>Upload icon</guilabel>: The small icon that is displayed next to all attachments that belong in this extension group.</para></listitem>
+				<listitem><para><guilabel>Maximum filesize</guilabel>: The maximum filesize for attachments in this extension group.</para></listitem>
+				<listitem><para><guilabel>Assigned extensions</guilabel>: This is a list of all file extensions that belong in this extension group. Click <guilabel>Go to extension management screen</guilabel> to manage what extensions belong in this extension group.</para></listitem>
+				<listitem><para><guilabel>Allowed forums</guilabel>: This allows you to control what forums your users are allowed to post attachments that belong in this extension group. To enable this extension group in all forums, select the <guilabel>Allow all forums</guilabel> radio button. To set which specific forums this extension group is allowed in, select the <guilabel>Only forums selected below</guilabel> radio button, and then select the forums in the selection menu.</para></listitem>
+			</itemizedlist>
+			
+			<para>To edit a current file extension group's settings, click the "Settings" icon that is in the extension group's row. Then, go ahead and edit the extension group's settings. For more information about each setting, see the above.</para>
+		
+			<para>To delete an extension group, click the "Delete" icon that is in the extension group's row.</para>
+		</section>
+		
+		<section id="acp_attach_orphaned">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Orphaned attachments</title>
+			
+			<para>Sometimes, attachments may be orphaned, which means that they exist in the specified files directory (to configure this directory, see the section on <link linkend="acp_attach_settings">attachment settings</link>), but aren't assigned to any post(s). This can happen when posts are deleted or edited, or even when users attach a file, but don't submit their post.</para>
+			
+			<para>To manage orphaned attachments, click on <guimenuitem>Orphaned attachments</guimenuitem> on the left-hand menu once you're in the <guimenuitem>Posting</guimenuitem> settings section of the <glossterm>ACP</glossterm>. You should see a list of all orphaned attachments in the table, along with all the important information regarding each orphaned attachment.</para>
+			
+			<para>You can assign an orphaned post to a specific post. To do so, you must first find the post's post ID. Enter this value into the <guilabel>Post ID</guilabel> column for the particular orphaned attachment. Enable <guilabel>Attach file to post</guilabel>, then click <guilabel>Submit</guilabel>.</para>
+		
+			<para>To delete an orphaned attachment, check the orphaned attachment's <guilabel>Delete</guilabel> checkbox, then click <guilabel>Submit</guilabel>. Note that this cannot be undone.</para>
 		</section>
 	</section>
 
