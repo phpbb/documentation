@@ -98,7 +98,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Attachment Settings</title>
-				<para>One of the many new  features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
+				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
 				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
 			<section id="acp_board_avatars">
@@ -164,7 +164,7 @@
 				</authorgroup>
 			</sectioninfo>			
 			<title>Client communication</title>
-			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following is a subsection describing each client communication method.</para>
+			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following are subsections describing each client communication method.</para>
 		
 			<section id="acp_client_auth">
 				<sectioninfo>
@@ -299,7 +299,7 @@
 				<varlistentry>
 					<term>Link</term>
 					<listitem>
-						<para>The forum list displays a forum link like a normal forum. But instead of linking to a forum, you can point it  to a URL of your choice. It can display a hit counter, which shows how many times the link was clicked.</para>
+						<para>The forum list displays a forum link like a normal forum. But instead of linking to a forum, you can point it to a URL of your choice. It can display a hit counter, which shows how many times the link was clicked.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -320,7 +320,7 @@
 			</sectioninfo>
 			<title>Sub-forums</title>
 			<para>One of the many new features in phpBB 3.0 are <glossterm>sub-forums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
-			<para>If you have a forum about pets for instance, you are able to put sub-forums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category.  In this example, only the "Pets" forum will be listed on the index like a normal forum. Its sub-forums will appear as simple links below the forum description (unless you disabled this). (TODO: Screenshot) </para>
+			<para>If you have a forum about pets for instance, you are able to put sub-forums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its sub-forums will appear as simple links below the forum description (unless you disabled this). (TODO: Screenshot) </para>
 			<para>This system theoretically allows unlimited levels of sub-forums. You can put as many sub-forums inside sub-forums as you like, or at least make sense. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use sub-forums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
 			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create sub-forums.</para>
 		</section>
@@ -631,16 +631,17 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>User management</title>
+		<title>Users and Groups</title>
+
 		<section id="acp_users_manage">
 			<title>Manage Users</title>
 			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
 				
-			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem>  to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
+			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem> to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
 				
 			<para>To continue and manage a user, you must know the username(s) that you want to manage. In the textbox for the <guilabel>"Find a member:"</guilabel> field, type in the username of the user whose information and settings you wish to manage. On the other hand, if you want to find a member, click on <guilabel>[ Find a Member ]</guilabel> (which is below the textbox) and follow all the steps appropriate to find and select a user. If you wiant to manage the information and settings for the Anonymous user (any visitor who is not logged in is set as the Anonymous user), check the checkbox labeled <guilabel>"Select Anonymous User"</guilabel>. Once you have selected a user, click <guilabel>Submit</guilabel>.</para>
 				
-			<para>There are many sections relating to a user's settings. The following are subsections that have more information on each form. Each form allows you to manage specific settings for the user you have selected. When you are done with editing the data on each form, click <guilabel>Submit</guilabel>  (located at the bottom of each form) to submit your changes.</para>
+			<para>There are many sections relating to a user's settings. The following are subsections that have more information on each form. Each form allows you to manage specific settings for the user you have selected. When you are done with editing the data on each form, click <guilabel>Submit</guilabel> (located at the bottom of each form) to submit your changes.</para>
 			
 			<section id="acp_users_manage_overview">
 				<sectioninfo>
@@ -747,7 +748,7 @@
 				<title>User Feedback</title>
 				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
 				
-				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued.  <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
+				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued. <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
 			
 				<para>Another way of managing a user's feedback data is by adding feedback. Simply find the section entitled <guilabel>Add feedback</guilabel> and enter your message into the <guilabel>FEEDBACK</guilabel> text area. When you are done, click <guilabel>Submit</guilabel> to add the feedback.</para>
 			</section>
@@ -1003,7 +1004,7 @@
 								
 								<varlistentry>
 									<term>Registered COPPA Users</term>
-									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users.  <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
+									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
 								</varlistentry>
 							</variablelist>
 							
@@ -1034,7 +1035,7 @@
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
 					<term>Display group in legend:</term>
-					<listitem><para>This will enable the display of  the name of the group in the legend of the "Who is Online" list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
+					<listitem><para>This will enable the display of the name of the group in the legend of the "Who is Online" list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Group able to receive private messages</term>
@@ -1050,7 +1051,7 @@
 				</varlistentry>
 				<varlistentry>
 					<term>Group rank</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default"/>) will have this rank below his username. Note, that you can change the rank of this member  to a different one that overrides the group setting.<!-- TODO: ADD LINK TO RANK SETTINGS --></para></listitem>
+					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default"/>) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting.<!-- TODO: ADD LINK TO RANK SETTINGS --></para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Group avatar</term>
@@ -1064,7 +1065,7 @@
 			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit" />, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
 			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
 			<important><para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para></important>
-			<para>You can change default groups in two ways. Either through the user management (see <xref linkend="acp_users"/>) <!-- TODO: LINK  TO MANAGE USERS /--> or directly through the groups management (<guilabel>Manage groups</guilabel>). Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the "Registered Users" group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of "Registered Users".</para>
+			<para>You can change default groups in two ways. Either through the user management (see <xref linkend="acp_users"/>) <!-- TODO: LINK TO MANAGE USERS /--> or directly through the groups management (<guilabel>Manage groups</guilabel>). Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the "Registered Users" group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of "Registered Users".</para>
 			<important><para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para></important>
 		</section>
 	</section>
