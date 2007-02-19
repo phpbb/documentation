@@ -98,7 +98,8 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Attachment Settings</title>
-				<para>One of the many new  features in phpBB 3.0 is <glossterm>Attachments</glossterm>.</para>
+				<para>One of the many new  features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
+				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
 			<section id="acp_board_avatars">
 				<sectioninfo>
@@ -157,10 +158,104 @@
 					<author>
 						<othername>dhn</othername>
 					</author>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
 				</authorgroup>
 			</sectioninfo>			
 			<title>Client communication</title>
-			<para>TODO: Stuff about client communication</para>
+			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following is a subsection describing each client communication method.</para>
+		
+			<section id="acp_client_auth">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Authentication</title>
+				
+				<para>Unlike phpBB2, phpBB3 offers support for authentication plugins. By default, the Apache, DB, and LDAP plugins are supported. Before switching from phpBB's native authentication system (the DB method) to one of these systems, you must make sure that your server supports it. <emphasis>When configuring the authentication settings, make sure that you only fill in the settings that apply to your chosen authentication method (Apache or LDAP).</emphasis></para>
+			
+				<itemizedlist>
+					<title>Authentication</title>
+					<listitem><para><guilabel>Select an authentication method</guilabel>: Choose your desired authentication method from the selection menu.</para></listitem>
+					<listitem><para><guilabel>LDAP server name</guilabel>: If you are using LDAP, this is the name or IP address of the LDAP server.</para></listitem>
+					<listitem><para><guilabel>LDAP user</guilabel>: phpBB will connect to the LDAP server as this specified user. If you want to use anonymous access, leave this value blank.</para></listitem>
+					<listitem><para><guilabel>LDAP password</guilabel>: The password for the LDAP user specified above. If you are using anonymous access, leave this blank.</para><important><para>This password will be stored as plain text in the database; it will be visible to everybody who can access your database.</para></important></listitem>
+					<listitem><para><guilabel>LDAP base dn</guilabel>: The distinguished name, which locates the user information.</para></listitem>
+					<listitem><para><guilabel>LDAP uid</guilabel>: The key under which phpBB will search for a given login identity.</para></listitem>
+					<listitem><para><guilabel>LDAP email attribute</guilabel>: this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. If you leave this empty, users who login to your board for the first time will have an empty email address.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_client_email">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Email settings</title>
+				
+				<para>phpBB3 is capable of sending out emails to your users. Here, you can configure the information that is used when your board sends out these emails. phpBB3 can send out emails by using either the native, PHP-based email service, or a specified <glossterm>SMTP</glossterm> server. If you are not sure if you have an SMTP server available, use the native email service. You will have to ask your hoster for further details. Once you are done configuring the email settings, click <guilabel>Submit</guilabel>.</para>
+				
+				<note>
+					<para>Please ensure the email address you specify is valid, as any bounced or undeliverable messages will likely be sent to that address.</para>
+				</note>
+				
+				<itemizedlist>
+					<title>General Settings</title>
+					<listitem><para><guilabel>Enable board-wide emails</guilabel>: If this is set to disabled, no emails will be sent by the board at all.</para></listitem>
+					<listitem><para><guilabel>Users send email via board:</guilabel>: If this is set to enabled, a form allowing users to send emails to each other via the board will be displayed, rather than an email address.</para></listitem>
+					<listitem><para><guilabel>Email function name</guilabel>: If you are using the native, PHP-based email service, this should be the name of the email function. This is most likely going to be "mail".</para></listitem>
+					<listitem><para><guilabel>Email package size</guilabel>: This is the number of emails that can be sent in one package. This is useful for when you want to send mass emails, and you have a large amount of users.</para></listitem>
+					<listitem><para><guilabel>Contact email address</guilabel>: This is the address that your board's email feedback will be sent to. This is also the address that will populate the "From" and "Reply-to" addresses in all emails sent by your board.</para></listitem>
+					<listitem><para><guilabel>Return email address</guilabel>: This is the return address that will be put on all emails as the technical contact email address. It will always populate the "Return-Path" and "Sender" addresses in all emails sent by your board.</para></listitem>
+					<listitem><para><guilabel>Email signature</guilabel>: This text will be attached at the end of all emails sent by your board.</para></listitem>
+					<listitem><para><guilabel>Hide email addresses</guilabel>: If you want to keep email addresses completely private, set this value to "Yes".</para></listitem>
+				</itemizedlist>
+				
+				<itemizedlist>
+					<title>SMTP Settings</title>
+					<listitem><para><guilabel>Use SMTP server for email</guilabel>: Select "Yes" if you want your board to send emails via an SMTP server. If you are not sure that you have an SMTP server available for use, set this to "No"; this will make your board use the native, PHP-based email service, which in most cases is the safest available option.</para></listitem>
+					<listitem><para><guilabel>SMTP server address</guilabel>: The address of the SMTP server.</para></listitem>
+					<listitem><para><guilabel>SMTP server port</guilabel>: The port that the SMTP server is located on. In most cases, SMTP servers are located on port 25; do not change this value if you are unsure about this.</para></listitem>
+					<listitem><para><guilabel>Authentication method for SMTP</guilabel>: This is the authentication method that your board will use when connecting to the specified SMTP server. This only applies if an SMTP username and password are set, and required by the server. The available methods are PLAIN, LOGIN, CRAM-MD5, DIGEST-MD5, and POP-BEFORE-SMTP. If you are unsure about which authentication method you must use, ask your hoster for more information.</para></listitem>
+					<listitem><para><guilabel>SMTP username</guilabel>: The username that phpBB will use when connecting to the specified SMTP server. You should only fill this in if the SMTP server requires it.</para></listitem>
+					<listitem><para><guilabel>SMTP password</guilabel>: The password for the above specified username that phpBB will use when connecting to the specified SMTP server. You should only fill this in if the SMTP server requires it.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_client_jabber">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Jabber settings</title>
+				
+				<para>phpBB3 also has the ability to allow users to communicate via <glossterm>Jabber</glossterm>. Your board can send instant messages and board notices via Jabber, too. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
+			
+				<note>
+					<para>Some Jabber servers include gateways or transports which allow you to contact users on other networks. Not all servers offer all transports and changes in protocols can prevent transports from operating. Note that it may take several seconds to update Jabber account details, so do not stop the script until it has finished!</para>
+				</note>
+				
+				<itemizedlist>
+					<title>Jabber settings</title>
+					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to "Enabled" if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
+					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
+					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
+					<listitem><para><guilabel>Jabber username</guilabel>: The Jabber username that your board will use when connecting to the specified Jabber server. If the username you specify is unregistered on the server, phpBB3 will attempt to register the username for you.</para></listitem>
+					<listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para></listitem>
+					<listitem><para><guilabel>Jabber resource</guilabel>: This is the location of the particular connection that you can specify. For example, "board" or "home".</para></listitem>
+					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to "0", messages will be sent immediately and is will not be queued for later sending.</para></listitem>
+				</itemizedlist>
+			</section>
 		</section>
 		<section id="acp_general_server">
 			<sectioninfo>
@@ -302,11 +397,16 @@
 			
 			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 			<itemizedlist>
+				<title>General settings</title>
 				<listitem><para><guilabel>Private messaging</guilabel>: You can enable to disable your board's private messaging system. If you want to enable it, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Max private message folders</guilabel>: This is the maximum number of new private message folders your users can each create.</para></listitem>
 				<listitem><para><guilabel>Max private messages per box</guilabel>: This is the maximum number of private messages your users can have in each of their folders.</para></listitem>
 				<listitem><para><guilabel>Full folder default action</guilabel>: Sometimes your users want to send each other a private message, but the intended recipient has a full folder. This setting will define exactly what will happen to the sent message. You can either set it so that an old message will be deleted to make room for the new message, or the new messages will be held back until the recipient makes room in his inbox. Note that the default action for the <guilabel>Sentbox</guilabel> is the deletion of old messages.</para></listitem>
 				<listitem><para><guilabel>Limit editing time</guilabel>: Users are usually allowed to edit their sent private messages before the recipient reads it, even if it's already in their outbox. You can control the amount of time your users have to edit sent private messages.</para></listitem>
+			</itemizedlist>	
+			
+			<itemizedlist>
+				<title>General options</title>
 				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.0, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
@@ -418,6 +518,7 @@
 			<para>If you allow your users to post attachments, it is important to be able to control your board's attachments settings. Here, you can configure the main settings for attachments and the associated special categories. When you are done configuring your board's attachments settings, click <guilabel>Submit</guilabel>.</para>
 			
 			<itemizedlist>
+				<title>Attachment Settings</title>
 				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select "Yes".</para></listitem>
 				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select "Yes".</para></listitem>
 				<listitem><para><guilabel>Upload directory</guilabel>: The directory that attachments will be uploaded to. The default directory is <filename>/files/</filename>.</para></listitem>
@@ -430,7 +531,10 @@
 				<listitem><para><guilabel>Enable secure downloads</guilabel>: If you want to be able to only allow attachments to be available to specific <glossterm>IP address</glossterm>es or hostnames, this option should be enabled. You can further configure secure downloads once you have enabled them here; the secure downloads-specific settings are located in the <guilabel>Define allowed IPs/Hostnames</guilabel> and <guilabel>Remove or un-exclude allowed IPs/hostnames</guilabel> forms at the bottom of the page.</para></listitem>
 				<listitem><para><guilabel>Allow/Deny list</guilabel>: This allows you to configure the default behaviour when secure downloads are enabled. A whitelist (<guilabel>Allow</guilabel>) only allows <glossterm>IP address</glossterm>es or hostnames to access downloads, while a blacklist (<guilabel>Deny</guilabel>) allows all users except those who have an <glossterm>IP address</glossterm> or hostname located on the blacklist. <emphasis>This setting only applies if secure downloads are enabled.</emphasis></para></listitem>
 				<listitem><para><guilabel>Allow empty referrer</guilabel>: Secure downloads are based on referrers.This setting controls if downloads are allowed for those omitting the referrer information. <emphasis>This setting only applies if secure downloads are enabled.</emphasis></para></listitem>
-				
+			</itemizedlist>
+			
+			<itemizedlist>
+				<title>Image Category Settings</title>
 				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to "No", a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
 				<listitem><para><guilabel>Create thumbnail</guilabel>: This setting configures your board to either create a thumbnail for every image attached, or not.</para></listitem>
 				<listitem><para><guilabel>Maximum thumbnail width in pixels</guilabel>: This is the maximum width in pixels for the created thumbnails.</para></listitem>
@@ -438,7 +542,10 @@
 				<listitem><para><guilabel>Imagemagick path</guilabel>: If you have Imagemagick installed and would like to set your board to use it, specify the full path to your Imagemagick convert application. An example is <filename>/usr/bin/</filename>.</para></listitem>
 				<listitem><para><guilabel>Maximum image dimensions</guilabel>: The maximum size of image attachments, in pixels. If you would like to disable dimension checking (and thereby allow image attachments of any dimensions), set each value to 0.</para></listitem>
 				<listitem><para><guilabel>Image link dimensions</guilabel>: If an image attachment is larger than these dimensions (in pixels), a link to the image will be displayed in the post instead. If you want images to be displayed inline regardless of dimensions, set each value to 0.</para></listitem>
+			</itemizedlist>
 			
+			<itemizedlist>
+				<title>Define Allowed/Disallowed IPs/Hostnames</title>
 				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: If you have secure downloads enabled, you can specify the <glossterm>IP address</glossterm>es or hostnames allowed or disallowed. If you specify more than one <glossterm>IP address</glossterm> or hostname, each <glossterm>IP address</glossterm> or hostname should be on its own line. Entered values can have wildcards (*). To specify a range for an <glossterm>IP address</glossterm>, separate the start and end with a hyphen (-).</para></listitem>
 				<listitem><para><guilabel>Exclude IP from [dis]allowed IPs/hostnames</guilabel>: Enable this to exclude the entered IP(s)/hostname(s).</para></listitem>
 			</itemizedlist>
@@ -476,6 +583,7 @@
 			<para>To add a new file extension group, find the textbox that corresponds to the <guilabel>Create new group</guilabel> button. Type in the name of the extension group, then click <guilabel>Submit</guilabel>. You will be greeted with the extension group settings form. The following contains descriptions for each option available, and applies to extension groups that either already exist or are being added.</para>
 		
 			<itemizedlist>
+				<title>Add Extension Group</title>
 				<listitem><para><guilabel>Group name</guilabel>: The name of the extension group.</para></listitem>
 				<listitem><para><guilabel>Special category</guilabel>: Files in this extension group can be displayed differently. Select a special category from this selection menu to change the way the attachments in this extension group is presented within a post.</para></listitem>
 				<listitem><para><guilabel>Allowed</guilabel>: Enable this if you want to allow attachments that belong in this extension group.</para></listitem>
