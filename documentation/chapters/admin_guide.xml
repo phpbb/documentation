@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
-                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="admin_guide">
 	<?dbhtml dir="adminguide" filename="index.html" ?>
 	<chapterinfo>
@@ -631,7 +630,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Users and Groups</title>
+		<title>Users Management</title>
 
 		<section id="acp_users_manage">
 			<title>Manage Users</title>
@@ -724,7 +723,7 @@
 						<term>Warnings</term>
 						<listitem>
 							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
-							<para>For more information about warnings, see <xref linkend="mcp_warnings" />.</para>
+							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -822,7 +821,7 @@
 				<title>User Rank</title>
 				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
-				<para>For more information about ranks, see <xref linkend="acp_ranks" />.</para>
+				<para>For more information about ranks, see <xref linkend="acp_ranks"/>.</para>
 				<!-- TODO: Add a specific section on ranks of course. -->
 			</section>
 			
@@ -868,7 +867,7 @@
 				</sectioninfo>
 				<title>Permissions</title>
 				
-				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions" />.</para>
+				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
 			</section>
 			
 			<section id="acp_users_manage_attachments">
@@ -949,7 +948,7 @@
 			</authorgroup>
 		</sectioninfo>
 		
-		<title>Group management</title>
+		<title>Group Management</title>
 		
 		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
 		
@@ -1062,7 +1061,7 @@
 		</section>
 		<section id="acp_groups_default">
 			<title>Default groups</title>
-			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit" />, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
+			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit"/>, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
 			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
 			<important><para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para></important>
 			<para>You can change default groups in two ways. Either through the user management (see <xref linkend="acp_users"/>) <!-- TODO: LINK TO MANAGE USERS /--> or directly through the groups management (<guilabel>Manage groups</guilabel>). Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the "Registered Users" group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of "Registered Users".</para>
@@ -1070,6 +1069,111 @@
 		</section>
 	</section>
 
+	<section id="acp_user_security">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>MennoniteHobbit</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>User Security</title>
+		<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
+	
+		<section id="acp_ban_emails">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Ban emails</title>
+			<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
+		
+			<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+			<itemizedlist>
+				<title>Ban one or more email addresses</title>
+				<listitem><para><guilabel>Email address</guilabel>: This textbox should contain all the emails that you want to ban under a single rule. If you want to ban more than one email at this time, put each email on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
+				<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the email address(es) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the email address(es) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
+				<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered email address from all current bans.</para></listitem>
+				<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the email address(es). This is optional, and can help you remember in the future why you banned the email address(es).</para></listitem>
+				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned email address(es). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
+			</itemizedlist>
+				
+			<para>Other than adding emails to be banned, you can also un-ban or un-exclude email addresses from bans. To un-ban or exclude one or more email addresses from bans, fill in the <guilabel>Un-ban or un-exclude emails</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
+			<itemizedlist>
+				<title>Un-ban or un-exclude emails</title>
+				<listitem><para><guilabel>Email address</guilabel>: This multiple selection menu lists all currently banned emails. Select the email that you want to un-ban or exclude by clicking on the email in the multiple selection menu. <tip><para>To select more than one email address, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the emails you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
+				<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected email. If more than one email address is selected, only one of the ban lengths will be displayed.</para></listitem>
+				<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected email. If more than one email address is selected, only one of the ban reasons will be displayed.</para></listitem>
+				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected email. If more than one email address is selected, only one of the shown ban reasons will be displayed.</para></listitem>
+			</itemizedlist>
+		</section>
+		
+		<section id="acp_ban_ips">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Ban IPs</title>
+			<para>Sometimes, it is necessary to ban <glossterm>IP address</glossterm>es or hostnames in order to prevent unwanted users. There may be certain users or spam bots that use IPs or hostnames that you are aware of. Here, in the <guimenuitem>Ban IPs</guimenuitem> section, you can do this. You can control which IP addresses or hostnames are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
+			
+			<para>To ban or exclude one or more IP addresses and/or hostnames, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+			<itemizedlist>
+				<title>Ban one or more IPs</title>
+				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This textbox should contain all of the IP addresses and/or hostnames that you want to ban under a single rule. If you want to ban more than one IP address and/or hostname at this time, put each IP address and/or hostname on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
+				<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the IP address(es) and/or hostname(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the IP address(es) and/or hostname(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
+				<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered IP address(es) and/or hostnames from all current bans.</para></listitem>
+				<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the IP address(es) and/or hostname(s). This is optional, and can help you remember in the future why you banned the IP address(es) and/or hostname(s).</para></listitem>
+				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned IP address(es) and/or hostname(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
+			</itemizedlist>
+			
+			<para>Other than adding IP address(es) and/or hostname(s) to be banned, you can also un-ban or un-exclude IP address(es) and/or hostname(s) from bans. To un-ban or exclude one or more IP address(es) and/or hostname(s) from bans, fill in the <guilabel>Un-ban or un-exclude IPs</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
+			<itemizedlist>
+				<title>Un-ban or un-exclude IPs</title>
+				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This multiple selection menu lists all currently banned IP address(es) and/or hostname(s). Select the IP address(es) and/or hostname(s) that you want to un-ban or exclude by clicking on the IP address(es) and/or hostname(s) in the multiple selection menu. <tip><para>To select more than one IP address and/or hostname, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the IP address(es) and/or hostname(s) you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
+				<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban lengths will be displayed.</para></listitem>
+				<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban reasons will be displayed.</para></listitem>
+				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the shown ban reasons will be displayed.</para></listitem>
+			</itemizedlist>
+		</section>
+		
+		<section id="acp_ban_users">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Ban Users</title>
+			<para>Whenever you encounter troublesome users on your board, you may have to ban them. On the <guimenuitem>Ban usernames</guimenuitem> page, you can do exactly that. On this page, you can manage all banned usernames.</para>
+			
+			<para>To ban or exclude one or more users, fill in the <guilabel>Ban one or more users</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+			<itemizedlist>
+				<title>Ban one or more usernames</title>
+				<listitem><para><guilabel>Username</guilabel>: This textbox should contain all of the usernames that you want to ban under a single rule. If you want to ban more than one username at this time, put each username on its own line. You can also use wildcards (*) to partially match usernames.</para></listitem>
+				<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the username(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the username(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
+				<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered username(s) from all current bans.</para></listitem>
+				<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the username(s). This is optional, and can help you remember in the future why you banned the user(s).</para></listitem>
+				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the banned user(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
+			</itemizedlist>
+			
+			<para>Other than adding users to be banned, you can also un-ban or un-exclude usernames from bans. To un-ban or exclude one or more users from bans, fill in the <guilabel>Un-ban or un-exclude usernames</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
+			<itemizedlist>
+				<title>Un-ban or un-exclude usernames</title>
+				<listitem><para><guilabel>Username</guilabel>: This multiple selection menu lists all currently banned usernames. Select the username(s) that you want to un-ban or exclude by clicking on the username(s) in the multiple selection menu. <tip><para>To select more than one username, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the usernames you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
+				<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected username. If more than one username is selected, only one of the ban lengths will be displayed.</para></listitem>
+				<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected username. If more than one username is selected, only one of the ban reasons will be displayed.</para></listitem>
+				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected username. If more than one username is selected, only one of the shown ban reasons will be displayed.</para></listitem>
+			</itemizedlist>
+		</section>
+	</section>
+	
 	<section id="acp_permissions">
 		<sectioninfo>
 			<authorgroup>
