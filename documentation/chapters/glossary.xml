@@ -90,7 +90,7 @@
 			<varlistentry>
 				<term>Category</term>
 				<listitem>
-					<para>A category is a group of forums.</para>
+					<para>A category is a group of any sort of similar items; for example, forums.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -98,6 +98,13 @@
 				<term>chmod</term>
 				<listitem>
 					<para><abbrev>chmod</abbrev> is a way of changing the permissions of a file on a *nix (UNIX, Linux, etc.) server. Files in phpBB should be chmodded 644. Directories should be chmodded to 755. Avatar upload directories and templates cache directories should be chmodded to 777. For more information regarding chmod, please consult your <acronym>FTP</acronym> client's documentation.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Client</term>
+				<listitem>
+					<para>A client is a computer that accesses another computer's service(s) via a network.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -154,6 +161,13 @@
 				<term>IP address</term>
 				<listitem>
 					<para>An IP address, or Internet Protocol address, is a unique address that identifies a specific computer or user.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Jabber</term>
+				<listitem>
+					<para>Jabber is an open-source protocol that can be used for instant messenging.</para>
 				</listitem>
 			</varlistentry>
 			
