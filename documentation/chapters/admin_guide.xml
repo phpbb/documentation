@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="admin_guide">
 	<?dbhtml dir="adminguide" filename="index.html" ?>
 	<chapterinfo>
@@ -1171,6 +1172,54 @@
 				<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected username. If more than one username is selected, only one of the ban reasons will be displayed.</para></listitem>
 				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected username. If more than one username is selected, only one of the shown ban reasons will be displayed.</para></listitem>
 			</itemizedlist>
+		</section>
+		
+		<section id="acp_disallow_users">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Disallow usernames</title>
+			
+			<para>In phpBB3, it is also possible to disallow the registration of certain usernames that match any usernames that you configure. (This is useful if you want to prevent users from registering with usernames that might confuse them with an important board member.) To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
+			
+			<para>To add a disallowed username, locate the <guilabel>Add a disallowed username</guilabel> form, and then type in the username in the textbox labeled <guilabel>Username</guilabel>. <tip><para>You can use wildcards (*) to match any character. For example, to disallow any username that matches "JoeBloggs", you could type in "Joe*". This would prevent all users from registering a username that starts with "Joe".</para></tip> Once you are done, click <guilabel>Submit</guilabel>.</para>
+			
+			<para>To remove a disallowed username, locate the <guilabel>Remove a disallowed username</guilabel> form. Select the disallowed username that you would like to remove from the <guilabel>Username</guilabel> selection menu. Click <guilabel>Submit</guilabel> to remove the selected disallowed username.</para>
+		</section>
+		
+		<section id="acp_prune_users">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Prune users</title>
+			
+			<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
+		
+			<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
+			
+			<itemizedlist>
+				<title>Prune users</title>
+				<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
+				<listitem><para><guilabel>Email</guilabel>: The email that you want to be pruned. You can use wildcards (*) to prune users that have an email address that matches the given pattern.</para></listitem>
+				<listitem><para><guilabel>Joined</guilabel>: You can also prune users based on their date of registration. To prune users who joined before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who joined after a certain date, choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
+				<listitem><para><guilabel>Last active</guilabel>: You can also prune users based on the last time they were active. To prune users who were last active before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who were last after a certain date (this is useful to prune users who have disappeared from your board), choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
+				<listitem><para><guilabel>Posts</guilabel>: You can prune users based on their post count as well. The criteria for post count can be above, below, or equal to, a specified number. The value you enter must be a positive integer.</para></listitem>
+				<listitem><para><guilabel>Prune users</guilabel>: The usernames of the users you want to prune. Each username you want to prune should be on its own line. You can use wildcards (*) in username patterns as well.</para></listitem>
+				<listitem><para><guilabel>Delete pruned user posts</guilabel>: When users are removed (actually deleted and not just deactivated), you must choose what to do with their posts. To delete all of the posts that belong to the pruned user(s), select the radio button labeled <guilabel>Yes</guilabel>. Otherwise, select <guilabel>No</guilabel> and the pruned user(s)' posts will remain on the board, untouched.</para></listitem>
+				<listitem><para><guilabel>Deactivate or delete</guilabel>: You must choose whether you want to deactivate the pruned user(s)' accounts, or to completely delete and remove them from the board's database.</para></listitem>
+			</itemizedlist>
+			
+			<warning>
+				<para>Pruning users cannot be undone! Be careful with the criteria you choose when pruning users.</para>
+			</warning>
 		</section>
 	</section>
 	
