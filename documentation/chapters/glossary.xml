@@ -41,7 +41,7 @@
 			<varlistentry>
 				<term>ACP</term>
 				<listitem>
-					<para>The <acronym>ACP</acronym>, which stands for "Administration Control Panel",  is the main place from which you, the administrator, can control every aspect of your forum.</para>
+					<para>The <link linkend="admin_control_panel"><acronym>ACP</acronym></link>, which stands for "Administration Control Panel",  is the main place from which you, the administrator, can control every aspect of your forum.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -55,21 +55,21 @@
 			<varlistentry>
 				<term>Attachments</term>
 				<listitem>
-					<para>Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach.</para>
+					<para><link linkend="acp_board_attachments">Attachments</link> are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Avatar</term>
 				<listitem>
-					<para>Avatars are small images that are displayed next to a username. Avatars can be changed in your profile and settings (such as allow/disallow uploading) edited from the <acronym>ACP</acronym>.</para>
+					<para><link linkend="ucp_avatar">Avatars</link> are small images that are displayed next to a username. Avatars can be changed in your profile and settings (such as allow/disallow uploading) edited from the <acronym>ACP</acronym>.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>BBCode</term>
 				<listitem>
-					<para>BBCode is a special way of formatting posts that offers great control over what and how something is displayed. BBCode has a syntax similar to HTML.</para>
+					<para><link linkend="posting_bbcodes">BBCode</link> is a special way of formatting posts that offers great control over what and how something is displayed. BBCode has a syntax similar to HTML.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -167,7 +167,7 @@
 			<varlistentry>
 				<term>Jabber</term>
 				<listitem>
-					<para>Jabber is an open-source protocol that can be used for instant messenging.</para>
+					<para>Jabber is an open-source protocol that can be used for instant messenging. For more information on how Jabber's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -202,7 +202,7 @@
 			<varlistentry>
 				<term>Private Messages</term>
 				<listitem>
-					<para>Private messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient.</para>
+					<para>Private messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient. The user guide contains more information on <link linkend="user_pm">using phpBB3's private messaging system</link>.</para>
 				</listitem>
 			</varlistentry>
 			
