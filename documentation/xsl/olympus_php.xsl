@@ -38,14 +38,15 @@
 <xsl:variable name="main.title.text" select="'phpBB 3.0 Olympus Documentation'"/>
 
 <xsl:template name="user.preroot">
-	<xsl:text disable-output-escaping="yes">&lt;?php
-// The page title
-$page_title = '</xsl:text>
 
 	<xsl:param name="node" select="."/>
 	<xsl:param name="title">
 		<xsl:apply-templates select="$node" mode="object.title.markup.textonly"/>
 	</xsl:param>
+
+	<xsl:text disable-output-escaping="yes">&lt;?php
+		// The page title
+		$page_title = '</xsl:text>
 
 	<xsl:copy-of select="$title"/>
 
