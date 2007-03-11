@@ -12,8 +12,6 @@
 <xsl:param name="base.dir" select="'../website/support/documentation/3.0/'"/>
 <xsl:param name="html.ext" select="'.php'"/>
 
-<xsl:variable name="main.title.text" select="'phpBB 3.0 Olympus Documentation'"/>
-
 <!-- Link to the stylesheet -->
 <xsl:param name="html.stylesheet" select="'/support/documentation/3.0/style.css'"/>
 
@@ -36,6 +34,9 @@
 <xsl:param name="chunker.output.omit-xml-declaration" select="'yes'"/>
 <xsl:param name="chunker.output.doctype-public" select="''"/>
 <xsl:param name="chunker.output.doctype-system" select="''"/>
+
+<xsl:variable name="main.title.text" select="'phpBB 3.0 Olympus Documentation'"/>
+
 <xsl:template name="user.preroot">
 	<xsl:text disable-output-escaping="yes">&lt;?php
 // The page title
@@ -128,6 +129,53 @@ page_footer(false);
 </xsl:template>
 
 <!-- overwrite a few standard templates -->
+<!-- original version: html.xsl -->
+<xsl:template name="anchor">
+  <xsl:param name="node" select="."/>
+  <xsl:param name="conditional" select="1"/>
+  <xsl:variable name="id">
+    <xsl:call-template name="object.id">
+      <xsl:with-param name="object" select="$node"/>
+    </xsl:call-template>
+  </xsl:variable>
+  <xsl:if test="$conditional = 0 or $node/@id">
+    <span id="{$id}"/>
+  </xsl:if>
+</xsl:template>
+
+<!-- original version: titlepage.xsl -->
+<xsl:template match="title" mode="titlepage.mode">
+  <xsl:variable name="id">
+    <xsl:choose>
+      <!-- if title is in an *info wrapper, get the grandparent -->
+      <xsl:when test="contains(local-name(..), 'info')">
+        <xsl:call-template name="object.id">
+          <xsl:with-param name="object" select="../.."/>
+        </xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="object.id">
+          <xsl:with-param name="object" select=".."/>
+        </xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <h1 class="{name(.)}">
+    <span id="{$id}"/>
+    <xsl:choose>
+      <xsl:when test="$show.revisionflag != 0 and @revisionflag">
+	<span class="{@revisionflag}">
+	  <xsl:apply-templates mode="titlepage.mode"/>
+	</span>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:apply-templates mode="titlepage.mode"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </h1>
+</xsl:template>
+
 <!-- original version: chunk-common.xsl -->
 <xsl:template name="chunk-element-content">
 	<xsl:param name="prev"/>
