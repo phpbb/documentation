@@ -144,39 +144,6 @@ page_footer(false);
   </xsl:if>
 </xsl:template>
 
-<!-- original version: titlepage.xsl -->
-<xsl:template match="title" mode="titlepage.mode">
-  <xsl:variable name="id">
-    <xsl:choose>
-      <!-- if title is in an *info wrapper, get the grandparent -->
-      <xsl:when test="contains(local-name(..), 'info')">
-        <xsl:call-template name="object.id">
-          <xsl:with-param name="object" select="../.."/>
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="object.id">
-          <xsl:with-param name="object" select=".."/>
-        </xsl:call-template>
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:variable>
-
-  <h1 class="{name(.)}">
-    <span id="{$id}"/>
-    <xsl:choose>
-      <xsl:when test="$show.revisionflag != 0 and @revisionflag">
-	<span class="{@revisionflag}">
-	  <xsl:apply-templates mode="titlepage.mode"/>
-	</span>
-      </xsl:when>
-      <xsl:otherwise>
-	<xsl:apply-templates mode="titlepage.mode"/>
-      </xsl:otherwise>
-    </xsl:choose>
-  </h1>
-</xsl:template>
-
 <!-- original version: chunk-common.xsl -->
 <xsl:template name="chunk-element-content">
 	<xsl:param name="prev"/>
