@@ -419,10 +419,10 @@
 			<title>Setting global permissions</title>
 			<para>Local Permissions are too local for you? Well, then phpBB3 has something to offer for you, too: Global Permissions:</para>
 			<orderedlist>
-				<listitem>Users Permissions</listitem>
-				<listitem>Groups Permissions</listitem>
-				<listitem>Administrators</listitem>
-				<listitem>Global Moderators</listitem>
+				<listitem><para>Users Permissions</para></listitem>
+				<listitem><para>Groups Permissions</para></listitem>
+				<listitem><para>Administrators</para></listitem>
+				<listitem><para>Global Moderators</para></listitem>
 			</orderedlist>
 			<para>In "User Permissions" and "Group Permissions" you can allow and disallow features like attachments, signatures and avatars for specific users and user groups. Note that some of these settings only matter, if the respective feature is enabled in the "Board Features" (see <xref linkend="quick_settings_boardfeatures"/> for details).</para>
 			<para>Under "Administrators" you can give users or groups administrator privileges like the ability to manage forums or change user permissions. For details on these settings please read the <xref linkend="acp_permissions"/>.</para>
