@@ -4,12 +4,7 @@
 
 <xsl:import href="xhtml/chunk.xsl"/>
 
-<!-- suggests a directory structure like this:
-		/some/path
-			/documentation	The folder containing the documentation checkout
-			/website		phpbb.com website root folder 
-	also adjust create_docs.sh when adjusting this! -->
-<xsl:param name="base.dir" select="'../website/support/documentation/3.0/'"/>
+<xsl:param name="base.dir" select="'./build/'"/>
 <xsl:param name="html.ext" select="'.php'"/>
 
 <!-- Link to the stylesheet -->
