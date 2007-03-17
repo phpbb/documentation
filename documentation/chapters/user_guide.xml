@@ -168,11 +168,13 @@
 		<section id="posting_form">
 			<title>Posting Form</title>
 			<para>You will be taken to the posting form when you decide to post either a new topic or reply, where you can enter your post content.</para>
-			<para><guilabel>Topic/Post Icon</guilabel> - The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para>
-			<para><guilabel>Subject</guilabel> - If you are creating a new topic with your post, the subject is required and will become the title of the topic. If you are replying to an existing topic, this is optional, but it can be changed.</para>
-			<para>Post Content - While not being labled, the large text box is where your actual post content will be entered. Here, along with your text, you may use things like <emphasis role="strong">Smilies or BBCode</emphasis> if the board administrator has them enabled.</para>
-			<para>Smilies - Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. If Smilies are enabled, you will see the text "<guilabel>Smilies are ON</guilabel>" to the righthand of the Post Content box. Otherwise, you will see the text "<guilabel>Smilies are OFF</guilabel>." See <link linkend="posting_smilies">Posting Smilies</link> for further details.</para>
-			<para>BBCode - BBCode is a type of formatting that can be applied to your post content if BBCode has been enabled by the board administrator. If BBCode is enabled, you will see the text "<guilabel>BBCode is ON</guilabel>" to the righthand of the Post Content box. Otherwise, you will see the text "<guilabel>BBCode is OFF</guilabel>." See <link linkend="posting_bbcodes">Posting BBCode</link> for further details.</para>
+			<itemizedlist>	
+				<listitem><para><guilabel>Topic/Post Icon</guilabel> - The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para></listitem>
+				<listitem><para><guilabel>Subject</guilabel> - If you are creating a new topic with your post, the subject is required and will become the title of the topic. If you are replying to an existing topic, this is optional, but it can be changed.</para></listitem>
+				<listitem><para>Post Content - While not being labled, the large text box is where your actual post content will be entered. Here, along with your text, you may use things like <emphasis role="strong">Smilies or BBCode</emphasis> if the board administrator has them enabled.</para></listitem>
+				<listitem><para>Smilies - Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. If Smilies are enabled, you will see the text "<guilabel>Smilies are ON</guilabel>" to the righthand of the Post Content box. Otherwise, you will see the text "<guilabel>Smilies are OFF</guilabel>." See <link linkend="posting_smilies">Posting Smilies</link> for further details.</para></listitem>
+				<listitem><para>BBCode - BBCode is a type of formatting that can be applied to your post content if BBCode has been enabled by the board administrator. If BBCode is enabled, you will see the text "<guilabel>BBCode is ON</guilabel>" to the righthand of the Post Content box. Otherwise, you will see the text "<guilabel>BBCode is OFF</guilabel>." See <link linkend="posting_bbcodes">Posting BBCode</link> for further details.</para></listitem>
+			</itemizedlist>
 		</section>
 		
 		<section id="posting_smilies">
@@ -185,7 +187,7 @@
 		<section id="posting_bbcodes">
 			<title>BBCodes</title>
 			<para>TODO: What are BBcodes. Again, permission based which ones you can use. Explain syntax of the default ones (quote and URL for instance). How to disable BBcode by default, how to disable/enable it for one post.</para>
-			<para>BBCode is a type of formatting that can be applied to your post content, much like HTML. Unlike HTML, however, BBCode uses square brackets "[" and "]" instead of angled brackets &lt; and &gt;. Depending on the permissions the board administrator has set, you may be able to use only certain BBCodes or even none at all.</para>
+			<para>BBCode is a type of formatting that can be applied to your post content, much like HTML. Unlike HTML, however, BBCode uses square brackets [ and ] instead of angled brackets &lt; and &gt;. Depending on the permissions the board administrator has set, you may be able to use only certain BBCodes or even none at all.</para>
 			<para>For detailed instructions on the useage of BBCode, you can click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text box. Please note that the administrator has the option to add new and custom BBCodes, so others may be availible to you which are not on this list.</para>
 			<para>Basic BBCodes and their outputs are as follows:</para>
 			<para>TODO: How do we want to go about displaying the output?</para>
@@ -203,21 +205,26 @@
 			<title>Post Options</title>
 			<para>TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc.</para>
 			<para>When posting either a new topic or reply, there are several post options that are available to you. You can view these options by selecting the <guilabel>Options</guilabel> tab from the section below the posting form. Depending on the permissions the board administrator has assigned to you or whether you are posting a topic or reply, these options will be different.</para>
-			<para><guilabel>Disable BBCode</guilabel> - If BBCode is enabled on the board and you are allowed to use it, this option will be available. Checking this box will not convert any BBCode in your post content into its respected output. For example, [b]Bolded text[/b] will be seen in your post as exactly [b]Bolded text[/b].</para> 
-			<para><guilabel>Disable Smilies</guilabel> - If Smilies are enabled on the board and you are allowed to use them, this option will be available. Checking this box will not convert any of the smilie's characters to their respected image. For example, ;) will be seen in your post as exactly ;).</para> 
-			<para><guilabel>Do not automatically parse URLs</guilabel> - When entering a URL directly into your post content (in the format of http://....com or www.etc.com), by default it will be converted to a clickable string of text. However, if this box is checked when posting, these URLs will stay as a standard string of text.</para> 
-			<para><guilabel>Attach a signature (signatures can be altered via the UCP)</guilabel> - If this box is checked, the signature you have set in your profile will be attached to the post provided signatures have been enabled by the administrator and you have the proper permissions. For more information about signatures, please see <link linkend="ucp_signature">UCP Signatures</link>.</para> 
-			<para><guilabel>Send me an email when a reply is posted</guilabel> - If this box is checked, you will receive a notification (either by email, Jabber, etc) every time another user replies to the topic. This is called subscribing to the topic. For more information, please see <link linkend="ucp_subscriptions">UCP Subscriptions</link>.</para> 
-			<para><guilabel>Lock topic</guilabel> - Provided you have moderation permissions in this forum, checking this box will result in the topic being locked after your reply has been posted. At this point, no one but moderators or administrators may reply to the topic. For more information, please see <link linkend="modtools_lock">Locking a topic or post</link>.</para>
+			<itemizedlist>	
+				<listitem><para><guilabel>Disable BBCode</guilabel> - If BBCode is enabled on the board and you are allowed to use it, this option will be available. Checking this box will not convert any BBCode in your post content into its respected output. For example, [b]Bolded text[/b] will be seen in your post as exactly [b]Bolded text[/b].</para></listitem> 
+				<listitem><para><guilabel>Disable Smilies</guilabel> - If Smilies are enabled on the board and you are allowed to use them, this option will be available. Checking this box will not convert any of the smilie's characters to their respected image. For example, ;) will be seen in your post as exactly ;).</para></listitem> 
+				<listitem><para><guilabel>Do not automatically parse URLs</guilabel> - When entering a URL directly into your post content (in the format of http://....com or www.etc.com), by default it will be converted to a clickable string of text. However, if this box is checked when posting, these URLs will stay as a standard string of text.</para></listitem> 
+				<listitem><para><guilabel>Attach a signature (signatures can be altered via the UCP)</guilabel> - If this box is checked, the signature you have set in your profile will be attached to the post provided signatures have been enabled by the administrator and you have the proper permissions. For more information about signatures, please see <link linkend="ucp_signature">UCP Signatures</link>.</para></listitem> 
+				<listitem><para><guilabel>Send me an email when a reply is posted</guilabel> - If this box is checked, you will receive a notification (either by email, Jabber, etc) every time another user replies to the topic. This is called subscribing to the topic. For more information, please see <link linkend="ucp_subscriptions">UCP Subscriptions</link>.</para></listitem>
+				<listitem><para><guilabel>Lock topic</guilabel> - Provided you have moderation permissions in this forum, checking this box will result in the topic being locked after your reply has been posted. At this point, no one but moderators or administrators may reply to the topic. For more information, please see <link linkend="modtools_lock">Locking a topic or post</link>.</para></listitem>
+			</itemizedlist>
 			
 			<section id="posting_special">
 				<title>Topic Types</title>
 				<para>Provided you have the right permissions, you have the option of selecting various topic types when posting a new topic by using <guilabel>Post topic as</guilabel>. The four possible types are: <guilabel>Normal</guilabel>, <guilabel>Sticky</guilabel>, <guilabel>Announcement</guilabel>, and <guilabel>Global</guilabel>. By default, all new posts are <guilabel>Normal</guilabel>.</para>
-				<para><guilabel>Normal</guilabel> - By selecting normal, your new topic will be a standard topic in the forum.</para>
-				<para><guilabel>Sticky</guilabel> - Stickies are special topics in the forum. They are "stuck" to the top of the first page of the forum in which they are posted, above every Normal topic.</para> 
-				<para><guilabel>Announcement</guilabel> - Announcements are much like Stickies in that they are "stuck" to the top of the forum. However, they are different from stickies in two ways: 1) they are above Stickies, and 2) they appear at the top of <emphasis>every</emphasis> page of the forum instead of only the first page of topics.</para>
-				<para><guilabel>Global</guilabel> - Global, or Global Announcements, are special types of Announcements which appear at the top of every page of every forum on the board. They appear above every other type of special topic.</para> 
-				<para>You also have the ability to specify how long the special (stickies, announcements, and global announcements) keep their type. For example, an announcement is created and specified to stay "stuck" for 4 days. After the 4 days are over, the announcement will automatically be switched to a Normal topic.</para> 
+				<itemizedlist>	
+				
+					<listitem><para><guilabel>Normal</guilabel> - By selecting normal, your new topic will be a standard topic in the forum.</para></listitem>
+					<listitem><para><guilabel>Sticky</guilabel> - Stickies are special topics in the forum. They are "stuck" to the top of the first page of the forum in which they are posted, above every Normal topic.</para></listitem>
+					<listitem><para><guilabel>Announcement</guilabel> - Announcements are much like Stickies in that they are "stuck" to the top of the forum. However, they are different from stickies in two ways: 1) they are above Stickies, and 2) they appear at the top of <emphasis>every</emphasis> page of the forum instead of only the first page of topics.</para></listitem>
+					<listitem><para><guilabel>Global</guilabel> - Global, or Global Announcements, are special types of Announcements which appear at the top of every page of every forum on the board. They appear above every other type of special topic.</para></listitem>
+				</itemizedlist>
+				<para>You also have the ability to specify how long the special (stickies, announcements, and global announcements) keep their type. For example, an announcement is created and specified to stay "stuck" for 4 days. After the 4 days are over, the announcement will automatically be switched to a Normal topic.</para>
 			</section>
 		</section>
 		
