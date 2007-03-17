@@ -87,8 +87,9 @@ $template->set_filenames(array(
 <xsl:template name="footer.navigation">
 	<div class="copyright" align="center">(c) 2006 phpBB Group - Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
 	<xsl:text disable-output-escaping="yes">
-EOD;
-$content = str_replace(' xmlns="http://www.w3.org/1999/xhtml"', '', $content);
+&lt;?php
+
+$content = str_replace(' xmlns="http://www.w3.org/1999/xhtml"', '', ob_get_clean());
 
 $template->assign_vars(array(
 	'PAGE_TITLE'		=> $page_title,
@@ -539,10 +540,8 @@ page_footer(false);
 
 docbook_navigation($navigation);
 
-// woraround for $Id$ in the content
-$Id = '$Id';
-
-$content = &lt;&lt;&lt;EOD</xsl:text>
+ob_start();
+?&gt;</xsl:text>
 	<xsl:text>
 </xsl:text>
 </xsl:template>
