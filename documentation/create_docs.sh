@@ -20,6 +20,8 @@ if [ "$?" == "0" ]; then
 	mkdir $path/images
 	echo "Copying images/* to $path/images/"
 	cp -r images/* $path/images/
+	echo "Making documentation directory group writable"
+	chmod g+w -R $path
 else
 	echo "Failed creating documentation"
 fi
