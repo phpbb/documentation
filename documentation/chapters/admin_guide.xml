@@ -934,8 +934,34 @@
 				</varlistentry>
 			</variablelist>
 		</section>
+		
+		<section id="acp_users_permissions">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Users' permissions</title>
+			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
+		            
+		   	 <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
+		    
+		    	<para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
+		    
+		    	<important>
+		    		<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
+		    	</important>
+			
+			<para>To edit the user's <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
+		
+			<para>To edit the user's <guilabel>Moderative permissions</guilabel>, select "<guimenuitem>Moderator permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are three categories of permissions you may edit: <guilabel>Post actions</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Topic actions</guilabel>.</para>
+		
+			<para>To edit the user's <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
+		</section>
 	</section>
-
+	
 	<section id="acp_groups">
 		<sectioninfo>
 			<authorgroup>
