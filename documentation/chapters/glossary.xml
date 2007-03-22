@@ -151,9 +151,9 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Gzip</term>
+				<term>GZip</term>
 				<listitem>
-					<para>Gzip is a compression method often used in web applications and software such as phpBB to improve speed. Most modern browsers support this on-the-fly algorithm. Gzip is also used to compress an archive of files. Higher compression levels, however, will increase server load.</para>
+					<para>GZip is a compression method often used in web applications and software such as phpBB to improve speed. Most modern browsers support this on-the-fly algorithm. Gzip is also used to compress an archive of files. Higher compression levels, however, will increase server load.</para>
 				</listitem>
 			</varlistentry>
 			
