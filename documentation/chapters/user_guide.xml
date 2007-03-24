@@ -195,7 +195,7 @@
 			<para>[i]Italicised text[/i]:</para>
 			<para>[u]Underlined text[/u]:</para>
 			<para>[quote]Quoted text[/quote]:</para>
-			<para>[quote="Name to quote"]Quoted text[/quote]: [insert screenshot of cited quoted text]</para>
+			<para>[quote="Name to quote"]Quoted text[/quote]: <!-- [insert screenshot of cited quoted text] --></para>
 			<para>[url]http://www.phpbb.com[/url]: <ulink url="http://www.phpbb.com">http://www.phpbb.com</ulink></para>
 			<para>[url=http://www.phpbb.com]Linked text[/url]: <ulink url="http://www.phpbb.com">Linked text</ulink></para> 
 			<para>Again, for more detailed instructions on the useage of BBCode and the many other available BBCodes, please click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text bos.</para>
