@@ -317,16 +317,16 @@
 			<para>This is the most important aspect of permissions. You need to understand this to properly work with them. There are three different values that a permission can take:</para>
 			<itemizedlist>
 				<listitem>
-					<para><guilabel>YES</guilabel> will allow a permission setting <emphasis>unless</emphasis> it is overwritten by a <guilabel>NO</guilabel>.</para>
+					<para><guilabel>YES</guilabel> will allow a permission setting <emphasis>unless</emphasis> it is overwritten by a <guilabel>NEVER</guilabel>.</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>UNSET</guilabel> will be seen as <guilabel>NO</guilabel>, <emphasis>unless</emphasis> it is overwritten by a <guilabel>YES</guilabel>.</para>
+					<para><guilabel>NO</guilabel> will be disallow a permission setting <emphasis>unless</emphasis> it is overwritten by a <guilabel>YES</guilabel>.</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>NO</guilabel> will never be allowed for a user. It <emphasis>cannot</emphasis> be overwritten by a <guilabel>YES</guilabel>.</para>
+					<para><guilabel>NEVER</guilabel> will completely disallow a permission setting for a user. It <emphasis>cannot</emphasis> be overwritten by a <guilabel>YES</guilabel>.</para>
 				</listitem>
 			</itemizedlist>
-			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>No</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>No</guilabel> overrides any <guilabel>Yes</guilabel> they have . Leave the setting at <guilabel>Unset</guilabel> instead. <guilabel>Unset</guilabel> is a weak <guilabel>No</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
+			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>Never</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>No</guilabel> overrides any <guilabel>Yes</guilabel> they have . Leave the setting at <guilabel>No</guilabel> instead. <guilabel>No</guilabel> is a weak <guilabel>Never</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
 			<figure id="img_quick_permissions_manual">
 				<title>Manual permissions</title>
 				<mediaobject>
