@@ -318,7 +318,7 @@
 					</authorgroup>
 				</sectioninfo>			
 				<title>Server settings</title>
-				<para>On this page, you can define server and domain-dependent settings. There are three main categories of server settings: <guilabel>Server Settings</guilabel>, <guilabel>Path Settings</guilabel>, and <guilabel>Server URL Settings</guilabel>. The following describes each server settings category and the corresponding settings in more detail.</para>
+				<para>On this page, you can define server and domain-dependent settings. There are three main categories of server settings: <guilabel>Server Settings</guilabel>, <guilabel>Path Settings</guilabel>, and <guilabel>Server URL Settings</guilabel>. The following describes each server settings category and the corresponding settings in more detail. When you are done configuring your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 				
 				<warning>
 					<para>When editing your board's server settings, do so with caution. Incorrect settings can cause such consequences as emails being sent out with incorrect links and/or information, or even the board being inaccessible.</para>
@@ -347,6 +347,111 @@
 				</para>
 				
 				<para>When you are done editing your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+			</section>
+			
+			<section id="acp_server_security">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Security settings</title>
+				<para>Here, on the <guimenuitem>Security settings</guimenuitem> page, you are able to manage security-related settings; namely, you can define and edit session and login-related settings. The following describes the available security settings that you can manage. When you are done configuring your board's security settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+				
+				<!-- Perhaps include more introduction information? :-/ -->
+				
+				<variablelist>
+					<varlistentry>
+						<term>Allow persistent logins</term>
+						<listitem>
+							<para>This determines whether users can automatically login to your board when they visit it.</para>
+							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable automatic logins.</para>
+						</listitem>
+					</varlistentry>
+						
+					<varlistentry>
+						<term>Persistent login key expiration length (in days)</term>
+						<listitem>
+							<para>This is the set number of days that login keys will last before they expire and are removed from the database.</para>
+							<para>You may enter an integer in the text box located to the left of the word <guilabel>Days</guilabel>. This integer is the number of days for the persistent login key expiration. If you would like to disable this setting (and thereby allow use of login keys indefinitely), enter a "0" into the text box.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Session IP validation</term>
+						<listitem>
+							<para>This determines how much of the users'  <glossterm>IP address</glossterm> is used to validate a session.</para>
+							<para>There are four settings available: <guilabel>All</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, and <guilabel>None</guilabel>. The <guilabel>All</guilabel> setting will compare the complete IP address. The <guilabel>A.B.C</guilabel> setting will compare the first x.x.x of the IP address. The <guilabel>A.B</guilabel> setting will compare the first x.x.x of the IP address. Lastly, selecting <guilabel>None</guilabel> will disable IP address checking altogether.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Validate browser</term>
+						<listitem>
+							<para>This enables the validation of the users' browsers for each session. This can help improve the users' security.</para>
+							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable this browser validation.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Validate X_FORWARDED_FOR header</term>
+						<listitem>
+							<para>This setting controls whether sessions will only be continued if the sent X_FORWARDED_FOR header is the same as the one sent with the previous request. Bans will be checked against <glossterm>IP address</glossterm>es in the X_FORWARDED_FOR header too.</para>
+							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable the validation of the X_FORWARDED_FOR header.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Check IP against DNS Blackhole List:</term>
+						<listitem>
+							<para>You are also able to check the users' <glossterm>IP address</glossterm>es against <acronym>DNS</acronym> blackhole lists. These lists are blacklists that list bad IP addresses. Enabling this setting will allow your board to check your users' IP addresses and compare them against the DNS blackhole lists. Currently, the DNS blacklist services on the sites <ulink url="http://www.spamcop.net">spamcop.net</ulink>, <ulink url="http://www.dsbl.org">dsbl.org</ulink>, and <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Check email domain for valid MX record</term>
+						<listitem>
+							<para>It is also possible to attempt to validate emails used by your board's users. If this setting is enabled, emails that are entered when users register or change the email in their profile will be checked for a valid <ulink url="http://www.wikipedia.org/wiki/MX_record">MX record</ulink>.</para>
+							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable the checking of MX records for emails.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Password complexity</term>
+						<listitem>
+							<para>Usually, more complex passwords fare well; they are better than simple passwords. To help your users try to make their account as secure as possible, you also have the option of requiring that they use a password as complex as you define. This requirement will apply to all users registering a new account, or when existing users change their current passwords.</para>
+							<para>There are four options in the selection menu. <guimenuitem>No requirements</guimenuitem> will disable password complexity checking completely. The <guimenuitem>Must be mixed case</guimenuitem> setting requires that your users' passwords have both lowercase and uppercase letters in their password. The <guimenuitem>Must contain alphanumerics</guimenuitem> setting requires that your users' password include both letters from the alphabet and numbers. Lastly, the <guimenuitem>Must contain symbols</guimenuitem> setting will require that your users' passwords include symbols.</para>
+							<note>
+								<para>For each password complexity requirement, the setting(s) above it in the selection menu will also apply. For example, selecting <guimenuitem>Must contain alphanumerics</guimenuitem> will require your users' passwords to include not only alphanumeric characters, but also have both lowercase and uppercase letters.</para>
+							</note>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Force password change</term>
+						<listitem>
+							<para>It is always ideal to change passwords once in a while. With this setting, you can force your users to change their passwords after a set number of days that their passwords have been used.</para>
+							<para>Only integers can be entered in the text box, which is located next to the <guilabel>Days</guilabel> label. This integer is the number of days that, after which, your users will have to change their passwords. If you would like to disable this feature, enter a value of "0".</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Maximum number of login attempts</term>
+						<listitem>
+							<para>It is also possible to limit the number of attempts that your users can have to try to login. Setting a specific limit will enable this feature. This can be useful in temporarily preventing bots or other users from trying to log into other users' accounts.</para>
+							<para>Only integers can be entered for this setting. The number entered it the maximum number of times a user can attempt to login to an account before having to confirm his login visually, with the visual confirmation.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Allow PHP in templates</term>
+						<listitem>
+							<para>Unlike phpBB2, phpBB3 allows the use of PHP code in the template files themselves, if enabled. If this option is enabled, <guilabel>PHP</guilabel> and <guilabel>INCLUDEPHP</guilabel> statements will be recognized and parsed by the template engine.</para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
 			</section>
 		</section>		
 	</section>
@@ -1042,6 +1147,159 @@
 		
 			<para>To edit the user's <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
 		</section>
+		
+		<section id="acp_user_security">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>User Security</title>
+			<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
+			
+			<section id="acp_ban_emails">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Ban emails</title>
+				<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
+				
+				<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+				<itemizedlist>
+					<title>Ban one or more email addresses</title>
+					<listitem><para><guilabel>Email address</guilabel>: This textbox should contain all the emails that you want to ban under a single rule. If you want to ban more than one email at this time, put each email on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
+					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the email address(es) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the email address(es) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
+					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered email address from all current bans.</para></listitem>
+					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the email address(es). This is optional, and can help you remember in the future why you banned the email address(es).</para></listitem>
+					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned email address(es). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
+				</itemizedlist>
+				
+				<para>Other than adding emails to be banned, you can also un-ban or un-exclude email addresses from bans. To un-ban or exclude one or more email addresses from bans, fill in the <guilabel>Un-ban or un-exclude emails</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
+				<itemizedlist>
+					<title>Un-ban or un-exclude emails</title>
+					<listitem><para><guilabel>Email address</guilabel>: This multiple selection menu lists all currently banned emails. Select the email that you want to un-ban or exclude by clicking on the email in the multiple selection menu. <tip><para>To select more than one email address, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the emails you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
+					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected email. If more than one email address is selected, only one of the ban lengths will be displayed.</para></listitem>
+					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected email. If more than one email address is selected, only one of the ban reasons will be displayed.</para></listitem>
+					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected email. If more than one email address is selected, only one of the shown ban reasons will be displayed.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_ban_ips">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Ban IPs</title>
+				<para>Sometimes, it is necessary to ban <glossterm>IP address</glossterm>es or hostnames in order to prevent unwanted users. There may be certain users or spam bots that use IPs or hostnames that you are aware of. Here, in the <guimenuitem>Ban IPs</guimenuitem> section, you can do this. You can control which IP addresses or hostnames are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
+				
+				<para>To ban or exclude one or more IP addresses and/or hostnames, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+				<itemizedlist>
+					<title>Ban one or more IPs</title>
+					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This textbox should contain all of the IP addresses and/or hostnames that you want to ban under a single rule. If you want to ban more than one IP address and/or hostname at this time, put each IP address and/or hostname on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
+					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the IP address(es) and/or hostname(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the IP address(es) and/or hostname(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
+					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered IP address(es) and/or hostnames from all current bans.</para></listitem>
+					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the IP address(es) and/or hostname(s). This is optional, and can help you remember in the future why you banned the IP address(es) and/or hostname(s).</para></listitem>
+					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned IP address(es) and/or hostname(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
+				</itemizedlist>
+				
+				<para>Other than adding IP address(es) and/or hostname(s) to be banned, you can also un-ban or un-exclude IP address(es) and/or hostname(s) from bans. To un-ban or exclude one or more IP address(es) and/or hostname(s) from bans, fill in the <guilabel>Un-ban or un-exclude IPs</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
+				<itemizedlist>
+					<title>Un-ban or un-exclude IPs</title>
+					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This multiple selection menu lists all currently banned IP address(es) and/or hostname(s). Select the IP address(es) and/or hostname(s) that you want to un-ban or exclude by clicking on the IP address(es) and/or hostname(s) in the multiple selection menu. <tip><para>To select more than one IP address and/or hostname, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the IP address(es) and/or hostname(s) you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
+					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban lengths will be displayed.</para></listitem>
+					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban reasons will be displayed.</para></listitem>
+					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the shown ban reasons will be displayed.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_ban_users">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Ban Users</title>
+				<para>Whenever you encounter troublesome users on your board, you may have to ban them. On the <guimenuitem>Ban usernames</guimenuitem> page, you can do exactly that. On this page, you can manage all banned usernames.</para>
+				
+				<para>To ban or exclude one or more users, fill in the <guilabel>Ban one or more users</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+				<itemizedlist>
+					<title>Ban one or more usernames</title>
+					<listitem><para><guilabel>Username</guilabel>: This textbox should contain all of the usernames that you want to ban under a single rule. If you want to ban more than one username at this time, put each username on its own line. You can also use wildcards (*) to partially match usernames.</para></listitem>
+					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the username(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the username(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
+					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered username(s) from all current bans.</para></listitem>
+					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the username(s). This is optional, and can help you remember in the future why you banned the user(s).</para></listitem>
+					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the banned user(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
+				</itemizedlist>
+				
+				<para>Other than adding users to be banned, you can also un-ban or un-exclude usernames from bans. To un-ban or exclude one or more users from bans, fill in the <guilabel>Un-ban or un-exclude usernames</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
+				<itemizedlist>
+					<title>Un-ban or un-exclude usernames</title>
+					<listitem><para><guilabel>Username</guilabel>: This multiple selection menu lists all currently banned usernames. Select the username(s) that you want to un-ban or exclude by clicking on the username(s) in the multiple selection menu. <tip><para>To select more than one username, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the usernames you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
+					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected username. If more than one username is selected, only one of the ban lengths will be displayed.</para></listitem>
+					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected username. If more than one username is selected, only one of the ban reasons will be displayed.</para></listitem>
+					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected username. If more than one username is selected, only one of the shown ban reasons will be displayed.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_disallow_users">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Disallow usernames</title>
+				
+				<para>In phpBB3, it is also possible to disallow the registration of certain usernames that match any usernames that you configure. (This is useful if you want to prevent users from registering with usernames that might confuse them with an important board member.) To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
+				
+				<para>To add a disallowed username, locate the <guilabel>Add a disallowed username</guilabel> form, and then type in the username in the textbox labeled <guilabel>Username</guilabel>. <tip><para>You can use wildcards (*) to match any character. For example, to disallow any username that matches "JoeBloggs", you could type in "Joe*". This would prevent all users from registering a username that starts with "Joe".</para></tip> Once you are done, click <guilabel>Submit</guilabel>.</para>
+				
+				<para>To remove a disallowed username, locate the <guilabel>Remove a disallowed username</guilabel> form. Select the disallowed username that you would like to remove from the <guilabel>Username</guilabel> selection menu. Click <guilabel>Submit</guilabel> to remove the selected disallowed username.</para>
+			</section>
+			
+			<section id="acp_prune_users">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Prune users</title>
+				
+				<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
+				
+				<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
+				
+				<itemizedlist>
+					<title>Prune users</title>
+					<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
+					<listitem><para><guilabel>Email</guilabel>: The email that you want to be pruned. You can use wildcards (*) to prune users that have an email address that matches the given pattern.</para></listitem>
+					<listitem><para><guilabel>Joined</guilabel>: You can also prune users based on their date of registration. To prune users who joined before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who joined after a certain date, choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
+					<listitem><para><guilabel>Last active</guilabel>: You can also prune users based on the last time they were active. To prune users who were last active before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who were last after a certain date (this is useful to prune users who have disappeared from your board), choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
+					<listitem><para><guilabel>Posts</guilabel>: You can prune users based on their post count as well. The criteria for post count can be above, below, or equal to, a specified number. The value you enter must be a positive integer.</para></listitem>
+					<listitem><para><guilabel>Prune users</guilabel>: The usernames of the users you want to prune. Each username you want to prune should be on its own line. You can use wildcards (*) in username patterns as well.</para></listitem>
+					<listitem><para><guilabel>Delete pruned user posts</guilabel>: When users are removed (actually deleted and not just deactivated), you must choose what to do with their posts. To delete all of the posts that belong to the pruned user(s), select the radio button labeled <guilabel>Yes</guilabel>. Otherwise, select <guilabel>No</guilabel> and the pruned user(s)' posts will remain on the board, untouched.</para></listitem>
+					<listitem><para><guilabel>Deactivate or delete</guilabel>: You must choose whether you want to deactivate the pruned user(s)' accounts, or to completely delete and remove them from the board's database.</para></listitem>
+				</itemizedlist>
+				
+				<warning>
+					<para>Pruning users cannot be undone! Be careful with the criteria you choose when pruning users.</para>
+				</warning>
+			</section>
+		</section>
 	</section>
 	
 	<section id="acp_groups">
@@ -1175,159 +1433,6 @@
 			<important><para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para></important>
 			<para>You can change default groups in two ways. Either through the user management (see <xref linkend="acp_users"/>) <!-- TODO: LINK TO MANAGE USERS /--> or directly through the groups management (<guilabel>Manage groups</guilabel>). Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the "Registered Users" group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of "Registered Users".</para>
 			<important><para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para></important>
-		</section>
-	</section>
-
-	<section id="acp_user_security">
-		<sectioninfo>
-			<authorgroup>
-				<author>
-					<othername>MennoniteHobbit</othername>
-				</author>
-			</authorgroup>
-		</sectioninfo>
-		<title>User Security</title>
-		<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
-	
-		<section id="acp_ban_emails">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>MennoniteHobbit</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Ban emails</title>
-			<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
-		
-			<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
-			<itemizedlist>
-				<title>Ban one or more email addresses</title>
-				<listitem><para><guilabel>Email address</guilabel>: This textbox should contain all the emails that you want to ban under a single rule. If you want to ban more than one email at this time, put each email on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
-				<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the email address(es) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the email address(es) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
-				<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered email address from all current bans.</para></listitem>
-				<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the email address(es). This is optional, and can help you remember in the future why you banned the email address(es).</para></listitem>
-				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned email address(es). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
-			</itemizedlist>
-				
-			<para>Other than adding emails to be banned, you can also un-ban or un-exclude email addresses from bans. To un-ban or exclude one or more email addresses from bans, fill in the <guilabel>Un-ban or un-exclude emails</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
-			<itemizedlist>
-				<title>Un-ban or un-exclude emails</title>
-				<listitem><para><guilabel>Email address</guilabel>: This multiple selection menu lists all currently banned emails. Select the email that you want to un-ban or exclude by clicking on the email in the multiple selection menu. <tip><para>To select more than one email address, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the emails you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
-				<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected email. If more than one email address is selected, only one of the ban lengths will be displayed.</para></listitem>
-				<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected email. If more than one email address is selected, only one of the ban reasons will be displayed.</para></listitem>
-				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected email. If more than one email address is selected, only one of the shown ban reasons will be displayed.</para></listitem>
-			</itemizedlist>
-		</section>
-		
-		<section id="acp_ban_ips">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>MennoniteHobbit</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Ban IPs</title>
-			<para>Sometimes, it is necessary to ban <glossterm>IP address</glossterm>es or hostnames in order to prevent unwanted users. There may be certain users or spam bots that use IPs or hostnames that you are aware of. Here, in the <guimenuitem>Ban IPs</guimenuitem> section, you can do this. You can control which IP addresses or hostnames are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
-			
-			<para>To ban or exclude one or more IP addresses and/or hostnames, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
-			<itemizedlist>
-				<title>Ban one or more IPs</title>
-				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This textbox should contain all of the IP addresses and/or hostnames that you want to ban under a single rule. If you want to ban more than one IP address and/or hostname at this time, put each IP address and/or hostname on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
-				<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the IP address(es) and/or hostname(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the IP address(es) and/or hostname(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
-				<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered IP address(es) and/or hostnames from all current bans.</para></listitem>
-				<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the IP address(es) and/or hostname(s). This is optional, and can help you remember in the future why you banned the IP address(es) and/or hostname(s).</para></listitem>
-				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned IP address(es) and/or hostname(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
-			</itemizedlist>
-			
-			<para>Other than adding IP address(es) and/or hostname(s) to be banned, you can also un-ban or un-exclude IP address(es) and/or hostname(s) from bans. To un-ban or exclude one or more IP address(es) and/or hostname(s) from bans, fill in the <guilabel>Un-ban or un-exclude IPs</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
-			<itemizedlist>
-				<title>Un-ban or un-exclude IPs</title>
-				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This multiple selection menu lists all currently banned IP address(es) and/or hostname(s). Select the IP address(es) and/or hostname(s) that you want to un-ban or exclude by clicking on the IP address(es) and/or hostname(s) in the multiple selection menu. <tip><para>To select more than one IP address and/or hostname, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the IP address(es) and/or hostname(s) you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
-				<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban lengths will be displayed.</para></listitem>
-				<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban reasons will be displayed.</para></listitem>
-				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the shown ban reasons will be displayed.</para></listitem>
-			</itemizedlist>
-		</section>
-		
-		<section id="acp_ban_users">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>MennoniteHobbit</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Ban Users</title>
-			<para>Whenever you encounter troublesome users on your board, you may have to ban them. On the <guimenuitem>Ban usernames</guimenuitem> page, you can do exactly that. On this page, you can manage all banned usernames.</para>
-			
-			<para>To ban or exclude one or more users, fill in the <guilabel>Ban one or more users</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
-			<itemizedlist>
-				<title>Ban one or more usernames</title>
-				<listitem><para><guilabel>Username</guilabel>: This textbox should contain all of the usernames that you want to ban under a single rule. If you want to ban more than one username at this time, put each username on its own line. You can also use wildcards (*) to partially match usernames.</para></listitem>
-				<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the username(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the username(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
-				<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered username(s) from all current bans.</para></listitem>
-				<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the username(s). This is optional, and can help you remember in the future why you banned the user(s).</para></listitem>
-				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the banned user(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
-			</itemizedlist>
-			
-			<para>Other than adding users to be banned, you can also un-ban or un-exclude usernames from bans. To un-ban or exclude one or more users from bans, fill in the <guilabel>Un-ban or un-exclude usernames</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
-			<itemizedlist>
-				<title>Un-ban or un-exclude usernames</title>
-				<listitem><para><guilabel>Username</guilabel>: This multiple selection menu lists all currently banned usernames. Select the username(s) that you want to un-ban or exclude by clicking on the username(s) in the multiple selection menu. <tip><para>To select more than one username, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the usernames you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
-				<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected username. If more than one username is selected, only one of the ban lengths will be displayed.</para></listitem>
-				<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected username. If more than one username is selected, only one of the ban reasons will be displayed.</para></listitem>
-				<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected username. If more than one username is selected, only one of the shown ban reasons will be displayed.</para></listitem>
-			</itemizedlist>
-		</section>
-		
-		<section id="acp_disallow_users">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>MennoniteHobbit</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Disallow usernames</title>
-			
-			<para>In phpBB3, it is also possible to disallow the registration of certain usernames that match any usernames that you configure. (This is useful if you want to prevent users from registering with usernames that might confuse them with an important board member.) To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
-			
-			<para>To add a disallowed username, locate the <guilabel>Add a disallowed username</guilabel> form, and then type in the username in the textbox labeled <guilabel>Username</guilabel>. <tip><para>You can use wildcards (*) to match any character. For example, to disallow any username that matches "JoeBloggs", you could type in "Joe*". This would prevent all users from registering a username that starts with "Joe".</para></tip> Once you are done, click <guilabel>Submit</guilabel>.</para>
-			
-			<para>To remove a disallowed username, locate the <guilabel>Remove a disallowed username</guilabel> form. Select the disallowed username that you would like to remove from the <guilabel>Username</guilabel> selection menu. Click <guilabel>Submit</guilabel> to remove the selected disallowed username.</para>
-		</section>
-		
-		<section id="acp_prune_users">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>MennoniteHobbit</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Prune users</title>
-			
-			<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
-		
-			<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
-			
-			<itemizedlist>
-				<title>Prune users</title>
-				<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
-				<listitem><para><guilabel>Email</guilabel>: The email that you want to be pruned. You can use wildcards (*) to prune users that have an email address that matches the given pattern.</para></listitem>
-				<listitem><para><guilabel>Joined</guilabel>: You can also prune users based on their date of registration. To prune users who joined before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who joined after a certain date, choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
-				<listitem><para><guilabel>Last active</guilabel>: You can also prune users based on the last time they were active. To prune users who were last active before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who were last after a certain date (this is useful to prune users who have disappeared from your board), choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
-				<listitem><para><guilabel>Posts</guilabel>: You can prune users based on their post count as well. The criteria for post count can be above, below, or equal to, a specified number. The value you enter must be a positive integer.</para></listitem>
-				<listitem><para><guilabel>Prune users</guilabel>: The usernames of the users you want to prune. Each username you want to prune should be on its own line. You can use wildcards (*) in username patterns as well.</para></listitem>
-				<listitem><para><guilabel>Delete pruned user posts</guilabel>: When users are removed (actually deleted and not just deactivated), you must choose what to do with their posts. To delete all of the posts that belong to the pruned user(s), select the radio button labeled <guilabel>Yes</guilabel>. Otherwise, select <guilabel>No</guilabel> and the pruned user(s)' posts will remain on the board, untouched.</para></listitem>
-				<listitem><para><guilabel>Deactivate or delete</guilabel>: You must choose whether you want to deactivate the pruned user(s)' accounts, or to completely delete and remove them from the board's database.</para></listitem>
-			</itemizedlist>
-			
-			<warning>
-				<para>Pruning users cannot be undone! Be careful with the criteria you choose when pruning users.</para>
-			</warning>
 		</section>
 	</section>
 	
