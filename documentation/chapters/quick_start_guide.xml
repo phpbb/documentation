@@ -44,7 +44,7 @@
 						<para>Oracle</para>
 					</listitem>
 					<listitem>
-						<para>PostgreSQL 7.x</para>
+						<para>PostgreSQL 7.x or above</para>
 					</listitem>
 					<listitem>
 						<para>SQLite</para>
