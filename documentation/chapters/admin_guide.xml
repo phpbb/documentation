@@ -73,10 +73,10 @@
 				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change the most important setting of your forum installation: the name of your forum. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style and will be the prefix to the window title of your browser.</para>
 				<para>The <guilabel>Site Description</guilabel> is the slogan or tag line of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para>
 				<para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. This will keep any members of your forum that are not Administrators or Moderators from accessing the board. They will either see a default message instead of the forum or you can add your own message in the text field below the check boxes. Administrators and Moderators will still be able to browse forums and use their specific control panels.</para>
-				<para>You need to set the <guilabel>Default Language</guilabel> of your board. This is the language guests will see when they visit the board. You can allow users to choose other languages. By default there is only <guilabel>English [UK]</guilabel> installed but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink>. Find out more about working with languages in the <link linkend="acp_system">Language Pack configuration</link>.</para>
+				<para>You need to set the <guilabel>Default Language</guilabel> of your board. This is the language guests will see when they visit the board. You can allow users to choose other languages. By default there is only <guilabel>English [GB]</guilabel> installed, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink>. Find out more about working with languages in the <link linkend="acp_system">Language Pack configuration</link>.</para>
 				<para>TODO: Write about date format and timezone, may change, so leaving this out for now.</para>
-				<para>The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation two Styles are available (TODO: write more about them?). You can either allow users to select another Style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">Styles section</link> to find out how to add new Styles and where to find them.</para>
-				<para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. Read more about warnings in the Moderator Control Panel. TODO: Add link to this section.</para>
+				<para>The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subSilver. You can either allow users to select another Style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">Styles section</link> to find out how to add new Styles and where to find them.</para>
+				<para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. Read more about warnings in <xref linkend="moderator_mcp" />.</para>
 			</section>
 			<section id="acp_board_features">
 				<sectioninfo>
@@ -553,11 +553,19 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Sub-forums</title>
-			<para>One of the many new features in phpBB 3.0 are <glossterm>sub-forums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
-			<para>If you have a forum about pets for instance, you are able to put sub-forums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its sub-forums will appear as simple links below the forum description (unless you disabled this). (TODO: Screenshot) </para>
-			<para>This system theoretically allows unlimited levels of sub-forums. You can put as many sub-forums inside sub-forums as you like, or at least make sense. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use sub-forums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
-			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create sub-forums.</para>
+			<title>subforums</title>
+			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
+			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
+				</imageobject>
+				<caption>
+					<para>Creating subforums. In this example, the subforums titled "Cats" and "Dogs" belong in the "Pets" parent forum. Pay close attention to the breadcrumbs on the page, located right above the list of the subforums. This tells you exactly where you are in the forums hierarchy.</para>
+				</caption>
+			</mediaobject>
+			<para>This system theoretically allows unlimited levels of subforums. You can put as many subforums inside subforums as you like. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use subforums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
+			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create subforums.</para>
 		</section>
 		<section id="acp_forums_manage">
 			<sectioninfo>
@@ -568,7 +576,15 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Manage forums</title>
-			<para>Here you can add, edit, delete, and reorder the forums, categories, and links. (TODO: Icon legend)</para>
+			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/manage_forums_icon_legend.png"/>
+				</imageobject>
+				<caption>
+					<para>This is the legend for the icons on the manage forums page. Each icon allows you to commit a certain action. Pay close attention to which action you click on when managing your forums.</para>
+				</caption>
+			</mediaobject>
 			<para>The initial <guilabel>Manage forums</guilabel> page shows you a list of your top level forums and categories. Note, that this is not analogue to the forum index, as categories are not expanded here. If you want to reorder the forums inside a category, you have to open the category first.</para>
 		</section>
 	</section>
@@ -605,6 +621,14 @@
 			
 			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
 			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/creating_bbcodes.png"/>
+				</imageobject>
+				<caption>
+					<para>Creating a new BBCode. In this example, we are creating a new [font] BBCode that will allow users to specify the font face of the specified text.</para>
+				</caption>
+			</mediaobject>
 			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
 				<code>[font={FONTNAME}]{TEXT}[/font]</code>
 				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>,while <guilabel>FONTNAME</guilabel> represents whatever font name the user types in.
