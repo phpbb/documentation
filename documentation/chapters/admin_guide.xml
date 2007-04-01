@@ -453,6 +453,54 @@
 					</varlistentry>
 				</variablelist>
 			</section>
+			
+			<section id="acp_server_load">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Load settings</title>
+				<para>On particularly large boards, it may be necessary to manage certain load-related settings in order to allow your board to run as smoothly as possible. However, even if your board isn't excessively active, it is still important to be able to adjust your board's load settings. Adjusting these settings properly can help reduce the amount of processing required by your server. Once you are done editing any of the server load-related settings, remember to click <guilabel>Submit</guilabel> to actually submit and apply your changes.</para>
+				
+				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
+					<itemizedlist>
+						<title>General settings</title>
+						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of "1.0" equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to "0". All positive numbers between 0 and 1.0 (inclusive) are valid values for this option. Set this to "0" if you do not want to enable this option.</para></listitem>
+						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to "0" if you want session lengths to last indefinitely.</para></listitem>
+						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline. All positive integers are valid values. Set this to "0" if you want to allow an unlimited amount of sessions.</para></listitem>
+						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
+					</itemizedlist>
+				</para>
+				
+				<para>The second group of settings, <guilabel>General Options</guilabel>, allows you to control whether certain options are available for your users on your board. The following describes each option further.
+					<itemizedlist>
+						<title>General options</title>
+						<listitem><para><guilabel>Enable dotted topics</guilabel>: Topics in which a poster has already posted in will see dotted topic icons for these topics. To enable this feature, select, <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable server-side topic marking</guilabel>: One of the many new features phpBB3 offers is server-side read tracking. This is different from phpBB2, which offered read tracking based on cookies. To store read/unread status information in the database, as opposed to in a cookie, select <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable topic marking for guests</guilabel>: It is also possible to allow guests to have read/unread status information. If you want your board to store read/unread status information for guests, select <guilabel>Yes</guilabel>. If this option is disabled, posts will be displayed as "read" for guests.</para></listitem>
+						<listitem><para><guilabel>Enable online user listings</guilabel>: The online user listings can be displayed on your board's index, in each forum, and on topic pages. If you want to enable this option and allow the online user listings to be displayed, choose <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable online guest listings in viewonline</guilabel>: If you want to enable the display of guest user information in the <guilabel>Who is Online</guilabel> section, choose <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable display of user online/offline information</guilabel>: This option allows you to control whether or not online/offline status information for users can be displayed in profiles and on the topic view pages. To enable this display option, choose <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable birthday listing</guilabel>: In phpBB3, birthdays is a new feature. To enable the listing of birthdays, choose <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable display of moderators</guilabel>: Though it can be particularly useful to list the moderators who moderate each forum, it is possible to disable this feature, which may help reduce the amount of processing required. To enable the display of moderators, select <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable display of jumpbox</guilabel>: The jumpbox can be a useful tool for navigating throughout your board. However, it is possible to control whether or not this is displayed. To display the jumpboxes, select <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Show user's activity</guilabel>: This option controls whether or not the active topic/forum information displayed in your users' profiles and <glossterm>UCP</glossterm>. If you want to show this user activity information, select <guilabel>Yes</guilabel>. However, if your board has more than one million posts, it is recommended that you disable this feature.</para></listitem>
+						<listitem><para><guilabel>Recompile stale templates</guilabel>: This option controls the recompilation of old templates. If this is enabled, your board will check to see if there are updated templates on your filesystem; if there are, your board will recompile the templates. Select <guilabel>Yes</guilabel> to enable this option.</para></listitem>
+					</itemizedlist>
+				</para>
+				
+				<para>Lastly, the last group of load settings relates to <guilabel>Custom Profile Fields</guilabel>, which are a new feature in phpBB3. The following describes these options in detail.
+					<itemizedlist>
+						<title>Custom Profile Fields</title>
+						<listitem><para><guilabel>Allow styles to display custom profile fields in memberlist</guilabel>: This option allows you to control if your board's style(s) can display the custom profile fields (if your board has any) in the memberlist. To enable this, choose <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Display custom profile fields in user profiles</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in users' profiles, select <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Display custom profile fields in viewtopic</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in the topic view pages, choose <guilabel>Yes</guilabel>.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
 		</section>		
 	</section>
 	
