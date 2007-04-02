@@ -104,7 +104,7 @@
 		<section id="quick_installation_requirements">
 			<title>Requirements</title>
 			<important>
-				<para>Please read the <link linkend="quick_requirements">section on Requirements</link>, to find out more about the phpBB 3.0's minimum requirements.</para>
+				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.0's minimum requirements.</para>
 			</important>
 			<para>The first page you will see after starting the installation is the <guilabel>Requirements</guilabel> list. phpBB 3.0 checks automatically whether everything that it needs to run properly is installed on your server. You need to have at least the minimum <acronym>PHP</acronym> version installed, and at least one database available to continue the installation. Also important, is that all shown folders are available and do have the correct permissions. Please see the description of each section to find out whether they are optional or required for phpBB 3.0 to run. If everything is in order, you can continue the installation with <guilabel>Start Install</guilabel>. </para>
 		</section>

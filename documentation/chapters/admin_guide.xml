@@ -27,7 +27,7 @@
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 		
-		<figure id="admin_control_panel_index">
+		<figure id="img_acp_index">
 			<title>Administration Control Panel Index</title>
 			<mediaobject>
 				<imageobject>
@@ -74,7 +74,7 @@
 				<para>The <guilabel>Site Description</guilabel> is the slogan or tag line of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para>
 				<para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. This will keep any members of your forum that are not Administrators or Moderators from accessing the board. They will either see a default message instead of the forum or you can add your own message in the text field below the check boxes. Administrators and Moderators will still be able to browse forums and use their specific control panels.</para>
 				<para>You need to set the <guilabel>Default Language</guilabel> of your board. This is the language guests will see when they visit the board. You can allow users to choose other languages. By default there is only <guilabel>English [GB]</guilabel> installed, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink>. Find out more about working with languages in the <link linkend="acp_system">Language Pack configuration</link>.</para>
-				<para>TODO: Write about date format and timezone, may change, so leaving this out for now.</para>
+				<!-- TODO: Write about date format and timezone, may change, so leaving this out for now. -->
 				<para>The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subSilver. You can either allow users to select another Style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">Styles section</link> to find out how to add new Styles and where to find them.</para>
 				<para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. Read more about warnings in <xref linkend="moderator_mcp" />.</para>
 			</section>
@@ -87,7 +87,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Board Features</title>
-				<para>Through the <guimenuitem>Board Features</guimenuitem> section you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
+				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
 			</section>
 			<section id="acp_board_attachments">
 				<sectioninfo>
@@ -270,7 +270,7 @@
 				</authorgroup>
 			</sectioninfo>			
 			<title>Server configuration</title>
-			<para>As an administrator of a board, being able to fine-tune the settings that your phpBB board uses for the server is a must. Configuring your board's server settings is very easy. There are five main categories of server settings: <guimenuitem>Cookie settings</guimenuitem>, <guimenuitem>Server settings</guimenuitem>, <guimenuitem>Security settings</guimenuitem>, <guimenuitem>Load settings</guimenuitem>, and <guimenuitem>Search settings</guimenuitem>. Properly configuring these settings will help your board not only function, but also work efficiently and as intended. The following subsections will outline each server configuration category.</para>
+			<para>As an administrator of a board, being able to fine-tune the settings that your phpBB board uses for the server is a must. Configuring your board's server settings is very easy. There are five main categories of server settings: <guimenuitem>Cookie settings</guimenuitem>, <guimenuitem>Server settings</guimenuitem>, <guimenuitem>Security settings</guimenuitem>, <guimenuitem>Load settings</guimenuitem>, and <guimenuitem>Search settings</guimenuitem>. Properly configuring these settings will help your board not only function, but also work efficiently and as intended. The following subsections will outline each server configuration category. Once you are done with updating settings in each setting, remember to click <guilabel>Submit</guilabel> to apply your changes.</para>
 		
 			<section id="acp_server_cookies">
 				<sectioninfo>
@@ -470,7 +470,7 @@
 						<title>General settings</title>
 						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers between 0 and 1.0 (inclusive) are valid values for this option. Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
 						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
-						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
+						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline and be temporarily disabled. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline and be temporarily disabled. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
 						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
 					</itemizedlist>
 				</para>
@@ -498,6 +498,57 @@
 						<listitem><para><guilabel>Allow styles to display custom profile fields in memberlist</guilabel>: This option allows you to control if your board's style(s) can display the custom profile fields (if your board has any) in the memberlist. To enable this, choose <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Display custom profile fields in user profiles</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in users' profiles, select <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Display custom profile fields in viewtopic</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in the topic view pages, choose <guilabel>Yes</guilabel>.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
+			
+			<section id="acp_server_search">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Search settings</title>
+				
+				<para>Your board can be a well of information. Being able to effectively search through this information is very important, especially if you want to reduce the amount of redundant topics are posted on your board. Here, on the <guimenuitem>Search settings</guimenuitem> page, you can control what search backend your board's search functionality will use for indexing posts and searching, and set various options related to it. There are four main categories of search settings: <guilabel>General Search Settings</guilabel>, <guilabel>Search Backend</guilabel>, <guilabel>Fulltext mysql</guilabel>, and <guilabel>Fulltext native</guilabel>. The following describes each set of search settings in detail.</para>
+			
+				<para>The first group of search settings are general and user-facing, meaning that they concern the users who use the search functionality directly.
+					<itemizedlist>
+						<title>General Search Settings</title>
+						<listitem><para><guilabel>Enable search facilities</guilabel>: Setting this option to <guilabel>Yes</guilabel> will enable the search functionality for your users; member-searching functionality will also be enabled.</para></listitem>
+						<listitem><para><guilabel>User search flood interval</guilabel>:  This value indicates the number of seconds that your users have to wait between consecutive searches. This value is checked independently for each user. All positive integers are valid values. If you want to disable checking for search intervals for users, set this value to &quot;0&quot;.</para></listitem>
+						<listitem><para><guilabel>Guest search flood interval</guilabel>: This is the number of seconds between searches that guest users must wait. This value is checked independently for each guest. All positive integers are valid values. If you want to disable checking for search intervals for guests, set this value to &quot;0&quot;.</para></listitem>
+						<listitem><para><guilabel>Search page system load limit</guilabel>: You can also limit the amount of load your system will undergo for searches. If the system load exceeds this value, your board will go offline and be temporarily disabled. All numbers between 0 and 1.0 (inclusive) are valid values. A value of &quot;1.0&quot;, for example, represents about 100% utilisation of a single processor; if the system load exceeds this value, the board will go offline. Note that this feature only works for *nix-based servers.</para></listitem>
+						<listitem><para><guilabel>Min author name characters</guilabel>: Users have to enter at least this many characters of the name when performing a wildcard author search. If the author's username is shorter than this number, your users can still search for the author's posts by entering the complete username. All positive integers are valid values.</para></listitem>
+						<listitem><para><guilabel>Search result cache length</guilabel>: phpBB3 can also cache search results. These cached search results will expire after this number of seconds. All positive integers are valid values. Set this value to &quot;0&quot; if you want to disable search caching.</para></listitem>
+					</itemizedlist>
+				</para>
+				
+				<para>The next group of search settings actually only contains one setting: choosing what backend your board's search facilities, if enabled, will use. The following details this option.
+					<itemizedlist>
+						<title>Search Backend</title>
+						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext sesarch. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
+					</itemizedlist>
+					<note>
+						<para>If you choose to change your board's current search backend, you will have to create an index of your board's content for the new search backend. If you know for sure that you're not going to use the index that was used with your old, previously chosen search backend, you can also delete it in order to free up some of your system's resources. To learn more about maintaining your board's search indices, see <xref linkend="acp_maintenance_search" />.</para>
+					</note>
+				</para>
+				
+				<para>These next two groups of search settings concern each specific search backend individually. The <guilabel>Fulltext mysql</guilabel> group is only an information box, and displays information regarding your board and the mySQL fulltext option. The settings that are in the <guilabel>Fulltext Native</guilabel> group concern all of the settings related to phpBB3's built-in, native search backend.
+					<itemizedlist>
+						<title>Fulltext mysql</title>
+						<listitem><para><guilabel>Support for non-latin UTF-8 characters using PCRE</guilabel>: This tells you if your system supports searching for non-Latin <acronym>UTF</acronym>-8 characters. This is only available in <glossterm>PHP</glossterm> versions 4.4 and above, and 5.1 and above. This is only relevant if you actually want your users to have the ability to search for non-Latin characters.</para></listitem>
+						<listitem><para><guilabel>Support for non-latin UTF-8 characters using mbstring</guilabel>: If your system doesn't support UTF-8 characters using <acronym>PCRE</acronym> (as indicated in the setting above), the mySQL fulltext search backend will try to use mbstring's regular expression engine. Again, this is only relevant if you actually want your users to have the ability to seasrch for non-Latin characters.</para></listitem>
+					</itemizedlist>
+					
+					<itemizedlist>
+						<title>Fulltext native</title>
+						<listitem><para><guilabel>Enable fulltext updating</guilabel>: This option allows you to control whether or not your board's search index will update when posts are made. If you would like to enable this, choose <guilabel>Yes</guilabel>. Note that this is only relevant if your board's search functionality is disabled entirely.</para></listitem>
+						<listitem><para><guilabel>Min characters indexed by search</guilabel>: You can also control the minimum number of characters words must contain in order to be included in your board's search index. It is recommended that you not set this too low in order to have a quality search index. All positive integers are valid values.</para></listitem>
+						<listitem><para><guilabel>Max characters indexed by search</guilabel>: Just like the above setting, you can also control the maximum number of characters words must contain in order to be included in your board's search index. If a word has more than this number of characters in it, it will not be included in the search index. All positive integers are valid values.</para></listitem>
+						<listitem><para><guilabel>Common word threshold</guilabel>: Like phpBB2's stopwords feature, you can prevent the use of common words that you specify. However, this feature is expanded upon in phpBB3. You can now control the threshold that a word can have; this means that if a word is contained in more than a certain percentage of posts on your board, it will be deemed as a common word, and will be ignored in search queries. All positive integers are valid values, and represent the percentage of posts on your board words can be contained in. If you would like to disable this threshold and thereby allow searches using all words, even if they can be common, set this value to &quot;0&quot;. This setting only applies if your board has more than 100 posts.</para></listitem>
 					</itemizedlist>
 				</para>
 			</section>
@@ -557,7 +608,7 @@
 			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 				
-			<figure id="acp_subforums_list">
+			<figure id="img_acp_subforums_list">
 				<title>Creating subforums</title>
 				<mediaobject>
 					<imageobject>
@@ -583,7 +634,7 @@
 			<title>Manage forums</title>
 			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
 			
-			<figure id="acp_forums_manage_legend">
+			<figure id="img_acp_forums_manage_legend">
 				<title>Managing Forums Icon Legend</title>
 				<mediaobject>
 					<imageobject>
@@ -632,7 +683,7 @@
 			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
 			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
 			
-			<figure id="acp_creating_bbcodes">
+			<figure id="img_acp_creating_bbcodes">
 				<title>Creating BBCodes</title>
 				<mediaobject>
 					<imageobject>
