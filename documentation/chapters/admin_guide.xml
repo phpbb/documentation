@@ -23,7 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>The Administration Control Panel</title>
-		<para>Even more so than its predecessor, phpBB 3.0 "Olympus" is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
+		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 		
@@ -129,7 +129,7 @@
 				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
 				<para>Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
 				<para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
-				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the "Full Folder Default Action" list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
+				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the &quot;Full Folder Default Action&quot; list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
 				<para>When sending a private message, it is still possible to edit the message until the recipient reads it. After a sent private message has been read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0, which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
 				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. 
 					<itemizedlist>
@@ -210,17 +210,17 @@
 					<title>General Settings</title>
 					<listitem><para><guilabel>Enable board-wide emails</guilabel>: If this is set to disabled, no emails will be sent by the board at all.</para></listitem>
 					<listitem><para><guilabel>Users send email via board:</guilabel>: If this is set to enabled, a form allowing users to send emails to each other via the board will be displayed, rather than an email address.</para></listitem>
-					<listitem><para><guilabel>Email function name</guilabel>: If you are using the native, PHP-based email service, this should be the name of the email function. This is most likely going to be "mail".</para></listitem>
+					<listitem><para><guilabel>Email function name</guilabel>: If you are using the native, PHP-based email service, this should be the name of the email function. This is most likely going to be &quot;mail&quot;.</para></listitem>
 					<listitem><para><guilabel>Email package size</guilabel>: This is the number of emails that can be sent in one package. This is useful for when you want to send mass emails, and you have a large amount of users.</para></listitem>
-					<listitem><para><guilabel>Contact email address</guilabel>: This is the address that your board's email feedback will be sent to. This is also the address that will populate the "From" and "Reply-to" addresses in all emails sent by your board.</para></listitem>
-					<listitem><para><guilabel>Return email address</guilabel>: This is the return address that will be put on all emails as the technical contact email address. It will always populate the "Return-Path" and "Sender" addresses in all emails sent by your board.</para></listitem>
+					<listitem><para><guilabel>Contact email address</guilabel>: This is the address that your board's email feedback will be sent to. This is also the address that will populate the &quot;From&quot; and &quot;Reply-to&quot; addresses in all emails sent by your board.</para></listitem>
+					<listitem><para><guilabel>Return email address</guilabel>: This is the return address that will be put on all emails as the technical contact email address. It will always populate the &quot;Return-Path&quot; and &quot;Sender&quot; addresses in all emails sent by your board.</para></listitem>
 					<listitem><para><guilabel>Email signature</guilabel>: This text will be attached at the end of all emails sent by your board.</para></listitem>
-					<listitem><para><guilabel>Hide email addresses</guilabel>: If you want to keep email addresses completely private, set this value to "Yes".</para></listitem>
+					<listitem><para><guilabel>Hide email addresses</guilabel>: If you want to keep email addresses completely private, set this value to <guilabel>Yes</guilabel>.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
 					<title>SMTP Settings</title>
-					<listitem><para><guilabel>Use SMTP server for email</guilabel>: Select "Yes" if you want your board to send emails via an SMTP server. If you are not sure that you have an SMTP server available for use, set this to "No"; this will make your board use the native, PHP-based email service, which in most cases is the safest available option.</para></listitem>
+					<listitem><para><guilabel>Use SMTP server for email</guilabel>: Select <guilabel>Yes</guilabel> if you want your board to send emails via an SMTP server. If you are not sure that you have an SMTP server available for use, set this to <guilabel>No</guilabel>; this will make your board use the native, PHP-based email service, which in most cases is the safest available option.</para></listitem>
 					<listitem><para><guilabel>SMTP server address</guilabel>: The address of the SMTP server.</para></listitem>
 					<listitem><para><guilabel>SMTP server port</guilabel>: The port that the SMTP server is located on. In most cases, SMTP servers are located on port 25; do not change this value if you are unsure about this.</para></listitem>
 					<listitem><para><guilabel>Authentication method for SMTP</guilabel>: This is the authentication method that your board will use when connecting to the specified SMTP server. This only applies if an SMTP username and password are set, and required by the server. The available methods are PLAIN, LOGIN, CRAM-MD5, DIGEST-MD5, and POP-BEFORE-SMTP. If you are unsure about which authentication method you must use, ask your hoster for more information.</para></listitem>
@@ -247,13 +247,13 @@
 				
 				<itemizedlist>
 					<title>Jabber settings</title>
-					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to "Enabled" if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
+					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
 					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
 					<listitem><para><guilabel>Jabber username</guilabel>: The Jabber username that your board will use when connecting to the specified Jabber server. If the username you specify is unregistered on the server, phpBB3 will attempt to register the username for you.</para></listitem>
 					<listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para></listitem>
-					<listitem><para><guilabel>Jabber resource</guilabel>: This is the location of the particular connection that you can specify. For example, "board" or "home".</para></listitem>
-					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to "0", messages will be sent immediately and is will not be queued for later sending.</para></listitem>
+					<listitem><para><guilabel>Jabber resource</guilabel>: This is the location of the particular connection that you can specify. For example, &quot;board&quot; or &quot;home&quot;.</para></listitem>
+					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to &quot;0&quot;, messages will be sent immediately and is will not be queued for later sending.</para></listitem>
 				</itemizedlist>
 			</section>
 		</section>
@@ -297,7 +297,7 @@
 						<title>Cookie Settings</title>
 						<listitem><para><guilabel>Cookie domain</guilabel>: This is the domain that your board runs on. Do not include the path that phpBB is installed in; only the domain itself is important here.</para></listitem>
 						<listitem><para><guilabel>Cookie name</guilabel>: This is the name that will be assigned to the cookie when it is sent to your users' browsers and stored. This should be a unique cookie name that will not conflict with any other cookies.</para></listitem>
-						<listitem><para><guilabel>Cookie path</guilabel>: This is the path that the cookie will apply to. In most cases, this should be left as "/", so that the cookie can be accessible across your site. If for some reason you must restrict the cookie to the path that your board is installed in, set the value to the path of your board.</para></listitem>
+						<listitem><para><guilabel>Cookie path</guilabel>: This is the path that the cookie will apply to. In most cases, this should be left as &quot;/&quot;, so that the cookie can be accessible across your site. If for some reason you must restrict the cookie to the path that your board is installed in, set the value to the path of your board.</para></listitem>
 						<listitem><para><guilabel>Cookie secure</guilabel>: If your board is accessible via <acronym>SSL</acronym>, set this to <guilabel>Enabled</guilabel>. If the board is not accessible via SSL, then leave this value set to <guilabel>Disabled</guilabel>, otherwise server errors will result during redirections.</para></listitem>
 					</itemizedlist>
 				</para>
@@ -340,9 +340,9 @@
 						<title>Server URL Settings</title>
 						<listitem><para><guilabel>Force server URL settings</guilabel>: If for some reason the default settings for the server URL are incorrect, then you can force your phpBB board to use the server URL settings you specify below by selecting the <guilabel>Yes</guilabel> radio button.</para></listitem>
 						<listitem><para><guilabel>Server protocol</guilabel>: This is the server protocol (http:// or https://, for example) that your board uses, if the default settings are forced. If this value is empty or the above <guilabel>Force server URL settings</guilabel> setting is disabled, then the protocol will be determined by the cookie secure settings.</para></listitem>
-						<listitem><para><guilabel>Domain name</guilabel>: This is the name of the domain that your board runs on. Include "www" if applicable. Again, this value is only used if the server URL settings are forced.</para></listitem>
-						<listitem><para><guilabel>Server port</guilabel>: This is the port that the server is running on. In most cases, a value of "80" is the port to set. You should only change this value if, for some reason, your server runs on a different port. Again, this value is only used if the server URL settings are forced.</para></listitem>
-						<listitem><para><guilabel>Script path</guilabel>: This is the directory where phpBB is installed, relative to the domain name. For example, if your board was located at www.example.com/phpBB3/, the value to set for your script path is "/phpBB3". Again, this value is only used if the server URL settings are forced.</para></listitem>
+						<listitem><para><guilabel>Domain name</guilabel>: This is the name of the domain that your board runs on. Include &quot;www&quot; if applicable. Again, this value is only used if the server URL settings are forced.</para></listitem>
+						<listitem><para><guilabel>Server port</guilabel>: This is the port that the server is running on. In most cases, a value of &quot;80&quot; is the port to set. You should only change this value if, for some reason, your server runs on a different port. Again, this value is only used if the server URL settings are forced.</para></listitem>
+						<listitem><para><guilabel>Script path</guilabel>: This is the directory where phpBB is installed, relative to the domain name. For example, if your board was located at www.example.com/phpBB3/, the value to set for your script path is &quot;/phpBB3&quot;. Again, this value is only used if the server URL settings are forced.</para></listitem>
 					</itemizedlist>
 				</para>
 				
@@ -375,7 +375,7 @@
 						<term>Persistent login key expiration length (in days)</term>
 						<listitem>
 							<para>This is the set number of days that login keys will last before they expire and are removed from the database.</para>
-							<para>You may enter an integer in the text box located to the left of the word <guilabel>Days</guilabel>. This integer is the number of days for the persistent login key expiration. If you would like to disable this setting (and thereby allow use of login keys indefinitely), enter a "0" into the text box.</para>
+							<para>You may enter an integer in the text box located to the left of the word <guilabel>Days</guilabel>. This integer is the number of days for the persistent login key expiration. If you would like to disable this setting (and thereby allow use of login keys indefinitely), enter a &quot;0&quot; into the text box.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -433,7 +433,7 @@
 						<term>Force password change</term>
 						<listitem>
 							<para>It is always ideal to change passwords once in a while. With this setting, you can force your users to change their passwords after a set number of days that their passwords have been used.</para>
-							<para>Only integers can be entered in the text box, which is located next to the <guilabel>Days</guilabel> label. This integer is the number of days that, after which, your users will have to change their passwords. If you would like to disable this feature, enter a value of "0".</para>
+							<para>Only integers can be entered in the text box, which is located next to the <guilabel>Days</guilabel> label. This integer is the number of days that, after which, your users will have to change their passwords. If you would like to disable this feature, enter a value of &quot;0&quot;.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -468,9 +468,9 @@
 				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
 					<itemizedlist>
 						<title>General settings</title>
-						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of "1.0" equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to "0". All positive numbers between 0 and 1.0 (inclusive) are valid values for this option. Set this to "0" if you do not want to enable this option.</para></listitem>
-						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to "0" if you want session lengths to last indefinitely.</para></listitem>
-						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline. All positive integers are valid values. Set this to "0" if you want to allow an unlimited amount of sessions.</para></listitem>
+						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers between 0 and 1.0 (inclusive) are valid values for this option. Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
+						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
+						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
 						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
 					</itemizedlist>
 				</para>
@@ -479,8 +479,8 @@
 					<itemizedlist>
 						<title>General options</title>
 						<listitem><para><guilabel>Enable dotted topics</guilabel>: Topics in which a poster has already posted in will see dotted topic icons for these topics. To enable this feature, select, <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable server-side topic marking</guilabel>: One of the many new features phpBB3 offers is server-side read tracking. This is different from phpBB2, which offered read tracking based on cookies. To store read/unread status information in the database, as opposed to in a cookie, select <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable topic marking for guests</guilabel>: It is also possible to allow guests to have read/unread status information. If you want your board to store read/unread status information for guests, select <guilabel>Yes</guilabel>. If this option is disabled, posts will be displayed as "read" for guests.</para></listitem>
+						<listitem><para><guilabel>Enable server-side topic marking</guilabel>: One of the many new features phpBB3 offers is server-side read tracking. This is different from phpBB2, which only offered read tracking based on cookies. To store read/unread status information in the database, as opposed to in a cookie, select <guilabel>Yes</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Enable topic marking for guests</guilabel>: It is also possible to allow guests to have read/unread status information. If you want your board to store read/unread status information for guests, select <guilabel>Yes</guilabel>. If this option is disabled, posts will be displayed as &quot;read&quot; for guests.</para></listitem>
 						<listitem><para><guilabel>Enable online user listings</guilabel>: The online user listings can be displayed on your board's index, in each forum, and on topic pages. If you want to enable this option and allow the online user listings to be displayed, choose <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Enable online guest listings in viewonline</guilabel>: If you want to enable the display of guest user information in the <guilabel>Who is Online</guilabel> section, choose <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Enable display of user online/offline information</guilabel>: This option allows you to control whether or not online/offline status information for users can be displayed in profiles and on the topic view pages. To enable this display option, choose <guilabel>Yes</guilabel>.</para></listitem>
@@ -553,17 +553,22 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>subforums</title>
+			<title>Subforums</title>
 			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
-				</imageobject>
-				<caption>
-					<para>Creating subforums. In this example, the subforums titled "Cats" and "Dogs" belong in the "Pets" parent forum. Pay close attention to the breadcrumbs on the page, located right above the list of the subforums. This tells you exactly where you are in the forums hierarchy.</para>
-				</caption>
-			</mediaobject>
+				
+			<figure id="acp_subforums_list">
+				<title>Creating subforums</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
+					</imageobject>
+					<caption>
+						<para>Creating subforums. In this example, the subforums titled &quot;Cats&quot; and &quot;Dogs&quot; belong in the &quot;Pets&quot; parent forum. Pay close attention to the breadcrumbs on the page, located right above the list of the subforums. This tells you exactly where you are in the forums hierarchy.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			
 			<para>This system theoretically allows unlimited levels of subforums. You can put as many subforums inside subforums as you like. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use subforums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
 			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create subforums.</para>
 		</section>
@@ -577,14 +582,19 @@
 			</sectioninfo>
 			<title>Manage forums</title>
 			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata format="PNG" fileref="../images/admin_guide/manage_forums_icon_legend.png"/>
-				</imageobject>
-				<caption>
-					<para>This is the legend for the icons on the manage forums page. Each icon allows you to commit a certain action. Pay close attention to which action you click on when managing your forums.</para>
-				</caption>
-			</mediaobject>
+			
+			<figure id="acp_forums_manage_legend">
+				<title>Managing Forums Icon Legend</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/manage_forums_icon_legend.png"/>
+					</imageobject>
+					<caption>
+						<para>This is the legend for the icons on the manage forums page. Each icon allows you to commit a certain action. Pay close attention to which action you click on when managing your forums.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			
 			<para>The initial <guilabel>Manage forums</guilabel> page shows you a list of your top level forums and categories. Note, that this is not analogue to the forum index, as categories are not expanded here. If you want to reorder the forums inside a category, you have to open the category first.</para>
 		</section>
 	</section>
@@ -621,14 +631,19 @@
 			
 			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
 			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
-			<mediaobject>
-				<imageobject>
-					<imagedata format="PNG" fileref="../images/admin_guide/creating_bbcodes.png"/>
-				</imageobject>
-				<caption>
-					<para>Creating a new BBCode. In this example, we are creating a new [font] BBCode that will allow users to specify the font face of the specified text.</para>
-				</caption>
-			</mediaobject>
+			
+			<figure id="acp_creating_bbcodes">
+				<title>Creating BBCodes</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/creating_bbcodes.png"/>
+					</imageobject>
+					<caption>
+						<para>Creating a new BBCode. In this example, we are creating a new [font] BBCode that will allow users to specify the font face of the specified text.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			
 			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
 				<code>[font={FONTNAME}]{TEXT}[/font]</code>
 				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>,while <guilabel>FONTNAME</guilabel> represents whatever font name the user types in.
@@ -778,8 +793,8 @@
 			
 			<itemizedlist>
 				<title>Attachment Settings</title>
-				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select "Yes".</para></listitem>
-				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select "Yes".</para></listitem>
+				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select <guilabel>Yes</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Upload directory</guilabel>: The directory that attachments will be uploaded to. The default directory is <filename>/files/</filename>.</para></listitem>
 				<listitem><para><guilabel>Attachment display order</guilabel>: The order that attachments will be displayed, based on the time the attachment was posted.</para></listitem>
 				<listitem><para><guilabel>Total attachment quota</guilabel>: The maximum drive space that will be available for all of your board's attachments. If you want this quota to be unlimited, use a value of 0.</para></listitem>
@@ -794,7 +809,7 @@
 			
 			<itemizedlist>
 				<title>Image Category Settings</title>
-				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to "No", a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
+				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to <guilabel>No</guilabel>, a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
 				<listitem><para><guilabel>Create thumbnail</guilabel>: This setting configures your board to either create a thumbnail for every image attached, or not.</para></listitem>
 				<listitem><para><guilabel>Maximum thumbnail width in pixels</guilabel>: This is the maximum width in pixels for the created thumbnails.</para></listitem>
 				<listitem><para><guilabel>Maximum thumbnail filesize</guilabel>: Thumbnails will not be created for images if the created thumbnail filesize exceeds this value, in bytes. This is useful for particularly large images that are posted.</para></listitem>

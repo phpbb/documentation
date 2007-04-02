@@ -97,6 +97,18 @@
 		<title>Moderation tools</title>
 		<para>Beneath topics, the moderator has various options in a dropdown box which modify the topic in different ways. These include the ability to lock, unlock, delete, move, split, merge and copy the topic. As well as these, they are also able to change the topic type (Sticky/Announcement/Global), and also view the topics logs. The following subsections detail each action on a topic that a moderator can perform.</para>
 		
+		<figure id="quick_mod_tools">
+			<title>Quick Mod Tools</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/moderator_guide/quick_mod_tools.png"/>
+				</imageobject>
+				<caption>
+					<para>The quick moderator tools. As you can see, these tools are located at the end of each topic at the bottom of the page, before the last post on that page. Clicking on the selection menu will show you all of the actions you may perform.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		
 		<section id="modtools_lock">
 			<title>Locking a topic or post</title>
 			<para>This outlines how a moderator may lock whole topics or individual posts. There are various ways a moderator may do this, either by using the <link linkend="moderator_mcp">Moderator Control Panel</link> when viewing a forum, navigating to the selection menu beneath the topic in question, or editing any post within a topic and checking the relevant checkbox.</para>

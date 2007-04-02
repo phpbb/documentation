@@ -41,14 +41,14 @@
 			<varlistentry>
 				<term>ACP</term>
 				<listitem>
-					<para>The <link linkend="admin_control_panel"><acronym>ACP</acronym></link>, which stands for "Administration Control Panel",  is the main place from which you, the administrator, can control every aspect of your forum.</para>
+					<para>The <link linkend="admin_control_panel"><acronym>ACP</acronym></link>, which stands for &quot;Administration Control Panel&quot;,  is the main place from which you, the administrator, can control every aspect of your forum.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>ASCII</term>
 				<listitem>
-					<para><acronym>ASCII</acronym>, or "American Standard Code for Information Interchange", is a common way of encoding data to transfer it to a different computer. <acronym>FTP</acronym> clients have ASCII as a mode to transfer files. All phpBB files (files with the file extensions .php, .inc, .sql, .cfg, .htm, and .tpl), except for the image files, should be uploaded in ASCII mode.</para>
+					<para><acronym>ASCII</acronym>, or &quot;American Standard Code for Information Interchange&quot;, is a common way of encoding data to transfer it to a different computer. <acronym>FTP</acronym> clients have ASCII as a mode to transfer files. All phpBB files (files with the file extensions .php, .inc, .sql, .cfg, .htm, and .tpl), except for the image files, should be uploaded in ASCII mode.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -76,7 +76,7 @@
 			<varlistentry>
 				<term>Binary</term>
 				<listitem>
-					<para>Within phpBB, "binary" usually refers to another common way of encoding data for transfer (the other being <acronym>ASCII</acronym>. This is often found as a mode in an <acronym>FTP</acronym> clients to upload files. All of phpBB's images (found in the images/ and templates/subSilver/images/ directories) should be uploaded in binary mode. </para>
+					<para>Within phpBB, &quot;binary&quot; usually refers to another common way of encoding data for transfer (the other being <acronym>ASCII</acronym>. This is often found as a mode in an <acronym>FTP</acronym> clients to upload files. All of phpBB's images (found in the images/ and templates/subSilver/images/ directories) should be uploaded in binary mode. </para>
 				</listitem>
 			</varlistentry>
 			
@@ -125,21 +125,21 @@
 			<varlistentry>
 				<term>DBAL</term>
 				<listitem>
-					<para><acronym>DBAL</acronym>, or "Database Abstraction Layer", is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
+					<para><acronym>DBAL</acronym>, or &quot;Database Abstraction Layer&quot;, is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>DBMS</term>
 				<listitem>
-					<para>A <acronym>DBMS</acronym>, or "Database Management System", is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
+					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>FTP</term>
 				<listitem>
-					<para><acronym>FTP</acronym> stands for "File Transfer Protocol". It is a protocol which allows files to be transferred between computers. <acronym>FTP</acronym> clients are programs that are used to transfer files via <acronym>FTP</acronym>.</para>
+					<para><acronym>FTP</acronym> stands for &quot;File Transfer Protocol&quot;. It is a protocol which allows files to be transferred between computers. <acronym>FTP</acronym> clients are programs that are used to transfer files via <acronym>FTP</acronym>.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -181,7 +181,7 @@
 			<varlistentry>
 				<term>MD5</term>
 				<listitem>
-					<para><acronym>MD5</acronym> (Message Digest algorithm 5) is a commonly-used hash function used by phpBB. MD5 is an algorithm which takes an input of any length and outputs a message digest of a fixed length (128-bit, 32 characters). MD5 is used in phpBB to turn the users' passwords into a one-way hash, meaning that you cannot "decrypt" (reverse) an MD5 hash and get users' passwords. User passwords are stored as MD5 hashes in the database.</para>
+					<para><acronym>MD5</acronym> (Message Digest algorithm 5) is a commonly-used hash function used by phpBB. MD5 is an algorithm which takes an input of any length and outputs a message digest of a fixed length (128-bit, 32 characters). MD5 is used in phpBB to turn the users' passwords into a one-way hash, meaning that you cannot &quot;decrypt&quot; (reverse) an MD5 hash and get users' passwords. User passwords are stored as MD5 hashes in the database.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -195,7 +195,7 @@
 			<varlistentry>
 				<term>PHP</term>
 				<listitem>
-					<para><acronym>PHP</acronym>, or "PHP: Hypertext Preprocessor", is a commonly-used open-source scripting language. phpBB is written in <acronym>PHP</acronym> and requires the <acronym>PHP</acronym> runtime engine to be installed and properly configured on the server phpBB is run on. For more information about <acronym>PHP</acronym>, please see the <ulink url="http://www.php.net">PHP</ulink> home page.</para>
+					<para><acronym>PHP</acronym>, or &quot;PHP: Hypertext Preprocessor&quot;, is a commonly-used open-source scripting language. phpBB is written in <acronym>PHP</acronym> and requires the <acronym>PHP</acronym> runtime engine to be installed and properly configured on the server phpBB is run on. For more information about <acronym>PHP</acronym>, please see the <ulink url="http://www.php.net">PHP</ulink> home page.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -219,7 +219,7 @@
 					<para>A rank is a sort of title that is assigned to a user. Ranks can be added, edited, and deleted by administrators.</para>
 					
 					<note>
-						<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a "Support Moderator" rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
+						<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
 					</note>
 				</listitem>
 			</varlistentry>
@@ -241,7 +241,7 @@
 			<varlistentry>
 				<term>SMTP</term>
 				<listitem>
-					<para><acronym>SMTP</acronym> stands for "Simple Mail Transfer Protocol". It is a protocol for sending email. By default, phpBB uses <acronym>PHP</acronym>'s built-in <ulink url="http://www.php.net/manual/en/function.mail.php">mail()</ulink> function to send email. However, phpBB will use <acronym>SMTP</acronym> to send emails if the required <acronym>SMTP</acronym> data is correctly set up.</para>
+					<para><acronym>SMTP</acronym> stands for &quot;Simple Mail Transfer Protocol&quot;. It is a protocol for sending email. By default, phpBB uses <acronym>PHP</acronym>'s built-in <ulink url="http://www.php.net/manual/en/function.mail.php">mail()</ulink> function to send email. However, phpBB will use <acronym>SMTP</acronym> to send emails if the required <acronym>SMTP</acronym> data is correctly set up.</para>
 				</listitem>
 			</varlistentry>
 			
