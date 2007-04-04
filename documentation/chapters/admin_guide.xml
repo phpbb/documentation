@@ -38,8 +38,8 @@
 				</caption>
 			</mediaobject>
 		</figure>
-			
 	</section>
+	
 	<section id="acp_general">
 		<sectioninfo>
 			<authorgroup>
@@ -67,17 +67,32 @@
 						<author>
 							<othername>dhn</othername>
 						</author>
+						
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
 					</authorgroup>
 				</sectioninfo>
 				<title>Board Settings</title>
-				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change the most important setting of your forum installation: the name of your forum. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style and will be the prefix to the window title of your browser.</para>
-				<para>The <guilabel>Site Description</guilabel> is the slogan or tag line of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para>
-				<para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. This will keep any members of your forum that are not Administrators or Moderators from accessing the board. They will either see a default message instead of the forum or you can add your own message in the text field below the check boxes. Administrators and Moderators will still be able to browse forums and use their specific control panels.</para>
-				<para>You need to set the <guilabel>Default Language</guilabel> of your board. This is the language guests will see when they visit the board. You can allow users to choose other languages. By default there is only <guilabel>English [GB]</guilabel> installed, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink>. Find out more about working with languages in the <link linkend="acp_system">Language Pack configuration</link>.</para>
-				<!-- TODO: Write about date format and timezone, may change, so leaving this out for now. -->
-				<para>The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subSilver. You can either allow users to select another Style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">Styles section</link> to find out how to add new Styles and where to find them.</para>
-				<para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. Read more about warnings in <xref linkend="moderator_mcp" />.</para>
+				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change many settings that govern your board. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
+				
+				<itemizedlist>
+					<title>Board Settings</title>
+					<listitem><para>The very first board setting you can edit is perhaps the most important setting of them all: the name of your board. Your users identify your board with this name. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style; it will be the prefix to the window title of your browser.</para></listitem>
+					<listitem><para>The <guilabel>Site Description</guilabel> is the slogan or tagline of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para></listitem>
+					<listitem><para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. To temporarily disable your board, select<guilabel>Yes</guilabel>. This will keep any members of your forum who are not administrators or moderators from accessing your board. They will either see a default message instead of the forum, or a message that you create. You can add your own custom message that will be displayed when your board is disabled in the text box below the <guilabel>Disable board</guilabel> radio buttons. Administrators and moderators will still be able to browse forums and use their specific control panels when the board is disabled.</para></listitem>
+					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_system">section on Language Pack configuration</link>.</para></listitem>
+					<listitem><para>You can also configure your board's default date format. phpBB3 has a few basic date formats that you can set your board to use; if these are not sufficient and you would like to customise your board's date format, choose <guimenuitem>Custom</guimenuitem> from the <guilabel>Date format</guilabel> selection menu. Then, in the text box besides it, type in the format you would like to use. This is the same as the <ulink url="http://www.php.net/date">PHP date() function</ulink>.</para></listitem>
+					<listitem><para>Along with setting your board's default date format, you can also set your board's preferred timezone. The timezones available in the <guilabel>System timezone</guilabel> selection menu are all based on relative <acronym>UTC</acronym> (for most intents and purposes, it is <acronym>GMT</acronym>, or Greenwich Mean Time) times. You may also choose whether or not your board utilises Daylight Savings Time by selecting the appropriate radio button next to the <guilabel>Enable Daylight Savings time</guilabel> option.</para></listitem>
+					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
+				</itemizedlist>
+				
+				<itemizedlist>
+					<title>Warnings</title>
+					<listitem><para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. All positive integers are valid values. For more about warnings, please read <xref linkend="moderator_mcp" />.</para></listitem>
+				</itemizedlist>
 			</section>
+			
 			<section id="acp_board_features">
 				<sectioninfo>
 					<authorgroup>
@@ -89,6 +104,7 @@
 				<title>Board Features</title>
 				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
 			</section>
+			
 			<section id="acp_board_attachments">
 				<sectioninfo>
 					<authorgroup>
@@ -101,6 +117,7 @@
 				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
 				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
+			
 			<section id="acp_board_avatars">
 				<sectioninfo>
 					<authorgroup>
@@ -114,8 +131,9 @@
 				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
 				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised. There is also no support for sub folders inside the gallery folder. </para>
 				<para>The second approach to avatars is through <guilabel>Remote Avatars</guilabel>. This are simply images linked from another website. Your members can add a link to the image they want to use in their profile. To give you some control over the size of the avatars you can define the minimum and maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not able to control the file size.</para>
-				<para>The third approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image form their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is server writable (TODO: a link to a FAQ that explains this). The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
+				<para>The third approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image form their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is <glossterm>server-writable</glossterm>. The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
 			</section>
+			
 			<section id="acp_board_pms">
 				<sectioninfo>
 					<authorgroup>
@@ -152,6 +170,7 @@
 				</para>
 			</section>
 		</section>
+		
 		<section id="acp_general_client">
 			<sectioninfo>
 				<authorgroup>
@@ -164,7 +183,7 @@
 				</authorgroup>
 			</sectioninfo>			
 			<title>Client communication</title>
-			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following are subsections describing each client communication method.</para>
+			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, native DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following are subsections describing each client communication method.</para>
 		
 			<section id="acp_client_auth">
 				<sectioninfo>
@@ -605,7 +624,8 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Subforums</title>
-			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums. (TODO: Diagram of a 2.0 / 3.0 comparison)</para>
+			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums.</para>
+			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 				
 			<figure id="img_acp_subforums_list">
@@ -1286,6 +1306,35 @@
 			<para>To edit the user's <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
 		</section>
 		
+		<section id="acp_users_forum_permissions">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Users' forum permissions</title>
+			
+			<para>Along with editing your users' user account-related permissions, you can also edit their forum permissions, which relate to the forums in your board. Forum permissions are different from user permissions in that they are directly related and tied to the forums. <guimenuitem>Users' forum permissions</guimenuitem> allows you to edit your users' forum permissions. When doing so, you can only assign forum permissions to one user at a time.</para>
+		
+			<para>To start editing a user's forum permissions, start by typing in the user's username into the <guilabel>Find a member</guilabel> text box. If you would like to edit the forum permissions that pertain to the anonymous user, check the <guilabel>Select anonymous user</guilabel> text box. Click <guilabel>Submit</guilabel> to continue.</para>
+			
+			<figure id="img_acp_u_forum_permissions">
+				<title>Selecting forums for users' forum permissions</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/users_forum_permissions.png"/>
+					</imageobject>
+					<caption>
+						<para>Selecting forums to assign forum permissions to users. In this example, the &quot;Cats&quot; and &quot;Dogs&quot; subforums (their parent forum is &quot;Pets&quot;) are selected. The user's forum permissions for these two forums will be edited/updated.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			
+			<para>You should now be able to assign forum permissions to the user. You now have two ways to assign forum permissions to the user: you may either select the forum(s) manually with a multiple selection menu, or select a specific forum or category, along with its associated subforums. Click <guilabel>Submit</guilabel> to continue with the forum(s) you have picked. Now, you should be greeted with the <guilabel>Setting permissions</guilabel> screen, where you can actually assign the forum permissions to the user. You should now select what kind of forum permissions you want to edit now; you may either edit the user's <guimenuitem>Forum permissions</guimenuitem> or <guimenuitem>Moderator permissions</guimenuitem>. Click <guilabel>Go</guilabel>. You should now be able to select the role to assign to the user for each forum you selected previously. If you would like to configure these permissions with more detail, click the <guilabel>Advanced permissions</guilabel> link located in the appropriate forum permissions box, and then update the permissions accordingly. When you are done, click <guilabel>Apply all permissions</guilabel> if you are in the <guilabel>Advanced permissions</guilabel> area, or click <guilabel>Apply all permissions</guilabel> at the bottom of the page to submit all of your changes on the page.</para>
+		</section>
+		
 		<section id="acp_user_security">
 			<sectioninfo>
 				<authorgroup>
@@ -1539,7 +1588,7 @@
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
 					<term>Display group in legend:</term>
-					<listitem><para>This will enable the display of the name of the group in the legend of the "Who is Online" list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
+					<listitem><para>This will enable the display of the name of the group in the legend of the &quot;Who is Online&quot; list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Group able to receive private messages</term>
@@ -1547,19 +1596,19 @@
 				</varlistentry>
 				<varlistentry>
 					<term>Group private message limit per folder</term>
-					<listitem><para>This setting overrides the per-user folder message limit. A value of 0 means the user default limit will be used. <!-- TODO: ADD LINK TO PM SETTINGS --></para></listitem>
+					<listitem><para>This setting overrides the per-user folder message limit. A value of &quot;0&quot; means the user default limit will be used. See the <link linkend="ucp_preferences">section on user preferences</link> for more information about private message settings.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Group colour</term>
-					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default"/>) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the "Who is Online" listing.</para></listitem>
+					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default" />) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the &quot;Who is Online&quot; listing.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Group rank</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default"/>) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting.<!-- TODO: ADD LINK TO RANK SETTINGS --></para></listitem>
+					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting. See the <link linkend="acp_ranks">section on ranks</link> for more information.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Group avatar</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default"/>) will use this avatar. Note, that a member can change his avatar to a different one, if he has the permission to do so.<!-- TODO: ADD LINK TO AVATAR SETTINGS --></para></listitem>
+					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will use this avatar. Note that a member can change his avatar to a different one if he has the permission to do so. For more information on avatar settings, see the <link linkend="ucp_avatar">userguide section on avatars</link>.</para></listitem>
 				</varlistentry>				
 			</variablelist>
 			
@@ -1568,9 +1617,13 @@
 			<title>Default groups</title>
 			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit"/>, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
 			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
-			<important><para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para></important>
-			<para>You can change default groups in two ways. Either through the user management (see <xref linkend="acp_users"/>) <!-- TODO: LINK TO MANAGE USERS /--> or directly through the groups management (<guilabel>Manage groups</guilabel>). Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the "Registered Users" group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of "Registered Users".</para>
-			<important><para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para></important>
+			<important>
+				<para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para>
+			</important>
+			<para>You can change default groups in two ways. You can do this either through the user management (see <xref linkend="acp_users"/>), or directly through the groups management (<guilabel>Manage groups</guilabel>) page. Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the &quot;Registered Users&quot; group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of &quot;Registered Users&quot;.</para>
+			<important>
+				<para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para>
+			</important>
 		</section>
 	</section>
 	
@@ -1583,7 +1636,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Permission Overload</title>
-		<para>TODO: Stuff about permissions</para>
+		<para><!-- TODO: stuff about permissions --></para>
 	</section>
 
 	<section id="acp_styles">
@@ -1599,7 +1652,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Styles</title>
-		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
+		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
 		
 		<para>phpBB 3.0 styles have three main parts: templates, themes, and imagesets.
 			<variablelist>
@@ -1696,7 +1749,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>System Configuration</title>
-		<para>TODO: Stuff about system configuration</para>
+		<para><!-- TODO: Stuff about system configuration --></para>
 		<section id="acp_system_updates">
 			<title>Checking for updates</title>
 		</section>
