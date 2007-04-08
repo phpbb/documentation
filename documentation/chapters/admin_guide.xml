@@ -50,7 +50,7 @@
 		</sectioninfo>
 		<title>General Configuration and Front Page</title>
 		<para>The <guimenuitem>General</guimenuitem> section is the first screen you see each time you log into the <acronym>ACP</acronym>. It contains some basic statistics and information about your forum. It also has a subsection called <guimenuitem>Quick Access</guimenuitem>. It provides quick access to some of the admin pages that are frequently used, like <link linkend="acp_users">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
-		<para>We will concentrate on the other three subsections: <link linkend="acp_general_board">Board Configuration</link>, <link linkend="acp_general_client">Client Communication</link>, and <link linkend="acp_general_server">Server Configuration</link>.</para>
+		<para>We will concentrate on the other three subsections: <link linkend="acp_general_config">Board Configuration</link>, <link linkend="acp_general_client">Client Communication</link>, and <link linkend="acp_general_server">Server Configuration</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
 				<authorgroup>
@@ -61,6 +61,20 @@
 			</sectioninfo>
 			<title>Board Configuration</title>
 			<para>This subsection contains items to adjust the overall features and settings of the forum. </para>
+			
+			<section id="acp_board_attachments">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>dhn</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Attachment Settings</title>
+				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
+				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
+			</section>
+			
 			<section id="acp_general_settings">
 				<sectioninfo>
 					<authorgroup>
@@ -103,19 +117,6 @@
 				</sectioninfo>
 				<title>Board Features</title>
 				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
-			</section>
-			
-			<section id="acp_board_attachments">
-				<sectioninfo>
-					<authorgroup>
-						<author>
-							<othername>dhn</othername>
-						</author>
-					</authorgroup>
-				</sectioninfo>
-				<title>Attachment Settings</title>
-				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
-				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
 			
 			<section id="acp_board_avatars">
