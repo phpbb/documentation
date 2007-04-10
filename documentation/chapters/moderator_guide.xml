@@ -258,8 +258,8 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>What is the 'Moderation queue'?</title>
-		<para>The <guilabel>Moderation Queue</guilabel> is an area where topics and posts which need to be approved are listed. If a forum or user's permissions are set to <guilabel>moderator queue</guilabel> via the <link linkend="admin_control_panel">Administration Control Panel</link>, all posts made in that forum or by this user will need to be approved by an administrator or moderator before they are displayed to other users. Topics and posts which require approval can be viewed through the <link linkend="moderator_mcp">Moderator Control Panel</link>.</para>
+		<title>What is the &#x201C;Moderation queue&#x201D;?</title>
+		<para>The <guilabel>Moderation Queue</guilabel> is an area where topics and posts which need to be approved are listed. If a forum or user&#x2019;s permissions are set to <guilabel>moderator queue</guilabel> via the <link linkend="admin_control_panel">Administration Control Panel</link>, all posts made in that forum or by this user will need to be approved by an administrator or moderator before they are displayed to other users. Topics and posts which require approval can be viewed through the <link linkend="moderator_mcp">Moderator Control Panel</link>.</para>
 		<para>When viewing a forum, topics which have not yet been approved will be marked with an icon, clicking on this icon will take you directly to the Moderator Control Panel where you may approve or disapprove the topic. Likewise, when viewing the topic itself, the post requiring approval will be accompanied with a message which also links to the post waiting approval.</para>
 		<para>If you choose to approve a topic or post, you will be given the option to notify the user of its approval. If you choose to disapprove a topic or post, you will be given the option to notify the user of its disapproval and also specify why you have disapproved the post, and enter a description.</para>
 		<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
@@ -276,7 +276,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>What are 'Reported posts'?</title>
+		<title>What are &#x201C;Reported posts&#x201D;?</title>
 		<para>Unlike phpBB2, phpBB3 now allows users to report a post, for reasons the board administrator can define within the <link linkend="admin_control_panel">Administration Control Panel</link>. If a user finds a post unsuitable for any reason, they may report it using the <guilabel>Report Post</guilabel> button beside the offending message. This report is then displayed within the Moderator Control Panel where the Administrator or Moderators can view, close, or delete the report.</para>
 		<para>When viewing a forum with post reports within topics, the forum title will be accompanied by a red exclamation icon. This alerts the administrator(s) or moderators that there a post has been reported. When viewing topics, reported posts are accompanied by a red exclamation and text. Clicking this icon or text will bring them to the Reported Posts section of the Moderator Control Panel.</para>
 		<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
@@ -395,7 +395,7 @@
 			<para>You can also mass-moderate posts within topics. This can be done by navigating through the MCP when viewing the forum, and clicking on the topic itself. Another way to accomplish this is to click the MCP link whilst viewing the particular topic you wish to moderate.</para>
 			<para>When moderating inside a topic, you can: rename the topic title, move the topic to a different forum, alter the topic icon, merge the topic with another topic, or define how many posts per page will be displayed (this will override the board setting).</para>
 			<para>From the selection menu, you may also: lock and unlock individual posts, delete the selected post(s), merge the selected post(s), or split or split from the selected post(s).</para>
-			<para>The <guilabel>Post Details</guilabel> link next to posts also entitle you to alter other settings. As well as viewing the poster's <glossterm>IP address</glossterm>, profile and notes, and the ability to warn the poster, you also have the option to change the poster ID assigned to the post. You can also lock or delete the post from this page.</para>
+			<para>The <guilabel>Post Details</guilabel> link next to posts also entitle you to alter other settings. As well as viewing the poster&#x2019;s <glossterm>IP address</glossterm>, profile and notes, and the ability to warn the poster, you also have the option to change the poster ID assigned to the post. You can also lock or delete the post from this page.</para>
 		
 			<note>
 				<para>Depending on the specific permissions set to your user account, some of the aforementioned options and abilities may not be available to you.</para>
