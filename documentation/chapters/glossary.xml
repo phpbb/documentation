@@ -118,7 +118,7 @@
 			<varlistentry>
 				<term>Database</term>
 				<listitem>
-					<para>A database is a collection stored in a structured, organized manner (with different tables and row and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.0 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, categories. Data stored in a database can usually be backed up and restored easily.</para>
+					<para>A database is a collection stored in a structured, organized manner (with different tables, rows, and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.0 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, and categories. Data stored in a database can usually be backed up and restored easily.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -167,7 +167,7 @@
 			<varlistentry>
 				<term>Jabber</term>
 				<listitem>
-					<para>Jabber is an open-source protocol that can be used for instant messenging. For more information on how Jabber's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
+					<para>Jabber is an open-source protocol that can be used for instant messenging. For more information on Jabber's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -227,7 +227,7 @@
 			<varlistentry>
 				<term>Server-writable</term>
 				<listitem>
-					<para>Anything on your server that is server-writable means that the file(s) or folder(s) in question have their permissions properly set so that the server can write to them. Some phpBB3 functions that may require some files and/or folders to be writable by the server include caching and the actual installation of phpBB3 (the config.php file needs to be written during the installation process). Making files or folders server-writable, however, depends on the operating system that the server is running under. *nix-based servers can configure file and folder permissions via the <glossterm>CHMOD</glossterm> utility, while Windows-based servers offer their own permissions scheme.</para>
+					<para>Anything on your server that is server-writable means that the file(s) or folder(s) in question have their permissions properly set so that the server can write to them. Some phpBB3 functions that may require some files and/or folders to be writable by the server include caching and the actual installation of phpBB3 (the config.php file needs to be written during the installation process). Making files or folders server-writable, however, depends on the operating system that the server is running under. On *nix-based servers, users can configure file and folder permissions via the <glossterm>CHMOD</glossterm> utility, while Windows-based servers offer their own permissions scheme. It is possible with some <glossterm>FTP</glossterm> clients to change file and folder permissions as well.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -241,7 +241,7 @@
 			<varlistentry>
 				<term>Signature</term>
 				<listitem>
-					<para>A signature is a message displayed at the end of a user's post. Signatures are set by the user. Whether or not a signature is displayed after a post is sest by the user's profile settings.</para>
+					<para>A signature is a message displayed at the end of a user's post. Signatures are set by the user. Whether or not a signature is displayed after a post is set by the user's profile settings.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -290,7 +290,7 @@
 			<varlistentry>
 				<term>Usergroup</term>
 				<listitem>
-					<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator, who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. phpBB 3.0 has six pre-defined usergroups.</para>
+					<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page within the <link linkend="user_control_panel">group control panel</link>. phpBB 3.0 has six pre-defined usergroups.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>

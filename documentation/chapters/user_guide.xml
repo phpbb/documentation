@@ -54,7 +54,7 @@
 				<para>If you see in the form where you can specify your username, password etc. a graphic with some wierd looking characters, then you see the so called <emphasis>Visual Confirmation</emphasis>. Simply enter these characters into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. </para>
 			</listitem>
 			<listitem>
-				<para>Another option is the account activation. Here the administrator can make it a requirement that you have to follow and link mailed to you after registering before your account is activated. In this case you will see a message similiar to this one: <blockquote>
+				<para>Another option is the account activation. Here, the administrator can make it a requirement that you have to follow a link mailed to you after registering before your account is activated. In this case you will see a message similiar to this one: <blockquote>
 						<para> Your account has been created. However, this forum requires account activation, an activation key has been sent to the e-mail address you provided. Please check your e-mail for further information </para>
 					</blockquote>
 				</para>

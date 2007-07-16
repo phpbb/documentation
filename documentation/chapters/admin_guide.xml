@@ -403,7 +403,7 @@
 						<term>Session IP validation</term>
 						<listitem>
 							<para>This determines how much of the users'  <glossterm>IP address</glossterm> is used to validate a session.</para>
-							<para>There are four settings available: <guilabel>All</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, and <guilabel>None</guilabel>. The <guilabel>All</guilabel> setting will compare the complete IP address. The <guilabel>A.B.C</guilabel> setting will compare the first x.x.x of the IP address. The <guilabel>A.B</guilabel> setting will compare the first x.x.x of the IP address. Lastly, selecting <guilabel>None</guilabel> will disable IP address checking altogether.</para>
+							<para>There are four settings available: <guilabel>All</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, and <guilabel>None</guilabel>. The <guilabel>All</guilabel> setting will compare the complete IP address. The <guilabel>A.B.C</guilabel> setting will compare the first x.x.x of the IP address. The <guilabel>A.B</guilabel> setting will compare the first x.x of the IP address. Lastly, selecting <guilabel>None</guilabel> will disable IP address checking altogether.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -488,7 +488,7 @@
 				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
 					<itemizedlist>
 						<title>General settings</title>
-						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers between 0 and 1.0 (inclusive) are valid values for this option. Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
+						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers are valid values for this option. (For example, if your server has two processors, a setting of 2.0 would represent 100% server utilisation of both processors.) Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
 						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
 						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline and be temporarily disabled. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline and be temporarily disabled. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
 						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
@@ -717,11 +717,11 @@
 			</figure>
 			
 			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
-				<code>[font={FONTNAME}]{TEXT}[/font]</code>
+				<code>[font={TEXT1}]{TEXT2}[/font]</code>
 				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>,while <guilabel>FONTNAME</guilabel> represents whatever font name the user types in.
 			</para>
 			<para>In the <guilabel>HTML Replacement</guilabel>form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
-				<code>&lt;span style="font-family: {FONTNAME}"&gt;{TEXT}&lt;span&gt;</code>
+				<code>&lt;span style="font-family: {TEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
 				This HTML code will be used to actually format the user's text.
 			</para>
 			<para>The third option to consider when adding a custom BBCode is what sort of help message you want to display to your users if they choose to use the new BBCode. Ideally, the helpline message is a short note or tip for the user using the BBCode. This message will be displayed below the BBCode row on the posting screens.</para>

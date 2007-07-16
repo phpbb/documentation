@@ -278,7 +278,7 @@
 		</sectioninfo>
 		<title>What are &#x201C;Reported posts&#x201D;?</title>
 		<para>Unlike phpBB2, phpBB3 now allows users to report a post, for reasons the board administrator can define within the <link linkend="admin_control_panel">Administration Control Panel</link>. If a user finds a post unsuitable for any reason, they may report it using the <guilabel>Report Post</guilabel> button beside the offending message. This report is then displayed within the Moderator Control Panel where the Administrator or Moderators can view, close, or delete the report.</para>
-		<para>When viewing a forum with post reports within topics, the forum title will be accompanied by a red exclamation icon. This alerts the administrator(s) or moderators that there a post has been reported. When viewing topics, reported posts are accompanied by a red exclamation and text. Clicking this icon or text will bring them to the Reported Posts section of the Moderator Control Panel.</para>
+		<para>When viewing a forum with post reports within topics, the topic title will be accompanied by a red exclamation icon. This alerts the administrator(s) or moderators that there a post has been reported. When viewing topics, reported posts are accompanied by a red exclamation and text. Clicking this icon or text will bring them to the Reported Posts section of the Moderator Control Panel.</para>
 		<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
 	</section>
 	
