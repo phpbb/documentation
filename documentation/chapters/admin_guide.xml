@@ -1168,7 +1168,7 @@
 				<title>User Rank</title>
 				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
-				<para>For more information about ranks, see <xref linkend="acp_ranks"/>.</para>
+				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
 				<!-- TODO: Add a specific section on ranks of course. -->
 			</section>
 			
@@ -1334,6 +1334,71 @@
 			</figure>
 			
 			<para>You should now be able to assign forum permissions to the user. You now have two ways to assign forum permissions to the user: you may either select the forum(s) manually with a multiple selection menu, or select a specific forum or category, along with its associated subforums. Click <guilabel>Submit</guilabel> to continue with the forum(s) you have picked. Now, you should be greeted with the <guilabel>Setting permissions</guilabel> screen, where you can actually assign the forum permissions to the user. You should now select what kind of forum permissions you want to edit now; you may either edit the user's <guimenuitem>Forum permissions</guimenuitem> or <guimenuitem>Moderator permissions</guimenuitem>. Click <guilabel>Go</guilabel>. You should now be able to select the role to assign to the user for each forum you selected previously. If you would like to configure these permissions with more detail, click the <guilabel>Advanced permissions</guilabel> link located in the appropriate forum permissions box, and then update the permissions accordingly. When you are done, click <guilabel>Apply all permissions</guilabel> if you are in the <guilabel>Advanced permissions</guilabel> area, or click <guilabel>Apply all permissions</guilabel> at the bottom of the page to submit all of your changes on the page.</para>
+		</section>
+		
+		<section id="acp_users_custom_profile_fields">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Custom profile fields</title>
+			
+			<para>One of the many new features in phpBB3 that enhance the user experience is <guilabel>Custom Profile Fields</guilabel>. In the past, users could only fill in information in the common profile fields that were displayed; administrators had to add MODifications to their board to accommodate their individual needs. In phpBB3, however, administrators can comfortably create custom profile fields through the <acronym>ACP</acronym>.</para>
+		
+			<para>To create your custom profile field, login to your ACP. Click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then locate the <guimenuitem>Custom profile fields</guimenuitem> link in the left-hand menu to click on. You should now be on the proper page. Locate the empty textbox below the custom profile fields headings, which is next to a selection menu and a <guilabel>Create new field</guilabel> button. Type in the empty textbox the name of the new profile field you want to create first. Then, select the field type in the selection menu. Available options are <guimenuitem>Numbers</guimenuitem>, <guimenuitem>Single text field</guimenuitem>, <guimenuitem>Textarea</guimenuitem>, <guimenuitem>Boolean (Yes/No)</guimenuitem>, <guimenuitem>Dropdown box</guimenuitem>, and <guimenuitem>Date</guimenuitem>. Click the <guilabel>Create new field</guilabel> button to continue. The following describes each of the three sets of settings that the new custom profile field will have.
+				<itemizedlist>
+					<title>Add profile field</title>
+					<listitem><para><guilabel>Field type:</guilabel> This is the kind of the field that your new custom profile field is. That means that it can consist of numbers, dates, etc. This should already be set.</para></listitem>
+					<listitem><para><guilabel>Field identification:</guilabel> This is the name of the profile field. This name will identify the profile field within phpBB3's database and templates.</para></listitem>
+					<listitem><para><guilabel>Display profile field:</guilabel> This setting determines if the new profile field will be displayed at all. The profile field will be shown on topic pages, profiles and the memberlist if this is enabled within the load settings. Only showing within the users profile is enabled by default.</para></listitem>
+				</itemizedlist>
+				
+				<itemizedlist>
+					<title>Visibility option</title>
+					<listitem><para><guilabel>Display in user control panel:</guilabel> This setting determines if your users will be able to change the profile field within the <acronym>UCP</acronym>.</para></listitem>
+					<listitem><para><guilabel>Display at registration screen:</guilabel> If this option is enabled, the profile field will be displayed on the registration page. Users will be able to be change this field within the <acronym>UCP</acronym>.</para></listitem>
+					<listitem><para><guilabel>Required field:</guilabel> This setting determines if you want to force your users to fill in this profile field. This will display the profile field at registration and within the user control panel.</para></listitem>
+					<listitem><para><guilabel>Hide profile field:</guilabel> If this option is enabled, this profile field will only show up in users' profiles. Only administrators and moderators will be able to see or fill out this field in this case.</para></listitem>
+				</itemizedlist>
+				
+				<itemizedlist>
+					<title>Language specific options</title>
+					<listitem><para><guilabel>Field name/title presented to the user:</guilabel> This is the actual name of the profile field that will be displayed to your users.</para></listitem>
+					<listitem><para><guilabel>Field description:</guilabel> This is a simple description/explanation for your users filling out this field.</para></listitem>
+				</itemizedlist>
+			</para>
+			
+			<para>When you are done with the above settings, click the <guilabel>Profile type specific options</guilabel> button to continue. Fill out the appropriate settings with what you desire, then click the <guilabel>Next</guilabel> button. If your new custom profile field was created successfully, you should be greeted with a green success message. Congratulations!</para>
+		</section>
+		
+		<section id="acp_user_ranks">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Managing ranks</title>
+			
+			<para>Ranks are special titles that can be applied to forum users. As an administrator, it is up to you to create and manage the ranks that exist on your board. The actual names for the ranks are completely up to you; it's usually best to tailor them to the main purpose of your board.</para>
+			
+			<note>
+				<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
+			</note>
+			
+			<para>To manage your board's ranks, login to your <acronym>ACP</acronym>, click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on the <guimenuitem>Manage ranks</guimenuitem> link located in the left-hand menu. You should now be on the rank management page. All current existing ranks are displayed.</para>
+			
+			<para>To create a new rank, click on the <guilabel>Add new rank</guilabel> button located below the existing ranks list. Fill in the first field <guilabel>Rank title</guilabel> with the name of the rank. If you uploaded an image you want to attribute to the rank into the <filename>/images/ranks/</filename> folder, you can select an image from the selection menu. The last setting you can set is if you want the rank to be a "special" rank. Special ranks are ranks that administrators assign to users; they are not automatically assigned to users based on their postcount. If you selected <guilabel>No</guilabel>, then you can fill in the <guilabel>Minimum posts</guilabel> field with the minimum number of posts your users must have before getting assigned this rank. When you are done, click the <guilabel>Submit</guilabel> button to add this new rank.</para>
+			
+			<para>To edit a rank's current settings, locate the rank's row, and then click on its "Edit" button located in the <guilabel>Action</guilabel> column.</para>
+			
+			<para>To delete a rank, locate the rank's row, and then click on its "Delete" button located in the <guilabel>Action</guilabel> column. Then, you must confirm the action by clicking on the <guilabel>Yes</guilabel> button when prompted.</para>
+		</section>
+				
 		</section>
 		
 		<section id="acp_user_security">
@@ -1605,7 +1670,7 @@
 				</varlistentry>
 				<varlistentry>
 					<term>Group rank</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting. See the <link linkend="acp_ranks">section on ranks</link> for more information.</para></listitem>
+					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting. See the <link linkend="acp_user_ranks">section on ranks</link> for more information.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Group avatar</term>
@@ -1701,10 +1766,13 @@
 					<author>
 						<othername>Graham</othername>
 					</author>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
 				</authorgroup>
 			</sectioninfo>
 			<title>Forum Logs</title>
-			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. There are four types of logs:</para>
+			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. This is important for you, the administrator, to keep track of. There are four types of logs:</para>
 			<variablelist>
 				<varlistentry>
 					<term>Admin Log</term>
@@ -1731,8 +1799,13 @@
 					</listitem>
 				</varlistentry>
 			</variablelist>
-			<para>If you have appropriate permissions, you are able to remove any or all log entries from the above sections.</para>
+			
+			<para>Click on one of the log links located in the left-hand <guilabel>Forum Logs</guilabel> section.</para>
+			
+			<para>If you have appropriate permissions, you are able to remove any or all log entries from the above sections. To remove log entries, go to the appropriate log entries section, check the log entries' checkboxes, and then click on the <guilabel>Delete marked</guilabel> checkbox to delete the log entries.</para>
+		
 		</section>
+		
 		<section id="acp_maintenance_database">
 			<title>Database backup and restore</title>
 		</section>
