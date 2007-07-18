@@ -85,7 +85,7 @@
 		<note>
 			<para>phpBB 3.0 Beta 1 will not yet have the ability to upgrade from phpBB 2.0.x or to convert from a different software package. This will be included in the later Beta or <acronym>RC</acronym> stages.</para>
 		</note>
-		<para>After you have uploaded phpBB3 to the location you want it to be, you have to enter the <acronym>URL</acronym> into your browser to get to the installation screen. It is enough to point the browser to the folder where you moved it to (<uri>http://www.example.com/phpBB3</uri> for instance). phpBB will automatically detect that it is not yet installed and forward you to the installation screen.</para>
+		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introduction</title>
 			<mediaobject>
@@ -99,21 +99,21 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introduction</title>
-			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (<ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, use the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
+			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (the <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Requirements</title>
 			<important>
 				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.0's minimum requirements.</para>
 			</important>
-			<para>The first page you will see after starting the installation is the <guilabel>Requirements</guilabel> list. phpBB 3.0 checks automatically whether everything that it needs to run properly is installed on your server. You need to have at least the minimum <acronym>PHP</acronym> version installed, and at least one database available to continue the installation. Also important, is that all shown folders are available and do have the correct permissions. Please see the description of each section to find out whether they are optional or required for phpBB 3.0 to run. If everything is in order, you can continue the installation with <guilabel>Start Install</guilabel>. </para>
+			<para>The requirements list is the first page you will see after starting the installation. phpBB 3.0 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.0 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
 		</section>
 		<section id="quick_installation_database">
 			<title>Database settings</title>
-			<para>You now have to decide which database to use. See the <link linkend="quick_requirements">Requirements section</link> for information on which databases are supported. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:</para>
+			<para>You now have to decide which database to use. See the <link linkend="quick_requirements">Requirements section</link> for information on which databases are supported. If you do not know your database settings, please contact your hosting company and ask for them. You will not be able to continue without them. You need:</para>
 			<itemizedlist>
 				<listitem>
-					<para>The <guilabel>Database Type</guilabel> - the database you will be using.</para>
+					<para>The <guilabel>Database Type</guilabel> - the database you will be using (e.g. mySQL, SQL server, Oracle)</para>
 				</listitem>
 				<listitem>
 					<para>The <guilabel>Database server hostname or DSN</guilabel> - the address of the database server.</para>
@@ -142,9 +142,9 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multipe phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
-			<para>After you entered your details, you can continue with the <guilabel>Proceed to next step</guilabel> button. Now phpBB 3.0 will check whether the data you entered will lead to a successful database connection and whether tables with the same prefix already exist.</para>
-			<para>A <guilabel>Could not connect to the database</guilabel> error means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
+			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multiple phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
+			<para>After you have entered your details, you can continue by clicking the <guilabel>Proceed to next step</guilabel> button. Now, phpBB 3.0 will test and verify the data you entered.</para>
+			<para>If you see a "<guilabel>Could not connect to the database</guilabel>" error, this means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
 			<tip>
 				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
 			</tip>
@@ -153,16 +153,16 @@
 		</section>
 		<section id="quick_installation_admin">
 			<title>Administrator details</title>
-			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
 		</section>
 		<section id="quick_installation_config">
 			<title>Configuration file</title>
-			<para>In this step, phpBB will try to write the configuration file automatically. The forum needs the configuration to run properly. It contains all database settings, so without it, phpBB will not be able to access the database.</para>
-			<para>Usually writing the configuration file automatically works fine. But in some cases it can fail due to wrong file permissions, for instance. In this case, you need to upload the file manually. phpBB asks you to <guilabel>download</guilabel> the config.php file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, use <guilabel>Done</guilabel> to get to the last step. If <guilabel>Done</guilabel> returns you to the same page as before, and does not return a success message, you did not upload the file correctly.</para>
+			<para>In this step, phpBB will automatically try to write the configuration file. The forum needs the configuration to run properly. It contains all of the database settings, so without it, phpBB will not be able to access the database.</para>
+			<para>Usually, automatically writing the configuration file works fine. But in some cases it can fail due to wrong file permissions, for instance. In this case, you need to upload the file manually. phpBB asks you to <guilabel>download</guilabel> the config.php file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, click <guilabel>Done</guilabel> to get to the last step. If <guilabel>Done</guilabel> returns you to the same page as before, and does not return a success message, you did not upload the file correctly.</para>
 		</section>
 		<section id="quick_installation_advanced">
 			<title>Advanced settings</title>
-			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later. So if you are not sure what these settings mean, proceed to the final step and finish the installation.</para>
+			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
 			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.0 successfully. But there is still a lot of work ahead!</para>
 			<para>If you are unable to get phpBB 3.0 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
 			<para>At this point if you are upgrading from phpBB 2.0, you should refer to the <link linkend="upgrade_guide">upgrade guide</link> for further information. If not, you should remove the install directory from your server as you will only be able to access the Administration Control Panel whilst it is present.</para>
