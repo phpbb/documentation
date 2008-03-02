@@ -5,8 +5,8 @@
 <!-- 
 	$Id$
 	Copyright 2006, 2008 phpBB Group
-	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 license
-	http://creativecommons.org/licenses/by-nc-sa/2.0/
+	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
+	http://creativecommons.org/licenses/by-nc-sa/3.0/
 -->
 
 <xsl:import href="xhtml/chunk.xsl"/>
@@ -39,7 +39,7 @@
 
 <!-- Copyright -->
 <xsl:template name="user.footer.navigation">
-	<div class="copyright" align="center">(c) 2006, 2008 phpBB Group - Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
+	<div class="copyright" align="center">(c) 2006, 2008 phpBB Group - Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike 3.0</a> license</div>
 </xsl:template>
 
 <!-- Prevent image links breaking on yavin -->
