@@ -2,6 +2,13 @@
 <xsl:stylesheet  
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
+<!-- 
+	$Id$
+	Copyright 2006, 2008 phpBB Group
+	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 license
+	http://creativecommons.org/licenses/by-nc-sa/2.0/
+-->
+
 <xsl:import href="xhtml/chunk.xsl"/>
 
 <xsl:param name="base.dir" select="'./build/'"/>
@@ -80,7 +87,7 @@ $template->set_filenames(array(
 
 <!-- Copyright -->
 <xsl:template name="footer.navigation">
-	<div class="copyright">&#x00A9; 2006 phpBB Group &#x2014; Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
+	<div class="copyright">&#x00A9; 2006, 2008 phpBB Group &#x2014; Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
 	<xsl:text disable-output-escaping="yes">
 &lt;?php
 

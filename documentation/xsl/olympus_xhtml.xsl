@@ -2,6 +2,13 @@
 <xsl:stylesheet  
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
+<!-- 
+	$Id$
+	Copyright 2006, 2008 phpBB Group
+	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 2.0 license
+	http://creativecommons.org/licenses/by-nc-sa/2.0/
+-->
+
 <xsl:import href="xhtml/chunk.xsl"/>
 
 <!-- Link to the stylesheet -->
@@ -32,7 +39,7 @@
 
 <!-- Copyright -->
 <xsl:template name="user.footer.navigation">
-	<div class="copyright" align="center">(c) 2006 phpBB Group - Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
+	<div class="copyright" align="center">(c) 2006, 2008 phpBB Group - Licensed under the Creative Commons <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">Attribution-NonCommercial-ShareAlike 2.0</a> license</div>
 </xsl:template>
 
 <!-- Prevent image links breaking on yavin -->
