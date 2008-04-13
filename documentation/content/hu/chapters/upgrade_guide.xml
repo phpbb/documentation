@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<chapter id="upgrade_guide">
+	<?dbhtml dir="upgradeguide" filename="index.html" ?>
+	<chapterinfo>
+		<releaseinfo>$Id$</releaseinfo>
+		<copyright>
+			<year>2006</year>
+			<holder>phpBB Group</holder>
+		</copyright>
+	</chapterinfo>
+	<title>Upgrade Guide</title>
+	<abstract>
+		<para>Do you want to upgrade your phpBB2 forum to version 3.0? This chapter will tell and show you how it is done.</para>
+	</abstract>
+	<section id="upgrade">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Techie-Micheal</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Upgrading from 2.0 to 3.0</title>
+		<para>The upgrade process from 2.0.x to 3.0.x is a straight-forward, simplified process.</para>
+		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.0.x.</para>
+		<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>
+	</section>
+</chapter>
