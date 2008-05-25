@@ -10,7 +10,7 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Administration Guide</title>
+	<title>Adminisztrátori kézikönyv</title>
 	<abstract>
 		<para>This chapter describes the phpBB 3.0 admin controls.</para>
 	</abstract>
@@ -22,13 +22,13 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>The Administration Control Panel</title>
+		<title>Az adminisztrátori vezérlőpult</title>
 		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 		
 		<figure id="img_acp_index">
-			<title>Administration Control Panel Index</title>
+			<title>Az adminisztrátori vezérlőpult kezdőlapja</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
@@ -48,7 +48,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>General Configuration and Front Page</title>
+		<title>Általános konfiguráció és a kezdőlap</title>
 		<para>The <guimenuitem>General</guimenuitem> section is the first screen you see each time you log into the <acronym>ACP</acronym>. It contains some basic statistics and information about your forum. It also has a subsection called <guimenuitem>Quick Access</guimenuitem>. It provides quick access to some of the admin pages that are frequently used, like <link linkend="acp_users">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
 		<para>We will concentrate on the other three subsections: <link linkend="acp_general_config">Board Configuration</link>, <link linkend="acp_general_client">Client Communication</link>, and <link linkend="acp_general_server">Server Configuration</link>.</para>
 		<section id="acp_general_config">
@@ -59,7 +59,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Board Configuration</title>
+			<title>Fórum konfiguráció</title>
 			<para>This subsection contains items to adjust the overall features and settings of the forum. </para>
 			
 			<section id="acp_board_attachments">
@@ -70,7 +70,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Attachment Settings</title>
+				<title>Csatolmány beállítások</title>
 				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
 				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
@@ -87,11 +87,11 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Board Settings</title>
+				<title>Fórum beállítások</title>
 				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change many settings that govern your board. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
 				
 				<itemizedlist>
-					<title>Board Settings</title>
+					<title>Fórum beállítások</title>
 					<listitem><para>The very first board setting you can edit is perhaps the most important setting of them all: the name of your board. Your users identify your board with this name. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style; it will be the prefix to the window title of your browser.</para></listitem>
 					<listitem><para>The <guilabel>Site Description</guilabel> is the slogan or tagline of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para></listitem>
 					<listitem><para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. To temporarily disable your board, select<guilabel>Yes</guilabel>. This will keep any members of your forum who are not administrators or moderators from accessing your board. They will either see a default message instead of the forum, or a message that you create. You can add your own custom message that will be displayed when your board is disabled in the text box below the <guilabel>Disable board</guilabel> radio buttons. Administrators and moderators will still be able to browse forums and use their specific control panels when the board is disabled.</para></listitem>
@@ -102,7 +102,7 @@
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Warnings</title>
+					<title>Figyelmeztetések</title>
 					<listitem><para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. All positive integers are valid values. For more about warnings, please read <xref linkend="moderator_mcp" />.</para></listitem>
 				</itemizedlist>
 			</section>
@@ -115,7 +115,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Board Features</title>
+				<title>Fórum funkciók</title>
 				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
 			</section>
 			
@@ -127,7 +127,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Avatar Settings</title>
+				<title>Avatar beállítások</title>
 				<para>Avatars are generally small, unique images a user can associate with themselves. Depending on the style, they are usually displayed below the user name when viewing topics. Here you can determine how users can define their avatars.</para>
 				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
 				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised. There is also no support for sub folders inside the gallery folder. </para>
@@ -143,7 +143,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Private Messaging</title>
+				<title>Privát üzenetek</title>
 				<para><glossterm>Private Messages</glossterm> are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
 				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
 				<para>Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
@@ -183,7 +183,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>			
-			<title>Client communication</title>
+			<title>Kliens kommunikáció</title>
 			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, native DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following are subsections describing each client communication method.</para>
 		
 			<section id="acp_client_auth">
@@ -194,12 +194,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Authentication</title>
+				<title>Azonosítás</title>
 				
 				<para>Unlike phpBB2, phpBB3 offers support for authentication plugins. By default, the Apache, DB, and LDAP plugins are supported. Before switching from phpBB's native authentication system (the DB method) to one of these systems, you must make sure that your server supports it. <emphasis>When configuring the authentication settings, make sure that you only fill in the settings that apply to your chosen authentication method (Apache or LDAP).</emphasis></para>
 			
 				<itemizedlist>
-					<title>Authentication</title>
+					<title>Azonosítás</title>
 					<listitem><para><guilabel>Select an authentication method</guilabel>: Choose your desired authentication method from the selection menu.</para></listitem>
 					<listitem><para><guilabel>LDAP server name</guilabel>: If you are using LDAP, this is the name or IP address of the LDAP server.</para></listitem>
 					<listitem><para><guilabel>LDAP user</guilabel>: phpBB will connect to the LDAP server as this specified user. If you want to use anonymous access, leave this value blank.</para></listitem>
@@ -218,7 +218,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Email settings</title>
+				<title>E-mail beállítások</title>
 				
 				<para>phpBB3 is capable of sending out emails to your users. Here, you can configure the information that is used when your board sends out these emails. phpBB3 can send out emails by using either the native, PHP-based email service, or a specified <glossterm>SMTP</glossterm> server. If you are not sure if you have an SMTP server available, use the native email service. You will have to ask your hoster for further details. Once you are done configuring the email settings, click <guilabel>Submit</guilabel>.</para>
 				
@@ -227,7 +227,7 @@
 				</note>
 				
 				<itemizedlist>
-					<title>General Settings</title>
+					<title>Általános beállítások</title>
 					<listitem><para><guilabel>Enable board-wide emails</guilabel>: If this is set to disabled, no emails will be sent by the board at all.</para></listitem>
 					<listitem><para><guilabel>Users send email via board:</guilabel>: If this is set to enabled, a form allowing users to send emails to each other via the board will be displayed, rather than an email address.</para></listitem>
 					<listitem><para><guilabel>Email function name</guilabel>: If you are using the native, PHP-based email service, this should be the name of the email function. This is most likely going to be &quot;mail&quot;.</para></listitem>
@@ -239,7 +239,7 @@
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>SMTP Settings</title>
+					<title>SMTP beállítások</title>
 					<listitem><para><guilabel>Use SMTP server for email</guilabel>: Select <guilabel>Yes</guilabel> if you want your board to send emails via an SMTP server. If you are not sure that you have an SMTP server available for use, set this to <guilabel>No</guilabel>; this will make your board use the native, PHP-based email service, which in most cases is the safest available option.</para></listitem>
 					<listitem><para><guilabel>SMTP server address</guilabel>: The address of the SMTP server.</para></listitem>
 					<listitem><para><guilabel>SMTP server port</guilabel>: The port that the SMTP server is located on. In most cases, SMTP servers are located on port 25; do not change this value if you are unsure about this.</para></listitem>
@@ -257,7 +257,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Jabber settings</title>
+				<title>Jabber beállítások</title>
 				
 				<para>phpBB3 also has the ability to allow users to communicate via <glossterm>Jabber</glossterm>. Your board can send instant messages and board notices via Jabber, too. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
 			
@@ -266,7 +266,7 @@
 				</note>
 				
 				<itemizedlist>
-					<title>Jabber settings</title>
+					<title>Jabber beállítások</title>
 					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
 					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
@@ -289,7 +289,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>			
-			<title>Server configuration</title>
+			<title>Szerver beállítások</title>
 			<para>As an administrator of a board, being able to fine-tune the settings that your phpBB board uses for the server is a must. Configuring your board's server settings is very easy. There are five main categories of server settings: <guimenuitem>Cookie settings</guimenuitem>, <guimenuitem>Server settings</guimenuitem>, <guimenuitem>Security settings</guimenuitem>, <guimenuitem>Load settings</guimenuitem>, and <guimenuitem>Search settings</guimenuitem>. Properly configuring these settings will help your board not only function, but also work efficiently and as intended. The following subsections will outline each server configuration category. Once you are done with updating settings in each setting, remember to click <guilabel>Submit</guilabel> to apply your changes.</para>
 		
 			<section id="acp_server_cookies">
@@ -304,7 +304,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>			
-				<title>Cookie settings</title>
+				<title>Süti beállítások</title>
 				<para>Your board uses cookies all the time. Cookies can store information and data; for example, cookies are what enable users to automatically login to the board when they visit it. The settings on this page define the data used to send cookies to your users' browsers.</para>
 				
 				<warning>
@@ -314,7 +314,7 @@
 				<para>To edit your board's cookie settings, locate the <guilabel>Cookie Settings</guilabel> form. The following are four settings you may edit:
 				
 					<itemizedlist>
-						<title>Cookie Settings</title>
+						<title>Süti beállítások</title>
 						<listitem><para><guilabel>Cookie domain</guilabel>: This is the domain that your board runs on. Do not include the path that phpBB is installed in; only the domain itself is important here.</para></listitem>
 						<listitem><para><guilabel>Cookie name</guilabel>: This is the name that will be assigned to the cookie when it is sent to your users' browsers and stored. This should be a unique cookie name that will not conflict with any other cookies.</para></listitem>
 						<listitem><para><guilabel>Cookie path</guilabel>: This is the path that the cookie will apply to. In most cases, this should be left as &quot;/&quot;, so that the cookie can be accessible across your site. If for some reason you must restrict the cookie to the path that your board is installed in, set the value to the path of your board.</para></listitem>
@@ -337,7 +337,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>			
-				<title>Server settings</title>
+				<title>Szerver beállítások</title>
 				<para>On this page, you can define server and domain-dependent settings. There are three main categories of server settings: <guilabel>Server Settings</guilabel>, <guilabel>Path Settings</guilabel>, and <guilabel>Server URL Settings</guilabel>. The following describes each server settings category and the corresponding settings in more detail. When you are done configuring your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 				
 				<warning>
@@ -348,7 +348,7 @@
 			
 				<para>Next, the <guilabel>Path Settings</guilabel> form allows you to set the various paths that phpBB uses for certain board content. For default installations, the default settings should be sufficient. The following are the four values that you can set:
 					<itemizedlist>
-						<title>Path Settings</title>
+						<title>Elérési utak</title>
 						<listitem><para><guilabel>Smilies storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that your smilies are located in.</para></listitem>
 						<listitem><para><guilabel>Post icons storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that the topic icons are stored in.</para></listitem>
 						<listitem><para><guilabel>Extension group icons storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that the icons for the <link linkend="acp_attach_extension_groups">attachments extension groups</link>.</para></listitem>
@@ -357,7 +357,7 @@
 				
 				<para>The last category of server settings is <guilabel>Server URL Settings</guilabel>. The <guilabel>Server URL Settings</guilabel> category contains settings that allow you to configure the actual <acronym>URL</acronym> that your board is located at, as well as the server protocol and port number that the board will be accessed to. The following are the five settings you may edit:
 					<itemizedlist>
-						<title>Server URL Settings</title>
+						<title>Szerver URL beállítások</title>
 						<listitem><para><guilabel>Force server URL settings</guilabel>: If for some reason the default settings for the server URL are incorrect, then you can force your phpBB board to use the server URL settings you specify below by selecting the <guilabel>Yes</guilabel> radio button.</para></listitem>
 						<listitem><para><guilabel>Server protocol</guilabel>: This is the server protocol (http:// or https://, for example) that your board uses, if the default settings are forced. If this value is empty or the above <guilabel>Force server URL settings</guilabel> setting is disabled, then the protocol will be determined by the cookie secure settings.</para></listitem>
 						<listitem><para><guilabel>Domain name</guilabel>: This is the name of the domain that your board runs on. Include &quot;www&quot; if applicable. Again, this value is only used if the server URL settings are forced.</para></listitem>
@@ -377,7 +377,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Security settings</title>
+				<title>Biztonsági beállítások</title>
 				<para>Here, on the <guimenuitem>Security settings</guimenuitem> page, you are able to manage security-related settings; namely, you can define and edit session and login-related settings. The following describes the available security settings that you can manage. When you are done configuring your board's security settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 				
 				<!-- Perhaps include more introduction information? :-/ -->
@@ -482,12 +482,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Load settings</title>
+				<title>Terhelés beállítások</title>
 				<para>On particularly large boards, it may be necessary to manage certain load-related settings in order to allow your board to run as smoothly as possible. However, even if your board isn't excessively active, it is still important to be able to adjust your board's load settings. Adjusting these settings properly can help reduce the amount of processing required by your server. Once you are done editing any of the server load-related settings, remember to click <guilabel>Submit</guilabel> to actually submit and apply your changes.</para>
 				
 				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
 					<itemizedlist>
-						<title>General settings</title>
+						<title>Általános beállítások</title>
 						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers are valid values for this option. (For example, if your server has two processors, a setting of 2.0 would represent 100% server utilisation of both processors.) Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
 						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
 						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline and be temporarily disabled. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline and be temporarily disabled. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
@@ -497,7 +497,7 @@
 				
 				<para>The second group of settings, <guilabel>General Options</guilabel>, allows you to control whether certain options are available for your users on your board. The following describes each option further.
 					<itemizedlist>
-						<title>General options</title>
+						<title>Általános beállítások</title>
 						<listitem><para><guilabel>Enable dotted topics</guilabel>: Topics in which a poster has already posted in will see dotted topic icons for these topics. To enable this feature, select, <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Enable server-side topic marking</guilabel>: One of the many new features phpBB3 offers is server-side read tracking. This is different from phpBB2, which only offered read tracking based on cookies. To store read/unread status information in the database, as opposed to in a cookie, select <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Enable topic marking for guests</guilabel>: It is also possible to allow guests to have read/unread status information. If you want your board to store read/unread status information for guests, select <guilabel>Yes</guilabel>. If this option is disabled, posts will be displayed as &quot;read&quot; for guests.</para></listitem>
@@ -514,7 +514,7 @@
 				
 				<para>Lastly, the last group of load settings relates to <guilabel>Custom Profile Fields</guilabel>, which are a new feature in phpBB3. The following describes these options in detail.
 					<itemizedlist>
-						<title>Custom Profile Fields</title>
+						<title>Egyedi profil mezők</title>
 						<listitem><para><guilabel>Allow styles to display custom profile fields in memberlist</guilabel>: This option allows you to control if your board's style(s) can display the custom profile fields (if your board has any) in the memberlist. To enable this, choose <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Display custom profile fields in user profiles</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in users' profiles, select <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Display custom profile fields in viewtopic</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in the topic view pages, choose <guilabel>Yes</guilabel>.</para></listitem>
@@ -530,13 +530,13 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Search settings</title>
+				<title>Kereső beállítások</title>
 				
 				<para>Your board can be a well of information. Being able to effectively search through this information is very important, especially if you want to reduce the amount of redundant topics are posted on your board. Here, on the <guimenuitem>Search settings</guimenuitem> page, you can control what search backend your board's search functionality will use for indexing posts and searching, and set various options related to it. There are four main categories of search settings: <guilabel>General Search Settings</guilabel>, <guilabel>Search Backend</guilabel>, <guilabel>Fulltext mysql</guilabel>, and <guilabel>Fulltext native</guilabel>. The following describes each set of search settings in detail.</para>
 			
 				<para>The first group of search settings are general and user-facing, meaning that they concern the users who use the search functionality directly.
 					<itemizedlist>
-						<title>General Search Settings</title>
+						<title>Általános kereső beállítások</title>
 						<listitem><para><guilabel>Enable search facilities</guilabel>: Setting this option to <guilabel>Yes</guilabel> will enable the search functionality for your users; member-searching functionality will also be enabled.</para></listitem>
 						<listitem><para><guilabel>User search flood interval</guilabel>:  This value indicates the number of seconds that your users have to wait between consecutive searches. This value is checked independently for each user. All positive integers are valid values. If you want to disable checking for search intervals for users, set this value to &quot;0&quot;.</para></listitem>
 						<listitem><para><guilabel>Guest search flood interval</guilabel>: This is the number of seconds between searches that guest users must wait. This value is checked independently for each guest. All positive integers are valid values. If you want to disable checking for search intervals for guests, set this value to &quot;0&quot;.</para></listitem>
@@ -548,7 +548,7 @@
 				
 				<para>The next group of search settings actually only contains one setting: choosing what backend your board's search facilities, if enabled, will use. The following details this option.
 					<itemizedlist>
-						<title>Search Backend</title>
+						<title>Keresőmodul</title>
 						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext sesarch. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
 					</itemizedlist>
 					<note>
@@ -583,7 +583,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Forum Admin</title>
+		<title>Fórumok kezelése</title>
 		<para>The <guilabel>Forum</guilabel> section offers the tools to manage your forums. Whether you want to add new forums, add new categories, change forum descriptions, reorder or rename your forums, this is the place to go.</para>
 		<section id="acp_forums_types">
 			<sectioninfo>
@@ -593,7 +593,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Explanation of forum types</title>
+			<title>Fórum típusok leírása</title>
 			<para>In phpBB 3.0, there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
 			<variablelist>
 				<varlistentry>
@@ -624,13 +624,13 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Subforums</title>
+			<title>Alfórumok</title>
 			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums.</para>
 			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 				
 			<figure id="img_acp_subforums_list">
-				<title>Creating subforums</title>
+				<title>Alfórum létrehozása</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
@@ -652,11 +652,11 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage forums</title>
+			<title>Fórumok kezelése</title>
 			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
 			
 			<figure id="img_acp_forums_manage_legend">
-				<title>Managing Forums Icon Legend</title>
+				<title>Fórumok kezelése ikon magyarázat</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/manage_forums_icon_legend.png"/>
@@ -682,7 +682,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Posting Settings</title>
+		<title>Hozzászólás beállítások</title>
 		
 		<para>Forums are nothing without content. Content is created and posted by your users; as such, it is very important to have the right posting settings that control how the content is posted. You can reach this section by clicking the <guimenuitem>Posting</guimenuitem> navigation tab.</para>
 		<para>The first page you are greeted with after getting to the <guimenuitem>Posting Settings</guimenuitem> section is <guilabel>BBCodes</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
@@ -699,13 +699,13 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>BBCodes</title>
+			<title>BBCode-ok</title>
 			
 			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
 			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
 			
 			<figure id="img_acp_creating_bbcodes">
-				<title>Creating BBCodes</title>
+				<title>BBCode létrehozása</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/creating_bbcodes.png"/>
@@ -739,11 +739,11 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Private message settings</title>
+			<title>Privát üzenet beállítások</title>
 			
 			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 			<itemizedlist>
-				<title>General settings</title>
+				<title>Általános beállítások</title>
 				<listitem><para><guilabel>Private messaging</guilabel>: You can enable to disable your board's private messaging system. If you want to enable it, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Max private message folders</guilabel>: This is the maximum number of new private message folders your users can each create.</para></listitem>
 				<listitem><para><guilabel>Max private messages per box</guilabel>: This is the maximum number of private messages your users can have in each of their folders.</para></listitem>
@@ -752,7 +752,7 @@
 			</itemizedlist>	
 			
 			<itemizedlist>
-				<title>General options</title>
+				<title>Általános beállítások</title>
 				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.0, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
@@ -778,7 +778,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Topic icons</title>
+			<title>Téma ikonok</title>
 			
 			<para>A new feature in phpBB3 is the ability to assign icons to topics. On this page, you can manage what topic icons are available for use on your board. You can add, edit, delete, or move topic icons. The <guilabel>Topic Icons</guilabel> form displays the topic icons currently installed on your board. You can add topic icons manually, install a premade icons pack, export or download an icons pack file, or edit your currently installed topic icons.</para>
 		
@@ -809,7 +809,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Smilies</title>
+			<title>Emotikonok</title>
 			
 			<para>Smilies or emoticons are typically small, sometimes animated images used to convey an emotion or feeling. You can manage the smilies on your board via this page. To add smilies, you have the option to either install a premade smilies pack, or add smilies manually. Locate the <guilabel>Smilies</guilabel> form, which lists the smilies currently installed on your board, on the page. </para>
 		
@@ -842,7 +842,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Word censoring</title>
+			<title>Szócenzúra</title>
 			
 			<para>On some forums, a certain level of appropriate, profanity-free speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
 			
@@ -859,12 +859,12 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Attachment Settings</title>
+			<title>Csatolmány beállítások</title>
 			
 			<para>If you allow your users to post attachments, it is important to be able to control your board's attachments settings. Here, you can configure the main settings for attachments and the associated special categories. When you are done configuring your board's attachments settings, click <guilabel>Submit</guilabel>.</para>
 			
 			<itemizedlist>
-				<title>Attachment Settings</title>
+				<title>Csatolmány beállítások</title>
 				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Upload directory</guilabel>: The directory that attachments will be uploaded to. The default directory is <filename>/files/</filename>.</para></listitem>
@@ -880,7 +880,7 @@
 			</itemizedlist>
 			
 			<itemizedlist>
-				<title>Image Category Settings</title>
+				<title>Képkategória beállítások</title>
 				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to <guilabel>No</guilabel>, a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
 				<listitem><para><guilabel>Create thumbnail</guilabel>: This setting configures your board to either create a thumbnail for every image attached, or not.</para></listitem>
 				<listitem><para><guilabel>Maximum thumbnail width in pixels</guilabel>: This is the maximum width in pixels for the created thumbnails.</para></listitem>
@@ -891,7 +891,7 @@
 			</itemizedlist>
 			
 			<itemizedlist>
-				<title>Define Allowed/Disallowed IPs/Hostnames</title>
+				<title>Engedélyezett/letiltott IP-k/hosztnevek megadása</title>
 				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: If you have secure downloads enabled, you can specify the <glossterm>IP address</glossterm>es or hostnames allowed or disallowed. If you specify more than one <glossterm>IP address</glossterm> or hostname, each <glossterm>IP address</glossterm> or hostname should be on its own line. Entered values can have wildcards (*). To specify a range for an <glossterm>IP address</glossterm>, separate the start and end with a hyphen (-).</para></listitem>
 				<listitem><para><guilabel>Exclude IP from [dis]allowed IPs/hostnames</guilabel>: Enable this to exclude the entered IP(s)/hostname(s).</para></listitem>
 			</itemizedlist>
@@ -905,7 +905,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extensions</title>
+			<title>Kiterjesztések kezelése</title>
 			
 			<para>You can further configure your board's attachments settings by controlling what file extensions attached files can have to be uploaded. It is recommended that you do not allow scripting file extensions (such as php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, and so forth) for security reasons. You can find this page by clicking <guimenuitem>Manage extensions</guimenuitem> once you're in the <glossterm>ACP</glossterm>.</para>
 			
@@ -922,14 +922,14 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extension groups</title>
+			<title>Kiterjesztéscsoportok kezelése</title>
 			
 			<para>Allowed file extensions can be placed into groups for easy management and viewing. To manage the extension groups, click <guimenuitem>Manage extension groups</guimenuitem> once you get into the <guilabel>Posting</guilabel> settings part of the <glossterm>ACP</glossterm>. You can configure specific settings regarding each extension group.</para>
 			
 			<para>To add a new file extension group, find the textbox that corresponds to the <guilabel>Create new group</guilabel> button. Type in the name of the extension group, then click <guilabel>Submit</guilabel>. You will be greeted with the extension group settings form. The following contains descriptions for each option available, and applies to extension groups that either already exist or are being added.</para>
 		
 			<itemizedlist>
-				<title>Add Extension Group</title>
+				<title>Kiterjesztéscsoport hozzáadása</title>
 				<listitem><para><guilabel>Group name</guilabel>: The name of the extension group.</para></listitem>
 				<listitem><para><guilabel>Special category</guilabel>: Files in this extension group can be displayed differently. Select a special category from this selection menu to change the way the attachments in this extension group is presented within a post.</para></listitem>
 				<listitem><para><guilabel>Allowed</guilabel>: Enable this if you want to allow attachments that belong in this extension group.</para></listitem>
@@ -953,7 +953,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Orphaned attachments</title>
+			<title>Árva csatolmányok</title>
 			
 			<para>Sometimes, attachments may be orphaned, which means that they exist in the specified files directory (to configure this directory, see the section on <link linkend="acp_attach_settings">attachment settings</link>), but aren't assigned to any post(s). This can happen when posts are deleted or edited, or even when users attach a file, but don't submit their post.</para>
 			
@@ -977,10 +977,10 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Users Management</title>
+		<title>Felhasználók kezelése</title>
 
 		<section id="acp_users_manage">
-			<title>Manage Users</title>
+			<title>Felhasználók kezelése</title>
 			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
 				
 			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem> to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
@@ -997,7 +997,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Overview</title>
+				<title>Áttekintés</title>
 				<para>This is the first form that shows up when you first select a user to manage. Here, all of the general information and settings for each user is displayed.</para>
 				
 				<variablelist>
@@ -1091,7 +1091,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Feedback</title>
+				<title>Feljegyzések</title>
 				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
 				
 				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued. <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
@@ -1107,7 +1107,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Profile</title>
+				<title>Profil</title>
 				
 				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
 					<itemizedlist>
@@ -1133,7 +1133,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Preferences</title>
+				<title>Fórum beállítások</title>
 				
 				<para>Users have many settings they can use for their account. As an administrator, you can change any of these settings. The user settings (also known as preferences) are grouped into three main categories: <guilabel>Global Settings</guilabel>, <guilabel>Posting Defaults</guilabel>, and <guilabel>Display Options</guilabel>.</para>
 			</section>
@@ -1146,7 +1146,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Avatar</title>
+				<title>Avatar</title>
 				
 				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
 				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
@@ -1165,7 +1165,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Rank</title>
+				<title>Rang</title>
 				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
 				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
@@ -1180,7 +1180,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Signature</title>
+				<title>Aláírás</title>
 				
 				<para>Here you can add, edit, or delete the user's <glossterm>signature</glossterm>.</para>
 				<para>The user's current signature should be displayed in the <guilabel>Signature</guilabel> form. Just edit the signature by typing whatever you want into the text area. You can use <glossterm>BBCode</glossterm> and any other special formatting with what's provided. When you are done editing the user's signature, click <guilabel>Submit</guilabel> to update the user's signature.</para>
@@ -1197,7 +1197,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Groups</title>
+				<title>Csoportok</title>
 				
 				<para>Here you can see all of the <glossterm>usergroups</glossterm> that the user is in. From this page you can easily remove the user from any usergroup, or add the user to an existing group. The table entitled <guilabel>Special groups user is a member of</guilabel> lists out the usergroups the user is currently a member of.</para>
 				<para>Adding the user to a new usergroup is very easy. To do so, find the pull-down menu labeled <guilabel>Add user to group:</guilabel> and select a usergroup from that menu. Once the usergroup is selected, click <guilabel>Submit</guilabel>. Your addition will immediately take effect.</para>
@@ -1212,7 +1212,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Permissions</title>
+				<title>Jogosultságok</title>
 				
 				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
 			</section>
@@ -1225,7 +1225,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Attachments</title>
+				<title>Csatolmányok</title>
 				
 				<para>Depending on the current attachments settings, your users may already have <glossterm>attachments</glossterm> posted. If the user has already uploaded at least one attachment, you can see the listing of the attachment(s) in the table. The data available for each attachment consist of: <guilabel>Filename</guilabel>, <guilabel>Topic title</guilabel>, <guilabel>Post time</guilabel>, <guilabel>Filesize</guilabel>, and <guilabel>Downloads</guilabel>.</para>
 				<para>To help you in managing the user's attachment(s), you can choose the sorting order of the attachments list. Find the <guilabel>Sort by:</guilabel> pull-down menu and pick the category you want to use the sort the list (the possible options are <guimenuitem>Filename</guimenuitem>, <guimenuitem>Extension</guimenuitem>, <guimenuitem>Filesize</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Post time</guimenuitem>, and <guimenuitem>Topic title</guimenuitem>. To choose the sorting order, choose either <guimenuitem>Descending</guimenuitem> or <guimenuitem>Ascending</guimenuitem> from the pull-down menu besides the sorting category. Once you are done, click <guilabel>Go</guilabel>.</para>
@@ -1243,7 +1243,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Inactive Users</title>
+			<title>Inaktív felhasználók</title>
 			<para>Here you are able to view details of all users who are currently marked as inactive along with the reason their account is marked as inactive and when this occurred.</para>
 			<para>Using the checkboxes on this page it is possible to perform bulk actions on the users, these include activating the accounts, sending them a reminder email indicating that they need to activate their account or deleting the account.</para>
 			<para>There are 5 reasons which may be indicated for an account being inactive:</para>
@@ -1289,7 +1289,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' permissions</title>
+			<title>Felhasználók jogosultságai</title>
 			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
 		            
 		   	 <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
@@ -1315,14 +1315,14 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' forum permissions</title>
+			<title>Felhasználók fórum jogosultságai</title>
 			
 			<para>Along with editing your users' user account-related permissions, you can also edit their forum permissions, which relate to the forums in your board. Forum permissions are different from user permissions in that they are directly related and tied to the forums. <guimenuitem>Users' forum permissions</guimenuitem> allows you to edit your users' forum permissions. When doing so, you can only assign forum permissions to one user at a time.</para>
 		
 			<para>To start editing a user's forum permissions, start by typing in the user's username into the <guilabel>Find a member</guilabel> text box. If you would like to edit the forum permissions that pertain to the anonymous user, check the <guilabel>Select anonymous user</guilabel> text box. Click <guilabel>Submit</guilabel> to continue.</para>
 			
 			<figure id="img_acp_u_forum_permissions">
-				<title>Selecting forums for users' forum permissions</title>
+				<title>Fórumok kiválasztása felhasználók fórum jogosultságainak megadásához</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/users_forum_permissions.png"/>
@@ -1344,20 +1344,20 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Custom profile fields</title>
+			<title>Egyedi profil mezők</title>
 			
 			<para>One of the many new features in phpBB3 that enhance the user experience is <guilabel>Custom Profile Fields</guilabel>. In the past, users could only fill in information in the common profile fields that were displayed; administrators had to add MODifications to their board to accommodate their individual needs. In phpBB3, however, administrators can comfortably create custom profile fields through the <acronym>ACP</acronym>.</para>
 		
 			<para>To create your custom profile field, login to your ACP. Click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then locate the <guimenuitem>Custom profile fields</guimenuitem> link in the left-hand menu to click on. You should now be on the proper page. Locate the empty textbox below the custom profile fields headings, which is next to a selection menu and a <guilabel>Create new field</guilabel> button. Type in the empty textbox the name of the new profile field you want to create first. Then, select the field type in the selection menu. Available options are <guimenuitem>Numbers</guimenuitem>, <guimenuitem>Single text field</guimenuitem>, <guimenuitem>Textarea</guimenuitem>, <guimenuitem>Boolean (Yes/No)</guimenuitem>, <guimenuitem>Dropdown box</guimenuitem>, and <guimenuitem>Date</guimenuitem>. Click the <guilabel>Create new field</guilabel> button to continue. The following describes each of the three sets of settings that the new custom profile field will have.
 				<itemizedlist>
-					<title>Add profile field</title>
+					<title>Profil mező létrehozása</title>
 					<listitem><para><guilabel>Field type:</guilabel> This is the kind of the field that your new custom profile field is. That means that it can consist of numbers, dates, etc. This should already be set.</para></listitem>
 					<listitem><para><guilabel>Field identification:</guilabel> This is the name of the profile field. This name will identify the profile field within phpBB3's database and templates.</para></listitem>
 					<listitem><para><guilabel>Display profile field:</guilabel> This setting determines if the new profile field will be displayed at all. The profile field will be shown on topic pages, profiles and the memberlist if this is enabled within the load settings. Only showing within the users profile is enabled by default.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Visibility option</title>
+					<title>Láthatóság</title>
 					<listitem><para><guilabel>Display in user control panel:</guilabel> This setting determines if your users will be able to change the profile field within the <acronym>UCP</acronym>.</para></listitem>
 					<listitem><para><guilabel>Display at registration screen:</guilabel> If this option is enabled, the profile field will be displayed on the registration page. Users will be able to be change this field within the <acronym>UCP</acronym>.</para></listitem>
 					<listitem><para><guilabel>Required field:</guilabel> This setting determines if you want to force your users to fill in this profile field. This will display the profile field at registration and within the user control panel.</para></listitem>
@@ -1365,7 +1365,7 @@
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Language specific options</title>
+					<title>Nyelvspecifikus beállítások</title>
 					<listitem><para><guilabel>Field name/title presented to the user:</guilabel> This is the actual name of the profile field that will be displayed to your users.</para></listitem>
 					<listitem><para><guilabel>Field description:</guilabel> This is a simple description/explanation for your users filling out this field.</para></listitem>
 				</itemizedlist>
@@ -1382,7 +1382,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Managing ranks</title>
+			<title>Rangok kezelése</title>
 			
 			<para>Ranks are special titles that can be applied to forum users. As an administrator, it is up to you to create and manage the ranks that exist on your board. The actual names for the ranks are completely up to you; it's usually best to tailor them to the main purpose of your board.</para>
 			
@@ -1409,7 +1409,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>User Security</title>
+			<title>Felhasználóbiztonság</title>
 			<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
 			
 			<section id="acp_ban_emails">
@@ -1420,12 +1420,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban emails</title>
+				<title>E-mail címek kitiltása</title>
 				<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
 				
 				<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more email addresses</title>
+					<title>E-mail címek kitiltása</title>
 					<listitem><para><guilabel>Email address</guilabel>: This textbox should contain all the emails that you want to ban under a single rule. If you want to ban more than one email at this time, put each email on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the email address(es) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the email address(es) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
 					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered email address from all current bans.</para></listitem>
@@ -1435,7 +1435,7 @@
 				
 				<para>Other than adding emails to be banned, you can also un-ban or un-exclude email addresses from bans. To un-ban or exclude one or more email addresses from bans, fill in the <guilabel>Un-ban or un-exclude emails</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Un-ban or un-exclude emails</title>
+					<title>E-mail címek kitiltásának vagy feloldásának megszüntetése</title>
 					<listitem><para><guilabel>Email address</guilabel>: This multiple selection menu lists all currently banned emails. Select the email that you want to un-ban or exclude by clicking on the email in the multiple selection menu. <tip><para>To select more than one email address, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the emails you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected email. If more than one email address is selected, only one of the ban lengths will be displayed.</para></listitem>
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected email. If more than one email address is selected, only one of the ban reasons will be displayed.</para></listitem>
@@ -1451,12 +1451,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban IPs</title>
+				<title>IP-címek kitiltása</title>
 				<para>Sometimes, it is necessary to ban <glossterm>IP address</glossterm>es or hostnames in order to prevent unwanted users. There may be certain users or spam bots that use IPs or hostnames that you are aware of. Here, in the <guimenuitem>Ban IPs</guimenuitem> section, you can do this. You can control which IP addresses or hostnames are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
 				
 				<para>To ban or exclude one or more IP addresses and/or hostnames, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more IPs</title>
+					<title>IP-címek kitiltása</title>
 					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This textbox should contain all of the IP addresses and/or hostnames that you want to ban under a single rule. If you want to ban more than one IP address and/or hostname at this time, put each IP address and/or hostname on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the IP address(es) and/or hostname(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the IP address(es) and/or hostname(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
 					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered IP address(es) and/or hostnames from all current bans.</para></listitem>
@@ -1466,7 +1466,7 @@
 				
 				<para>Other than adding IP address(es) and/or hostname(s) to be banned, you can also un-ban or un-exclude IP address(es) and/or hostname(s) from bans. To un-ban or exclude one or more IP address(es) and/or hostname(s) from bans, fill in the <guilabel>Un-ban or un-exclude IPs</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Un-ban or un-exclude IPs</title>
+					<title>IP-címek, illetve hosztnevek kitiltásának vagy feloldásának megszüntetése</title>
 					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This multiple selection menu lists all currently banned IP address(es) and/or hostname(s). Select the IP address(es) and/or hostname(s) that you want to un-ban or exclude by clicking on the IP address(es) and/or hostname(s) in the multiple selection menu. <tip><para>To select more than one IP address and/or hostname, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the IP address(es) and/or hostname(s) you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban lengths will be displayed.</para></listitem>
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban reasons will be displayed.</para></listitem>
@@ -1482,12 +1482,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban Users</title>
+				<title>Felhasználók kitiltása</title>
 				<para>Whenever you encounter troublesome users on your board, you may have to ban them. On the <guimenuitem>Ban usernames</guimenuitem> page, you can do exactly that. On this page, you can manage all banned usernames.</para>
 				
 				<para>To ban or exclude one or more users, fill in the <guilabel>Ban one or more users</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more usernames</title>
+					<title>Felhasználók kitiltása</title>
 					<listitem><para><guilabel>Username</guilabel>: This textbox should contain all of the usernames that you want to ban under a single rule. If you want to ban more than one username at this time, put each username on its own line. You can also use wildcards (*) to partially match usernames.</para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the username(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the username(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
 					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered username(s) from all current bans.</para></listitem>
@@ -1497,7 +1497,7 @@
 				
 				<para>Other than adding users to be banned, you can also un-ban or un-exclude usernames from bans. To un-ban or exclude one or more users from bans, fill in the <guilabel>Un-ban or un-exclude usernames</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Un-ban or un-exclude usernames</title>
+					<title>Felhasználók kitiltásának vagy feloldásának megszüntetése</title>
 					<listitem><para><guilabel>Username</guilabel>: This multiple selection menu lists all currently banned usernames. Select the username(s) that you want to un-ban or exclude by clicking on the username(s) in the multiple selection menu. <tip><para>To select more than one username, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the usernames you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected username. If more than one username is selected, only one of the ban lengths will be displayed.</para></listitem>
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected username. If more than one username is selected, only one of the ban reasons will be displayed.</para></listitem>
@@ -1513,7 +1513,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Disallow usernames</title>
+				<title>Felhasználónevek letiltása</title>
 				
 				<para>In phpBB3, it is also possible to disallow the registration of certain usernames that match any usernames that you configure. (This is useful if you want to prevent users from registering with usernames that might confuse them with an important board member.) To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
 				
@@ -1530,14 +1530,14 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Prune users</title>
+				<title>Felhasználók megtisztítása</title>
 				
 				<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
 				
 				<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
 				
 				<itemizedlist>
-					<title>Prune users</title>
+					<title>Felhasználók megtisztítása</title>
 					<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
 					<listitem><para><guilabel>Email</guilabel>: The email that you want to be pruned. You can use wildcards (*) to prune users that have an email address that matches the given pattern.</para></listitem>
 					<listitem><para><guilabel>Joined</guilabel>: You can also prune users based on their date of registration. To prune users who joined before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who joined after a certain date, choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
@@ -1568,7 +1568,7 @@
 			</authorgroup>
 		</sectioninfo>
 		
-		<title>Group Management</title>
+		<title>Csoportok kezelése</title>
 		
 		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
 		
@@ -1585,7 +1585,7 @@
 				</authorgroup>
 			</sectioninfo>
 			
-			<title>Group types</title>
+			<title>Csoportok típusai</title>
 			<para>There are two types of groups:</para>
 			
 			<!-- TODO: More info on each pre-defined group? -->
@@ -1641,7 +1641,7 @@
 			
 		</section>
 		<section id="acp_groups_edit">
-			<title>Group attributes</title>
+			<title>Csoport tulajdonságok</title>
 			<para>A list of attributes a group can have:</para>
 			<variablelist>
 				<varlistentry>
@@ -1680,7 +1680,7 @@
 			
 		</section>
 		<section id="acp_groups_default">
-			<title>Default groups</title>
+			<title>Elsődleges csoport</title>
 			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit"/>, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
 			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
 			<important>
@@ -1701,7 +1701,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Permission Overload</title>
+		<title>Jogosultság felülírás</title>
 		<para><!-- TODO: stuff about permissions --></para>
 	</section>
 
@@ -1717,7 +1717,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Styles</title>
+		<title>Megjelenések</title>
 		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
 		
 		<para>phpBB 3.0 styles have three main parts: templates, themes, and imagesets.
@@ -1754,7 +1754,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Board Maintenance</title>
+		<title>Fórum karbantartás</title>
 		
 		<para>Running a phpBB 3.0 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
 		
@@ -1771,7 +1771,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Forum Logs</title>
+			<title>Fórum naplók</title>
 			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. This is important for you, the administrator, to keep track of. There are four types of logs:</para>
 			<variablelist>
 				<varlistentry>
@@ -1807,10 +1807,10 @@
 		</section>
 		
 		<section id="acp_maintenance_database">
-			<title>Database backup and restore</title>
+			<title>Adatbázis kimentése és visszaállítása</title>
 		</section>
 		<section id="acp_maintenance_search">
-			<title>Search Indexing</title>
+			<title>Keresőindex</title>
 		</section>
 	</section>
 
@@ -1822,19 +1822,19 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>System Configuration</title>
+		<title>Rendszer konfiguráció</title>
 		<para><!-- TODO: Stuff about system configuration --></para>
 		<section id="acp_system_updates">
-			<title>Checking for updates</title>
+			<title>Frissítés keresése</title>
 		</section>
 		<section id="acp_system_spiders">
-			<title>Managing Search Robots</title>
+			<title>Keresőrobotok kezelése</title>
 		</section>
 		<section id="acp_system_mail">
-			<title>Mass email</title>
+			<title>Csoportos e-mail</title>
 		</section>
 		<section id="acp_system_language">
-			<title>Language Packs</title>
+			<title>Nyelvi csomagok</title>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
@@ -1844,15 +1844,15 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>PHP Information</title>
+			<title>PHP információ</title>
 			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
 			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
 		</section>
 		<section id="acp_system_reports">
-			<title>Manage reasons for reporting and denying posts</title>
+			<title>Jelentés/visszautasítás okok kezelése</title>
 		</section>
 		<section id="acp_system_modules">
-			<title>Module Management</title>
+			<title>Modulok kezelése</title>
 		</section>
 	</section>
 </chapter>

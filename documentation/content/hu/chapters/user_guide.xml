@@ -10,7 +10,7 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>User Guide</title>
+	<title>Felhasználói kézikönyv</title>
 	<abstract>
 		<para>This chapter is targeted at the forum users. It explains all user facing functions that are needed to use phpBB 3.0.</para>
 	</abstract>
@@ -22,7 +22,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>How user permissions affect forum experience</title>
+		<title>A jogosultságok hatása a fórum használatára</title>
 		<para>phpBB3 uses permissions on a per-user or per-usergroup basis to allow or disallow users access to certain functions or features which software offers. These may include the ability to post in certain forums, having an avatar, or being able to communicate through private messages. All of the permissions can be set through the Administration Panel.</para>
 		<para>Permissions can also be set allowing appointed members to perform special tasks or have special abilities on the bulletin board. Permissions allow the Administrator to define which moderation functions and in which forums certain users or groups of users are allowed to use. This allows for appointed users to become moderators on the bulletin board. The administrator can also give users access to certain sections of the Administration panel, keeping important settings or functions restricted and safe from malicious acts. For example, a select group of moderators could be allowed to modify a user's avatar or signature if said avatar or signature is not allowed under a paticular forum's rules. Without these abilities set, the moderator would need to notify an administrator in order to have the user's profile changed.</para>
 	</section>
@@ -34,7 +34,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Registering on a phpBB3 board</title>
+		<title>Regisztrálás egy phpBB3-mas fórumra</title>
 		<para>The basic procedure of registering an account on a phpBB3 board consists in the simplest case of only two steps: <orderedlist>
 				<listitem>
 					<para>After following the "Register" link you should see the board rules. If you agree to these terms the registration process continues. If you don't agree you can't register your account</para>
@@ -72,17 +72,17 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Orienting Yourself in the User Control Panel</title>
+		<title>Tájékozódás a felhasználói vezérlőpultban</title>
 		<para>The User Control Panel (<glossterm>UCP</glossterm>) allows you to alter personal preferences, manage posts you are watching, send and receive private messages, and change the way information about you appears to other users. To view the UCP, click the 'User Control Panel' link that appears after logging in.</para>
 		<para>The UCP is separated into seven tabs: Overview, Private Messages, Profile, Preferences, Friends and Foes, Attachments, and Groups. Within each tab are several sub pages, accessed by clicking the desired link on the left side of the UCP interface. Some of these areas may not be available depending on the permissions set for you by the administrator.</para>
 		<para>Every page of the UCP displays your Friends List on the left side. To send a private message to a friend, click their user name.</para>
 		<para>TODO: Note that Private messaging will be discussed in its own section</para>
 		<section id="ucp_overview">
-			<title>Overview</title>
+			<title>Áttekintés</title>
 			<para>The Overview displays a snapshot of information about your posting habits such as the date you joined the forum, your most active topic, and how many total posts you have submitted. Overview sub pages include Subscriptions, Bookmarks, and Drafts.</para>
 				
 			<figure id="ucp_overview_index">
-				<title>User Control Panel Overview (Index</title>
+				<title>Felhasználói vezérlőpult áttekintés (kezdőlap)</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/user_guide/ucp_overview.png" />
@@ -94,35 +94,35 @@
 			</figure>
 			
 			<section id="ucp_subscriptions">
-				<title>Subscriptions</title>
+				<title>Feliratkozások</title>
 				<para>Subscriptions are forums or individual topics that you have elected to watch for any new posts. Whenever a new post is made inside an area you have subscribed to, an e-mail will be sent you to informing you of the new addition. To create a subscription, visit the forum or topic you would like to subscribe to and click the 'Subscribe' link located at the bottom of the page.</para>
 				<para>To remove a subscription, check the box next to the subscription you would like to remove and click the 'Unsubscribe' button.</para>
 			</section>
 			<section id="ucp_bookmarks">
-				<title>Bookmarks</title>
+				<title>Kedvencek</title>
 				<para>Bookmarks, much like subscriptions, are topics you've chosen to watch. However, there are two key differences: 1) only individual topics may be bookmarked, and 2) an e-mail will not be sent to inform you of new posts.</para>
 				<para>To create a bookmark, visit the topic you would like to watch and click the 'Bookmark Topic' link located at the bottom of the page.</para>
 				<para>To remove a bookmark, check the box next to the bookmark you would like to remove and click the 'Remove marked bookmarks' button.</para>
 			</section>
 			<section id="ucp_drafts">
-				<title>Drafts</title>
+				<title>Piszkozatok</title>
 				<para>Drafts are created when you click the 'Save' button on the New Post or Post Reply page. Displayed are the title of your post, the forum or topic that the draft was made in, and the date you saved it.</para>
 				<para>To continue editing a draft for future submission, click the 'View/Edit' link. If you plan to finish and post the message, click 'Load Draft'. To delete a draft, check the box next to the draft you wish to remove and click 'Delete Marked'.</para>
 			</section>
 		</section>
 		<section id="ucp_profile">
-			<title>Profile</title>
+			<title>Profil</title>
 			<para>This section lets you set your profile information. Your profile information contains general information that other users on the board will able to see. Think of your profile as a sign of your public presence. This section is separated from your preferences. (Preferences are the individual settings that you set and manage on your own, and control your forum experience. Thus, this is separated from your profile settings.)</para>
 			<section>
-				<title>Personal settings</title>
+				<title>Személyes beállítások</title>
 				<para>TODO: Explain the settings you can edit here. </para>
 			</section>
 			<section>
-				<title>Registration details</title>
+				<title>Regisztrációs beállítások</title>
 				<para>TODO: Explain the settings you can edit here.</para>
 			</section>
 			<section id="ucp_signature">
-				<title>Signature</title>
+				<title>Aláírás</title>
 				<para>TODO: Explain the settings you can edit here. Link to the BBcode explanation of the Posting section would be best.</para>
 			</section>
 			<section id="ucp_avatar">
@@ -131,31 +131,31 @@
 			</section>
 		</section>
 		<section id="ucp_preferences">
-			<title>Preferences</title>
+			<title>Fórum beállítások</title>
 			<para>TODO: Short explanation of what this section is for.</para>
 			<section id="ucp_personal">
-				<title>Personal</title>
+				<title>Személyes</title>
 				<para>TODO: Explain the settings you can edit here. The date setting will offer presets, so a link to the <ulink url="http://www.php.net/date">php.net date function</ulink> for advanced users should be enough.</para>
 			</section>
 			<section id="ucp_viewing">
-				<title>Viewing</title>
+				<title>Megjelenítés</title>
 				<para>TODO: Explain the settings you can edit here. </para>
 			</section>
 			<section id="ucp_posting">
-				<title>Posting</title>
+				<title>Hozzászólás</title>
 				<para>TODO: Explain the settings you can edit here. </para>
 			</section>
 		</section>
 		<section id="ucp_friends_foes">
-			<title>Friends and Foes</title>
+			<title>Barátok és haragosok</title>
 			<para>TODO: (Not sure if this deserves its own section yet. For 3.0 this does not have much of an influence on the overall forum experience, this might change with 3.2, so leaving it here for now.) Write a detailed explanation about what Friends and Foes are and how they affect the forum like hiding posts of foes, adding users to the friends list for fast access / online checks, and so forth.</para>
 		</section>
 		<section id="ucp_attachments">
-			<title>Attachments</title>
+			<title>Csatolmányok</title>
 			<para>TODO: The attachment section of the UCP shows you a list of all attachments that you have uploaded to the board so far ... </para>
 		</section>
 		<section id="ucp_usergroups">
-			<title>Usergroups</title>
+			<title>Csoportok</title>
 			<para>TODO: Work in progress, might change, so not sure how this is going to be structured.</para>
 		</section>
 	</section>
@@ -167,11 +167,11 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Mastering the Posting Screen</title>
+		<title>Hozzászólásküldés – vond irányításod alá a hozzászólásküldő oldalt</title>
 		<para>TODO: How to write a new post and how to reply. Special items like attachments or polls are subsections. Don't forget to mention the "someone has replied before you replied" feature, the topic review, and so forth. Topic icons, smilies, post options, usage of HTML ... it would probably best to add a screenshot with arrows to the different sections.</para>
 		<para>Posting is the primary purpose of bulletin boards. There are two main types of posts you can make: a topic or a reply. Selecting the <guilabel>New Topic</guilabel> button in a forum button will take you to the posting screen. After submitting your post, a new topic will appear in that forum with your post as the first displayed. Other users (and you as well) are now able to reply to your topic by using the <guilabel>Post Reply</guilabel> button. This will once again bring you to the posting screen, allowying you to enter your post.</para>
 		<section id="posting_form">
-			<title>Posting Form</title>
+			<title>Hozzászólásküldő űrlap</title>
 			<para>You will be taken to the posting form when you decide to post either a new topic or reply, where you can enter your post content.</para>
 			<itemizedlist>	
 				<listitem><para><guilabel>Topic/Post Icon</guilabel> - The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para></listitem>
@@ -183,14 +183,14 @@
 		</section>
 		
 		<section id="posting_smilies">
-			<title>Smilies</title>
+			<title>Emotikonok</title>
 			<para>Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. To use Smiles, certain characters are put together to get the desired output. For example, typing :) will insert [insert smilie here], ;) will insert [insert wink smilie here], etc. Other smilies require the format :texthere: to display. For example, :roll: will insert smilie whose eyes are rolling: [insert rolling smilie here], and :cry: will insert a smilie who is crying: [insert crying smilie here].</para>
 			<para>In many cases you can also select which smilie you'd like to insert by clicking its picture to the righthand side of the Post Content text box. When clicked, the smilie's characters will appear at the current location of the curser in the text box.</para>
 			<para>If you wish to be able to use these characters in your post, but not have them appear as smilies, please see <link linkend="posting_options">Posting Options</link>.</para>
 		</section>
 		
 		<section id="posting_bbcodes">
-			<title>BBCodes</title>
+			<title>BBCode-ok</title>
 			<para>TODO: What are BBcodes. Again, permission based which ones you can use. Explain syntax of the default ones (quote and URL for instance). How to disable BBcode by default, how to disable/enable it for one post.</para>
 			<para>BBCode is a type of formatting that can be applied to your post content, much like HTML. Unlike HTML, however, BBCode uses square brackets [ and ] instead of angled brackets &lt; and &gt;. Depending on the permissions the board administrator has set, you may be able to use only certain BBCodes or even none at all.</para>
 			<para>For detailed instructions on the useage of BBCode, you can click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text box. Please note that the administrator has the option to add new and custom BBCodes, so others may be availible to you which are not on this list.</para>
@@ -207,7 +207,7 @@
 		</section>
 		
 		<section id="posting_options">
-			<title>Post Options</title>
+			<title>Hozzászólás opciók</title>
 			<para>TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc.</para>
 			<para>When posting either a new topic or reply, there are several post options that are available to you. You can view these options by selecting the <guilabel>Options</guilabel> tab from the section below the posting form. Depending on the permissions the board administrator has assigned to you or whether you are posting a topic or reply, these options will be different.</para>
 			<itemizedlist>	
@@ -220,7 +220,7 @@
 			</itemizedlist>
 			
 			<section id="posting_special">
-				<title>Topic Types</title>
+				<title>Téma típusok</title>
 				<para>Provided you have the right permissions, you have the option of selecting various topic types when posting a new topic by using <guilabel>Post topic as</guilabel>. The four possible types are: <guilabel>Normal</guilabel>, <guilabel>Sticky</guilabel>, <guilabel>Announcement</guilabel>, and <guilabel>Global</guilabel>. By default, all new posts are <guilabel>Normal</guilabel>.</para>
 				<itemizedlist>	
 				
@@ -234,20 +234,20 @@
 		</section>
 		
 		<section id="posting_attachments">
-			<title>Attachments</title>
+			<title>Csatolmányok</title>
 			<para>TODO: How to add attachments, what restrictions might there be. Note that one needs to have the permission to use attachments. How to add more than one file, and so forth.</para>
 		</section>
 		<section id="posting_polls">
-			<title>Polls</title>
+			<title>Szavazás</title>
 			<para>TODO: Again, permission based should be noted. Explain how to add the different options, allow for multiple votes, vote changing, and so forth.</para>
 		</section>
 		<section id="posting_drafts">
-			<title>Drafts</title>
+			<title>Piszkozatok</title>
 			<para>TODO: Explain how to load and save drafts. A link to the UCP drafts section should be added for reference. Not sure if permission based.</para>
 		</section>
 	</section>
 	<section id="user_pm">
-		<title>Communicate with Private Messages</title>
+		<title>Kapcsolattartás privát üzeneten keresztül</title>
 		<para>phpBB 3.0 allows its users to communicate privately by using Private Messages. To visit the Private Messages section, you either can click on the [X new messages] link on the left hand side below the forum header, or you can directly access it through the <link linkend="user_control_panel">User Control Panel.</link>.</para>
 		<para>Depending on your [settings], there are 3 ways of being notified that a new Private Message has arrived:</para>
 		<orderedlist>
@@ -265,11 +265,11 @@
 		<para>You can choose to not receive Private Messages by other users in your <link linkend="ucp_preferences"> Preferences</link>. Note, that moderators and administrators will still be able send you Private Messages, even if you have disabled them.</para>
 		<para>[To use this feature, you have to be a registered user and need the to have the correct permissions.]</para>
 		<section id="pm_display">
-			<title>Message display</title>
+			<title>Üzenet megtekintése</title>
 			<para>The Inbox is the default incoming folder, which contains a list of your recently received Private Messages. </para>
 		</section>
 		<section id="pm_new">
-			<title>Composing a new message</title>
+			<title>Új üzenet írása</title>
 			<para>TODO: Similar to the posting screen, so a reference for the basic functions should be enough. What needs to be explained are the To and Bcc fields, how they integrate with the friends list and how to find members (which could also be a link to the memberlist section).</para>
 		</section>
 		<section id="pm_folders">
@@ -280,7 +280,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Message Folders</title>
+			<title>Mappák</title>
 			<para>Just like in your e-mail client, all <glossterm>private messages</glossterm> are stored in folders. Working with folders is similar to working with forums in phpBB 3.0. The <guilabel>Inbox</guilabel> is your default incoming message folder. All messages you receive will appear in here.</para>
 			<para><guilabel>Sent messages</guilabel> will appear in either the <guilabel>Outbox</guilabel> or the <guilabel>Sent messages</guilabel> folder. As long as the recipient(s) have not yet read the message, it will stay in the <guilabel>Outbox</guilabel>. As soon as someone reads the message it will be archived to the <guilabel>Sent messages</guilabel> folder. If the administrator allows it, you can edit messages after sending them as long as they are in the <guilabel>Outbox</guilabel> and the recipients have not yet read them.</para>
 			<para>Each folder, including <guilabel>Sent messages</guilabel> and <guilabel>Outbox</guilabel>, can hold a board-defined amount of messages. This is a global setting that only a board administrator can change. An info text displays the current number of allowed messages and the current percentage of space your messages are using at the top of each folder. If no restriction is displayed, you are allowed unlimited messages in each folder.</para>
@@ -296,7 +296,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Custom Folders</title>
+				<title>Egyéni mappák</title>
 				
 				<para>If the administrator allows it, you can create your own custom <glossterm>private message</glossterm> folders in phpBB 3.0. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
 				<para>To add a new folder, enter the folder's name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_filters">Private Message Filters</link> for more information about filters) to automatically do it for you.</para>
@@ -310,7 +310,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Moving Messages</title>
+				<title>Üzenet áthelyezése</title>
 				
 				<para>It wouldn't make sense to have custom folders if you weren't able to move messages between them. To do exactly that, visit the folder from which you want to move the messages away. Select the messages you want to move, and use the <guilabel>Moved marked</guilabel> pull-down menu to select the destination folder.</para>
 				<note>
@@ -326,7 +326,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Message Markers</title>
+				<title>Üzenet jelölések</title>
 				
 				<para>Messages inside folders can have colour markings. Please refer to the <guilabel>Message colours</guilabel> legend to see what each colour means. The exact type of colouring depends on the used theme. Coloured messages can have four different meanings:</para>
 				<variablelist>
@@ -365,12 +365,12 @@
 			</section>
 		</section>
 		<section id="pm_filters">
-			<title>Message filters</title>
+			<title>Szűrők</title>
 			<para>TODO: How to work with message filters. That is quite a complex system</para>
 		</section>
 	</section>
 	<section id="user_search">
-		<title>Search - How to Find What You are Looking For</title>
+		<title>Keresés – hogyan találd meg, amit keresel</title>
 		<para>TODO: Explain how to use the search system. This should also include the results page, and the refine function. Also note, that the title (Search: search term) is a link that one can copy and paste into a post to directly link to the results. Egosearch and the global search field should also be included here.</para>
 	</section>
 	
@@ -382,11 +382,11 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>The Memberlist - More Than Meets the Eye</title>
+		<title>Taglista – több, mint amit látni vélsz</title>
 		<para>phpBB3 introduces several new ways to search for users.</para>
 		
 		<figure id="user_memberlist_sorting">
-			<title>Sorting the memberlist</title>
+			<title>Rendezés</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/user_guide/memberlist_sorting.png" />

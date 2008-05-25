@@ -10,7 +10,7 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Upgrade Guide</title>
+	<title>Frissítési kézikönyv</title>
 	<abstract>
 		<para>Do you want to upgrade your phpBB2 forum to version 3.0? This chapter will tell and show you how it is done.</para>
 	</abstract>
@@ -22,7 +22,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Upgrading from 2.0 to 3.0</title>
+		<title>Frissítés 2.0-ról 3.0-ra</title>
 		<para>The upgrade process from 2.0.x to 3.0.x is a straight-forward, simplified process.</para>
 		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.0.x.</para>
 		<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>

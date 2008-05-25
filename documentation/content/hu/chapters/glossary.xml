@@ -10,7 +10,7 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Glossary</title>
+	<title>Szójegyzék</title>
 	<abstract>
 		<para>A guide to the terms used in the phpBB Documentation and on the forums.</para>
 	</abstract>
@@ -32,7 +32,7 @@
 			</authorgroup>
 		</sectioninfo>
 		
-		<title>Terms</title>
+		<title>Kifejezések</title>
 		<para>There are quite a few terms that are commonly used throughout phpBB and the support forums. Here is some information on these terms.</para>
 		
 		<!-- TODO: Add links to sections on the respective item for whichever terms need it. For example, the ACP bit needs to link to the section of the Admin Guide. -->
