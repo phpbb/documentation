@@ -33,7 +33,7 @@
 		</sectioninfo>
 		
 		<title>Termer</title>
-		<para>I phpBB og på phpBB's supportboards anvendes en række termer og forkortelser. Nedenfor gennemgås på de mest almendt anvendte.</para>
+		<para>I phpBB og på phpBB's supportboards anvendes en række termer og forkortelser. Nedenfor gennemgås på de mest alment anvendte.</para>
 		
 		<!-- TODO: Add links to sections on the respective item for whichever terms need it. For example, the ACP bit needs to link to the section of the Admin Guide. -->
 		<!-- TODO: Jan: Når oversættelse er færdiggjort sorteres termforklaringerne alfabetisk. Den er i øjeblikket sorteret alfabetisk efter de engelse benævnelser. Den holder ikke i flere tilfælde efter oversættelse til dansk. -->
@@ -42,7 +42,7 @@
 			<varlistentry>
 				<term>ACP</term>
 				<listitem>
-					<para><link linkend="admin_control_panel"><acronym>ACP</acronym></link> er en forkortelse af &quot;Administratorkontrolpanel&quot;.  Her kan du, som administrator, kontrollere og indstille alle funtioner på dit board.</para>
+					<para><link linkend="admin_control_panel"><acronym>ACP</acronym></link> er en forkortelse af &quot;Administratorkontrolpanel&quot;.  Her kan du som administrator, kontrollere og indstille alle funktioner på dit board.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -63,14 +63,14 @@
 			<varlistentry>
 				<term>Avatar</term>
 				<listitem>
-					<para><link linkend="ucp_avatar">Avatars</link> er små billeder som vises sammen med brugernavnene. En avatar kan ændres under dine profilindstillinger. I <acronym>ACP</acronym> kan den overordnede brug af avatars tillades eller forbydes.</para>
+					<para><link linkend="ucp_avatar">Avatars</link> er små billeder som vises sammen med brugernavn. En avatar kan ændres under dine profilindstillinger. I <acronym>ACP</acronym> kan den overordnede brug af avatars tillades eller forbydes.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>BBkode</term>
 				<listitem>
-					<para><link linkend="posting_bbcodes">BBkode</link> er en måde at formatere indlæg på som giver fin kontrol over hvordan indlægget vises. Syntaksen i BBkoder er meget lig HTML.</para>
+					<para><link linkend="posting_bbcodes">BBkode</link> er en måde at formatere indlæg på, som giver fin kontrol over hvordan indlægget vises. Syntaksen i BBkoder er meget lig HTML.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -98,14 +98,14 @@
 			<varlistentry>
 				<term>chmod</term>
 				<listitem>
-					<para><abbrev>chmod</abbrev> is a way of changing the permissions of a file on a *nix (UNIX, Linux, etc.) server. Files in phpBB should be chmodded 644. Directories should be chmodded to 755. Avatar upload directories and templates cache directories should be chmodded to 777. For more information regarding chmod, please consult your <acronym>FTP</acronym> client's documentation.</para>
+					<para><abbrev>chmod</abbrev> er en måde at ændre en fils tilladelser på en *nix-server (UNIX, Linux, etc.). Filerne i phpBB skal være chmodded til 644, mapper til 755. Avatar uploadmapper and cachemappen til 777. Du kan finde mere information om chmod i dokumentationen til din <acronym>FTP</acronym>-klient.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Klient</term>
 				<listitem>
-					<para>En klient er betegnelsen for en computer som tilgår og benytter sig af en anden computers service via et netværk.</para>
+					<para>En klient er betegnelsen for en computer som tilgår en anden computer via et netværk og benytter sig af dennes service.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -119,21 +119,21 @@
 			<varlistentry>
 				<term>Database</term>
 				<listitem>
-					<para>A database is a collection stored in a structured, organized manner (with different tables, rows, and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.0 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, and categories. Data stored in a database can usually be backed up and restored easily.</para>
+					<para>En database er information gemt på en struktureret og organiseret måde (i tabeller, række og kollonner). Databaser giver en hurtig og fleksibel metode til at opbevare data, i modsætning til den anden også meget anvendte metode, hvor data gemmes i "flade" filer. phpBB 3.0 understøtter flere forskellige <acronym>DBMSs</acronym>  og gemmer information om brugere, indlæg, emner m.m. i databasesystemet. Det er nemt at foretage backup af databasen og gendanne denne.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>DBAL</term>
 				<listitem>
-					<para><acronym>DBAL</acronym>, or &quot;Database Abstraction Layer&quot;, is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
+					<para><acronym>DBAL</acronym>, eller &quot;Database Abstraction Layer&quot;, er et system som giver phpBB 3.0 mulighed for at anvende mange forskellige <acronym>DBMSs</acronym> med lidt overhead. Al kode til phpBB (MODs inklusive) skal gøre brug af phpBB-<acronym>DBAL</acronym> af hensyn til kompabilitet og ydeevne.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>DBMS</term>
 				<listitem>
-					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
+					<para><acronym>DBMS</acronym>, eller &quot;Database Management System&quot;, er et system eller en software designet for at håndtere en database. phpBB 3.0 understøtter følgende DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, og SQLite.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -145,30 +145,30 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Founder</term>
+				<term>Grundlægger</term>
 				<listitem>
-					<para>A founder is a special board administrator that cannot be edited or deleted. This is a new user level introduced in phpBB 3.0.</para>
+					<para>En grundlægger er en særlig boardadministrator som ikke kan ændres eller slettes. Det er en ny brugerprofil introduceret i phpBB 3.0.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>GZip</term>
 				<listitem>
-					<para>GZip is a compression method often used in web applications and software such as phpBB to improve speed. Most modern browsers support this on-the-fly algorithm. Gzip is also used to compress an archive of files. Higher compression levels, however, will increase server load.</para>
+					<para>GZip er en komprimeringsteknik som ofte anvendes i web-applikationer og software som for eksempel phpBB. Teknikken kan være med til at øge overførselshastighed og mindske båndbreddeforbrug, til gengæld øges belastningen på serveren. De fleste moderne browsere understøtter denne teknik. Gzip bruges også til at komprimere eller pakke filer og mapper med, fuldstændig som med zip.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>IP address</term>
+				<term>IP-adresse</term>
 				<listitem>
-					<para>An IP address, or Internet Protocol address, is a unique address that identifies a specific computer or user.</para>
+					<para>En IP-adresse, eller Internet Protocol adresse, er en unik adresse som identificerer en specifik computer eller bruger.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Jabber</term>
 				<listitem>
-					<para>Jabber is an open-source protocol that can be used for instant messenging. For more information on Jabber's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
+					<para>Jabber er en open-source protokol der kan anvendes til instant messenging. Yderligere information om Jabber's rolle i phpBB, se <xref linkend="acp_client_jabber" />.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -217,7 +217,7 @@
 			<varlistentry>
 				<term>Rang</term>
 				<listitem>
-					<para>En rang er en slags titel som kan tildeles en bruger. Rankgordner kan oprettes, ændres og slettes af administratorerne.</para>
+					<para>En rang er en slags titel som kan tildeles en bruger. Rangordner kan oprettes, ændres og slettes af administratorerne.</para>
 					
 					<note>
 						<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
@@ -291,7 +291,7 @@
 			<varlistentry>
 				<term>Brugergruppe</term>
 				<listitem>
-					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det meget nemt at indstille og ændre tilladelser for mange brugere samtidig (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
+					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
