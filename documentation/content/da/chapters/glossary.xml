@@ -112,7 +112,7 @@
 			<varlistentry>
 				<term>Cookie</term>
 				<listitem>
-					<para>En cookie er a small piece of data put onto the user's computer. Cookies are used with phpBB to store login information (used for automatic logins).</para>
+					<para>En cookie er en lille tekst-fil, som placeres på brugerens computer. phpBB anvender cookies til at gemme information om log ind og er nødvendig for at brugeren kan logges automatisk ind.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -140,7 +140,7 @@
 			<varlistentry>
 				<term>FTP</term>
 				<listitem>
-					<para><acronym>FTP</acronym> stands for &quot;File Transfer Protocol&quot;. It is a protocol which allows files to be transferred between computers. <acronym>FTP</acronym> clients are programs that are used to transfer files via <acronym>FTP</acronym>.</para>
+					<para><acronym>FTP</acronym>, eller &quot;File Transfer Protocol&quot;. Protokollen anvendes til at flytte filer mellem computere. <acronym>FTP</acronym>-klienter er de programmer man anvender til at flytte filer med <acronym>FTP</acronym>.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -175,14 +175,18 @@
 			<varlistentry>
 				<term>MCP</term>
 				<listitem>
+<<<<<<< .mine
+					<para><acronym>MCP</acronym>, er en forkortelse for Moderation Control Panel (redaktørkontrolpanel). MCP er det centrale kontrolpanel hvorfra alle redaktører kan redigere deres fora. Alle redigeringsværktøjer kan findes i dette kontrolpanel.</para>
+=======
 					<para><acronym>MCP</acronym>, eller redaktørkontrolpanelet, er det centrale menupunkt hvorfra alle redaktører kan redigere deres fora. Alle funktioner relateret til redigering er indeholdt i dette kontrolpanel.</para>
+>>>>>>> .theirs
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>MD5</term>
 				<listitem>
-					<para><acronym>MD5</acronym> (Message Digest algorithm 5) is a commonly-used hash function used by phpBB. MD5 is an algorithm which takes an input of any length and outputs a message digest of a fixed length (128-bit, 32 characters). MD5 is used in phpBB to turn the users' passwords into a one-way hash, meaning that you cannot &quot;decrypt&quot; (reverse) an MD5 hash and get users' passwords. User passwords are stored as MD5 hashes in the database.</para>
+					<para><acronym>MD5</acronym> (Message Digest algorithm 5) er en kryptografisk hashfunktion med en 128-bit (16 bytes) hashværdi. I phhBB bruges MD5 til at kryptere brugernes kodeord i en envejs hash, som betyder at man ikke kan &quot;dekryptere&quot; kodeordet i phpBB's database.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -291,7 +295,7 @@
 			<varlistentry>
 				<term>Brugergruppe</term>
 				<listitem>
-					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
+					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (f.eks. oprette en redaktørgruppe og tildele denne gruppe redaktørtilladelser i et bestemt forum, fremfor at tildele en hel række brugere separate redaktørtilladelser i dette forum). En brugergruppe kan have gruppeledere som kan tilføje og slette brugere i gruppen. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
