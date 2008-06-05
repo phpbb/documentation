@@ -175,11 +175,7 @@
 			<varlistentry>
 				<term>MCP</term>
 				<listitem>
-<<<<<<< .mine
-					<para><acronym>MCP</acronym>, er en forkortelse for Moderation Control Panel (redaktørkontrolpanel). MCP er det centrale kontrolpanel hvorfra alle redaktører kan redigere deres fora. Alle redigeringsværktøjer kan findes i dette kontrolpanel.</para>
-=======
 					<para><acronym>MCP</acronym>, eller redaktørkontrolpanelet, er det centrale menupunkt hvorfra alle redaktører kan redigere deres fora. Alle funktioner relateret til redigering er indeholdt i dette kontrolpanel.</para>
->>>>>>> .theirs
 				</listitem>
 			</varlistentry>
 			
@@ -214,7 +210,7 @@
 			<varlistentry>
 				<term>Private beskeder</term>
 				<listitem>
-					<para>Private beskeder are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient. The user guide contains more information on <link linkend="user_pm">using phpBB3's private messaging system</link>.</para>
+					<para>Private beskeder giver tilmeldte brugere mulighed for at kommunikere privat via boardet uden at skulle gøre brug af email eller instant messaging. Private beskeder kan sendes mellem brugere, kan videresendes og kopier tilsendes, og kan kun læses af modtager. Brugermanualen indeholder uddybende information om <link linkend="user_pm">brug af phpBB3's beskedsystem</link>.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -244,44 +240,44 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Signature</term>
+				<term>Signatur</term>
 				<listitem>
-					<para>A signature is a message displayed at the end of a user's post. Signatures are set by the user. Whether or not a signature is displayed after a post is set by the user's profile settings.</para>
+					<para>En signatur er en tekst eller et billede der vises som afslutning i brugerens indlæg. Signaturen oprettes af brugeren, og vises hvis brugeren har tilvalgt muligheden i brugerkontrolpanelet. Boardadministratoren skal også have tilladt signaturer på boardet.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>SMTP</term>
 				<listitem>
-					<para><acronym>SMTP</acronym> stands for &quot;Simple Mail Transfer Protocol&quot;. It is a protocol for sending email. By default, phpBB uses <acronym>PHP</acronym>'s built-in <ulink url="http://www.php.net/manual/en/function.mail.php">mail()</ulink> function to send email. However, phpBB will use <acronym>SMTP</acronym> to send emails if the required <acronym>SMTP</acronym> data is correctly set up.</para>
+					<para><acronym>SMTP</acronym> eller &quot;Simple Mail Transfer Protocol&quot; er den protokol der anvendes for at afsende email. Som standard anvender phpBB <acronym>PHP</acronym>'s indbyggede <ulink url="http://www.php.net/manual/en/function.mail.php">mail()</ulink>-funtionalitet til at afsende email. phpBB kan imidlertid indstilles til at bruge <acronym>SMTP</acronym> til afsendelse, hvis de korrekte <acronym>SMTP</acronym>-parametre anvendes.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Style</term>
+				<term>Typografi</term>
 				<listitem>
-					<para>A style is made up of a template set, image set, and stylesheet. A style controls the overall look of your forum.</para>
+					<para>En typografi består af en skabelon, et tema og en billedpakke. Typografien bestemmer det overordnede udseende af dit board.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Sub-forum</term>
+				<term>Underforum</term>
 				<listitem>
-					<para>Sub-forums are a new feature introduced in phpBB 3.0. Sub-forums are forums that are nested in, or located in, other forums.</para>
+					<para>Muligheden for at oprette underfora er ny i phpBB 3.0. Underfora er i, eller placeret i andre fora.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Template</term>
+				<term>Skabelon</term>
 				<listitem>
-					<para>A template is what controls the layout of a style. phpBB 3.0 template files have the .html file extension. These template files contain mostly <acronym>HTML</acronym> (no <acronym>PHP</acronym>, however), with some variables that phpBB uses (contained in braces: { and }).</para>
+					<para>En skabelon omfatter alle de markeringer der bruges for at skabe dit boards udseende. phpBB 3.0 skabelonfilerne er html-filer. Disse skabelonfiler indeholder hovedsaglig <acronym>HTML</acronym>-kode (ingen <acronym>PHP</acronym>-kode) og nogle variabler phpBB bruger (indeholdt i: { og }).</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>UCP</term>
 				<listitem>
-					<para>The <acronym>UCP</acronym>, or User Control Panel, is the central point from which users can manage all of the settings and features that pertain to their accounts.</para>
+					<para><acronym>UCP</acronym> eller brugerkontrolpanelet, er stedet hvor brugere kan indstille og ændre alle muligheder og indstillinger tilhørende deres personlige brugerkonti.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -295,7 +291,7 @@
 			<varlistentry>
 				<term>Brugergruppe</term>
 				<listitem>
-					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (f.eks. oprette en redaktørgruppe og tildele denne gruppe redaktørtilladelser i et bestemt forum, fremfor at tildele en hel række brugere separate redaktørtilladelser i dette forum). En brugergruppe kan have gruppeledere som kan tilføje og slette brugere i gruppen. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
+					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (f.eks. oprette en redaktørgruppe og tildele denne gruppe redaktørtilladelser i et bestemt forum, fremfor at tildele en hel række brugere separate redaktørtilladelser i dette forum). En brugergruppe kan have gruppeledere som kan tilføje og slette brugere i gruppen. Brugergrupper kan være skjulte, lukkede eller åbne. Hvis en brugergruppe er åben, kan brugere anmode om medlemskab i denne i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
