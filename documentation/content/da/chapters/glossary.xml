@@ -36,7 +36,7 @@
 		<para>I phpBB og på phpBB's supportboards anvendes en række termer og forkortelser. Nedenfor gennemgås på de mest alment anvendte.</para>
 		
 		<!-- TODO: Add links to sections on the respective item for whichever terms need it. For example, the ACP bit needs to link to the section of the Admin Guide. -->
-		<!-- TODO: Jan: Når oversættelse er færdiggjort sorteres termforklaringerne alfabetisk. Den er i øjeblikket sorteret alfabetisk efter de engelse benævnelser. Den holder ikke i flere tilfælde efter oversættelse til dansk. -->
+		<!-- NOTE: Jan: The glossary is resorted alfabetic according to the translated terms. This can complicate things a bit when the english file is updated or changed, but I think we're capable to handle that :-) -->
 		
 		<variablelist>
 			<varlistentry>
@@ -50,13 +50,6 @@
 				<term>ASCII</term>
 				<listitem>
 					<para><acronym>ASCII</acronym>, eller &quot;American Standard Code for Information Interchange&quot;, er en almindelig anvendt indkoding af data som skal flyttes til en anden computer. <acronym>FTP</acronym>-klienter bruger ASCII-mode når filer flyttes. Alle phpBB-filer (filtyperne .php, .inc, .sql, .cfg, .htm, and .tpl) skal uploades i ASCII-mode. Eneste undtagelse er grafikfiler, som skal uploades i BINARY-mode.</para>
-				</listitem>
-			</varlistentry>
-			
-			<varlistentry>
-				<term>Vedhæftede filer</term>
-				<listitem>
-					<para>Der kan <link linkend="acp_board_attachments">vedhæftes filer</link> til indlæg, på tilsvarende måde som når man skriver en email. Boardadministratoren kan have valgt visse restriktioner og bestemt at kun nogle filtyper kan vedhæftes og også begrænset størrelsen på den enkelte vedhæftede fil.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -82,30 +75,16 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Mellemlager (Cache)</term>
+				<term>Brugergruppe</term>
 				<listitem>
-					<para>Mellemlagring er en metode til at gemme data der ofte hentes. Ved benyttelse af denne metode aflastes din server. Som standard er phpBB3 indstillet til at mellemlagre skabelonfilerne.</para>
+					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (f.eks. oprette en redaktørgruppe og tildele denne gruppe redaktørtilladelser i et bestemt forum, fremfor at tildele en hel række brugere separate redaktørtilladelser i dette forum). En brugergruppe kan have gruppeledere som kan tilføje og slette brugere i gruppen. Brugergrupper kan være skjulte, lukkede eller åbne. Hvis en brugergruppe er åben, kan brugere anmode om medlemskab i denne i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Kategori</term>
-				<listitem>
-					<para>En kategori er en gruppe af alle slags identiske enheder, for eksempel fora.</para>
-				</listitem>
-			</varlistentry>
-			
-			<varlistentry>
-				<term>chmod</term>
+				<term>Chmod</term>
 				<listitem>
 					<para><abbrev>chmod</abbrev> er en måde at ændre en fils tilladelser på en *nix-server (UNIX, Linux, etc.). Filerne i phpBB skal være chmodded til 644, mapper til 755. Avatar uploadmapper and cachemappen til 777. Du kan finde mere information om chmod i dokumentationen til din <acronym>FTP</acronym>-klient.</para>
-				</listitem>
-			</varlistentry>
-			
-			<varlistentry>
-				<term>Klient</term>
-				<listitem>
-					<para>En klient er betegnelsen for en computer som tilgår en anden computer via et netværk og benytter sig af dennes service.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -173,6 +152,20 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>Kategori</term>
+				<listitem>
+					<para>En kategori er en gruppe af alle slags identiske enheder, for eksempel fora.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Klient</term>
+				<listitem>
+					<para>En klient er betegnelsen for en computer som tilgår en anden computer via et netværk og benytter sig af dennes service.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>MCP</term>
 				<listitem>
 					<para><acronym>MCP</acronym>, eller redaktørkontrolpanelet, er det centrale menupunkt hvorfra alle redaktører kan redigere deres fora. Alle funktioner relateret til redigering er indeholdt i dette kontrolpanel.</para>
@@ -187,23 +180,30 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>Mellemlager (Cache)</term>
+				<listitem>
+					<para>Mellemlagring er en metode til at gemme data der ofte hentes. Ved benyttelse af denne metode aflastes din server. Som standard er phpBB3 indstillet til at mellemlagre skabelonfilerne.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>MOD</term>
 				<listitem>
-					<para>A <abbrev>MOD</abbrev> is a code modification for phpBB that either adds, changes, or in some other way enhances, phpBB. <abbrev>MODs</abbrev> are written by third-party authors; as such, the phpBB Group does not assume any responsibility for MODs.</para>
+					<para>Et <abbrev>MOD</abbrev> er en kodemodifikation til phpBB som ændrer, tilføjer eller udvider phpBB's funktioner. <abbrev>MODs</abbrev> kodes og frigives af selvstændige udviklere. phpBB Group påtager sig ikke ansvaret for om installation af MODs medfører fejl eller lignende.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>PHP</term>
 				<listitem>
-					<para><acronym>PHP</acronym>, or &quot;PHP: Hypertext Preprocessor&quot;, is a commonly-used open-source scripting language. phpBB is written in <acronym>PHP</acronym> and requires the <acronym>PHP</acronym> runtime engine to be installed and properly configured on the server phpBB is run on. For more information about <acronym>PHP</acronym>, please see the <ulink url="http://www.php.net">PHP</ulink> home page.</para>
+					<para><acronym>PHP</acronym>, eller &quot;PHP: Hypertext Preprocessor&quot; er et populært og meget anvendt open-source programmeringsprog. phpBB er kodet i  <acronym>PHP</acronym> og kræver <acronym>PHP</acronym>'s runtime engine er installeret og konfigureret korrekt på den server hvor phpBB er installeret. Læs mere information om <acronym>PHP</acronym> på <ulink url="http://www.php.net">PHP</ulink>'s hjemmeside.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>phpMyAdmin</term>
 				<listitem>
-					<para>phpMyAdmin is a popular open-source program that is used to manage MySQL databases. When <abbrev>MODding</abbrev> phpBB or otherwise changing it, you may have to edit your database. phpMyAdmin is one such tool that will allow you to do so. For more information regarding phpMyAdmin, please see the <ulink url="http://www.phpmyadmin.net">phpMyAdmin project home page</ulink>.</para>
+					<para>phpMyAdmin er et populært open-source program som bruges til at administrere MySQL databaser. Når man <abbrev>MOD'er</abbrev> phpBB eller på anden måde ændrer i funktionaliteterne, kan det være nødvendigt at ændre i databasen. phpMyAdmin er et af værktøjerne der kan bruges til det. Læs mere information om phpMyAdmin på <ulink url="http://www.phpmyadmin.net">phpMyAdmin's hjemmeside</ulink>.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -220,29 +220,29 @@
 					<para>En rang er en slags titel som kan tildeles en bruger. Rangordner kan oprettes, ændres og slettes af administratorerne.</para>
 					
 					<note>
-						<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
+						<para>Når en bruger tildeles en specialrang tilknyttes ingen særlige tilladelser. Hvis du eksempelvis opretter en rang med titlen &quot;Supportredaktør&quot; og tildeler den til en bruger, får brugeren ikke automatisk redaktørtilladelser. Tilladelserne skal gives til brugeren særskilt, eller ved at indmelde brugeren i en gruppe, der har de rette tilladelser.</para>
 					</note>
-				</listitem>
-			</varlistentry>
-			
-			<varlistentry>
-				<term>Server-writable</term>
-				<listitem>
-					<para>Anything on your server that is server-writable means that the file(s) or folder(s) in question have their permissions properly set so that the server can write to them. Some phpBB3 functions that may require some files and/or folders to be writable by the server include caching and the actual installation of phpBB3 (the config.php file needs to be written during the installation process). Making files or folders server-writable, however, depends on the operating system that the server is running under. On *nix-based servers, users can configure file and folder permissions via the <glossterm>CHMOD</glossterm> utility, while Windows-based servers offer their own permissions scheme. It is possible with some <glossterm>FTP</glossterm> clients to change file and folder permissions as well.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Session</term>
 				<listitem>
-					<para>A session is a visit to your phpBB forums. For phpBB, a session is how long you spend on the forums. It is created when you login deleted when you log off. Session <acronym>IDs</acronym> are usually stored in a cookie, but if phpBB is unable to get cookie information from your computer, then a session <acronym>ID</acronym> is appended to the URL (e.g. index.php?sid=999). This session <acronym>ID</acronym> preserves the user's session without use of a cookie. If sessions were not preserved, then you would find yourself being logged out every time you clicked on a link in the forum.</para>
+					<para>En session er et besøg på dit phpBB-board og sessionen bliver oprettet når der logges ind og den bliver nedlagt igen når der logges af. Session-<acronym>IDs</acronym> gemmes normalt i en cookie. Er phpBB ikke i stand til at hente cookieinformation fra din computer tilføjes i stedet en session-<acronym>ID</acronym> til URL'en (f.eks. index.php?sid=999). Denne session-<acronym>ID</acronym> er i stand til at fastholde brugerens session uden at gøre brug af en cookie. Hvis sessionerne ikke blev fastholdt ville du blive logget af hver gang du klikkede på et link på boardet.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Signatur</term>
 				<listitem>
-					<para>En signatur er en tekst eller et billede der vises som afslutning i brugerens indlæg. Signaturen oprettes af brugeren, og vises hvis brugeren har tilvalgt muligheden i brugerkontrolpanelet. Boardadministratoren skal også have tilladt signaturer på boardet.</para>
+					<para>En signatur er en tekst eller et billede der vises som afslutning i brugerens indlæg. Signaturen oprettes af brugeren, og vises hvis brugeren har tilvalgt muligheden i brugerkontrolpanelet. Boardadministratoren skal desuden have tilladt anvendelse af signaturer på boardet.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Skrivbar</term>
+				<listitem>
+					<para>Alt på din server som skal være server-skrivbart betyder at omtalte filer og mapper skal have indstillet tilladelser korrekt for at serveren kan skrive til disse. Nogle af phpBB3's funktioner forudsætter at serveren kan skrive til bestemte filer og mapper, bl.a. cache-funktionen og under selve installationen af phpBB3 skal serveren kunne skrive til config.php-filen. Metoden til at ændre fil- og mappe tilladelserne til at være serverskrivbare afhænger af det operativsystem din server afvikles på. På *nix-baserede servere kan tilladelserne ændres med <glossterm>CHMOD</glossterm>-kommandoen, mens Windows-baserede servere anvender et andet tilladelsesystem. I nogle <glossterm>FTP</glossterm>-klienter er det også muligt at ændre fil- og mappetilladelser på serveren.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -254,23 +254,16 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Typografi</term>
-				<listitem>
-					<para>En typografi består af en skabelon, et tema og en billedpakke. Typografien bestemmer det overordnede udseende af dit board.</para>
-				</listitem>
-			</varlistentry>
-			
-			<varlistentry>
-				<term>Underforum</term>
-				<listitem>
-					<para>Muligheden for at oprette underfora er ny i phpBB 3.0. Underfora er i, eller placeret i andre fora.</para>
-				</listitem>
-			</varlistentry>
-			
-			<varlistentry>
 				<term>Skabelon</term>
 				<listitem>
 					<para>En skabelon omfatter alle de markeringer der bruges for at skabe dit boards udseende. phpBB 3.0 skabelonfilerne er html-filer. Disse skabelonfiler indeholder hovedsaglig <acronym>HTML</acronym>-kode (ingen <acronym>PHP</acronym>-kode) og nogle variabler phpBB bruger (indeholdt i: { og }).</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Typografi</term>
+				<listitem>
+					<para>En typografi består af en skabelon, et tema og en billedpakke. Typografien bestemmer det overordnede udseende af dit board.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -282,6 +275,13 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>Underforum</term>
+				<listitem>
+					<para>Muligheden for at oprette underfora er ny i phpBB 3.0. Underfora er indeholdt eller placeret i andre fora.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>UNIX tidstempel</term>
 				<listitem>
 					<para>phpBB gemmer alle tider i formatet <ulink url="http://en.wikipedia.org/wiki/Unix_time">UNIX tidstempel</ulink> for at lette omsætning til andre tidzoner og tidformater.</para>
@@ -289,9 +289,9 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Brugergruppe</term>
+				<term>Vedhæftede filer</term>
 				<listitem>
-					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (f.eks. oprette en redaktørgruppe og tildele denne gruppe redaktørtilladelser i et bestemt forum, fremfor at tildele en hel række brugere separate redaktørtilladelser i dette forum). En brugergruppe kan have gruppeledere som kan tilføje og slette brugere i gruppen. Brugergrupper kan være skjulte, lukkede eller åbne. Hvis en brugergruppe er åben, kan brugere anmode om medlemskab i denne i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
+					<para>Der kan <link linkend="acp_board_attachments">vedhæftes filer</link> til indlæg, på tilsvarende måde som når man skriver en email. Boardadministratoren kan have valgt visse restriktioner og bestemt at kun nogle filtyper kan vedhæftes og også begrænset størrelsen på den enkelte vedhæftede fil.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
