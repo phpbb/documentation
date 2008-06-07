@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Quick Start Guide</title>
 	<abstract>
-		<para>A quick guide through the first steps of installing and configuring up your very own phpBB 3.0 forum.</para>
+		<para>En kort vejledning for de første trin i at installere og konfigurere dit helt eget board baseret på phpBB 3.0.</para>
 	</abstract>
 	<section id="quick_requirements">
 		<sectioninfo>
@@ -22,29 +22,29 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Requirements</title>
-		<para>phpBB has a few requirements which must be met before you are able to install and use it. In this section, these requirements are explained.</para>
+		<title>Systemkrav</title>
+		<para>phpBB3 har få krav som skal imødekommes før du kan installere og bruge boardet. I dette afsnit forklares disse systemkrav.</para>
 		<itemizedlist>
 			<listitem>
-				<para>A webserver or web hosting account running on any major Operating System with support for PHP</para>
+				<para>En server eller et webhotel med et styresystem der understøtter PHP.</para>
 			</listitem>
 			<listitem>
-				<para>A SQL database system, one of:</para>
+				<para>Et SQL-databasesystem, et ud af disse:</para>
 				<itemizedlist>
 					<listitem>
-						<para>FireBird 2.0 or above</para>
+						<para>Firebird 2.0+</para>
 					</listitem>
 					<listitem>
-						<para>MySQL 3.23 or above</para>
+						<para>MySQL 3.23 eller over</para>
 					</listitem>
 					<listitem>
-						<para>MS SQL Server 2000 or above (directly or via ODBC)</para>
+						<para>MS SQL Server 2000 eller over (direkte eller via ODBC)</para>
 					</listitem>
 					<listitem>
 						<para>Oracle</para>
 					</listitem>
 					<listitem>
-						<para>PostgreSQL 7.x or above</para>
+						<para>PostgreSQL 7.3+</para>
 					</listitem>
 					<listitem>
 						<para>SQLite</para>
@@ -52,13 +52,13 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 4.3.3 or above with support for the database you intend to use. The optional presence of the following modules within PHP will provide access to additional features, but they are not required.</para>
+				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) med understøttelse af den databasetype du agter at anvende. Er følgende moduler tilgængelige på serveren, giver de adgang til yderligere funktioner via PHP, men de er ikke krævede.</para>
 				<itemizedlist>
 					<listitem>
-						<para>zlib Compression support</para>
+						<para>zlib-kompression</para>
 					</listitem>
 					<listitem>
-						<para>Remote FTP support</para>
+						<para>Remote FTP</para>
 					</listitem>
 					<listitem>
 						<para>XML support</para>
@@ -69,7 +69,7 @@
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
-		<para> The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installation" />. </para>
+		<para> Tilstedeværelsen af af hver af de krævede funktioner vil blive kontrolleret under installationsprocessen, som forklaret i  <xref linkend="quick_installation" />. </para>
 	</section>
 	<section id="quick_installation">
 		<sectioninfo>
