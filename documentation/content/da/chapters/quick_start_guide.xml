@@ -371,49 +371,49 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Assign moderators to forums</title>
-			<para>A quite common use case for permissions and roles are forum moderation. phpBB3 makes assigning users as moderators of forums really simple.</para>
-			<para>As you might have already guessed, moderation of specific forums is a local setting, so you can find <guilabel>Forum Moderators</guilabel> in the section for <guilabel>Forum Based Permissions</guilabel>. First of all, you will have to select for forum (or forums) you want to assign new moderators to. This form is divided into three areas. In the first one, you can select multiple forums (select multiple by holding down the CTRL button on your keyboard, or cmd (under MacOS X)), where the moderator settings you will set in the following form will only apply to these exact forums. The second area allows you to select only one forum but all the following settings will apply not only to this forum but also all its subforums. Finally, the third area's selection will only affect exactly this forum.</para>
-			<para>After selecting the forums and hitting <guilabel>Submit</guilabel>, you will be greeted by a form you should already be familiar with from one of the previous sections in this guide: <xref linkend="img_quick_permissions_select"/>. Here you can select the users or groups that should get some kind of moderation power over the selected forums. So go ahead: Select some users and/or groups and hit the <guilabel>Set Permissions</guilabel> button.</para>
-			<para>In the next form you can choose, what moderator permissions the selected users/groups should receive. First of all, there are some predefined roles from which you can select:</para>
+			<title>Udnævn forumredaktører</title>
+			<para>Det er oftest i forbindelse med redigering af fora at man får brug for at ændre i tilladelser og roller. phpBB3 tilbyder en særdeles simpel metode til at udnævne forumredaktører.</para>
+			<para>Som du sikkert allerede har gættet, er redigering af specifikke fora en lokal indstilling, og du finder <guilabel>Forumredaktører</guilabel> under sektionen <guilabel>Forumbaserede tilladelser</guilabel>. Først skal du vælge hvilket forum eller flere duk vil udnævne nye redaktører for. Skærmbilledet er delt i tre sektioner. I den første kan du vælge et forum eller flere (vælg flere ved at holde CTRL tasten nede , eller cmd under MacOS X), hvor de redaktørindstillinger du efterfølgende foreta'r vil gøre sig gældende. Den anden sektion giver dig mulighed for at vælge et forum hvor alle indstillingsændringer vil gælde for dette forum inklusive alle dets underfora. I den sidste sektion vælger du kun at ændre for dette specifikke forum.</para>
+			<para>Når forum er valgt og du har klikket på <guilabel>Udfør</guilabel> præsenteres du for et skærmbillede du sikkert er stødt på før tidligere i denne manual: <xref linkend="img_quick_permissions_select"/>. Her vælger du de brugere eller grupper der skal have tildelt redaktørtilladelser i de fora du valgte før. Vælg disse og klik på knappen <guilabel>Angiv tilladelser</guilabel>.</para>
+			<para>I det næste skærmbillede kan du vælge hvilke redaktørtilladelser de valgte brugere eller brugergrupper skal have tildelt. I phpBB3 er der foruddefineret fire redaktørroller med hver sit tilladelsessæt, som skulle være dækkende for langt de fleste boards:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Standard Moderator</term>
+					<term>Standardredaktør</term>
 					<listitem>
-						<para>A Standard Moderator can approve or disapprove, edit and delete posts, delete or close reports, but not necessarily change the owner of a post. This kind of moderator can also issue warnings and view details of a post.</para>
+						<para>En standardredaktør kan godkende og afvise indlæg i godkendelseskøen, redigere og slette indlæg, lukke og slette rapporter, men kan ikke nødvendigvis ændre afsender af indlæg. Denne redaktør kan også uddele advarsler og se indlægsdetaljer.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Simple Moderator</term>
+					<term>Simpel redaktør</term>
 					<listitem>
-						<para>A Simple Moderator can edit posts and close and delete reports and can also view post details.</para>
+						<para>En simpel redaktør kan redigere indlæg, lukke og slette rapporter samt se indlægsdetaljer.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Queue Moderator</term>
+					<term>Køredaktør</term>
 					<listitem>
-						<para>As a Queue Moderator, you can only approve or disapprove posts that landed in the moderator queue and edit posts.</para>
+						<para>En køredaktør kan kun godkende og afvise indlæg der er havnet i godkendelseskøen, samt redigere indlæg.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Full Moderator</term>
+					<term>Fuldgyldige redaktører</term>
 					<listitem>
-						<para>Full Moderators can do everything moderation-related; they can even ban users.</para>
+						<para>Fuldgyldige redaktører kan bruge alle redaktørfunktioner, inklusiv udelukkelse.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
 			<figure id="img_quick_permissions_moderator">
-				<title>The Forum Moderator's Permissions</title>
+				<title>Forumredaktørens tilladelser</title>
 				<mediaobject>
 					<imageobject>
 			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
 					</imageobject>
 					<caption>
-						<para>Set the moderator's permissions</para>
+						<para>Angiv redaktørens tilladelser</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>When you're done simply hit <guilabel>Apply all Permissions</guilabel>. All the permissions mentioned here can also be selected from the right side of the form to give you more granular options.</para>
+			<para>Når du har valgt passende tilladelser klikker du ganske enkelt på <guilabel>Angiv tilladelser</guilabel>. De rollebaserede tilladelser kan ændres og justeres mere detaljeret i samme skærmbillede, hvis du ikke synes disse er helt passende.</para>
 		</section>
 
 		<section id="quick_permissions_global">
@@ -424,17 +424,17 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Setting global permissions</title>
-			<para>Local Permissions are too local for you? Well, then phpBB3 has something to offer for you, too: Global Permissions:</para>
+			<title>Globale tilladelser</title>
+			<para>Er de lokale tilladelser for lokale for dig? Her kan phpBB3 tilbyde globale tilladelser som dækker alle fora på boardet:</para>
 			<orderedlist>
-				<listitem><para>Users Permissions</para></listitem>
-				<listitem><para>Groups Permissions</para></listitem>
-				<listitem><para>Administrators</para></listitem>
-				<listitem><para>Global Moderators</para></listitem>
+				<listitem><para>Brugertilladelser</para></listitem>
+				<listitem><para>Gruppetilladelser</para></listitem>
+				<listitem><para>Administratorer</para></listitem>
+				<listitem><para>Globale redaktører</para></listitem>
 			</orderedlist>
-			<para>In "User Permissions" and "Group Permissions" you can allow and disallow features like attachments, signatures and avatars for specific users and user groups. Note that some of these settings only matter, if the respective feature is enabled in the "Board Features" (see <xref linkend="quick_settings_boardfeatures"/> for details).</para>
-			<para>Under "Administrators" you can give users or groups administrator privileges like the ability to manage forums or change user permissions. For details on these settings please read the <xref linkend="acp_permissions"/>.</para>
-			<para>The "Global Moderators" form offers you the same settings as the forum specific form (described in <xref linkend="quick_permissions_moderators"/>) but applies to all forums on your baord.</para>
+			<para>Under "Brugertilladelser" og "Gruppetilladelser kan for eksempel muligheden for bruge vedhæftede filer, signaturer og avatars, for udvalgte brugere eller grupper, tillades eller forbydes. Bemærk at ændringer i disse indstillinger kun for effekt hvis den pågældende mulighed er aktiveret under "Boardfinesser". Se flere detaljer i <xref linkend="quick_settings_boardfeatures"/>).</para>
+			<para>Under "Administratorer" har du mulighed for at give brugeere eller gruppeledere tilladelse til at ændre i forumopsætningen eller ændre andre brugeres tilladelse. Se flere detaljer i <xref linkend="acp_permissions"/>.</para>
+			<para>Globale redaktører har samme tilladelser som redaktører i de enkelte fora (beskrevet i <xref linkend="quick_permissions_moderators"/>), men kan redigere alle fora på boardet.</para>
 		</section>
 
 	</section>
