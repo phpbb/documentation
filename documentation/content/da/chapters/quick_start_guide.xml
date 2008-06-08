@@ -67,6 +67,9 @@
 					<listitem>
 						<para>Imagemagick support</para>
 					</listitem>
+					<listitem>
+						<para>GD support</para>
+					</listitem>
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
