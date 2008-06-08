@@ -53,6 +53,7 @@
 			</listitem>
 			<listitem>
 				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) med understøttelse af den databasetype du agter at anvende. Er følgende moduler tilgængelige på serveren, giver de adgang til yderligere funktioner via PHP, men de er ikke krævede.</para>
+				<para>getimagesize() function need to be enabled.</para>
 				<itemizedlist>
 					<listitem>
 						<para>zlib-kompression</para>
