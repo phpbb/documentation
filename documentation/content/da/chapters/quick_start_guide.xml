@@ -81,10 +81,6 @@
 		</sectioninfo>
 		<title>Installation</title>
 		<para>phpBB 3.0 Olympus has an easy to use installation system that will guide you through the installation process.</para>
-		<!--BETA SPECIFIC /-->
-		<note>
-			<para>phpBB 3.0 Beta 1 will not yet have the ability to upgrade from phpBB 2.0.x or to convert from a different software package. This will be included in the later Beta or <acronym>RC</acronym> stages.</para>
-		</note>
 		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introduction</title>
