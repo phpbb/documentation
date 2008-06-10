@@ -305,63 +305,63 @@
 			<para>To set the permissions for your new forum we need the local <guilabel>Forum Based Permissions</guilabel>. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the <guilabel>Group</guilabel> or <guilabel>User Forum Permissions</guilabel>. They will allow you to select one group or user, and then select the forums you want to set the permissions for. </para>
 			<para>But for this Quick Start Guide we will concentrate on the <guilabel>Forum Permissions</guilabel>. Instead of selecting a user or group, you select the forums you want to change first. You can select them either by selecting the forums manually in the top list, or by single forum and single forum plus subforums respectively in the lower pull down menus. <guilabel>Submit</guilabel> will bring you to the next page.</para>
 			<figure id="img_quick_permissions_select">
-				<title>Select Groups</title>
+				<title>Vælg grupper</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
 					</imageobject>
 					<caption>
-						<para>Select Groups or Users to set Forum Permissions</para>
+						<para>Vælg de brugere eller grupper der skal ændres</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>The <guilabel>Forum Permissions</guilabel> page shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users</guilabel> and <guilabel> Manage Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Edit Permissions</guilabel> button, or use <guilabel>Remove Permissions</guilabel> to remove them which leads to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
+			<para>Siden med<guilabel>Forumtilladelser</guilabel> viser to kollonner, én brugere og én hvor grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner som er øverst er navngivet henholdsvis <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst ét af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel> eller med <guilabel>Fjern tilladelser</guilabel> hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst ét af de valgte fora.</para>
 			<para>To add permissions for groups, select one or more groups either in the <guilabel>Add Groups</guilabel> list (this works similar with users, but if you want to add new users, you have to type them in manually in the <guilabel>Add Users</guilabel> text box or use the <guilabel>Find a member</guilabel> function). <guilabel>Add Permissions</guilabel> will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
 			<para>There are two ways to assign permissions: You can set them manually or use predefined <guilabel>Permission Roles</guilabel> for a simpler but less powerful way. You can switch between both approaches any time you want. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running as quickly as possible. But remember that permission roles do only offer a small bit of what the permission system has to offer and we believe that to be a good Olympus administrator, you have to fully grasp permissions. </para>
 			<para>Both ways only differ in the way you set them. They both share the same interface.</para>
 		</section>
 		<section id="quick_permissions_manual">
-			<title>Manual permissions</title>
-			<para>This is the most important aspect of permissions. You need to understand this to properly work with them. There are three different values that a permission can take:</para>
+			<title>Tilladelser enkeltvis</title>
+			<para>Det vigtigste element i tilladelserne, som du er nød til at forstå for at arbejde med disse. En tilladelse kan have tre værdier:</para>
 			<itemizedlist>
 				<listitem>
-					<para><guilabel>YES</guilabel> will allow a permission setting <emphasis>unless</emphasis> it is overwritten by a <guilabel>NEVER</guilabel>.</para>
+					<para><guilabel>JA</guilabel> tillader funktionen <emphasis>medmindre</emphasis> det underkendes af et <guilabel>ALDRIG</guilabel>.</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>NO</guilabel> will be disallow a permission setting <emphasis>unless</emphasis> it is overwritten by a <guilabel>YES</guilabel>.</para>
+					<para><guilabel>NEJ</guilabel> tillader ikke funktionen <emphasis>medmindre</emphasis> det underkendes af et <guilabel>JA</guilabel>.</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>NEVER</guilabel> will completely disallow a permission setting for a user. It <emphasis>cannot</emphasis> be overwritten by a <guilabel>YES</guilabel>.</para>
+					<para><guilabel>ALDRIG</guilabel> tillader under ingen omstændigheder denne funktion, og <emphasis>kan ikke</emphasis> underkendes af et <guilabel>JA</guilabel>.</para>
 				</listitem>
 			</itemizedlist>
-			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>Never</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>No</guilabel> overrides any <guilabel>Yes</guilabel> they have . Leave the setting at <guilabel>No</guilabel> instead. <guilabel>No</guilabel> is a weak <guilabel>Never</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
+			<para>Disse tre værdier er vigtige fordi en bruger kan have mere end en tilladelse tildelt for den samme funktion via sit medlemskab i forskellige brugergrupper, som igen har andre tilladelsesroller tilknyttet i de forskellige fora. Hvis en bruger er medlem af gruppen "Tilmeldte brugere" og for eksempel en gruppe kaldet "Seniorbrugere". Grupperne kan have forskellige tilladelser til at se et forum. I dette tilfælde ønsker du at oprette et forum med navnet "De gode gamle dage", som skal kunne ses af gruppen "Seniorbrugere", men ikke af "Tilmeldte brugere". Du sætter naturligvis tilladelsen <guilabel>Kan se forum</guilabel> til <guilabel>Ja</guilabel> for "Seniorbrugere". Men <emphasis>sæt ikke</emphasis> tilladelsen til <guilabel>Aldrig</guilabel> for "Tilmeldte brugere". Gør du det kan "Seniorbrugere" ikke se forummet, da disse brugere som medlem af "Tilmeldte brugere" er sat til <guilabel>Aldrig</guilabel> som underkender <guilabel>Ja</guilabel>'et i "Seniorbrugere". Sæt tilladelsen til <guilabel>Nej</guilabel> i stedet. <guilabel>Nej</guilabel> er svagere og kan underkendes af et <guilabel>Ja</guilabel>.</para>
 			<figure id="img_quick_permissions_manual">
-				<title>Manual permissions</title>
+				<title>Tilladelser enkeltvis</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_manual.png" />
 					</imageobject>
 					<caption>
-						<para>Setting permissions manually</para>
+						<para>Manuel tildeling af tilladelser</para>
 					</caption>
 				</mediaobject>
 			</figure>
 		</section>
 		<section id="quick_permissions_roles">
-			<title>Permissions roles</title>
-			<para>phpBB3 Olympus ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
+			<title>Tilladelseroller</title>
+			<para>phpBB3 tilbyder som standard et antal foruddefinerede tilladelseroller, eller tilladelsekombinationer. Rollerne giver dig et rigt udpluk af standard tilladelsesroller som kan anvendes ved tildeling af tilladelser. Fremfor at skulle tillade hver enkelt funktion manuelt, kan du i stedet vælge en <guilabel>rolle</guilabel> i rullemenuen. Rollebeskrivelsen vises når musen holdes over rollens navn. Udfør dine ændringer med knapperne <guilabel>Angiv tilladelser</guilabel> eller <guilabel>Angiv alle tilladelser</guilabel> når du er tilfreds med tilpasningerne.</para>
 			<figure id="img_quick_permissions_roles">
-				<title>Permission roles</title>
+				<title>Tilladelseroller</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_roles.png" />
 					</imageobject>
 					<caption>
-						<para>Setting permissions with roles</para>
+						<para>Tilladelseindstilling med brug af roller</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>But permission roles are not only a quick and easy way to set permissions, they are also a powerful tool for experienced board administrators to manage permissions on bigger boards. You can create your own roles and edit existing ones. Roles are dynamic, so when you edit a role, all groups and users that have the role assigned will automatically be updated.</para>
+			<para>Tilladelser defineret i roller er ikke alene en hurtig og let metode til at uddele tilladelser med, for erfarne administratorer er det også en særdeles struktureret måde at uddelegere ansvar på store boards. Man kan oprette egne definerede roller, helt tilpasset boardets behov. Rolledefinitioner er dynamiske, når du ændrer på tilladelserne for en allerede defineret rolle, bliver alle brugere og grupper som er tildelt tilladelser efter denne automatisk opdateret med det nye tilladelsesæt.</para>
 		</section>
 		<section id="quick_permissions_moderators">
 			<sectioninfo>
@@ -432,7 +432,7 @@
 				<listitem><para>Administratorer</para></listitem>
 				<listitem><para>Globale redaktører</para></listitem>
 			</orderedlist>
-			<para>Under "Brugertilladelser" og "Gruppetilladelser kan for eksempel muligheden for bruge vedhæftede filer, signaturer og avatars, for udvalgte brugere eller grupper, tillades eller forbydes. Bemærk at ændringer i disse indstillinger kun for effekt hvis den pågældende mulighed er aktiveret under "Boardfinesser". Se flere detaljer i <xref linkend="quick_settings_boardfeatures"/>).</para>
+			<para>Under "Brugertilladelser" og "Gruppetilladelser" kan for eksempel muligheden for bruge vedhæftede filer, signaturer og avatars, for udvalgte brugere eller grupper, tillades eller forbydes. Bemærk at ændringer i disse indstillinger kun for effekt hvis den pågældende mulighed er aktiveret under "Boardfinesser". Se flere detaljer i <xref linkend="quick_settings_boardfeatures"/>).</para>
 			<para>Under "Administratorer" har du mulighed for at give brugeere eller gruppeledere tilladelse til at ændre i forumopsætningen eller ændre andre brugeres tilladelse. Se flere detaljer i <xref linkend="acp_permissions"/>.</para>
 			<para>Globale redaktører har samme tilladelser som redaktører i de enkelte fora (beskrevet i <xref linkend="quick_permissions_moderators"/>), men kan redigere alle fora på boardet.</para>
 		</section>
