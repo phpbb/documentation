@@ -252,10 +252,10 @@
 		<para>Once you're done configuring the settings of your new forum, scroll to the bottom of the page and click the <guilabel>Submit</guilabel> button to create your forum and it's settings. If your new forum was created successfully, the screen will show you a success message.</para>
 		<para>If you wish to set permissions for the forum (or if you do not click on anything), you will see the forum permissions screen. If you do not want to (and want to use the default permissions for your new forum), click on the <guilabel>Back to previous page</guilabel> link. Otherwise, continue and set each setting to what you wish. Once you are done, click the <guilabel>Apply all Permissions</guilabel> button at the bottom of the page. You will see the successful forum permissions updated screen if it worked.</para>
 		<important>
-			<para>If you do not set any permissions on this forum it will not be accessible to anyone (including yourself).</para>
+			<para>Hvis du ikke indstiller tilladelser for forummet vil det ikke være synligt for nogen på boardet, inklusive dig selv.</para>
 		</important>
-		<para>You have successfully updated your forum permissions and set up your new forum. To create more forums, follow this general procedure again.</para>
-		<para>For more information on setting permissions, see <xref linkend="quick_permissions" /></para>
+		<para>Du har opdateret dine forumtilladelser og oprettet et nyt forum. For at oprette flere fora gentages denne procedure.</para>
+		<para>Læs mere om indstilling af tilladelser: <xref linkend="quick_permissions" /></para>
 	</section>
 	<section id="quick_permissions">
 		<sectioninfo>
@@ -273,19 +273,19 @@
 			<para>Der findes fire typer af tilladelser:</para>
 			<orderedlist>
 				<listitem id="quick_permission_types_user">
-					<para>User/Group permissions (global) - e.g. disallow changing avatar</para>
+					<para>Bruger og gruppetilladelser (globale) - f.eks. forbyd ændring af avatar</para>
 				</listitem>
 				<listitem id="quick_permission_types_admin">
-					<para>Administrator permissions (global) - e.g. allow to manage forums</para>
+					<para>Administratortilladelser (globale) - f.eks. tillad at administrere fora</para>
 				</listitem>
 				<listitem id="quick_permission_types_moderator">
-					<para>Moderator permissions (global or local) - e.g. allow to lock topics or ban users (only global)</para>
+					<para>Redaktørtilladelser (globale eller lokale) - f.eks. tillad at låse emner eller udelukke brugere (sidstnævnte kun globalt)</para>
 				</listitem>
 				<listitem id="quick_permission_types_forum">
-					<para>Forum permissions (local) - e.g. allow to see a forum or post topics</para>
+					<para>Forumtilladelser - f.eks. tillade at se et forum og at indsende indlæg</para>
 				</listitem>
 			</orderedlist>
-			<para>Each permission type consists of a different set of permissions and can apply either locally or globally. A global permission type is set for your whole bulletin board. If you disallow one of your users to send Private Messages, for instance, you have to do this with the global user permission. Administrator permission are also global.</para>
+			<para>Disse tilladelsetyper består af hver sit sæt af tilladelser og tildeles lokalt eller globalt. En global tilladelse gælder for hele boardet. Hvis du f.eks vil forbyde en bruger at sende private beskeder, gøres det med globale brugertilladelser. Administratortilladelser er kun globale.</para>
 			<figure id="img_quick_permissions_types">
 				<title>Globale og lokale tilladelser</title>
 				<mediaobject>
@@ -297,7 +297,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>On the other hand local permissions do only apply to specific forums. So if you disallow someone to post in one forum, for instance, it will not impact the rest of the board. The user will still be able to post in any other forum he has the local permission to post.</para>
+			<para>Lokale tilladelser er gældende for specifikke fora. Du kan f.eks. forbyde en bruger at skrive i et forum, uden at det får konsekvenser for brugerens mulighed for at skrive i andre fora på boardet.</para>
 			<para>Man kan udnævne redaktører globalt eller lokalt. Denne vurdering er dybest set et spørgsmål om tillid; har du fuld tillid til din bruger kan du udnævne vedkommende til global redaktør. De kan nemlig redigere i alle fora på boardet med de tilladelser de er tildelt. En lokal redaktør kan kun redigere i de fora du har valgt at vedkommende skal være redaktør for. De lokale redaktører behøver ikke nødvendigvis at at have adgang til identiske redaktørfunktioner. Nogle kan være i stand at slette emner i nogle fora, mens samme redaktør ikke kan det i andre. Globale redaktører har samme tilladelser i alle boardets fora.</para>
 		</section>
 		<section id="quick_permissions_forum">
