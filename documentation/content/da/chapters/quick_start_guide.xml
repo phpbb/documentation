@@ -203,18 +203,18 @@
 			<title>Board Features</title>
 			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
 			<figure id="img_quick_settings_features">
-				<title>Board Features</title>
+				<title>Boardfinesser</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Enabling and disabling basic features with just 2 clicks</para>
+						<para>Ændre basale funktioner med blot to klik</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Disabling BBCode completely is a little bit to harsh for your taste but you don't want your users to abuse the signature field for tons of images? Simply set <guilabel>Allow use of IMG BBCode Tag in user signatures</guilabel> to &quot;No&quot;. If you want to be a little bit more specific on what you want to allow and disallow in users' signatures, have a look at the "Signature Settings" form.</para>
-			<para>The &quot;Board Features&quot; form offers you a great way to control the features in an all-or-nothing way. If you want to get into the details on each feature, there is for everything also a separated form which let's you specify everything from the maximum number of characters allowed in a post (<guilabel>Max characters per post</guilabel> in "Post Settings") to how large a user's avatar can be (<guilabel>Maximum Avatar Dimensions</guilabel> in &quot;Avatar Settings&quot;).</para>
+			<para>Hvis du ikke ønsker at dine brugere skal overfylde deres signaturer med billeder, kan du her helt deaktivere muligheden for at bruge BBkoder. Synes du det lige drastisk nok, kan du i stedet sætte <guilabel>Tillad brug af BBkode-tag'en [IMG] i brugersignaturer</guilabel> til &quot;Nej&quot;, denne indstilling findes under &quot;Signaturer&quot; i venstremenuen.</para>
+			<para>I &quot;Boardfinesser&quot; har du en fin kontrol over boardets funktioner da man her kun skal vælge ja eller nej afhængig af om funktionen skal være aktiv eller ikke. Du kan for nogle af funktionerne også vælge at definere grænser; for eksempel det højeste antal tilladte tegn i et indlæg (<guilabel>Maksimalt antal tegn pr. indlæg</guilabel> i &quot;Indstillinger for indlæg&quot;) eller hvor stor en brugers avatar må være (<guilabel>Største dimensioner for avatar</guilabel> i &quot;Indstillinger for avatars&quot;).</para>
 			<important>
 				<para>If you disable features, these will also be unavailable to users who would normally have them according to their respective permissions. For details on the permissions system, please read <xref linkend="quick_permissions" /> or the in-depth guide in the Administrator Guide.</para>
 				<!-- TODO: Link to admin guide -->
@@ -233,13 +233,13 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Creating forums</title>
-		<para>Forums are the sections where topics are stored. Without forums, your users would have nowhere to post! Creating forums is very easy.</para>
-		<para>Firstly, make sure you are logged in. Find the <guilabel>[ Administration Control Panel ]</guilabel> link at the bottom of the page, and click it. You should be in the Administration Index. You can administer your board here.</para>
-		<para>There are tabs at the top for the Administration Control Panel that will guide you to each category. You must get to the Forum Administration section to create a forum, so click the <guilabel>Forums</guilabel> tab.</para>
-		<para>The Forum Administration Index is where you can manage forums on your site. Along with being able to create forums, you are also able to create subforums. Subforums are forums that are located in a parent forum in a hierachy. For more information about subforums, see the <link linkend="acp_forums_subforums">administration guide on subforums</link>.</para>
-		<para>Find the <guilabel>Create new forum</guilabel> button on the right side of the page. Type in the name of the forum you wish in the textbox located directly to the left of this button. For example, if the forum name was to be Test, in the text box put Test. Once you are done, click the <guilabel>Create new forum</guilabel> button create the forum.</para>
-		<para>You should see a page headed with the text &quot;Create new forum :: Test&quot;. You can change options for your forum; for example you can set what forum image the forum can use, if it's a category, or what forum rules text will belong to the forum. You should type up a brief description for the forum as users will be able to figure out what the forum is for.</para>
+		<title>Opret fora</title>
+		<para>Fora er sektioner hvor indlæg opbevares og er normalt emneopdelt. Uden fora ville brugerne ikke være i stand til at indsende indlæg struktureret! Det er nemt at oprette et forum.</para>
+		<para>Når du er logget ind og findes i bunden af siden linket <guilabel>Administratorkontrolpanel</guilabel>. Klik på det og efter du har afgivet kodeord endnu engang, videredirigeres du til administratorindekset.</para>
+		<para>I toppen af administratorkontrolpanelet er der et antal faner som giver adgang til boardets forskellige funktioner og indstillinger. Du kan komme til forumadministration ved at vælge fanen <guilabel>Fora</guilabel>, samme side kan nås ved at vælge <guilabel>Administrér fora</guilabel> i menuen til venstre.</para>
+		<para>I forumadministration kan du ændre allerede oprettede fora og underfora, og naturligvis oprette nye. Et subforum er et forum indeholdt herakisk i et overforum. Læs mere om underfora i  <link linkend="acp_forums_subforums">administration af subfora</link>.</para>
+		<para>Find knappen <guilabel>Opret nyt forum</guilabel> nederst til højre, i tekstboksen til venstre herfor angives navnet på det nye forum. Du kan oprette et testforum og navngive det ved at skrive Test i tekstboksen. Klik på <guilabel>Opret nyt forum</guilabel> for at oprette forummet.</para>
+		<para>En ny side med overskriften &quot;Opret nyt forum :: Test&quot; vises. Du vælger her indstillinger for forummet. For eksempel vælges det forumbillede der skal vises, eller du kan formulere teksten til de forumregler der vises øverst i forummet. Du bør også her angive en kort beskrivelse af forummet, så dine brugere er i stand til at regne ud hvad emnerne i forummet omhandler.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
@@ -248,9 +248,9 @@
 				<para>Opret et nyt forum</para>
 			</caption>
 		</mediaobject>
-		<para>Standardindstillingerne er i de fleste tilfælde udmærkede og får dit forum til at fungere. Du kan efterfølgende tilpasse indstillinger så passer præcis til dit behov. Der er tre nøgleindstillinger du bør være opmærksom på. Ved valg af overforum bestemmer du hvor dit nye forum skal være underforum. Vær her omhyggelig, da valg af overforum er vigtig ved oprettelse af underforum (Læs mere om i kapitlet om oprettelse af underfora). Ved at bruge &quot;Kopier tilladelser fra:&quot; muligheden kan du enkelt kopiere tilladelserne fra et af dine allerede eksisterende fora. Den er god hvis du ønsker at holde identiske tilladelser i dine fora. Du har også mulighed for at vælge en anden typografi end boardets standardtypografi for forummet. Du kan vælge mellem de typografier der er installeret på boardet.<!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
+		<para>Standardindstillingerne er i de fleste tilfælde udmærkede og får dit forum til at fungere. Du kan efterfølgende tilpasse indstillinger så de passer præcis til dit behov. Der er nogle nøgleindstillinger du bør være opmærksom på. Ved valg af overforum bestemmer du hvor dit nye forum skal være underforum. Vær her omhyggelig, da valg af overforum er vigtig ved oprettelse af underforum (læs mere om i kapitlet om oprettelse af underfora). Ved at bruge &quot;Kopier tilladelser fra:&quot; kan du enkelt kopiere tilladelserne fra et af dine allerede eksisterende fora. Den er god hvis du ønsker at holde identiske tilladelser i dine fora. Du har også mulighed for at vælge en anden typografi end boardets standardtypografi for forummet. Du kan vælge mellem de typografier der er installeret på boardet.<!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
 		<para>Når du har foretaget alle valg for dit nye forum, klikker du nederst på <guilabel>Udfør</guilabel> nederst på siden for at oprette forummet med de valgte indstillinger. Dit board kvitterer med en bekræftelsesmeddelelse når forummet er oprettet.</para>
-		<para>Efter denne bekræftelse videredirigeres du automatisk til forumtilladelserne. Du kan nu ændre tilladelserne for det nye forum (eller indstille disse, hvis du ikke fik kopieret tilladelser fra et andet). If you do not want to (and want to use the default permissions for your new forum), click on the <guilabel>Back to previous page</guilabel> link. Otherwise, continue and set each setting to what you wish. Once you are done, click the <guilabel>Apply all Permissions</guilabel> button at the bottom of the page. You will see the successful forum permissions updated screen if it worked.</para>
+		<para>Efter denne bekræftelse videredirigeres du automatisk til forumtilladelserne. Du kan nu ændre tilladelserne for det nye forum (eller indstille disse, hvis du ikke fik kopieret tilladelser fra et andet). Hvis du er tilfreds med de allerede valgte tilladelser klikker du blot på linket <guilabel>Tilbage til foregående side</guilabel>. Ellers du nu tilladelserne som du ønsker og når tilpasningerne er foretaget klikkes på <guilabel>Tilføj alle tilladelser</guilabel> i bunden af siden. Herefter vises en bekræftelse på at tilladelserne er opdateret.</para>
 		<important>
 			<para>Hvis du ikke indstiller tilladelser for forummet vil det ikke være synligt for nogen på boardet, inklusive dig selv.</para>
 		</important>
