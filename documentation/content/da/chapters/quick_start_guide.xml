@@ -93,13 +93,13 @@
 					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
 				</imageobject>
 				<caption>
-					<para>The introduction page of the installation system.</para>
+					<para>Introduktionssiden i installationssystemet.</para>
 				</caption>
 			</mediaobject>
 		</figure>
 		<section id="quick_installation_intro">
-			<title>Introduction</title>
-			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (the <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
+			<title>Introduktion</title>
+			<para>Installationsskærmbilledet giver dig en kort introduktion  til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installér</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Requirements</title>
