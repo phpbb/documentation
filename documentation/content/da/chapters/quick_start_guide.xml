@@ -102,34 +102,34 @@
 			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installér</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
-			<title>Requirements</title>
+			<title>Krav</title>
 			<important>
-				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.0's minimum requirements.</para>
+				<para>Læs venligst <link linkend="quick_requirements">kapitlet om phpBB3's krav</link>, her er phpBB 3.0's minimumskrav specificeret.</para>
 			</important>
-			<para>The requirements list is the first page you will see after starting the installation. phpBB 3.0 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.0 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
+			<para>Den første side du møder efter installationen er startet er listen over systemkrav. phpBB3 kontrollerer automatisk om alt nødvendigt er installeret på serveren for at køre phpBB3 korrekt på din server. Du skal have minimumversionen af <acronym>PHP</acronym> installeret og mindst én tilgængelig database for at fortsætte installationen. Det er også vigtigt at alle viste mapper er tilgængelige og sat med rette tilladelser. Læs venligst beskrivelsen i hver sektion for at finde ud af om de enkelte komponenter og tilladelser er valgfrie eller krævede for at køre phpBB3. Hvis alt er i orden, kan du fortsætte med installationen ved at klikke på <guilabel>Start installation</guilabel>.</para>
 		</section>
 		<section id="quick_installation_database">
-			<title>Database settings</title>
-			<para>You now have to decide which database to use. See the <link linkend="quick_requirements">Requirements section</link> for information on which databases are supported. If you do not know your database settings, please contact your hosting company and ask for them. You will not be able to continue without them. You need:</para>
+			<title>Databaseindstillinger</title>
+			<para>Du skal nu beslutte hvilken databasetype phpBB3 skal anvende. Se afsnittet <link linkend="quick_requirements">Systemkrav</link> for oplysninger om understøttede databasetyper. Hvis du ikke kender dine databasemuligheder, kontakt venligst din vært og og udbed dig information om disse. Du kan ikke fortsætte installationen uden disse informationer. Du skal bruge:</para>
 			<itemizedlist>
 				<listitem>
-					<para>The <guilabel>Database Type</guilabel> - the database you will be using (e.g. mySQL, SQL server, Oracle)</para>
+					<para><guilabel>Databasetype</guilabel> - den database du vil bruge (f.eks. MySQL, Oracle, SQLite)</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database server hostname or DSN</guilabel> - the address of the database server.</para>
+					<para><guilabel>Databaseserverens værtsnavn eller DSN</guilabel> - adressen på databaseserveren.</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database server port</guilabel> - the port of the database server (most of the time this is not needed).</para>
+					<para><guilabel>Databaseserverens portnummer</guilabel> - den port databaseserveren kommunikerer på (er som regel unødvendigt).</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database name</guilabel>- the name of the database on the server.</para>
+					<para><guilabel>Databasenavnet</guilabel> - den database der er oprettet på ovennævnte server.</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database username</guilabel> and <guilabel>Database password</guilabel> - the login data to access the database.</para>
+					<para><guilabel>Brugernavn</guilabel> og <guilabel>kodeord</guilabel> til databasen - logininformation for at kunne tilgå databasen.</para>
 				</listitem>
 			</itemizedlist>
 			<tip>
-				<para>If you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
+				<para>Hvis du anvender en SQLite-database, skal den fulde sti til din databasefil angives i DSN-feltet og felterne til brugernavn og kodeord efterlades blanke. Af sikkerhedsgrunde bør du sikre dig at databasefilen ikke opbevares i en mappe der kan tilgås via internettet.</para>
 			</tip>
 			<figure id="img_quick_installation_database">
 				<title>Database settings</title>
@@ -138,34 +138,34 @@
 						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>The database settings screen, please make sure to have all the required data available</para>
+						<para>Skærmbilledet hvor databaseindstillinger angives, hav venligst alle krævede data ved håndenp</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multiple phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
-			<para>After you have entered your details, you can continue by clicking the <guilabel>Proceed to next step</guilabel> button. Now, phpBB 3.0 will test and verify the data you entered.</para>
-			<para>If you see a "<guilabel>Could not connect to the database</guilabel>" error, this means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
+			<para>Du behøver ikke at ændre <guilabel>tabelpræfiks for tabellerne</guilabel> i databaseindstillingerne, med mindre du har planer om at flere phpBB-installationer skal benytte samme database. Hvis det er tilfældet, skal du anvende forskelligt præfiks for hver installation for at få det til at virke.</para>
+			<para>Når du har angivet denne information, fortsætter du installationen ved at klikke på knappen <guilabel>Fortsæt til næste trin</guilabel> button. Nu vil phpBB3 kontrollere om de angivne data vil medføre at der kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne præfiks.</para>
+			<para>En<guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. Kontrollér at de angivne databaseindstillinger er korrekte og prøv igen. Kontakt venligst din vært, hvis du er usikker på de korrekte indstillinger.</para>
 			<tip>
 				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
 			</tip>
-			<para>If you installed another version of phpBB before on the same database with the same prefix, phpBB will inform you and you just need to enter a different database prefix.</para>
-			<para>If you see the <guilabel>Successful Connection</guilabel> message, you can continue to the next step.</para>
+			<para>Hvis du tidligere har installeret en anden version af phpBB i samme database med samme præfiks, giver phpBB3 dig information herom, og beder dig blot om at angive et andet databasepræfiks.</para>
+			<para>Når du ser meddelelsen <guilabel>Korrekt forbundet</guilabel>, kan du fortsætte til næste trin.</para>
 		</section>
 		<section id="quick_installation_admin">
-			<title>Administrator details</title>
-			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+			<title>Administratoroplysninger</title>
+			<para>Nu skal du oprette din administratorbruger. Denne bruger får tilladelser som fuldgyldig administrator og vil være den første bruger på dit board. Alle felter på denne side skal udfyldes. Du kan også indstille boardets standardsprog på denne side. I en standard phpBB3-installationspakke er kun inkludere <guilabel>engelsk [British English]</guilabel>. Du kan downloade yderligere sprogpakker på <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, og tilføje disse før installationen eller efter denne er gennemført <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
 		</section>
 		<section id="quick_installation_config">
-			<title>Configuration file</title>
-			<para>In this step, phpBB will automatically try to write the configuration file. The forum needs the configuration to run properly. It contains all of the database settings, so without it, phpBB will not be able to access the database.</para>
-			<para>Usually, automatically writing the configuration file works fine. But in some cases it can fail due to wrong file permissions, for instance. In this case, you need to upload the file manually. phpBB asks you to <guilabel>download</guilabel> the config.php file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, click <guilabel>Done</guilabel> to get to the last step. If <guilabel>Done</guilabel> returns you to the same page as before, and does not return a success message, you did not upload the file correctly.</para>
+			<title>Konfigurationsfilen (config.php)</title>
+			<para>På dette trin vil phpBB prøve at skrive konfigurationsfilen automatisk. Den indeholder alle databaseindstillingerne, og uden den er phpBB ikke i stand til at forbinde til databasen.</para>
+			<para>Normalt fungerer den automatiske skrivning af konfigurationsfilen fint. Men i visse tilfælde kan denne operation fejle, f.eks. på grund af forkerte filtilladelser. I såfald er du nødt til at uploade filen manuelt. phpBB beder dig om at <guilabel>downloade</guilabel> config.php-filen og fortæller dig hvad du skal gøre med den. Læs venligst instruktionerne omhyggeligt. Når du har uploadet filen, klik <guilabel>Udført</guilabel> for at komme videre til sidste trin. Hvis <guilabel>Udført</guilabel> returnerer dig til samme side som før, og ikke returnerer en meddelelse om at operationen blev gennemført med held, skyldes det sansynligvis at du ikke fik uploadet filen korrekt.</para>
 		</section>
 		<section id="quick_installation_advanced">
-			<title>Advanced settings</title>
-			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
-			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.0 successfully. But there is still a lot of work ahead!</para>
-			<para>If you are unable to get phpBB 3.0 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
-			<para>At this point if you are upgrading from phpBB 2.0, you should refer to the <link linkend="upgrade_guide">upgrade guide</link> for further information. If not, you should remove the install directory from your server as you will only be able to access the Administration Control Panel whilst it is present.</para>
+			<title>Avancerede indstillinger</title>
+			<para>De <guilabel>Avancerede indstillinger</guilabel> giver mulighed for at ændre på nogle af boardets parametre. De er valgfrie og kan altid ændres senere. Fortsæt til sidste trin og afslut installationen, hvis du er usikker på hvad disse indstillinger betyder.</para>
+			<para>Hvis installationen blev gennemført, kan du nu bruge <guilabel>Login</guilabel>-knappen og besøge <guilabel>Administrationkontrolpanelet</guilabel>. Tillykke, du har nu korrekt gennemført installationen af phpBB3. Men der ligger stadig arbejde forude!</para>
+			<para>Hvis du ikke er i stand til at installere phpBB3, selv efter at have læst denne vejledning, bør du venligst se i <link linkend="quick_support">supportkapitlet</link>, for at finde ud af hvor du kan få yderligere assistance.</para>
+			<para>Hvis du her er ved at udføre en konvertering fra phpBB 2.0.x, bør du nu læse videre i <link linkend="upgrade_guide">kapitetlet om konvertering</link> for yderligere information. Hvis ikke, skal du nu slette install-mappen fra din server, da du kun kan tilgå administratorkontrolpanelet så længe denne mappe er tilstede.</para>
 		</section>
 	</section>
 	<section id="quick_settings">
@@ -178,10 +178,10 @@
 		</sectioninfo>
 		<title>Generelle indstillinger</title>
 		<para>I dette afsnit gennemgås nogle af de helt basale og generelle indstillinger for dit nye board.</para>
-		<para>Umiddelbart efter installtionen er fuldført videredirigeres du til det såkaldte &quot;Administratorkontrolpanel&quot; (<acronym>ACP</acronym>). I daglig drift får du adgang til ACP ved at klikke på linket <guilabel>[Administratorkontrolpanel]</guilabel> i bunden af siden. I ACP kan du ændre samtlige indstillinger for alle funktioner på dit board.</para>
+		<para>Umiddelbart efter installationen er fuldført videredirigeres du til det såkaldte &quot;Administratorkontrolpanel&quot; (<acronym>ACP</acronym>). I daglig drift får du adgang til ACP ved at klikke på linket <guilabel>[Administratorkontrolpanel]</guilabel> i bunden af siden. I ACP kan du ændre samtlige indstillinger for alle funktioner på dit board.</para>
 		<section id="quick_settings_boardsettings">
 			<title>Boardkonfiguration</title>
-			<para>The first section of the <acronym>ACP</acronym> you will probably want to visit right after the installation is "Board Settings". Here you can first of all change the name (<guilabel>Site name</guilabel>) and description (<guilabel>Site description</guilabel>) of your board.</para>
+			<para>Det første skærmbillede du sikkert ønsker at besøge efter installation af phpBB3 er &quot;Board grundlæggende&quot;. Her er mulighed for at ændre navnet (<guilabel>Boardnavn</guilabel>) og beskrivelsen (<guilabel>Boardbeskrivelse</guilabel>) på dit board.</para>
 			<figure id="img_quick_settings_sitename">
 				<title>Board grundlæggende</title>
 				<mediaobject>
@@ -193,7 +193,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Her er desuden mulighed for ændre tidszone (<guilabel>Tidszone for board</guilabel>) og hvordan datoformat skal vises (<guilabel>Datoformat</guilabel>).</para>
+			<para>Her er desuden mulighed for ændre tidszone (<guilabel>Tidszone for board</guilabel>) og måden dato vises på (<guilabel>Datoformat</guilabel>).</para>
 			<para>Du kan vælge en ny typografi (efter den er installeret) for boardet og vælge at alle skal nyde den, uanset hvad brugerne måtte have i  &quot;Brugerkontrolpanel&quot;. Typografien bliver også gældende for alle de fora hvor du ikke specificeret en anden. Læs flere detaljer om hvor man kan hente nye typografier og hvordan de installeres på <ulink url="http://www.phpbb.com/styles/">typografisiden</ulink> på <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
 			<para>Skal dit board hovedsaglig anvendes nationalt, kan du også her ændre standardsproget fra engelsk til det sprog (<guilabel>Standardsprog</guilabel>) du ønsker skal vises for gæster. Tilmeldte brugere kan i brugerkontrolpanelet selv vælge standardsprog imellem de sprogpakker der er installeret. Som standard downloades phpBB3 kun med den engelske sprogpakke. For at give mulighed for valg mellem flere sprog i førnævnte felt, skal den rette sprogpakke installeres. Læs flere detaljer her: <link linkend="acp_system_language">Sprogpakker</link> .</para>
 			<!--TODO: Correct ACP link-->
