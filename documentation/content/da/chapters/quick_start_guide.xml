@@ -165,7 +165,7 @@
 			<para>De <guilabel>Avancerede indstillinger</guilabel> giver mulighed for at ændre på nogle af boardets parametre. De er valgfrie og kan altid ændres senere. Fortsæt til sidste trin og afslut installationen, hvis du er usikker på hvad disse indstillinger betyder.</para>
 			<para>Hvis installationen blev gennemført, kan du nu bruge <guilabel>Login</guilabel>-knappen og besøge <guilabel>Administrationkontrolpanelet</guilabel>. Tillykke, du har nu korrekt gennemført installationen af phpBB3. Men der ligger stadig arbejde forude!</para>
 			<para>Hvis du ikke er i stand til at installere phpBB3, selv efter at have læst denne vejledning, bør du venligst se i <link linkend="quick_support">supportkapitlet</link>, for at finde ud af hvor du kan få yderligere assistance.</para>
-			<para>Hvis du her er ved at udføre en konvertering fra phpBB 2.0.x, bør du nu læse videre i <link linkend="upgrade_guide">kapitetlet om konvertering</link> for yderligere information. Hvis ikke, skal du nu slette install-mappen fra din server, da du kun kan tilgå administratorkontrolpanelet så længe denne mappe er tilstede.</para>
+			<para>Hvis du her er ved at udføre en konvertering fra phpBB 2.0.x, bør du nu læse videre i <link linkend="upgrade_guide">kapitlet om konvertering</link> for yderligere information. Hvis ikke, skal du nu slette install-mappen fra din server, da du kun kan tilgå administratorkontrolpanelet så længe denne mappe er tilstede.</para>
 		</section>
 	</section>
 	<section id="quick_settings">

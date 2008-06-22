@@ -296,10 +296,10 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Custom Folders</title>
+				<title>Tilpassede mapper</title>
 				
-				<para>If the administrator allows it, you can create your own custom <glossterm>private message</glossterm> folders in phpBB 3.0. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
-				<para>To add a new folder, enter the folder's name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_filters">Private Message Filters</link> for more information about filters) to automatically do it for you.</para>
+				<para>Hvis administratoren har tilladt det, kan du oprette dine egne tilpassede mapper til opbevaring af <glossterm>private beskeder</glossterm>. Du kan kontrolere om du har mulighed for at oprette mapper under <guimenuitem>Regler, mapper &amp; indstillinger</guimenuitem> i fanen <guilabel>private beskeder</guilabel>. </para>
+				<para>For at oprette en ny mappe skrives navnet på den i feltet <guilabel>Tilføj mappe</guilabel>. Når mappen er oprettet vises den straks i mappeoversigten til venstre og under afsnittet tilføj mappe, hvor du nu kan omdøbe og slette den. Du kan bruge mappen som en almindelig mappe til beskeder og manuelt flytte beskeder hertil, eller bruge beskedfiltrering til automatisk at foretage flytningen (se kapitlet <link linkend="pm_filters">Meddelelsefiltre</link> for mere information om disse filtre).</para>
 			</section>
 			
 			<section id="pm_folders_moving">
@@ -310,11 +310,11 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Moving Messages</title>
+				<title>Flytning af beskeder</title>
 				
-				<para>It wouldn't make sense to have custom folders if you weren't able to move messages between them. To do exactly that, visit the folder from which you want to move the messages away. Select the messages you want to move, and use the <guilabel>Moved marked</guilabel> pull-down menu to select the destination folder.</para>
+				<para>Det ville ikke give mening at oprette sine egne mapper hvis man ikke kunne flytte beskeder imellem disse. For at flytte beskeder fra en mappe til en anden skal den eller de beskeder der ønskes flyttes først markeres og i dropdownmenuen forneden vælges den mappe hvortil beskeden skal flyttes med <guilabel>Flyt markerede til xxx</guilabel>.</para>
 				<note>
-					<para>Please note that if after the move, the destination folder would have more messages in it than the message limit allows, you will receive an error message and the move will be discarded.</para>
+					<para>Bemærk venligst at er modtagemappen herefter fyldt over det definerede antal beskeder, modtager du en fejlmeddelelse og flytningen annulleres.</para>
 				</note>
 			</section>
 			
@@ -326,51 +326,51 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Message Markers</title>
+				<title>Farvemarkering af private beskeder</title>
 				
-				<para>Messages inside folders can have colour markings. Please refer to the <guilabel>Message colours</guilabel> legend to see what each colour means. The exact type of colouring depends on the used theme. Coloured messages can have four different meanings:</para>
+				<para>Beskeder i de forskellige mapper kan være farvemarkerede. Farvelægningen kan variere afhængig af den anvendte typografi. Se venligst farvenes betydning i <guilabel>Beskedfarver</guilabel> som kan ses i mapper der indeholder beskeder.  Der anvendes fire forskellige farvemarkeringer med disse betydninger:</para>
 				<variablelist>
 					<varlistentry>
-						<term>Marked message</term>
+						<term>Markeret besked</term>
 						<listitem>
-							<para>You can set a message as marked with the <guilabel>Mark as important</guilabel> option from the pull-down menu.</para>
+							<para>Du kan vælge at markere en besked som &quot;Vigtig&quot; med <guilabel>Markér/afmarkér som vigtig</guilabel> muligheden i dropdownmenuen.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Replied to message</term>
+						<term>Besvaret besked</term>
 						<listitem>
-							<para>If you reply to a message, the message will be marked as this. This way, you can keep hold of which messages still need your attention and which messages you have already replied to.</para>
+							<para>Når du besvarer en besked, bliver den automatisk markeret som sådan. På denne måde har du kontrol over hvilke beskeder der skal behandles og hvilke der allerede er besvaret.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Message from a friend</term>
+						<term>Besked fra ven</term>
 						<listitem>
-							<para>If the sender of a message is in your friends list (see the section on <link linkend="ucp_friends_foes">Friends &amp; Foes</link> for more information), this colour will highlight the message.</para>
+							<para>Er afsenderen på din venneliste (se kapitlet <link linkend="ucp_friends_foes">Venner &amp; Ignorede brugere</link> for mere information), farvemarkeres beskeden automatisk herefter.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Message from a foe</term>
+						<term>Besked fra ignoreret bruger</term>
 						<listitem>
-							<para>If the sender of a message is one of your foes, this colour will highlight this.</para>
+							<para>Er afsenderen en bruger du har valgt at ignorere, farvemarkeres beskeden automatisk herefter.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
 				
 				<note>
-					<para>Please note that a message can only have one label, and it will always be the last action you take. If you mark a message as <guilabel>important</guilabel> and reply to it afterwards, for instance, the <guilabel>replied to</guilabel> label will overwrite the <guilabel>important</guilabel> label.</para>
+					<para>Bemærk venligst at en besked kun kan have én farvemarkering, og det er altid den sidst valgte. Markerer du en besked som <guilabel>Vigtig</guilabel> og efterfølgende besvarer denne, vil markeringen <guilabel>Besvaret</guilabel> overskrive din <guilabel>Vigtig</guilabel> markering.</para>
 				</note>
 			</section>
 		</section>
 		<section id="pm_filters">
-			<title>Message filters</title>
+			<title>Meddelelsefiltre</title>
 			<para>TODO: How to work with message filters. That is quite a complex system</para>
 		</section>
 	</section>
 	<section id="user_search">
-		<title>Search - How to Find What You are Looking For</title>
+		<title>Søgning - Hvordan finder du det du leder efter</title>
 		<para>TODO: Explain how to use the search system. This should also include the results page, and the refine function. Also note, that the title (Search: search term) is a link that one can copy and paste into a post to directly link to the results. Egosearch and the global search field should also be included here.</para>
 	</section>
 	
@@ -382,47 +382,47 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>The Memberlist - More Than Meets the Eye</title>
-		<para>phpBB3 introduces several new ways to search for users.</para>
+		<title>Listen tilmeldte brugere - indeholder mere end øjet ser</title>
+		<para>I phpBB3 introduceres flere nye metoder til at søge efter brugere.</para>
 		
 		<figure id="user_memberlist_sorting">
-			<title>Sorting the memberlist</title>
+			<title>Sortering af listen</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/user_guide/memberlist_sorting.png" />
 				</imageobject>
 				<caption>
-					<para>Choosing an option to sort the memberlist by.</para>
+					<para>Vælg hvordan listen skal sorteres</para>
 				</caption>
 			</mediaobject>
 		</figure>
 		
 		<variablelist>
 			<varlistentry>
-				<term>Sort By Username</term>
+				<term>Sortering efter brugernavn</term>
 				<listitem>
-					<para>If you want to find all members whose usernames start with a certain letter, then you may select the letter from the drop down box and click the Display button to show only users with usernames that begin with that letter.</para>
+					<para>Du kan i dropdownmenuen vælge at sortere listen efter brugernavn. Du kan også vælge at få vist alle brugernavne startende med et bestemt bogstav, ved at klikke på det pågældende bogstav lidt længere nede under overskriften &quot;Tilmeldte brugere&quot;.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Sort By Column Headers</term>
+				<term>Sortering efter kollonneoverskrifter</term>
 				<listitem>
-					<para>To sort the memberlist ascending, you may click on the column headers like "Username", "Joined", "Posts", etc. If you click on the same column again, then the memberlist will be sorted descending.</para>
+					<para>For at sortere listen stigende klikker du på den kolonneoverskrift du vil sortere efter: &quot;Brugernavn&quot;, &quot;Tilmeldt&quot;, &quot;Indlæg&quot;, etc. Klikker du en gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Sort By Other Options</term>
+				<term>Andre sorteringsmetoder</term>
 				<listitem>
-					<para>You may also sort the memberlist by using the drop down boxes on the bottom of the page.</para>
+					<para>Du kan også sortere listen efter de muligheder der er synlige i dropdownmenuen.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Find a Member Search Tool</term>
+				<term>Søgefunktionen til at finde en tilmeldt bruger</term>
 				<listitem>
-					<para>With the "Find a member" search tool, you can fine tune your search for members. You must fill out at least one field. If you don't know exactly what you are looking for, you may use the asterisk symbol (*) as a wildcard on any field.</para>
+					<para>Med &quot;Find en tilmeldt bruger&quot;-funktionen kan du søge efter specifikke brugere. Du behøver ikke at udfylde alle felterne. Brug * som ubekendt for ukendte tegn.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
