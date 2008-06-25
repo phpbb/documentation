@@ -265,11 +265,11 @@
 		<para>You can choose to not receive Private Messages by other users in your <link linkend="ucp_preferences"> Preferences</link>. Note, that moderators and administrators will still be able send you Private Messages, even if you have disabled them.</para>
 		<para>[To use this feature, you have to be a registered user and need the to have the correct permissions.]</para>
 		<section id="pm_display">
-			<title>Message display</title>
-			<para>The Inbox is the default incoming folder, which contains a list of your recently received Private Messages. </para>
+			<title>Vis beskeder</title>
+			<para>Indbakken er standardmodtagemappen for indkommende beskeder og indeholder alle beskeder afsendt til dig. </para>
 		</section>
 		<section id="pm_new">
-			<title>Composing a new message</title>
+			<title>Skriv en besked</title>
 			<para>TODO: Similar to the posting screen, so a reference for the basic functions should be enough. What needs to be explained are the To and Bcc fields, how they integrate with the friends list and how to find members (which could also be a link to the memberlist section).</para>
 		</section>
 		<section id="pm_folders">
@@ -280,12 +280,12 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Message Folders</title>
-			<para>Just like in your e-mail client, all <glossterm>private messages</glossterm> are stored in folders. Working with folders is similar to working with forums in phpBB 3.0. The <guilabel>Inbox</guilabel> is your default incoming message folder. All messages you receive will appear in here.</para>
-			<para><guilabel>Sent messages</guilabel> will appear in either the <guilabel>Outbox</guilabel> or the <guilabel>Sent messages</guilabel> folder. As long as the recipient(s) have not yet read the message, it will stay in the <guilabel>Outbox</guilabel>. As soon as someone reads the message it will be archived to the <guilabel>Sent messages</guilabel> folder. If the administrator allows it, you can edit messages after sending them as long as they are in the <guilabel>Outbox</guilabel> and the recipients have not yet read them.</para>
-			<para>Each folder, including <guilabel>Sent messages</guilabel> and <guilabel>Outbox</guilabel>, can hold a board-defined amount of messages. This is a global setting that only a board administrator can change. An info text displays the current number of allowed messages and the current percentage of space your messages are using at the top of each folder. If no restriction is displayed, you are allowed unlimited messages in each folder.</para>
+			<title>Beskedmapper</title>
+			<para>Nøjagtig som i din email klient gemmes alle <glossterm>private beskeder</glossterm> i mapper. Du kan arbejde med mapperne på samme måde som med fora i phpBB 3.0. <guilabel>Indbakke</guilabel> er din standardmappe til modtagede beskeder. Alle beskeder afsendt til dig vil kunne ses her.</para>
+			<para>De beskeder du har afsendt vil enten kunne ses i <guilabel>Udbakke</guilabel> eller i <guilabel>Sendte beskeder</guilabel>. Indtil modtageren har læst beskeden forbliver den i <guilabel>Udbakke</guilabel>. Når modtageren har læst den arkiveres beskeden i mappen <guilabel>Sendte beskeder</guilabel>. Hvis administratoren har tilladt det, kan du redigere dine beskeder så længe de befinder sig ulæste i <guilabel>Udbakke</guilabel>.</para>
+			<para>Hver mappe, inklusive <guilabel>Sendte beskeder</guilabel> og <guilabel>Udbakke</guilabel> kan indeholde det antal beskeder som er defineret for boardet. Det er en overordnet grænse som kun kan ændres af en boardadministrator. Øverst i alle mapper vises en status over hvor meget af den tilladte plads der er forbrugt, både i procent og antal beskeder. Vises ingen status er der ikke defineret en øvre grænse for antal beskeder.</para>
 			<note>
-				<para>Please note that the total amount of messages allowed is a per-folder setting. You can have multiple folders which each allow 50 messages for instance. If you have 3 folders, your actual global limit is 150 messages, but each folder can only contain up to 50 messages by itself. It is not possible to merge folders and have one with more messages than the limit.</para>
+				<para>Bemærk at det tilladte antal beskeder er en grænse pr. mappe. Du kan altså have flere mapper hvor der i hver kan opbevares beskeder op til grænsen. Har du f.eks. 3 mapper og grænsen er sat til 50 beskeder pr. mappe, kan du reelt gemme 150 beskeder. Det er ikke muligt at sammenlægge mapper og det er heller ikke muligt at oprette en mappe med en anden grænse for tilladte beskeder.</para>
 			</note>
 			
 			<section id="pm_folders_custom">
@@ -298,7 +298,7 @@
 				</sectioninfo>
 				<title>Tilpassede mapper</title>
 				
-				<para>Hvis administratoren har tilladt det, kan du oprette dine egne tilpassede mapper til opbevaring af <glossterm>private beskeder</glossterm>. Du kan kontrolere om du har mulighed for at oprette mapper under <guimenuitem>Regler, mapper &amp; indstillinger</guimenuitem> i fanen <guilabel>private beskeder</guilabel>. </para>
+				<para>Hvis administratoren har tilladt det, kan du oprette dine egne tilpassede mapper til opbevaring af <glossterm>private beskeder</glossterm>. Du kan kontrollere om du har mulighed for at oprette mapper under fanen <guilabel>private beskeder</guilabel> og under punktet <guimenuitem>Regler, mapper &amp; indstillinger</guimenuitem>.</para>
 				<para>For at oprette en ny mappe skrives navnet på den i feltet <guilabel>Tilføj mappe</guilabel>. Når mappen er oprettet vises den straks i mappeoversigten til venstre og under afsnittet tilføj mappe, hvor du nu kan omdøbe og slette den. Du kan bruge mappen som en almindelig mappe til beskeder og manuelt flytte beskeder hertil, eller bruge beskedfiltrering til automatisk at foretage flytningen (se kapitlet <link linkend="pm_filters">Meddelelsefiltre</link> for mere information om disse filtre).</para>
 			</section>
 			
@@ -312,9 +312,9 @@
 				</sectioninfo>
 				<title>Flytning af beskeder</title>
 				
-				<para>Det ville ikke give mening at oprette sine egne mapper hvis man ikke kunne flytte beskeder imellem disse. For at flytte beskeder fra en mappe til en anden skal den eller de beskeder der ønskes flyttes først markeres og i dropdownmenuen forneden vælges den mappe hvortil beskeden skal flyttes med <guilabel>Flyt markerede til xxx</guilabel>.</para>
+				<para>Det ville ikke give mening at oprette sine egne mapper, hvis man ikke kunne flytte beskeder imellem disse. For at flytte beskeder fra en mappe til en anden skal den eller de beskeder der ønskes flyttes først markeres og i dropdownmenuen forneden vælges den mappe hvortil beskeden skal flyttes med <guilabel>Flyt markerede til xxx</guilabel>.</para>
 				<note>
-					<para>Bemærk venligst at er modtagemappen herefter fyldt over det definerede antal beskeder, modtager du en fejlmeddelelse og flytningen annulleres.</para>
+					<para>Bemærk venligst at er modtagemappen herefter fyldt over det tilladte antal beskeder, modtager du en fejlmeddelelse og flytningen annulleres.</para>
 				</note>
 			</section>
 			
