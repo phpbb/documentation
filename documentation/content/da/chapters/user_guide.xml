@@ -207,63 +207,63 @@
 		</section>
 		
 		<section id="posting_options">
-			<title>Post Options</title>
+			<title>Indlægsindstillinger</title>
 			<para>TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc.</para>
-			<para>When posting either a new topic or reply, there are several post options that are available to you. You can view these options by selecting the <guilabel>Options</guilabel> tab from the section below the posting form. Depending on the permissions the board administrator has assigned to you or whether you are posting a topic or reply, these options will be different.</para>
+			<para>When posting either a new topic or reply, there are several post options that are available to you. You can view these options by selecting the <guilabel>Indstillinger</guilabel> tab from the section below the posting form. Depending on the permissions the board administrator has assigned to you or whether you are posting a topic or reply, these options will be different.</para>
 			<itemizedlist>	
-				<listitem><para><guilabel>Disable BBCode</guilabel> - If BBCode is enabled on the board and you are allowed to use it, this option will be available. Checking this box will not convert any BBCode in your post content into its respected output. For example, [b]Bolded text[/b] will be seen in your post as exactly [b]Bolded text[/b].</para></listitem> 
-				<listitem><para><guilabel>Disable Smilies</guilabel> - If Smilies are enabled on the board and you are allowed to use them, this option will be available. Checking this box will not convert any of the smilie's characters to their respected image. For example, ;) will be seen in your post as exactly ;).</para></listitem> 
-				<listitem><para><guilabel>Do not automatically parse URLs</guilabel> - When entering a URL directly into your post content (in the format of http://....com or www.etc.com), by default it will be converted to a clickable string of text. However, if this box is checked when posting, these URLs will stay as a standard string of text.</para></listitem> 
-				<listitem><para><guilabel>Attach a signature (signatures can be altered via the UCP)</guilabel> - If this box is checked, the signature you have set in your profile will be attached to the post provided signatures have been enabled by the administrator and you have the proper permissions. For more information about signatures, please see <link linkend="ucp_signature">UCP Signatures</link>.</para></listitem> 
-				<listitem><para><guilabel>Send me an email when a reply is posted</guilabel> - If this box is checked, you will receive a notification (either by email, Jabber, etc) every time another user replies to the topic. This is called subscribing to the topic. For more information, please see <link linkend="ucp_subscriptions">UCP Subscriptions</link>.</para></listitem>
-				<listitem><para><guilabel>Lock topic</guilabel> - Provided you have moderation permissions in this forum, checking this box will result in the topic being locked after your reply has been posted. At this point, no one but moderators or administrators may reply to the topic. For more information, please see <link linkend="modtools_lock">Locking a topic or post</link>.</para></listitem>
+				<listitem><para><guilabel>Slå BBkode fra</guilabel> - If BBCode is enabled on the board and you are allowed to use it, this option will be available. Checking this box will not convert any BBCode in your post content into its respected output. For example, [b]Bolded text[/b] will be seen in your post as exactly [b]Bolded text[/b].</para></listitem> 
+				<listitem><para><guilabel>Slå smilies fra</guilabel> - If Smilies are enabled on the board and you are allowed to use them, this option will be available. Checking this box will not convert any of the smilie's characters to their respected image. For example, ;) will be seen in your post as exactly ;).</para></listitem> 
+				<listitem><para><guilabel>Behandel ikke URL'er automatisk</guilabel> - When entering a URL directly into your post content (in the format of http://....com or www.etc.com), by default it will be converted to a clickable string of text. However, if this box is checked when posting, these URLs will stay as a standard string of text.</para></listitem> 
+				<listitem><para><guilabel>Tilføj signatur (signaturen kan rettes i brugerkontrolpanelet)</guilabel> - er boksen vinget af tilføjes den signatur du oprettet under din profil. Det forudsætter at administratoren har tilladt brug af signaturer i indlæg. Læs mere om signaturer i <link linkend="ucp_signature">signaturer i UCP</link>.</para></listitem> 
+				<listitem><para><guilabel>Send mig en email når der skrives et svar</guilabel> - er boksen vinget af modtager du en advisering (pr. email, Jabber, etc) hver gang der skrives et svar i emnet. Funktionen kaldes overvågning af emnet. Læs mere i kapitlet <link linkend="ucp_subscriptions">Boardindstillinger i UCP</link>.</para></listitem>
+				<listitem><para><guilabel>Lås emne</guilabel> - har du redaktørtilladelser i forummet, vil afkrydsning i denne boks medføre at emnet låses når du indsender svar på indlægget. Herefter vil kun redaktører og administratorer kunne indsende indlæg i emnet. Læs mere information i <link linkend="modtools_lock">Lås emne eller indlæg</link>.</para></listitem>
 			</itemizedlist>
 			
 			<section id="posting_special">
-				<title>Topic Types</title>
-				<para>Provided you have the right permissions, you have the option of selecting various topic types when posting a new topic by using <guilabel>Post topic as</guilabel>. The four possible types are: <guilabel>Normal</guilabel>, <guilabel>Sticky</guilabel>, <guilabel>Announcement</guilabel>, and <guilabel>Global</guilabel>. By default, all new posts are <guilabel>Normal</guilabel>.</para>
+				<title>Emnetyper</title>
+				<para>Har du de rette tilladelser, har du mulighed for at vælge hvilken type dit nye emne skal vises som. Når du skriver et nyt emne kan denne mulighed benyttes med valgmuligheden <guilabel>Skriv emne som</guilabel> i indstillingsfanen umiddelbart under feltet hvor teksten skrives. Der er fire emnetyper: <guilabel>Normal</guilabel>, <guilabel>Opslag</guilabel>, <guilabel>Bekendtgørelse</guilabel>, og <guilabel>Global</guilabel>. Standardindstillingen er <guilabel>Normal</guilabel>.</para>
 				<itemizedlist>	
 				
-					<listitem><para><guilabel>Normal</guilabel> - By selecting normal, your new topic will be a standard topic in the forum.</para></listitem>
-					<listitem><para><guilabel>Sticky</guilabel> - Stickies are special topics in the forum. They are "stuck" to the top of the first page of the forum in which they are posted, above every Normal topic.</para></listitem>
-					<listitem><para><guilabel>Announcement</guilabel> - Announcements are much like Stickies in that they are "stuck" to the top of the forum. However, they are different from stickies in two ways: 1) they are above Stickies, and 2) they appear at the top of <emphasis>every</emphasis> page of the forum instead of only the first page of topics.</para></listitem>
-					<listitem><para><guilabel>Global</guilabel> - Global, or Global Announcements, are special types of Announcements which appear at the top of every page of every forum on the board. They appear above every other type of special topic.</para></listitem>
+					<listitem><para><guilabel>Normal</guilabel> - emnet indsendes som et standardemne i forummet.</para></listitem>
+					<listitem><para><guilabel>Opslag</guilabel> - vises i øverst på forummets første side, før alle normale emner.</para></listitem>
+					<listitem><para><guilabel>Bekendtgørelser</guilabel> - er meget lig med opslag, i det de også er &quot;låst&quot; øverst i det forum de er indsendt. Der er imidlertid to forskelle: 1) De vises over opslag, og 2) de vises øverst på <emphasis>alle</emphasis> sider i forummet, ikke kun på den første side.</para></listitem>
+					<listitem><para><guilabel>Global</guilabel> -  eller globale bekendtgørelser, er helt særlige bekendtgørelser som vises øverst på alle sider og i alle fora på boardet. De vises over alle andre typer emner.</para></listitem>
 				</itemizedlist>
-				<para>You also have the ability to specify how long the special (stickies, announcements, and global announcements) keep their type. For example, an announcement is created and specified to stay "stuck" for 4 days. After the 4 days are over, the announcement will automatically be switched to a Normal topic.</para>
+				<para>Der er også mulighed for at bestemme hvor længe et emne skal vises som denne type (opslag, bekendtgørelse og global) emne. Hvis man definerer varigheden for eksempelvis et opslag til at vare fire dage, vil emnet efter udløb af perioden automatisk blive ændret til et normalt emne.</para>
 			</section>
 		</section>
 		
 		<section id="posting_attachments">
-			<title>Attachments</title>
+			<title>Vedhæfte filer</title>
 			<para>TODO: How to add attachments, what restrictions might there be. Note that one needs to have the permission to use attachments. How to add more than one file, and so forth.</para>
 		</section>
 		<section id="posting_polls">
-			<title>Polls</title>
+			<title>Afstemning</title>
 			<para>TODO: Again, permission based should be noted. Explain how to add the different options, allow for multiple votes, vote changing, and so forth.</para>
 		</section>
 		<section id="posting_drafts">
-			<title>Drafts</title>
+			<title>Kladde</title>
 			<para>TODO: Explain how to load and save drafts. A link to the UCP drafts section should be added for reference. Not sure if permission based.</para>
 		</section>
 	</section>
 	<section id="user_pm">
-		<title>Communicate with Private Messages</title>
-		<para>phpBB 3.0 allows its users to communicate privately by using Private Messages. To visit the Private Messages section, you either can click on the [X new messages] link on the left hand side below the forum header, or you can directly access it through the <link linkend="user_control_panel">User Control Panel.</link>.</para>
-		<para>Depending on your [settings], there are 3 ways of being notified that a new Private Message has arrived:</para>
+		<title>Kommunikation med private beskeder</title>
+		<para>phpBB 3.0 giver brugerne mulighed for at kommunikere privat med beskedsystemet. Man kan gå direkte til beskedsystemet ved at klikke på linket [X nye beskeder] på boardindekset i venstre side næsten øverst, eller direkte via <link linkend="user_control_panel">brugerkontrolpanelet</link>.</para>
+		<para>Der er tre måder hvormed du kan blive adviseret om at der er nye private beskeder til dig:</para>
 		<orderedlist>
 			<listitem>
-				<para>By receiving an e-mail or Jabber message</para>
+				<para>Du modtager en e-mail, og/eller en Jabberbesked hvis administratoren sat boardet op til at kommunikere med en Jabberserver</para>
 			</listitem>
 			<listitem>
-				<para>While browsing the forum a notification window will pop up</para>
+				<para>Du bliver mødt med et popupvindue når du besøger boardet</para>
 			</listitem>
 			<listitem>
-				<para>The [X new messages] link will show the number of currently unread messages</para>
+				<para>Linket [X nye beskeder] viser altid antallet af ulæste beskeder i din indbakke</para>
 			</listitem>
 		</orderedlist>
-		<para>You can set the options to your liking in the <link linkend="ucp_preferences">Preferences section</link>. Note, that for the popup window notification to work, your will have to add the forum you are visiting to your browser’s popup blocker white list.</para>
-		<para>You can choose to not receive Private Messages by other users in your <link linkend="ucp_preferences"> Preferences</link>. Note, that moderators and administrators will still be able send you Private Messages, even if you have disabled them.</para>
-		<para>[To use this feature, you have to be a registered user and need the to have the correct permissions.]</para>
+		<para>Du kan under fanen <link linkend="ucp_preferences">boardindstillinger</link> vælge hvilke metoder du foretrækker. Bemærk at du i nogle browsere skal tillade popupvinduer fra boardet, for at få glæde at denne advisering.</para>
+		<para>Du kan fravælge at modtage private beskeder fra andre brugere i <link linkend="ucp_preferences">boardindstillinger</link>. Administratorer og redaktører vil stadig kunne sende dig private beskeder selvom du har fravalgt at modtage beskeder fra andre brugere.</para>
+		<para>[For at bruge bruge denne mulighed skal du være tilmeldt boardet og have de rette tilladelser.]</para>
 		<section id="pm_display">
 			<title>Vis beskeder</title>
 			<para>Indbakken er standardmodtagemappen for indkommende beskeder og indeholder alle beskeder afsendt til dig. </para>
