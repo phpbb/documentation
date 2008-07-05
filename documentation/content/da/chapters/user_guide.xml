@@ -72,50 +72,50 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Orienting Yourself in the User Control Panel</title>
-		<para>The User Control Panel (<glossterm>UCP</glossterm>) allows you to alter personal preferences, manage posts you are watching, send and receive private messages, and change the way information about you appears to other users. To view the UCP, click the 'User Control Panel' link that appears after logging in.</para>
-		<para>The UCP is separated into seven tabs: Overview, Private Messages, Profile, Preferences, Friends and Foes, Attachments, and Groups. Within each tab are several sub pages, accessed by clicking the desired link on the left side of the UCP interface. Some of these areas may not be available depending on the permissions set for you by the administrator.</para>
-		<para>Every page of the UCP displays your Friends List on the left side. To send a private message to a friend, click their user name.</para>
+		<title>Orientér dig i brugerkontrolpanelet</title>
+		<para>Brugerkontrolpanelet (<glossterm>UCP</glossterm>) giver mulighed for bl. a. at ændre personlige indstillinger, administrere overvågninger og bogmærker, sende og læse private beskeder. For at få adgang til UCP klikkes på linket &quot;Brugerkontrolpanel&quot; som ses øverst på siden når du er logget ind.</para>
+		<para>UCP er opdelt i seks faner: Oversigt, Profil, Boardindstillinger, Private beskeder, Brugergrupper og Venner og ignorerede brugere. Hver fane indeholder yderligere underpunkter i venstre side af skærmbilledet. Afhængig af de tilladelser du er tildelt af administrator kan de tilgængelige underpunkter være forskellige fra bruger til bruger.</para>
+		<para>Alle siderne i UCP viser også listen over dine venner. Du kan til enhver tid sende en privat besked til dem blot ved at klkke på brugernavnet.</para>
 		<para>TODO: Note that Private messaging will be discussed in its own section</para>
 		<section id="ucp_overview">
-			<title>Overview</title>
-			<para>The Overview displays a snapshot of information about your posting habits such as the date you joined the forum, your most active topic, and how many total posts you have submitted. Overview sub pages include Subscriptions, Bookmarks, and Drafts.</para>
+			<title>Oversigt</title>
+			<para>Forsiden viser en status over din aktivitet og historik på boardet, med mulighed for se dine overvågninger, bogmærker og gemte kladder.</para>
 				
 			<figure id="ucp_overview_index">
-				<title>User Control Panel Overview (Index</title>
+				<title>Brugerkontrolpanel oversigt</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/user_guide/ucp_overview.png" />
 					</imageobject>
 					<caption>
-						<para>The <glossterm>UCP</glossterm> Overview section</para>
+						<para><glossterm>UCP</glossterm> forside</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
 			<section id="ucp_subscriptions">
-				<title>Subscriptions</title>
-				<para>Subscriptions are forums or individual topics that you have elected to watch for any new posts. Whenever a new post is made inside an area you have subscribed to, an e-mail will be sent you to informing you of the new addition. To create a subscription, visit the forum or topic you would like to subscribe to and click the 'Subscribe' link located at the bottom of the page.</para>
-				<para>To remove a subscription, check the box next to the subscription you would like to remove and click the 'Unsubscribe' button.</para>
+				<title>Overvågning</title>
+				<para>Du kan vælge at overvåge udvalgte fora og emner, og hermed modtage advisering når der indsendes nye emner eller indlæg i disse. En overvågning oprettes via forummet eller emnet ved at klikke på linket &quot;Overvåg forum/emen&quot; nederst på siden.</para>
+				<para>Man kan fjerne en overvågning fra UCP ved at markere overvågningen og herefter klikke på knappen <guilabel>Stop overvågning af markeret</guilabel> nederst.</para>
 			</section>
 			<section id="ucp_bookmarks">
-				<title>Bookmarks</title>
-				<para>Bookmarks, much like subscriptions, are topics you've chosen to watch. However, there are two key differences: 1) only individual topics may be bookmarked, and 2) an e-mail will not be sent to inform you of new posts.</para>
-				<para>To create a bookmark, visit the topic you would like to watch and click the 'Bookmark Topic' link located at the bottom of the page.</para>
-				<para>To remove a bookmark, check the box next to the bookmark you would like to remove and click the 'Remove marked bookmarks' button.</para>
+				<title>Bogmærker</title>
+				<para>Et bogmærke er næsten identisk med overvågning, med to undtagelser: 1) kun emner kan bogmærkes, 2) man modtager ikke advisering når der indsendes indlæg i emnet.</para>
+				<para>Man bogmærker et emne ved at klikke på linket &quot;Bogmærk emne&quot; nederst på siden hvor man læser emnet.</para>
+				<para>Man kan fjerne et bogmærke fra UCP ved at markere bogmærket og herefter klikke på knappen <guilabel>Fjern markerede bogmærker</guilabel>.</para>
 			</section>
 			<section id="ucp_drafts">
-				<title>Drafts</title>
-				<para>Drafts are created when you click the 'Save' button on the New Post or Post Reply page. Displayed are the title of your post, the forum or topic that the draft was made in, and the date you saved it.</para>
-				<para>To continue editing a draft for future submission, click the 'View/Edit' link. If you plan to finish and post the message, click 'Load Draft'. To delete a draft, check the box next to the draft you wish to remove and click 'Delete Marked'.</para>
+				<title>Kladder</title>
+				<para>Du kan gemme en kladde når du skriver nye emner eller indlæg ved at klikke på knappen <guilabel>Gem</guilabel>. I oversigten over gemte kladder vises titlen på dit indlæg, det forum eller emne du skrev kladden til og datoen du gemte den.</para>
+				<para>For at fortsætte redigeringen af kladden klikkes på linket &quot;Indlæs kladde&quot;. Når du har færdiggjort redigeringen og vil indsende indlægget, klikker du på <guilabel>Udfør</guilabel>. For at slette en kladde vinges boksen til højre for kladden af og der klikkes på <guilabel>Slet markerede</guilabel>.</para>
 			</section>
 		</section>
 		<section id="ucp_profile">
 			<title>Profil</title>
-			<para>This section lets you set your profile information. Your profile information contains general information that other users on the board will able to see. Think of your profile as a sign of your public presence. This section is separated from your preferences. (Preferences are the individual settings that you set and manage on your own, and control your forum experience. Thus, this is separated from your profile settings.)</para>
+			<para>I denne fane kan du indstille og ændre dine personlige profilinformationer. En stor del af disse data kan ses af andre tilmeldte brugere på boardet, og er derfor med til at tegne eller præsentere dig offentligt.</para>
 			<section>
 				<title>Profil</title>
-				<para>TODO: Explain the settings you can edit here. </para>
+				<para>Information her kan være synlig for andre tilmeldte brugere. Vær derfor påpasselig med personlige oplysninger som ikke ønskes ud i det offentlige rum.</para>
 			</section>
 			<section>
 				<title>Kontoindstillinger</title>
