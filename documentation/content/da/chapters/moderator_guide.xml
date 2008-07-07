@@ -10,7 +10,7 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Moderator Guide</title>
+	<title>Redaktørguide</title>
 	<abstract>
 		<para>This chapter describes the phpBB 3.0 forum moderation controls.</para>
 	</abstract>
@@ -25,61 +25,61 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Editing posts</title>
-		<para>Moderators with privileges in the relevant forums are able to edit topics and posts. You can usually view who the moderators are beneath the forum description on the index page. A user with moderator privileges is able to select the edit button beside each post. Beyond this point, they are able to:</para>
+		<title>Redigere indlæg</title>
+		<para>Redaktører med tilladelser i relevante fora kan redigere i emner og indlæg. Normalt kan man se redaktører i forumbeskrivelserne på boardindekset. En bruger med redaktørstatus har adgang til knappen <guilabel>Redigér</guilabel> i alle indlæg. Herudover kan redaktørerne:</para>
 	
 		<variablelist>
 			<varlistentry>
-				<term>Delete posts</term>
+				<term>Slette indlæg</term>
 				<listitem>
-					<para>This option removes the post from the topic. Remember that it cannot be recovered once deleted.</para>
+					<para>Slette indlæg i emnet. Husk at slettede indlæg ikke kan gendannes.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Change or remove the post icon</term>
+				<term>Ændre eller fjerne emne- og indlægikoner</term>
 				<listitem>
-					<para>Decides whether or not an icon accompanies the post, and if so, which icon.</para>
+					<para>Bestemme om et valgt ikon er i overenstemmelse med indlægget.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Alter the subject and message body</term>
+				<term>Ændre emnetitel og indlægstekst</term>
 				<listitem>
-					<para>Allows the moderator to alter the contents of the post.</para>
+					<para>En redaktør har mulighed for at ændre indholdet af et indlæg.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Alter the post options - disabling BBCode/Smilies parsing URLs etc.</term>
+				<term>Ændre indlægsmuligheder - deaktivere BBkode/Smilies og behandling af URL'er osv.</term>
 				<listitem>
-					<para>Determines whether certain features are enabled in the post.</para>
+					<para>Bestemme om bestemte muligheder skal være aktiveret eller ej i indlægget.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Lock the topic or post</term>
+				<term>Låse emnet eller indlægget</term>
 				<listitem>
-					<para>Allows the moderator to lock the current post, or the full topic.</para>
+					<para>En redaktør kan låse indlægget eller hele emnet.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Add, alter or remove attachments</term>
+				<term>Tilføje, ændre og fjerne vedhæftede filer</term>
 				<listitem>
-					<para>Select attachments to be removed or edited (if option is enabled and attachments are present).</para>
+					<para>Hvis muligheden for at vedhæfte filer er aktiveret kan redaktøren vælge at fjerne eller ændre disse.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Modify poll settings</term>
+				<term>Ændre afstemningsindstillinger</term>
 				<listitem>
-					<para>Alter the current poll settings (if option is enabled and a poll is present).</para>
+					<para>Er muligheden for at oprette afstemninger tilstede på boardet kan redaktøren ændre indstillinger i en oprettet afstemning.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
 		
-		<para>If, for any case the moderator decides that the post should not be edited, they may lock the post to prevent the user doing so. The user will be shown a notice when they attempt to edit the post in future. Should the moderator wish to state why the post was edited, they may enter a reason when editing the post.</para>
+		<para>Er der grund til at et indlæg ikke skal kunne redigeres, kan et indlæg låses for at forhindre indlægsforfatteren i dette. Ved fremtidige forsøg på at redigere indlægget adviseres brugeren. Ønsker redaktøren at begrunde årsagen til den foretagede ændring, er der mulighed for at tilføje en bemærkning til det redigerede indlæg.</para>
 		
 		<!--TODO: screenshot of post and edit reason?-->
 	</section>
@@ -94,7 +94,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Moderation tools</title>
+		<title>Redaktørværktøjer</title>
 		<para>Beneath topics, the moderator has various options in a dropdown box which modify the topic in different ways. These include the ability to lock, unlock, delete, move, split, merge and copy the topic. As well as these, they are also able to change the topic type (Sticky/Announcement/Global), and also view the topics logs. The following subsections detail each action on a topic that a moderator can perform.</para>
 		
 		<figure id="quick_mod_tools">

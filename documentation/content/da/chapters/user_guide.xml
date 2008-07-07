@@ -52,11 +52,11 @@
 			</listitem>
 			<listitem>
 				<para>Administratoren kan også have valgt at din nye konto skal aktiveres. Den ene mulighed er at du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er tilfældet vil du se denne meddelelse:<blockquote>
-						<para>Din konto er oprettet. Men dette board kræver kontoaktivering, så en aktiveringsnøgle er sendt til den emailadresse du fremsendte. Se venligst din email for yderligere information.</para>
+						<para>Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</para>
 					</blockquote>
 				</para>
 				<para>Den anden metode til kontoaktivering kræver at administratoren involveres. Du vil se denne meddelelse:<blockquote>
-						<para>Din konto er oprettet. Men dette board kræver kontoaktivering af administratorerne. En email er blevet sendt til dem og du vil blive informeret når din konto er blevet aktiveret.</para>
+						<para>Din konto er oprettet. Kontoen skal aktiveres af boardadministrator, som nu er adviseret via email. Når din konto er aktiveret, får du besked via email.</para>
 					</blockquote>Hav venligst tålmodighed med administratror, hvis det sidste er tilfældet. Din tilmelding vil blive gennemset inden din konto aktiveres.</para>
 			</listitem>
 		</itemizedlist>
