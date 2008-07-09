@@ -53,7 +53,7 @@
 			<varlistentry>
 				<term>Ændre indlægsmuligheder - deaktivere BBkode/Smilies og behandling af URL'er osv.</term>
 				<listitem>
-					<para>Bestemme om bestemte muligheder skal være aktiveret eller ej i indlægget.</para>
+					<para>Bestemme hvilke muligheder der skal være aktiveret i indlægget.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -95,24 +95,24 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Redaktørværktøjer</title>
-		<para>Beneath topics, the moderator has various options in a dropdown box which modify the topic in different ways. These include the ability to lock, unlock, delete, move, split, merge and copy the topic. As well as these, they are also able to change the topic type (Sticky/Announcement/Global), and also view the topics logs. The following subsections detail each action on a topic that a moderator can perform.</para>
+		<para>For redaktøren er der, i hvert emne, en række værktøjer til rådighed. Det ønskede vælges fra dropdownmenuen. De tilgængelige værktøjer herfra er: låse, låse op, slette, flytte, dele, sammenlæg og kopiér emne. Desuden kan emnetype ændres herfra (opslag, bekendtgørelse og global) og emnets log hentes. Herunder beskrives redaktørmulighederne mere detaljeret.</para>
 		
 		<figure id="quick_mod_tools">
-			<title>Quick Mod Tools</title>
+			<title>Redigeringsværktøjer</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/moderator_guide/quick_mod_tools.png"/>
 				</imageobject>
 				<caption>
-					<para>The quick moderator tools. As you can see, these tools are located at the end of each topic at the bottom of the page, before the last post on that page. Clicking on the selection menu will show you all of the actions you may perform.</para>
+					<para>Redigeringsværktøjerne er tilgængelige via dropdownmenuen placeret under det sidste indlæg på hver side i emnet. Fold valgmulighederne ud ved at klikke på pilen til højre i feltet.</para>
 				</caption>
 			</mediaobject>
 		</figure>
 		
 		<section id="modtools_lock">
-			<title>Locking a topic or post</title>
-			<para>This outlines how a moderator may lock whole topics or individual posts. There are various ways a moderator may do this, either by using the <link linkend="moderator_mcp">Moderator Control Panel</link> when viewing a forum, navigating to the selection menu beneath the topic in question, or editing any post within a topic and checking the relevant checkbox.</para>
-			<para>Locking a whole topic ensures that no user can reply to it, whereas locking individual posts denies the post author any editing permissions for that post.</para>
+			<title>Lås et emne eller indlæg</title>
+			<para>Der er flere måder at udføre denne handling på. Fra forumoversigten kan man vælge at bruge <link linkend="moderator_mcp">Redaktørkontrolpanel</link> øverst, herefter markere det emne der skal låses og vælge denne handling nederst. Når man som redaktør læser i selve emnet, er der desuden mulighed for at låse emnet fra redigeringsværktøjerne nederst på hver side, uden at skulle i redaktørkontrolpanelet. Et enkelt indlæg kan låses ved at redigere indlægget og vælge låse det nederst under indstillinger.</para>
+			<para>Låses et emne kan ingen skrive indlæg i det. Låsning af inviduelle indlæg forhindrer at disse kan redigeres af forfatteren.</para>
 		</section>
 		
 		<section id="modtools_delete">
@@ -126,11 +126,11 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Deleting a topic or post</title>
-			<para>If enabled within the <link linkend="admin_control_panel">Administration Control Panel</link> permissions, a user may delete their own posts when either viewing a topic or editing a previous post. The user may only delete a topic or post if it has not yet been replied to.</para>
-			<para>Administrators and moderators have similar editing permissions, but only administrators are allowed to remove topics regardless of replies. Using the selection menu beneath topics allows quick removal. The <link linkend="moderator_mcp">Moderator Control Panel</link> allows multiple deletions of separate posts.</para>
+			<title>Slet et emne eller indlæg</title>
+			<para>Hvis det er tilladt i <link linkend="admin_control_panel">administratorkontrolpanelets</link> tilladelsesystem kan brugerne slette egne indlæg, enten når et emne læses eller når indlægget redigeres. Emner og indlæg kan kun slettes af brugerne hvis der endnu ikke er svaret på disse.</para>
+			<para>Administratorer og redaktører har samme muligheder, men kun administratorer kan fjerne et indlæg hvis der er efterfølgende indlæg i emnet. Ved at bruge redaktørværktøjerne nederst i emnet kan et indlæg hurtigt fjernes. I <link linkend="moderator_mcp">redaktørkontrolpanelet</link> kan flere indlæg udvælges og slettes.</para>
 			<tip>
-				<para>Please note that any topics or posts cannot be retrieved once deleted. Consider using a hidden forum that topics can be moved to for future reference.</para>
+				<para>Bemærk venligst at slettede emner og indlæg ikke kan gendannes. Overvej eventuelt at oprette et skjult forum og i stedet flytte emner og indlæg hertil til brug for fremtidig reference.</para>
 			</tip>
 		</section>
 		
@@ -145,8 +145,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Moving a topic into another forum</title>
-			<para>To move a topic to another forum, navigate to the <guilabel>Quick MOD Tools</guilabel> area beneath the topic and select <guilabel>Move Topic</guilabel> from the selection menu. You will then be met with another selection menu of a location (another forum) to move it to. If you would like to leave a <link linkend="modtools_move_shadow">Shadow Topic</link> behind, leave the box checked. Select the desired forum and click <guilabel>Yes</guilabel>.</para>
+			<title>Flyt et emne til andet forum</title>
+			<para>For at flytte et emne til et andet forum, benyttes <guilabel>Redaktørværktøjer</guilabel> underst i emnet og vælg værktøjet <guilabel>Flyt emne</guilabel> i dropdownmenuen. Ønsker du at efterlade et <link linkend="modtools_move_shadow">Skyggeemne</link> i det oprindelige forum, skal boksen herfor være afmærket. Herefter vælger du det forum emnet skal flyttes til, og klik på <guilabel>Ja</guilabel>.</para>
 		
 			<section id="modtools_move_shadow">
 				<sectioninfo>
@@ -159,11 +159,11 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Shadow Topics</title>
-				<para>Shadow topics can be created when moving a topic from one forum to another. A shadow topic is simply a link to the topic in the forum it’s been moved from. You may choose whether or not to leave a shadow topic by selecting or unselecting the checkbox in the <guilabel>Move Topic</guilabel> dialog.</para>
-				<para>To delete a shadow topic, navigate to the forum containing the shadow topic, and use the <link linkend="moderator_mcp">Moderator Control Panel</link>to select and delete the topic.</para>
+				<title>Skyggeemner</title>
+				<para>Når et emne flyttes til et andet forum er det muligt at efterlade et skyggeemne i det oprindelige forum. Et skyggeemne er blot et link til emnets nye placering. Du kan selv vælge om der skal efterlades et skyggeemne i checkboksen som første valg når du har valgt <guilabel>Flyt emne</guilabel> i redaktørværktøjerne.</para>
+				<para>For at slette et skyggeemne manøvres til det forum det er placeret i, og herefter vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link> næsten øverst. I kontrolpanelet finder du et linket &quot;Slet skyggeemne&quot; lige over emnet.</para>
 				<note>
-					<para>Deleting a shadow topic will <emphasis>not</emphasis> delete the original topic that it is a shadow of.</para>
+					<para>Når skyggeemnet slettes bliver det originale emne <emphasis>ikke</emphasis> slettet.</para>
 				</note>
 			</section>
 		</section>
@@ -179,8 +179,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Duplicating a topic</title>
-			<para>Moderators are also allowed to duplicate topics. Duplicating a topic simply creates a copy of the selected topic in another forum. This can be achieved by using the <guilabel>Quick MOD Tools</guilabel> area beneath the topic you want to duplicate, or through the <link linkend="moderator_mcp">Moderator Control Panel</link>  when viewing the forum. From this, you simply select the destination forum you wish to duplicate the topic to. Click <guilabel>Yes</guilabel> to duplicate the topic.</para>
+			<title>Kopiering af et emne</title>
+			<para>Redaktører kan kopiere emner og hermed oprette en kopi af et emne i et andet forum. I det emne der skal kopieres, vælges nederst i <guilabel>Kopiér emne</guilabel> i redaktørværktøjerne. Fra forumindekset kan vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link>, her markeres det emne der skal kopieres og herefter destinationsforummet kopien skal placeres i. Klik på  <guilabel>Ja</guilabel> for at oprette kopien.</para>
 		</section>
 		
 		<section id="modtools_type">
