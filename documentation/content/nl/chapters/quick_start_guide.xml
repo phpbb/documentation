@@ -22,29 +22,32 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Requirements</title>
-		<para>phpBB has a few requirements which must be met before you are able to install and use it. In this section, these requirements are explained.</para>
+		<title>Systeemvereisten</title>
+		<para>phpBB has a few requirements which must be met before you are able to install and use it. 
+		In this section, these requirements are explained.
+		</para>
 		<itemizedlist>
 			<listitem>
-				<para>A webserver or web hosting account running on any major Operating System with support for PHP</para>
+				<para>Een webserver of een web hostingpakket die moet staan op een goede stabiele systeem software en ondersteuning voor PHP hebben.
+				</para>
 			</listitem>
 			<listitem>
-				<para>A SQL database system, one of:</para>
+				<para>Eén van de hier onder genoemde SQL database systemen:</para>
 				<itemizedlist>
 					<listitem>
-						<para>FireBird 2.0 or above</para>
+						<para>FireBird 2.0 of hoger</para>
 					</listitem>
 					<listitem>
-						<para>MySQL 3.23 or above</para>
+						<para>MySQL 3.23 of hoger</para>
 					</listitem>
 					<listitem>
-						<para>MS SQL Server 2000 or above (directly or via ODBC)</para>
+						<para>MS SQL Server 2000 of hoger (direct of via ODBC)</para>
 					</listitem>
 					<listitem>
 						<para>Oracle</para>
 					</listitem>
 					<listitem>
-						<para>PostgreSQL 7.x or above</para>
+						<para>PostgreSQL 7.x of hoger</para>
 					</listitem>
 					<listitem>
 						<para>SQLite</para>
