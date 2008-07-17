@@ -39,37 +39,37 @@
 		
 		<variablelist>
 			<varlistentry>
-				<term>ACP</term>
+				<term>ACP (YKP)</term>
 				<listitem>
-					<para>The <link linkend="admin_control_panel"><acronym>ACP</acronym></link>, which stands for &quot;Administration Control Panel&quot;,  is the main place from which you, the administrator, can control every aspect of your forum.</para>
+					<para><link linkend="admin_control_panel"><acronym>ACP (YKP)</acronym></link>, &quot;Administration Control Panel (Yönetim Kontrol Paneli)&quot; için kýsaltma olarak kullanýlmaktadýr. Yöneticiler, forumunuzun her yanýný bu ana bölümden kontrol edebilirler.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>ASCII</term>
 				<listitem>
-					<para><acronym>ASCII</acronym>, or &quot;American Standard Code for Information Interchange&quot;, is a common way of encoding data to transfer it to a different computer. <acronym>FTP</acronym> clients have ASCII as a mode to transfer files. All phpBB files (files with the file extensions .php, .inc, .sql, .cfg, .htm, and .tpl), except for the image files, should be uploaded in ASCII mode.</para>
+					<para><acronym>ASCII</acronym>, ya da &quot;American Standard Code for Information Interchange&quot;, þifreli veriyi farklý bir bilgisayara transfer etmenin genel bir yoludur. <acronym>FTP</acronym> baðlantý programlarý dosyalarý transfer etmek için ASCII bir moda sahiptir. Tüm phpBB dosyalarý (uzantýlarý .php, .inc, .sql, .cfg, .htm, ve .tpl olan dosyalar), resim dosyalarý hariç, ASCII mod içerisinde yüklenmelidir.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Attachments</term>
+				<term>Attachments (Eklentiler)</term>
 				<listitem>
-					<para><link linkend="acp_board_attachments">Attachments</link>, e-posta eklentileri gibi mesajlara eklenebilen dosyalardýr. Kullanýcýlarýn ekleyebileceði dosyalarýn kontrolü ve belirli kýsýtlamalar site yöneticileri tarafýndan ayarlanýr.</para>
+					<para><link linkend="acp_board_attachments">Attachments (Eklentiler)</link>, e-posta eklentileri gibi mesajlara eklenebilen dosyalardýr. Kullanýcýlarýn ekleyebileceði dosyalarýn kontrolü ve belirli kýsýtlamalar site yöneticileri tarafýndan yapýlýr.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Avatar</term>
 				<listitem>
-					<para><link linkend="ucp_avatar">Avatarlar</link> bir kullanýcý adýndan sonra görüntülenen küçük resimlerdir. Avatarlar profilinizden deðiþtirilebilir ve <acronym>YKP</acronym> den düzenleme ayarlarý yapýlabilir (avatar yüklemeye izin verme/izin vermeme gibi).</para>
+					<para><link linkend="ucp_avatar">Avatarlar</link> bir kullanýcý adýndan sonra görüntülenen küçük resimlerdir. Avatarlar profilinizden deðiþtirilebilir ve <acronym>UCP (YKP)</acronym> den düzenleme ayarlarý yapýlabilir (avatar yüklemeye izin verme/izin vermeme gibi).</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>BBCode</term>
 				<listitem>
-					<para><link linkend="posting_bbcodes">BBCode</link> is a special way of formatting posts that offers great control over what and how something is displayed. BBCode HTML'ye benzer bir sözdizimine sahiptir.</para>
+					<para><link linkend="posting_bbcodes">BBCode</link> mesajlarýn ne ve nasýl þekilde görüntüleneceði üzerinde geniþ bir kontrol sunan özel bir mesaj biçimlendirme yoludur. BBCode HTML'ye benzer bir sözdizimine sahiptir.</para>
 				</listitem>
 			</varlistentry>
 			
