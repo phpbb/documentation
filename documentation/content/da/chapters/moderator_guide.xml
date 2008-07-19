@@ -194,8 +194,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Announcements and stickies</title>
-			<para>There are various types of topics the forum administrators and moderators (if they have the appropriate permissions) can assign to specific topics. These special topic types are: <guilabel>Global Announcements</guilabel>, <guilabel>Announcements</guilabel>, and <guilabel>Stickies</guilabel>. The <link linkend="posting_special">Topic Type</link> can be chosen when posting a new topic or editing the first post of a previously posted topic. You may choose which type of topic you would prefer by selecting the relevant radio button. When viewing the forum, <guilabel>global announcements</guilabel> and basic <guilabel>announcements</guilabel> are displayed under a separate heading than that of <guilabel>stickies</guilabel> and normal topics.</para>
+			<title>Bekendtgørelser og opslag</title>
+			<para>Med de rette tilladelser kan redaktører ændre emnetyper. Disse specielle emnetyper er: <guilabel>Globale bekendtgørelser</guilabel>, <guilabel>Bekendtgørelser</guilabel> og <guilabel>Opslag</guilabel>. <link linkend="posting_special">Emnetype</link> kan vælges under tekstfeltet når et indlæg skrives eller ved at redigere det første indlæg i et eksisterende emne. <guilabel>Globale bekendtgørelser</guilabel> og almindelige <guilabel>bekendgørelser</guilabel> vises i en særskilt ramme på forumindekset i forhold til <guilabel>opslag</guilabel> og almindelige emner.</para>
 		</section>
 		
 		<section id="modtools_split">
@@ -209,9 +209,9 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Splitting posts off a topic</title>
-			<para>Moderators also have the ability to split posts from a topic. This can be useful if certain discussions have spawned a new idea worthy of its own thread, thus needing to be split from the original topic. Splitting posts involves moving individual posts from an existing topic to a new topic. You may do this by using the <guilabel>Quick MOD Tools</guilabel> area beneath the topic you want to split or from the <link linkend="moderator_mcp">Moderator Control Panel</link> within the topic.</para>
-			<para>While splitting, you may choose a title for the new topic, a different forum for the new topic, and also a different icon. You may also override the default board settings for the amount of posts to be displayed per page. The <guilabel>Splitting from the selected post</guilabel> option will split all posts from the checked post, to the last post. The <guilabel>Splitting selected posts</guilabel> option will only split the current selected posts. </para>
+			<title>Dele indlæg fra et emne</title>
+			<para>Redaktørerne har mulighed for at dele indlæg fra et emne. Det kan være nyttigt hvis for eksempel en diskussion fostrer en ny idé som fortjener sit eget emne og et antal indlæg derfor bør flyttes fra det oprindelige emne. Deling af indlæg medfører flytning af individuelle indlæg fra et eksisterende emne til et nyt. Det kan gøres ved at benytte <guilabel>Redaktørværktøjer</guilabel> under det emne du ønsker at dele indlæg fra eller fra <link linkend="moderator_mcp">Redaktørkontrolpanel</link>.</para>
+			<para>Når deling udføres kan du vælge titlen for det nye emne, et andet forum til emnet og også et emneikon. Opdeling kan foretages på to måder. Du kan markere et indlæg og foretage opdelingen herfra og til sidste indlæg i emnet, vælg nederst muligheden <guilabel>Del fra valgte indlæg</guilabel>. Du kan også udvælge enkelte indlæg til opdeling, ved at markere disse og herefter vælge <guilabel>Del valgte indlæg</guilabel> nederst.</para>
 		</section>
 		
 		<section id="modtools_mergetopics">
@@ -225,9 +225,9 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Merge topics</title>
-			<para>In phpBB3, it is now possible to merge topics together, in addition to splitting topics. This can be useful if, for example, two separate topics are related and involve the same discussion. The merging topics feature allows existing topics to be merged into one another.</para>
-			<para>To merge topics together, start by locating selection menu beneath the topic in question, which brings you to the <link linkend="moderator_mcp">Moderator Control Panel</link>. From here, you need to enter the topic ID of the topic you want to move the posts to. You can click <guilabel>Select topic</guilabel> to see a list of the topics available and specify which. Checking the <guilabel>Mark all</guilabel> section will select all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
+			<title>Sammenlæg emner</title>
+			<para>I phpBB3 er det også muligt at sammenlægge emner. Hvilket er nyttigt hvis der for eksempel drøftes relaterede problemstillinger i to separate emner på boardet.</para>
+			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. [jan: det efterfølgende mener jeg umiddelbart ikke har noget at gøre med at sammenlægge mener, men anvendes ved sammenlægning af indlæg??] Checking the <guilabel>Mark all</guilabel> section will select all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
 		</section>
 		
 		<section id="modtools_mergeposts">
@@ -241,9 +241,9 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Merge posts into another topic</title>
-			<para>Rather than just merging topics together, you can also merge specific posts into any other topic.</para>
-			<para>To merge specific posts into another topic, start by locating the selection menu beneath the topic, and get to the <link linkend="moderator_mcp">Moderator Control Panel</link>. From here, you need to enter the topic ID of the topic you want to move the posts to. You can click <guilabel>Select topic</guilabel> to see a list of the topics available and specify which. Select the posts which you wish to merge from the current topic, into the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
+			<title>Sammenlæg eller flyt indlæg til et andet emne</title>
+			<para>Som alternativ til at sammenlægge hele emner, kan du også flytte individuelle indlæg til et andet emne.</para>
+			<para>For at sammenlægge specifikke indlæg med et andet emne vælges sammenlæg indlæg i redigeringsværkstøjerne forneden, som leder til <link linkend="moderator_mcp">Redaktørkontrolpanel</link>. Her startes med at angive det modtagende emnes ID eller du finder det med linket <guilabel>Find emne</guilabel>, herefter markeres det eller de indlæg der skal flyttes hertil. Indlæg der sammenlægges med et nyt emne bevarer det oprindelig tidstempel, og sorteres efter dette i forhold til de allerede indsendte indlæg i emnet.</para>
 		</section>
 	</section>
 	
