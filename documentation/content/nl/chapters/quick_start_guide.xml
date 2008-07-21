@@ -10,9 +10,9 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Quick Start Guide</title>
+	<title>Snelle start handleiding</title>
 	<abstract>
-		<para>A quick guide through the first steps of installing and configuring up your very own phpBB 3.0 forum.</para>
+		<para>Een snelle handleiding dat je door de eerste stappen helpt van de installatie en het configureren van je eigen phpBB 3.0 forum.</para>
 	</abstract>
 	<section id="quick_requirements">
 		<sectioninfo>
@@ -23,16 +23,14 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Systeemvereisten</title>
-		<para>phpBB has a few requirements which must be met before you are able to install and use it. 
-		In this section, these requirements are explained.
-		</para>
+		<para>phpBB heeft een paar systeemeisen nodig, waar je aan moet voldoen om het te kunnen installeren en gebruiken. In dit hoofdstuk worden deze systeemeisen uitgelegt.</para>
 		<itemizedlist>
 			<listitem>
 				<para>Een webserver of een web hostingpakket die moet staan op een goede stabiele systeem software en ondersteuning voor PHP hebben.
 				</para>
 			</listitem>
 			<listitem>
-				<para>Eén van de hier onder genoemde SQL database systemen:</para>
+				<para>EÃ©n van de hier onder genoemde SQL database systemen:</para>
 				<itemizedlist>
 					<listitem>
 						<para>FireBird 2.0 of hoger</para>
@@ -55,24 +53,24 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 4.3.3 or above with support for the database you intend to use. The optional presence of the following modules within PHP will provide access to additional features, but they are not required.</para>
+				<para>PHP 4.3.3 of hoger met ondersteuning van de database dat je wilt gebruiken. De optionele voorkeuren van de volgende modules met PHP zorgen voor meer mogelijkheden, maar ze zijn niet verplicht.</para>
 				<itemizedlist>
 					<listitem>
-						<para>zlib Compression support</para>
+						<para>zlib Compressie ondersteuning</para>
 					</listitem>
 					<listitem>
-						<para>Remote FTP support</para>
+						<para>FTP-afstand ondersteuning</para>
 					</listitem>
 					<listitem>
-						<para>XML support</para>
+						<para>XML ondersteuning</para>
 					</listitem>
 					<listitem>
-						<para>Imagemagick support</para>
+						<para>Imagemagick ondersteuning</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
-		<para> The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installation" />. </para>
+		<para> De aanwezigheid van al deze benodigde functies worden gecontroleerd tijdens het installatie proces, dat uitgelegt wordt in  <xref linkend="quick_installation" />. </para>
 	</section>
 	<section id="quick_installation">
 		<sectioninfo>
