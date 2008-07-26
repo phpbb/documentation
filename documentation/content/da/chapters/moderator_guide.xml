@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Redaktørguide</title>
 	<abstract>
-		<para>This chapter describes the phpBB 3.0 forum moderation controls.</para>
+		<para>Dette kapitel beskriver redaktørfunktionerne i phpBB 3.0.x.</para>
 	</abstract>
 	<section id="moderator_edit">
 		<sectioninfo>
@@ -227,7 +227,7 @@
 			</sectioninfo>
 			<title>Sammenlæg emner</title>
 			<para>I phpBB3 er det også muligt at sammenlægge emner. Hvilket er nyttigt hvis der for eksempel drøftes relaterede problemstillinger i to separate emner på boardet.</para>
-			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. [jan: det efterfølgende mener jeg umiddelbart ikke har noget at gøre med at sammenlægge mener, men anvendes ved sammenlægning af indlæg??] Checking the <guilabel>Mark all</guilabel> section will select all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
+			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. [jan: det efterfølgende mener jeg umiddelbart ikke har noget at gøre med at sammenlægge mener, men kun ved sammenlægning af indlæg??] Checking the <guilabel>Mark all</guilabel> section will select all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
 		</section>
 		
 		<section id="modtools_mergeposts">
@@ -243,7 +243,7 @@
 			</sectioninfo>
 			<title>Sammenlæg eller flyt indlæg til et andet emne</title>
 			<para>Som alternativ til at sammenlægge hele emner, kan du også flytte individuelle indlæg til et andet emne.</para>
-			<para>For at sammenlægge specifikke indlæg med et andet emne vælges sammenlæg indlæg i redigeringsværkstøjerne forneden, som leder til <link linkend="moderator_mcp">Redaktørkontrolpanel</link>. Her startes med at angive det modtagende emnes ID eller du finder det med linket <guilabel>Find emne</guilabel>, herefter markeres det eller de indlæg der skal flyttes hertil. Indlæg der sammenlægges med et nyt emne bevarer det oprindelig tidstempel, og sorteres efter dette i forhold til de allerede indsendte indlæg i emnet.</para>
+			<para>For at sammenlægge specifikke indlæg med et andet emne vælges sammenlæg indlæg i redigeringsværkstøjerne forneden, som leder til <link linkend="moderator_mcp">Redaktørkontrolpanel</link>. Her startes med at angive det modtagende emnes ID eller du finder det med linket <guilabel>Find emne</guilabel>. Herefter markeres det eller de indlæg der skal flyttes hertil. Indlæg der sammenlægges med et nyt emne bevarer det oprindelig tidstempel, og sorteres efter dette i forhold til de allerede indsendte indlæg i emnet.</para>
 		</section>
 	</section>
 	
@@ -258,11 +258,11 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>What is the &#x201C;Moderation queue&#x201D;?</title>
-		<para>The <guilabel>Moderation Queue</guilabel> is an area where topics and posts which need to be approved are listed. If a forum or user&#x2019;s permissions are set to <guilabel>moderator queue</guilabel> via the <link linkend="admin_control_panel">Administration Control Panel</link>, all posts made in that forum or by this user will need to be approved by an administrator or moderator before they are displayed to other users. Topics and posts which require approval can be viewed through the <link linkend="moderator_mcp">Moderator Control Panel</link>.</para>
-		<para>When viewing a forum, topics which have not yet been approved will be marked with an icon, clicking on this icon will take you directly to the Moderator Control Panel where you may approve or disapprove the topic. Likewise, when viewing the topic itself, the post requiring approval will be accompanied with a message which also links to the post waiting approval.</para>
-		<para>If you choose to approve a topic or post, you will be given the option to notify the user of its approval. If you choose to disapprove a topic or post, you will be given the option to notify the user of its disapproval and also specify why you have disapproved the post, and enter a description.</para>
-		<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
+		<title>Hvad indeholder &quot;Godkendelseskø&quot;?</title>
+		<para>Hvis tilladelser for et forum eller en bruger er indstillet (i <link linkend="admin_control_panel">Administratorkontrolpanelet</link>) til at nye indlæg skal godkendes, skal denne godkendelse foretages af en administrator eller en redaktør før indlæggene kan ses af andre brugere. Emner og indlæg der afventer godkendelse kan ses i <guilabel>godkendelseskøen</guilabel> som findes i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>.</para>
+		<para>På forumindekset er endnu ikke godkendte emner mærket med et ikon. Klik på dette ikon og du kommer direkte til redaktørkontrolpanelet og får nu mulighed fora at godkende eller afvise emnet. Individuelle indlæg der afventer godkendelse er ledsaget af en meddelese herom, når emnet gennemses. Medelelsen linker samtidig til skærmbilledet hvor det kan godkendes eller afvises.</para>
+		<para>Når du godkender et emne eller et indlæg for du mulighed for at vælge om brugeren skal adviseres om godkendelsen. På samme måde får du også mulighed for at advisere brugeren ved en afvisning, og samtidig begrunde afvisningen.</para>
+		<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" />.</para>
 	</section>
 	
 	<section id="moderator_reported">
@@ -276,10 +276,10 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>What are &#x201C;Reported posts&#x201D;?</title>
-		<para>Unlike phpBB2, phpBB3 now allows users to report a post, for reasons the board administrator can define within the <link linkend="admin_control_panel">Administration Control Panel</link>. If a user finds a post unsuitable for any reason, they may report it using the <guilabel>Report Post</guilabel> button beside the offending message. This report is then displayed within the Moderator Control Panel where the Administrator or Moderators can view, close, or delete the report.</para>
-		<para>When viewing a forum with post reports within topics, the topic title will be accompanied by a red exclamation icon. This alerts the administrator(s) or moderators that there a post has been reported. When viewing topics, reported posts are accompanied by a red exclamation and text. Clicking this icon or text will bring them to the Reported Posts section of the Moderator Control Panel.</para>
-		<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
+		<title>Hvad er &quot;Raporterede indlæg&quot;?</title>
+		<para>Brugere kan rapportere indlæg som findes upassende og begrunde rapporteringen. Et indlægget rapporteres ved at klikke på ikonet for at <guilabel>Rapportér dette indlæg</guilabel>, i standardtypografien prosilver er ikonet en trekant på spidsen med et udråbstegn i. I  <link linkend="admin_control_panel">Administratorkontrolpanelet</link>er udfærdiget et antal standardbegrundelser som kan bruges, med mulighed for at uddybe rapporten. Alle rapporter kan ses i redaktørkontrolpanelet under fanen rapporterede indlæg, hvor administrator eller redaktør kan se, lukke eller slette rapporten.</para>
+		<para>På forumindekset vises emner indeholdende rapporteringer med en anden baggrundsfarve og med samme rapporteringikonet efter emnetitlen. Herved ser administrator og redaktør at indlæg er rapporteret. I emnet vises det rapporterede indlæg også med en anden baggrundsfarve, og med et link til rapporten i redaktørkontrolpanelet.</para>
+		<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" />.</para>
 	</section>
 	
 	<section id="moderator_mcp">
@@ -293,56 +293,56 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>The Moderator Control Panel (MCP)</title>
-		<para>Another new feature in phpBB3 is the <guilabel>Moderator Control Panel</guilabel>, where any moderator will feel at home. Similar to the Administration Control Panel, this area outlines any current moderator duties that need to be acted upon. After navigating to the MCP, the moderator will be greeted with any posts waiting for approval, any post reports and the five latest logged actions - performed by administrators, moderators, and users.</para>
-		<para>On the left side is a menu containing all the relevant areas within the MCP. This guide outlines each individual section and what kind of information they each contain:
+		<title>Redaktørkontrolpanelet (MCP)</title>
+		<para>I forhold til phpBB2 er <guilabel>Redaktørkontrolpanelet</guilabel> nyt, her er alle redigeringsværktøjer samlet. Dette afsnit gennemgår grundtrækkene i en redaktørs opgaver. Ved indgangen til MCP ser redaktøren en oversigt over indlæg afventende godkendelse, rapporterede indlæg og de seneste fem loggede handlinger.</para>
+		<para>Redektørkontrolpanelet er opdelt i syv sektioner, hvert område organiseret i en fane. De syv faner indeholder:
 			<variablelist>
 				<varlistentry>
-					<term>Main</term>
+					<term>Oversigt</term>
 					<listitem>
-						<para>This contains pre-approved posts, reported posts and the five latest logged actions.</para>
+						<para>Indeholder seneste: Indlæg i godkendelseskøen, rapporterede indlæg og loggede handlinger.</para>
 					</listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Moderation queue</term>
+					<term>Godkendelseskø</term>
 					<listitem>
-						<para>This area lists any topics or posts waiting for approval.</para>
+						<para>Indeholder komplet liste over emner og indlæg, der afventer en godkendelse.</para>
 					</listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Reported posts</term>
+					<term>Rapporterede indlæg</term>
 					<listitem>
-						<para>A list of all open or closed reported posts.</para>
+						<para>Indeholder alle åbne og lukkede rapporter.</para>
 					</listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>User notes</term>
+					<term>Brugernotater</term>
 					<listitem>
-						<para>This is an area for administrators or moderators to leave feedback on certain users.</para>
+						<para>Anvendes af administrator eller redaktør til at gemme bemærkninger om brugere.</para>
 					</listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Warnings</term>
+					<term>Advarsler</term>
 					<listitem>
-						<para>The ability to warn a user, view current users with warnings and view the five latest warnings.</para>
+						<para>Anvendes til at udstede advarsler, se brugere med flest advarsler, de nyeste advarsler og en liste over samtlige advarsler.</para>
 					</listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Moderator logs</term>
+					<term>Redaktørlog</term>
 					<listitem>
-						<para>This is an in-depth list of the five latest actions performed by administrators, moderators or users, as shown on the main page of the MCP.</para>
+						<para>En komplet liste over loggede handlinger i forhold til de fem seneste som vises i oversigten på MCP.</para>
 					</listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Banning</term>
+					<term>Udelukkelse</term>
 					<listitem>
-						<para>The option to ban users by username, IP address or email address.</para>
+						<para>Udelukkelse af brugere fra boardet kan udføres på baggrund af brugernavn, IP-adresse eller emailadresse.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
@@ -359,8 +359,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Moderation queue</title>
-			<para>The moderation queue lists topics or posts which require moderator action. The moderation queue is accessible from the <link linkend="moderator_mcp">Moderator Control Panel</link>. For more information regarding the moderation queue, see <xref linkend="moderator_queue" />.</para>
+			<title>Godkendelseskø</title>
+			<para>Godkendelseskøen indeholder en liste over henholdsvis emner og indlæg som afventer godkendelse fra redaktør. Godkendelseskøen kan ses i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>. Mere information om godkendelseskøen findes her <xref linkend="moderator_queue" />.</para>
 		</section>
 		
 		<section id="mcp_reported">
@@ -374,34 +374,34 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Reported posts</title>
-			<para>Reported posts are reports submitted by users regarding problematic posts. Any current reported posts are accessible from the <link linkend="moderator_mcp">Moderator Control Panel</link>. For more information regarding reported posts, see <xref linkend="moderator_reported" />.</para>
+			<title>Rapporterede indlæg</title>
+			<para>Brugere har mulighed for at rapportere indlæg som ikke er i overenstemmelse med boardreglerne eller på anden måde erupassende. Alle rapporterede indlæg kan ses fra <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>. Mere information om rapporterede indlæg findes her <xref linkend="moderator_reported" />.</para>
 		</section>
 		
 		<section id="mcp_forum">
-			<title>Forum moderation</title>
-			<para>When viewing any particular forum, clicking <guilabel>Moderator Control Panel</guilabel> will take you to the forum moderation area. Here, you are able to mass moderate topics within that forum via the dropdown box. The available actions are:
+			<title>Forumredigering</title>
+			<para>Hvis man fra forumindekset klikker på linket til <guilabel>Redaktørkontrolpanel</guilabel> vises forumredigeringsiden. Her kan redigeres flere emner samtidig ved hjælp af dropdownmenuen nederst. Disse værktøjer er til rådighed i menuen:
 				<itemizedlist>
-					<listitem><para><guilabel>Delete</guilabel>: Deletes the selected topic(s).</para></listitem>
-					<listitem><para><guilabel>Move</guilabel>: Moves the selected topic(s) to another forum of your preference.</para></listitem>
-					<listitem><para><guilabel>Fork</guilabel>: Creates a duplicate of the selected topic(s) in another forum of your preference.</para></listitem>
-					<listitem><para><guilabel>Lock</guilabel>: Locks the selected topic(s).</para></listitem>
-					<listitem><para><guilabel>Unlock</guilabel>: Unlocks the selected topic(s).</para></listitem>
-					<listitem><para><guilabel>Resync</guilabel>: Resynchronise the selected topic(s).</para></listitem>
-					<listitem><para><guilabel>Change topic type</guilabel>: Change the topic type to either <guilabel>Global Announcement</guilabel>, <guilabel>Announcement</guilabel>, <guilabel>Sticky</guilabel>, or <guilabel>Regular Topic</guilabel>.</para></listitem>
+					<listitem><para><guilabel>Slet</guilabel>: Sletter de valgte emner.</para></listitem>
+					<listitem><para><guilabel>Flyt</guilabel>: Flytter de valgte emner til at andet forum, som efterfølgende vælges.</para></listitem>
+					<listitem><para><guilabel>Kopiér</guilabel>: Opretter kopier af de valgte emner i et andet forum.</para></listitem>
+					<listitem><para><guilabel>Lås</guilabel>: Låser de valgte emner.</para></listitem>
+					<listitem><para><guilabel>Lås op</guilabel>: Låser de valgte emner op.</para></listitem>
+					<listitem><para><guilabel>Resynkronisér</guilabel>: Resynkroniserer de valgte emner.</para></listitem>
+					<listitem><para><guilabel>Ændre emnetype</guilabel>: De valgte emner kan ændres til: <guilabel>Global bekendtgørelse</guilabel>, <guilabel>bekendtgørelse</guilabel>, <guilabel>opslag</guilabel> eller <guilabel>standardemne</guilabel>.</para></listitem>
 				</itemizedlist>
 			</para>
 			
-			<para>You can also mass-moderate posts within topics. This can be done by navigating through the MCP when viewing the forum, and clicking on the topic itself. Another way to accomplish this is to click the MCP link whilst viewing the particular topic you wish to moderate.</para>
-			<para>When moderating inside a topic, you can: rename the topic title, move the topic to a different forum, alter the topic icon, merge the topic with another topic, or define how many posts per page will be displayed (this will override the board setting).</para>
-			<para>From the selection menu, you may also: lock and unlock individual posts, delete the selected post(s), merge the selected post(s), or split or split from the selected post(s).</para>
-			<para>The <guilabel>Post Details</guilabel> link next to posts also entitle you to alter other settings. As well as viewing the poster&#x2019;s <glossterm>IP address</glossterm>, profile and notes, and the ability to warn the poster, you also have the option to change the poster ID assigned to the post. You can also lock or delete the post from this page.</para>
+			<para>På samme måde kan flere indlæg  i et emne redigeres samtidig. Man kan nå emneredigeringsiden enten ved at klikke på emnet fra forumredigeringsiden, eller blot klikke på linket til redaktørkontrolpanelet, når man læser i emnet.</para>
+			<para>[Jan: Denne efterfølgende sætning blander for mig at se emneredigering og redigering af indlæg ?] Når der redigeres i et emne er der mulighed for: ændre emnetitel, flytte emne til et andet forum, ændre emneikon, sammenlægge emnet med et andet og bestemme hvor mange indlæg der skal vises pr. side (tilsidesætter standardindstillingen for boardet).</para>
+			<para>Under emneredigering er der to ekstra faneblade til rådighed i MCP: Sammenlæg emner og Opdel emne, som giver mulighede for henholdsvis at sammenlægge to emner og opdele et emne i to eller flere separate emner.</para>
+			<para>Linket <guilabel>Indlægsinformation</guilabel> til højre for emnetitlen giver mulighed for yderligere redigering. Indlægsforfatter kan ændres, Selve indlægget kan redigeres, låses og slettes. Desuden vises den <glossterm>IP-adresse</glossterm> indlægget er skrevet fra.</para>
 		
 			<note>
-				<para>Depending on the specific permissions set to your user account, some of the aforementioned options and abilities may not be available to you.</para>
+				<para>Det er ikke sikkert at du som redaktør har adgang til alle ovennævnte redigeringsmuligheder. Det afhænger af den tilladelserolle administrator har tilknyttet din brugerkonto.</para>
 			</note>
 			
-			<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
+			<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" /> (jan: denne skal formentlig slettes, vi ledes i ring ^_^ ).</para>
 		</section>
 	</section>
 </chapter>
