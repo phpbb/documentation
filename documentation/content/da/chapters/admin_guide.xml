@@ -10,9 +10,9 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Administration Guide</title>
+	<title>Administratorguide</title>
 	<abstract>
-		<para>This chapter describes the phpBB 3.0 admin controls.</para>
+		<para>Kapitlet beskriver phpBB 3.0 administrator mulighederne.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -22,19 +22,19 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>The Administration Control Panel</title>
-		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
-		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
-		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
+		<title>Administratorkontrolpanelet</title>
+		<para>phpBB 3.0 &quot;Olympus&quot; er meget konfigurerbar og kan tilpasses næsten ethvert behov. Næsten alle funktioner og muligheder kan aktiveres, deaktiveres, fintunes og tilpasses. For at lette tilgangen til disse mange muligheder, er administratorkontrolpanelet (ACP) fuldstændig redesignet i forhold til phpBB 2.0. </para>
+		<para>Klik på linket <guilabel>Administratorkontrolpanel</guilabel> nederst på siden for at få adgang til <acronym>ACP</acronym>.</para>
+		<para>Som standard er <acronym>ACP</acronym> opdelt i otte sektioner eller faner, som hver indholder et antal under sektioner. Vi gennemgår hver sektion i denne administratorguide. </para>
 		
 		<figure id="img_acp_index">
-			<title>Administration Control Panel Index</title>
+			<title>Administratorindeks</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
 				</imageobject>
 				<caption>
-					<para>The Administration Control Panel Index, the home of managing your phpBB board. Administration functions are grouped into eight different categories: <guimenuitem>General</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Posting</guimenuitem>, <guimenuitem>Users and Groups</guimenuitem>, <guimenuitem>Permissions</guimenuitem>, <guimenuitem>Styles</guimenuitem>, <guimenuitem>Maintenance</guimenuitem>, and <guimenuitem>System</guimenuitem>. Each category is a tab located at the top of the page. Specific functions of the category you're in can be found in the left-hand sidebar of each page.</para>
+					<para>Administratorindekset er stedet hvorfra du administrerer dit phpBB board. Funktionerne er grupperet i otte kategorier: <guimenuitem>Generel</guimenuitem>, <guimenuitem>Fora</guimenuitem>, <guimenuitem>Meddelelser</guimenuitem>, <guimenuitem>Brugere og Grupper</guimenuitem>, <guimenuitem>Tilladelser</guimenuitem>, <guimenuitem>Typografi</guimenuitem>, <guimenuitem>Vedligehold</guimenuitem> og <guimenuitem>System</guimenuitem>. Hver kategori er repræsenteret med en fane i toppen af siden. Specifikke funktioner i hver kategori findes i navigeringsmenuen til venstre.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -48,9 +48,9 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>General Configuration and Front Page</title>
-		<para>The <guimenuitem>General</guimenuitem> section is the first screen you see each time you log into the <acronym>ACP</acronym>. It contains some basic statistics and information about your forum. It also has a subsection called <guimenuitem>Quick Access</guimenuitem>. It provides quick access to some of the admin pages that are frequently used, like <link linkend="acp_users">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
-		<para>We will concentrate on the other three subsections: <link linkend="acp_general_config">Board Configuration</link>, <link linkend="acp_general_client">Client Communication</link>, and <link linkend="acp_general_server">Server Configuration</link>.</para>
+		<title>Generel konfiguration og forside</title>
+		<para>Det første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her findes nogle af de mest anvendte administrationssider blandt andet <link linkend="acp_users">Administrér brugere</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
+		<para>Her koncentrerer vi os om de tre andre undersektioner: <link linkend="acp_general_config">Boardkonfiguration</link>, <link linkend="acp_general_client">Trafikkonfiguration</link> og <link linkend="acp_general_server">Serverkonfiguration</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
 				<authorgroup>
@@ -59,8 +59,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Board Configuration</title>
-			<para>This subsection contains items to adjust the overall features and settings of the forum. </para>
+			<title>Boardkonfiguration</title>
+			<para>Denne undersektion indeholder værktøjer beregnet til at ændre på boardets overordnede indstillinger.</para>
 			
 			<section id="acp_board_attachments">
 				<sectioninfo>
@@ -70,9 +70,9 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Attachment Settings</title>
-				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
-				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
+				<title>Vedhæftede filer</title>
+				<para> En af de mange nye funktioner i phpBB 3.0 er muligheden for at <glossterm>vedhæfte filer</glossterm>. Filer kan vedhæftes til indlæg, på samme måde som når man sender en email. Boardadministratoren kan sætte restriktioner for hvad brugere kan vedhæfte via <guimenuitem>Vedhæftede filer</guimenuitem>.</para>
+				<para>Læs mere i <link linkend="acp_attach_settings">Konfigurering af boardets indstillinger for vedhæftede filer</link>.</para>
 			</section>
 			
 			<section id="acp_general_settings">
@@ -87,23 +87,23 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Board Settings</title>
-				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change many settings that govern your board. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
+				<title>Board grundlæggende</title>
+				<para>I <guimenuitem>Board grundlæggende </guimenuitem> kan du ændre mange indstillinger som er bestemmede for hvordan dit board fungerer. Herunder noget så vigtigt som boardets navn! Skærmbilledet består af to grupper af indstillinger: de generelle <guilabel>Board grundlæggende</guilabel> og indstillinger for <guilabel>Advarsler</guilabel>.</para>
 				
 				<itemizedlist>
-					<title>Board Settings</title>
-					<listitem><para>The very first board setting you can edit is perhaps the most important setting of them all: the name of your board. Your users identify your board with this name. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style; it will be the prefix to the window title of your browser.</para></listitem>
-					<listitem><para>The <guilabel>Site Description</guilabel> is the slogan or tagline of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para></listitem>
-					<listitem><para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. To temporarily disable your board, select<guilabel>Yes</guilabel>. This will keep any members of your forum who are not administrators or moderators from accessing your board. They will either see a default message instead of the forum, or a message that you create. You can add your own custom message that will be displayed when your board is disabled in the text box below the <guilabel>Disable board</guilabel> radio buttons. Administrators and moderators will still be able to browse forums and use their specific control panels when the board is disabled.</para></listitem>
-					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_system">section on Language Pack configuration</link>.</para></listitem>
-					<listitem><para>You can also configure your board's default date format. phpBB3 has a few basic date formats that you can set your board to use; if these are not sufficient and you would like to customise your board's date format, choose <guimenuitem>Custom</guimenuitem> from the <guilabel>Date format</guilabel> selection menu. Then, in the text box besides it, type in the format you would like to use. This is the same as the <ulink url="http://www.php.net/date">PHP date() function</ulink>.</para></listitem>
-					<listitem><para>Along with setting your board's default date format, you can also set your board's preferred timezone. The timezones available in the <guilabel>System timezone</guilabel> selection menu are all based on relative <acronym>UTC</acronym> (for most intents and purposes, it is <acronym>GMT</acronym>, or Greenwich Mean Time) times. You may also choose whether or not your board utilises Daylight Savings Time by selecting the appropriate radio button next to the <guilabel>Enable Daylight Savings time</guilabel> option.</para></listitem>
-					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
+					<title>Board grundlæggende</title>
+					<listitem><para>Den første indstilling du kan ændre er måske den vigtigste af dem alle, nemlig navnet på boardet. Brugerne identificerer dit board med dette navn. Skriv boardets navn i tekstfeltet <guilabel>Boardnavn</guilabel>, og det vises øverst i boardets hovede. Samtidig vises navnet som præfiks i de besøgendes browsertitel.</para></listitem>
+					<listitem><para><guilabel>Boardbeskrivelse</guilabel> er dit boards slogan eller formål, og vises under <guilabel>Boardnavn</guilabel>et i boardets hoved.</para></listitem>
+					<listitem><para>Har du i forbindelse med vedligeholdelse, for eksempel ved opdateringer, brug for at lukke boardet, kan det gøres ved at bruge switchen <guilabel>Slå board fra</guilabel> . Vælg <guilabel>Ja</guilabel> for midlertidigt at lukke boardet. Det forhindrer alle, undtagen administratorer og redaktører, i at får adgang til boardet. Når boardet er slået fra, møder man nu enten en standardmeddelelse, eller én du selv komponerer. Du tilføjer din egen meddelelse i teksfeltet umiddelbart under radioknapperne ja/nej i <guilabel>Slå board fra</guilabel>. Administratorer og redaktører vil stadig have adgang til deres kontrolpaneler mens boardet er slået fra.</para></listitem>
+					<listitem><para>Du skal også vælge boardets <guilabel>Standardsprog</guilabel>. Det er det sprog gæster vil se når de besøger boardet. Du kan tillade at tilmeldte brugere kan vælge andre sprog. Som standard er kun <guilabel>British English</guilabel> installeret, men du kan <ulink url="http://www.phpbb.com/languages">downloade flere sprog på phpBB websitet</ulink> og installere disse på boardet. Læs mere om sprog i <link linkend="acp_system">sektionen for konfiguration af sprogpakker</link>.</para></listitem>
+					<listitem><para>Du kan indstille dit boards standarddatoformat. phpBB3 giver mulighed for at vælge mellem nogle meget almindelig måder at vise tid og dato på. Er ingen af disse tilfredsstillende, kan du tilpasse datoformatet ved at vælge <guimenuitem>Brugertilpasset</guimenuitem> i dropdownmenuen for <guilabel>Datoformat</guilabel>. Herefter skriver du det ønskede datoformat i teksfeltet ved siden af. Syntaks for datoformat er det samme som <ulink url="http://www.php.net/date">PHP's date() funktion</ulink>.</para></listitem>
+					<listitem><para>Sammen med indstilling af hvordan tiden skal vises, kan du også vælge boardets tidszone. De tilgængelige tidszoner kan vælges i dropdownmenuen <guilabel>Tidszone for board</guilabel>, som alle er relative i forhold til <acronym>UTC</acronym> (som næsten er identisk med det tidligere anvendte <acronym>GMT</acronym> eller Greenwich Mean Time) tider. Desuden kan du vælge om boardet skal køre med sommertid ved at vælge ja eller net ved punktet <guilabel>Slå sommertid/DST til</guilabel>.</para></listitem>
+					<listitem><para>Den typografi der vises for gæster og som standardvalg for brugere vælges i <guilabel>Standardtypografi</guilabel>. Som standard er phpBB installeret med typografien prosilver med mulighed for også at installere subsilver2. Du kan give brugere mulighed for selv kan vælge mellem de installerede typografier ved at vælge <guilabel>Nej</guilabel> til <guilabel>Tilsidesæt brugeres valg af typografi</guilabel>. Læs i <link linkend="acp_styles">typografisektion</link> hvordan nye typografier tilføjes og hvor de kan findes.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Warnings</title>
-					<listitem><para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. All positive integers are valid values. For more about warnings, please read <xref linkend="moderator_mcp" />.</para></listitem>
+					<title>Advarsler</title>
+					<listitem><para>Redaktører kan udstede advarsler til bruger som ikke overholder boardets regler. Værdien i <guilabel>Varighed for advarsler</guilabel> bestemmer hvor længe en advarsel er gældende. Alle positive værdier kan anvendes. Læs mere om advarsler i <xref linkend="moderator_mcp" />.</para></listitem>
 				</itemizedlist>
 			</section>
 			
