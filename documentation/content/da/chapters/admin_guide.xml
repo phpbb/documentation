@@ -115,8 +115,8 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Board Features</title>
-				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
+				<title>Boardfinesser</title>
+				<para>I afsnittet <guimenuitem>Boardfinesser</guimenuitem> kan flere af funktioner aktiveres eller deaktiveres overordnet for hele boardet. Bemærk derfor at funktioner der her deaktiveres vil ikke være tilgængelige på boardet, selvom du tildeler dine brugere tilladelse til at benytte disse.</para>
 			</section>
 			
 			<section id="acp_board_avatars">
@@ -127,12 +127,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Avatar Settings</title>
-				<para>Avatars are generally small, unique images a user can associate with themselves. Depending on the style, they are usually displayed below the user name when viewing topics. Here you can determine how users can define their avatars.</para>
-				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
-				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised. There is also no support for sub folders inside the gallery folder. </para>
-				<para>The second approach to avatars is through <guilabel>Remote Avatars</guilabel>. This are simply images linked from another website. Your members can add a link to the image they want to use in their profile. To give you some control over the size of the avatars you can define the minimum and maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not able to control the file size.</para>
-				<para>The third approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image form their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is <glossterm>server-writable</glossterm>. The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
+				<title>Avatars</title>
+				<para>Avatars er generelt små, unikke billeder en bruger kan knytte til sin profil. Afhængig af boardets typografi, vises disse oftest lige under brugernavnet, når man læser et indlæg. Herfra styrer du hvordan brugerne kan definere deres avatars.</para>
+				<para>Der er tre forskellige måder hvorpå en bruger kan tilknytte en avatar til sin profil. Den første metode er via et avatargalleri du har stillet til rådighed. Bemærk at phpBB3 som standard ikke er udstyret med et sådant galleri.  <guilabel>Avatargallerimappens placering</guilabel> angiver stien til de avatars brugerne kan vælge imellem. Standardplaceringen er <guilabel>images/avatars/gallery</guilabel>. Mappen er imidlertid ikke oprettet i en standardinstallation, den skal altså tilføjes denne manuelt hvis du ønsker at stille et avatargalleri til rådighed.</para>
+				<para>De billedfiler du ønsker at placere i dit avatargalleri skal gemmes i undermapper i gallerymappen. Billeder gemt direkte i gallerymappen bliver ikke genkendt. [jan: efterfølgende er modsigende?]Undermapper i gallerymappen understøttes ikke.</para>
+				<para>Den anden metode er anvendelse af <guilabel>Eksterne avatars</guilabel>. Herved får brugerne mulighed for at linke til et billede på en anden hjemmeside, og bruge dette som avatar i deres profil. For at have lidt kontrol over eksterne avatars kan du sætte minimum og maksimum dimensioner for billeder. Ulempen ved <guilabel>Eksterne avatars</guilabel> er at man ikke kan kontrollere filstørrelsen.</para>
+				<para>Den tredje metode er med <guilabel>Uploud af avatars</guilabel>. Brugere kan uploade et billede til serveren, du bestemmer med <guilabel>Avatarmappens placering</guilabel> hvor disse skal gemmes. Standardplaceringen er <guilabel>images/avatars/upload</guilabel> og denne mappe er allerede oprettet ved installationen. Du skal sikre at denne mappe er <glossterm>skrivbar</glossterm>. Avatars kan uploades i filformaterne gif, jpeg og png. Fil- og billedestørrelse kontrolleres ved upload, overskrides de satte værdier afvises uploadet. Du kan ændre grænserne for <guilabel>Maksimal filstørrelse for avatar</guilabel> og <guilabel>Største dimensioner for avatar</guilabel>.</para>
 			</section>
 			
 			<section id="acp_board_pms">
@@ -143,29 +143,29 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Private Messaging</title>
-				<para><glossterm>Private Messages</glossterm> are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
-				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
-				<para>Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
-				<para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
-				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the &quot;Full Folder Default Action&quot; list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
-				<para>When sending a private message, it is still possible to edit the message until the recipient reads it. After a sent private message has been read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0, which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
-				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. 
+				<title>Private beskeder</title>
+				<para>Tilmeldte brugere har mulighed for at kommunikere via <glossterm>private beskeder</glossterm> på boardet, og behøver derfor ikke bruge email eller messengere.</para>
+				<para>Du kan deaktivere private beskeder med indstillingen <guilabel>Tillad private beskeder</guilabel>, som bestemmer om muligheden skal være aktiv eller ej for hele boardet. Du kan også deaktivere private beskeder for bestemte brugere eller grupper i<link linkend="acp_permissions">Tilladelser</link>. Se venligst kapitlet <link linkend="acp_permissions">Tilladelser</link> for flere informationer.</para>
+				<para>I phpBB3 kan brugere oprette egne mapper til private beskeder. Værdien i <guilabel>Maksimalt antal mapper til private beskeder</guilabel> bestemmer hvor mange mapper det er muligt at oprette som bruger. Standardindstillingen er 4. Muligheden kan deaktiveres ved at sætte denne værdi til 0. </para>
+				<para><guilabel>Maksimalt antal private beskeder pr. mappe</guilabel> bestemmer hvor mange beskeder hver mappe kan indeholde. Standardværdien er <guilabel>50</guilabel>, sættes værdien til 0 er der ingen grænser for antal beskeder i mapperne.</para>
+				<para>Vælger du at begrænse antallet af beskeder pr. mappe, er det nødvendigt at specificere hvad der skal ske når en mappe er fyldt. Det kan ændres i <guilabel>Handling ved fuld mappe</guilabel>. Der er to muligheder; enten slettes den ældste besked automatisk, eller den nye besked holdes tilbage indtil der er gjort plads i mappen. Bemærk denne indstilling vil være boardets standardhandling og vil ikke tilsidesætte en brugers evt. andet valg, i det brugere selv er i stand til at vælge denne handling i UCP.</para>
+				<para>Som standard er det muligt at redigere en privat besked indtil modtageren har læst den. Yderligere kan sættes en tidsgrænse for hvor længe en besked kan redigeres. Her bruges <guilabel>Begræns redigeringstid</guilabel>, standardværdien er 0, som tillader redigering indtil beskeden er læst. Bemærk at du, for bestemte brugere eller grupper, kan forbyde redigering af private beskeder i <link linkend="acp_permissions">Tilladelser</link>. Er denne tilladelse sat til Nej,  vil den tilsidesætte denne indstilling.</para>
+				<para>Umiddelbart under, i <guilabel>Generelle valg</guilabel>, er der mulighed for yderligere at definere pb-systemets funktionalitet.</para>
 					<itemizedlist>
 						<listitem>
-							<para><guilabel>Allow Mass PMs:</guilabel> enables the sending of Private Messages to multiple recipients. This feature is enabled by default. Disabling it will also disallow sending of Private Messages to groups. </para>
+							<para><guilabel>Tillad afsending af private beskeder til flere brugere og grupper</guilabel> giver mulighed for at sende en privat besked til flere modtagere. Muligheden er aktiv som standard, slås den fra vil man heller ikke kunne sende beskeder til grupper. </para>
 							<tip>
-								<para>See the <link linkend="acp_groups">Groups section</link> for information on how to enable the ability to send a message to a whole group.</para>
+								<para>Se kapitlet <link linkend="acp_groups">Grupper</link> for information om hvordan man aktivere muligheden for at sende en privat besked til en gruppe.</para>
 							</tip>
 						</listitem>
 						<listitem>
-							<para>By default, <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> are allowed in Private Messages.</para>
+							<para><glossterm>BBkode</glossterm> og <glossterm>Smilies</glossterm> er som standard tilladt i private beskeder.</para>
 							<tip>
-								<para>Even if enabled, you can still disallow users or groups to use <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> in Private Messages through <link linkend="acp_permissions">Permissions</link>.</para>
+								<para>Også her kan du lukke for disse muligheder for bestemte brugere eller grupper i <link linkend="acp_permissions">Tilladelser</link>.</para>
 							</tip>
 						</listitem>
 						<listitem>
-							<para>We don't allow attachments by default. Further settings for attachments in Private Messages are in the <link linkend="acp_board_attachments">Attachment Settings</link>. There you can define the number of attachments per message for instance.</para>
+							<para>Som standard er det ikke tilladt at vedhæfte filer i private beskeder. Flere indstillinger for vedhæftede filer i private beskeder kan læses i indstillinger for <link linkend="acp_board_attachments">Vedhæftede filer</link>. Her kan blandt andet defineres hvor mange filer der må vedhæftes en privat besked.</para>
 						</listitem>
 					</itemizedlist>
 				</para>
@@ -183,8 +183,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>			
-			<title>Client communication</title>
-			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, native DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following are subsections describing each client communication method.</para>
+			<title>Trafikkonfiguration</title>
+			<para>Udover phpBB3's indbyggede autentifikationsystem, understøttes kommunikation med andre <glossterm>klienter</glossterm>. phpBB understøtter forskellige autentifikationsmoduler, email og <glossterm>Jabber</glossterm>. Her konfigurerer du alle disse kommunikationsmetoder og de gennemgås alle herunder.</para>
 		
 			<section id="acp_client_auth">
 				<sectioninfo>
@@ -194,19 +194,21 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Authentication</title>
+				<title>Autentifikation</title>
 				
-				<para>Unlike phpBB2, phpBB3 offers support for authentication plugins. By default, the Apache, DB, and LDAP plugins are supported. Before switching from phpBB's native authentication system (the DB method) to one of these systems, you must make sure that your server supports it. <emphasis>When configuring the authentication settings, make sure that you only fill in the settings that apply to your chosen authentication method (Apache or LDAP).</emphasis></para>
+				<para>phpBB understøtter forskellige autentifikationsmoduler, som giver mulighed for at bestemme hvordan en bruger skal autentificeres ved login på boardet. Der er tre standardmoduler med i phpBB: DB, LDAP og Apache. Før der skiftes fra phpBB's indbyggede autentifikationsmetode (DB-metoden) til et af de andre moduler, skal du sikrer dig at din server understøtter dette. <emphasis>Når autentifikationsmetode omkonfigureres, skal kun indstillingerne for den valgte metode (Apache or LDAP) udfyldes.</emphasis></para>
 			
 				<itemizedlist>
-					<title>Authentication</title>
-					<listitem><para><guilabel>Select an authentication method</guilabel>: Choose your desired authentication method from the selection menu.</para></listitem>
-					<listitem><para><guilabel>LDAP server name</guilabel>: If you are using LDAP, this is the name or IP address of the LDAP server.</para></listitem>
-					<listitem><para><guilabel>LDAP user</guilabel>: phpBB will connect to the LDAP server as this specified user. If you want to use anonymous access, leave this value blank.</para></listitem>
-					<listitem><para><guilabel>LDAP password</guilabel>: The password for the LDAP user specified above. If you are using anonymous access, leave this blank.</para><important><para>This password will be stored as plain text in the database; it will be visible to everybody who can access your database.</para></important></listitem>
-					<listitem><para><guilabel>LDAP base dn</guilabel>: The distinguished name, which locates the user information.</para></listitem>
-					<listitem><para><guilabel>LDAP uid</guilabel>: The key under which phpBB will search for a given login identity.</para></listitem>
-					<listitem><para><guilabel>LDAP email attribute</guilabel>: this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. If you leave this empty, users who login to your board for the first time will have an empty email address.</para></listitem>
+					<title>Autentifikation<!-- [jan: jeg har omsorteret listen, den er nu i overenstemmelse med ACP-skærmbilledet, desuden er manglende punkter tilføjet] --></title>
+					<listitem><para><guilabel>Vælg en autentifikationsmetode</guilabel>: Vælg i dropdownmenuen din foretrukne autentifikationsmetode.</para></listitem>
+					<listitem><para><guilabel>LDAP-servernavn</guilabel>: Navnet eller IP-adressen på LDAP-serveren. Alternativt kan du angive en URL, eksempelvis ldap://hostname:port/..</para></listitem>
+					<listitem><para><guilabel>LDAP-serverport</guilabel>: Udfyldes hvis ikke port 389 ønsket anvendt.</para></listitem>
+					<listitem><para><guilabel>LDAP-base dn</guilabel>: Distinguished Name som indeholder brugerinformationen.</para></listitem>
+					<listitem><para><guilabel>LDAP uid</guilabel>: Den nøgle phpBB vil søge efter en given login identitet.</para></listitem>
+					<listitem><para><guilabel>LDAP-brugerfilter</guilabel>: Søgefiltre kan begrænse de objekter hvar der søges efter ovennævnte nøgle.</para></listitem>
+					<listitem><para><guilabel>LDAP-emailattribute</guilabel>: Din brugertabels emailattribut (hvis en sådan findes) for automatisk at sætte emailadressen for nye brugere. Ved at lade dette felt være tomt vil brugere ved første login få tildelt en tom emailadresse..</para></listitem>
+					<listitem><para><guilabel>LDAP-bruger dn</guilabel>: Efterlades tomt for at benytte anonym tilslutning. phpBB vil tilslutte sig LDAP-serveren som denne bruger.</para></listitem>
+					<listitem><para><guilabel>LDAP-kodeord</guilabel>: Efterlades tomt for at benytte anonym tilslutning, udfyldes ellers med ovenstående brugers kodeord. Kræves af Active Directory servere.</para><important><para>Kodeordet bliver lagret i databasen i klar og ukrypteret tekst, og vil være synligt for alle med adgang til databasen eller til denne konfigurationsside.</para></important></listitem>
 				</itemizedlist>
 			</section>
 			
