@@ -4,9 +4,9 @@
 <chapter id="quick_start_guide">
 	<?dbhtml  dir="quickstart" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id: quick_start_guide.xml 142 2007-07-18 17:28:25Z mhobbit $</releaseinfo>
+		<releaseinfo> $Id: quick_start_guide.xml 142 2007-07-18 17:28:25Z mhobbit $ </releaseinfo>
 		<copyright>
-			<year>2006</year>
+			<year>2008</year>
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
@@ -18,7 +18,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>Graham</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -30,7 +30,7 @@
 				</para>
 			</listitem>
 			<listitem>
-				<para>Eén van de hier onder genoemde SQL database systemen:</para>
+				<para>Eén van de hier onder genoemde SQL-database systemen:</para>
 				<itemizedlist>
 					<listitem>
 						<para>FireBird 2.0 of hoger</para>
@@ -62,7 +62,7 @@
 						<para>FTP-afstand ondersteuning</para>
 					</listitem>
 					<listitem>
-						<para>XML ondersteuning</para>
+						<para>XML-ondersteuning</para>
 					</listitem>
 					<listitem>
 						<para>Imagemagick ondersteuning</para>
@@ -76,38 +76,38 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Installatie</title>
-		<para>phpBB 3.0 Olympus has an easy to use installation system that will guide you through the installation process.</para>
+		<para>phpBB 3.0 Olympus heeft een heel gemakkelijk installatiesysteem om te gebruiken dat je helpt het installatie proces te doorlopen. </para>
 		<!--BETA SPECIFIC /-->
 		<note>
-			<para>phpBB 3.0 Beta 1 will not yet have the ability to upgrade from phpBB 2.0.x or to convert from a different software package. This will be included in the later Beta or <acronym>RC</acronym> stages.</para>
+			<para>phpBB 3.0 Beta 1 heeft nog niet de mogelijkheid om een upgrade uitvoeren vanaf phpBB 2.0.x of om te converteren van een andere forumsoftware. Dit zal later in een andere Beta of  in het <acronym>RC</acronym> stadium worden toegevoegd.</para>
 		</note>
-		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
+		<para>Nadat je phpBB3 pakket hebt uitgepakt  , en de bestanden hebt geupload naar de locatie waar je het wilt installeren, Je moet de <acronym>URL</acronym> invoeren in je internetbrowser om het installatiescherm te openen. Als je de eerste keer je internetbrowser richt op de <acronym>URL</acronym> (<uri>http://www.phpBBservice.nl/phpBB3</uri> bijvoorbeeld), zal phpBB meteen herkenen als phpBB nog niet is geïnstalleerd, en zal je automatisch doorsturen naar het installatiescherm</para>
 		<figure id="img_quick_installation_intro">
-			<title>Introduction</title>
+			<title>Introductie</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
 				</imageobject>
 				<caption>
-					<para>The introduction page of the installation system.</para>
+					<para>De introductie pagina van het installatiesysteem.</para>
 				</caption>
 			</mediaobject>
 		</figure>
 		<section id="quick_installation_intro">
-			<title>Introduction</title>
-			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (the <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
+			<title>Introductie</title>
+			<para>Het installatiescherm geeft je een korte introductie van phpBB. Het stelt je in staat om de licentie van phpBB 3.0 te lezen , dat is uitgebracht onder (de <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) en het geeft je informatie over hoe je support kan verkrijgen. Om met de installatie te beginnen, klik je op de <guilabel>Installeren</guilabel> knop (zie <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
-			<title>Requirements</title>
+			<title>Benodigdheden</title>
 			<important>
-				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.0's minimum requirements.</para>
+				<para>Lees het <link linkend="quick_requirements">hoofdstuk over phpBB 3.0 systeemeisen</link> om meer te weten te komen over de minimale systeemeisen van phpBB 3.0.</para>
 			</important>
-			<para>The requirements list is the first page you will see after starting the installation. phpBB 3.0 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.0 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
+			<para>De eerste pagina dat je zult zien na het starten van de installatie is de benodigdhedenlijst, phpBB 3.0 controleert automatisch of alles wat nodig is voor de phpBB installatie aanwezig is en juist is geïnstalleerd op de server. Om verder te kunnen gaan met de installatie, moet je tenminste een <acronym>PHP</acronym>-versie geïnstalleerd hebben (de minimale versie die nodig is , is op de benodigheden pagina weergegeven), en de beschikking hebben over een database om de installatie te hervatten. Ook is belangrijk dat alle mappen die te zien zijn en beschikbaar zijn, de juiste permissies hebben. Lees de beschrijving van elk hoofdstuk om uit te vinden of ze optioneel zijn of verplicht zijn om phpBB 3.0 te kunnen installeren. Als alles in orde is, kan je de installatie hervatten met de knop <guilabel>Installatie starten</guilabel>.</para>
 		</section>
 		<section id="quick_installation_database">
 			<title>Database settings</title>

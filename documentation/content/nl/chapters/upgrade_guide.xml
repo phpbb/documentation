@@ -6,25 +6,25 @@
 	<chapterinfo>
 		<releaseinfo>$Id: upgrade_guide.xml 102 2007-02-18 19:58:09Z mhobbit $</releaseinfo>
 		<copyright>
-			<year>2006</year>
+			<year>2008</year>
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Upgrade Guide</title>
+	<title>Upgrade</title>
 	<abstract>
-		<para>Do you want to upgrade your phpBB2 forum to version 3.0? This chapter will tell and show you how it is done.</para>
+		<para>Wil je jou phpBB 2.0 forum upgraden naar versie 3.0? Dan zal dit hoofdstuk je uitleggen en je laten zien hoe het gedaan moet worden.</para>
 	</abstract>
 	<section id="upgrade">
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>Techie-Micheal</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Upgrading from 2.0 to 3.0</title>
-		<para>The upgrade process from 2.0.x to 3.0.x is a straight-forward, simplified process.</para>
-		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.0.x.</para>
-		<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>
+		<title>Upgraden van phpBB 2.0 naar 3.0</title>
+		<para>Het update-proces van 2.0.x naar 3.0.x is een makkelijk proces.</para>
+		<para>Het proces in de vorm van een PHP-bestand, dat gelijk aan is als het update bestand wat je terug kan vinden in phpBB 2.0.x.  Het bestand zal je meenemen door het proces in een soort van installatie-wizzard scherm totdat je phpBB 3.0.x succesvol is geupdate.</para>
+		<para>Waarschuwing: Vergeet niet een back-up te maken van de database en alle bestanden voordat je een poging doet om je phpBB 2.0 forum te updaten naar 3.0.</para>
 	</section>
 </chapter>
