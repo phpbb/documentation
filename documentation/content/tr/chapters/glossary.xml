@@ -41,7 +41,7 @@
 			<varlistentry>
 				<term>ACP (YKP)</term>
 				<listitem>
-					<para><link linkend="admin_control_panel"><acronym>ACP (YKP)</acronym></link>, &quot;Administration Control Panel (Yönetim Kontrol Paneli)&quot; için kısaltma olarak kullanılmaktadır. Yöneticiler, forumunuzun her yanını bu ana bölümden kontrol edebilirler.</para>
+					<para><link linkend="admin_control_panel"><acronym>ACP (YKP)</acronym></link>, &quot;Administration Control Panel (Yönetim Kontrol Paneli)&quot; için kısaltma olarak kullanılmaktadır. Yöneticiler, forumunuzun her tarafını bu ana bölümden kontrol edebilirler.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -76,28 +76,28 @@
 			<varlistentry>
 				<term>Binary</term>
 				<listitem>
-					<para>Within phpBB, &quot;binary&quot; usually refers to another common way of encoding data for transfer (the other being <acronym>ASCII</acronym>. This is often found as a mode in an <acronym>FTP</acronym> clients to upload files. All of phpBB's images (found in the images/ and templates/subSilver/images/ directories) should be uploaded in binary mode. </para>
+					<para>phpBB'de &quot;binary&quot; transfer için çoğunlukla başvurulan veri şifrelemesinin bir diğer genel yoludur (diğeri ise <acronym>ASCII</acronym>'dir). Bu, çoğunlukla dosyaları göndermek için <acronym>FTP</acronym> bağlantı programı içerisinde bir mod olarak bulunur. phpBB'nin bütün resim dosyaları (images/ ve templates/subSilver/images/ klasörlerinde bulunanlar) binary mod içerisinde yüklenmelidir. </para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Cache (Önbellek)</term>
 				<listitem>
-					<para>Cache is a way of storing frequently-accessed data. By storing this data, your server will have less load put on it, allowing it to process other tasks. By default, phpBB caches its templates when they are compiled and used.</para>
+					<para>Cache (Önbellek), sıkça erişilen veriyi depolamanın bir yoludur. Bu veri depolandığında, sunucunuz veriyi kullanarak düşük yüke sahip olacaktır ve diğer görevlerin işlemesine izin verecektir. Varsayılan olarak phpBB, temalar derlendiğinde ve kullanıldığında onları önbelleğe alır.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Category (Kategori)</term>
 				<listitem>
-					<para>A category is a group of any sort of similar items; for example, forums.</para>
+					<para>Bir kategori benzer ögelerin sıralamasını oluşturan bir gruptur; örneğin, forumlar.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>chmod</term>
 				<listitem>
-					<para><abbrev>chmod</abbrev> bir *nix (UNIX, Linux, v.b.) sunucudaki herhangi bir dosyanın izinlerini değiştirme yoludur. phpBB dosyalarının chmod'u 644 olmalıdır. Dizinlerin chmod'u 755 olmalıdır. Avatar yükleme dizinlerinin ve temaların önbellek (cache) dizinlerinin chmod'u 777 olmalıdır. Chmod hakkında daha fazla bilgi için, lütfen <acronym>FTP</acronym> bağlantı programınızın dökümanlarına başvurun.</para>
+					<para><abbrev>chmod</abbrev> bir *nix (UNIX, Linux, v.b.) sunucusundaki herhangi bir dosyanın izinlerini değiştirme yoludur. phpBB dosyalarının chmod'u 644 olmalıdır. Dizinlerin chmod'u 755 olmalıdır. Avatar yükleme dizinlerinin ve temaların önbellek (cache) dizinlerinin chmod'u 777 olmalıdır. Chmod hakkında daha fazla bilgi için, lütfen <acronym>FTP</acronym> bağlantı programınızın dökümanlarına başvurun.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -111,7 +111,7 @@
 			<varlistentry>
 				<term>Cookie (Çerez)</term>
 				<listitem>
-					<para>A cookie is a small piece of data put onto the user's computer. Cookies are used with phpBB to store login information (used for automatic logins).</para>
+					<para>Bir cookie (çerez), kullanıcının bilgisayarı üzerine yerleştirilen verinin küçük bir parçasıdır. Cookieler (çerezler) giriş bilgilerini saklamak için phpBB ile kullanılır (otomatik girişler için).</para>
 				</listitem>
 			</varlistentry>
 			
