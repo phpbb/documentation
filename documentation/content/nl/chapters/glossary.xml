@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
+						 <!-- @todo what do we whant -->
 <chapter id="glossary">
 	<?dbhtml dir="glossary" filename="index.html" ?>
 	<chapterinfo>
@@ -14,20 +15,19 @@
 	<abstract>
 		<para>A guide to the terms used in the phpBB Documentation and on the forums.</para>
 	</abstract>
-	
 	<section id="terms">
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername></othername>
 				</author>
 				
 				<author>
-					<othername>pentapenguin</othername>
+					<othername></othername>
 				</author>
 				
 				<author>
-					<othername>Techie-Micheal</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>

@@ -86,7 +86,7 @@
 		<note>
 			<para>phpBB 3.0 Beta 1 heeft nog niet de mogelijkheid om een upgrade uitvoeren vanaf phpBB 2.0.x of om te converteren van een andere forumsoftware. Dit zal later in een andere Beta of  in het <acronym>RC</acronym> stadium worden toegevoegd.</para>
 		</note>
-		<para>Nadat je phpBB3 pakket hebt uitgepakt  , en de bestanden hebt geupload naar de locatie waar je het wilt installeren, Je moet de <acronym>URL</acronym> invoeren in je internetbrowser om het installatiescherm te openen. Als je de eerste keer je internetbrowser richt op de <acronym>URL</acronym> (<uri>http://www.phpBBservice.nl/phpBB3</uri> bijvoorbeeld), zal phpBB meteen herkenen als phpBB nog niet is geïnstalleerd, en zal je automatisch doorsturen naar het installatiescherm</para>
+		<para>Nadat je phpBB3 pakket hebt uitgepakt , en de bestanden hebt geupload naar de locatie waar je het wilt installeren, Je moet de <acronym>URL</acronym> invoeren in je internetbrowser om het installatiescherm te openen. Als je de eerste keer je internetbrowser richt op de <acronym>URL</acronym> (<uri>http://www.phpBBservice.nl/phpBB3</uri> bijvoorbeeld), zal phpBB meteen herkenen als phpBB nog niet is geïnstalleerd, en zal je automatisch doorsturen naar het installatiescherm</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introductie</title>
 			<mediaobject>
@@ -110,36 +110,36 @@
 			<para>De eerste pagina dat je zult zien na het starten van de installatie is de benodigdhedenlijst, phpBB 3.0 controleert automatisch of alles wat nodig is voor de phpBB installatie aanwezig is en juist is geïnstalleerd op de server. Om verder te kunnen gaan met de installatie, moet je tenminste een <acronym>PHP</acronym>-versie geïnstalleerd hebben (de minimale versie die nodig is , is op de benodigheden pagina weergegeven), en de beschikking hebben over een database om de installatie te hervatten. Ook is belangrijk dat alle mappen die te zien zijn en beschikbaar zijn, de juiste permissies hebben. Lees de beschrijving van elk hoofdstuk om uit te vinden of ze optioneel zijn of verplicht zijn om phpBB 3.0 te kunnen installeren. Als alles in orde is, kan je de installatie hervatten met de knop <guilabel>Installatie starten</guilabel>.</para>
 		</section>
 		<section id="quick_installation_database">
-			<title>Database settings</title>
-			<para>You now have to decide which database to use. See the <link linkend="quick_requirements">Requirements section</link> for information on which databases are supported. If you do not know your database settings, please contact your hosting company and ask for them. You will not be able to continue without them. You need:</para>
+			<title>Database instellingen</title>
+			<para>Je moet nu beslissen welke database je wilt gebruiken. Bekijk het hoofdstuk <link linkend="quick_requirements">systeemvereisten</link> voor informatie welke database allemaal ondersteund worden. Als je niet je database instellingen weet, neem dan contact op met je hosting bedrijf en vraag het aan hun. Je kan de installatie niet hervatten zonder deze gegevens. Je hebt nodig:</para>
 			<itemizedlist>
 				<listitem>
-					<para>The <guilabel>Database Type</guilabel> - the database you will be using (e.g. mySQL, SQL server, Oracle)</para>
+					<para>Het <guilabel>databasetype</guilabel> - De database die je wilt gebruiken (bijvoorbeeld: mySQL, SQL server, Oracle)</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database server hostname or DSN</guilabel> - the address of the database server.</para>
+					<para>De <guilabel>databaseserver hostnaam of DSN:</guilabel> - Het adres van de databaseserver.</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database server port</guilabel> - the port of the database server (most of the time this is not needed).</para>
+					<para>De <guilabel>database serverpoort:</guilabel> - De poort van de databaseserver (in de meeste gevallen is dit niet nodig).</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database name</guilabel>- the name of the database on the server.</para>
+					<para>De <guilabel>databasenaam</guilabel>- De naam van de database op de server.</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database username</guilabel> and <guilabel>Database password</guilabel> - the login data to access the database.</para>
+					<para>De <guilabel>database gebruikersnaam</guilabel> en <guilabel>database wachtwoord</guilabel> - De aanmeldingsgegevens om toegang te verkrijgen tot de database.</para>
 				</listitem>
 			</itemizedlist>
 			<tip>
-				<para>If you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
+				<para>Als je het gaat installeren en je gebruikt SQLite, zal je het volledige pad moet invoeren van jou database bestand in het DSN veld en het veld van de gebruikersnaam en wachtwoord leeg laten. Voor veiligheidsreden, zal je er zeker van moeten zijn dat je database bestand niet is opgeslagen in een openbare toegankelijke locatie die iedereen kan bezoeken via het internet.</para>
 			</tip>
 			<figure id="img_quick_installation_database">
-				<title>Database settings</title>
+				<title>Database instellingen</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>The database settings screen, please make sure to have all the required data available</para>
+						<para>Het database instellingenscherm, wees er zeker van dat alle verplichte gegevens beschikbaar is.</para>
 					</caption>
 				</mediaobject>
 			</figure>
