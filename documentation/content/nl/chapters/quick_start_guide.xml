@@ -143,26 +143,26 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multiple phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
-			<para>After you have entered your details, you can continue by clicking the <guilabel>Proceed to next step</guilabel> button. Now, phpBB 3.0 will test and verify the data you entered.</para>
-			<para>If you see a "<guilabel>Could not connect to the database</guilabel>" error, this means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
+			<para>Je hoeft niet de <guilabel>prefix voor de database tabellen</guilabel> instellingen te veranderen, Tenzei je van plan bent om meerdere phpBB forums te installeren op één database. In dat geval gebruik je dan steeds een andere prefix voor elke installatie om het werkend te maken.</para>
+			<para>Zodra je alle gegevens hebt ingevoerd, kan je de installatie hervatten door op de knop <guilabel>Volgende stap</guilabel> te klikken. Nu gaat phpBB 3.0 de gegevens controleren die je hebt ingevoerd.</para>
+			<para>Een "<guilabel>Could not connect to the database</guilabel>"fout betekend dat je de database gegevens niet corect hebt ingevoerd, en phpBB kan daardoor geen verbinding leggen met de database. Wees er zeker van dat alle ingevoerde database gegevens kloppen en probeer het dan opnieuw. Als je niet zeker bent van je database instellingen, neem dan contact op met je host.</para>
 			<tip>
-				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
+				<para>Vergeet niet dat je database gebruikersnaam en wachtwoord hoofdletter gevoelig zijn. Je moet exact de gegevens invoeren die je hebt gekregen van je host.</para>
 			</tip>
-			<para>If you installed another version of phpBB before on the same database with the same prefix, phpBB will inform you and you just need to enter a different database prefix.</para>
-			<para>If you see the <guilabel>Successful Connection</guilabel> message, you can continue to the next step.</para>
+			<para>Als je een andere versie van phpBB reeds hebt geinstalleerd op dezelfde database met dezelfde prefix, dan geeft phpBB een melding dat je een andere prefix moet invoeren.</para>
+			<para>Als je het bericht <guilabel>Verbinding gelukt</guilabel> ziet, kan je door gaan naar de volgende stap.</para>
 		</section>
 		<section id="quick_installation_admin">
-			<title>Administrator details</title>
-			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+			<title>Beheerdergegevens</title>
+			<para>Nu zal je jouw beheerdersgebruiker moeten aanmaken. Deze gebruiker zal de volledige beheerders toegang krijgen en hij zal de eerste gebruiker zijn van het forum. Alle velden zijn verplicht om in te vullen. Je kan ook je standaardtaal instellen van je forum op deze pagina. Op een normale standaard installatie van phpBB 3.0 zit er automatisch de taal <guilabel>English [GB]</guilabel> bij ingesloten, bij het phpBBservice.nl pakket zit er standaard de taal Nederlands [NL] inbegrepen. Je kan andere talen downloaden via <ulink url="http://www.phpbb.com">www.phpbb.com</ulink> en de Nederlandse taal op <ulink url="http://www.phpbbservice.nl">www.phpbbservice.nl</ulink>, en het later toevoegen. </para>
 		</section>
 		<section id="quick_installation_config">
-			<title>Configuration file</title>
-			<para>In this step, phpBB will automatically try to write the configuration file. The forum needs the configuration to run properly. It contains all of the database settings, so without it, phpBB will not be able to access the database.</para>
-			<para>Usually, automatically writing the configuration file works fine. But in some cases it can fail due to wrong file permissions, for instance. In this case, you need to upload the file manually. phpBB asks you to <guilabel>download</guilabel> the config.php file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, click <guilabel>Done</guilabel> to get to the last step. If <guilabel>Done</guilabel> returns you to the same page as before, and does not return a success message, you did not upload the file correctly.</para>
+			<title>Configuratie bestand</title>
+			<para>In dit hoofdstuk, zal phpBB automatisch het configuratie bestand beschrijven. Het forum heeft het configuratie bestand nodig om succesvol te kunnen draaien. Het bevat alle database instellingen, dus zonder dat bestand zal phpBB geen verbinding kunnen leggen naar de database.</para>
+			<para>Normaal zal het automatisch beschrijven van het configuratie bestand uitstekend werken. Maar in sommige gevallen kan het mislukken door de verkeerde permissies bijvoorbeeld. In dat geval, zal je het configuratie bestand handmatig moeten uploaden. phpBB vraagt je dan om het config.php bestand te <guilabel>downloaden</guilabel> en het zegt je ook wat je er mee moet gaan doen, Lees de instructies voorzichtig en aandachtig door. Zodra je het bestand hebt geüpload, gebruik dan de knop <guilabel>Klaar</guilabel> om naar de volgende stap te gaan. Wanneer je terug keert naar de pagina waar je op de knop <guilabel>Klaar</guilabel> te klikken, en je krijgt geen succesvol bericht dan heb je het configuratie bestand niet succesvol geüpload</para>
 		</section>
 		<section id="quick_installation_advanced">
-			<title>Advanced settings</title>
+			<title>Uitgebreide instellingen</title>
 			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
 			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.0 successfully. But there is still a lot of work ahead!</para>
 			<para>If you are unable to get phpBB 3.0 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
@@ -173,7 +173,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>zeroK</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
