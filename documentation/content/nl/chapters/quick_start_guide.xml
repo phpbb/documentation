@@ -163,10 +163,10 @@
 		</section>
 		<section id="quick_installation_advanced">
 			<title>Uitgebreide instellingen</title>
-			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
-			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.0 successfully. But there is still a lot of work ahead!</para>
-			<para>If you are unable to get phpBB 3.0 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
-			<para>At this point if you are upgrading from phpBB 2.0, you should refer to the <link linkend="upgrade_guide">upgrade guide</link> for further information. If not, you should remove the install directory from your server as you will only be able to access the Administration Control Panel whilst it is present.</para>
+			<para>Met de <guilabel>uitgebreide instellingen</guilabel> kan je sommige foruminstellingen instellen. Ze zijn optioneel, en kunnen altijd aangepast worden, ook in een later stadium. Dus als je niet weet wat de instellingen betekenen, ga je verder naar de volgende stap om de installatie te voltooien.</para>
+			<para>Als de installatie succesvol is, kan je nu de <guilabel>Aanmelden</guilabel> knop gebruiken om het <guilabel>Beheerderspaneel</guilabel> te bezoeken. Gefeliciteerd, je hebt succesvol phpBB 3.0 geïnstalleerd. Maar er is nog veel werk voor de boeg!</para>
+			<para>Als het niet lukt om phpBB 3.0 te kunnen installeren nadat je deze handleiding hebt gelezen, bekijk dan even het hoofdstuk <link linkend="quick_support">support section</link> om uit te vinden waar en hoe je om hulp kan vragen. </para>
+			<para>Op dit punt als je phpBB 2.0. gaat upgraden naar phpBB 3.0, zal je het hoofdstuk <link linkend="upgrade_guide">upgrade handleiding</link> voor verdere informatie moeten lezen. Zo niet, zal je de install-map moeten verwijderen van je server als je het forum toegankelijk wilt maken voor bezoekers, jij zal alleen het beheerderspaneel kunnen bezoeken wanneer de install map nog bestaat op de server.</para>
 		</section>
 	</section>
 	<section id="quick_settings">
@@ -177,47 +177,47 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>General settings</title>
-		<para>In this section you will learn how to change some of the basic settings of your new board.</para>
-		<para>Right after the installation you will be redirected to the so called "Administration Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
+		<title>Algemene instellingen</title>
+		<para>In dit hoofdstuk zal je leren hoe je de basisinstellingen kunt veranderen van je nieuwe forum.</para>
+		<para>Meteen na de installatie zal je worden door gestuurd naar het zo genoemde "Beheerderspaneel". Je kan ook dit paneel betreden door op de <guilabel>Beheerderspaneel</guilabel> link te klikken helemaal onderaan de pagina van je forum. In het beheerderspaneel kan je alles veranderen wat betrekking heeft tot je forum.</para>
 		<section id="quick_settings_boardsettings">
-			<title>Board Settings</title>
-			<para>The first section of the <acronym>ACP</acronym> you will probably want to visit right after the installation is "Board Settings". Here you can first of all change the name (<guilabel>Site name</guilabel>) and description (<guilabel>Site description</guilabel>) of your board.</para>
+			<title>Foruminstellingen</title>
+			<para>De eerste sectie van het <acronym>Beheerderspaneel</acronym> is meteen na de installatie de sectie "Foruminstellingen". Hier kan je in eerste instantie de naam (<guilabel>Sitenaam</guilabel>) en de beschrijving (<guilabel>Sitebeschrijving</guilabel>) van je forum veranderen.</para>
 			<figure id="img_quick_settings_sitename">
-				<title>Board Settings</title>
+				<title>Foruminstellingen</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Here you can edit the Site name and Site description of your board.</para>
+						<para>Hier kan je de sitenaam en siteomschrijving bewerken van je forum.</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>This form also holds the options for changing things like the timezone (<guilabel>System timezone</guilabel>) as well as the date format used to render dates/times (<guilabel>Date format</guilabel>).</para>
-			<para>There you can also select a new style (after having installed it) for your board and enforce it on all members ignoring whatever style they've selected in their "User Control Panel". The style will also be used for all forums where you haven't specified a different one. For details on where to get new styles and how to install them, please visit the <ulink url="http://www.phpbb.com/styles/">styles home page</ulink> at <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
-			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default, phpBB3 only ships with the English language pack. So, before using this field, you will have to download the language pack for the language you want to use and install it. For details, please read <link linkend="acp_system_language">Language packs</link> .</para>
+			<para>Dit formulier bevat ook de opties om dingen te veranderen bijvoorbeeld de tijdzone (<guilabel>Systeemtijdzone</guilabel>) en ook het datumformaat, dat gebruikt wordt om datums en tijden te kunnnen weergeven (<guilabel>Datumformaat</guilabel>).</para>
+			<para>Je kan ook nieuwe stijlen selecteren (nadat ze geïnstalleerd zijn) voor je forum en het instellen dat bij alle gebruikers de nieuwe stijl wordt weergeven, en dat de stijl die ze hebben geselecteerd in hun "Gebruikerspaneel" wordt genegeerd. De stijl zal gelden voor het hele forum tenminste waar je geen andere stijl hebt geselecteerd in bepaalde forums. Voor verdere informatie waar je nieuwe stijlen kan verkrijgen en hoe je ze kan installeren , bezoek dan de <ulink url="http://www.phpbb.com/styles/">stijlenpagina</ulink> op <ulink url="http://www.phpbb.com/">phpBB.com</ulink>.</para>
+			<para>Als je jouw forum wilt gebruiken voor een niet-Engelse gemeenschap, laat dit formulier je toe om de standaard taal te veranderen (<guilabel>Standaard forumtaal</guilabel>) (wat kan overschreven worden door de gebruiker in hun eigen gebruikerspaneel). Standaard wordt bij phpBB3 een Engels talenpakket meegeleverd. Dus voor dat je dit formulier gaat gebruiken, zal je een andere taal als Engels moeten hebben gedownload voordat je het kan installeren en gebruiken. Voor verdere informatie lees het hoofdstuk <link linkend="acp_system_language">Taalpakketten</link> .</para>
 			<!--TODO: Correct ACP link-->
 		</section>
 		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">
-			<title>Board Features</title>
-			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
+			<title>Forumfuncties</title>
+			<para>Als je sommige basisfuncties wilt in of uitschakelen van je forum is dit de plaats om het te doen. Hier kan je het toestaan van het veranderen van gebruikersnamen (<guilabel>Gebruikersnaam wijzigingen toestaan</guilabel>) of het toevoegen van een bijlagen (<guilabel>Bijlagen toestaan</guilabel>). Je kan zelfs de <acronym>BBCode</acronym> in of uitschakelen (<guilabel>BBCode toestaan</guilabel>).</para>
 			<figure id="img_quick_settings_features">
-				<title>Board Features</title>
+				<title>Forumfuncties</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Enabling and disabling basic features with just 2 clicks</para>
+						<para>Het in of uitschakelen van de basisfuncties kan gewoon met twee muis klikken</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Disabling BBCode completely is a little bit to harsh for your taste but you don't want your users to abuse the signature field for tons of images? Simply set <guilabel>Allow use of IMG BBCode Tag in user signatures</guilabel> to "No". If you want to be a little bit more specific on what you want to allow and disallow in users' signatures, have a look at the "Signature Settings" form.</para>
-			<para>The "Board Features" form offers you a great way to control the features in an all-or-nothing way. If you want to get into the details on each feature, there is for everything also a separated form which let's you specify everything from the maximum number of characters allowed in a post (<guilabel>Max characters per post</guilabel> in "Post Settings") to how large a user's avatar can be (<guilabel>Maximum Avatar Dimensions</guilabel> in "Avatar Settings").</para>
+			<para>Het uitschakelen van de BBCode is natuurlijk wel een beetje hard van stapel lopen, maar je wilt niet dat de gebruikers in hun onderschrift duizende afbeelingen gaan gebruiken? Makkelijk, je stelt gewoon de optie <guilabel>IMG BBCode tag in onderschriften toestaan</guilabel> in op "Nee". Als je een klein beetje gespecificeerd wilt hebben wat je wel en wat je niet wilt toestaan voor gebruikers in hun onderschrift, dan zal je eventjes een kijkje moeten nemen bij het "Onderschriftinstellingen" formulier.</para>
+			<para>De "Forumfuncties" formulier biedt je grote mogelijkheden in ja of nee antwoorden. Als je bij elke functie uitgebreide informatie wilt hebben, dan is er voor alles een apart formulier waar je bijvoorbeeld specificeerd hoeveel maximaal aantal tekens je in een bericht mag gebruiken. Dit kan je instellingen bij het formulier (<guilabel>Maximaal aantal tekens per bericht</guilabel> in het paneel "Berichteninstellingen"). Om te kiezen hoe groot een gebruikersavatar mag zijn kan dit worden veranderd bij het formulier (<guilabel>Maximale avatargrootte</guilabel> in het paneel "Avatar-instellingen").</para>
 			<important>
-				<para>If you disable features, these will also be unavailable to users who would normally have them according to their respective permissions. For details on the permissions system, please read <xref linkend="quick_permissions" /> or the in-depth guide in the Administrator Guide.</para>
+				<para>Als je functies uitschakelt, zullen deze ook voor de gebruikers onbeschikbaar zijn die normaal hun premissies hebben om het te kunnen gebruiken. Voor verdere informatie over het permissiesysteem lees <xref linkend="quick_permissions" /> of in de verdere uitleg van de beheerdershandleiding.</para>
 				<!-- TODO: Link to admin guide -->
 			</important>
 		</section>
@@ -227,14 +227,14 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>Anon</othername>
+					<othername></othername>
 				</author>
 				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Creating forums</title>
+		<title>Het creëren van forums</title>
 		<para>Forums are the sections where topics are stored. Without forums, your users would have nowhere to post! Creating forums is very easy.</para>
 		<para>Firstly, make sure you are logged in. Find the <guilabel>[ Administration Control Panel ]</guilabel> link at the bottom of the page, and click it. You should be in the Administration Index. You can administer your board here.</para>
 		<para>There are tabs at the top for the Administration Control Panel that will guide you to each category. You must get to the Forum Administration section to create a forum, so click the <guilabel>Forums</guilabel> tab.</para>
