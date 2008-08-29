@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Yönetim Rehberi</title>
 	<abstract>
-		<para>This chapter describes the phpBB 3.0 admin controls.</para>
+		<para>Bu bölüm phpBB 3.0 yönetim kontrollerini açıklamaktadır.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -548,7 +548,7 @@
 				
 				<para>The next group of search settings actually only contains one setting: choosing what backend your board's search facilities, if enabled, will use. The following details this option.
 					<itemizedlist>
-						<title>Search Backend</title>
+						<title>Arama Uygulaması</title>
 						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext sesarch. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
 					</itemizedlist>
 					<note>
@@ -583,7 +583,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Forum Admin</title>
+		<title>Forum Yöneticisi</title>
 		<para>The <guilabel>Forum</guilabel> section offers the tools to manage your forums. Whether you want to add new forums, add new categories, change forum descriptions, reorder or rename your forums, this is the place to go.</para>
 		<section id="acp_forums_types">
 			<sectioninfo>
@@ -593,7 +593,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Explanation of forum types</title>
+			<title>Forum türlerinin açıklaması</title>
 			<para>In phpBB 3.0, there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
 			<variablelist>
 				<varlistentry>
@@ -630,7 +630,7 @@
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 				
 			<figure id="img_acp_subforums_list">
-				<title>Creating subforums</title>
+				<title>Altforumlar oluşturma</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
@@ -652,7 +652,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage forums</title>
+			<title>Forumları yönetme</title>
 			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
 			
 			<figure id="img_acp_forums_manage_legend">
@@ -699,13 +699,13 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>BBCodes</title>
+			<title>BBCodelar</title>
 			
 			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
 			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
 			
 			<figure id="img_acp_creating_bbcodes">
-				<title>Creating BBCodes</title>
+				<title>BBCodelar Oluşturma</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/creating_bbcodes.png"/>
@@ -739,11 +739,11 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Private message settings</title>
+			<title>ÖZel mesaj ayarları</title>
 			
 			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 			<itemizedlist>
-				<title>General settings</title>
+				<title>Genel ayarlar</title>
 				<listitem><para><guilabel>Private messaging</guilabel>: You can enable to disable your board's private messaging system. If you want to enable it, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Max private message folders</guilabel>: This is the maximum number of new private message folders your users can each create.</para></listitem>
 				<listitem><para><guilabel>Max private messages per box</guilabel>: This is the maximum number of private messages your users can have in each of their folders.</para></listitem>
@@ -752,7 +752,7 @@
 			</itemizedlist>	
 			
 			<itemizedlist>
-				<title>General options</title>
+				<title>Genel seçenekler</title>
 				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.0, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
@@ -778,7 +778,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Topic icons</title>
+			<title>Başlık ikonları</title>
 			
 			<para>A new feature in phpBB3 is the ability to assign icons to topics. On this page, you can manage what topic icons are available for use on your board. You can add, edit, delete, or move topic icons. The <guilabel>Topic Icons</guilabel> form displays the topic icons currently installed on your board. You can add topic icons manually, install a premade icons pack, export or download an icons pack file, or edit your currently installed topic icons.</para>
 		
@@ -809,7 +809,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Smilies</title>
+			<title>İfadeler</title>
 			
 			<para>Smilies or emoticons are typically small, sometimes animated images used to convey an emotion or feeling. You can manage the smilies on your board via this page. To add smilies, you have the option to either install a premade smilies pack, or add smilies manually. Locate the <guilabel>Smilies</guilabel> form, which lists the smilies currently installed on your board, on the page. </para>
 		
@@ -842,7 +842,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Word censoring</title>
+			<title>Kelime sansürleme</title>
 			
 			<para>On some forums, a certain level of appropriate, profanity-free speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
 			
@@ -859,12 +859,12 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Attachment Settings</title>
+			<title>Eklenti Ayarları</title>
 			
 			<para>If you allow your users to post attachments, it is important to be able to control your board's attachments settings. Here, you can configure the main settings for attachments and the associated special categories. When you are done configuring your board's attachments settings, click <guilabel>Submit</guilabel>.</para>
 			
 			<itemizedlist>
-				<title>Attachment Settings</title>
+				<title>Eklenti Ayarları</title>
 				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Upload directory</guilabel>: The directory that attachments will be uploaded to. The default directory is <filename>/files/</filename>.</para></listitem>
@@ -880,7 +880,7 @@
 			</itemizedlist>
 			
 			<itemizedlist>
-				<title>Image Category Settings</title>
+				<title>Resim Kategori Ayarları</title>
 				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to <guilabel>No</guilabel>, a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
 				<listitem><para><guilabel>Create thumbnail</guilabel>: This setting configures your board to either create a thumbnail for every image attached, or not.</para></listitem>
 				<listitem><para><guilabel>Maximum thumbnail width in pixels</guilabel>: This is the maximum width in pixels for the created thumbnails.</para></listitem>
@@ -891,7 +891,7 @@
 			</itemizedlist>
 			
 			<itemizedlist>
-				<title>Define Allowed/Disallowed IPs/Hostnames</title>
+				<title>İzinli/İzinli olmayan IP adreslerini/Host adlarını tanımlama</title>
 				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: If you have secure downloads enabled, you can specify the <glossterm>IP address</glossterm>es or hostnames allowed or disallowed. If you specify more than one <glossterm>IP address</glossterm> or hostname, each <glossterm>IP address</glossterm> or hostname should be on its own line. Entered values can have wildcards (*). To specify a range for an <glossterm>IP address</glossterm>, separate the start and end with a hyphen (-).</para></listitem>
 				<listitem><para><guilabel>Exclude IP from [dis]allowed IPs/hostnames</guilabel>: Enable this to exclude the entered IP(s)/hostname(s).</para></listitem>
 			</itemizedlist>
@@ -905,7 +905,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extensions</title>
+			<title>Uzantılar yönetimi</title>
 			
 			<para>You can further configure your board's attachments settings by controlling what file extensions attached files can have to be uploaded. It is recommended that you do not allow scripting file extensions (such as php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, and so forth) for security reasons. You can find this page by clicking <guimenuitem>Manage extensions</guimenuitem> once you're in the <glossterm>ACP</glossterm>.</para>
 			
@@ -922,14 +922,14 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extension groups</title>
+			<title>Uzantı grupları yönetimi</title>
 			
 			<para>Allowed file extensions can be placed into groups for easy management and viewing. To manage the extension groups, click <guimenuitem>Manage extension groups</guimenuitem> once you get into the <guilabel>Posting</guilabel> settings part of the <glossterm>ACP</glossterm>. You can configure specific settings regarding each extension group.</para>
 			
 			<para>To add a new file extension group, find the textbox that corresponds to the <guilabel>Create new group</guilabel> button. Type in the name of the extension group, then click <guilabel>Submit</guilabel>. You will be greeted with the extension group settings form. The following contains descriptions for each option available, and applies to extension groups that either already exist or are being added.</para>
 		
 			<itemizedlist>
-				<title>Add Extension Group</title>
+				<title>Uzantı Grubu Ekleme</title>
 				<listitem><para><guilabel>Group name</guilabel>: The name of the extension group.</para></listitem>
 				<listitem><para><guilabel>Special category</guilabel>: Files in this extension group can be displayed differently. Select a special category from this selection menu to change the way the attachments in this extension group is presented within a post.</para></listitem>
 				<listitem><para><guilabel>Allowed</guilabel>: Enable this if you want to allow attachments that belong in this extension group.</para></listitem>
@@ -953,7 +953,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Orphaned attachments</title>
+			<title>Boşta kalan eklentiler</title>
 			
 			<para>Sometimes, attachments may be orphaned, which means that they exist in the specified files directory (to configure this directory, see the section on <link linkend="acp_attach_settings">attachment settings</link>), but aren't assigned to any post(s). This can happen when posts are deleted or edited, or even when users attach a file, but don't submit their post.</para>
 			
@@ -977,10 +977,10 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Users Management</title>
+		<title>Kullanıcılar Yönetimi</title>
 
 		<section id="acp_users_manage">
-			<title>Manage Users</title>
+			<title>Kullanıcıları Yönetmek</title>
 			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
 				
 			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem> to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
@@ -997,61 +997,61 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Overview</title>
+				<title>Kullanıcıyı Gözden Geçirme</title>
 				<para>This is the first form that shows up when you first select a user to manage. Here, all of the general information and settings for each user is displayed.</para>
 				
 				<variablelist>
 					<varlistentry>
-						<term>Username</term>
+						<term>Kullanıcı adı</term>
 						<listitem>
 							<para>This is the name of the user you're currently managing. If you want to change the user's username, type in a new username between three and twenty characters long into the textbox labeled <guilabel>Username:</guilabel></para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Registered</term>
+						<term>Kayıtlı</term>
 						<listitem>
 							<para>This is the complete date on which the user registered. You cannot edit this value.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Registered from IP</term>
+						<term>Kayıt olunan IP adresi</term>
 						<listitem>
 							<para>This is the <acronym>IP</acronym> address from which the user registered his or her account. If you want to determine the <acronym>IP</acronym> hostname, click on the <acronym>IP</acronym> address itself. The current page will reload and will display the appropriate information. If you want to perform a whois on the <acronym>IP</acronym> address, click on the <guilabel>Whois</guilabel> link. A new window will pop up with this data.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Last Active</term>
+						<term>Son Aktiflik</term>
 						<listitem>
 							<para>This is the complete date on which the user was last active.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Founder</term>
+						<term>Kurucu</term>
 						<listitem>
 							<para>Founders are users who have all administrator permissions and can never be banned, deleted or altered by non-founder members. If you want to set this user as a founder, select the <guilabel>Yes</guilabel> radio button. To remove founder status from a user, select the <guilabel>No</guilabel> radio button.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Email</term>
+						<term>E-posta</term>
 						<listitem>
 							<para>This is the user's currently set email address. To change the email address, fill in the <guilabel>Email:</guilabel> textbox with a valid email.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Confirm email address</term>
+						<term>E-posta adresini doğrulama</term>
 						<listitem>
 							<para>This textbox should only be filled if you are changing the user's email address. If you are changing the email address, both the <guilabel>Email:</guilabel> textbox and this one should be filled with the same email address. If you do not fill this in, the user's email address will not be changed.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>New password</term>
+						<term>Yeni şifre</term>
 						<listitem>
 							<para>As an administrator, you cannot see any of your users' password. However, it is possible to change passwords. To change the user's password, type in a new password in the <guilabel>New password:</guilabel> textbox. The new password has to be between six and thirty characters long.</para>
 						
@@ -1060,14 +1060,14 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Confirm new password</term>
+						<term>Yeni şifreyi doğrula</term>
 						<listitem>
 							<para>This textbox should only be filled if you are changing the user's password. If you are changing the user's password, the <guilabel>Confirm new password:</guilabel> textbox needs to be filled in with the same password you filled in in the above <guilabel>New password:</guilabel> textbox.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Warnings</term>
+						<term>Uyarılar</term>
 						<listitem>
 							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
 							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
@@ -1075,7 +1075,7 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Quick Tools</term>
+						<term>Hızlı Araçlar</term>
 						<listitem>
 							<para>The options in the <guilabel>Quick Tools</guilabel> drop-down selection box allow you to quickly and easily change one of the user's options. The available options are <guilabel>Delete Signature</guilabel>, <guilabel>Delete Avatar</guilabel>, <guilabel>Move all Posts</guilabel>, <guilabel>Delete all Posts</guilabel>, and <guilabel>Delete all attachments</guilabel>.</para>
 						</listitem>
@@ -1091,7 +1091,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Feedback</title>
+				<title>Kullanıcı Geribildirimi</title>
 				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
 				
 				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued. <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
@@ -1107,7 +1107,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Profile</title>
+				<title>Kullanıcı Profili</title>
 				
 				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
 					<itemizedlist>
@@ -1133,7 +1133,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Preferences</title>
+				<title>Kullanıcı Tercihleri</title>
 				
 				<para>Users have many settings they can use for their account. As an administrator, you can change any of these settings. The user settings (also known as preferences) are grouped into three main categories: <guilabel>Global Settings</guilabel>, <guilabel>Posting Defaults</guilabel>, and <guilabel>Display Options</guilabel>.</para>
 			</section>
@@ -1146,7 +1146,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Avatar</title>
+				<title>Kullanıcı Avatarı</title>
 				
 				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
 				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
@@ -1165,7 +1165,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Rank</title>
+				<title>Kullanıcı Rütbesi</title>
 				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
 				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
@@ -1180,7 +1180,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Signature</title>
+				<title>Kullanıcı İmzası</title>
 				
 				<para>Here you can add, edit, or delete the user's <glossterm>signature</glossterm>.</para>
 				<para>The user's current signature should be displayed in the <guilabel>Signature</guilabel> form. Just edit the signature by typing whatever you want into the text area. You can use <glossterm>BBCode</glossterm> and any other special formatting with what's provided. When you are done editing the user's signature, click <guilabel>Submit</guilabel> to update the user's signature.</para>
@@ -1197,7 +1197,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Groups</title>
+				<title>Gruplar</title>
 				
 				<para>Here you can see all of the <glossterm>usergroups</glossterm> that the user is in. From this page you can easily remove the user from any usergroup, or add the user to an existing group. The table entitled <guilabel>Special groups user is a member of</guilabel> lists out the usergroups the user is currently a member of.</para>
 				<para>Adding the user to a new usergroup is very easy. To do so, find the pull-down menu labeled <guilabel>Add user to group:</guilabel> and select a usergroup from that menu. Once the usergroup is selected, click <guilabel>Submit</guilabel>. Your addition will immediately take effect.</para>
@@ -1212,7 +1212,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Permissions</title>
+				<title>İzinler</title>
 				
 				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
 			</section>
@@ -1225,7 +1225,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Attachments</title>
+				<title>Eklentiler</title>
 				
 				<para>Depending on the current attachments settings, your users may already have <glossterm>attachments</glossterm> posted. If the user has already uploaded at least one attachment, you can see the listing of the attachment(s) in the table. The data available for each attachment consist of: <guilabel>Filename</guilabel>, <guilabel>Topic title</guilabel>, <guilabel>Post time</guilabel>, <guilabel>Filesize</guilabel>, and <guilabel>Downloads</guilabel>.</para>
 				<para>To help you in managing the user's attachment(s), you can choose the sorting order of the attachments list. Find the <guilabel>Sort by:</guilabel> pull-down menu and pick the category you want to use the sort the list (the possible options are <guimenuitem>Filename</guimenuitem>, <guimenuitem>Extension</guimenuitem>, <guimenuitem>Filesize</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Post time</guimenuitem>, and <guimenuitem>Topic title</guimenuitem>. To choose the sorting order, choose either <guimenuitem>Descending</guimenuitem> or <guimenuitem>Ascending</guimenuitem> from the pull-down menu besides the sorting category. Once you are done, click <guilabel>Go</guilabel>.</para>
@@ -1243,37 +1243,37 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Inactive Users</title>
+			<title>Aktif Olmayan Kullanıcılar</title>
 			<para>Here you are able to view details of all users who are currently marked as inactive along with the reason their account is marked as inactive and when this occurred.</para>
 			<para>Using the checkboxes on this page it is possible to perform bulk actions on the users, these include activating the accounts, sending them a reminder email indicating that they need to activate their account or deleting the account.</para>
 			<para>There are 5 reasons which may be indicated for an account being inactive:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Account deactivated by administrator</term>
+					<term>Yönetici tarafından deaktif edilen hesap</term>
 					<listitem>
 						<para>This account has been manually deactivated by an administrator via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Profile details changed</term>
+					<term>Profil bilgileri değiştirildi</term>
 					<listitem>
 						<para>The board is configured to require user activation and this user has changed key information related to their account such as the email address and is required to reactivate the account to confirm these changes.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Newly registered account</term>
+					<term>Yeni kayıt olunan hesap</term>
 					<listitem>
 						<para>The board is configured to require user activation and either the user or an administrator (depending on the settings) has not yet activated this new account.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Forced user account reactivation</term>
+					<term>Kullanıcı hesabı yeniden aktivasyona zorlandı</term>
 					<listitem>
 						<para>An administrator has forced this user to reactivate their account via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Unknown</term>
+					<term>Bilinmeyen</term>
 					<listitem>
 						<para>No reason was recorded for this user being inactive; it is likely that the change was made by an external application or that this user was added from another source.</para>
 					</listitem>
@@ -1289,7 +1289,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' permissions</title>
+			<title>Kullanıcıların izinleri</title>
 			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
 		            
 		   	 <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
@@ -1315,7 +1315,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' forum permissions</title>
+			<title>Kullanıcıların forum izinleri</title>
 			
 			<para>Along with editing your users' user account-related permissions, you can also edit their forum permissions, which relate to the forums in your board. Forum permissions are different from user permissions in that they are directly related and tied to the forums. <guimenuitem>Users' forum permissions</guimenuitem> allows you to edit your users' forum permissions. When doing so, you can only assign forum permissions to one user at a time.</para>
 		
@@ -1344,20 +1344,20 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Custom profile fields</title>
+			<title>Özel profil alanları</title>
 			
 			<para>One of the many new features in phpBB3 that enhance the user experience is <guilabel>Custom Profile Fields</guilabel>. In the past, users could only fill in information in the common profile fields that were displayed; administrators had to add MODifications to their board to accommodate their individual needs. In phpBB3, however, administrators can comfortably create custom profile fields through the <acronym>ACP</acronym>.</para>
 		
 			<para>To create your custom profile field, login to your ACP. Click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then locate the <guimenuitem>Custom profile fields</guimenuitem> link in the left-hand menu to click on. You should now be on the proper page. Locate the empty textbox below the custom profile fields headings, which is next to a selection menu and a <guilabel>Create new field</guilabel> button. Type in the empty textbox the name of the new profile field you want to create first. Then, select the field type in the selection menu. Available options are <guimenuitem>Numbers</guimenuitem>, <guimenuitem>Single text field</guimenuitem>, <guimenuitem>Textarea</guimenuitem>, <guimenuitem>Boolean (Yes/No)</guimenuitem>, <guimenuitem>Dropdown box</guimenuitem>, and <guimenuitem>Date</guimenuitem>. Click the <guilabel>Create new field</guilabel> button to continue. The following describes each of the three sets of settings that the new custom profile field will have.
 				<itemizedlist>
-					<title>Add profile field</title>
+					<title>Profil alanı eklemek</title>
 					<listitem><para><guilabel>Field type:</guilabel> This is the kind of the field that your new custom profile field is. That means that it can consist of numbers, dates, etc. This should already be set.</para></listitem>
 					<listitem><para><guilabel>Field identification:</guilabel> This is the name of the profile field. This name will identify the profile field within phpBB3's database and templates.</para></listitem>
 					<listitem><para><guilabel>Display profile field:</guilabel> This setting determines if the new profile field will be displayed at all. The profile field will be shown on topic pages, profiles and the memberlist if this is enabled within the load settings. Only showing within the users profile is enabled by default.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Visibility option</title>
+					<title>Görünebilirlik seçeneği</title>
 					<listitem><para><guilabel>Display in user control panel:</guilabel> This setting determines if your users will be able to change the profile field within the <acronym>UCP</acronym>.</para></listitem>
 					<listitem><para><guilabel>Display at registration screen:</guilabel> If this option is enabled, the profile field will be displayed on the registration page. Users will be able to be change this field within the <acronym>UCP</acronym>.</para></listitem>
 					<listitem><para><guilabel>Required field:</guilabel> This setting determines if you want to force your users to fill in this profile field. This will display the profile field at registration and within the user control panel.</para></listitem>
@@ -1365,7 +1365,7 @@
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Language specific options</title>
+					<title>Özel dil seçenekleri</title>
 					<listitem><para><guilabel>Field name/title presented to the user:</guilabel> This is the actual name of the profile field that will be displayed to your users.</para></listitem>
 					<listitem><para><guilabel>Field description:</guilabel> This is a simple description/explanation for your users filling out this field.</para></listitem>
 				</itemizedlist>
@@ -1382,7 +1382,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Managing ranks</title>
+			<title>Rütbeleri yönetme</title>
 			
 			<para>Ranks are special titles that can be applied to forum users. As an administrator, it is up to you to create and manage the ranks that exist on your board. The actual names for the ranks are completely up to you; it's usually best to tailor them to the main purpose of your board.</para>
 			
@@ -1409,7 +1409,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>User Security</title>
+			<title>Kullanıcı Güvenliği</title>
 			<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
 			
 			<section id="acp_ban_emails">
@@ -1420,12 +1420,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban emails</title>
+				<title>E-postaları yasaklama</title>
 				<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
 				
 				<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more email addresses</title>
+					<title>Bir veya daha fazla e-posta adresini yasaklama</title>
 					<listitem><para><guilabel>Email address</guilabel>: This textbox should contain all the emails that you want to ban under a single rule. If you want to ban more than one email at this time, put each email on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the email address(es) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the email address(es) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
 					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered email address from all current bans.</para></listitem>
@@ -1435,7 +1435,7 @@
 				
 				<para>Other than adding emails to be banned, you can also un-ban or un-exclude email addresses from bans. To un-ban or exclude one or more email addresses from bans, fill in the <guilabel>Un-ban or un-exclude emails</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Un-ban or un-exclude emails</title>
+					<title>E-postaların yasağını kaldırma ya da kabul etme</title>
 					<listitem><para><guilabel>Email address</guilabel>: This multiple selection menu lists all currently banned emails. Select the email that you want to un-ban or exclude by clicking on the email in the multiple selection menu. <tip><para>To select more than one email address, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the emails you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected email. If more than one email address is selected, only one of the ban lengths will be displayed.</para></listitem>
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected email. If more than one email address is selected, only one of the ban reasons will be displayed.</para></listitem>
@@ -1451,12 +1451,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban IPs</title>
+				<title>IP adreslerini yasaklama</title>
 				<para>Sometimes, it is necessary to ban <glossterm>IP address</glossterm>es or hostnames in order to prevent unwanted users. There may be certain users or spam bots that use IPs or hostnames that you are aware of. Here, in the <guimenuitem>Ban IPs</guimenuitem> section, you can do this. You can control which IP addresses or hostnames are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
 				
 				<para>To ban or exclude one or more IP addresses and/or hostnames, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more IPs</title>
+					<title>Bir veya daha fazla IP adresini yasaklama</title>
 					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This textbox should contain all of the IP addresses and/or hostnames that you want to ban under a single rule. If you want to ban more than one IP address and/or hostname at this time, put each IP address and/or hostname on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the IP address(es) and/or hostname(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the IP address(es) and/or hostname(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
 					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered IP address(es) and/or hostnames from all current bans.</para></listitem>
@@ -1466,7 +1466,7 @@
 				
 				<para>Other than adding IP address(es) and/or hostname(s) to be banned, you can also un-ban or un-exclude IP address(es) and/or hostname(s) from bans. To un-ban or exclude one or more IP address(es) and/or hostname(s) from bans, fill in the <guilabel>Un-ban or un-exclude IPs</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Un-ban or un-exclude IPs</title>
+					<title>IP adreslerinin yasağını kaldırma ya da kabul etme</title>
 					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This multiple selection menu lists all currently banned IP address(es) and/or hostname(s). Select the IP address(es) and/or hostname(s) that you want to un-ban or exclude by clicking on the IP address(es) and/or hostname(s) in the multiple selection menu. <tip><para>To select more than one IP address and/or hostname, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the IP address(es) and/or hostname(s) you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban lengths will be displayed.</para></listitem>
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban reasons will be displayed.</para></listitem>
@@ -1482,12 +1482,12 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban Users</title>
+				<title>Kullanıcıları Yasaklama</title>
 				<para>Whenever you encounter troublesome users on your board, you may have to ban them. On the <guimenuitem>Ban usernames</guimenuitem> page, you can do exactly that. On this page, you can manage all banned usernames.</para>
 				
 				<para>To ban or exclude one or more users, fill in the <guilabel>Ban one or more users</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more usernames</title>
+					<title>Bir veya daha fazla kullanıcı adını yasaklama</title>
 					<listitem><para><guilabel>Username</guilabel>: This textbox should contain all of the usernames that you want to ban under a single rule. If you want to ban more than one username at this time, put each username on its own line. You can also use wildcards (*) to partially match usernames.</para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the username(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the username(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
 					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered username(s) from all current bans.</para></listitem>
@@ -1497,7 +1497,7 @@
 				
 				<para>Other than adding users to be banned, you can also un-ban or un-exclude usernames from bans. To un-ban or exclude one or more users from bans, fill in the <guilabel>Un-ban or un-exclude usernames</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
-					<title>Un-ban or un-exclude usernames</title>
+					<title>Kullanıcı adlarının yasağını kaldırma ya da kabul etme</title>
 					<listitem><para><guilabel>Username</guilabel>: This multiple selection menu lists all currently banned usernames. Select the username(s) that you want to un-ban or exclude by clicking on the username(s) in the multiple selection menu. <tip><para>To select more than one username, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the usernames you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
 					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected username. If more than one username is selected, only one of the ban lengths will be displayed.</para></listitem>
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected username. If more than one username is selected, only one of the ban reasons will be displayed.</para></listitem>
@@ -1513,7 +1513,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Disallow usernames</title>
+				<title>İzin verilmeyen kullanıcı adları</title>
 				
 				<para>In phpBB3, it is also possible to disallow the registration of certain usernames that match any usernames that you configure. (This is useful if you want to prevent users from registering with usernames that might confuse them with an important board member.) To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
 				
@@ -1530,14 +1530,14 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Prune users</title>
+				<title>Kullanıcıları budamak</title>
 				
 				<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
 				
 				<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
 				
 				<itemizedlist>
-					<title>Prune users</title>
+					<title>Kullanıcıları budamak</title>
 					<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
 					<listitem><para><guilabel>Email</guilabel>: The email that you want to be pruned. You can use wildcards (*) to prune users that have an email address that matches the given pattern.</para></listitem>
 					<listitem><para><guilabel>Joined</guilabel>: You can also prune users based on their date of registration. To prune users who joined before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who joined after a certain date, choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
@@ -1568,7 +1568,7 @@
 			</authorgroup>
 		</sectioninfo>
 		
-		<title>Group Management</title>
+		<title>Grup Yönetimi</title>
 		
 		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
 		
@@ -1585,7 +1585,7 @@
 				</authorgroup>
 			</sectioninfo>
 			
-			<title>Group types</title>
+			<title>Grup çeşitleri</title>
 			<para>There are two types of groups:</para>
 			
 			<!-- TODO: More info on each pre-defined group? -->
@@ -1597,32 +1597,32 @@
 						
 							<variablelist>
 								<varlistentry>
-									<term>Administrators</term>
+									<term>Yöneticiler</term>
 									<listitem><para>This usergroup contains all of the administrators on your board. All founders are administrators, but not all administrators are founders. You can control what administrators can do by managing this group.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Bots</term>
+									<term>Botlar</term>
 									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.0 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Global Moderators</term>
+									<term>Global Moderatörler</term>
 									<listitem><para>Global moderators are moderators that have moderator permissions for every forum in your board. You can edit what permissions these moderators have by managing this group.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Guests</term>
+									<term>Misafirler</term>
 									<listitem><para>Guests are visitors to your board who aren't logged in. You can limit what guests can do by managing this usergroup.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered Users</term>
+									<term>Kayıtlı Kullanıcılar</term>
 									<listitem><para>Registered users are a big part of your board. Registered users have already registered on your board. To control what registered users can do, manage this usergroup.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered COPPA Users</term>
+									<term>Kayıtlı COPPA Kullanıcıları</term>
 									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
 								</varlistentry>
 							</variablelist>
@@ -1631,7 +1631,7 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>User defined groups</term>
+					<term>Kullanıcı grupları tanımlama</term>
 					<listitem>
 						<para>The groups you create by yourself are called "User defined groups". These groups are similar to groups in 2.0. You may create as many as you want, remove them, set group leaders, and change their attributes (description, colour, rank, avatar, and so forth).</para>
 					</listitem>
@@ -1641,46 +1641,46 @@
 			
 		</section>
 		<section id="acp_groups_edit">
-			<title>Group attributes</title>
+			<title>Grup özellikleri</title>
 			<para>A list of attributes a group can have:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Group name</term>
+					<term>Grup adı</term>
 					<listitem><para>The name of your group.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group description</term>
+					<term>Grup açıklaması</term>
 					<listitem><para>The description of the group that will be displayed on the group overview list..</para></listitem>
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
-					<term>Display group in legend:</term>
+					<term>Yetkiler bölümünde grubu göstermek:</term>
 					<listitem><para>This will enable the display of the name of the group in the legend of the &quot;Who is Online&quot; list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group able to receive private messages</term>
+					<term>Grup özel mesajlar alabilir</term>
 					<listitem><para>This will allow the sending of Private Messages to this group. Please note, that it can be dangerous to allow this for Registered Users, for instance. There is no permission to deny the sending to groups, so anyone who is able to send Private Messages will be able to send a message to this group!</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group private message limit per folder</term>
+					<term>Her bir klasör için grup özel mesaj limiti</term>
 					<listitem><para>This setting overrides the per-user folder message limit. A value of &quot;0&quot; means the user default limit will be used. See the <link linkend="ucp_preferences">section on user preferences</link> for more information about private message settings.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group colour</term>
+					<term>Grup rengi</term>
 					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default" />) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the &quot;Who is Online&quot; listing.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group rank</term>
+					<term>Grup rütbesi</term>
 					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting. See the <link linkend="acp_user_ranks">section on ranks</link> for more information.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group avatar</term>
+					<term>Grup avatarı</term>
 					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will use this avatar. Note that a member can change his avatar to a different one if he has the permission to do so. For more information on avatar settings, see the <link linkend="ucp_avatar">userguide section on avatars</link>.</para></listitem>
 				</varlistentry>				
 			</variablelist>
 			
 		</section>
 		<section id="acp_groups_default">
-			<title>Default groups</title>
+			<title>Varsayılan gruplar</title>
 			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit"/>, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
 			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
 			<important>
@@ -1701,7 +1701,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Permission Overload</title>
+		<title>Aşırı İzin Yüklemesi</title>
 		<para><!-- TODO: stuff about permissions --></para>
 	</section>
 
@@ -1717,23 +1717,23 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Styles</title>
+		<title>Stiller</title>
 		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
 		
 		<para>phpBB 3.0 styles have three main parts: templates, themes, and imagesets.
 			<variablelist>
 				<varlistentry>
-					<term>Templates</term>
+					<term>Şablonlar</term>
 					<listitem><para>Templates are the HTML files responsible for the layout of the style.</para></listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Themes</term>
+					<term>Temalar</term>
 					<listitem><para>Themes are a combination of colour schemes and images that define the basic look of your forum.</para></listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Imagesets</term>
+					<term>Görüntü kümeleri</term>
 					<listitem><para>Imagesets are groups of images that are used throughout your board. Imagesets are comprised of all of the non-style specific images used by your board.</para></listitem>
 				</varlistentry>
 			</variablelist>
@@ -1754,7 +1754,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Board Maintenance</title>
+		<title>Site Bakımı</title>
 		
 		<para>Running a phpBB 3.0 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
 		
@@ -1771,29 +1771,29 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Forum Logs</title>
+			<title>Forum Kayıtları</title>
 			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. This is important for you, the administrator, to keep track of. There are four types of logs:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Admin Log</term>
+					<term>Yönetici Kaydı</term>
 					<listitem>
 						<para>This log records all actions carried out within the administration panel itself.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Moderator Log</term>
+					<term>Moderatör Kaydı</term>
 					<listitem>
 						<para>This logs records the actions performed by moderators of your board. Whenever a topic is moved or locked it will be recorded here, allowing you to see who carried out a particular action.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>User Log</term>
+					<term>Kullanıcı Kaydı</term>
 					<listitem>
 						<para>This log records all important actions carried out either by users or on users. All email and password changes are recorded within this log.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Error Log</term>
+					<term>Hata Kaydı</term>
 					<listitem>
 						<para>This log shows you any errors that were caused by actions done by the board itself, such as errors sending emails. If you are having problems with a particular feature not working, this log is a good place to start. If enabled, addtional debugging information may be written to this log.</para>
 					</listitem>
@@ -1807,10 +1807,10 @@
 		</section>
 		
 		<section id="acp_maintenance_database">
-			<title>Database backup and restore</title>
+			<title>Veritabanı yedekleme ve geri yükleme</title>
 		</section>
 		<section id="acp_maintenance_search">
-			<title>Search Indexing</title>
+			<title>Arama İndeksleme</title>
 		</section>
 	</section>
 
@@ -1822,19 +1822,19 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>System Configuration</title>
+		<title>Sistem Ayarları</title>
 		<para><!-- TODO: Stuff about system configuration --></para>
 		<section id="acp_system_updates">
-			<title>Checking for updates</title>
+			<title>Güncellemeler için kontrol etme</title>
 		</section>
 		<section id="acp_system_spiders">
-			<title>Managing Search Robots</title>
+			<title>Arama Robotlarını yönetme</title>
 		</section>
 		<section id="acp_system_mail">
-			<title>Mass email</title>
+			<title>Toplu e-posta gönderme</title>
 		</section>
 		<section id="acp_system_language">
-			<title>Language Packs</title>
+			<title>Dil Paketleri</title>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
@@ -1844,15 +1844,15 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>PHP Information</title>
+			<title>PHP Bilgisi</title>
 			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
 			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
 		</section>
 		<section id="acp_system_reports">
-			<title>Manage reasons for reporting and denying posts</title>
+			<title>Bildirilen ve yasaklanan mesajlar için sebep yönetimi</title>
 		</section>
 		<section id="acp_system_modules">
-			<title>Module Management</title>
+			<title>Modül Yönetimi</title>
 		</section>
 	</section>
 </chapter>

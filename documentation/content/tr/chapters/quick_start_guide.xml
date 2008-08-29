@@ -10,7 +10,7 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Quick Start Guide</title>
+	<title>Kolay Başlangıç Rehberi</title>
 	<abstract>
 		<para>A quick guide through the first steps of installing and configuring up your very own phpBB 3.0 forum.</para>
 	</abstract>
@@ -22,29 +22,29 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Requirements</title>
+		<title>Gereksinimler</title>
 		<para>phpBB has a few requirements which must be met before you are able to install and use it. In this section, these requirements are explained.</para>
 		<itemizedlist>
 			<listitem>
 				<para>A webserver or web hosting account running on any major Operating System with support for PHP</para>
 			</listitem>
 			<listitem>
-				<para>A SQL database system, one of:</para>
+				<para>Bir SQL veritabanı sistemi, şunlardan birisi:</para>
 				<itemizedlist>
 					<listitem>
-						<para>FireBird 2.0 or above</para>
+						<para>FireBird 2.0 ya da üzeri</para>
 					</listitem>
 					<listitem>
-						<para>MySQL 3.23 or above</para>
+						<para>MySQL 3.23 ya da üzeri</para>
 					</listitem>
 					<listitem>
-						<para>MS SQL Server 2000 or above (directly or via ODBC)</para>
+						<para>MS SQL Server 2000 ya da üzeri (ODBC yoluyla ya da direkt olarak)</para>
 					</listitem>
 					<listitem>
 						<para>Oracle</para>
 					</listitem>
 					<listitem>
-						<para>PostgreSQL 7.x or above</para>
+						<para>PostgreSQL 7.x ya da üzeri</para>
 					</listitem>
 					<listitem>
 						<para>SQLite</para>
@@ -55,16 +55,16 @@
 				<para>PHP 4.3.3 or above with support for the database you intend to use. The optional presence of the following modules within PHP will provide access to additional features, but they are not required.</para>
 				<itemizedlist>
 					<listitem>
-						<para>zlib Compression support</para>
+						<para>zlib Sıkıştırma desteği</para>
 					</listitem>
 					<listitem>
-						<para>Remote FTP support</para>
+						<para>Uzak FTP desteği</para>
 					</listitem>
 					<listitem>
-						<para>XML support</para>
+						<para>XML desteği</para>
 					</listitem>
 					<listitem>
-						<para>Imagemagick support</para>
+						<para>Imagemagick desteği</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
@@ -79,7 +79,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Installation</title>
+		<title>Kurulum</title>
 		<para>phpBB 3.0 Olympus has an easy to use installation system that will guide you through the installation process.</para>
 		<!--BETA SPECIFIC /-->
 		<note>
@@ -87,7 +87,7 @@
 		</note>
 		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
 		<figure id="img_quick_installation_intro">
-			<title>Introduction</title>
+			<title>Giriş</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
@@ -98,11 +98,11 @@
 			</mediaobject>
 		</figure>
 		<section id="quick_installation_intro">
-			<title>Introduction</title>
+			<title>Giriş</title>
 			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (the <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
-			<title>Requirements</title>
+			<title>Gereksinimler</title>
 			<important>
 				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.0's minimum requirements.</para>
 			</important>
@@ -176,7 +176,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>General settings</title>
+		<title>Genel ayarlar</title>
 		<para>In this section you will learn how to change some of the basic settings of your new board.</para>
 		<para>Right after the installation you will be redirected to the so called "Administration Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
 		<section id="quick_settings_boardsettings">
@@ -200,10 +200,10 @@
 		</section>
 		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">
-			<title>Board Features</title>
+			<title>Site Özellikleri</title>
 			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
 			<figure id="img_quick_settings_features">
-				<title>Board Features</title>
+				<title>Site Özellikleri</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
@@ -233,7 +233,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Creating forums</title>
+		<title>Forumlar oluşturmak</title>
 		<para>Forums are the sections where topics are stored. Without forums, your users would have nowhere to post! Creating forums is very easy.</para>
 		<para>Firstly, make sure you are logged in. Find the <guilabel>[ Administration Control Panel ]</guilabel> link at the bottom of the page, and click it. You should be in the Administration Index. You can administer your board here.</para>
 		<para>There are tabs at the top for the Administration Control Panel that will guide you to each category. You must get to the Forum Administration section to create a forum, so click the <guilabel>Forums</guilabel> tab.</para>
@@ -245,7 +245,7 @@
 				<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
 			</imageobject>
 			<caption>
-				<para>Creating a new forum.</para>
+				<para>Yeni bir forum oluşturmak.</para>
 			</caption>
 		</mediaobject>
 		<para>The default settings are usually good enough to get your new forum up and running; however, you may change them to suit your needs. But there are three key forum settings that you should pay attention to. The Parent Forum setting allows you to choose which forum your new forum will belong to. Be careful to what level you want your forum to be in. (The Parent Forum setting is important when creating subforums. For more information on subforums, continue reading to the section on creating subforums) The &quot;Copy Permissions&quot; setting allows you to copy the permissions from an existing forum to your new forum. Use this if you want to keep permissions constant. The forum style setting allows you to set which style your new forum will display. Your new forum can show a different style to another. <!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
@@ -265,11 +265,11 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Setting permissions</title>
+		<title>İzinleri ayarlamak</title>
 		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB3 Olympus can be adjusted with permissions.</para>
 
 		<section id="quick_permissions_types">
-			<title>Permission types</title>
+			<title>İzin çeşitleri</title>
 			<para>There are four different types of permissions:</para>
 			<orderedlist>
 				<listitem id="quick_permission_types_user">
@@ -378,25 +378,25 @@
 			<para>In the next form you can choose, what moderator permissions the selected users/groups should receive. First of all, there are some predefined roles from which you can select:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Standard Moderator</term>
+					<term>Standart Moderatör</term>
 					<listitem>
 						<para>A Standard Moderator can approve or disapprove, edit and delete posts, delete or close reports, but not necessarily change the owner of a post. This kind of moderator can also issue warnings and view details of a post.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Simple Moderator</term>
+					<term>Basit Moderatör</term>
 					<listitem>
 						<para>A Simple Moderator can edit posts and close and delete reports and can also view post details.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Queue Moderator</term>
+					<term>Sıralı Moderatör</term>
 					<listitem>
 						<para>As a Queue Moderator, you can only approve or disapprove posts that landed in the moderator queue and edit posts.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Full Moderator</term>
+					<term>Tam Moderatör</term>
 					<listitem>
 						<para>Full Moderators can do everything moderation-related; they can even ban users.</para>
 					</listitem>
@@ -439,7 +439,7 @@
 
 	</section>
 	<section id="quick_support">
-		<title>Obtaining support</title>
+		<title>Destek edinme</title>
 		<para>The <ulink url="http://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="http://www.phpbb.com/phpBB/viewforum.php?f=1">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="http://www.phpbb.com/phpBB/viewtopic.php?t=128123">Support Request Template</ulink> with the information it asks for.</para>
 
 		<para>In addition to the support forum on www.phpbb.com, we provide a <ulink url="http://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit articles on common answers to questions. Our community has taken a lot of time in writing these articles, so be sure to check them out.</para>
