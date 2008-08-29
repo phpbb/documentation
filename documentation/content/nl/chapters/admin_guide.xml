@@ -18,11 +18,11 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>The Administration Control Panel</title>
+		<title>Het Beheerderspaneel</title>
 		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
@@ -44,7 +44,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -55,22 +55,22 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Board Configuration</title>
+			<title>Forumconfiguratie</title>
 			<para>This subsection contains items to adjust the overall features and settings of the forum. </para>
 			
 			<section id="acp_board_attachments">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Attachment Settings</title>
+				<title>Bijlageninstellingen</title>
 				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
 				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
@@ -79,19 +79,19 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername></othername>
 						</author>
 						
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Board Settings</title>
+				<title>Foruminstellingen</title>
 				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change many settings that govern your board. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
 				
 				<itemizedlist>
-					<title>Board Settings</title>
+					<title>Foruminstellingen</title>
 					<listitem><para>The very first board setting you can edit is perhaps the most important setting of them all: the name of your board. Your users identify your board with this name. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style; it will be the prefix to the window title of your browser.</para></listitem>
 					<listitem><para>The <guilabel>Site Description</guilabel> is the slogan or tagline of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para></listitem>
 					<listitem><para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. To temporarily disable your board, select<guilabel>Yes</guilabel>. This will keep any members of your forum who are not administrators or moderators from accessing your board. They will either see a default message instead of the forum, or a message that you create. You can add your own custom message that will be displayed when your board is disabled in the text box below the <guilabel>Disable board</guilabel> radio buttons. Administrators and moderators will still be able to browse forums and use their specific control panels when the board is disabled.</para></listitem>
@@ -111,11 +111,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Board Features</title>
+				<title>Forumfuncties</title>
 				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
 			</section>
 			
@@ -123,11 +123,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Avatar Settings</title>
+				<title>Avatar-instellingen</title>
 				<para>Avatars are generally small, unique images a user can associate with themselves. Depending on the style, they are usually displayed below the user name when viewing topics. Here you can determine how users can define their avatars.</para>
 				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
 				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised. There is also no support for sub folders inside the gallery folder. </para>
@@ -139,11 +139,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Private Messaging</title>
+				<title>Privéberichteninstellingen</title>
 				<para><glossterm>Private Messages</glossterm> are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
 				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
 				<para>Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
@@ -176,25 +176,25 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>			
-			<title>Client communication</title>
+			<title>Gebruikerscommunicatie</title>
 			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, native DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following are subsections describing each client communication method.</para>
 		
 			<section id="acp_client_auth">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Authentication</title>
+				<title>Authenticatie</title>
 				
 				<para>Unlike phpBB2, phpBB3 offers support for authentication plugins. By default, the Apache, DB, and LDAP plugins are supported. Before switching from phpBB's native authentication system (the DB method) to one of these systems, you must make sure that your server supports it. <emphasis>When configuring the authentication settings, make sure that you only fill in the settings that apply to your chosen authentication method (Apache or LDAP).</emphasis></para>
 			
@@ -214,11 +214,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Email settings</title>
+				<title>E-mailinstellingen</title>
 				
 				<para>phpBB3 is capable of sending out emails to your users. Here, you can configure the information that is used when your board sends out these emails. phpBB3 can send out emails by using either the native, PHP-based email service, or a specified <glossterm>SMTP</glossterm> server. If you are not sure if you have an SMTP server available, use the native email service. You will have to ask your hoster for further details. Once you are done configuring the email settings, click <guilabel>Submit</guilabel>.</para>
 				
@@ -253,11 +253,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Jabber settings</title>
+				<title>Jabber-instellingen</title>
 				
 				<para>phpBB3 also has the ability to allow users to communicate via <glossterm>Jabber</glossterm>. Your board can send instant messages and board notices via Jabber, too. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
 			
@@ -281,30 +281,30 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 					
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>			
-			<title>Server configuration</title>
+			<title>Serverconfiguratie</title>
 			<para>As an administrator of a board, being able to fine-tune the settings that your phpBB board uses for the server is a must. Configuring your board's server settings is very easy. There are five main categories of server settings: <guimenuitem>Cookie settings</guimenuitem>, <guimenuitem>Server settings</guimenuitem>, <guimenuitem>Security settings</guimenuitem>, <guimenuitem>Load settings</guimenuitem>, and <guimenuitem>Search settings</guimenuitem>. Properly configuring these settings will help your board not only function, but also work efficiently and as intended. The following subsections will outline each server configuration category. Once you are done with updating settings in each setting, remember to click <guilabel>Submit</guilabel> to apply your changes.</para>
 		
 			<section id="acp_server_cookies">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername></othername>
 						</author>
 						
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>			
-				<title>Cookie settings</title>
+				<title>Cookie-instellingen</title>
 				<para>Your board uses cookies all the time. Cookies can store information and data; for example, cookies are what enable users to automatically login to the board when they visit it. The settings on this page define the data used to send cookies to your users' browsers.</para>
 				
 				<warning>
@@ -314,7 +314,7 @@
 				<para>To edit your board's cookie settings, locate the <guilabel>Cookie Settings</guilabel> form. The following are four settings you may edit:
 				
 					<itemizedlist>
-						<title>Cookie Settings</title>
+						<title>Cookie-instellingen</title>
 						<listitem><para><guilabel>Cookie domain</guilabel>: This is the domain that your board runs on. Do not include the path that phpBB is installed in; only the domain itself is important here.</para></listitem>
 						<listitem><para><guilabel>Cookie name</guilabel>: This is the name that will be assigned to the cookie when it is sent to your users' browsers and stored. This should be a unique cookie name that will not conflict with any other cookies.</para></listitem>
 						<listitem><para><guilabel>Cookie path</guilabel>: This is the path that the cookie will apply to. In most cases, this should be left as &quot;/&quot;, so that the cookie can be accessible across your site. If for some reason you must restrict the cookie to the path that your board is installed in, set the value to the path of your board.</para></listitem>
@@ -329,15 +329,15 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername></othername>
 						</author>
 						
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>			
-				<title>Server settings</title>
+				<title>Serverinstellingen</title>
 				<para>On this page, you can define server and domain-dependent settings. There are three main categories of server settings: <guilabel>Server Settings</guilabel>, <guilabel>Path Settings</guilabel>, and <guilabel>Server URL Settings</guilabel>. The following describes each server settings category and the corresponding settings in more detail. When you are done configuring your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 				
 				<warning>
@@ -373,11 +373,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Security settings</title>
+				<title>Veiligheidsinstellingen</title>
 				<para>Here, on the <guimenuitem>Security settings</guimenuitem> page, you are able to manage security-related settings; namely, you can define and edit session and login-related settings. The following describes the available security settings that you can manage. When you are done configuring your board's security settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 				
 				<!-- Perhaps include more introduction information? :-/ -->
@@ -478,11 +478,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Load settings</title>
+				<title>Laadinstellingen</title>
 				<para>On particularly large boards, it may be necessary to manage certain load-related settings in order to allow your board to run as smoothly as possible. However, even if your board isn't excessively active, it is still important to be able to adjust your board's load settings. Adjusting these settings properly can help reduce the amount of processing required by your server. Once you are done editing any of the server load-related settings, remember to click <guilabel>Submit</guilabel> to actually submit and apply your changes.</para>
 				
 				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
@@ -526,11 +526,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Search settings</title>
+				<title>Zoekinstellingen</title>
 				
 				<para>Your board can be a well of information. Being able to effectively search through this information is very important, especially if you want to reduce the amount of redundant topics are posted on your board. Here, on the <guimenuitem>Search settings</guimenuitem> page, you can control what search backend your board's search functionality will use for indexing posts and searching, and set various options related to it. There are four main categories of search settings: <guilabel>General Search Settings</guilabel>, <guilabel>Search Backend</guilabel>, <guilabel>Fulltext mysql</guilabel>, and <guilabel>Fulltext native</guilabel>. The following describes each set of search settings in detail.</para>
 			
@@ -579,21 +579,21 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Forum Admin</title>
+		<title>Forumbeheer</title>
 		<para>The <guilabel>Forum</guilabel> section offers the tools to manage your forums. Whether you want to add new forums, add new categories, change forum descriptions, reorder or rename your forums, this is the place to go.</para>
 		<section id="acp_forums_types">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Explanation of forum types</title>
+			<title>Uitleg van de forumtypes</title>
 			<para>In phpBB 3.0, there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
 			<variablelist>
 				<varlistentry>
@@ -620,7 +620,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -630,7 +630,7 @@
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 				
 			<figure id="img_acp_subforums_list">
-				<title>Creating subforums</title>
+				<title>Creëren van subforums</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
@@ -648,11 +648,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage forums</title>
+			<title>Beheren van forums</title>
 			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
 			
 			<figure id="img_acp_forums_manage_legend">
@@ -674,15 +674,15 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 				
 				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Posting Settings</title>
+		<title>Berichteninstellingen</title>
 		
 		<para>Forums are nothing without content. Content is created and posted by your users; as such, it is very important to have the right posting settings that control how the content is posted. You can reach this section by clicking the <guimenuitem>Posting</guimenuitem> navigation tab.</para>
 		<para>The first page you are greeted with after getting to the <guimenuitem>Posting Settings</guimenuitem> section is <guilabel>BBCodes</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
@@ -691,11 +691,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 					
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -735,11 +735,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Private message settings</title>
+			<title>Privéberichteninstellingen</title>
 			
 			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 			<itemizedlist>
@@ -774,11 +774,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Topic icons</title>
+			<title>Onderwerppictogrammen</title>
 			
 			<para>A new feature in phpBB3 is the ability to assign icons to topics. On this page, you can manage what topic icons are available for use on your board. You can add, edit, delete, or move topic icons. The <guilabel>Topic Icons</guilabel> form displays the topic icons currently installed on your board. You can add topic icons manually, install a premade icons pack, export or download an icons pack file, or edit your currently installed topic icons.</para>
 		
@@ -805,7 +805,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -838,11 +838,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Word censoring</title>
+			<title>Woordcensuur</title>
 			
 			<para>On some forums, a certain level of appropriate, profanity-free speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
 			
@@ -855,16 +855,16 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Attachment Settings</title>
+			<title>Bijlageninstellingen</title>
 			
 			<para>If you allow your users to post attachments, it is important to be able to control your board's attachments settings. Here, you can configure the main settings for attachments and the associated special categories. When you are done configuring your board's attachments settings, click <guilabel>Submit</guilabel>.</para>
 			
 			<itemizedlist>
-				<title>Attachment Settings</title>
+				<title>Bijlageninstellingen</title>
 				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Upload directory</guilabel>: The directory that attachments will be uploaded to. The default directory is <filename>/files/</filename>.</para></listitem>
@@ -901,11 +901,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extensions</title>
+			<title>Extensiebeheer</title>
 			
 			<para>You can further configure your board's attachments settings by controlling what file extensions attached files can have to be uploaded. It is recommended that you do not allow scripting file extensions (such as php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, and so forth) for security reasons. You can find this page by clicking <guimenuitem>Manage extensions</guimenuitem> once you're in the <glossterm>ACP</glossterm>.</para>
 			
@@ -918,11 +918,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extension groups</title>
+			<title>Extensiegroepen beheren</title>
 			
 			<para>Allowed file extensions can be placed into groups for easy management and viewing. To manage the extension groups, click <guimenuitem>Manage extension groups</guimenuitem> once you get into the <guilabel>Posting</guilabel> settings part of the <glossterm>ACP</glossterm>. You can configure specific settings regarding each extension group.</para>
 			
@@ -949,11 +949,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Orphaned attachments</title>
+			<title>Bijlagen zonder plek</title>
 			
 			<para>Sometimes, attachments may be orphaned, which means that they exist in the specified files directory (to configure this directory, see the section on <link linkend="acp_attach_settings">attachment settings</link>), but aren't assigned to any post(s). This can happen when posts are deleted or edited, or even when users attach a file, but don't submit their post.</para>
 			
@@ -969,11 +969,11 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 				
 				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -1103,11 +1103,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Profile</title>
+				<title>Gebruikersprofiel</title>
 				
 				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
 					<itemizedlist>
@@ -1142,11 +1142,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Avatar</title>
+				<title>Gebruikersavatar</title>
 				
 				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
 				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
@@ -1161,11 +1161,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Rank</title>
+				<title>Gebruikersrang</title>
 				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
 				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
@@ -1176,11 +1176,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Signature</title>
+				<title>Gebruikersonderschrift</title>
 				
 				<para>Here you can add, edit, or delete the user's <glossterm>signature</glossterm>.</para>
 				<para>The user's current signature should be displayed in the <guilabel>Signature</guilabel> form. Just edit the signature by typing whatever you want into the text area. You can use <glossterm>BBCode</glossterm> and any other special formatting with what's provided. When you are done editing the user's signature, click <guilabel>Submit</guilabel> to update the user's signature.</para>
@@ -1193,11 +1193,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Groups</title>
+				<title>Groepen</title>
 				
 				<para>Here you can see all of the <glossterm>usergroups</glossterm> that the user is in. From this page you can easily remove the user from any usergroup, or add the user to an existing group. The table entitled <guilabel>Special groups user is a member of</guilabel> lists out the usergroups the user is currently a member of.</para>
 				<para>Adding the user to a new usergroup is very easy. To do so, find the pull-down menu labeled <guilabel>Add user to group:</guilabel> and select a usergroup from that menu. Once the usergroup is selected, click <guilabel>Submit</guilabel>. Your addition will immediately take effect.</para>
@@ -1208,11 +1208,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Permissions</title>
+				<title>Permissies</title>
 				
 				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
 			</section>
@@ -1221,11 +1221,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Attachments</title>
+				<title>Bijlagen</title>
 				
 				<para>Depending on the current attachments settings, your users may already have <glossterm>attachments</glossterm> posted. If the user has already uploaded at least one attachment, you can see the listing of the attachment(s) in the table. The data available for each attachment consist of: <guilabel>Filename</guilabel>, <guilabel>Topic title</guilabel>, <guilabel>Post time</guilabel>, <guilabel>Filesize</guilabel>, and <guilabel>Downloads</guilabel>.</para>
 				<para>To help you in managing the user's attachment(s), you can choose the sorting order of the attachments list. Find the <guilabel>Sort by:</guilabel> pull-down menu and pick the category you want to use the sort the list (the possible options are <guimenuitem>Filename</guimenuitem>, <guimenuitem>Extension</guimenuitem>, <guimenuitem>Filesize</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Post time</guimenuitem>, and <guimenuitem>Topic title</guimenuitem>. To choose the sorting order, choose either <guimenuitem>Descending</guimenuitem> or <guimenuitem>Ascending</guimenuitem> from the pull-down menu besides the sorting category. Once you are done, click <guilabel>Go</guilabel>.</para>
@@ -1239,11 +1239,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>Graham</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Inactive Users</title>
+			<title>Inactieve gebruikers</title>
 			<para>Here you are able to view details of all users who are currently marked as inactive along with the reason their account is marked as inactive and when this occurred.</para>
 			<para>Using the checkboxes on this page it is possible to perform bulk actions on the users, these include activating the accounts, sending them a reminder email indicating that they need to activate their account or deleting the account.</para>
 			<para>There are 5 reasons which may be indicated for an account being inactive:</para>
@@ -1285,11 +1285,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' permissions</title>
+			<title>Gebruikerspermissies</title>
 			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
 		            
 		   	 <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
@@ -1311,11 +1311,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' forum permissions</title>
+			<title>Gebruikerspermissies voor forums</title>
 			
 			<para>Along with editing your users' user account-related permissions, you can also edit their forum permissions, which relate to the forums in your board. Forum permissions are different from user permissions in that they are directly related and tied to the forums. <guimenuitem>Users' forum permissions</guimenuitem> allows you to edit your users' forum permissions. When doing so, you can only assign forum permissions to one user at a time.</para>
 		
@@ -1416,11 +1416,11 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban emails</title>
+				<title>Ban e-mails</title>
 				<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
 				
 				<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
@@ -1447,7 +1447,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -1559,16 +1559,16 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 				
 				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		
-		<title>Group Management</title>
+		<title>Groepsbeheer</title>
 		
 		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
 		
@@ -1576,16 +1576,16 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername></othername>
 					</author>
 					
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
 			
-			<title>Group types</title>
+			<title>Groeptypes</title>
 			<para>There are two types of groups:</para>
 			
 			<!-- TODO: More info on each pre-defined group? -->
@@ -1641,7 +1641,7 @@
 			
 		</section>
 		<section id="acp_groups_edit">
-			<title>Group attributes</title>
+			<title>Groepinstellingen</title>
 			<para>A list of attributes a group can have:</para>
 			<variablelist>
 				<varlistentry>
@@ -1680,7 +1680,7 @@
 			
 		</section>
 		<section id="acp_groups_default">
-			<title>Default groups</title>
+			<title>Standaard groepen</title>
 			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit"/>, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
 			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
 			<important>
@@ -1709,15 +1709,15 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 				
 				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Styles</title>
+		<title>Stijlen</title>
 		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
 		
 		<para>phpBB 3.0 styles have three main parts: templates, themes, and imagesets.
@@ -1746,15 +1746,15 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 				
 				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Board Maintenance</title>
+		<title>Forumonderhoud</title>
 		
 		<para>Running a phpBB 3.0 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
 		
@@ -1764,14 +1764,14 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>Graham</othername>
+						<othername></othername>
 					</author>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Forum Logs</title>
+			<title>Forum logboeken</title>
 			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. This is important for you, the administrator, to keep track of. There are four types of logs:</para>
 			<variablelist>
 				<varlistentry>
@@ -1818,14 +1818,14 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>System Configuration</title>
+		<title>Systeem Configuratie</title>
 		<para><!-- TODO: Stuff about system configuration --></para>
 		<section id="acp_system_updates">
-			<title>Checking for updates</title>
+			<title>Controleren voor updates</title>
 		</section>
 		<section id="acp_system_spiders">
 			<title>Managing Search Robots</title>
@@ -1834,17 +1834,17 @@
 			<title>Mass email</title>
 		</section>
 		<section id="acp_system_language">
-			<title>Language Packs</title>
+			<title>Taalpakketten</title>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>Graham</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>PHP Information</title>
+			<title>PHP-informatie</title>
 			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
 			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
 		</section>
@@ -1852,7 +1852,7 @@
 			<title>Manage reasons for reporting and denying posts</title>
 		</section>
 		<section id="acp_system_modules">
-			<title>Module Management</title>
+			<title>Modulebeheer</title>
 		</section>
 	</section>
 </chapter>
