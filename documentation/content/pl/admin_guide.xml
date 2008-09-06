@@ -1585,7 +1585,7 @@
 				</authorgroup>
 			</sectioninfo>
 			
-			<title>Group types</title>
+			<title>Typy grup</title>
 			<para>There are two types of groups:</para>
 			
 			<!-- TODO: More info on each pre-defined group? -->
@@ -1597,32 +1597,32 @@
 						
 							<variablelist>
 								<varlistentry>
-									<term>Administrators</term>
+									<term>Administratorzy</term>
 									<listitem><para>This usergroup contains all of the administrators on your board. All founders are administrators, but not all administrators are founders. You can control what administrators can do by managing this group.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Bots</term>
+									<term>Boty</term>
 									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.0 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Global Moderators</term>
+									<term>Globalni moderatorzy</term>
 									<listitem><para>Global moderators are moderators that have moderator permissions for every forum in your board. You can edit what permissions these moderators have by managing this group.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Guests</term>
+									<term>Goście</term>
 									<listitem><para>Guests are visitors to your board who aren't logged in. You can limit what guests can do by managing this usergroup.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered Users</term>
+									<term>Zarejestrowani użytkownicy</term>
 									<listitem><para>Registered users are a big part of your board. Registered users have already registered on your board. To control what registered users can do, manage this usergroup.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered COPPA Users</term>
+									<term>Zarejestrowani użytkownicy COPPA</term>
 									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
 								</varlistentry>
 							</variablelist>
@@ -1645,15 +1645,15 @@
 			<para>A list of attributes a group can have:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Group name</term>
+					<term>Nazwa grupy</term>
 					<listitem><para>The name of your group.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group description</term>
+					<term>Opis grupy</term>
 					<listitem><para>The description of the group that will be displayed on the group overview list..</para></listitem>
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
-					<term>Display group in legend:</term>
+					<term>Pokazuj grupę w legendzie:</term>
 					<listitem><para>This will enable the display of the name of the group in the legend of the &quot;Who is Online&quot; list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
 				</varlistentry>
 				<varlistentry>
@@ -1665,7 +1665,7 @@
 					<listitem><para>This setting overrides the per-user folder message limit. A value of &quot;0&quot; means the user default limit will be used. See the <link linkend="ucp_preferences">section on user preferences</link> for more information about private message settings.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group colour</term>
+					<term>Kolor grupy</term>
 					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default" />) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the &quot;Who is Online&quot; listing.</para></listitem>
 				</varlistentry>
 				<varlistentry>
@@ -1771,7 +1771,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Forum Logs</title>
+			<title>Logi forum</title>
 			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. This is important for you, the administrator, to keep track of. There are four types of logs:</para>
 			<variablelist>
 				<varlistentry>
@@ -1807,7 +1807,7 @@
 		</section>
 		
 		<section id="acp_maintenance_database">
-			<title>Database backup and restore</title>
+			<title>Kopia bazy danych i przywracanie</title>
 		</section>
 		<section id="acp_maintenance_search">
 			<title>Search Indexing</title>
@@ -1822,19 +1822,19 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>System Configuration</title>
+		<title>Konfiguracja systemu</title>
 		<para><!-- TODO: Stuff about system configuration --></para>
 		<section id="acp_system_updates">
-			<title>Checking for updates</title>
+			<title>Sprawdź aktualizacje</title>
 		</section>
 		<section id="acp_system_spiders">
 			<title>Managing Search Robots</title>
 		</section>
 		<section id="acp_system_mail">
-			<title>Mass email</title>
+			<title>Masowy email</title>
 		</section>
 		<section id="acp_system_language">
-			<title>Language Packs</title>
+			<title>Paczki językowe</title>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
