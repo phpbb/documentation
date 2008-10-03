@@ -23,9 +23,9 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Yönetim Kontrol Paneli</title>
-		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
-		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
-		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
+		<para>Öncekilerden daha gelişmiş olarak, phpBB 3.0 &quot;Olympus&quot; çok iyi derecede ayarlanabilmektedir. Hemen hemen tüm özellikleri ayarlayabilir, düzenleyebilir, ya da kapatabilirsiniz. Muhtemel olarak erişilebilen bu ayarların yüklemesini yapmak için, Yönetici Kontrol Panelini (YKP/ACP) tamamıyla yeniden tasarladık. </para>
+		<para><acronym>ACP(YKP)</acronym>'yi ziyaret etmek için varsayılan forum stilini kullanarak sayfaların en aşağısındaki <guilabel>Yönetim Kontrol Paneli</guilabel> bağlantısına tıklayın.</para>
+		<para>Varsayılan olarak <acronym>ACP(YKP)</acronym> yedi farklı bölüm ve bu bölümlerin alt bölümlerinden oluşmaktadır. Bu yönetim rehberinde bölümlerin her birini ele alacağız. </para>
 		
 		<figure id="img_acp_index">
 			<title>Yönetim Kontrol Paneli Ana Sayfa</title>

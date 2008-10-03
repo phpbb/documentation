@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Kolay Başlangıç Rehberi</title>
 	<abstract>
-		<para>A quick guide through the first steps of installing and configuring up your very own phpBB 3.0 forum.</para>
+		<para>phpBB 3.0 forumunuzun kurulum ve ayarlarının ilk yapılacak adımlarını bulabileceğiniz kolay bir rehber.</para>
 	</abstract>
 	<section id="quick_requirements">
 		<sectioninfo>
@@ -23,10 +23,10 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Gereksinimler</title>
-		<para>phpBB has a few requirements which must be met before you are able to install and use it. In this section, these requirements are explained.</para>
+		<para>phpBB, yüklenebilmek ve kullanılabilmek için bazı gereksinimlere ihtiyaç duymaktadır. Bu bölümde, bu gereksinimler açıklanmaktadır.</para>
 		<itemizedlist>
 			<listitem>
-				<para>A webserver or web hosting account running on any major Operating System with support for PHP</para>
+				<para>PHP destekli herhangi bir büyük İşletim Sisteminde çalışan bir web sunucusu ya da web hosting hesabı</para>
 			</listitem>
 			<listitem>
 				<para>Bir SQL veritabanı sistemi, şunlardan birisi:</para>
@@ -52,7 +52,7 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 4.3.3 or above with support for the database you intend to use. The optional presence of the following modules within PHP will provide access to additional features, but they are not required.</para>
+				<para>Kullanmayı planladığınız veritabanı için PHP 4.3.3 ya da üzeri desteği. İsteğe bağlı olan PHP içerisindeki alttaki modüllerin hazırda bulunması ilave özelliklere erişim sağlayacaktır, fakat bunlar gerekli tutulmamaktadır.</para>
 				<itemizedlist>
 					<listitem>
 						<para>zlib Sıkıştırma desteği</para>
@@ -69,7 +69,7 @@
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
-		<para> The presence of each of these required features will be checked during the installation process, explained in <xref linkend="quick_installation" />. </para>
+		<para> Bu gereken özelliklerin her birisinin hazırda bulunup bulunmadığı yükleme işlemi sırasında kontrol edilecektir, <xref linkend="quick_installation" /> dokümanında bu açıklanmıştır. </para>
 	</section>
 	<section id="quick_installation">
 		<sectioninfo>
@@ -80,12 +80,12 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Kurulum</title>
-		<para>phpBB 3.0 Olympus has an easy to use installation system that will guide you through the installation process.</para>
+		<para>phpBB 3.0 Olympus kullanımı kolay bir kurulum sistemine sahiptir, bu sistem kurulum işlemi süresince size rehberlik edecektir.</para>
 		<!--BETA SPECIFIC /-->
 		<note>
-			<para>phpBB 3.0 Beta 1 will not yet have the ability to upgrade from phpBB 2.0.x or to convert from a different software package. This will be included in the later Beta or <acronym>RC</acronym> stages.</para>
+			<para>phpBB 3.0 Beta 1, phpBB 2.0.x sürümlerinden güncelleme yapma yeteneğine ya da farklı bir yazılım paketinden dönüştürme yapma yeteneğine sahip değildir. Buna sonraki Beta sürümleri ya da <acronym>RC</acronym> aşamasındaki sürümler de dahildir.</para>
 		</note>
-		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
+		<para>phpBB3 arşivinin sıkıştırılmış dosyasını açtıktan ve dosyaları kurulum yapmak istediğiniz yere yükledikten sonra, kurulum ekranını açmak için tarayıcınıza bir <acronym>URL</acronym> adresi girmeniz gerekmektedir. İlk olarak <acronym>URL</acronym> adresine tarayıcınızı yönlendirmeniz gerek (örneğin; <uri>http://www.ornek.com/phpBB3</uri>), phpBB daha kurulmadan size kurulum ekranını bulacak ve otomatik olarak oraya yönlendirecektir.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Giriş</title>
 			<mediaobject>
@@ -93,52 +93,52 @@
 					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
 				</imageobject>
 				<caption>
-					<para>The introduction page of the installation system.</para>
+					<para>Yükleme sisteminin sayfa tanıtımı.</para>
 				</caption>
 			</mediaobject>
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Giriş</title>
-			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (the <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
+			<para>Kurulum ekranı size phpBB için kısa bir tanıtım sunacaktır. It allows you to read the license phpBB 3.0 is released under (the <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Gereksinimler</title>
 			<important>
-				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.0's minimum requirements.</para>
+				<para>phpBB 3.0'ın minimum gereksinimleri hakkında daha fazla bilgi için lütfen <link linkend="quick_requirements">phpBB3'ün gereksinimleri bölümünü</link> okuyun.</para>
 			</important>
-			<para>The requirements list is the first page you will see after starting the installation. phpBB 3.0 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.0 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
+			<para>Kurulum başladıktan sonra ilk sayfada gereksinimler listesini göreceksiniz. phpBB 3.0, sunucunuzda gerekli olan her şeyin düzgün bir şekilde çalışıp çalışmadığını otomatik olarak kontrol edecektir. Kuruluma devam etmek için sırasıyla, sisteminizde <acronym>PHP</acronym> kurulu olması (gerekli olan en düşük PHP sürüm numarasını gereksinimler sayfasında görebilirsiniz), ve en az bir veritabanı bulunması gerekmektedir. Ayrıca gösterilen tüm klasörlerin mevcut bulunması ve doğru ayarlanmış izinlere sahip olması da önemlidir. Lütfen phpBB 3.0'ın çalışmasını sağlamak amacıyla isteğe bağlı ve gerekli olan modülleri bulmak için her bölümün açıklamasına bakın. Eğer herşey uygunsa, <guilabel>Kuruluma Başla</guilabel> düğmesine tıklayarak kuruluma devam edebilirsiniz.</para>
 		</section>
 		<section id="quick_installation_database">
-			<title>Database settings</title>
-			<para>You now have to decide which database to use. See the <link linkend="quick_requirements">Requirements section</link> for information on which databases are supported. If you do not know your database settings, please contact your hosting company and ask for them. You will not be able to continue without them. You need:</para>
+			<title>Veritabanı ayarları</title>
+			<para>Şimdi hangi veritabanını kullanacağınıza karar verin. Desteklenen veritabanları bilgisi için <link linkend="quick_requirements">Gereksinimler alanına</link> bakın. Eğer veritabanı ayarlarınızı bilmiyorsanız, lütfen hosting şirketinizle iletişime geçin ve onlara sorun. Bunlar olmadan devam edemeyeceksiniz. Size gerekenler:</para>
 			<itemizedlist>
 				<listitem>
-					<para>The <guilabel>Database Type</guilabel> - the database you will be using (e.g. mySQL, SQL server, Oracle)</para>
+					<para><guilabel>Veritabanı Tipi</guilabel> - kullanacağınız veritabanı (ör. mySQL, SQL sunucusu, Oracle)</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database server hostname or DSN</guilabel> - the address of the database server.</para>
+					<para><guilabel>Veritabanı sunucu adı veya DSN</guilabel> - veritabanı sunucusunun adresi.</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database server port</guilabel> - the port of the database server (most of the time this is not needed).</para>
+					<para><guilabel>Veritabanı sunucu portu</guilabel> - veritabanı sunucusunun portu (çoğu zaman bu gerekli değildir).</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database name</guilabel>- the name of the database on the server.</para>
+					<para><guilabel>Veritabanı adı</guilabel>- sunucudaki veritabanının adı.</para>
 				</listitem>
 				<listitem>
-					<para>The <guilabel>Database username</guilabel> and <guilabel>Database password</guilabel> - the login data to access the database.</para>
+					<para><guilabel>Veritabanı kullanıcı adı</guilabel> ve <guilabel>Veritabanı şifresi</guilabel> - veritabanı erişimi için giriş verisi.</para>
 				</listitem>
 			</itemizedlist>
 			<tip>
-				<para>If you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
+				<para>Eğer SQLite kurup kullanıyorsanız, DSN alanına veritabanı dosyanıza giden tam yolu girmelisiniz ve kullanıcı adı ile şifre alanlarını boş bırakmalısınız. Güvenlik sebeplerinden ötürü, veritabanı dosyanızın web üzerinden erişilebilen bir yerde olmadığına emin olmalısınız.</para>
 			</tip>
 			<figure id="img_quick_installation_database">
-				<title>Database settings</title>
+				<title>Veritabanı ayarları</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>The database settings screen, please make sure to have all the required data available</para>
+						<para>Veritabanı ayarları ekranı, lütfen tüm gereken verilerin mevcut olduğuna emin olun</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -152,16 +152,16 @@
 			<para>If you see the <guilabel>Successful Connection</guilabel> message, you can continue to the next step.</para>
 		</section>
 		<section id="quick_installation_admin">
-			<title>Administrator details</title>
+			<title>Yönetici detayları</title>
 			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
 		</section>
 		<section id="quick_installation_config">
-			<title>Configuration file</title>
+			<title>Ayar dosyası</title>
 			<para>In this step, phpBB will automatically try to write the configuration file. The forum needs the configuration to run properly. It contains all of the database settings, so without it, phpBB will not be able to access the database.</para>
 			<para>Usually, automatically writing the configuration file works fine. But in some cases it can fail due to wrong file permissions, for instance. In this case, you need to upload the file manually. phpBB asks you to <guilabel>download</guilabel> the config.php file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, click <guilabel>Done</guilabel> to get to the last step. If <guilabel>Done</guilabel> returns you to the same page as before, and does not return a success message, you did not upload the file correctly.</para>
 		</section>
 		<section id="quick_installation_advanced">
-			<title>Advanced settings</title>
+			<title>Gelişmiş ayarlar</title>
 			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
 			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.0 successfully. But there is still a lot of work ahead!</para>
 			<para>If you are unable to get phpBB 3.0 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
@@ -180,16 +180,16 @@
 		<para>In this section you will learn how to change some of the basic settings of your new board.</para>
 		<para>Right after the installation you will be redirected to the so called "Administration Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
 		<section id="quick_settings_boardsettings">
-			<title>Board Settings</title>
+			<title>Site Ayarları</title>
 			<para>The first section of the <acronym>ACP</acronym> you will probably want to visit right after the installation is "Board Settings". Here you can first of all change the name (<guilabel>Site name</guilabel>) and description (<guilabel>Site description</guilabel>) of your board.</para>
 			<figure id="img_quick_settings_sitename">
-				<title>Board Settings</title>
+				<title>Site Ayarları</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Here you can edit the Site name and Site description of your board.</para>
+						<para>Sitenizin adını ve açıklamasını buradan düzenleyebilirsiniz.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -209,7 +209,7 @@
 						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Enabling and disabling basic features with just 2 clicks</para>
+						<para>Sadece 2 tıklama ile temel özellikleri açma ve kapama</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -270,30 +270,30 @@
 
 		<section id="quick_permissions_types">
 			<title>İzin çeşitleri</title>
-			<para>There are four different types of permissions:</para>
+			<para>İzinlerin dört farklı çeşidi vardır:</para>
 			<orderedlist>
 				<listitem id="quick_permission_types_user">
-					<para>User/Group permissions (global) - e.g. disallow changing avatar</para>
+					<para>Kullanıcı/Grup izinleri (global) - ör. avatar değiştirmeyi kısıtlama</para>
 				</listitem>
 				<listitem id="quick_permission_types_admin">
-					<para>Administrator permissions (global) - e.g. allow to manage forums</para>
+					<para>Yönetici izinleri (global) - ör. forumları yönetme izni</para>
 				</listitem>
 				<listitem id="quick_permission_types_moderator">
-					<para>Moderator permissions (global or local) - e.g. allow to lock topics or ban users (only global)</para>
+					<para>Moderatör izinleri (global ya da yerel) - ör. başlıkları kilitleme ya da kullanıcıları yasaklama izni (sadece global olarak)</para>
 				</listitem>
 				<listitem id="quick_permission_types_forum">
-					<para>Forum permissions (local) - e.g. allow to see a forum or post topics</para>
+					<para>Forum izinleri (yerel) - ör. bir forum ya da mesaj başlıklarını görüntüleme izni</para>
 				</listitem>
 			</orderedlist>
 			<para>Each permission type consists of a different set of permissions and can apply either locally or globally. A global permission type is set for your whole bulletin board. If you disallow one of your users to send Private Messages, for instance, you have to do this with the global user permission. Administrator permission are also global.</para>
 			<figure id="img_quick_permissions_types">
-				<title>Global and local permissions</title>
+				<title>Global ve yerel izinler</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
 					</imageobject>
 					<caption>
-						<para>Global and local permissions</para>
+						<para>Global ve yerel izinler</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -305,7 +305,7 @@
 			<para>To set the permissions for your new forum we need the local <guilabel>Forum Based Permissions</guilabel>. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the <guilabel>Group</guilabel> or <guilabel>User Forum Permissions</guilabel>. They will allow you to select one group or user, and then select the forums you want to set the permissions for. </para>
 			<para>But for this Quick Start Guide we will concentrate on the <guilabel>Forum Permissions</guilabel>. Instead of selecting a user or group, you select the forums you want to change first. You can select them either by selecting the forums manually in the top list, or by single forum and single forum plus subforums respectively in the lower pull down menus. <guilabel>Submit</guilabel> will bring you to the next page.</para>
 			<figure id="img_quick_permissions_select">
-				<title>Select Groups</title>
+				<title>Gruplar Seçmek</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
@@ -321,7 +321,7 @@
 			<para>Both ways only differ in the way you set them. They both share the same interface.</para>
 		</section>
 		<section id="quick_permissions_manual">
-			<title>Manual permissions</title>
+			<title>Manuel izinler</title>
 			<para>This is the most important aspect of permissions. You need to understand this to properly work with them. There are three different values that a permission can take:</para>
 			<itemizedlist>
 				<listitem>
@@ -336,28 +336,28 @@
 			</itemizedlist>
 			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>Never</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>No</guilabel> overrides any <guilabel>Yes</guilabel> they have . Leave the setting at <guilabel>No</guilabel> instead. <guilabel>No</guilabel> is a weak <guilabel>Never</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
 			<figure id="img_quick_permissions_manual">
-				<title>Manual permissions</title>
+				<title>Manuel izinler</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_manual.png" />
 					</imageobject>
 					<caption>
-						<para>Setting permissions manually</para>
+						<para>Manuel izinler ayarlama</para>
 					</caption>
 				</mediaobject>
 			</figure>
 		</section>
 		<section id="quick_permissions_roles">
-			<title>Permissions roles</title>
+			<title>İzinler roller</title>
 			<para>phpBB3 Olympus ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
 			<figure id="img_quick_permissions_roles">
-				<title>Permission roles</title>
+				<title>İzin rolleri</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_roles.png" />
 					</imageobject>
 					<caption>
-						<para>Setting permissions with roles</para>
+						<para>Roller ile izinleri ayarlama</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -371,7 +371,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Assign moderators to forums</title>
+			<title>Forumlara moderatörler belirleme</title>
 			<para>A quite common use case for permissions and roles are forum moderation. phpBB3 makes assigning users as moderators of forums really simple.</para>
 			<para>As you might have already guessed, moderation of specific forums is a local setting, so you can find <guilabel>Forum Moderators</guilabel> in the section for <guilabel>Forum Based Permissions</guilabel>. First of all, you will have to select for forum (or forums) you want to assign new moderators to. This form is divided into three areas. In the first one, you can select multiple forums (select multiple by holding down the CTRL button on your keyboard, or cmd (under MacOS X)), where the moderator settings you will set in the following form will only apply to these exact forums. The second area allows you to select only one forum but all the following settings will apply not only to this forum but also all its subforums. Finally, the third area's selection will only affect exactly this forum.</para>
 			<para>After selecting the forums and hitting <guilabel>Submit</guilabel>, you will be greeted by a form you should already be familiar with from one of the previous sections in this guide: <xref linkend="img_quick_permissions_select"/>. Here you can select the users or groups that should get some kind of moderation power over the selected forums. So go ahead: Select some users and/or groups and hit the <guilabel>Set Permissions</guilabel> button.</para>
@@ -380,36 +380,36 @@
 				<varlistentry>
 					<term>Standart Moderatör</term>
 					<listitem>
-						<para>A Standard Moderator can approve or disapprove, edit and delete posts, delete or close reports, but not necessarily change the owner of a post. This kind of moderator can also issue warnings and view details of a post.</para>
+						<para>Bir Standart Moderatör mesajlara onay verebilir ya da vermeyebilir, mesajları silebilir ve düzenleyebilir, bildirileri kapatabilir ya da silebilir, fakat bir mesajın sahibini kesinlikle değiştiremez. Bu tür moderatör ayrıca uyarı verebilir ve bir mesajın ayrıntılarını görüntüleyebilir.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Basit Moderatör</term>
 					<listitem>
-						<para>A Simple Moderator can edit posts and close and delete reports and can also view post details.</para>
+						<para>Bir Basit Moderatör mesajları düzenleyebilir, bildirileri kapatabilir ve silebilir, ayrıca mesaj detaylarını görüntüleyebilir.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Sıralı Moderatör</term>
 					<listitem>
-						<para>As a Queue Moderator, you can only approve or disapprove posts that landed in the moderator queue and edit posts.</para>
+						<para>Bir Sıralı Moderatör olarak, moderatör sırası içerisinde geniş yetkisi olanlardan başlayarak sadece mesajlara onay verebilir ya da vermeyebilirsiniz ve mesajları düzenleyebilirsiniz.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Tam Moderatör</term>
 					<listitem>
-						<para>Full Moderators can do everything moderation-related; they can even ban users.</para>
+						<para>Tam Moderatörler moderasyona bağlı her şeyi yapabilirler; aynı zamanda kullanıcıları yasaklayabilirler.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
 			<figure id="img_quick_permissions_moderator">
-				<title>The Forum Moderator's Permissions</title>
+				<title>Forum Moderatörünün İzinleri</title>
 				<mediaobject>
 					<imageobject>
 			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
 					</imageobject>
 					<caption>
-						<para>Set the moderator's permissions</para>
+						<para>Moderatörün izinlerini ayarlama</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -424,7 +424,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Setting global permissions</title>
+			<title>global izinleri ayarlama</title>
 			<para>Local Permissions are too local for you? Well, then phpBB3 has something to offer for you, too: Global Permissions:</para>
 			<orderedlist>
 				<listitem><para>Users Permissions</para></listitem>

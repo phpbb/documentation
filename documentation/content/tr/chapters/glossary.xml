@@ -111,14 +111,14 @@
 			<varlistentry>
 				<term>Cookie (Çerez)</term>
 				<listitem>
-					<para>Bir cookie (çerez), kullanıcının bilgisayarı üzerine yerleştirilen verinin küçük bir parçasıdır. Cookieler (çerezler) giriş bilgilerini saklamak için phpBB ile kullanılır (otomatik girişler için).</para>
+					<para>Bir cookie (çerez), kullanıcının bilgisayarı üzerine yerleştirilen küçük bir veri parçasıdır. Cookieler (çerezler) giriş bilgilerini saklamak için phpBB ile kullanılır (otomatik girişler için).</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Database (Veritabanı)</term>
 				<listitem>
-					<para>A database is a collection stored in a structured, organized manner (with different tables, rows, and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.0 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, and categories. Data stored in a database can usually be backed up and restored easily.</para>
+					<para>Veritabanı, düzenli biçimde (farklı tablolar, sıralar, ve sütunlar, v.b. ile) bir yapı içerisinde verileri depolar. Veritabanları veri depolamak için hızlı ve kolay bir yol sağlar, genellikle kullanılan düz dosyalar içeren veri depolama sisteminin yerine bir dosya içerisinde veri depolanır. phpBB 3.0 farklı sayıda <acronym>DBMS</acronym> destekler ve kullanıcı bilgileri, mesajlar, ve kategoriler gibi bilgileri saklamak için veritabanı kullanır. Veritabanında depolanan veri genellikle kolayca yedek alınabilir ve geri yüklenebilir.</para>
 				</listitem>
 			</varlistentry>
 			
