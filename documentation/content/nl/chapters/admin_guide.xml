@@ -4,7 +4,7 @@
 <chapter id="admin_guide">
 	<?dbhtml dir="adminguide" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id: admin_guide.xml 141 2007-07-17 20:12:28Z mhobbit $</releaseinfo>
+		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2006</year>
 			<holder>phpBB Group</holder>

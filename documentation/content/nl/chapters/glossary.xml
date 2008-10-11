@@ -5,7 +5,7 @@
 <chapter id="glossary">
 	<?dbhtml dir="glossary" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id: glossary.xml 140 2007-07-16 16:41:42Z mhobbit $</releaseinfo>
+		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2006</year>
 			<holder>phpBB Group</holder>

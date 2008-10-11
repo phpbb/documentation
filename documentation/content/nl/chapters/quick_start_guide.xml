@@ -4,7 +4,7 @@
 <chapter id="quick_start_guide">
 	<?dbhtml  dir="quickstart" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo> $Id: quick_start_guide.xml 142 2007-07-18 17:28:25Z mhobbit $ </releaseinfo>
+		<releaseinfo> $Id$ </releaseinfo>
 		<copyright>
 			<year>2008</year>
 			<holder>phpBB Group</holder>
