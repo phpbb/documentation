@@ -4,7 +4,7 @@
 <chapter id="upgrade_guide">
 	<?dbhtml dir="upgradeguide" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id: upgrade_guide.xml 102 2007-02-18 19:58:09Z mhobbit $</releaseinfo>
+		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2006</year>
 			<holder>phpBB Group</holder>

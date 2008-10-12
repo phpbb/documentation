@@ -4,7 +4,7 @@
 <chapter id="admin_guide">
 	<?dbhtml dir="adminguide" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id: admin_guide.xml 141 2007-07-17 20:12:28Z mhobbit $</releaseinfo>
+		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2006</year>
 			<holder>phpBB Group</holder>
@@ -205,10 +205,10 @@
 					<listitem><para><guilabel>LDAP-serverport</guilabel>: Udfyldes hvis ikke port 389 ønsket anvendt.</para></listitem>
 					<listitem><para><guilabel>LDAP-base dn</guilabel>: Distinguished Name som indeholder brugerinformationen.</para></listitem>
 					<listitem><para><guilabel>LDAP uid</guilabel>: Den nøgle phpBB vil søge efter en given login identitet.</para></listitem>
-					<listitem><para><guilabel>LDAP-brugerfilter</guilabel>: Søgefiltre kan begrænse de objekter hvar der søges efter ovennævnte nøgle.</para></listitem>
-					<listitem><para><guilabel>LDAP-emailattribute</guilabel>: Din brugertabels emailattribut (hvis en sådan findes) for automatisk at sætte emailadressen for nye brugere. Ved at lade dette felt være tomt vil brugere ved første login få tildelt en tom emailadresse..</para></listitem>
+					<listitem><para><guilabel>LDAP-brugerfilter</guilabel>: Søgefiltre kan begrænse de objekter hvor der søges efter ovennævnte nøgle.</para></listitem>
+					<listitem><para><guilabel>LDAP-emailattribut</guilabel>: Din brugertabels emailattribut (hvis en sådan findes) for automatisk at sætte emailadressen for nye brugere. Ved at lade dette felt være tomt vil brugere ved første login få tildelt en tom emailadresse..</para></listitem>
 					<listitem><para><guilabel>LDAP-bruger dn</guilabel>: Efterlades tomt for at benytte anonym tilslutning. phpBB vil tilslutte sig LDAP-serveren som denne bruger.</para></listitem>
-					<listitem><para><guilabel>LDAP-kodeord</guilabel>: Efterlades tomt for at benytte anonym tilslutning, udfyldes ellers med ovenstående brugers kodeord. Kræves af Active Directory servere.</para><important><para>Kodeordet bliver lagret i databasen i klar og ukrypteret tekst, og vil være synligt for alle med adgang til databasen eller til denne konfigurationsside.</para></important></listitem>
+					<listitem><para><guilabel>LDAP-kodeord</guilabel>: Efterlades tomt for at benytte anonym tilslutning, udfyldes ellers med ovenstående brugers kodeord. Kræves af Active Directory servere.</para><important><para>Kodeordet lagres i databasen i klar og ukrypteret tekst, og vil være synligt for alle med adgang til databasen eller til denne konfigurationsside.</para></important></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -220,9 +220,9 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Email settings</title>
+				<title>Email</title>
 				
-				<para>phpBB3 is capable of sending out emails to your users. Here, you can configure the information that is used when your board sends out these emails. phpBB3 can send out emails by using either the native, PHP-based email service, or a specified <glossterm>SMTP</glossterm> server. If you are not sure if you have an SMTP server available, use the native email service. You will have to ask your hoster for further details. Once you are done configuring the email settings, click <guilabel>Submit</guilabel>.</para>
+				<para>phpBB3 kan sende emails til dine brugere. Her konfigurerer du de indstillinger boardet bruger når emails afsendes. phpBB3 kan sende emails med enten den indbyggede PHP-baserede emailservice, eller en specificeret <glossterm>SMTP</glossterm>-server. Er du i tvivl om du har mulighed for at anvende en SMTP-server available, anbefales det at bruge den indbyggede email-service. Du henter yderligere detaljer herom hos din vært. Klik på <guilabel>Udfør</guilabel> når alle indstillinger er klar.</para>
 				
 				<note>
 					<para>Please ensure the email address you specify is valid, as any bounced or undeliverable messages will likely be sent to that address.</para>
