@@ -436,7 +436,7 @@
 					<varlistentry>
 						<term>Kontrollér IP-adresser imod DNS blackhole liste</term>
 						<listitem>
-							<para>Du kan kontrollere brugeres <glossterm>IP-adresse</glossterm>r imod <acronym>DNS</acronym> blackhole lister. Her anmeldes og sortlistes IP-adresser som anvendes til misbrug. Vælges "Ja", kontrolleres mod listerne på <ulink url="http://www.spamcop.net">spamcop.net</ulink>, <ulink url="http://www.dsbl.org">dsbl.org</ulink> og <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>. Opslaget kan tage lidt tid, afhængig af serverkonfigurationen. Hvis kontrollen medfører for mange fejlagtige afvisninger eller nedsætter "ekspeditionstiden", anbefales det at slå kontrollen fra.</para>
+							<para>Du kan kontrollere brugeres <glossterm>IP-adresse</glossterm>r imod <acronym>DNS</acronym> blackhole lister. Her anmeldes og sortlistes IP-adresser som anvendes til misbrug. Vælges "Ja", kontrolleres mod listerne på <ulink url="http://www.spamcop.net">spamcop.net</ulink> og <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>. Opslaget kan tage lidt tid, afhængig af serverkonfigurationen. Hvis kontrollen medfører for mange fejlagtige afvisninger eller nedsætter "ekspeditionstiden", anbefales det at slå kontrollen fra.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -451,34 +451,34 @@
 					<varlistentry>
 						<term>Kodeordskompleksitet</term>
 						<listitem>
-							<para>For at gøre dine brugeres kodeord sværere at afkode, kan du her bestemme hvor komplekse kodeordene skal være. Ændre du i denne konfiguration på et allerede kørende board får ændringen kun betydning for nye brugere eller når eksisterende brugere ændrer kodeord.</para>
-							<para>Du har fire valgmuligheder i dropdownmenuen. <guimenuitem>Ingen krav</guimenuitem> will disable password complexity checking completely. The <guimenuitem>Skal indeholde store og små bogstaver</guimenuitem> setting requires that your users' passwords have both lowercase and uppercase letters in their password. The <guimenuitem>Skal indeholde bogstaver og tal</guimenuitem> setting requires that your users' password include both letters from the alphabet and numbers. Lastly, the <guimenuitem>Skal indeholde symboler</guimenuitem> setting will require that your users' passwords include symbols.</para>
+							<para>For at sikre dine brugeres kodeord bedst muligt, kan du her bestemme hvor komplekst sammensat de skal være. Ændre du i denne konfiguration på et allerede kørende board, får ændringen kun betydning for nye brugere eller når eksisterende brugere ændrer kodeord.</para>
+							<para>Du har fire valgmuligheder i dropdownmenuen. <guimenuitem>Ingen krav</guimenuitem>, <guimenuitem>Skal indeholde store og små bogstaver</guimenuitem>, <guimenuitem>Skal indeholde bogstaver og tal</guimenuitem> og til sidst <guimenuitem>Skal indeholde symboler</guimenuitem>.</para>
 							<note>
-								<para>For each password complexity requirement, the setting(s) above it in the selection menu will also apply. For example, selecting <guimenuitem>Must contain alphanumerics</guimenuitem> will require your users' passwords to include not only alphanumeric characters, but also have both lowercase and uppercase letters.</para>
+								<para>Når valget træffes vil det foranstående krav også være gældende. Hvis du for eksempelt vælger <guimenuitem>Skal indeholde bogstaver og tal</guimenuitem> kræves det samtidig anvendelse af store og små bogstaver.</para>
 							</note>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Force password change</term>
+						<term>Gennemtving kodeordsændring</term>
 						<listitem>
-							<para>It is always ideal to change passwords once in a while. With this setting, you can force your users to change their passwords after a set number of days that their passwords have been used.</para>
-							<para>Only integers can be entered in the text box, which is located next to the <guilabel>Days</guilabel> label. This integer is the number of days that, after which, your users will have to change their passwords. If you would like to disable this feature, enter a value of &quot;0&quot;.</para>
+							<para>Det kan være fornuftigt at ændre kodeord med mellemrum. I denne indstilling kan brugere tvinges til at ændre kodeord efter et fastsat tidsrum.</para>
+							<para>Kun hele tal kan angives i tekstboksen til højre, og bestemmer det antal dage brugeres kodeord er gyldigt. Når denne periode overskrides bliver brugere bedt om at ændre kodeord. Ønsker du ikke at anvende denne mulighed, angives &quot;0&quot; dage.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Maximum number of login attempts</term>
+						<term>Maksimalt antal loginforsøg</term>
 						<listitem>
-							<para>It is also possible to limit the number of attempts that your users can have to try to login. Setting a specific limit will enable this feature. This can be useful in temporarily preventing bots or other users from trying to log into other users' accounts.</para>
-							<para>Only integers can be entered for this setting. The number entered it the maximum number of times a user can attempt to login to an account before having to confirm his login visually, with the visual confirmation.</para>
+							<para>For at hindre botter og andre brugere i at forsøge at gætte andre tilmeldte brugeres kodeord, er det en god idé at sætte en grænse for antallet af loginforsøg.</para>
+							<para>Angiv i hele tal antal mislykkede loginforsøg boardet skal acceptere, hvorefter brugere desuden vil blive afkrævet visuel bekræftelse.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Allow PHP in templates</term>
+						<term>Tillad PHP i skabeloner</term>
 						<listitem>
-							<para>Unlike phpBB2, phpBB3 allows the use of PHP code in the template files themselves, if enabled. If this option is enabled, <guilabel>PHP</guilabel> and <guilabel>INCLUDEPHP</guilabel> statements will be recognized and parsed by the template engine.</para>
+							<para>phpBB3 har mulighed for at fortolke PHP-kode inkluderet i skabelonfilerne. Aktivér den mulighed her, og herved genkendes og fortolkes både <guilabel>PHP</guilabel> og <guilabel>INCLUDEPHP</guilabel> kommandoer indholdeholdt i disse filer.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -492,42 +492,42 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Load settings</title>
-				<para>On particularly large boards, it may be necessary to manage certain load-related settings in order to allow your board to run as smoothly as possible. However, even if your board isn't excessively active, it is still important to be able to adjust your board's load settings. Adjusting these settings properly can help reduce the amount of processing required by your server. Once you are done editing any of the server load-related settings, remember to click <guilabel>Submit</guilabel> to actually submit and apply your changes.</para>
+				<title>Belastning</title>
+				<para>Specielt på store boards kan det være nødvendigt at trimme indstillinger som øger belastningen. Selv om dit board ikke er specielt stort, eller har megen aktivitet, er det stadig vigtigt at have mulighed for at ændre disse indstillinger. Korrekte indstillinger kan reducere den belastning dit board udøver på serveren væsentligt. Husk at klikke på <guilabel>Udfør</guilabel> når du har ændret i indstillinger med betydning for systembelastning.</para>
 				
-				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
+				<para>Den første kategori, <guilabel>Generelle indstillinger</guilabel>, giver dig kontrol og de mest basale belastningsrelaterede indstillinger, som for eksempel systembelasning og sessioners varighed. Nedenfor gennemgås hver indstilling detaljeret.
 					<itemizedlist>
-						<title>General settings</title>
-						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers are valid values for this option. (For example, if your server has two processors, a setting of 2.0 would represent 100% server utilisation of both processors.) Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
-						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
-						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline and be temporarily disabled. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline and be temporarily disabled. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
-						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
+						<title>Generelle indstillinger</title>
+						<listitem><para><guilabel>Begræns systembelastning</guilabel>: Hvis systembelastningen i gennemsnit over 1 minut overskrider denne værdi, vil boardet gå offline, &quot;1.0&quot; er lig ~100% belastning af én processor. Dette virker kun på UNIX-baserede servere og hvor denne information er tilgængelig. Værdien nulstiller sig selv hvis phpBB ikke var i stand til at finde belastningsgrænsen. Alle positive værdier er gyldige. Hvis din server er udstyret med to CPU'er svarer værdien &quot;2.0&quot; til 100% belastning af begge CPU'er. &quot;0&quot; deaktiverer denne begrænsning.</para></listitem>
+						<listitem><para><guilabel>Sessioners varighed</guilabel>: Dine brugeres sessioner udløber efter det angivne antal sekunder. Alle positive heltal er gyldige. Angiv &quot;0&quot; hvis du ønsker at sessioner ikke skal udløbe.</para></listitem>
+						<listitem><para><guilabel>Begræns sessioner</guilabel>: Det er muligt at kontrollere hvor mange samtidige sessioner der tillades på boardet. Overskrides antallet inden for et minut, vil boardet midlertidigt gå offline. Alle positive heltal er gyldige. Angiv &quot;0&quot; hvis du ikke ønsker denne begrænsning.</para></listitem>
+						<listitem><para><guilabel>Varighed af onlineinformation</guilabel>: Tid i minutter hvorefter inaktive brugere bliver fjernet fra listen <guilabel>Hvem er online</guilabel>. Jo større tidsrum, desto længere behandlingstid for at generere listen. Alle positive heltal er gyldige.</para></listitem>
 					</itemizedlist>
 				</para>
 				
-				<para>The second group of settings, <guilabel>General Options</guilabel>, allows you to control whether certain options are available for your users on your board. The following describes each option further.
+				<para>I kategorien <guilabel>Generelle valg</guilabel> kan du bestemme om hvilke muligheder der skal være tilgængelige for brugeren. Nedenfor gennemgås hver mulighed.
 					<itemizedlist>
-						<title>General options</title>
-						<listitem><para><guilabel>Enable dotted topics</guilabel>: Topics in which a poster has already posted in will see dotted topic icons for these topics. To enable this feature, select, <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable server-side topic marking</guilabel>: One of the many new features phpBB3 offers is server-side read tracking. This is different from phpBB2, which only offered read tracking based on cookies. To store read/unread status information in the database, as opposed to in a cookie, select <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable topic marking for guests</guilabel>: It is also possible to allow guests to have read/unread status information. If you want your board to store read/unread status information for guests, select <guilabel>Yes</guilabel>. If this option is disabled, posts will be displayed as &quot;read&quot; for guests.</para></listitem>
-						<listitem><para><guilabel>Enable online user listings</guilabel>: The online user listings can be displayed on your board's index, in each forum, and on topic pages. If you want to enable this option and allow the online user listings to be displayed, choose <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable online guest listings in viewonline</guilabel>: If you want to enable the display of guest user information in the <guilabel>Who is Online</guilabel> section, choose <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable display of user online/offline information</guilabel>: This option allows you to control whether or not online/offline status information for users can be displayed in profiles and on the topic view pages. To enable this display option, choose <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable birthday listing</guilabel>: In phpBB3, birthdays is a new feature. To enable the listing of birthdays, choose <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable display of moderators</guilabel>: Though it can be particularly useful to list the moderators who moderate each forum, it is possible to disable this feature, which may help reduce the amount of processing required. To enable the display of moderators, select <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Enable display of jumpbox</guilabel>: The jumpbox can be a useful tool for navigating throughout your board. However, it is possible to control whether or not this is displayed. To display the jumpboxes, select <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Show user's activity</guilabel>: This option controls whether or not the active topic/forum information displayed in your users' profiles and <glossterm>UCP</glossterm>. If you want to show this user activity information, select <guilabel>Yes</guilabel>. However, if your board has more than one million posts, it is recommended that you disable this feature.</para></listitem>
-						<listitem><para><guilabel>Recompile stale templates</guilabel>: This option controls the recompilation of old templates. If this is enabled, your board will check to see if there are updated templates on your filesystem; if there are, your board will recompile the templates. Select <guilabel>Yes</guilabel> to enable this option.</para></listitem>
+						<title>Generelle valg</title>
+						<listitem><para><guilabel>Anvend prikkede emner</guilabel>: Et prikket emneikon viser bruger om denne har skrevet indlæg i et emne. Vælg <guilabel>Ja</guilabel> for at aktivere muligheden.</para></listitem>
+						<listitem><para><guilabel>Anvend database-emnemarkering</guilabel>: phpBB3 tilbyder mulighed for at opbevare informationer om hvilke emner brugere har læst i databasen. Vælg <guilabel>Ja</guilabel> for at gøre brug af denne mulighed. Aktiveres muligheden ikke, opbevares information om læste emner i en cookie.</para></listitem>
+						<listitem><para><guilabel>Emnemarkering for gæster</guilabel>: Gem information om læste emner og indlæg for gæster. Vælges &quot;Nej&quot; vises emner altid som læste for gæster.</para></listitem>
+						<listitem><para><guilabel>Vis brugere online</guilabel>: Brugernavne vises nederst på boardindeks, forum og emnesider. Vælg <guilabel>Ja</guilabel> for at få listet brugere online.</para></listitem>
+						<listitem><para><guilabel>Antal gæster online</guilabel>: Vælg <guilabel>Ja</guilabel> for at få vist antal gæster i listen <guilabel>Hvem er online</guilabel>, i fora og emner.</para></listitem>
+						<listitem><para><guilabel>Vis brugeres online og offline-status</guilabel>: Vælges <guilabel>Ja</guilabel> vises status med relevant ikon i profilfelt.</para></listitem>
+						<listitem><para><guilabel>Vis fødselsdagslisten</guilabel>: Vælg <guilabel>Ja</guilabel> for at få listet brugere med fødselsdag nederst på boardindekset. Visning af listen forudsætter desuden at fødselsdage er tilladt under Boardfinesser.</para></listitem>
+						<listitem><para><guilabel>Vis redaktører</guilabel>: Selvom det kan være nyttigt at få listet redaktører for de enkelte fora, er det muligt at deaktivere denne visning, og dermed reducere serverens processorbelastning.</para></listitem>
+						<listitem><para><guilabel>Vis &quot;Hop til&quot; boksen</guilabel>: Boksen er et nyttigt værktøj til at navigere rundt på boardet med. I boksens dropdownmenu kan alle tilgængelige fora på boardet vælges direkte. Vælg <guilabel>Ja</guilabel> for at få boksen vist.</para></listitem>
+						<listitem><para><guilabel>Brugeres aktivitet</guilabel>: Denne mulighed kontrollerer hvorvidt aktivt emne og forum vises i brugerprofil og <glossterm>UCP</glossterm>. Vælg <guilabel>Ja</guilabel> hvis du ønsker denne visning. Det anbefales imidlertid at deaktivere dette for boards med mere end en million indlæg.</para></listitem>
+						<listitem><para><guilabel>Rekompilér fastfrosne typografikomponenter</guilabel>: Kontrollerer rekompilering af forældede skabelonfiler. Finder kontrollen opdaterede filer på filsystemet, rekompilerer boardet disse. Vælg <guilabel>Ja</guilabel> hvis du ønsker denne kontrol.</para></listitem>
 					</itemizedlist>
 				</para>
 				
-				<para>Lastly, the last group of load settings relates to <guilabel>Custom Profile Fields</guilabel>, which are a new feature in phpBB3. The following describes these options in detail.
+				<para>Den sidste kategori af indstillinger med betydning for serverbelastningen er <guilabel>Tilpassede profilfelter</guilabel>. Indstillingerne gennemgås nedenfor.
 					<itemizedlist>
-						<title>Custom Profile Fields</title>
-						<listitem><para><guilabel>Allow styles to display custom profile fields in memberlist</guilabel>: This option allows you to control if your board's style(s) can display the custom profile fields (if your board has any) in the memberlist. To enable this, choose <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Display custom profile fields in user profiles</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in users' profiles, select <guilabel>Yes</guilabel>.</para></listitem>
-						<listitem><para><guilabel>Display custom profile fields in viewtopic</guilabel>: If you want to enable the display of custom profile fields (if your board has any) in the topic view pages, choose <guilabel>Yes</guilabel>.</para></listitem>
+						<title>Tilpassede profilfelter</title>
+						<listitem><para><guilabel>Vis tilpassede profilfelter i listen med tilmeldte brugere</guilabel>: Her bestemmes om typografierne på dit board skal vise de tilpassede profilfelter i listen med tilmeldte brugere. Vælg <guilabel>Ja</guilabel> for at aktivere visningen.</para></listitem>
+						<listitem><para><guilabel>Vis tilpassede profilfelter i brugerprofiler</guilabel>: Vælg <guilabel>Ja</guilabel> for at vise de tilpassede profilfelter i brugerprofiler.</para></listitem>
+						<listitem><para><guilabel>Vis tilpassede profilfelter på emnesider</guilabel>: Vælg <guilabel>Ja</guilabel> for at vise disse på emnesider.</para></listitem>
 					</itemizedlist>
 				</para>
 			</section>
@@ -540,9 +540,9 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Search settings</title>
+				<title>Søgning</title>
 				
-				<para>Your board can be a well of information. Being able to effectively search through this information is very important, especially if you want to reduce the amount of redundant topics are posted on your board. Here, on the <guimenuitem>Search settings</guimenuitem> page, you can control what search backend your board's search functionality will use for indexing posts and searching, and set various options related to it. There are four main categories of search settings: <guilabel>General Search Settings</guilabel>, <guilabel>Search Backend</guilabel>, <guilabel>Fulltext mysql</guilabel>, and <guilabel>Fulltext native</guilabel>. The following describes each set of search settings in detail.</para>
+				<para>Dit board indeholder sikkert et væld af gode informationer. Det er derfor uhyre vigtigt at kunne søge effektivt i indholdet. Kan besøgende hurtigt finde et emne omhandlende en specifik problemstilling, undgås samtidig flest mulige redundante emner. På siden <guimenuitem>Søgning</guimenuitem> kan du bestemme hvilken søgemotor dit board skal anvende ved indeksering og søgninger, og muligheder relateret til disse. Der er fire hovedkategorier af indstillinger: <guilabel>Generelle søgeindstillinger</guilabel>, <guilabel>Valg af søgemotor</guilabel>, <guilabel>Fulltext mysql</guilabel> og <guilabel>Fulltext native</guilabel>. Nedenfor gennemgås alle fire kategorier.</para>
 			
 				<para>The first group of search settings are general and user-facing, meaning that they concern the users who use the search functionality directly.
 					<itemizedlist>
