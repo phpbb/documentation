@@ -99,7 +99,7 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Giriş</title>
-			<para>Kurulum ekranı size phpBB için kısa bir tanıtım sunacaktır. It allows you to read the license phpBB 3.0 is released under (the <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
+			<para>Kurulum ekranı size phpBB için kısa bir tanıtım sunacaktır. Ayrıca kurulum ekranı, <ulink href="http://opensource.org/licenses/gpl-license.php">Genen Kamu Lisansı</ulink> altında yayınlanan phpBB 3.0 lisansını okumanıza izin verecektir ve nasıl destek alabileceğiniz hakkında bilgiler sunacaktır. Kuruluma başlamak için, <guilabel>Yükle</guilabel> bağlantısına tıklayın (<xref linkend="img_quick_installation_intro" bölümüne bakın/>).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Gereksinimler</title>
@@ -122,7 +122,7 @@
 					<para><guilabel>Veritabanı sunucu portu</guilabel> - veritabanı sunucusunun portu (çoğu zaman bu gerekli değildir).</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>Veritabanı adı</guilabel>- sunucudaki veritabanının adı.</para>
+					<para><guilabel>Veritabanı adı</guilabel> - sunucudaki veritabanının adı.</para>
 				</listitem>
 				<listitem>
 					<para><guilabel>Veritabanı kullanıcı adı</guilabel> ve <guilabel>Veritabanı şifresi</guilabel> - veritabanı erişimi için giriş verisi.</para>
@@ -142,7 +142,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multiple phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
+			<para>Bir veritabanında çoklu phpBB kurulumu kullanmayı planlayana kadar <guilabel>Veritabanındaki tablolar için ön ek</guilabel> ayarını değiştirmenize gerek yoktur. Böyle bir durumda her kurulum için farklı bir ön ad kullanabilirsiniz.</para>
 			<para>After you have entered your details, you can continue by clicking the <guilabel>Proceed to next step</guilabel> button. Now, phpBB 3.0 will test and verify the data you entered.</para>
 			<para>If you see a "<guilabel>Could not connect to the database</guilabel>" error, this means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
 			<tip>
@@ -177,7 +177,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Genel ayarlar</title>
-		<para>In this section you will learn how to change some of the basic settings of your new board.</para>
+		<para>Bu bölümde yeni mesaj panonuzun bazı temel ayarlarını nasıl değiştireceğinizi öğreneceksiniz.</para>
 		<para>Right after the installation you will be redirected to the so called "Administration Control Panel" (<acronym>ACP</acronym>). You can also access this panel by clicking the <guilabel>[Administration Control Panel]</guilabel> link at the bottom of your forum. In this interface you can change everything about your board.</para>
 		<section id="quick_settings_boardsettings">
 			<title>Site Ayarları</title>
@@ -189,7 +189,7 @@
 						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Sitenizin adını ve açıklamasını buradan düzenleyebilirsiniz.</para>
+						<para>Mesaj panonuzun adını ve açıklamasını buradan düzenleyebilirsiniz.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -200,10 +200,10 @@
 		</section>
 		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">
-			<title>Site Özellikleri</title>
+			<title>Mesaj Panosu Özellikleri</title>
 			<para>If you want to enable or disable some of the basic features of your board, this is the place to go. Here you can allow and disallow for example username changes (<guilabel>Allow Username changes</guilabel>) or the creation of attachments (<guilabel>Allow Attachments</guilabel>). You can even disable <acronym>BBCode</acronym> altogether (<guilabel>Allow BBCode</guilabel>).</para>
 			<figure id="img_quick_settings_features">
-				<title>Site Özellikleri</title>
+				<title>Mesaj Panosu Özellikleri</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
