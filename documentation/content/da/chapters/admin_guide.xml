@@ -536,7 +536,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -544,41 +544,41 @@
 				
 				<para>Dit board indeholder sikkert et væld af gode informationer. Det er derfor uhyre vigtigt at kunne søge effektivt i indholdet. Kan besøgende hurtigt finde et emne omhandlende en specifik problemstilling, undgås samtidig flest mulige redundante emner. På siden <guimenuitem>Søgning</guimenuitem> kan du bestemme hvilken søgemotor dit board skal anvende ved indeksering og søgninger, og muligheder relateret til disse. Der er fire hovedkategorier af indstillinger: <guilabel>Generelle søgeindstillinger</guilabel>, <guilabel>Valg af søgemotor</guilabel>, <guilabel>Fulltext mysql</guilabel> og <guilabel>Fulltext native</guilabel>. Nedenfor gennemgås alle fire kategorier.</para>
 			
-				<para>The first group of search settings are general and user-facing, meaning that they concern the users who use the search functionality directly.
+				<para>Den første kategori indstillinger er generelle og rettet mod brugeres anvendelse af søgefunktionerne.
 					<itemizedlist>
-						<title>General Search Settings</title>
-						<listitem><para><guilabel>Enable search facilities</guilabel>: Setting this option to <guilabel>Yes</guilabel> will enable the search functionality for your users; member-searching functionality will also be enabled.</para></listitem>
-						<listitem><para><guilabel>User search flood interval</guilabel>:  This value indicates the number of seconds that your users have to wait between consecutive searches. This value is checked independently for each user. All positive integers are valid values. If you want to disable checking for search intervals for users, set this value to &quot;0&quot;.</para></listitem>
-						<listitem><para><guilabel>Guest search flood interval</guilabel>: This is the number of seconds between searches that guest users must wait. This value is checked independently for each guest. All positive integers are valid values. If you want to disable checking for search intervals for guests, set this value to &quot;0&quot;.</para></listitem>
-						<listitem><para><guilabel>Search page system load limit</guilabel>: You can also limit the amount of load your system will undergo for searches. If the system load exceeds this value, your board will go offline and be temporarily disabled. All numbers between 0 and 1.0 (inclusive) are valid values. A value of &quot;1.0&quot;, for example, represents about 100% utilisation of a single processor; if the system load exceeds this value, the board will go offline. Note that this feature only works for *nix-based servers.</para></listitem>
-						<listitem><para><guilabel>Min author name characters</guilabel>: Users have to enter at least this many characters of the name when performing a wildcard author search. If the author's username is shorter than this number, your users can still search for the author's posts by entering the complete username. All positive integers are valid values.</para></listitem>
-						<listitem><para><guilabel>Search result cache length</guilabel>: phpBB3 can also cache search results. These cached search results will expire after this number of seconds. All positive integers are valid values. Set this value to &quot;0&quot; if you want to disable search caching.</para></listitem>
+						<title>Generelle søgeindstillinger</title>
+						<listitem><para><guilabel>Aktivér søgefaciliteter</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere brugerfladen som giver søgemulighederne, inklusiv søgning i tilmeldte brugere.</para></listitem>
+						<listitem><para><guilabel>Brugeres søgeinterval</guilabel>:  Det antal sekunder brugere skal vente mellem søgninger. Intervallet kontrolleres individuelt pr. bruger. Alle positive værdier er gyldige. Angiv &quot;0&quot; for at deaktivere kontrollen.</para></listitem>
+						<listitem><para><guilabel>Gæsters søgeinterval</guilabel>: Det antal sekunder gæster skal vente mellem søgninger. Hvis én gæst søger, må alle andre gæster vente indtil dette tidsinterval er overskredet. Alle positive værdier er gylige. Angiv &quot;0&quot; for at deaktivere kontrollen.</para></listitem>
+						<listitem><para><guilabel>Grænse for søgningens belastning af systemet</guilabel>: Det er muligt at begrænse søgningers belastning af systemet. Hvis systemets belastning overskrider denne værdi i mere end 1 minut, vil søgesiden gå offline. Alle værdier mellem  0 og 1.0 (inklusive) er gyldige. &quot;1.0&quot; svarer til ~100% belastning af en processor. Denne funktion virker kun på UNIX-baserede servere.</para></listitem>
+						<listitem><para><guilabel>Mindste antal tegn for forfatternavn</guilabel>: Brugere skal angive mindst dette antal tegn i navnet, for at udføre en søgning efter forfatter ved anvendelse af (*) som ubekendt. Hvis forfatterens brugernavn er kortere end dette antal tegn, kan der søges efter dennes indlæg ved at angive forfatterens fulde brugernavn.</para></listitem>
+						<listitem><para><guilabel>Antal sekunder søgningens mellemlager opretholdes</guilabel>: Mellemlagrede søgeresultater slettes efter dette tidsinterval i sekunder. Alle positive værdier er gyldige. Angiv &quot;0&quot; for deaktivere mellemlagring af søgeresultater.</para></listitem>
 					</itemizedlist>
 				</para>
 				
-				<para>The next group of search settings actually only contains one setting: choosing what backend your board's search facilities, if enabled, will use. The following details this option.
+				<para>Den næste kategori indstillinger indeholder kun valg af søgemotor.
 					<itemizedlist>
-						<title>Search Backend</title>
-						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext sesarch. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
+						<title>Valg af søgemotor</title>
+						<listitem><para><guilabel>Valg af søgemotor</guilabel>: Dette valg bestemmer hvilken søgemotor boardets søgefacilitet gør brug af, hvis søgninger er aktiveret. Søgemotoren er ganske enkelt det system eller den metode der anvendes for at udføre søgninger baseret på de givne forespørgsler. Der er to tilgængelige muligheder: <guimenuitem>Fulltext native</guimenuitem> og <guimenuitem>Fulltext mysql</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> er phpBB's indbyggede standardmetode til fuldtekstsøgning. Ved at vælge <guimenuitem>Fulltext mysql</guimenuitem> vil boardet brug af mySQL's fuldtekstsøgning.</para></listitem>
 					</itemizedlist>
 					<note>
-						<para>If you choose to change your board's current search backend, you will have to create an index of your board's content for the new search backend. If you know for sure that you're not going to use the index that was used with your old, previously chosen search backend, you can also delete it in order to free up some of your system's resources. To learn more about maintaining your board's search indices, see <xref linkend="acp_maintenance_search" />.</para>
+						<para>Vælger du en anden søgemotor til dit board, er det nødvendigt at danne nyt søgeindeks baseret på nye metode. Undlades dette vil det ikke være muligt at søge i det eksisterende indhold, kun nye indlæg vil blive indekseret. For at frigøre plads og resourser er det desuden en god idé at slette søgeindekset fra den søgemotor du går væk fra. Læs mere om vedligeholdelse af boardets søgeindekser i <xref linkend="acp_maintenance_search" />.</para>
 					</note>
 				</para>
 				
-				<para>These next two groups of search settings concern each specific search backend individually. The <guilabel>Fulltext mysql</guilabel> group is only an information box, and displays information regarding your board and the mySQL fulltext option. The settings that are in the <guilabel>Fulltext Native</guilabel> group concern all of the settings related to phpBB3's built-in, native search backend.
+				<para>De to næste afsnit omhandler indstillinger specifikt for hver af søgemotorerne. I afsnittet <guilabel>Fulltext mysql</guilabel> vises alene informationer om dit board og mySQL's fuldtekstsøgning. I afsnittet <guilabel>Fulltext Native</guilabel> kan indstillinger relateret til phpBB's indbyggede søgemotor ses og ændres.
 					<itemizedlist>
 						<title>Fulltext mysql</title>
-						<listitem><para><guilabel>Support for non-latin UTF-8 characters using PCRE</guilabel>: This tells you if your system supports searching for non-Latin <acronym>UTF</acronym>-8 characters. This is only available in <glossterm>PHP</glossterm> versions 4.4 and above, and 5.1 and above. This is only relevant if you actually want your users to have the ability to search for non-Latin characters.</para></listitem>
-						<listitem><para><guilabel>Support for non-latin UTF-8 characters using mbstring</guilabel>: If your system doesn't support UTF-8 characters using <acronym>PCRE</acronym> (as indicated in the setting above), the mySQL fulltext search backend will try to use mbstring's regular expression engine. Again, this is only relevant if you actually want your users to have the ability to seasrch for non-Latin characters.</para></listitem>
+						<listitem><para><guilabel>Understøttelse af UTF-8-tegnsæt under PCRE</guilabel>: Fortæller om systemet understøtter søgning i ikke-Latin <acronym>UTF</acronym>-8 tegnsæt. Denne understøttelse kræver at serveren er installeret med <glossterm>PHP</glossterm> 4.4 og nyere, eller 5.1 og nyere. Det er kun relevant hvis dit board indeholder indlæg hvor der skrives med ikke-Latin tegn.</para></listitem>
+						<listitem><para><guilabel>Understøttelse af UTF-8-tegnsæt under mbstring</guilabel>: Understøtter dit system ikke UTF-8 tegnsæt med <acronym>PCRE</acronym> (som angivet ovenfor), vil mySQL søgemotoren forsøge at anvende mbstring's almindelige tegn-egenskaber. Igen, har det kun relevans hvis brugere skal kunne søge med efter ikke-Latin tegn.</para></listitem>
 					</itemizedlist>
 					
 					<itemizedlist>
 						<title>Fulltext native</title>
-						<listitem><para><guilabel>Enable fulltext updating</guilabel>: This option allows you to control whether or not your board's search index will update when posts are made. If you would like to enable this, choose <guilabel>Yes</guilabel>. Note that this is only relevant if your board's search functionality is disabled entirely.</para></listitem>
-						<listitem><para><guilabel>Min characters indexed by search</guilabel>: You can also control the minimum number of characters words must contain in order to be included in your board's search index. It is recommended that you not set this too low in order to have a quality search index. All positive integers are valid values.</para></listitem>
-						<listitem><para><guilabel>Max characters indexed by search</guilabel>: Just like the above setting, you can also control the maximum number of characters words must contain in order to be included in your board's search index. If a word has more than this number of characters in it, it will not be included in the search index. All positive integers are valid values.</para></listitem>
-						<listitem><para><guilabel>Common word threshold</guilabel>: Like phpBB2's stopwords feature, you can prevent the use of common words that you specify. However, this feature is expanded upon in phpBB3. You can now control the threshold that a word can have; this means that if a word is contained in more than a certain percentage of posts on your board, it will be deemed as a common word, and will be ignored in search queries. All positive integers are valid values, and represent the percentage of posts on your board words can be contained in. If you would like to disable this threshold and thereby allow searches using all words, even if they can be common, set this value to &quot;0&quot;. This setting only applies if your board has more than 100 posts.</para></listitem>
+						<listitem><para><guilabel>Aktivér fuldtekstopdatering</guilabel>: Vælg <guilabel>Ja</guilabel> for opdatering af fuldtekstindekset når der skrives nye indlæg. Indstilling har ingen betydning hvis søgning på boardet er deaktiveret.</para></listitem>
+						<listitem><para><guilabel>Minimalt antal tegn for indeksering til søgninger</guilabel>: Du kan bestemme det mindste antal tegn et ord skal bestå for at det medtages i boardets søgeindeks. For at bevare et søgeindeks med relevant indhold anbefales det at antal tegn ikke sættes for lavt. Alle positive værdier er gyldige.</para></listitem>
+						<listitem><para><guilabel>Maksimalt antal tegn for indeksering til søgninger</guilabel>: Det er også muligt at bestemme det højeste antal tegn et ord må indeholde for at blive medtaget i søgeindekset. Ord indeholdende flere tegn end dette, bliver ikke indekseret. Alle positive værdier er gyldige.</para></listitem>
+						<listitem><para><guilabel>Grænse for definition af et alment ord</guilabel>: Det er unødvendigt at indeksere ord som anvendes meget ofte. Her bestemmer du definition af et alment ord. Er et ord indeholdt i en større procentdel af alle indlæg end det her angivne betragtes det som et alment ord og ignoreres i søgningen. Alle positive værdier er gyldige. Ønsker du ikke at sætte denne begrænsning og give mulighed for at søge alle ord angives &quot;0&quot;. Grænsen har først virkning når boardet indeholder mere end 100 indlæg. Ændres værdien, bør der foretages en fornyet indeksering, således ændringen får konsekvens for søgningen i allerede indsendte indlæg.</para></listitem>
 					</itemizedlist>
 				</para>
 			</section>
@@ -589,12 +589,12 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Forum Admin</title>
-		<para>The <guilabel>Forum</guilabel> section offers the tools to manage your forums. Whether you want to add new forums, add new categories, change forum descriptions, reorder or rename your forums, this is the place to go.</para>
+		<title>Forumadministration</title>
+		<para>Under fanebladet <guilabel>Fora</guilabel> findes en række værktøjer beregnet til at administrere dine fora. Har du brug for at tilføje nye fora eller kategorier, ændre forumbeskrivelser, rækkefølge eller navn på eksisterende fora findes er det her du har disse muligheder.</para>
 		<section id="acp_forums_types">
 			<sectioninfo>
 				<authorgroup>
