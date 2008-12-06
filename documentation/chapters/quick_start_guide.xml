@@ -47,7 +47,7 @@
 						<para>PostgreSQL 7.x or above</para>
 					</listitem>
 					<listitem>
-						<para>SQLite</para>
+						<para>SQLite 2</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
