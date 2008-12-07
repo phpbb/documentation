@@ -594,36 +594,36 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Forumadministration</title>
-		<para>Under fanebladet <guilabel>Fora</guilabel> findes en række værktøjer beregnet til at administrere dine fora. Har du brug for at tilføje nye fora eller kategorier, ændre forumbeskrivelser, rækkefølge eller navn på eksisterende fora findes er det her du har disse muligheder.</para>
+		<para>Under fanebladet <guilabel>Fora</guilabel> findes en række værktøjer beregnet til at administrere dine fora. Har du brug for at tilføje nye fora eller kategorier, ændre forumbeskrivelser, rækkefølge eller navn på eksisterende fora, er det her du har disse muligheder.</para>
 		<section id="acp_forums_types">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Explanation of forum types</title>
-			<para>In phpBB 3.0, there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
+			<title>Forumtyper</title>
+			<para>I phpBB 3.0.x er der tre forskellige former for fora: Kategori (samling af fora), Forum (her kan indsendes indlæg), Link (til URL). </para>
 			<variablelist>
+				<varlistentry>
+					<term>Kategori</term>
+					<listitem>
+						<para>En kategori anvendes til at samle flere fora eller links. Fora vil blive vist under kategorititlen og tydeligt adskilt fra andre kategorier. Der kan ikke skrives indlæg i en kategori, kun i de indeholdte fora.</para>
+					</listitem>
+				</varlistentry>	
 				<varlistentry>
 					<term>Forum</term>
 					<listitem>
-						<para>In a forum people can post their topics.</para>
+						<para>Der kan skrives emner og indlæg i et forum.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Link</term>
 					<listitem>
-						<para>The forum list displays a forum link like a normal forum. But instead of linking to a forum, you can point it to a URL of your choice. It can display a hit counter, which shows how many times the link was clicked.</para>
+						<para>Her bliver hver link vist som et normalt link til et forum. Men i stedet kan der linkes til en URL du selv bestemmer. Som standard vises hvor mange gange der er klikket på dette link.</para>
 					</listitem>
-				</varlistentry>
-				<varlistentry>
-					<term>Category</term>
-					<listitem>
-						<para>If you want to combine multiple forums or links for a specific topic, you can put them inside a category. The forums will appear below the category title, clearly separated from other categories. Users are not able to post inside categories.</para>
-					</listitem>
-				</varlistentry>				
+				</varlistentry>			
 			</variablelist>
 		</section>
 		<section id="acp_forums_subforums">
@@ -634,68 +634,64 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Subforums</title>
-			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums.</para>
+			<title>Subfora</title>
+			<para>I phpBB 3.0.x kan oprettes <glossterm>subfora</glossterm>. Det kan være nyttigt på boards med mange fora. Herved er det muligt at skabe en logisk opbygning af dit boardindeks. Fremfor at have samtlige fora præsenteret på boardindekset, kan det være fornuftigt at tilknytte beslægtede fora som underfora til et overordnet forum. Der er ingen øvre grænse for hvor mange kategorier, fora og links der kan tilknyttes som underfora.</para>
 			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
-			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
+			<para>Hvis du for eksempel har et forum om kæledyr, er det muligt at oprette underfora i dette omhandlende katte, hunde oa, uden at skulle ændre det eksisterende kæledyrsforum til en kategori. I dette eksempel vil kun forummet kæledyr blive vist på boardindekset. Underfora bliver vist under forumbeskrivelsen med et link, medmindre denne visning deaktiveres.</para>
 				
 			<figure id="img_acp_subforums_list">
-				<title>Creating subforums</title>
+				<title>Opret underfora</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
 					</imageobject>
 					<caption>
-						<para>Creating subforums. In this example, the subforums titled &quot;Cats&quot; and &quot;Dogs&quot; belong in the &quot;Pets&quot; parent forum. Pay close attention to the breadcrumbs on the page, located right above the list of the subforums. This tells you exactly where you are in the forums hierarchy.</para>
+						<para>I dette eksempel er underforaene med titlerne &quot;Katte&quot;, &quot;Hunde&quot; og &quot;Papegøjer&quot; tilknyttet overforummet &quot;Kæledyr&quot;. Læg mærke til, at øverst på siden er der angivet hvor i boardhierakiet du befinder dig.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>This system theoretically allows unlimited levels of subforums. You can put as many subforums inside subforums as you like. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use subforums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
-			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create subforums.</para>
+			<para>Teoretisk set kan phpBB3.0.x indeholde ubegrænsede niveauer af underfora. Og du kan derfor tilknytte nye underfora i allerede eksisterende underfora. På nye boards kan det være en god idé at starte med få fora, aktiviteten vil synes højere, fremfor på forhånd at have struktureret boardet så detaljeret at de første indlæg forsvinder i denne.  Efterfølgende er det enkelt at flytte emner i passende fora eller underfora.</para>
+			<para>Læs <link linkend="acp_forums_manage">afsnittet om forumadministration</link> hvor oprettelse af underfora er beskrevet.</para>
 		</section>
 		<section id="acp_forums_manage">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage forums</title>
-			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
+			<title>Forumadministration</title>
+			<para>Her kan tilføjes nye fora eller kategorier, ændres forumbeskrivelser og rækkefølge eller navn på eksisterende fora, kategorier og links.</para>
 			
 			<figure id="img_acp_forums_manage_legend">
-				<title>Managing Forums Icon Legend</title>
+				<title>Ikoner til forumadministration</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/manage_forums_icon_legend.png"/>
 					</imageobject>
 					<caption>
-						<para>This is the legend for the icons on the manage forums page. Each icon allows you to commit a certain action. Pay close attention to which action you click on when managing your forums.</para>
+						<para>Ikonerne har hver deres funktion når fora skal administreres. Du vil se en dansk mouseover-tekst ved hvert ikon.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>The initial <guilabel>Manage forums</guilabel> page shows you a list of your top level forums and categories. Note, that this is not analogue to the forum index, as categories are not expanded here. If you want to reorder the forums inside a category, you have to open the category first.</para>
+			<para>Indgangsiden til <guilabel>Administrér fora</guilabel> lister alle topniveau fora og kategorier. Bemærk at underfora i disse ikke vises på denne side. Ønsker du at ændre i underfora indeholdt her, skal du først klikke på det forum eller den kategori det underforummet befinder sig i.</para>
 		</section>
 	</section>
 	<section id="acp_posting">
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
-				</author>
-				
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Posting Settings</title>
+		<title>Meddelelser</title>
 		
-		<para>Forums are nothing without content. Content is created and posted by your users; as such, it is very important to have the right posting settings that control how the content is posted. You can reach this section by clicking the <guimenuitem>Posting</guimenuitem> navigation tab.</para>
-		<para>The first page you are greeted with after getting to the <guimenuitem>Posting Settings</guimenuitem> section is <guilabel>BBCodes</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
+		<para>Fora er ingenting hvis ikke der er indhold heri. Indholdet skabes og indsendes af dine brugere, derfor er det vigtigt af indstillinger for hvordan meddelelser kan indsendes er korrekt for dit board. For at ændre disse indstillinger vælges fanebladet <guimenuitem>Meddelelser</guimenuitem>.</para>
+		<para>The first page you are greeted with after getting to the <guimenuitem>Meddelelser</guimenuitem> section is <guilabel>BBkoder</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
 	
 		<section id="acp_posting_bbcodes">
 			<sectioninfo>

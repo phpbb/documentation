@@ -47,33 +47,33 @@
 						<para>PostgreSQL 7.3+</para>
 					</listitem>
 					<listitem>
-						<para>SQLite</para>
+						<para>SQLite 2.8.2+</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem>
 				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) med understøttelse af den databasetype du agter at anvende. Er følgende moduler tilgængelige på serveren, giver de adgang til yderligere funktioner via PHP, men de er ikke krævede.</para>
-				<para>getimagesize() function need to be enabled.</para>
+				<para>Funktionen getimagesize() skal være aktiveret.</para>
 				<itemizedlist>
 					<listitem>
-						<para>zlib-kompression</para>
+						<para>zlib-komprimering</para>
 					</listitem>
 					<listitem>
 						<para>Remote FTP</para>
 					</listitem>
 					<listitem>
-						<para>XML support</para>
+						<para>XML</para>
 					</listitem>
 					<listitem>
-						<para>Imagemagick support</para>
+						<para>Imagemagick</para>
 					</listitem>
 					<listitem>
-						<para>GD support</para>
+						<para>GD</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
-		<para> Tilstedeværelsen af af hver af de krævede funktioner vil blive kontrolleret under installationsprocessen, som forklaret i  <xref linkend="quick_installation" />. </para>
+		<para> Tilstedeværelsen af hver af de krævede funktioner vil blive kontrolleret under installationsprocessen, som forklaret i  <xref linkend="quick_installation" />. </para>
 	</section>
 	<section id="quick_installation">
 		<sectioninfo>
