@@ -47,7 +47,7 @@
 						<para>PostgreSQL 7.x or above</para>
 					</listitem>
 					<listitem>
-						<para>SQLite</para>
+						<para>SQLite 2</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
@@ -65,6 +65,9 @@
 					</listitem>
 					<listitem>
 						<para>Imagemagick support</para>
+					</listitem>
+					<listitem>
+						<para>GD support</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
@@ -440,7 +443,7 @@
 	</section>
 	<section id="quick_support">
 		<title>Támogatás</title>
-		<para>The <ulink url="http://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="http://www.phpbb.com/phpBB/viewforum.php?f=1">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="http://www.phpbb.com/phpBB/viewtopic.php?t=128123">Support Request Template</ulink> with the information it asks for.</para>
+		<para>The <ulink url="http://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="http://www.phpbb.com/community/viewforum.php?f=46">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&t=543515">Support Request Template</ulink> with the information it asks for.</para>
 
 		<para>In addition to the support forum on www.phpbb.com, we provide a <ulink url="http://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit articles on common answers to questions. Our community has taken a lot of time in writing these articles, so be sure to check them out.</para>
 

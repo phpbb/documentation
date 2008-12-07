@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Felhasználói kézikönyv</title>
 	<abstract>
-		<para>This chapter is targeted at the forum users. It explains all user facing functions that are needed to use phpBB 3.0.</para>
+		<para>This chapter is targeted at the forum users. It explains all user facing functions that are needed to use phpBB 3.0.x.</para>
 	</abstract>
 	<section id="user_permissions">
 		<sectioninfo>
@@ -70,6 +70,9 @@
 				<author>
 					<othername>Heimidal</othername>
 				</author>
+				<author>
+					<othername>iWisdom</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Tájékozódás a felhasználói vezérlőpultban</title>
@@ -113,36 +116,75 @@
 		<section id="ucp_profile">
 			<title>Profil</title>
 			<para>This section lets you set your profile information. Your profile information contains general information that other users on the board will able to see. Think of your profile as a sign of your public presence. This section is separated from your preferences. (Preferences are the individual settings that you set and manage on your own, and control your forum experience. Thus, this is separated from your profile settings.)</para>
-			<section>
+			<section id="ucp_profile_info">
 				<title>Személyes beállítások</title>
-				<para>TODO: Explain the settings you can edit here. </para>
-			</section>
-			<section>
-				<title>Regisztrációs beállítások</title>
-				<para>TODO: Explain the settings you can edit here.</para>
+				<para>Personal settings control the information that is displayed when a user views your profile. </para>
+				<itemizedlist>
+					<listitem><para><guilabel>ICQ Number</guilabel> - Your account number associated with <ulink url="http://www.icq.com/">ICQ</ulink> system.</para></listitem>
+					<listitem><para><guilabel>AOL Instant Messenger</guilabel> - Your screen name associated with <ulink url="http://aim.com">AOL Instant Messenger</ulink> system.</para></listitem>
+					<listitem><para><guilabel>MSN Messenger</guilabel> - Your email address associated with the <ulink url="http://home.live.com/">MSN Messenger (Windows Live)</ulink> service.</para></listitem>
+					<listitem><para><guilabel>Yahoo Messenger</guilabel> - Your username associated with the <ulink url="http://messenger.yahoo.com/">Yahoo Messenger</ulink> service.</para></listitem>
+					<listitem><para><guilabel>Jabber Address</guilabel> - Your username associated with the <ulink url="http://www.jabber.org/">Jabber</ulink> service.</para></listitem>
+					<listitem><para><guilabel>Website</guilabel> - Your website's address. Must be prepended with the appropriate protocol reference (i.e. http://)</para></listitem>
+					<listitem><para><guilabel>Location</guilabel> - Your physical location. Note that this is generally displayed along with your user information with every post, so standard caution regarding releasing personal information on the Internet should apply.</para></listitem>
+					<listitem><para><guilabel>Occupation</guilabel> - Your occupation. The information entered will appear only on the viewprofile page.</para></listitem>
+					<listitem><para><guilabel>Interests</guilabel> - Your personal interests. The information entered here will appear only on the viewprofile page.</para></listitem>
+					<listitem><para><guilabel>Birthday</guilabel> - Your birthday. This information is used for displaying your username in the Birthday section of the Board Index. If year is specified, your age will be displayed in your profile.</para></listitem>
+				</itemizedlist>
 			</section>
 			<section id="ucp_signature">
 				<title>Aláírás</title>
-				<para>TODO: Explain the settings you can edit here. Link to the BBcode explanation of the Posting section would be best.</para>
+				<para>Your signature appears, at your option, below every post you make. Signatures may be formatted using <link linkend="posting_bbcodes">BBCode</link>. The board administrator may specifiy a maximum length for signatures. You can check this limit by noting the line <guilabel>There is a x character limit.</guilabel> above the signature editing textbox, where x is the currently set limit.</para>
 			</section>
 			<section id="ucp_avatar">
 				<title>Avatar</title>
-				<para>TODO: Explain the settings you can edit here. Experience may differ on forum settings again. Short paragraph about the avatar gallery.</para>
+				<para>Your avatar is an image the displays with every post you make. Depending on board settings, avatars may be completely disabled, or may appear in one (or more) of three forms: "<guilabel>Upload from your machine</guilabel>", "<guilabel>Upload from a URL</guilabel>", and "<guilabel>Link off-site</guilabel>.</guilabel></para>
+				<para>
+					<itemizedlist>
+						<listitem><para><guilabel>Upload from your machine</guilabel> - You may upload an avatar from your machine to be hosted on the board's server.</para></listitem>
+						<listitem><para><guilabel>Upload from a URL</guilabel> - You may specify the URL of an existing image. This will cause the image to be copied to the board's server and hosted on it.</para></listitem>
+						<listitem><para><guilabel>Link off-site</guilabel> - You may specify the URL of an existing image. This will not cause the image to be hosted on the board's server, but rather hotlinked to its current location.</para></listitem>
+					</itemizedlist>
+				</para>
+				<parap>Additionally, a board administrator may opt to provide an avatar gallery for users to make use of. These images are pre-selected by the administrator and are able to be used by any of a board's members.</parap>
 			</section>
 		</section>
 		<section id="ucp_preferences">
 			<title>Fórum beállítások</title>
-			<para>TODO: Short explanation of what this section is for.</para>
-			<section id="ucp_personal">
-				<title>Személyes</title>
-				<para>TODO: Explain the settings you can edit here. The date setting will offer presets, so a link to the <ulink url="http://www.php.net/date">php.net date function</ulink> for advanced users should be enough.</para>
-			</section>
-			<section id="ucp_viewing">
-				<title>Megjelenítés</title>
-				<para>TODO: Explain the settings you can edit here. </para>
+			<para>Preferences allow you to dictate various behaviours of the phpBB software in regards to your interaction with it.</para>
+			<section id="ucp_global">
+				<title>Általános</title>
+				<para>Global settings control various overall interactions with the phpBB software.</para>
+				<para>
+					<itemizedlist>
+						<listitem><para><guilabel>Users can contact by e-mail</guilabel> - If <guilabel>Yes</guilabel> is selected, users can e-mail you via the "e-mail" button in your profile.</para></listitem>
+						<listitem><para><guilabel>Administratos can e-mail me information</guilabel> - If <guilabel>Yes</guilabel> is selected, you will receive mass-emails sent out by the board administrator.</para></listitem>
+						<listitem><para><guilabel>Allow users to send you private messages</guilabel> -  If <guilabel>Yes</guilabel> is selected, users can send you private messages via the board.</para></listitem>
+						<listitem><para><guilabel>Hide my online status</guilabel> - If <guilabel>Yes</guilabel> is selected, your online status will be hidden to users. Note that administrators and moderators will still be able to view your online status.</para></listitem>
+						<listitem><para><guilabel>Notify me on new privates messages</guilabel> - If <guilabel>Yes</guilabel> is selected, you will receive an email when you receive a new private messages.</para></listitem>
+						<listitem><para><guilabel>Pop up window on new private messages</guilabel> - If <guilabel>Yes</guilabel> is selected, a pop-up window will appear on the board to alert you of new private messages.</para></listitem>
+						<listitem><para><guilabel>My language</guilabel> - Allows you to specify what language pack the board utilizes. Note that this setting applies only to board language strings; posts will be rendered in the language they were written.</para></listitem>
+						<listitem><para><guilabel>My timezone</guilabel> - Allows you to specify what timezone board times should appear in.</para></listitem>
+						<listitem><para><guilabel>Summer Time / DST is in effect</guilabel> - If  <guilabel>Yes</guilabel> is selected, board times will appear one hour earlier than the selected setting. Note that this setting is not updated automatically; you will have to change it manually when needed.</para></listitem>
+						<listitem><para><guilabel>My date format</guilabel> - Controls what format times are rendered in. You may select one of the options in the dropdown box -- advanced users may select  "<guilabel>Custom</guilabel>" and input a custom format (in the format of the <ulink url="http://www.php.net/date">php.net date function</ulink>).</para></listitem>
+					</itemizedlist>
+				</para>
 			</section>
 			<section id="ucp_posting">
 				<title>Hozzászólás</title>
+				<para>Posting settings control the default settings of the posting editors when you create a post. Note that these options are controllable on an individual basis while posting.</para>
+				<para>
+					<itemizedlist>
+						<listitem><para><guilabel>Enable BBCode by default</guilabel> - When <guilabel>Yes</guilabel> is selected, BBCode is enabled within the post editor.</para></listitem>
+						<listitem><para><guilabel>Enable smiles by default</guilabel> - When <guilabel>Yes</guilabel> is selected, smiles will be rendered within your posts.</para></listitem>
+						<listitem><para><guilabel>Attach my signature by default</guilabel> - When <guilabel>Yes</guilabel> is selected, your signature will be appended to your posts.</para></listitem>
+						<listitem><para><guilabel>Notify me upon replies by default</guilabel> - When <guilabel>yes</guilabel> is selected, you will be notified by email when a reply to your post is made.</para></listitem>
+					</itemizedlist>
+					
+				</para>
+			</section>
+			<section id="ucp_display">
+				<title>Megjelenítés</title>
 				<para>TODO: Explain the settings you can edit here. </para>
 			</section>
 		</section>
@@ -185,7 +227,7 @@
 		<section id="posting_smilies">
 			<title>Emotikonok</title>
 			<para>Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. To use Smiles, certain characters are put together to get the desired output. For example, typing :) will insert [insert smilie here], ;) will insert [insert wink smilie here], etc. Other smilies require the format :texthere: to display. For example, :roll: will insert smilie whose eyes are rolling: [insert rolling smilie here], and :cry: will insert a smilie who is crying: [insert crying smilie here].</para>
-			<para>In many cases you can also select which smilie you'd like to insert by clicking its picture to the righthand side of the Post Content text box. When clicked, the smilie's characters will appear at the current location of the curser in the text box.</para>
+			<para>In many cases you can also select which smilie you'd like to insert by clicking its picture on the right side of the Post Content text box. When clicked, the smilie's characters will appear at the current location of the curser in the text box.</para>
 			<para>If you wish to be able to use these characters in your post, but not have them appear as smilies, please see <link linkend="posting_options">Posting Options</link>.</para>
 		</section>
 		
