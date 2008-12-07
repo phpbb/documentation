@@ -48,8 +48,11 @@
 						<para>PostgreSQL 7.x of hoger</para>
 					</listitem>
 					<listitem>
-						<para>SQLite</para>
+						<para>SQLite 2</para>
 					</listitem>
+					<listitem>
+                        <para>GD-ondersteuning</para>
+                    </listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem>
@@ -262,15 +265,15 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Setting permissions</title>
+		<title>Instellen van permissies</title>
 		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB3 Olympus can be adjusted with permissions.</para>
 
 		<section id="quick_permissions_types">
-			<title>Permission types</title>
+			<title>Permissie types</title>
 			<para>There are four different types of permissions:</para>
 			<orderedlist>
 				<listitem id="quick_permission_types_user">
@@ -302,7 +305,7 @@
 			<para>You can appoint moderators either globally or locally. If you trust some of your users enough, you can make them Global Moderators. They can moderate all forums they have access to with the permissions you assign to them. Compared to that, local moderators will only be able to moderate the number of forums you select for them. They can also have different moderator permissions for different forums. While they are able to delete topics in one forum, they may not be allowed to do it in another. Global moderators will have the same permissions for all forums.</para>
 		</section>
 		<section id="quick_permissions_forum">
-			<title>Setting forum permissions</title>
+			<title>Instellen van forumpermissies</title>
 			<para>To set the permissions for your new forum we need the local <guilabel>Forum Based Permissions</guilabel>. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the <guilabel>Group</guilabel> or <guilabel>User Forum Permissions</guilabel>. They will allow you to select one group or user, and then select the forums you want to set the permissions for. </para>
 			<para>But for this Quick Start Guide we will concentrate on the <guilabel>Forum Permissions</guilabel>. Instead of selecting a user or group, you select the forums you want to change first. You can select them either by selecting the forums manually in the top list, or by single forum and single forum plus subforums respectively in the lower pull down menus. <guilabel>Submit</guilabel> will bring you to the next page.</para>
 			<figure id="img_quick_permissions_select">
@@ -322,7 +325,7 @@
 			<para>Both ways only differ in the way you set them. They both share the same interface.</para>
 		</section>
 		<section id="quick_permissions_manual">
-			<title>Manual permissions</title>
+			<title>Handmatige permissies</title>
 			<para>This is the most important aspect of permissions. You need to understand this to properly work with them. There are three different values that a permission can take:</para>
 			<itemizedlist>
 				<listitem>
@@ -349,7 +352,7 @@
 			</figure>
 		</section>
 		<section id="quick_permissions_roles">
-			<title>Permissions roles</title>
+			<title>Permissierollen</title>
 			<para>phpBB3 Olympus ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
 			<figure id="img_quick_permissions_roles">
 				<title>Permission roles</title>
@@ -368,11 +371,11 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>zeroK</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Assign moderators to forums</title>
+			<title>Het toewijzen van moderators aan forums</title>
 			<para>A quite common use case for permissions and roles are forum moderation. phpBB3 makes assigning users as moderators of forums really simple.</para>
 			<para>As you might have already guessed, moderation of specific forums is a local setting, so you can find <guilabel>Forum Moderators</guilabel> in the section for <guilabel>Forum Based Permissions</guilabel>. First of all, you will have to select for forum (or forums) you want to assign new moderators to. This form is divided into three areas. In the first one, you can select multiple forums (select multiple by holding down the CTRL button on your keyboard, or cmd (under MacOS X)), where the moderator settings you will set in the following form will only apply to these exact forums. The second area allows you to select only one forum but all the following settings will apply not only to this forum but also all its subforums. Finally, the third area's selection will only affect exactly this forum.</para>
 			<para>After selecting the forums and hitting <guilabel>Submit</guilabel>, you will be greeted by a form you should already be familiar with from one of the previous sections in this guide: <xref linkend="img_quick_permissions_select"/>. Here you can select the users or groups that should get some kind of moderation power over the selected forums. So go ahead: Select some users and/or groups and hit the <guilabel>Set Permissions</guilabel> button.</para>
@@ -421,7 +424,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>zeroK</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -440,8 +443,8 @@
 
 	</section>
 	<section id="quick_support">
-		<title>Obtaining support</title>
-		<para>The <ulink url="http://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="http://www.phpbb.com/phpBB/viewforum.php?f=1">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="http://www.phpbb.com/phpBB/viewtopic.php?t=128123">Support Request Template</ulink> with the information it asks for.</para>
+		<title>verkijgen van support</title>
+		<para>The <ulink url="http://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="http://www.phpbb.com/phpBB/viewforum.php?f=46">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&t=543515">Support Request Template</ulink> with the information it asks for.</para>
 
 		<para>In addition to the support forum on www.phpbb.com, we provide a <ulink url="http://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit articles on common answers to questions. Our community has taken a lot of time in writing these articles, so be sure to check them out.</para>
 

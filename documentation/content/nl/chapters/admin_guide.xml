@@ -266,7 +266,7 @@
 				</note>
 				
 				<itemizedlist>
-					<title>Jabber settings</title>
+					<title>Jabber-instellingen</title>
 					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
 					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
@@ -283,10 +283,6 @@
 					<author>
 						<othername></othername>
 					</author>
-					
-					<author>
-						<othername></othername>
-					</author>
 				</authorgroup>
 			</sectioninfo>			
 			<title>Serverconfiguratie</title>
@@ -295,11 +291,7 @@
 			<section id="acp_server_cookies">
 				<sectioninfo>
 					<authorgroup>
-						<author>
-							<othername></othername>
-						</author>
-						
-						<author>
+                        <author>
 							<othername></othername>
 						</author>
 					</authorgroup>
@@ -328,10 +320,6 @@
 			<section id="acp_server_settings">
 				<sectioninfo>
 					<authorgroup>
-						<author>
-							<othername></othername>
-						</author>
-						
 						<author>
 							<othername></othername>
 						</author>
@@ -971,10 +959,6 @@
 				<author>
 					<othername></othername>
 				</author>
-				
-				<author>
-					<othername></othername>
-				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Users Management</title>
@@ -993,7 +977,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -1087,7 +1071,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -1129,7 +1113,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -1378,7 +1362,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -1405,7 +1389,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername></othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -1509,7 +1493,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -1526,7 +1510,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername></othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -1561,10 +1545,6 @@
 				<author>
 					<othername></othername>
 				</author>
-				
-				<author>
-					<othername></othername>
-				</author>
 			</authorgroup>
 		</sectioninfo>
 		
@@ -1575,10 +1555,6 @@
 		<section id="acp_groups_types">
 			<sectioninfo>
 				<authorgroup>
-					<author>
-						<othername></othername>
-					</author>
-					
 					<author>
 						<othername></othername>
 					</author>
@@ -1697,7 +1673,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername></othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -1708,10 +1684,6 @@
 	<section id="acp_styles">
 		<sectioninfo>
 			<authorgroup>
-				<author>
-					<othername></othername>
-				</author>
-				
 				<author>
 					<othername></othername>
 				</author>
@@ -1748,10 +1720,6 @@
 				<author>
 					<othername></othername>
 				</author>
-				
-				<author>
-					<othername></othername>
-				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Forumonderhoud</title>
@@ -1763,9 +1731,6 @@
 		<section id="acp_maintenance_logs">
 			<sectioninfo>
 				<authorgroup>
-					<author>
-						<othername></othername>
-					</author>
 					<author>
 						<othername></othername>
 					</author>
