@@ -48,7 +48,7 @@
 		<para>As mentioned above, this is only the simplest case. The board can be configured to add some additional steps to the registration process. </para>
 		<itemizedlist>
 			<listitem>
-				<para>If you get a site where you have to select whether you were born before or after a specified date, the administrator has enabled this to comply with the U.S. <acronym>COOPA</acronym> act. If you are younger than 13 years, your account will stay inactive until it is approved by a parent or guardian. You will receive an e-mail where the next steps required for your account activation are described. </para>
+				<para>If you get a site where you have to select whether you were born before or after a specified date, the administrator has enabled this to comply with the U.S. <acronym>COPPA</acronym> act. If you are younger than 13 years, your account will stay inactive until it is approved by a parent or guardian. You will receive an e-mail where the next steps required for your account activation are described. </para>
 			</listitem>
 			<listitem>
 				<para>If you see in the form where you can specify your username, password etc. a graphic with some wierd looking characters, then you see the so called <emphasis>Visual Confirmation</emphasis>. Simply enter these characters into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. </para>
