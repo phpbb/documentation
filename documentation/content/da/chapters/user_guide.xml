@@ -51,6 +51,9 @@
 				<para>I nogle tilfælde kan du blive bedt om at vælge om du er over eller under en bestemt alder. Hvis det er tilfældet, er det fordi administratoren har valgt at følge den amerikanske lov <acronym>COPPA</acronym>. Personer under 13 år skal have en forældre eller værges godkendelse for at tilmelde sig offentlige boards. Der fremsendes en email med yderligere instrukser.</para>
 			</listitem>
 			<listitem>
+				<para>If you see in the form where you can specify your username, password etc. a graphic with some wierd looking characters, then you see the so called <emphasis>Visual Confirmation</emphasis>. Simply enter these characters into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. </para>
+			</listitem>
+			<listitem>
 				<para>Administratoren kan også have valgt at din nye konto skal aktiveres. Den ene mulighed er at du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er tilfældet vil du se denne meddelelse:<blockquote>
 						<para>Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</para>
 					</blockquote>
@@ -66,6 +69,9 @@
 			<authorgroup>
 				<author>
 					<othername>Heimidal</othername>
+				</author>
+				<author>
+					<othername>iWisdom</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -92,7 +98,7 @@
 			
 			<section id="ucp_subscriptions">
 				<title>Overvågning</title>
-				<para>Du kan vælge at overvåge udvalgte fora og emner, og hermed modtage advisering når der indsendes nye emner eller indlæg i disse. En overvågning oprettes via forummet eller emnet ved at klikke på linket &quot;Overvåg forum/emen&quot; nederst på siden.</para>
+				<para>Du kan vælge at overvåge udvalgte fora og emner, og hermed modtage advisering når der indsendes nye emner eller indlæg i disse. En overvågning oprettes via forummet eller emnet ved at klikke på linket &quot;Overvåg forum/emne&quot; nederst på siden.</para>
 				<para>Man kan fjerne en overvågning fra UCP ved at markere overvågningen og herefter klikke på knappen <guilabel>Stop overvågning af markeret</guilabel> nederst.</para>
 			</section>
 			<section id="ucp_bookmarks">
@@ -109,37 +115,76 @@
 		</section>
 		<section id="ucp_profile">
 			<title>Profil</title>
-			<para>I denne fane kan du indstille og ændre dine personlige profilinformationer. En stor del af disse data kan ses af andre tilmeldte brugere på boardet, og er derfor med til at tegne eller præsentere dig offentligt.</para>
-			<section>
-				<title>Profil</title>
-				<para>Information her kan være synlig for andre tilmeldte brugere. Vær derfor påpasselig med personlige oplysninger som ikke ønskes ud i det offentlige rum.</para>
-			</section>
-			<section>
-				<title>Kontoindstillinger</title>
-				<para>TODO: Explain the settings you can edit here.</para>
+			<para>I denne fane kan du indstille og ændre dine personlige profilinformationer. Disse informationer kan ses af andre tilmeldte brugere på boardet, og er derfor med til at tegne eller præsentere dig offentligt. (Denne information er adskilt fra dine personlige indstillinger som bestemmer hvordan du vil have boardet præsenteret. Derfor denne adskillelse).</para>
+			<section id="ucp_profile_info">
+				<title>Redigér profil</title>
+				<para>Indstillingerne vises for tilmeldte brugere når der klikkes på din profil.</para>
+				<itemizedlist>
+					<listitem><para><guilabel>ICQ-nummer</guilabel>: Dit kontonummer hos <ulink url="http://www.icq.com/">ICQ</ulink> system.</para></listitem>
+					<listitem><para><guilabel>AOL Instant Messenger</guilabel>: Dit skærmnavn tilknyttet <ulink url="http://aim.com">AOL Instant Messenger</ulink>.</para></listitem>
+					<listitem><para><guilabel>MSN Messenger</guilabel>: Din emailadresse tilknyttet <ulink url="http://home.live.com/">MSN Messenger (Windows Live)</ulink> servicen.</para></listitem>
+					<listitem><para><guilabel>Yahoo Messenger</guilabel>: Dit brugernavn hos <ulink url="http://messenger.yahoo.com/">Yahoo Messenger</ulink>.</para></listitem>
+					<listitem><para><guilabel>Jabberadresse</guilabel>: Dit brugernavn hos <ulink url="http://www.jabber.org/">Jabber</ulink> service eller andre jabberservices.</para></listitem>
+					<listitem><para><guilabel>Hjemmeside</guilabel>: Din hjemmesideadresse. Angives med den rette protokol, f.eks http://minhjemmeside.dk.</para></listitem>
+					<listitem><para><guilabel>Geografisk sted</guilabel>: Hvor du normalt befinder dig. Bemærk at denne information vises i din profil i hvert indlæg du har indsendt. Da gæster ofte også kan læse indlæg, bør du muligvis ikke være alt for detaljeret her.</para></listitem>
+					<listitem><para><guilabel>Beskæftigelse</guilabel>: Kan kun ses af tilmeldte brugere, når der klikkes på din profil.</para></listitem>
+					<listitem><para><guilabel>Interesser</guilabel>: Dine personlige interessser. Kan også kun læses af tilmeldte bruger, når der klikkes på din profil.</para></listitem>
+					<listitem><para><guilabel>Fødselsdag</guilabel>: Din fødselsdag kan vises på boardindekset. Angives kun dag og måned vises din alder ikke, kun at du har fødselsdag. Angiver du fødselsår, vises din alder desuden i din profil.</para></listitem>
+				</itemizedlist>
 			</section>
 			<section id="ucp_signature">
 				<title>Signatur</title>
-				<para>TODO: Explain the settings you can edit here. Link to the BBcode explanation of the Posting section would be best.</para>
+				<para>Du kan vælge at din signatur automatisk tilføjes nederst i alle indlæg du skriver. Signaturer kan formateres ved anvendelse af <link linkend="posting_bbcodes">BBkode</link>. Boardadministratoren kan have sat begrænsninger for signaturers længde. Er der begrænsning vil denne vises med teksten <guilabel>...ikke må være længere end x tegn.</guilabel> over feltet hvor signaturen skrives, hvor x er grænsen.</para>
 			</section>
 			<section id="ucp_avatar">
 				<title>Avatar</title>
-				<para>TODO: Explain the settings you can edit here. Experience may differ on forum settings again. Short paragraph about the avatar gallery.</para>
+				<para>Din avatar er et lille billede som vises i din profil ved hvert indlæg du skriver. Afhængig af boardets indstillinger kan brugen af  avatars være slået fra. Din avatar tilknyttes din profil på en eller flere måder: &quot;<guilabel>Upload fra din maskine</guilabel>&quot;, &quot;<guilabel>Upload fra ekstern URL</guilabel>&quot; og &quot;<guilabel>Link til ekstern placering</guilabel>&quot;.</guilabel></para>
+				<para>
+					<itemizedlist>
+						<listitem><para><guilabel>Upload fra din maskine</guilabel>: Du kan uploade en avatar fra din maskine og den gemmes på boardets server.</para></listitem>
+						<listitem><para><guilabel>Upload fra ekstern URL</guilabel>: Du kan angive URL til et eksisterende billede. Herefter kopieres dette til boardets server og gemmes her.</para></listitem>
+						<listitem><para><guilabel>Link til ekstern placering</guilabel>: Du kan angive URL til et eksisterende billede. Det gemmes ikke på boardets server, der linkes blot til dette.</para></listitem>
+					</itemizedlist>
+				</para>
+				<parap>Yderligere kan boardadministrator have givet mulighed for at vælge i et avatargalleri. Disse billeder er tilgængelige for alle tilmeldte brugere på boardet.</parap>
 			</section>
 		</section>
 		<section id="ucp_preferences">
 			<title>Boardindstillinger</title>
-			<para>TODO: Short explanation of what this section is for.</para>
-			<section id="ucp_personal">
-				<title>Globale indstillinger</title>
-				<para>TODO: Explain the settings you can edit here. The date setting will offer presets, so a link to the <ulink url="http://www.php.net/date">php.net date function</ulink> for advanced users should be enough.</para>
-			</section>
-			<section id="ucp_viewing">
-				<title>Visningindstillinger</title>
-				<para>TODO: Explain the settings you can edit here. </para>
+			<para>Indstillinger som giver dig mulighed for at tilpasse hvordan boardet skal udføre bestemte funktioner for dig.</para>
+			<section id="ucp_global">
+				<title>Globalt</title>
+				<para>Globale indstillinger bestemmer hvordan de overordnede funktioner udføres for dig.</para>
+				<para>
+					<itemizedlist>
+						<listitem><para><guilabel>Brugere kan kontakte mig pr. email</guilabel>: Vælges <guilabel>Ja</guilabel> kan andre brugere sende email til dig via &quot;email&quot; knappen i din profil.</para></listitem>
+						<listitem><para><guilabel>Administratorer kan kontakte mig pr. email</guilabel>: Vælges <guilabel>Ja</guilabel> modtager du masse-email afsendt af boardadministrator.</para></listitem>
+						<listitem><para><guilabel>Brugere må sende mig private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> kan andre brugere sende dig private beskeder via boardet.</para></listitem>
+						<listitem><para><guilabel>Skjul min onlinestatus</guilabel>: Vælges <guilabel>Ja</guilabel> skjules din onlinestatus for andre brugere. Administratorer og redaktører vil stadig kunne se din onlinestatus.</para></listitem>
+						<listitem><para><guilabel>Advisér mig ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> afsendes en email fra boardet med besked om at du har modtaget en ny privat besked.</para></listitem>
+						<listitem><para><guilabel>Popupvindue ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> adviseres du med et popupvindue om nye private beskeder.</para></listitem>
+						<listitem><para><guilabel>Mit sprog</guilabel>: I dropdownmenuen vises de sprog der er installeret på boardet, du kan vælge hvilket af disse du ønsker at anvende på boardet. Bemærk at indlæg skrevet på et andet sprog stadig bliver vist på dette.</para></listitem>
+						<listitem><para><guilabel>Min tidszone</guilabel>: Du indstiller her den tidszone du befinder dig i.</para></listitem>
+						<listitem><para><guilabel>Sommertid/DST er slået til</guilabel>: Vælges <guilabel>Ja</guilabel> vises tider en time tidligere end den valgte tidszone. Bemærk at denne indstilling skal ændres manuelt hved hvert skift fra sommer- til vintertid og omvendt.</para></listitem>
+						<listitem><para><guilabel>Mit datoformat</guilabel>: Bestemmer hvordan dato og tid vises. Du kan vælge mellem de tilgængelige standardformater i dropdownmenuen. Ønsker du et andet format end de tilgængelig, vælges &quot;<guilabel>Valgfri...</guilabel>&quot; og du definerer selv formatet. Syntaksen er identisk med PHP <ulink url="http://www.php.net/date">date</ulink>-funktionen.</para></listitem>
+					</itemizedlist>
+				</para>
 			</section>
 			<section id="ucp_posting">
 				<title>Skriveindstillinger</title>
+				<para>Disse indstillinger bestemmer standardvalg når du skriver nye indlæg. Bemærk at hver af indstillingerne kan ændres individuel når et indlæg skrives.</para>
+				<para>
+					<itemizedlist>
+						<listitem><para><guilabel>Slå BBkode til som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere BBkode ved skrivning af indlæg.</para></listitem>
+						<listitem><para><guilabel>Slå smilies til som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere smilies ved skrivning af indlæg.</para></listitem>
+						<listitem><para><guilabel>Tilføj min signatur som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få tilføjet signatur i indlæg.</para></listitem>
+						<listitem><para><guilabel>Advisér mig ved svar som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få advisering når indlæg besvares.</para></listitem>
+					</itemizedlist>
+					
+				</para>
+			</section>
+			<section id="ucp_display">
+				<title>Display</title>
 				<para>TODO: Explain the settings you can edit here. </para>
 			</section>
 		</section>
