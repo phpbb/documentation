@@ -691,7 +691,7 @@
 		<title>Meddelelser</title>
 		
 		<para>Fora er ingenting hvis ikke der er indhold heri. Indholdet skabes og indsendes af dine brugere, derfor er det vigtigt af indstillinger for hvordan meddelelser kan indsendes er korrekt for dit board. For at ændre disse indstillinger vælges fanebladet <guimenuitem>Meddelelser</guimenuitem>.</para>
-		<para>The first page you are greeted with after getting to the <guimenuitem>Meddelelser</guimenuitem> section is <guilabel>BBkoder</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
+		<para>Den første side i sektionen <guimenuitem>Meddelelser</guimenuitem> er <guilabel>BBkoder</guilabel>. De øvrige sider er delt i to hovedgrupper: <guilabel>Beskeder</guilabel> og <guilabel>Vedhæftede filer</guilabel>. <guimenuitem>Private beskeder</guimenuitem>, <guimenuitem>Emneikoner</guimenuitem>, <guimenuitem>Smilies</guimenuitem> og <guimenuitem>Ordcensur</guimenuitem> er relaterede til meddelelser. <guimenuitem>Vedhæftede filer</guimenuitem>, <guimenuitem>Administrér filtyper</guimenuitem>, <guimenuitem>Administrér filtypegrupper</guimenuitem> og <guimenuitem>Vildfarne vedhæftede filer</guimenuitem> er alle relaterede til vedhæftede filer.</para>
 	
 		<section id="acp_posting_bbcodes">
 			<sectioninfo>
@@ -701,40 +701,40 @@
 					</author>
 					
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>BBCodes</title>
+			<title>BBkoder</title>
 			
-			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
-			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
+			<para><glossterm>BBkoder</glossterm> er en speciel måde at formatere indlæg på svarende til HTML. phpBB 3.0.x giver mulighed for oprette dine egne BBkoder. Nedenfor gennemgås et eksempel.</para>
+			<para>Det er nemt at oprette en ny BBkode. Gøres det korrekt, kan dine brugere umiddelbart gøre brug af denne i indlæg. Begynd med at klikke på knappen <guilabel>Tilføj en ny BBkode</guilabel>. Der er fire overvejelser der bør gøres når tilføjes en BBkode: Hvordan du ønsker dine brugere skal anvende af den, hvilken HTML-kode BBkoden skal gøre brug af (brugere ser ikke dette), hvilken kort beskrivelse ønsker du til BBkode og om der skal vises en knap for den nye BBkode ved siden af de allerede eksisterende. Når alle indstillinger er foretaget klikkes på  <guilabel>Udfør</guilabel> for at tilføje din nye BBkode.</para>
 			
 			<figure id="img_acp_creating_bbcodes">
-				<title>Creating BBCodes</title>
+				<title>Tilføj BBkoder</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/creating_bbcodes.png"/>
 					</imageobject>
 					<caption>
-						<para>Creating a new BBCode. In this example, we are creating a new [font] BBCode that will allow users to specify the font face of the specified text.</para>
+						<para>I dette eksempel opretter vi ny [font] BBkode som vil give brugere mulighed for at definere en fonttype for den skrevne tekst.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
-				<code>[font={TEXT1}]{TEXT2}[/font]</code>
-				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>,while <guilabel>FONTNAME</guilabel> represents whatever font name the user types in.
+			<para>I feltet <guilabel>Brug af BBkode</guilabel> specificeres hvordan brugere skal gøre brug af BBkoden. For at kunne vælge en fonttype skrives i feltet
+				<code>[font={SIMPLETEXT1}]{TEXT2}[/font]</code>
+				[font] BBkoden er nu defineret sådan at brugerens skrevne tekst repræsenteres af tokenet <guilabel>TEXT2</guilabel> og selve skrifttypens  <guilabel>fontnavn</guilabel> af <guilabel>SIMPLETEXT1</guilabel>. Brugere kan hermed selv definere fonttypen i et indlæg ved at skrive [font=verdana]indlægstekst[/font].
 			</para>
-			<para>In the <guilabel>HTML Replacement</guilabel>form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
-				<code>&lt;span style="font-family: {TEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
-				This HTML code will be used to actually format the user's text.
+			<para>Før BBkoden bliver virksom mangler vi at definere den HTML-kode vores nye BBkode skal gøre brug af. I feltet<guilabel>HTML-erstatning</guilabel> skal vi i dette eksempel skrive
+				<code>&lt;span style="font-family: {SIMPLETEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
+				Bemærk at vi i dette eksempel anvender tokenet {TEXT2} fremfor {SIMPLETEXT2}. Selvom det ikke anbefales at anvende {TEXT} i HTML-tags, er vi nødt til det her for også at kunne formatere de danske specialtegn æ, ø og å med denne BBkode.
 			</para>
-			<para>The third option to consider when adding a custom BBCode is what sort of help message you want to display to your users if they choose to use the new BBCode. Ideally, the helpline message is a short note or tip for the user using the BBCode. This message will be displayed below the BBCode row on the posting screens.</para>
+			<para>I næste felt <guilabel>Hjælpelinie</guilabel> kan forfattes en kort note eller et tip som vises under rækken med BBkoder når der skrives indlæg.</para>
 			<note>
-				<para>If the next option described, <guilabel>Display on posting</guilabel>, isn't enabled, the helpline message will not be displayed.</para>
+				<para>Er <guilabel>Vis på siden hvor indlæg skrives</guilabel> ikke tilvalgt, vises hjælpelinien ikke.</para>
 			</note>
-			<para>Lastly, when adding a new BBCode, you can decide whether or not you want an actual BBCode button for your new BBCode to be displayed on the posting screens. If you want this, then check the <guilabel>Display on posting</guilabel> checkbox.</para>
+			<para>Til sidst bestemmes om den nye BBode skal vises for brugere når der skrives indlæg. Afmærk feltet udfor <guilabel>Vis på siden hvor indlæg skrives</guilabel> for at aktivere visningen.</para>
 		</section>
 		
 		<section id="acp_posting_pm_settings">
@@ -745,34 +745,35 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Private message settings</title>
+			<title>Private beskeder</title>
 			
-			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+			<para>Her kan alle standardindstillinger i forbindelse med brugen af <glossterm>private beskeder</glossterm> ændres. Nedenfor gennemgås alle indstillingerne. Ændres indstillingerne, klikkes på <guilabel>Udfør</guilabel> nederst på siden.</para>
 			<itemizedlist>
-				<title>General settings</title>
-				<listitem><para><guilabel>Private messaging</guilabel>: You can enable to disable your board's private messaging system. If you want to enable it, select <guilabel>Yes</guilabel>.</para></listitem>
-				<listitem><para><guilabel>Max private message folders</guilabel>: This is the maximum number of new private message folders your users can each create.</para></listitem>
-				<listitem><para><guilabel>Max private messages per box</guilabel>: This is the maximum number of private messages your users can have in each of their folders.</para></listitem>
-				<listitem><para><guilabel>Full folder default action</guilabel>: Sometimes your users want to send each other a private message, but the intended recipient has a full folder. This setting will define exactly what will happen to the sent message. You can either set it so that an old message will be deleted to make room for the new message, or the new messages will be held back until the recipient makes room in his inbox. Note that the default action for the <guilabel>Sentbox</guilabel> is the deletion of old messages.</para></listitem>
-				<listitem><para><guilabel>Limit editing time</guilabel>: Users are usually allowed to edit their sent private messages before the recipient reads it, even if it's already in their outbox. You can control the amount of time your users have to edit sent private messages.</para></listitem>
+				<title>Generelle indstillinger</title>
+				<listitem><para><guilabel>Tillad private beskeder</guilabel>: Vælg <guilabel>Yes</guilabel> for at aktivere brugen af private beskeder på boardet.</para></listitem>
+				<listitem><para><guilabel>Maksimalt antal mapper til private beskeder</guilabel>: Det højeste antal mapper brugere kan oprette til opbevarelse af private beskeder.</para></listitem>
+				<listitem><para><guilabel>Maksimalt antal private beskeder pr. mappe</guilabel>: Det højeste antal beskeder brugere kan opbevare i hver af deres mapper.</para></listitem>
+				<listitem><para><guilabel>Handling ved fuld mappe</guilabel>: Når brugere er nået det højest antal tilladte beskeder i en mappe, bestemmer denne indstilling hvordan boardet håndterer denne situation. Du kan vælge at ældste besked automatisk slettes i mappen, eller at nye beskeder holdes tilbage indtil modtager har gjort plads i mappen. Bemærk at i mappen <guilabel>Sendte beskeder</guilabel> er standardhandlingen altid at slette ældste beskeder.</para></listitem>
+				<listitem><para><guilabel>Begræns redigeringstid</guilabel>: Som standard kan en sendt besked redigeres indtil modtageren har læst denne. Her kan redigeringstiden begrænses med et tidsrum.</para></listitem>
+				<listitem><para><guilabel>Maximalt antal tilladte modtagere</guilabel>: Her kan sættes en grænse for hvor mange modtagere brugere kan sende samme besked til. Indstillingen kan sættes pr. brugergruppe under gruppeadministration.</para></listitem>
 			</itemizedlist>	
 			
 			<itemizedlist>
-				<title>General options</title>
-				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.0, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
-				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
-				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
-				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow attachments to be used in private messages.</para></listitem>
-				<listitem><para><guilabel>Allow signature in private messages</guilabel>: Select <guilabel>Yes</guilabel> to let your users include their <glossterm>signature</glossterm> in their private messages..</para></listitem>
-				<listitem><para><guilabel>Allow print view in private messages</guilabel>: Another new feature in phpBB 3.0 is a printer-friendly view. Select <guilabel>Yes</guilabel> to allow your users to view any of their PMs in print view.</para></listitem>
-				<listitem><para><guilabel>Allow forwarding in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow your users to forward private messages.</para></listitem>
-				<listitem><para><guilabel>Allow use of [img] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline images in their private messages.</para></listitem>
-				<listitem><para><guilabel>Allow use of [flash] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline Macromedia Flash objects in their private messages.</para></listitem>
-				<listitem><para><guilabel>Enable use of topic icons in private messages</guilabel>: Select <guilabel>Yes</guilabel> if you want to enable your users to include topic icons with their private messages. (Topic icons are displayed next to the private messages' titles.).</para></listitem>
+				<title>Generelle valg</title>
+				<listitem><para><guilabel>Tillad samtidig afsending til flere modtagere</guilabel>: I phpBB 3.0.x er det muligt at sende en privat besked til flere modtagere eller grupper. Vælg <guilabel>Ja</guilabel> for tillade dette.</para></listitem>
+				<listitem><para><guilabel>Tillad BBkode i private beskeder</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade brugen af BBkode.</para></listitem>
+				<listitem><para><guilabel>Tillad smilies i private beskeder</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade brugen af smilies.</para></listitem>
+				<listitem><para><guilabel>Tillad vedhæftede filer i private beskeder</guilabel>: Vælg <guilabel>Ja</guilabel> for at brugere kan vedhæfte filer.</para></listitem>
+				<listitem><para><guilabel>Tillad signatur i private beskeder</guilabel>: Vælg <guilabel>Ja</guilabel> for at <glossterm>signatur</glossterm> kan tilføjes.</para></listitem>
+				<listitem><para><guilabel>Tillad printervenlig visning af private beskeder</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade printervenlig visning af private beskeder.</para></listitem>
+				<listitem><para><guilabel>Tillad videresending af private beskeder</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade videresending af modtagne private beskeder.</para></listitem>
+				<listitem><para><guilabel>Tillad brug af BBkode-tag'en [IMG]</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade at billeder kan vises inline i private beskeder.</para></listitem>
+				<listitem><para><guilabel>Tillad brug af BBkode-tag'en [FLASH]</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade at Macromedia Flash-objekter kan vises inline i private beskeder.</para></listitem>
+				<listitem><para><guilabel>Tillad brug af emneikoner</guilabel>: Vælg <guilabel>Ja</guilabel> hvis du ønsker at brugere skal kunne gøre brug af emneikoner i private beskeder. Ikoner vises ved siden af den private beskeds emnetitel.</para></listitem>
 			</itemizedlist>
 			
 			<tip>
-				<para>If you want to set any of the above numerical settings so that the setting will allow unlimited amounts of the item, set the numerical setting to 0.</para>
+				<para>Ønsker du ikke at have begrænsninger i generelle indstillinger, kan alle numeriske værdier angives til 0, herved deaktiveres enhver begrænsning.</para>
 			</tip>
 		</section>
 		
