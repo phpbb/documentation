@@ -4,40 +4,27 @@
 <chapter id="glossary">
 	<?dbhtml dir="glossary" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id$</releaseinfo>
+		<releaseinfo>$Id: glossary.xml 140 2007-07-16 16:41:42Z mhobbit $</releaseinfo>
 		<copyright>
-			<year>2006</year>
-			<holder>phpBB Group</holder>
+			<year>2008</year>
+			<holder>phpBB.cz</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Glossary</title>
+	<title>Slovníček pojmů</title>
 	<abstract>
-		<para>A guide to the terms used in the phpBB Documentation and on the forums.</para>
+		<para>Vysvětlení pojmů používaných v dokumentaci a na fóru.</para>
 	</abstract>
 	
 	<section id="terms">
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>MennoniteHobbit</othername>
-				</author>
-				
-				<author>
-					<othername>pentapenguin</othername>
-				</author>
-				
-				<author>
-					<othername>Techie-Micheal</othername>
-				</author>
-				
-				<author>
 					<othername>ameeck</othername>
 				</author>
-			</authorgroup>
 		</sectioninfo>
 		
-		<title>Terms</title>
-		<para>There are quite a few terms that are commonly used throughout phpBB and the support forums. Here is some information on these terms.</para>
+		<title>Termíny</title>
+		<para>Na fóru a v dokumentaci je používáno velké množství pojmů, zde naleznete vysvětlení a popis některých z nich.</para>
 		
 		<!-- TODO: Add links to sections on the respective item for whichever terms need it. For example, the ACP bit needs to link to the section of the Admin Guide. -->
 		
@@ -45,91 +32,91 @@
 			<varlistentry>
 				<term>ACP</term>
 				<listitem>
-					<para>The <link linkend="admin_control_panel"><acronym>ACP</acronym></link>, which stands for &quot;Administration Control Panel&quot;,  is the main place from which you, the administrator, can control every aspect of your forum.</para>
+					<para><link linkend="admin_control_panel"><acronym>ACP</acronym></link> je zkratka pro anglické „Administration Control Panel“, v češtině se používá odpovídající výraz Administrace fóra. Je to ovládací rozhraní fóra, ze kterého mohou administrátoři upravovat veškeré nastavení fóra.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>ASCII</term>
 				<listitem>
-					<para><acronym>ASCII</acronym>, or &quot;American Standard Code for Information Interchange&quot;, is a common way of encoding data to transfer it to a different computer. <acronym>FTP</acronym> clients have ASCII as a mode to transfer files. All phpBB files (files with the file extensions .php, .inc, .sql, .cfg, .htm, and .tpl), except for the image files, should be uploaded in ASCII mode.</para>
+					<para><acronym>ASCII</acronym> neboli „American Standard Code for Information Interchange“ je běžný způsob jak zakódovat data, která budou přenášena mezi dvěma počítači. <acronym>FTP</acronym> klienti používají ASCII pro přenos některých souborů. Všechny soubory phpBB (s koncovkou .php, .inc, .sql, .cfg, .htm, .html and .tpl), kromě obrázků, by měly být přenášeny v režimu ASCII.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Attachments</term>
+				<term>Přílohy</term>
 				<listitem>
-					<para><link linkend="acp_board_attachments">Attachments</link> are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach.</para>
+					<para><link linkend="acp_board_attachments">Přílohy</link> jsou soubory, které mohou být připojeny k příspěvkům stejně jako u e-mailů. Přílohy mohou být používány podle toho, jaká omezení nastaví administrátor fóra.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Avatar</term>
 				<listitem>
-					<para><link linkend="ucp_avatar">Avatars</link> are small images that are displayed next to a username. Avatars can be changed in your profile and settings (such as allow/disallow uploading) edited from the <acronym>ACP</acronym>.</para>
+					<para><link linkend="ucp_avatar">Avatary</link> jsou menší obrázky zobrazené vedle uživatelského jména. Avatary lze nastavit v uživatelském panelu a podléhají nastavení, která zvolí administrátor fóra v <acronym>ACP</acronym>.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>BBCode</term>
 				<listitem>
-					<para><link linkend="posting_bbcodes">BBCode</link> is a special way of formatting posts that offers great control over what and how something is displayed. BBCode has a syntax similar to HTML.</para>
+					<para><link linkend="posting_bbcodes">BBCode</link> je nástroj pro formátování příspěvků, který vám dovoluje ovlivnit vzhled textu. BBCode má podobnou syntaxi jako HTML.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Binary</term>
+				<term>Binární</term>
 				<listitem>
-					<para>Within phpBB, &quot;binary&quot; usually refers to another common way of encoding data for transfer (the other being <acronym>ASCII</acronym>. This is often found as a mode in an <acronym>FTP</acronym> clients to upload files. All of phpBB's images (found mainly in the images/ directory and the style's directories) should be uploaded in binary mode. </para>
+					<para>V phpBB, „binární přenos“ většinou odkazuje na druhý častý způsob přenášení souborů mezi dvěma počítači, první z nich je <acronym>ASCII</acronym>. Binární přenos je často možné nastavit v <acronym>FTP</acronym> klientech pro přenos souborů. Všechny obrázky v phpBB (nacházející se hlavně v adresáři images/ a adresářích stylů) by měly být přenášeny v binárním režimu.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Cache</term>
 				<listitem>
-					<para>Cache is a way of storing frequently-accessed data. By storing this data, your server will have less load put on it, allowing it to process other tasks. By default, phpBB caches its templates, when they are compiled and used, and common static SQL queries.</para>
+					<para>Cache je způsob uložení dat, ke kterým je často přistupováno. Uložení souborů v cache sníží potřebný výkon serveru pro zpracování a urychlí vyřizování ostatních požadavků. phpBB běžně ukládá v cache zkompilované soubory šablon a výsledky častých statických dotazů na databázi.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Category</term>
+				<term>Kategorie</term>
 				<listitem>
-					<para>A category is a group of any sort of similar items; for example, forums.</para>
+					<para>Kategorie je skupina jakýchkoliv podobných položek.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>chmod</term>
 				<listitem>
-					<para><abbrev>chmod</abbrev> is a way of changing the permissions of a file on a *nix (UNIX, Linux, etc.) server. Files in phpBB should be chmodded 644. Directories should be chmodded to 755. Avatar upload directories and templates cache directories should be chmodded to 777. For more information regarding chmod, please consult your <acronym>FTP</acronym> client's documentation.</para>
+					<para><abbrev>chmod</abbrev> je způsob jak měnit oprávnění souborů na *nixových serverech (UNIX, Linux, atd.). Soubory phpBB by měly mít nastaveno oprávnění 644, nastavení adresářů by mělo být 755. Adresáře pro nahrávání avatarů a souborů, cache a adresář store/ by měly být oprávnění 777, které zajišťuje možnost zápisu. Pro další informace o CHMOD se podívejte do dokumentace vašeho <acronym>FTP</acronym> klienta.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Client</term>
+				<term>Klient</term>
 				<listitem>
-					<para>A client is a computer that accesses another computer's service(s) via a network.</para>
+					<para>Klient je počítač, který přistupuje k službě jiného počítače přes síť.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Cookie</term>
 				<listitem>
-					<para>A cookie is a small piece of data put onto the user's computer. Cookies are used with phpBB to store login information (used for automatic logins).</para>
+					<para>Cookie je malý textový soubor, který prohlížeč ukládá na vašem počítači pro danou webovou stránku. phpBB používá cookies pro ukládání informací o přihlášení.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Database</term>
+				<term>Databáze</term>
 				<listitem>
-					<para>A database is a collection stored in a structured, organized manner (with different tables, rows, and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.0 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, and categories. Data stored in a database can usually be backed up and restored easily.</para>
+					<para>Databáze je organizované (s různými tabulkami, řádky a sloupci) úložiště dat. Databáze poskytují rychlý a flexibilní způsob pro ukládání dat oproti jednoduchému ukládání dat v souborech. phpBB 3.0 podporuje několik různých druhů <acronym>DBMS</acronym> a používá databázi pro uložení informací jako jsou uživatelé, příspěvky nebo fóra. Data uložená v databázi je velmi jednoduché zálohovat a obnovovat.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>DBAL</term>
 				<listitem>
-					<para><acronym>DBAL</acronym>, or &quot;Database Abstraction Layer&quot;, is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
+					<para><acronym>DBAL</acronym> neboli „Database Abstraction Layer“ is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
 				</listitem>
 			</varlistentry>
 			
