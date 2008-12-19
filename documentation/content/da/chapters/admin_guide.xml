@@ -150,7 +150,7 @@
 				<para><guilabel>Maksimalt antal private beskeder pr. mappe</guilabel> bestemmer hvor mange beskeder hver mappe kan indeholde. Standardværdien er <guilabel>50</guilabel>, sættes værdien til 0 er der ingen grænser for antal beskeder i mapperne.</para>
 				<para>Vælger du at begrænse antallet af beskeder pr. mappe, er det nødvendigt at specificere hvad der skal ske når en mappe er fyldt. Det kan ændres i <guilabel>Handling ved fuld mappe</guilabel>. Der er to muligheder; enten slettes den ældste besked automatisk, eller den nye besked holdes tilbage indtil der er gjort plads i mappen. Bemærk denne indstilling vil være boardets standardhandling og vil ikke tilsidesætte en brugers evt. andet valg, i det brugere selv er i stand til at vælge denne handling i UCP.</para>
 				<para>Som standard er det muligt at redigere en privat besked indtil modtageren har læst den. Yderligere kan sættes en tidsgrænse for hvor længe en besked kan redigeres. Her bruges <guilabel>Begræns redigeringstid</guilabel>, standardværdien er 0, som tillader redigering indtil beskeden er læst. Bemærk at du, for bestemte brugere eller grupper, kan forbyde redigering af private beskeder i <link linkend="acp_permissions">Tilladelser</link>. Er denne tilladelse sat til Nej,  vil den tilsidesætte denne indstilling.</para>
-				<para>Umiddelbart under, i <guilabel>Generelle valg</guilabel>, er der mulighed for yderligere at definere pb-systemets funktionalitet.</para>
+				<para>Umiddelbart under, i <guilabel>Generelle valg</guilabel>, er der mulighed for yderligere at definere pb-systemets funktionalitet.
 					<itemizedlist>
 						<listitem>
 							<para><guilabel>Tillad afsending af private beskeder til flere brugere og grupper</guilabel> giver mulighed for at sende en privat besked til flere modtagere. Muligheden er aktiv som standard, slås den fra vil man heller ikke kunne sende beskeder til grupper. </para>
@@ -785,27 +785,27 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Topic icons</title>
+			<title>Emneikoner</title>
 			
-			<para>A new feature in phpBB3 is the ability to assign icons to topics. On this page, you can manage what topic icons are available for use on your board. You can add, edit, delete, or move topic icons. The <guilabel>Topic Icons</guilabel> form displays the topic icons currently installed on your board. You can add topic icons manually, install a premade icons pack, export or download an icons pack file, or edit your currently installed topic icons.</para>
+			<para>I phpBB3 er det muligt at tilknytte ikoner til emner. På denne side kan administreres hvilke emneikoner brugere kan anvende på boardet. Det er muligt at tilføje, ændre, slette emneikoner. Den første side <guilabel>Emneikoner</guilabel> viser de ikoner der er installeret på boardet. Du kan tilføje ikoner manuelt, installere færdige ikonpakker, eksportere elle downloade en ikonpakkefil. Desuden kan visningsrækkefølgen ændres.</para>
 		
-			<para>Your first option to add topic icons to your board is to use a premade icons pack. Icon packs have the file extension <filename>pak</filename>. To install an icons pack, you must first download an icons pack. Upload the icon files themselves and the pack file into the <filename>/images/icons/</filename> directory. Then, click <guilabel>Install icons pak</guilabel>. The <guilabel>Install icons pak</guilabel> form displays all of the options you have regarding topic icon installation. Select the icon pack you wish to add (you may only install one icon pack at a time). You then have the option of what to do with currently installed topic icons if the new icon pack has icons that may conflict with them. You can either keep the existing icon(s) (there may be duplicates), replace the matches (overwriting the icon(s) that already exist), or just delete all of the conflicting icons. Once you have selected the proper option, click <guilabel>Install icons pak</guilabel>.</para>
+			<para>Den første mulighed er at installere en færdigpakket ikonpakke. Ikonpakker har filextension <filename>.pak</filename>. Upload ikonpakken til mappen <filename>/images/icons/</filename>. Klik på <guilabel>Installér ikonpakke</guilabel> øverst på siden. Er den uploade ikonpakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om ikonpakken indeholder filer der konflikter med de eksisterende ikoner. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende ikoner, overskrive de eksisterende med de nye, eller blot slette alle konfliktende ikoner. Når disse valg er foretaget klikkes igen på <guilabel>Installér ikonpakke</guilabel>.</para>
 			
-			<para>To add topic icon(s) manually, you must first upload the icons into the icons directory of your site. Navigate to the <guimenuitem>Topic icons</guimenuitem> page. Click <guilabel>Add multiple icons</guilabel>, which is located in the <guilabel>Topic Icons</guilabel> form. If you correctly uploaded your new desired topic icon(s) into the proper <filename>/images/icons/</filename> directory, you should see a row of settings for each new icon you uploaded. The following has a description on what each field is for. Once you are done with adding the topic icon(s), click, <guilabel>Submit</guilabel> to submit your additions.</para>
+			<para>Den anden mulighed er at tilføje emneikoner manuelt. Emneikoner uploades også til  mappen <filename>/images/icons/</filename>. Klik på <guilabel>Tilføj mange ikoner</guilabel> nederst på siden. Er de nye ikoner korrekt uploadet, ses en række indstillinger ud for hver at de nye ikoner, disse indstillinger gennemgås nedenfor. Når du har tilføjet de ønskede emneikoner klikkes på <guilabel>Udfør</guilabel>.</para>
 			
 			<itemizedlist>
-				<listitem><para><guilabel>Icon image file</guilabel>: This column will display the actual icon itself.</para></listitem>
-				<listitem><para><guilabel>Icon location</guilabel>: This column will display the path that the icon is located in, relative to the <filename>/images/icons/</filename> directory.</para></listitem>
-				<listitem><para><guilabel>Icon width</guilabel>: This is the width (in pixels) you want the icon to be stretched to.</para></listitem>
-				<listitem><para><guilabel>Icon height</guilabel>: This is the height (in pixels) you want the icon to be stretched to.</para></listitem>
-				<listitem><para><guilabel>Display on posting</guilabel>: If this checkbox is checked, the topic icon will actually be displayed on the posting screen.</para></listitem>
-				<listitem><para><guilabel>Icon order</guilabel>: You can also set what order that the topic icon will be displayed. You can either set the topic icon to be the first, or after any other topic icon currently installed.</para></listitem>
-				<listitem><para><guilabel>Add</guilabel>: If you are satisfied with the settings for adding your new topic icon, check this box.</para></listitem>
+				<listitem><para><guilabel>Ikon</guilabel>: Denne kolonne viser selve ikonet.</para></listitem>
+				<listitem><para><guilabel>Iconets placering</guilabel>: Her vises stien til ikonet, relativt i forhold til mappen <filename>/images/icons/</filename>.</para></listitem>
+				<listitem><para><guilabel>Ikonbredde</guilabel>: Den bredde (i pixels) ikonet skal strækkes til.</para></listitem>
+				<listitem><para><guilabel>Ikonhøjde</guilabel>: Den højde (i pixels) ikonet skal strækkes til.</para></listitem>
+				<listitem><para><guilabel>Vis på siden hvor indlæg skrives</guilabel>: Mærkes feltet af, vises emneikonet på siden hvor indlæg skrives.</para></listitem>
+				<listitem><para><guilabel>Ikonorden</guilabel>: Her bestemmes hvilken rækkefølge ikonerne skal vises i. Der kan vælges mellem at vise det først, eller at vise det efter et af de øvrige installerede.</para></listitem>
+				<listitem><para><guilabel>Tilføj</guilabel>: Når instillingerne for dit nye emneikon er i orden, afmærkes dette felt for at tilføje ikonet.</para></listitem>
 			</itemizedlist>
 			
-			<para>You may also edit your currently installed topic icons' settings. To do so, click <guilabel>Edit icons</guilabel>. You will see the <guilabel>Icon configuration</guilabel> form. For more information regarding each field, see the above paragraph regarding adding topic icons.</para>
+			<para>For at ændre indstillinger for allerede installerede emneikoner klikkes på <guilabel>Ret ikoner</guilabel> nederst på siden. Du bliver nu præsenteret for <guilabel>Ikonkonfiguration</guilabel> for alle emneikonerne. Felternes betydning er beskrevet ovenfor.</para>
 		
-			<para>Lastly, you may also reorder the topic icons, edit a topic icon's settings, or remove a topic icon. To reorder a topic icon, click the appropriate "move up" or "move down" icon. To edit a topic icon's current settings, click the "settings" button. To delete a topic icon, click the red "delete" button.</para>
+			<para>På startsiden er det muligt direkte at ændre ikonernes rækkefølge ved at benytte pilikonerne for "flyt op" og "flyt ned". Det enkelt ikons indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette et ikon benyttes den røde "Slet".</para>
 		</section>
 		
 		<section id="acp_posting_smilies">
@@ -818,15 +818,15 @@
 			</sectioninfo>
 			<title>Smilies</title>
 			
-			<para>Smilies or emoticons are typically small, sometimes animated images used to convey an emotion or feeling. You can manage the smilies on your board via this page. To add smilies, you have the option to either install a premade smilies pack, or add smilies manually. Locate the <guilabel>Smilies</guilabel> form, which lists the smilies currently installed on your board, on the page. </para>
+			<para>Smilies er typisk små, nogle gange animerede billeder der bruges til at give udtryk for en følelse eller mening. Du kan tilføje smilies manuelt eller ved at installerede en præfabrikeret smiliespakke. I oversigten <guilabel>Smilies</guilabel> vises de smilies der i øjeblikket er installeret på dit boardform.</para>
 		
-			<para>Your first option to add smilies to your board is to use a premade smilies pack. Smilies packs have the file extension <filename>pak</filename>. To install a smilies pack, you must first download a smilies pack. Upload the smilies files themselves and the pack file into the <filename>/images/smilies/</filename> directory. Then, click <guilabel>Install smilies pak</guilabel>. The <guilabel>Install smilies pak</guilabel> form displays all of the options you have regarding smilies installation. Select the smilies pack you wish to add (you may only install one smilies pack at a time). You then have the option of what to do with currently installed smilies if the new smilies pack has icons that may conflict with them. You can either keep the existing smilies (there may be duplicates), replace the matches (overwriting the smilies that already exist), or just delete all of the conflicting smilies. Once you have selected the proper option, click <guilabel>Install smilies pak</guilabel>.</para>
+			<para>Den første mulighed er at installere en præfabrikeret smiliespakke. Smiliespakker har filextension <filename>pak</filename>. Upload pakken til mappen <filename>/images/smilies/</filename>. Klik herefter på <guilabel>Installér smiliespakke</guilabel> øverst på siden. Er den uploade pakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om smiliespakken indeholder filer der konflikter med de eksisterende smilies. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende smilies, overskrive de eksisterende med de nye, eller blot slette alle konfliktende smilies. Når disse valg er foretaget klikkes igen på <guilabel>Installér ikonpakke</guilabel>.</para>
 			
-			<para>To add a smiley to your board manually, you must first upload the smilies into the <filename>/images/smilies/</filename> directory. Then, click on <guilabel>Add multiple smilies</guilabel>. From here, you can add a smilie and configure it. The following are the settings you can set for the new smilies. Once you are done adding a smiley, click <guilabel>Submit</guilabel>.</para>
+			<para>Den anden mulighed er at tilføje smilies manuelt. Smilies uploades også til  mappen <filename>/images/smilies/</filename>. Klik på <guilabel>Tilføj mange smilies</guilabel> nederst på siden. Er de nye smilies korrekt uploadet, kan du herefter tilføje smilies enkeltvis og bestemme dens indstillinger. I det følgende gennemgås indstillingsmulighederne. Når du har tilføjet en smilie afsluttes ved at klikke på <guilabel>Udfør</guilabel>.</para>
 		
 			<itemizedlist>
-				<listitem><para><guilabel>Smiley image file</guilabel>: This is what the smiley actually looks like.</para></listitem>
-				<listitem><para><guilabel>Smiley location</guilabel>: This is where the smiley is located, relative to the <filename>/images/smilies/</filename> directory.</para></listitem>
+				<listitem><para><guilabel>Smilies</guilabel>: I denne kollonne vises selve smilien.</para></listitem>
+				<listitem><para><guilabel>Smiley location</guilabel>: Her vises stien til smilien, relativt i forhold til mappen <filename>/images/smilies/</filename>.</para></listitem>
 				<listitem><para><guilabel>Smiley code</guilabel>: This is the text that will be replaced with the smiley.</para></listitem>
 				<listitem><para><guilabel>Emotion</guilabel>: This is the smiley's title.</para></listitem>
 				<listitem><para><guilabel>Smiley width</guilabel>: This is the width in pixels that the smiley will be stretched to.</para></listitem>
