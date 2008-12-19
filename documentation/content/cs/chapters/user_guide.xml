@@ -4,7 +4,7 @@
 <chapter id="user_guide">
 	<?dbhtml dir="userguide" filename="index.html" ?>
 	<chapterinfo>
-		<releaseinfo>$Id: user_guide.xml 234 2008-12-08 02:09:58Z Marshalrusty $</releaseinfo>
+		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2006</year>
 			<holder>phpBB Group</holder>
