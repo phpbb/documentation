@@ -116,42 +116,42 @@
 			<varlistentry>
 				<term>DBAL</term>
 				<listitem>
-					<para><acronym>DBAL</acronym> neboli „Database Abstraction Layer“ is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
+					<para><acronym>DBAL</acronym> neboli „Database Abstraction Layer“ je systém, který umožňuje připojení fóra k mnoha různým <acronym>DBMS</acronym> s minimálními nároky. Všechen kód pro phpBB (včetně MODů) musí používat <acronym>DBAL</acronym> pro maximální kompatabilitu a výkon.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>DBMS</term>
 				<listitem>
-					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
+					<para><acronym>DBMS</acronym> neboli „Database Management System“ je systém pro správu databází. phpBB 3.0 podporuje následující databázové systémy: Firebird, MS SQL Server, MySQL, Oracle, PostgreSQL a SQLite.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>FTP</term>
 				<listitem>
-					<para><acronym>FTP</acronym> stands for &quot;File Transfer Protocol&quot;. It is a protocol which allows files to be transferred between computers. <acronym>FTP</acronym> clients are programs that are used to transfer files via <acronym>FTP</acronym>.</para>
+					<para><acronym>FTP</acronym> je zkratka pro &quot;File Transfer Protocol&quot;. FTP je protokol, kterým mohou mezi sebou komunikovat počítače. <acronym>FTP</acronym> klienti jsou programy, které přenášejí soubory přes <acronym>FTP</acronym>.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Founder</term>
+				<term>Zakladatel</term>
 				<listitem>
-					<para>A founder is a special board administrator that cannot be edited or deleted. This is a new user level introduced in phpBB 3.0.</para>
+					<para>Zakladatel je zvláštní druh administrátora na fóru, který nemůže být odstraněn nebo upraven. Úroveň zakladatele byla nově uvedena phpBB 3.0.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>GZip</term>
 				<listitem>
-					<para>GZip is a compression method often used in web applications and software such as phpBB to improve speed. Most modern browsers support this on-the-fly algorithm. Gzip is also used to compress an archive of files. Higher compression levels, however, will increase server load.</para>
+					<para>GZip je druh komprese, který je často používán webovými aplikacemi, jako je například phpBB pro zrychlení načítání stránek. Většina dnešních prohlížečů podporuje kompresi gzip během stahování. Gzip se také používá pro kompresy archivů se soubory. Vysoké stupně komprese urychlí načítání stránek, zároveň ale zvyšují vytížení serveru.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>IP address</term>
+				<term>IP adresa</term>
 				<listitem>
-					<para>An IP address, or Internet Protocol address, is a unique address that identifies a specific computer or user.</para>
+					<para>IP adresa, je unikátní označení, které směřuje na specifický počítač nebo uživatele.</para>
 				</listitem>
 			</varlistentry>
 			
