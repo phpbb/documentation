@@ -805,14 +805,14 @@
 			
 			<para>For at ændre indstillinger for allerede installerede emneikoner klikkes på <guilabel>Ret ikoner</guilabel> nederst på siden. Du bliver nu præsenteret for <guilabel>Ikonkonfiguration</guilabel> for alle emneikonerne. Felternes betydning er beskrevet ovenfor.</para>
 		
-			<para>På startsiden er det muligt direkte at ændre ikonernes rækkefølge ved at benytte pilikonerne for "flyt op" og "flyt ned". Det enkelt ikons indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette et ikon benyttes den røde "Slet".</para>
+			<para>På startsiden er det muligt direkte at ændre ikonernes rækkefølge ved at benytte pilikonerne for "flyt op" og "flyt ned". Det enkelte ikons indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette et ikon benyttes den røde "Slet".</para>
 		</section>
 		
 		<section id="acp_posting_smilies">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -820,70 +820,71 @@
 			
 			<para>Smilies er typisk små, nogle gange animerede billeder der bruges til at give udtryk for en følelse eller mening. Du kan tilføje smilies manuelt eller ved at installerede en præfabrikeret smiliespakke. I oversigten <guilabel>Smilies</guilabel> vises de smilies der i øjeblikket er installeret på dit boardform.</para>
 		
-			<para>Den første mulighed er at installere en præfabrikeret smiliespakke. Smiliespakker har filextension <filename>pak</filename>. Upload pakken til mappen <filename>/images/smilies/</filename>. Klik herefter på <guilabel>Installér smiliespakke</guilabel> øverst på siden. Er den uploade pakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om smiliespakken indeholder filer der konflikter med de eksisterende smilies. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende smilies, overskrive de eksisterende med de nye, eller blot slette alle konfliktende smilies. Når disse valg er foretaget klikkes igen på <guilabel>Installér ikonpakke</guilabel>.</para>
+			<para>Den første mulighed er at installere en præfabrikeret smiliespakke. Smiliespakker har filextension <filename>.pak</filename>. Upload pakken til mappen <filename>/images/smilies/</filename>. Klik herefter på <guilabel>Installér smiliespakke</guilabel> øverst på siden. Er den uploade pakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om smiliespakken indeholder filer der konflikter med de eksisterende smilies. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende smilies, overskrive de eksisterende med de nye, eller blot slette alle konfliktende smilies. Når disse valg er foretaget klikkes igen på <guilabel>Installér smiliespakke</guilabel>.</para>
 			
-			<para>Den anden mulighed er at tilføje smilies manuelt. Smilies uploades også til  mappen <filename>/images/smilies/</filename>. Klik på <guilabel>Tilføj mange smilies</guilabel> nederst på siden. Er de nye smilies korrekt uploadet, kan du herefter tilføje smilies enkeltvis og bestemme dens indstillinger. I det følgende gennemgås indstillingsmulighederne. Når du har tilføjet en smilie afsluttes ved at klikke på <guilabel>Udfør</guilabel>.</para>
+			<para>Den anden mulighed er at tilføje smilies manuelt. Smilies uploades også til mappen <filename>/images/smilies/</filename>. Klik på <guilabel>Tilføj mange smilies</guilabel> nederst på siden. Er de nye smilies korrekt uploadet, kan du herefter tilføje smilies enkeltvis og bestemme dens indstillinger. I det følgende gennemgås indstillingsmulighederne. Når du har tilføjet en smiley afsluttes ved at klikke på <guilabel>Udfør</guilabel>.</para>
 		
 			<itemizedlist>
-				<listitem><para><guilabel>Smilies</guilabel>: I denne kollonne vises selve smilien.</para></listitem>
-				<listitem><para><guilabel>Smiley location</guilabel>: Her vises stien til smilien, relativt i forhold til mappen <filename>/images/smilies/</filename>.</para></listitem>
-				<listitem><para><guilabel>Smiley code</guilabel>: This is the text that will be replaced with the smiley.</para></listitem>
-				<listitem><para><guilabel>Emotion</guilabel>: This is the smiley's title.</para></listitem>
-				<listitem><para><guilabel>Smiley width</guilabel>: This is the width in pixels that the smiley will be stretched to.</para></listitem>
-				<listitem><para><guilabel>Smiley height</guilabel>: This is the height in pixels that the smiley will be stretched to.</para></listitem>
-				<listitem><para><guilabel>Display on posting</guilabel>: If this checkbox is checked, this smiley will actually be displayed on the posting screen.</para></listitem>
-				<listitem><para><guilabel>Smiley order</guilabel>: You can also set what order that the smiley will be displayed. You can either set the smiley to be the first, or after any other smiley currently installed.</para></listitem>
-				<listitem><para><guilabel>Add</guilabel>: If you are satisfied with the settings for adding your new smiley, check this box.</para></listitem>
+				<listitem><para><guilabel>Smilies</guilabel>: I denne kollonne vises selve smileyen.</para></listitem>
+				<listitem><para><guilabel>Smileys placering</guilabel>: Her vises stien til smileyen, relativt i forhold til mappen <filename>/images/smilies/</filename>.</para></listitem>
+				<listitem><para><guilabel>Smileykode</guilabel>: Den tekst som erstattes af smileyen.</para></listitem>
+				<listitem><para><guilabel>Følelse</guilabel>: Smileyens titel.</para></listitem>
+				<listitem><para><guilabel>Smileybredde</guilabel>: Den bredde i pixels smileyen skal strækkes til.</para></listitem>
+				<listitem><para><guilabel>Smileyhøjde</guilabel>: Den højde i pixels smileyen skal strækkes til.</para></listitem>
+				<listitem><para><guilabel>Vis på siden hvor indlæg skrives</guilabel>: Mærkes feltet af, vises smileyen på siden hvor indlæg skrives.</para></listitem>
+				<listitem><para><guilabel>Smileyorden</guilabel>: Her bestemmes hvilken rækkefølge smileyen skal vises i. Der kan vælges mellem at vise den først, eller at vise den efter et af de øvrige installerede.</para></listitem>
+				<listitem><para><guilabel>Tilføj</guilabel>: Når instillingerne for din nye smiley er i orden, afmærkes dette felt for at tilføje den.</para></listitem>
 			</itemizedlist>
 			
-			<para>You may also edit your currently installed smilies' settings. To do so, click <guilabel>Edit smilies</guilabel>. You will see the <guilabel>Smiley configuration</guilabel> form. For more information regarding each field, see the above paragraph regarding adding smilies.</para>
+			<para>For at ændre indstillinger for allerede installerede smilies klikkes på <guilabel>Ret smilies</guilabel> nederst på siden. Du får  nu vist oversigten <guilabel>Smileykonfiguration</guilabel>. Felternes betydning er beskrevet ovenfor.</para>
 			
-			<para>Lastly, you may also reorder the smilies, edit a smiley's settings, or remove a smiley. To reorder a smiley, click the appropriate "move up" or "move down" icon. To edit a smiley's current settings, click the "settings" button. To delete a smiley, click the red "delete" button.</para>
+			<para>På startsiden er det muligt direkte at ændre smileyrækkefølgen ved at benytte pilikonerne for "flyt op" og "flyt ned". Den enkelte smileys indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette en smiley benyttes den røde "Slet".</para>
 		</section>
 		
 		<section id="acp_posting_censors">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Word censoring</title>
+			<title>Ordcensur</title>
 			
-			<para>On some forums, a certain level of appropriate, profanity-free speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
+			<para>Ønskes en vis grad af korrekt sprogbrug på boardet kan ordcensur anvendes. Ord der matcher et mønster du har defineret i  <guilabel>Ordcensur</guilabel> erstattes automatisk med den tekst eller det ord du har specificeret.</para>
 			
-			<para>To add a new word censor, click <guilabel>Add new word</guilabel>. There are two fields: <guilabel>Word</guilabel> and <guilabel>Replacement</guilabel>. Type in the word that you want automatically censored in the <guilabel>Word</guilabel> text field. (Note that you can use wildcards (*).) Then, type in the text you want the censored word to be replaced with in the <guilabel>Replacement</guilabel> text field. Once you are done, click <guilabel>Submit</guilabel> to add the new censored word to your board.</para>
+			<para>for at oprette en ordcensuring klikkes på <guilabel>Tilføj nyt ord</guilabel>. Der er to felter: <guilabel>Ord</guilabel> og <guilabel>Erstatning</guilabel>. Skriv det ord der ønskes censuret i feltet <guilabel>Ord</guilabel>. Bemærk at du kan anvende (*) som ubekendt. Herefter skrives i feltet <guilabel>Erstatning</guilabel>, det ord eller den tekst du ønsker det censurerede ord erstattet med. Klik på <guilabel>Udfør</guilabel> for at tilføje det nye ord der skal censureres.</para>
 			
-			<para>To edit an existing word censor, locate the censored word's row. Click the "edit" icon located in that row, and proceed with changing the censored word's settings.</para>
+			<para>For at ændre en eksisterende censurering, klikkes på "Redigér" ud for det ord der skal ændres.</para>
 		</section>
 		
 		<section id="acp_attach_settings">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Attachment Settings</title>
+			<title>Vedhæftede filer</title>
 			
-			<para>If you allow your users to post attachments, it is important to be able to control your board's attachments settings. Here, you can configure the main settings for attachments and the associated special categories. When you are done configuring your board's attachments settings, click <guilabel>Submit</guilabel>.</para>
+			<para>Hvis du tillader brugere at vedhæfte filer, er det vigtigt at kunne kontrollere indstillinger for vedhæftede filer. Her kan du justere de vigtige indstillinger og de tilknyttede specialkategorier. Når du har ændret en eller flere indstillinger klikkes på <guilabel>Udfør</guilabel>.</para>
 			
 			<itemizedlist>
-				<title>Attachment Settings</title>
-				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select <guilabel>Yes</guilabel>.</para></listitem>
-				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: If you want to enable attachments being posted in private messages, select <guilabel>Yes</guilabel>.</para></listitem>
-				<listitem><para><guilabel>Upload directory</guilabel>: The directory that attachments will be uploaded to. The default directory is <filename>/files/</filename>.</para></listitem>
-				<listitem><para><guilabel>Attachment display order</guilabel>: The order that attachments will be displayed, based on the time the attachment was posted.</para></listitem>
-				<listitem><para><guilabel>Total attachment quota</guilabel>: The maximum drive space that will be available for all of your board's attachments. If you want this quota to be unlimited, use a value of 0.</para></listitem>
-				<listitem><para><guilabel>Maximum filesize</guilabel>: The maximum filesize of an attachment allowed. If you want this value to be unlimited, use a value of 0.</para></listitem>
-				<listitem><para><guilabel>Maximum filesize messaging</guilabel>: The maximum drive space that will be available per user for attachments posted in private messages. If you want this quota to be unlimited, use a value of 0.</para></listitem>
-				<listitem><para><guilabel>Max attachments per post</guilabel>: The maximum number of attachments that can be posted in a post. If you want this value to be unlimited, use a value of 0.</para></listitem>
-				<listitem><para><guilabel>Max attachments per message</guilabel>: The maximum number of attachments that can be posted in a private message. If you want this value to be unlimited, use a value of 0.</para></listitem>
-				<listitem><para><guilabel>Enable secure downloads</guilabel>: If you want to be able to only allow attachments to be available to specific <glossterm>IP address</glossterm>es or hostnames, this option should be enabled. You can further configure secure downloads once you have enabled them here; the secure downloads-specific settings are located in the <guilabel>Define allowed IPs/Hostnames</guilabel> and <guilabel>Remove or un-exclude allowed IPs/hostnames</guilabel> forms at the bottom of the page.</para></listitem>
-				<listitem><para><guilabel>Allow/Deny list</guilabel>: This allows you to configure the default behaviour when secure downloads are enabled. A whitelist (<guilabel>Allow</guilabel>) only allows <glossterm>IP address</glossterm>es or hostnames to access downloads, while a blacklist (<guilabel>Deny</guilabel>) allows all users except those who have an <glossterm>IP address</glossterm> or hostname located on the blacklist. <emphasis>This setting only applies if secure downloads are enabled.</emphasis></para></listitem>
-				<listitem><para><guilabel>Allow empty referrer</guilabel>: Secure downloads are based on referrers.This setting controls if downloads are allowed for those omitting the referrer information. <emphasis>This setting only applies if secure downloads are enabled.</emphasis></para></listitem>
+				<title>Vedhæftede filer</title>
+				<listitem><para><guilabel>Tillad at vedhæfte filer</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade vedhæftning af filer på boardet.</para></listitem>
+				<listitem><para><guilabel>Tillad at vedhæfte filer i private beskeder</guilabel>: Vælg <guilabel>Ja</guilabel> for at tillade vedhæftede filer i private beskeder.</para></listitem>
+				<listitem><para><guilabel>Modtagemappe</guilabel>: Den mappe vedhæftede filer uploades til. Standardmappen er <filename>/files/</filename>.</para></listitem>
+				<listitem><para><guilabel>Visningsorden for vedhæftede filer</guilabel>: Baseret på tidspunktet for hvornår en fil blev vedhæftet kan vælges faldende eller stigende visningsorden.</para></listitem>
+				<listitem><para><guilabel>Den totale kvote for vedhæftede filer</guilabel>: Maksimum drevplads tilgængelig for vedhæftede filer på hele boardet. Angiv 0 hvis du ikke ønsker nogen grænse.</para></listitem>
+				<listitem><para><guilabel>Maksimal filstørrelse</guilabel>: Hver fils maksimale tilladte størrelse, 0 betyder ubegrænset.</para></listitem>
+				<listitem><para><guilabel>Maksimal filstørrelse i private beskeder</guilabel>: Maksimal størrelse pr. fil vedhæftet i private beskeder, 0 betyder ubegrænset.</para></listitem>
+				<listitem><para><guilabel>Maksimalt antal vedhæftede filer pr. indlæg</guilabel>: Det højest tilladte antal filer pr. indlæg. Angives 0 deaktiveres begrænsningen.</para></listitem>
+				<listitem><para><guilabel>Maksimalt antal vedhæftede filer pr. privat besked</guilabel>: Det højest tilladte antal filer i en privat besked. Angives 0 deaktiveres begrænsningen.</para></listitem>
+				<listitem><para><guilabel>Aktivér sikker download</guilabel>: Hvis du ønsker at vedhæftede filer kun skal være tilgængelige for bestemte <glossterm>IP-adresse</glossterm>r eller værtsnavne, vælges  <guilabel>Ja</guilabel>. Herefter er det nederst på samme side, i <guilabel>Definér tilladte IP-adresser eller værtsnavne</guilabel> og <guilabel>Fjern tilladte IP-adresser eller værtsnavne</guilabel>, at angive disse.</para></listitem>
+				<listitem><para><guilabel>Tillad- og afvis-liste</guilabel>: This allows you to configure the default behaviour when sikker download er valgt. A whitelist (<guilabel>Tillad</guilabel>) only allows <glossterm>IP-adresse</glossterm>r eller værtsnavne to access downloads, while a blacklist (<guilabel>Afvis</guilabel>) allows all users except those who have an <glossterm>IP address</glossterm> or hostname located on the blacklist. <emphasis>Valget har kun betydning hvis sikker download er aktiveret.</emphasis></para></listitem>
+				<listitem><para><guilabel>Tillad tomme henvisninger</guilabel>: Sikker download er baseret på henvisninger (hvor kommer brugeren fra). Vil du tillade download for brugere uden henvisninger? <emphasis>Valget har kun betydning hvis sikker download er aktiveret.</emphasis></para></listitem>
+				<listitem><para><guilabel>Kontrol af vedhæftede filer</guilabel>: Browsere kan snydes og kan medføre fejlfortolkning af uploadede filers mimetype. Denne kontrol sikrer afvisning af filer der er årsag hertil.</para></listitem>
 			</itemizedlist>
 			
 			<itemizedlist>

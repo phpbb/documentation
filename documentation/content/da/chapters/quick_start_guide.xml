@@ -99,7 +99,7 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introduktion</title>
-			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installér</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
+			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installér</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Krav</title>
@@ -420,7 +420,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>zeroK</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -440,7 +440,7 @@
 	</section>
 	<section id="quick_support">
 		<title>Få support</title>
-		<para><ulink url="http://www.phpbb.com/about/">phpBB Team</ulink>et stiller flere muligheder til rådighed hvor der kan hentes hjælp og support til phpBB. Udover denne onlinedokumentation, er der <ulink url="http://www.phpbb.com/community/viewforum.php?f=46">supportforummet på www.phpbb.com</ulink> hvor der findes svar og hjælp til næsten alle tænkelige problemstillinger. Inden du spørger om hjælp i vore fora, bør du først bruge søgefunktionen og se om ikke andre har haft lignende problemer. Har du ikke held med søgningen, er du velkommen til at oprette et ny emne hvor du kan stille spørgsmålet. Vær så beskrivende som muligt når du forklarer til problem! En præcis beskrivelse vil altid give dig et hurtigere og korrekt svar. Brug venligst denne <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&t=543515">Support Request Template</ulink>, som sikrer at du får de nødvendigste informationer med, når du stiller dit spørgsmål.</para>
+		<para><ulink url="http://www.phpbb.com/about/">phpBB Team</ulink>et stiller flere muligheder til rådighed hvor der kan hentes hjælp og support til phpBB. Udover denne onlinedokumentation, er der <ulink url="http://www.phpbb.com/community/viewforum.php?f=46">supportforummet på www.phpbb.com</ulink> hvor der findes svar og hjælp til næsten alle tænkelige problemstillinger. Inden du spørger om hjælp i vore fora, bør du først bruge søgefunktionen og se om ikke andre har haft lignende problemer. Har du ikke held med søgningen, er du velkommen til at oprette et ny emne hvor du kan stille spørgsmålet. Vær så beskrivende som muligt når du forklarer til problem! En præcis beskrivelse vil altid give dig et hurtigere og korrekt svar. Brug venligst denne <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&amp;t=543515">Support Request Template</ulink>, som sikrer at du får de nødvendigste informationer med, når du stiller dit spørgsmål.</para>
 
 		<para>Udover ovennævnte supportforum på www.phpbb.com, stiller vi desuden en <ulink url="http://www.phpbb.com/kb/">Videnbase</ulink> til rådighed. Her er gode artikler skrevet og udarbejdet af andre brugere, og som dækker mange ofte stillede spørgsmål. Vort community har brugt meget tid på at skrive disse artikler, læs dem venligst.</para>
 
