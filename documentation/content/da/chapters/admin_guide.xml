@@ -881,27 +881,27 @@
 				<listitem><para><guilabel>Maksimal filstørrelse i private beskeder</guilabel>: Maksimal størrelse pr. fil vedhæftet i private beskeder, 0 betyder ubegrænset.</para></listitem>
 				<listitem><para><guilabel>Maksimalt antal vedhæftede filer pr. indlæg</guilabel>: Det højest tilladte antal filer pr. indlæg. Angives 0 deaktiveres begrænsningen.</para></listitem>
 				<listitem><para><guilabel>Maksimalt antal vedhæftede filer pr. privat besked</guilabel>: Det højest tilladte antal filer i en privat besked. Angives 0 deaktiveres begrænsningen.</para></listitem>
-				<listitem><para><guilabel>Aktivér sikker download</guilabel>: Hvis du ønsker at vedhæftede filer kun skal være tilgængelige for bestemte <glossterm>IP-adresse</glossterm>r eller værtsnavne, vælges  <guilabel>Ja</guilabel>. Herefter er det nederst på samme side, i <guilabel>Definér tilladte IP-adresser eller værtsnavne</guilabel> og <guilabel>Fjern tilladte IP-adresser eller værtsnavne</guilabel>, at angive disse.</para></listitem>
-				<listitem><para><guilabel>Tillad- og afvis-liste</guilabel>: This allows you to configure the default behaviour when sikker download er valgt. A whitelist (<guilabel>Tillad</guilabel>) only allows <glossterm>IP-adresse</glossterm>r eller værtsnavne to access downloads, while a blacklist (<guilabel>Afvis</guilabel>) allows all users except those who have an <glossterm>IP address</glossterm> or hostname located on the blacklist. <emphasis>Valget har kun betydning hvis sikker download er aktiveret.</emphasis></para></listitem>
+				<listitem><para><guilabel>Aktivér sikker download</guilabel>: Hvis du ønsker at vedhæftede filer kun skal være tilgængelige for bestemte <glossterm>IP-adresse</glossterm>r eller værtsnavne, vælges  <guilabel>Ja</guilabel>. Herefter er det nederst på samme side, i <guilabel>Angiv hvidlistede/sortlistede IP-adresser eller værtsnavne</guilabel> og <guilabel>Fjern IP-adresser eller værtsnavne</guilabel>, muligt at angive disse.</para></listitem>
+				<listitem><para><guilabel>Tillad eller afvis</guilabel>: Her vælges hvordan sikker download skal håndteres. En hvidliste (<guilabel>Tillad</guilabel>) sikrer at kun angivne <glossterm>IP-adresse</glossterm>r eller værtsnavne kan downloade filer. En sortlist (<guilabel>Afvis</guilabel>) tillader at alle, undtagen angivne <glossterm>IP-adresse</glossterm>r eller værtsnavne kan dowloade vedhæftede filer. <emphasis>Valget har kun betydning hvis sikker download er aktiveret.</emphasis></para></listitem>
 				<listitem><para><guilabel>Tillad tomme henvisninger</guilabel>: Sikker download er baseret på henvisninger (hvor kommer brugeren fra). Vil du tillade download for brugere uden henvisninger? <emphasis>Valget har kun betydning hvis sikker download er aktiveret.</emphasis></para></listitem>
 				<listitem><para><guilabel>Kontrol af vedhæftede filer</guilabel>: Browsere kan snydes og kan medføre fejlfortolkning af uploadede filers mimetype. Denne kontrol sikrer afvisning af filer der er årsag hertil.</para></listitem>
 			</itemizedlist>
 			
 			<itemizedlist>
-				<title>Image Category Settings</title>
-				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to <guilabel>No</guilabel>, a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
-				<listitem><para><guilabel>Create thumbnail</guilabel>: This setting configures your board to either create a thumbnail for every image attached, or not.</para></listitem>
-				<listitem><para><guilabel>Maximum thumbnail width in pixels</guilabel>: This is the maximum width in pixels for the created thumbnails.</para></listitem>
-				<listitem><para><guilabel>Maximum thumbnail filesize</guilabel>: Thumbnails will not be created for images if the created thumbnail filesize exceeds this value, in bytes. This is useful for particularly large images that are posted.</para></listitem>
-				<listitem><para><guilabel>Imagemagick path</guilabel>: If you have Imagemagick installed and would like to set your board to use it, specify the full path to your Imagemagick convert application. An example is <filename>/usr/bin/</filename>.</para></listitem>
-				<listitem><para><guilabel>Maximum image dimensions</guilabel>: The maximum size of image attachments, in pixels. If you would like to disable dimension checking (and thereby allow image attachments of any dimensions), set each value to 0.</para></listitem>
-				<listitem><para><guilabel>Image link dimensions</guilabel>: If an image attachment is larger than these dimensions (in pixels), a link to the image will be displayed in the post instead. If you want images to be displayed inline regardless of dimensions, set each value to 0.</para></listitem>
+				<title>Indstillinger for billedkategori</title>
+				<listitem><para><guilabel>Vis billeder inline</guilabel>: Skal billeder vises i indlæg. Vælges <guilabel>Nej</guilabel> vises et link til det vedhæftede billede.</para></listitem>
+				<listitem><para><guilabel>Opret miniature</guilabel>: Indstillingen bestemmer om boardet altid skal danne en miniature af det vedhæftede billede eller ej.</para></listitem>
+				<listitem><para><guilabel>Maksimal bredde på miniature i pixels</guilabel>: Miniaturer oprettes ikke bredere end denne værdi.</para></listitem>
+				<listitem><para><guilabel>Grænse for oprettelse af miniature</guilabel>: Der dannes ikke miniaturer for billeder hvor filstørrelsen er mindre end denne værdi.</para></listitem>
+				<listitem><para><guilabel>Sti til imagemagick</guilabel>: Hvis du har adgang til Imagemagick-programmet på serveren og ønsker at boardet skal gøre bruge af det, angives her den fulde sti til konverteringprogrammet, f.eks. <filename>/usr/bin/</filename>.</para></listitem>
+				<listitem><para><guilabel>Maksimale billeddimensioner</guilabel>: Maksimale dimensioner for vedhæftede billeder. Kontrol af billededimensioner deaktiveres ved at angive begge værdier til 0.</para></listitem>
+				<listitem><para><guilabel>Grænse for dannelse af link</guilabel>: Er et billede større end disse dimensioner i pixels, oprettes  i stedet et link til billedet i indlægget. Sættes begge værdier til 0 deaktiveres denne funktion.</para></listitem>
 			</itemizedlist>
 			
 			<itemizedlist>
-				<title>Define Allowed/Disallowed IPs/Hostnames</title>
-				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: If you have secure downloads enabled, you can specify the <glossterm>IP address</glossterm>es or hostnames allowed or disallowed. If you specify more than one <glossterm>IP address</glossterm> or hostname, each <glossterm>IP address</glossterm> or hostname should be on its own line. Entered values can have wildcards (*). To specify a range for an <glossterm>IP address</glossterm>, separate the start and end with a hyphen (-).</para></listitem>
-				<listitem><para><guilabel>Exclude IP from [dis]allowed IPs/hostnames</guilabel>: Enable this to exclude the entered IP(s)/hostname(s).</para></listitem>
+				<title>Angiv hvid-/sortlistede IP-adresser eller værtsnavne</title>
+				<listitem><para><guilabel>IP-adresser eller værter</guilabel>: Har du valgt sikker download angives her de <glossterm>IP-adresse</glossterm>r eller værtsnavne som skal tillades eller afvises. Angiver du flere<glossterm>IP-adresse</glossterm>r eller værtsnavne, skrives de hver især på en ny linie. For at specificere et interval af <glossterm>IP-adresse</glossterm>r adskilles starten og slutningen med en bindestreg (eks: 202.123.228.100-202.123.228.125). Brug * som ubekendt for ukendte tegn.</para></listitem>
+				<listitem><para><guilabel>Ekskludér fra hvid-/sortliste:</guilabel>: Vælg <guilabel>Ja</guilabel> for at ekskludere angivne IP-adresse eller vært fra listen.</para></listitem>
 			</itemizedlist>
 		</section>
 		
@@ -909,67 +909,67 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extensions</title>
+			<title>Administrér filtyper</title>
 			
-			<para>You can further configure your board's attachments settings by controlling what file extensions attached files can have to be uploaded. It is recommended that you do not allow scripting file extensions (such as php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, and so forth) for security reasons. You can find this page by clicking <guimenuitem>Manage extensions</guimenuitem> once you're in the <glossterm>ACP</glossterm>.</para>
+			<para>Du kan yderligere bestemme hvilke filtyper der kan vedhæftes. Af sikkerhedgrunde anbefales det at filtyper der kan indeholde scripts (som php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx...) ikke tillades. Denne side findes ved at klikke på <guimenuitem>Administrér filtyper</guimenuitem> i <glossterm>ACP</glossterm>.</para>
 			
-			<para>To add an allowed file extension, find the <guilabel>Add Extension</guilabel> form on the page. In the field labeled <guilabel>Extension</guilabel>, type in the file extension. Do not include the period before the file extension. Then, select the extension group that this new file extension should be added to via the <guilabel>Extension group</guilabel> selection menu. Then, click <guilabel>Submit</guilabel>.</para>
+			<para>For at tilføje en ny filtype anvendes afsnittet <guilabel>Tilføj filtype</guilabel>. I feltet <guilabel>Filtype</guilabel> angives filendelse uden punktummet før endelsen. Vælg herefter i dropdownmenuen <guilabel>Filtypegruppe</guilabel>, hvilken gruppe den nye filtype skal tilknyttes. Klik herefter på <guilabel>Udfør</guilabel>.</para>
 		
-			<para>You can also view your board's current allowed file extensions. On the page, you should see a table listing all of the allowed file extensions. To change the group that an extension belongs to, select a new extension group from the selection menu located in the extension's row. To delete an extension, check the checkbox in the <guilabel>Delete</guilabel> column. When you're done managing your board's current file extensions, click <guilabel>Submit</guilabel> at the bottom of the page.</para>
+			<para>I oversigten umiddelbart under ses de filtyper som i øjeblikket er tilladte på boardet. For at ændre en filtypes gruppetilknytning vælges en anden filtypegruppe i dropdownmenuen ud for filtypen. En filtype slettes ved at mærke boksen i kollonnen <guilabel>Slet</guilabel> af og klikke på <guilabel>Udfør</guilabel> nederst på siden.</para>
 		</section>
 		
 		<section id="acp_attach_extension_groups">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage extension groups</title>
+			<title>Administrér filtypegrupper</title>
 			
-			<para>Allowed file extensions can be placed into groups for easy management and viewing. To manage the extension groups, click <guimenuitem>Manage extension groups</guimenuitem> once you get into the <guilabel>Posting</guilabel> settings part of the <glossterm>ACP</glossterm>. You can configure specific settings regarding each extension group.</para>
+			<para>Tilladte filtyper kan med fordel arrangeres i grupper, herved opnås et bedre overblik og en væsentlig nemmere administration. Klik på <guimenuitem>Administrér filtypegrupper</guimenuitem> under indstillingerne for <guilabel>Meddelelser</guilabel> i  <glossterm>ACP</glossterm>. Du kan vælge separate indstillinger for hver filtypegruppe.</para>
 			
-			<para>To add a new file extension group, find the textbox that corresponds to the <guilabel>Create new group</guilabel> button. Type in the name of the extension group, then click <guilabel>Submit</guilabel>. You will be greeted with the extension group settings form. The following contains descriptions for each option available, and applies to extension groups that either already exist or are being added.</para>
+			<para>For at oprette en ny filtypegruppe bruges tekstfeltet ved siden af <guilabel>Opret en ny gruppe</guilabel> nederst på siden. Indtast navnet på den nye filtypegruppe og klik på <guilabel>Udfør</guilabel>. Du bliver nu bedt om at konfigurere indstillinger for den nye filtypegruppe. I det følgende gennemgås alle indstillingsparametre for tiltypegrupper.</para>
 		
 			<itemizedlist>
-				<title>Add Extension Group</title>
-				<listitem><para><guilabel>Group name</guilabel>: The name of the extension group.</para></listitem>
-				<listitem><para><guilabel>Special category</guilabel>: Files in this extension group can be displayed differently. Select a special category from this selection menu to change the way the attachments in this extension group is presented within a post.</para></listitem>
-				<listitem><para><guilabel>Allowed</guilabel>: Enable this if you want to allow attachments that belong in this extension group.</para></listitem>
-				<listitem><para><guilabel>Allowed in private messaging</guilabel>: Enable this if you want to allow attachments that belong in this extension group in private messages.</para></listitem>
-				<listitem><para><guilabel>Upload icon</guilabel>: The small icon that is displayed next to all attachments that belong in this extension group.</para></listitem>
-				<listitem><para><guilabel>Maximum filesize</guilabel>: The maximum filesize for attachments in this extension group.</para></listitem>
-				<listitem><para><guilabel>Assigned extensions</guilabel>: This is a list of all file extensions that belong in this extension group. Click <guilabel>Go to extension management screen</guilabel> to manage what extensions belong in this extension group.</para></listitem>
-				<listitem><para><guilabel>Allowed forums</guilabel>: This allows you to control what forums your users are allowed to post attachments that belong in this extension group. To enable this extension group in all forums, select the <guilabel>Allow all forums</guilabel> radio button. To set which specific forums this extension group is allowed in, select the <guilabel>Only forums selected below</guilabel> radio button, and then select the forums in the selection menu.</para></listitem>
+				<title>Tilføj filtypegruppe</title>
+				<listitem><para><guilabel>Gruppenavn</guilabel>: Navnet på filtypegruppen.</para></listitem>
+				<listitem><para><guilabel>Specialkategori</guilabel>: Filer tilhørende én filtypegruppe kan vises forskelligt. Vælg en specialkategori i dropdownmenuen, for at vælge hvordan vedhæftede filer vises i indlæg.</para></listitem>
+				<listitem><para><guilabel>Tilladt</guilabel>: Afmærk denne for at tillade vedhæftede filer tilknyttet denne gruppe.</para></listitem>
+				<listitem><para><guilabel>Tillad i private beskeder</guilabel>: Vælg denne for at tillade at vedhæfte filer tilknyttet denne gruppe i private beskeder.</para></listitem>
+				<listitem><para><guilabel>Uploadikon</guilabel>: Det lille ikon som vises ved siden af alle vedhæftede filer tilknyttet denne gruppe.</para></listitem>
+				<listitem><para><guilabel>Maksimal filstørrelse</guilabel>: Den maksimalt tilladte filstørrelse for filer i denne filtypegruppe.</para></listitem>
+				<listitem><para><guilabel>Valgte filtyper</guilabel>: Her er listet alle filtyper tilknyttet denne gruppe. Klik på <guilabel>Gå til indstillinger for filtyper</guilabel> for at administrere hvilke filtyper der skal tilknyttes gruppen.</para></listitem>
+				<listitem><para><guilabel>Tilladte fora</guilabel>: Her bestemmes i hvilke fora brugere kan vedhæfte filer tilknyttet denne filtypegruppe. For at tillade gruppen i samtlige fora på boardet vælges <guilabel>Tillad i alle fora</guilabel>. For at udvælge bestemte fora, vælges først <guilabel>Kun nedenstående valgte fora</guilabel>, hvorefter de ønskede fora vælges. Til sidst klikkes på <guilabel>Udfør</guilabel>.</para></listitem>
 			</itemizedlist>
 			
-			<para>To edit a current file extension group's settings, click the "Settings" icon that is in the extension group's row. Then, go ahead and edit the extension group's settings. For more information about each setting, see the above.</para>
+			<para>For at ændre i en eksisterende filtypegruppe, klikkes i oversigten på det grønne ikon "Redigér". Indstillingsmulighederne er de samme som omtalt ovenstående.</para>
 		
-			<para>To delete an extension group, click the "Delete" icon that is in the extension group's row.</para>
+			<para>For at slette en filtypegruppe klikkes på det røde "Slet" ikon i oversigten.</para>
 		</section>
 		
 		<section id="acp_attach_orphaned">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Orphaned attachments</title>
+			<title>Vildfarne vedhæftede filer</title>
 			
-			<para>Sometimes, attachments may be orphaned, which means that they exist in the specified files directory (to configure this directory, see the section on <link linkend="acp_attach_settings">attachment settings</link>), but aren't assigned to any post(s). This can happen when posts are deleted or edited, or even when users attach a file, but don't submit their post.</para>
+			<para>Det sker at vedhæftede filer mister tilhørsforhold, hvilket betyder at de er tilstede i den modtagemappen for vedhæftede filer (se afsnittet <link linkend="acp_attach_settings">Vedhæftede filer</link>), men ikke tilknyttet indlæg. Det sker oftest, når brugere vedhæfter filer, men ikke får klikket <guilabel>Udfør</guilabel> på det endelige indlæg.</para>
 			
-			<para>To manage orphaned attachments, click on <guimenuitem>Orphaned attachments</guimenuitem> on the left-hand menu once you're in the <guimenuitem>Posting</guimenuitem> settings section of the <glossterm>ACP</glossterm>. You should see a list of all orphaned attachments in the table, along with all the important information regarding each orphaned attachment.</para>
+			<para>I fanebladet <guimenuitem>Meddelelser</guimenuitem> klikkes på <guimenuitem>Vildfarne vedhæftede filer</guimenuitem> i menuen til venstre se en liste indeholdende alle vildfarne filer.</para>
 			
-			<para>You can assign an orphaned post to a specific post. To do so, you must first find the post's post ID. Enter this value into the <guilabel>Post ID</guilabel> column for the particular orphaned attachment. Enable <guilabel>Attach file to post</guilabel>, then click <guilabel>Submit</guilabel>.</para>
+			<para>Herfra er det muligt at tilknyttet filen til et indlæg. Først skal du have fundet indlæggets ID, som kan ses i browserens adresselinie når indlægget læses - eksempelvis ..../viewtopic.php?f=43&amp;t=227#p1014, hvor 1014 er indlæggets ID. Angiv denne ID i kollonnen <guilabel>Indlæggets ID</guilabel> for den aktuelle fil. Afmærk herefter boksen <guilabel>Vedhæft fil til indlæg</guilabel> og afslut med at klikke på <guilabel>Udfør</guilabel> nederst.</para>
 		
-			<para>To delete an orphaned attachment, check the orphaned attachment's <guilabel>Delete</guilabel> checkbox, then click <guilabel>Submit</guilabel>. Note that this cannot be undone.</para>
+			<para>En vilfaren fil kan slettes ved at afmærke boksen <guilabel>Slet</guilabel> yderst til højre i oversigten og klikke på <guilabel>Udfør</guilabel>. Bemærk at sletningen er uigenkaldelig og kan ikke fortrydes.</para>
 		</section>
 	</section>
 
@@ -977,115 +977,118 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
-				</author>
-				
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Users Management</title>
+		<title>Brugere og grupper</title>
 
 		<section id="acp_users_manage">
-			<title>Manage Users</title>
-			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
+			<title>Administrér brugere</title>
+			<para>Brugere er grundlaget for dit board. Som administrator er det derfor vigtigt at kunne administrere brugere fornuftigt. Denne administration foregår i <acronym>ACP</acronym>, hvor brugerinformation og deres personlige indstillinger ændres ganske enkelt.</para>
 				
-			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem> to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
+			<para>Find fanebladet <guimenuitem>Brugere og grupper</guimenuitem> i <acronym>ACP</acronym>. Brugeradministrationen kan også nås fra forsiden, via det øverste punkt i Hurtig Tilgang <guimenuitem>Administrér brugere</guimenuitem> i navigationmenuen til venstre.</para>
 				
-			<para>To continue and manage a user, you must know the username(s) that you want to manage. In the textbox for the <guilabel>"Find a member:"</guilabel> field, type in the username of the user whose information and settings you wish to manage. On the other hand, if you want to find a member, click on <guilabel>[ Find a Member ]</guilabel> (which is below the textbox) and follow all the steps appropriate to find and select a user. If you wiant to manage the information and settings for the Anonymous user (any visitor who is not logged in is set as the Anonymous user), check the checkbox labeled <guilabel>"Select Anonymous User"</guilabel>. Once you have selected a user, click <guilabel>Submit</guilabel>.</para>
+			<para>For at kunne administrere en bruger skal du kende og angive brugernavn i tekstfeltet ud for<guilabel>Find en tilmeldt bruger:</guilabel>. Ønsker du at søge efter en tilmeldt bruger, klikkes på <guilabel>[ Find en tilmeldt bruger ]</guilabel>, umiddelbart under indtastningsfeltet. Ikke tilmeldte/anonyme besøgende (gæstebruger) kan administreres ved at afmærke feltet <guilabel>"Vælg gæstebruger"</guilabel>. Når den rette bruger er fundet og valgt klikkes på <guilabel>Udfør</guilabel>.</para>
 				
-			<para>There are many sections relating to a user's settings. The following are subsections that have more information on each form. Each form allows you to manage specific settings for the user you have selected. When you are done with editing the data on each form, click <guilabel>Submit</guilabel> (located at the bottom of each form) to submit your changes.</para>
+			<para>Der er 10 forskellige formularer relateret til brugerindstillinger, den relevante vælges i dropdownmenuen øverst til højre. Hver formular giver mulighed for at ændre en række indstillinger samlet i denne. I det følgende gennemgås disse og deres indhold. Når der ændres i én af formularerne klikkes på <guilabel>Udfør</guilabel> placeret nederst på hver af formularerne.</para>
 			
 			<section id="acp_users_manage_overview">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Overview</title>
-				<para>This is the first form that shows up when you first select a user to manage. Here, all of the general information and settings for each user is displayed.</para>
+				<title>Oversigt</title>
+				<para>Den første formular som præsenteres når en bruger vælges. Her vises den overordnede information om brugere.</para>
 				
 				<variablelist>
 					<varlistentry>
-						<term>Username</term>
+						<term>Brugernavn</term>
 						<listitem>
-							<para>This is the name of the user you're currently managing. If you want to change the user's username, type in a new username between three and twenty characters long into the textbox labeled <guilabel>Username:</guilabel></para>
+							<para>Navnet på den bruger du administrerer i øjeblikket. Du har her mulighed for at ændre brugernavnet, ved at ændre navnet i tekstfeltet <guilabel>Brugernavn:</guilabel>. Krav til brugernavnes længde er angivet som mellem x og y tegn.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Registered</term>
+						<term>Tilmeldt</term>
 						<listitem>
-							<para>This is the complete date on which the user registered. You cannot edit this value.</para>
+							<para>Tilmeldingsdato og klokkeslæt for brugers tilmelding på boardet. Tidspunktet kan ikke umiddelbart ændres.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Registered from IP</term>
+						<term>Tilmeldt fra IP-adresse</term>
 						<listitem>
-							<para>This is the <acronym>IP</acronym> address from which the user registered his or her account. If you want to determine the <acronym>IP</acronym> hostname, click on the <acronym>IP</acronym> address itself. The current page will reload and will display the appropriate information. If you want to perform a whois on the <acronym>IP</acronym> address, click on the <guilabel>Whois</guilabel> link. A new window will pop up with this data.</para>
+							<para>Bruger tilmeldte sig fra denne <acronym>IP</acronym>-adresse. Du kan se finde adressens værtsnavn ved at klikke på selve <acronym>IP</acronym>-adressen. Siden genindlæses denne gang med værtsnavnet. Det er også muligt at foretage en whois-søgning på <acronym>IP</acronym>-adressen, klik på linket <guilabel>Whois</guilabel> umiddelbart herunder. Herefter popper et nyt vindue om med disse data.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Last Active</term>
+						<term>Sidst aktiv</term>
 						<listitem>
-							<para>This is the complete date on which the user was last active.</para>
+							<para>Bruger var sidst aktiv på det viste tidspunkt.</para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>Indlæg</term>
+						<listitem>
+							<para>Brugers samlede antal indlæg på boardet.</para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>Advarsler</term>
+						<listitem>
+							<para>Antal advarsler udstedt til bruger.</para>
+							<para>Læs mere om advarsler i <xref linkend="mcp_warnings"/>.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Founder</term>
+						<term>Grundlægger</term>
 						<listitem>
-							<para>Founders are users who have all administrator permissions and can never be banned, deleted or altered by non-founder members. If you want to set this user as a founder, select the <guilabel>Yes</guilabel> radio button. To remove founder status from a user, select the <guilabel>No</guilabel> radio button.</para>
+							<para>En grundlægger har alle administratortilladelser og kan ikke udelukkes, slettes eller dennes indstillinger kan kun ændres af en anden grundlægger. Vælg <guilabel>Yes</guilabel> hvis du ønsker at gøre bruger til grundlægger. En brugers grundlæggerstatus fjernes ved at vælge <guilabel>Nej</guilabel> radio button.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
 						<term>Email</term>
 						<listitem>
-							<para>This is the user's currently set email address. To change the email address, fill in the <guilabel>Email:</guilabel> textbox with a valid email.</para>
+							<para>Brugers emailadresse. For at ændre denne skrives den nye i tekstfeltet ud for <guilabel>Email:</guilabel>.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Confirm email address</term>
+						<term>Bekræft emailadresse</term>
 						<listitem>
-							<para>This textbox should only be filled if you are changing the user's email address. If you are changing the email address, both the <guilabel>Email:</guilabel> textbox and this one should be filled with the same email address. If you do not fill this in, the user's email address will not be changed.</para>
+							<para>Teksfeltet anvendes kun som bekræftelse, hvis brugers emailadresse ændres i ovennævnte. Udfyldes denne ikke ændres brugers emailadresse ikke, selvom den er ændret i ovennævnte.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>New password</term>
+						<term>Nyt kodeord</term>
 						<listitem>
-							<para>As an administrator, you cannot see any of your users' password. However, it is possible to change passwords. To change the user's password, type in a new password in the <guilabel>New password:</guilabel> textbox. The new password has to be between six and thirty characters long.</para>
+							<para>Selv som administrator kan du ikke dine brugeres kodeord. Her kan du imidlertid tildele bruger et helt nyt. Angiv dette i tekstfeltet ud for <guilabel>Nyt kodeord:</guilabel>. Krav til kodeordets længde er anført.</para>
 						
-							<important><para>Before submitting any changes to the user, make sure this field is blank, unless you really want to change the user's password. If you accidentally change the user's password, the original password cannot be recovered!</para></important>
+							<important><para>Sørg altid for at dette felt er blankt, medmindre du vil ændre brugers kodeord. Hvis du ved et uheld ændrer brugers kodeord, kan det oprindelige ikke genskabes!</para></important>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Confirm new password</term>
+						<term>Bekræft kodeord</term>
 						<listitem>
-							<para>This textbox should only be filled if you are changing the user's password. If you are changing the user's password, the <guilabel>Confirm new password:</guilabel> textbox needs to be filled in with the same password you filled in in the above <guilabel>New password:</guilabel> textbox.</para>
+							<para>Tekstfeltet anvendes som bekræftelse på det ændrede kodeord ovenfor. Kodeordet du angiver i <guilabel>Bekræft kodeord:</guilabel> skal være identisk med det du angiv ovenfor i tekstfeltet <guilabel>Nyt kodeord:</guilabel>.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Warnings</term>
+						<term>Hurtig værktøjer</term>
 						<listitem>
-							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
-							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
-						</listitem>
-					</varlistentry>
-					
-					<varlistentry>
-						<term>Quick Tools</term>
-						<listitem>
-							<para>The options in the <guilabel>Quick Tools</guilabel> drop-down selection box allow you to quickly and easily change one of the user's options. The available options are <guilabel>Delete Signature</guilabel>, <guilabel>Delete Avatar</guilabel>, <guilabel>Move all Posts</guilabel>, <guilabel>Delete all Posts</guilabel>, and <guilabel>Delete all attachments</guilabel>.</para>
+							<para>De tilgængelige muligheder i <guilabel>Hurtig værktøjer</guilabel>nes dropdownmenu giver adgang til hurtigt og nemt at ændre grundlæggende indstillinger for bruger. Valgmuligheder er <guilabel>Udeluk pr. brugernavn</guilabel>, <guilabel>Udeluk pr. emailadresse</guilabel>, <guilabel>Udeluk pr. IP-adresse</guilabel>, <guilabel>Slet signatur</guilabel>, <guilabel>Slet avatar</guilabel>, <guilabel>Flyt alle indlæg</guilabel>, <guilabel>Slet alle indlæg</guilabel> og <guilabel>Slet alle vedhæftede filer</guilabel>.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -1095,16 +1098,16 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Feedback</title>
-				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
+				<title>Notater</title>
+				<para>Et andet aspekt i forbindelse med administration af brugere er muligheden for at kunne se en log over dennes handlinger og modtagne advarsler, sammen med evt. bemærkninger om denne, skrevet af administrator.</para>
 				
-				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued. <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
+				<para>For at tilpasse visning af brugers datalog, vælges efter eget ønske i dropdownmenuerne <guilabel>Vis datalog:</guilabel> og <guilabel>Sortér efter:</guilabel>. I <guilabel>Vis datalog:</guilabel> kan vælges hvilken periode der skal vises. I <guilabel>Sortér efter:</guilabel> vælges om data i perioden skal sorteres efter <guimenuitem>Brugernavn</guimenuitem>, <guimenuitem>Dato</guimenuitem>, <guimenuitem>IP-adresse</guimenuitem> eller <guimenuitem>Loghændelse</guimenuitem>. Desuden vælges om den valgte log skal sorteres i faldende eller stigende orden. Klik på <guilabel>Udfør</guilabel> for at opdatere visningen efter dit eget ønske.</para>
 			
-				<para>Another way of managing a user's feedback data is by adding feedback. Simply find the section entitled <guilabel>Add feedback</guilabel> and enter your message into the <guilabel>FEEDBACK</guilabel> text area. When you are done, click <guilabel>Submit</guilabel> to add the feedback.</para>
+				<para>Det er også her du som administrator har mulighed for at tilføje et notat om pågældende bruger. I den nederste sektion <guilabel>Tilføj brugernotat</guilabel> skrives notatet i tekstfeltet <guilabel>Notater</guilabel>. Klik herefter på <guilabel>Udfør</guilabel>, notatet vil herefter kunne ses i brugers datalog.</para>
 			</section>
 			
 			<section id="acp_users_manage_profile">

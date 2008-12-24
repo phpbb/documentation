@@ -68,10 +68,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>Heimidal</othername>
-				</author>
-				<author>
-					<othername>iWisdom</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -114,10 +111,10 @@
 			</section>
 		</section>
 		<section id="ucp_profile">
-			<title>Profil</title>
+			<title>Profilindstillinger</title>
 			<para>I denne fane kan du indstille og ændre dine personlige profilinformationer. Disse informationer kan ses af andre tilmeldte brugere på boardet, og er derfor med til at tegne eller præsentere dig offentligt. (Denne information er adskilt fra dine personlige indstillinger som bestemmer hvordan du vil have boardet præsenteret. Derfor denne adskillelse).</para>
 			<section id="ucp_profile_info">
-				<title>Redigér profil</title>
+				<title>Profil</title>
 				<para>Indstillingerne vises for tilmeldte brugere når der klikkes på din profil.</para>
 				<itemizedlist>
 					<listitem><para><guilabel>ICQ-nummer</guilabel>: Dit kontonummer hos <ulink url="http://www.icq.com/">ICQ</ulink> system.</para></listitem>
