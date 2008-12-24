@@ -1144,9 +1144,9 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Preferences</title>
+				<title>Brugerindstillinger</title>
 				
-				<para>Users have many settings they can use for their account. As an administrator, you can change any of these settings. The user settings (also known as preferences) are grouped into three main categories: <guilabel>Global Settings</guilabel>, <guilabel>Posting Defaults</guilabel>, and <guilabel>Display Options</guilabel>.</para>
+				<para>Brugere har mange indstillinger som de kan anvende for deres konto. Som administrator kan du enhver af disse indstilling. Brugerindstillingerne er grupperet i tre hovedkategorier: <guilabel>Globale indstillinger</guilabel>, <guilabel>Indlægsindstillinger</guilabel> og <guilabel>Indstillinger for visning</guilabel>.</para>
 			</section>
 			
 			<section id="acp_users_manage_avatar">
