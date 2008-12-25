@@ -232,18 +232,15 @@
 				<author>
 					<othername></othername>
 				</author>
-				<author>
-					<othername></othername>
-				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Het creëren van forums</title>
-		<para>Forums are the sections where topics are stored. Without forums, your users would have nowhere to post! Creating forums is very easy.</para>
-		<para>Firstly, make sure you are logged in. Find the <guilabel>[ Administration Control Panel ]</guilabel> link at the bottom of the page, and click it. You should be in the Administration Index. You can administer your board here.</para>
-		<para>There are tabs at the top for the Administration Control Panel that will guide you to each category. You must get to the Forum Administration section to create a forum, so click the <guilabel>Forums</guilabel> tab.</para>
-		<para>The Forum Administration Index is where you can manage forums on your site. Along with being able to create forums, you are also able to create subforums. Subforums are forums that are located in a parent forum in a hierachy. For more information about subforums, see the <link linkend="acp_forums_subforums">administration guide on subforums</link>.</para>
-		<para>Find the <guilabel>Create new forum</guilabel> button on the right side of the page. Type in the name of the forum you wish in the textbox located directly to the left of this button. For example, if the forum name was to be Test, in the text box put Test. Once you are done, click the <guilabel>Create new forum</guilabel> button create the forum.</para>
-		<para>You should see a page headed with the text &quot;Create new forum :: Test&quot;. You can change options for your forum; for example you can set what forum image the forum can use, if it's a category, or what forum rules text will belong to the forum. You should type up a brief description for the forum as users will be able to figure out what the forum is for.</para>
+		<title>Het aanmaken van forums</title>
+		<para>Forums zijn de secties waar onderwerpen zijn opgeslagen. Zonder forums kunnen je gebruikers nergens iets plaatsen! Het aanmaken van forums is heel erg makelijk.</para>
+		<para>Als eerste, zorg er voor dat je bent aangemeld. Daarna zoek je de  <guilabel>Beheerderspaneel</guilabel> link onderaan op de pagina, en klik erop. Daarna zal je terecht komen in de index pagina van het beheerderspaneel. Je kan hier je forum beheren.</para>
+		<para>Er zijn diverse tabs te vinden bovenaan in het beheerderpaneel, die je zullen helpen om elke categorie te doorlopen. Je moet naar de forumbeheer sectie gaan om een nieuwe forums te kunnen aanmaken, dus klik op de <guilabel>Forums</guilabel> tab.</para>
+		<para>De forumbeheer index is de plaats waar je alle forums kan beheren van jouw website. Ook daar kan je forums aanmaken, je kan daar zelfs ook nog subforums aanmaken. Subforums zijn forums die eigenlijk een apparte locatie hebben, maar worden weergegeven onder een forum op de indexpagina, waar je dan op kan klikken waardoor je naar een andere forum categorie gaat. Voor meer informatie over subforums, zie de <link linkend="acp_forums_subforums">beheerdershandleiding van subforums</link>.</para>
+		<para>Zoek de <guilabel>Nieuw forum aanmaken</guilabel> knop aan de rechterkant van de pagina. Voer de naam in van het forum die je wilt aanmaken in het tekstveld, die je dan weer kan vinden links van de <guilabel>Nieuw forum aanmaken</guilabel> knop. Bijvoorbeeld: als de forumnaam Test is, dan voer je in het tekstveld Test in. Wanneer je eenmaal klaar bent, klik je op de <guilabel>Nieuw forum aanmaken</guilabel> knop, om een forum te kunnen aanmaken.</para>
+		<para>Daarna zal je een pagina moeten zien met de tekst &quot;Nieuw forum aanmaken :: Test&quot;. Je kan hier opties veranderen voor jouw forum; bijvoorbeeld je kan een forumafbeelding instellen welke het forum kan gebruiken, of het een categorie moet zijn, of wat de forumregels tekst moet zijn voor dat forum. Je zal ook een beschrijving moeten invoeren voor het forum, zodat gebruikers makkelijk kunnen zien waar het forum voor bedoeld is.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
