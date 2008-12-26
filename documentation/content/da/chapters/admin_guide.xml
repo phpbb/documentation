@@ -1114,33 +1114,35 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Profile</title>
+				<title>Profil</title>
 				
-				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
+				<para>Brugere kan fra tid til anden have data i brugerprofil som kræver at du opdaterer eller sletter disse. Hvis du ikke ønsker at ændre et felt efterlades det tomt. Disse felter kan ændres:
 					<itemizedlist>
-						<listitem><para><guilabel>ICQ Number</guilabel> has to be a number at least three digits long.</para></listitem>
-						<listitem><para><guilabel>AOL Instant Messenger</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>MSN Messenger</guilabel> can have any alphanumeric characters, but should look similar to an email address (joebloggs@example.com).</para></listitem>
-						<listitem><para><guilabel>Yahoo Messenger</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Jabber address</guilabel> can have any alphanumeric characters, but needs to look like an email address would (joebloggs@example.com).</para></listitem>
-						<listitem><para><guilabel>Website</guilabel> can have any alphanumeric characters and symbols, but must have the protocol included (ex. http://www.example.com).</para></listitem>
-						<listitem><para><guilabel>Location</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Occupation</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Interests</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Birthday</guilabel> can be set with three different drop-down selection boxes: <guilabel>Day:</guilabel>, <guilabel>Month:</guilabel>, and <guilabel>Year:</guilabel>, respectively. Setting a year will list the user's age when it is his or her birthday.</para></listitem>
+						<listitem><para><guilabel>ICQ-nummer</guilabel> skal mindst være tre cifre.</para></listitem>
+						<listitem><para><guilabel>AOL Instant Messenger</guilabel> kan indeholde alle alfanumeriske tegn.</para></listitem>
+						<listitem><para><guilabel>MSN Messenger</guilabel> kan indeholde alle alfanumeriske tegn, men skal have format som en emailadresse (eks. joebloggs@example.com).</para></listitem>
+						<listitem><para><guilabel>Yahoo Messenger</guilabel> kan indeholde alle symboler og alfanumeriske tegn.</para></listitem>
+						<listitem><para><guilabel>Jabberadresse</guilabel> kan indeholde alle alfanumeriske tegn, men skal have format som en emailadresse (eks. joebloggs@example.com).</para></listitem>
+						<listitem><para><guilabel>Hjemmeside</guilabel> kan indeholde alle symboler og alfanumeriske tegn, men skal have en protokol inkluderet (eks. http://www.example.com).</para></listitem>
+						<listitem><para><guilabel>Geografisk sted</guilabel> kan indeholde alle symboler og alfanumeriske tegn.</para></listitem>
+						<listitem><para><guilabel>Beskæftigelse</guilabel> kan indeholde alle symboler og alfanumeriske tegn.</para></listitem>
+						<listitem><para><guilabel>Interesser</guilabel> kan indeholde alle symboler og alfanumeriske tegn.</para></listitem>
+						<listitem><para><guilabel>Fødselsdag</guilabel> indstilles med valg i tre dropdownmenuer: <guilabel>Dag:</guilabel>, <guilabel>Måned:</guilabel> og <guilabel>År:</guilabel>. Vælges fødselår vises brugers alder.</para></listitem>
 					</itemizedlist>
 				</para>
+				
+				<para>Er der oprettet tilpassede profilfelter på boardet, vises under ovennævnte en ekstra sektion med titlen <guilabel>Tilpassede profilfelter</guilabel>. Alle profilfelter er listet her, med mulighed for at ændre i disse.</para>
 			</section>
 			
 			<section id="acp_users_manage_preferences">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>JohnHjorth</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -1153,33 +1155,33 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Avatar</title>
+				<title>Avatar</title>
 				
-				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
-				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
+				<para>Her kan brugers <glossterm>avatar</glossterm> ændres eller tilføjes. Har bruger allerede tilføjet en avatar vises den her.</para>
+				<para>Afhængig af de valgte avatarindstillinger for boardet (læs mere information om avatarindstillinger her <link linkend="acp_board_avatars">Avatarindstillinger</link>) kan der vælge disse muligheder at vælge imellem, for at ændre i brugers avatar: <guilabel>Upload fra din maskine</guilabel>, <guilabel>Upload fra en URL</guilabel> eller <guilabel>Link off-site</guilabel>. Det er desuden muligt at vælge en avatar fra boardet avatargalleri ved at klikke på knappen <guilabel>Vis galleri</guilabel> ved siden af <guilabel>Lokalt galleri</guilabel>.</para>
 				<note>
-					<para>The changes you make to the user's avatar still has to comply with the limitations you've set in the avatar settings.</para>
+					<para>De ændringer du foretager i brugers avatar er underlagt de begrænsninger du har sat i avatarindstillingerne.</para>
 				</note>
-				<para>To delete the avatar image, simply check the <guilabel>Delete image</guilabel> checkbox underneath the avatar image.</para>
-				<para>When you are done choosing what avatar the user will have, click <guilabel>Submit</guilabel> to update the user's avatar.</para>
+				<para>For at slette en avatar afmærkes boksen <guilabel>Slet avatar</guilabel> under billedet af avataren.</para>
+				<para>Når du ændret i brugers avatar klikkes på <guilabel>Udfør</guilabel>.</para>
 			</section>
 			
 			<section id="acp_users_manage_rank">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Rank</title>
+				<title>Rang</title>
 				
-				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
-				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
+				<para>Her kan brugers <glossterm>rang</glossterm> vælges. Du kan vælge en rang fra <guilabel>Brugerrang:</guilabel> dropdownmenuen. Når du har valgt en rang, klikkes på <guilabel>Udfør</guilabel> for at opdatere brugers rang.</para>
+				<para>Læs mere om rangordener her <xref linkend="acp_user_ranks"/>.</para>
 				<!-- TODO: Add a specific section on ranks of course. -->
 			</section>
 			
@@ -1187,16 +1189,16 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Signature</title>
+				<title>Signatur</title>
 				
-				<para>Here you can add, edit, or delete the user's <glossterm>signature</glossterm>.</para>
-				<para>The user's current signature should be displayed in the <guilabel>Signature</guilabel> form. Just edit the signature by typing whatever you want into the text area. You can use <glossterm>BBCode</glossterm> and any other special formatting with what's provided. When you are done editing the user's signature, click <guilabel>Submit</guilabel> to update the user's signature.</para>
+				<para>Her kan brugers <glossterm>signatur</glossterm> tilføjes, ændres og slettes.</para>
+				<para>Har bruger oprettet en signatur vises den i <guilabel>Signatur</guilabel>-feltet. Signaturen kan ændres i dette felt.  <glossterm>BBkode</glossterm> og øvrige formateringsværktøjer kan bruges efter ønske. Klik på <guilabel>Udfør</guilabel> for at opdatere brugers signatur med udførte ændringer.</para>
 				<note>
-					<para>The signature that you set has to obey the board's signature limitations that you currently have set.</para>
+					<para>De ændringer du foretager i brugers signatur er underlagt de begrænsninger du at sat i signaturindstillinger.</para>
 				</note>
 			</section>
 			
@@ -1204,28 +1206,28 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Groups</title>
+				<title>Grupper</title>
 				
-				<para>Here you can see all of the <glossterm>usergroups</glossterm> that the user is in. From this page you can easily remove the user from any usergroup, or add the user to an existing group. The table entitled <guilabel>Special groups user is a member of</guilabel> lists out the usergroups the user is currently a member of.</para>
-				<para>Adding the user to a new usergroup is very easy. To do so, find the pull-down menu labeled <guilabel>Add user to group:</guilabel> and select a usergroup from that menu. Once the usergroup is selected, click <guilabel>Submit</guilabel>. Your addition will immediately take effect.</para>
-				<para>To delete the user from a group he/she is currently a member of, find the row that the usergroup is in, and click <guilabel>Delete</guilabel>. You will be greeted with a confirmation screen; if you want to go ahead and do so, click <guilabel>Yes</guilabel>.</para>
+				<para>Her listes alle de <glossterm>brugergrupper</glossterm> bruger er medlem af. Og herfra kan du enkelt fjerne bruger fra en gruppe, eller tilknytte bruger til en eksisterende gruppe.</para>
+				<para>For at tilknytte bruger til en ny brugergruppe anvendes dropdownmenuen nederst ved siden af <guilabel>Tilføj brugeren til gruppen:</guilabel>. Vælg den ønskede gruppe og klik på <guilabel>Udfør</guilabel>, bruger er hermed øjeblikkelig medlem af den nye gruppe.</para>
+				<para>Bruger fjernes fra en gruppe, ved at finde denne i oversigten og klikke på <guilabel>Slet medlem fra gruppe</guilabel> helt til højre. Du bliver bedt om at bekræfte handlingen på det efterfølgende skærmbillede, klik <guilabel>Ja</guilabel> for at bekræfte.</para>
 			</section>
 			
 			<section id="acp_users_manage_permissions">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Permissions</title>
+				<title>Tilladelser</title>
 				
-				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
+				<para>Her vises alle brugers tilladelser. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
 			</section>
 			
 			<section id="acp_users_manage_attachments">
