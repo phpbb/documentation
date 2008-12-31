@@ -138,7 +138,7 @@
 			</section>
 			<section id="ucp_avatar">
 				<title>Avatar</title>
-				<para>Your avatar is an image the displays with every post you make. Depending on board settings, avatars may be completely disabled, or may appear in one (or more) of three forms: "<guilabel>Upload from your machine</guilabel>", "<guilabel>Upload from a URL</guilabel>", and "<guilabel>Link off-site</guilabel>.</guilabel></para>
+				<para>Your avatar is an image the displays with every post you make. Depending on board settings, avatars may be completely disabled, or may appear in one (or more) of three forms: "<guilabel>Upload from your machine</guilabel>", "<guilabel>Upload from a URL</guilabel>", and "<guilabel>Link off-site</guilabel>.</para>
 				<para>
 					<itemizedlist>
 						<listitem><para><guilabel>Upload from your machine</guilabel> - You may upload an avatar from your machine to be hosted on the board's server.</para></listitem>
@@ -146,7 +146,7 @@
 						<listitem><para><guilabel>Link off-site</guilabel> - You may specify the URL of an existing image. This will not cause the image to be hosted on the board's server, but rather hotlinked to its current location.</para></listitem>
 					</itemizedlist>
 				</para>
-				<parap>Additionally, a board administrator may opt to provide an avatar gallery for users to make use of. These images are pre-selected by the administrator and are able to be used by any of a board's members.</parap>
+				<para>Additionally, a board administrator may opt to provide an avatar gallery for users to make use of. These images are pre-selected by the administrator and are able to be used by any of a board's members.</para>
 			</section>
 		</section>
 		<section id="ucp_preferences">
@@ -207,6 +207,9 @@
 				<author>
 					<othername>AdamR</othername>
 				</author>
+				<author>
+					<othername>Noxwizard</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Mastering the Posting Screen</title>
@@ -264,8 +267,7 @@
 			<section id="posting_special">
 				<title>Topic Types</title>
 				<para>Provided you have the right permissions, you have the option of selecting various topic types when posting a new topic by using <guilabel>Post topic as</guilabel>. The four possible types are: <guilabel>Normal</guilabel>, <guilabel>Sticky</guilabel>, <guilabel>Announcement</guilabel>, and <guilabel>Global</guilabel>. By default, all new posts are <guilabel>Normal</guilabel>.</para>
-				<itemizedlist>	
-				
+				<itemizedlist>
 					<listitem><para><guilabel>Normal</guilabel> - By selecting normal, your new topic will be a standard topic in the forum.</para></listitem>
 					<listitem><para><guilabel>Sticky</guilabel> - Stickies are special topics in the forum. They are "stuck" to the top of the first page of the forum in which they are posted, above every Normal topic.</para></listitem>
 					<listitem><para><guilabel>Announcement</guilabel> - Announcements are much like Stickies in that they are "stuck" to the top of the forum. However, they are different from stickies in two ways: 1) they are above Stickies, and 2) they appear at the top of <emphasis>every</emphasis> page of the forum instead of only the first page of topics.</para></listitem>
@@ -277,15 +279,39 @@
 		
 		<section id="posting_attachments">
 			<title>Attachments</title>
-			<para>TODO: How to add attachments, what restrictions might there be. Note that one needs to have the permission to use attachments. How to add more than one file, and so forth.</para>
+			<para>Attachments allow users to upload files and attach them to their post. The ability to attach and download attachments is determined by the &quot;Can attach files&quot; and &quot;Can download files&quot; permissions respectively.</para>
+			<para>To add an attachment, find the <guilabel>Upload attachment</guilabel> section of the posting page and click the <guilabel>Browse</guilabel> button. A comment may be placed in the <guilabel>File comment</guilabel> text box. Clicking <guilabel>Add the file</guilabel> will upload and attach the file to the post. To upload multiple files, repeat the process.</para>
+			<para>To delete an attachment, find the <guilabel>Posted attachments</guilabel> section of the posting page and click teh <guilabel>Delete file</guilabel> button for the desired attachment.</para>
+			<para>Attachments can be displayed within the post text by clicking the <guilabel>Place inline</guilabel> button for the desired attachment. When an attachment is placed inline, text similar to a BBCode is inserted into the post text so that it may be moved. If an attachment is not placed inline, it will be displayed at the end of the post.</para>
+			<para>Attachments are controlled by a set of restrictions, namely file size and file type.</para>
+			<itemizedlist>
+				<listitem><para>File Size: The maximum file size for uploaded files is set by the Administrator. The default is 256KiB.</para></listitem>
+				<listitem><para>File Type: The types of files allowed for upload are restricted by their file extension. The allowed extensions are set by the Administrator.</para></listitem>
+			</itemizedlist>
+			<para>For more information on changing attachment settings, please see <link linkend="acp_attach_settings">ACP Attachment Settings</link>.</para>
 		</section>
 		<section id="posting_polls">
 			<title>Polls</title>
-			<para>TODO: Again, permission based should be noted. Explain how to add the different options, allow for multiple votes, vote changing, and so forth.</para>
+			<para>Polls allow users to use a topic to vote about an idea or issue. Polls can only be created in the first post of a topic. The ability to create and vote in polls is determined by the &quot;Polls&quot; set by the administrator.</para>
+			<itemizedlist>
+				<listitem><para><guilabel>Poll question</guilabel> - This is the idea or issue that is being voted on in the poll. This is required to start a poll.</para></listitem>
+				<listitem><para><guilabel>Poll options</guilabel> - These are the allowed answers to the poll question. When entering a poll option, each should be placed on a separate line of the textbox.  At least two poll options are required.</para></listitem>
+				<listitem><para><guilabel>Options per user</guilabel> - This is the number of options each user may select when voting. When a user is allowed more than one option, a series of checkboxes replaces the radio buttons of the standard poll.</para></listitem>
+				<listitem><para><guilabel>Run poll for</guilabel> - This is the number of days in which users can vote in the poll. Once the time has passed, no more votes can be made and the results will be displayed.</para></listitem>
+				<listitem><para><guilabel>Allow revoting</guilabel> - If this is chosen, users will be able re-cast their votes.</para></listitem>
+			</itemizedlist>
 		</section>
 		<section id="posting_drafts">
 			<title>Drafts</title>
-			<para>TODO: Explain how to load and save drafts. A link to the UCP drafts section should be added for reference. Not sure if permission based.</para>
+			<para>When creating a post, it can be saved or loaded using the drafts feature. If the board permissions allow drafts to be saved, then <guilabel>Save</guilabel> and <guilabel>Load</guilabel> buttons will appear on the posting page.</para>
+			<itemizedlist>
+				<listitem><para><guilabel>Save</guilabel> - Saves a post as a draft. When a draft is saved, only the subject and message of the post are stored. Topic icons, attachments, etc&hellip; will be lost.</para></listitem>
+				<listitem><para><guilabel>Load</guilabel> - Loads a saved draft. When clicked, a listing of available drafts will appear. Click the title of the desired post to load the draft. Any information in the current post will be lost and replaced with that of the draft.</para></listitem>
+			</itemizedlist>
+			<para>Once a draft is used, it is removed. For more information on managing drafts, please see <link linkend="ucp_drafts">UCP Drafts</link>.</para>
+			<note>
+				<para>If there are no drafts available, the <guilabel>Load</guilabel> button will not appear.</para>
+			</note>
 		</section>
 	</section>
 	<section id="user_pm">
