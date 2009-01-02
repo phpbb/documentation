@@ -135,7 +135,7 @@
 			</section>
 			<section id="ucp_avatar">
 				<title>Avatar</title>
-				<para>Din avatar er et lille billede som vises i din profil ved hvert indlæg du skriver. Afhængig af boardets indstillinger kan brugen af  avatars være slået fra. Din avatar tilknyttes din profil på en eller flere måder: &quot;<guilabel>Upload fra din maskine</guilabel>&quot;, &quot;<guilabel>Upload fra ekstern URL</guilabel>&quot; og &quot;<guilabel>Link til ekstern placering</guilabel>&quot;.</guilabel></para>
+				<para>Din avatar er et lille billede som vises i din profil ved hvert indlæg du skriver. Afhængig af boardets indstillinger kan brugen af  avatars være slået fra. Din avatar tilknyttes din profil på en eller flere måder: &quot;<guilabel>Upload fra din maskine</guilabel>&quot;, &quot;<guilabel>Upload fra ekstern URL</guilabel>&quot; og &quot;<guilabel>Link til ekstern placering</guilabel>&quot;.</para>
 				<para>
 					<itemizedlist>
 						<listitem><para><guilabel>Upload fra din maskine</guilabel>: Du kan uploade en avatar fra din maskine og den gemmes på boardets server.</para></listitem>
@@ -143,7 +143,7 @@
 						<listitem><para><guilabel>Link til ekstern placering</guilabel>: Du kan angive URL til et eksisterende billede. Det gemmes ikke på boardets server, der linkes blot til dette.</para></listitem>
 					</itemizedlist>
 				</para>
-				<parap>Yderligere kan boardadministrator have givet mulighed for at vælge i et avatargalleri. Disse billeder er tilgængelige for alle tilmeldte brugere på boardet.</parap>
+				<para>Yderligere kan boardadministrator have givet mulighed for at vælge i et avatargalleri. Disse billeder er tilgængelige for alle tilmeldte brugere på boardet.</para>
 			</section>
 		</section>
 		<section id="ucp_preferences">
@@ -261,8 +261,7 @@
 			<section id="posting_special">
 				<title>Emnetyper</title>
 				<para>Har du de rette tilladelser, har du mulighed for at vælge hvilken type dit nye emne skal vises som. Når du skriver et nyt emne kan denne mulighed benyttes med valgmuligheden <guilabel>Skriv emne som</guilabel> i indstillingsfanen umiddelbart under feltet hvor teksten skrives. Der er fire emnetyper: <guilabel>Normal</guilabel>, <guilabel>Opslag</guilabel>, <guilabel>Bekendtgørelse</guilabel>, og <guilabel>Global</guilabel>. Standardindstillingen er <guilabel>Normal</guilabel>.</para>
-				<itemizedlist>	
-				
+				<itemizedlist>				
 					<listitem><para><guilabel>Normal</guilabel> - emnet indsendes som et standardemne i forummet.</para></listitem>
 					<listitem><para><guilabel>Opslag</guilabel> - vises i øverst på forummets første side, før alle normale emner.</para></listitem>
 					<listitem><para><guilabel>Bekendtgørelser</guilabel> - er meget lig med opslag, i det de også er &quot;låst&quot; øverst i det forum de er indsendt. Der er imidlertid to forskelle: 1) De vises over opslag, og 2) de vises øverst på <emphasis>alle</emphasis> sider i forummet, ikke kun på den første side.</para></listitem>
@@ -274,15 +273,40 @@
 		
 		<section id="posting_attachments">
 			<title>Vedhæfte filer</title>
-			<para>TODO: How to add attachments, what restrictions might there be. Note that one needs to have the permission to use attachments. How to add more than one file, and so forth.</para>
+			<para>Muligheden for at uploade filer og vedhæfte disse i indlæg bestemmes af tilladelsen &quot;Kan vedhæfte filer&quot;. Muligheden for at downloade vedhæfte filer bestemmes af tilladelsen &quot;Kan downloade filer&quot;. Begge indstillinger bestemmes af boardadministrator.</para>
+			<para>For at vedhæfte en fil benyttes fanen <guilabel>Upload af vedhæftede filer</guilabel> umiddelbart under feltet hvor indlæg skrives, herefter klikkes på <guilabel>Gennemse</guilabel> for at finde filen på din PC. Der kan yderligere tilføjes en kommentar til filen i feltet <guilabel>Filkommentar</guilabel>. Klik på <guilabel>Tilføj filen</guilabel> for at uploade og vedhæfte filen til indlægget. Gentag processen for at tilføje flere filer.</para>
+			<para>For at slette en vedhæftet fil, vælger du først at redigere dit indlæg, umiddelbart under feltet med indlægsteksten se nu sektionen <guilabel>Vedhæftede filer</guilabel>, klik på <guilabel>Slet fil</guilabel> under den fil der skal slettes.</para>
+			<para>Hvis intet vælges vises vedhæftede filer altid efter indlægsteksten, men ved at benytte <guilabel>Placér inline</guilabel> knappen, kan filen vises i selve indlægsteksten. Filen placeres nu på rette sted med en kode [attachment=0]filnavn[/attachment], og hele den kode kan flyttes rundt i indlægsteksten, til den ønskede placering er fundet.</para>
+			<para>Vedhæftede filer er underlagt nogle begrænsninger hvad angår antal vedhæftede pr. indlæg, filstørrelse og type.</para>
+ 			<itemizedlist>
+				<listitem><para>Filstørrelse: Den maksimale størrelse for uploadede filer bestemmes af administrator. Standard er 256 KiB.</para></listitem>
+				<listitem><para>Filtype: Bestemmes på baggrund af filendelser. Administrator har defineret hvilke filtyper der må vedhæftes i indlæg.</para></listitem>
+			</itemizedlist>
+			<para>Læs mere information om ændring af indstillinger for vedhæftede filer i  kapitlet <link linkend="acp_attach_settings">ACP Vedhæftede filer</link>.</para>
 		</section>
 		<section id="posting_polls">
 			<title>Afstemning</title>
-			<para>TODO: Again, permission based should be noted. Explain how to add the different options, allow for multiple votes, vote changing, and so forth.</para>
+			<para>Oprettelse af afstemninger giver brugere mulighed for at anvende et emne til at få andre brugere til at give deres holdning til kende om en idé eller lignende. Afstemninger kan kun oprettes i det første indlæg i et emne. Brugeres mulighed for at oprette afstemninger og afgive stemme er bestemt af administrator.</para>
+			<para>For at oprette en afstemning benyttes fanten <guilabel>Oprettelse af afstemning</guilabel> umiddelbart under feltet hvor indlæg skrives.</para>
+			<itemizedlist>
+ 				<listitem><para><guilabel>Afstemningsspørgsmål</guilabel>: Det overordnede spørgsmål for afstemningen angives her.</para></listitem>
+				<listitem><para><guilabel>Afstemningsmuligheder</guilabel>: Her angives de svar brugere kan vælge imellem. Hver svarmulighed angives på en separat linie og der skal angives mindst to.</para></listitem>
+				<listitem><para><guilabel>Afstemningsmuligheder pr. bruger</guilabel>: Antal valgmuligheder i afstemningen. Kan bruger vælge mere end et svar erstattes radioknapper af en række afmærkningsbokse.</para></listitem>
+				<listitem><para><guilabel>Kør afstemning i</guilabel>: Det antal dage afstemningen er åben. Når tiden er overskredet kan brugere ikke længere afgive stemme og kun resultatet vises.</para></listitem>
+				<listitem><para><guilabel>Tillad ændring af afgivne stemmer</guilabel>: Afmærkes denne kan brugere ændre afgiven stemme, så længe afstemningen er åben.</para></listitem>
+			</itemizedlist>
 		</section>
 		<section id="posting_drafts">
 			<title>Kladde</title>
-			<para>TODO: Explain how to load and save drafts. A link to the UCP drafts section should be added for reference. Not sure if permission based.</para>
+			<para>Når der oprettes et indlæg kan det gemmes og genindlæses senere. Hvis boardet tillader dette, er knappen <guilabel>Gem</guilabel> og <guilabel>Indlæs</guilabel> umiddelbart under feltet hvor indlægsteskt skrives.</para>
+ 			<itemizedlist>
+ 				<listitem><para><guilabel>Gem</guilabel> - Indlægget gemmes som en kladde. Kun emnetitel og indlægstekst gemmes. Emneikoner og vedhæftede filer mistes.</para></listitem>
+				<listitem><para><guilabel>Indlæs</guilabel> - Genindlæser en gemt kladde. Når denne vælges, vises en liste af tilgængelige kladder, vælg den rette ved at klikke på dens titel. Allerede skrevet indlægstekst erstattes med kladdens fulde tekst..</para></listitem>
+			</itemizedlist>
+			<para>Når en kladde er anvendt slettes den. Læs mere om anvendelse af håndtering af kladder i <link linkend="ucp_drafts">UCP Kladder</link>.</para>
+			<note>
+				<para>Er ingen kladder gemt, vises <guilabel>Indlæs</guilabel>-knappen ikke.</para>
+ 			</note>
 		</section>
 	</section>
 	<section id="user_pm">

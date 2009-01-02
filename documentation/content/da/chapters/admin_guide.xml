@@ -1227,24 +1227,24 @@
 				</sectioninfo>
 				<title>Tilladelser</title>
 				
-				<para>Her vises alle brugers tilladelser. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
+				<para>Her vises alle brugers tilladelser. For hver gruppe bruger er tilknyttet vises en særskilt sektion med tilladelser relateret til den kategori. For at ændre indstillinger i brugers tilladelser, se <xref linkend="acp_permissions"/>.</para>
 			</section>
 			
 			<section id="acp_users_manage_attachments">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Attachments</title>
+				<title>Vedhæftede filer</title>
 				
-				<para>Depending on the current attachments settings, your users may already have <glossterm>attachments</glossterm> posted. If the user has already uploaded at least one attachment, you can see the listing of the attachment(s) in the table. The data available for each attachment consist of: <guilabel>Filename</guilabel>, <guilabel>Topic title</guilabel>, <guilabel>Post time</guilabel>, <guilabel>Filesize</guilabel>, and <guilabel>Downloads</guilabel>.</para>
-				<para>To help you in managing the user's attachment(s), you can choose the sorting order of the attachments list. Find the <guilabel>Sort by:</guilabel> pull-down menu and pick the category you want to use the sort the list (the possible options are <guimenuitem>Filename</guimenuitem>, <guimenuitem>Extension</guimenuitem>, <guimenuitem>Filesize</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Post time</guimenuitem>, and <guimenuitem>Topic title</guimenuitem>. To choose the sorting order, choose either <guimenuitem>Descending</guimenuitem> or <guimenuitem>Ascending</guimenuitem> from the pull-down menu besides the sorting category. Once you are done, click <guilabel>Go</guilabel>.</para>
-				<para>To view the attachment, click on the attachment's filename. The attachment will open in the same browser window. You can also view the topic in which the attachment was posted by clicking on the link besides the <guilabel>Topic:</guilabel> label, which is below the filename. Deleting the user's attachment(s) is very easy. In the attachments listing, check the checkboxes that are next to the attachment(s) you want to delete. When everything you want has been selected, click <guilabel>Delete marked</guilabel>, which is located below the attachments listing.</para>
+				<para>Afhængig af indstillinger for vedhæftede filer har bruger måske allerede <glossterm>vedhæftede filer</glossterm> i indlæg. Er det tilfældet, får du her listet alle i denne oversigt. Oversigten viser for hver vedhæftet fil: <guilabel>Filnavn</guilabel>, <guilabel>Emnetitel</guilabel>, <guilabel>Tidspunkt for indsendelse</guilabel>, <guilabel>Filstørrelse</guilabel> og antal <guilabel>Downloads</guilabel>.</para>
+				<para>Der kan vælges flere forskellige sorteringer af denne oversigt. Find nederst <guilabel>Sortér efter:</guilabel> og vælg i dropdownmenuen hvordan du ønsker listen sorteret. Der kan sorteres efter disse metoder: <guimenuitem>Filenavn</guimenuitem>, <guimenuitem>Filtype</guimenuitem>, <guimenuitem>Filstørrelse</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Indlægstid</guimenuitem> og <guimenuitem>Emnetitel</guimenuitem>. Sorteringsorden vælges i næste dropdownmenu, enten <guimenuitem>Faldende</guimenuitem> eller <guimenuitem>Stigende</guimenuitem>. Klik på <guilabel>Udfør</guilabel> når de to valg er foretaget.</para>
+				<para>Klik på filnavnet for at se filen. For at se det indlæg hvor filen er vedhæftet, klikkes på linket umiddelbart under <guilabel>Indlæg:</guilabel>. Brugers vedhæftede filer kan slettes ved at markere boksen i kolonnen <guimenuitem>Markér</guimenuitem>. Når de ønskede filer er markeret klikkes <guilabel>Slet markerede</guilabel> for at udføre den endelige sletning.</para>
 				<tip>
-					<para>To select all of the attachments shown on the page, click the <guilabel>Mark all</guilabel> link, which is below the attachments listing. This helps especially if you want to delete all of the attachments shown on the page at once.</para>
+					<para>Alle vedhæftede filer vist på siden kan markeres i en arbejdsgang ved at benytte <guilabel>Markér alle</guilabel> linket nederst.</para>
 				</tip>
 			</section>
 		</section>
@@ -1252,43 +1252,43 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>Graham</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Inactive Users</title>
-			<para>Here you are able to view details of all users who are currently marked as inactive along with the reason their account is marked as inactive and when this occurred.</para>
-			<para>Using the checkboxes on this page it is possible to perform bulk actions on the users, these include activating the accounts, sending them a reminder email indicating that they need to activate their account or deleting the account.</para>
-			<para>There are 5 reasons which may be indicated for an account being inactive:</para>
+			<title>Inaktive brugere</title>
+			<para>Her listes brugere som i øjeblikket er markeret som inaktive, sammen med begrundelsen herfor og tidspunktet for kontoens inaktivitet.</para>
+			<para>Ved at bruge markeringsboksene yderst til højre, er det muligt at udføre massehandlinger på brugerkonti, som eksempel: Aktivering eller sletning af konti og fremsendelse af påmindelse om at konto skal aktiveres.</para>
+			<para>Der er fem årsager til at en konto kan være inaktiv:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Account deactivated by administrator</term>
+					<term>Konto deaktiveret af administrator</term>
 					<listitem>
-						<para>This account has been manually deactivated by an administrator via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
+						<para>En administrator har manuelt deaktiveret kontoen i værktøjet <link linkend="acp_users_manage">Administrér brugere</link>. I brugernoter findes informationer om hvilken administrator der deaktiverede kontoen, vedkommende har måske også efterladt en note om baggrunden.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Profile details changed</term>
+					<term>Profilinformation ændret</term>
 					<listitem>
-						<para>The board is configured to require user activation and this user has changed key information related to their account such as the email address and is required to reactivate the account to confirm these changes.</para>
+						<para>Boardet er indstillet til at forlange brugeraktivering ved ændring af nøgleinformationer. Denne bruger har ændret i sine profilinformationerne, for eksempel emailadresse. Kontoen afventer brugers genaktivering.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Newly registered account</term>
+					<term>Nyligt oprettet konto</term>
 					<listitem>
-						<para>The board is configured to require user activation and either the user or an administrator (depending on the settings) has not yet activated this new account.</para>
+						<para>Boardet er indstillet til at forlange konto aktiveret enten af bruger selv eller en administrator. Denne aktivering er ikke foretaget.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Forced user account reactivation</term>
+					<term>Tvungen genaktivering af brugerkonto</term>
 					<listitem>
-						<para>An administrator has forced this user to reactivate their account via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
+						<para>En administrator har bedt bruger om at genaktivering af kontoen i værtøjet  <link linkend="acp_users_manage">Administrér brugere</link>. I brugernoter findes oplysning hvilken administrator der bad om genaktering, og måske en note om årsagen til denne handling.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Unknown</term>
+					<term>Ukendt</term>
 					<listitem>
-						<para>No reason was recorded for this user being inactive; it is likely that the change was made by an external application or that this user was added from another source.</para>
+						<para>Der er ikke logget en årsag til at bruger er inaktiv, det er sansynligt at ændringen er udført af en ekstern applikation, eller at brugeren er tilføjet fra en anden kilde.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
@@ -1298,26 +1298,26 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' permissions</title>
-			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
+			<title>Brugertilladelser</title>
+			<para>Sammen med muligheden for at kunne administrere brugeres information, er det også vigtigt kan kunne vedligeholde og kontrollere brugeres tilladelser på boardet. Brugertilladelser inkluderer muligheder som brug af avatars, private beskeder etc. Globale redaktørtilladelser; som at kunne godkende indlæg, administrere emner og udelukkelser. Og sidst men ikke mindst give tilladelse til hvem der må ændre i tilladelsessystemet, definere tilpassede BBkoder og administrere fora.</para>
 		            
-		   	 <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
+		   	 <para>Brugertilladelser kan administreres under fanebladet <guimenuitem>Brugere og Grupper</guimenuitem>, ved at klikke på <guimenuitem>Brugertilladelser</guimenuitem> i venstre navigationmenu. Her kan tildeles globale tilladelser til brugere. I afsnittet <guilabel>Slå bruger op</guilabel> angives i feltet <guilabel>Find en tilmeldt bruger</guilabel> brugernavnet på den bruger du vil ændre tilladelser for. Det er også her muligt at anvende søgefunktionen med [ Find en tilmeldt bruger ]. Gæstebruger (som dækker alle anonyme gæster og brugere som ikke er logget ind) kan administreres ved at afmærke boksen <guilabel>Vælg gæstebruger</guilabel>. Klik herefter på <guilabel>Udfør</guilabel>.</para>
 		    
-		    	<para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
+		    	<para>Tilladelser er grupperet i tre kategorier: Bruger, redaktør og administrator. En bruger kan have specielle tilladelser i hver af disse. For at lette administrationen af brugertilladelser, er det muligt at vælge tilladelseroller som indeholder prædefinerede tilladelser.</para>
 		    
 		    	<important>
-		    		<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
+		    		<para>Nedenstående beskrives hvordan ændringer i de tre kategorier kan foretages. Bemærk at der for alles vedkommende er tre valgmuligheder. Du kan vælge <guilabel>Ja</guilabel>, <guilabel>Nej</guilabel> eller <guilabel>Aldrig</guilabel>. Vælges <guilabel>Ja</guilabel> tildeles bruger denne tilladelse, mens <guilabel>Nej</guilabel> tildeles bruger ikke tilladelsen, <emphasis>medmindre en anden tilladelse givet andetsteds tilsidesætter dette</emphasis>. Ønsker du derfor <emphasis>helt</emphasis> at udelukke bruger fra denne tilladelse vælges <guilabel>Aldrig</guilabel>. <guilabel>Aldrig</guilabel> tilsidesætter alle andre valg angående denne tilladelse.</para>
 		    	</important>
 			
-			<para>To edit the user's <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
+			<para>For at ændre en brugers <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
 		
-			<para>To edit the user's <guilabel>Moderative permissions</guilabel>, select "<guimenuitem>Moderator permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are three categories of permissions you may edit: <guilabel>Post actions</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Topic actions</guilabel>.</para>
+			<para>For at ændre en brugers <guilabel>Moderative permissions</guilabel>, select "<guimenuitem>Moderator permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are three categories of permissions you may edit: <guilabel>Post actions</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Topic actions</guilabel>.</para>
 		
-			<para>To edit the user's <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
+			<para>For at ændre en brugers <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
 		</section>
 		
 		<section id="acp_users_forum_permissions">
