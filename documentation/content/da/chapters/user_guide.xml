@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Brugerguide</title>
 	<abstract>
-		<para>Dette kapitel er rettet mod boardets brugere. Det forklarer alle funktioner i brugergrænsefladen af phpBB 3.0.x.</para>
+		<para>Dette kapitel er rettet mod boardets brugere. Det forklarer alle funktioner i brugergrænsefladen af phpBB 3.0.</para>
 	</abstract>
 	<section id="user_permissions">
 		<sectioninfo>
@@ -135,7 +135,7 @@
 			</section>
 			<section id="ucp_avatar">
 				<title>Avatar</title>
-				<para>Din avatar er et lille billede som vises i din profil ved hvert indlæg du skriver. Afhængig af boardets indstillinger kan brugen af  avatars være slået fra. Din avatar tilknyttes din profil på en eller flere måder: &quot;<guilabel>Upload fra din maskine</guilabel>&quot;, &quot;<guilabel>Upload fra ekstern URL</guilabel>&quot; og &quot;<guilabel>Link til ekstern placering</guilabel>&quot;.</para>
+				<para>Din avatar er et lille billede som vises i din profil ved hvert indlæg du skriver. Afhængig af boardets indstillinger kan brugen af avatars være slået fra. Din avatar tilknyttes din profil på en eller flere måder: &quot;<guilabel>Upload fra din maskine</guilabel>&quot;, &quot;<guilabel>Upload fra ekstern URL</guilabel>&quot; og &quot;<guilabel>Link til ekstern placering</guilabel>&quot;.</para>
 				<para>
 					<itemizedlist>
 						<listitem><para><guilabel>Upload fra din maskine</guilabel>: Du kan uploade en avatar fra din maskine og den gemmes på boardets server.</para></listitem>
@@ -213,8 +213,8 @@
 			<title>Skriv indlæg</title>
 			<para>Når du vil skrive et indlæg, entet et helt nyt eller som svar i et eksisterende emne, bliver du præsenteret for et skærmbillede hvor alle elementerne i indlæggets udseende og indhold er tilgængelige.</para>
 			<itemizedlist>	
-				<listitem><para><guilabel>Emne/Indlægsikon</guilabel> - er små billeder som kan tilknyttes et indlæg for at indikere indholdet i emnet. Muligheden for at anvende emneikonerne afhænger af de tilladelser administratoren har defineret.</para></listitem>
-				<listitem><para><guilabel>Emne</guilabel> - hvis du skriver et nyt emne, er angivelse af emne obligatorisk og bliver titlen på emnet. Besvarer du eller skriver indlæg i et eksisterende emne, er feltet udfyldt men kan ændres.</para></listitem>
+				<listitem><para><guilabel>Emne/Indlægsikon</guilabel>: Er små billeder som kan tilknyttes et indlæg for at indikere indholdet i emnet. Muligheden for at anvende emneikonerne afhænger af de tilladelser administratoren har defineret.</para></listitem>
+				<listitem><para><guilabel>Emne</guilabel>: Hvis du skriver et nyt emne, er angivelse af emne obligatorisk og bliver titlen på emnet. Besvarer du eller skriver indlæg i et eksisterende emne, er feltet udfyldt men kan ændres.</para></listitem>
 				<listitem><para>Indlægsindhold - den store teksboks umiddelbart herunder bruges til at skrive dit indlæg. Hvis administratoren har tilladt det, kan du udover almindelig tekst, også anvende <emphasis role="strong">smilies og BBkode</emphasis>.</para></listitem>
 				<listitem><para>Smilies - kan benyttes til at signalere følelser. Er brug af smilies tilladt på boardet ses teksten &quot;<guilabel>Smilies er slået TIL</guilabel>&quot; til højre for feltet hvor du skriver din indlægstekst. I modsat fald ses samme sted teksten &quot;<guilabel>Smilies er slået FRA</guilabel>&quot;. Se yderligere information i <link linkend="posting_smilies">Smilies</link>.</para></listitem>
 				<listitem><para>BBkode - er en formateringsmetode som kan anvendes i indlæg, hvis det er tilladt af administratoren. Er BBkode tilladt ses teksten &quot;<guilabel>BBkode er slået TIL</guilabel>&quot; til højre for feltet hvor du skriver din indlægstekst. I modsat fald ses samme sted teksten &quot;<guilabel>BBkode er slået FRA</guilabel>&quot;. Se yderligere information i <link linkend="posting_bbcodes">BBkoder</link>.</para></listitem>
@@ -250,22 +250,22 @@
 			<para>TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc.</para>
 			<para>Når du skriver et indlæg eller et svar, har du adskillige muligheder for at ændre i standardindstillingerne for dette specifikke indlæg. Umiddelbart under feltet hvor du skriver dit svar findes fanen <guilabel>Indstillinger</guilabel>, og afhængig af de tilladelser administratoren har tildelt dig har du forskellige muligheder. Valgmulighederne varierer også afhængig af om du skriver et nyt indlæg eller svarer i et eksisterende emne.</para>
 			<itemizedlist>	
-				<listitem><para><guilabel>Slå BBkode fra</guilabel> - hvis BBkode er slået til på boardet, og du har tilladelse til bruge den, er denne mulighed tilgængelig. Vinges boksen bliver ingen BBkoder fortolket som sådan. Som eksempel vil kombinationen [b]Fed tekst[/b] blive vist nøjagtig sådan [b]Fed tekst[/b] i indlægget.</para></listitem> 
-				<listitem><para><guilabel>Slå smilies fra</guilabel> - hvis smilies er slået til på boardet, og du har tilladelser til at bruge disse, er denne mulighed tilgængelig. Vinges boksen af bliver smiliekode ikke konverteret. Som eksempel vil ;) blive vist i teksten nøjagtig som ;).</para></listitem> 
-				<listitem><para><guilabel>Behandel ikke URL'er automatisk</guilabel> - når du skriver en URL i din indlægstekst (i formatet http://....com eller www.etc.com), bliver den som standard konverteret til et link kan klikkes på. Hvis boksen vinges af bliver URL'er i dette indlæg vist som en helt almindelig tekststreng.</para></listitem> 
-				<listitem><para><guilabel>Tilføj signatur (signaturen kan rettes i brugerkontrolpanelet)</guilabel> - er boksen vinget af tilføjes den signatur du oprettet under din profil. Det forudsætter at administratoren har tilladt brug af signaturer i indlæg. Læs mere om signaturer i <link linkend="ucp_signature">signaturer i UCP</link>.</para></listitem> 
-				<listitem><para><guilabel>Send mig en email når der skrives et svar</guilabel> - er boksen vinget af modtager du en advisering (pr. email, Jabber, etc) hver gang der skrives et svar i emnet. Funktionen kaldes overvågning af emnet. Læs mere i kapitlet <link linkend="ucp_subscriptions">Boardindstillinger i UCP</link>.</para></listitem>
-				<listitem><para><guilabel>Lås emne</guilabel> - har du redaktørtilladelser i forummet, vil afkrydsning i denne boks medføre at emnet låses når du indsender svar på indlægget. Herefter vil kun redaktører og administratorer kunne indsende indlæg i emnet. Læs mere information i <link linkend="modtools_lock">Lås emne eller indlæg</link>.</para></listitem>
+				<listitem><para><guilabel>Slå BBkode fra</guilabel>; Hvis BBkode er slået til på boardet, og du har tilladelse til bruge den, er denne mulighed tilgængelig. Vinges boksen bliver ingen BBkoder fortolket som sådan. Som eksempel vil kombinationen [b]Fed tekst[/b] blive vist nøjagtig sådan [b]Fed tekst[/b] i indlægget.</para></listitem> 
+				<listitem><para><guilabel>Slå smilies fra</guilabel>: Hvis smilies er slået til på boardet, og du har tilladelser til at bruge disse, er denne mulighed tilgængelig. Vinges boksen af bliver smiliekode ikke konverteret. Som eksempel vil ;) blive vist i teksten nøjagtig som ;).</para></listitem> 
+				<listitem><para><guilabel>Behandel ikke URL'er automatisk</guilabel>: Når du skriver en URL i din indlægstekst (i formatet http://....com eller www.etc.com), bliver den som standard konverteret til et link kan klikkes på. Hvis boksen vinges af bliver URL'er i dette indlæg vist som en helt almindelig tekststreng.</para></listitem> 
+				<listitem><para><guilabel>Tilføj signatur (signaturen kan rettes i brugerkontrolpanelet)</guilabel>: Er boksen vinget af tilføjes den signatur du oprettet under din profil. Det forudsætter at administratoren har tilladt brug af signaturer i indlæg. Læs mere om signaturer i <link linkend="ucp_signature">signaturer i UCP</link>.</para></listitem> 
+				<listitem><para><guilabel>Send mig en email når der skrives et svar</guilabel>: Er boksen vinget af modtager du en advisering (pr. email, Jabber, etc) hver gang der skrives et svar i emnet. Funktionen kaldes overvågning af emnet. Læs mere i kapitlet <link linkend="ucp_subscriptions">Boardindstillinger i UCP</link>.</para></listitem>
+				<listitem><para><guilabel>Lås emne</guilabel>; Har du redaktørtilladelser i forummet, vil afkrydsning i denne boks medføre at emnet låses når du indsender svar på indlægget. Herefter vil kun redaktører og administratorer kunne indsende indlæg i emnet. Læs mere information i <link linkend="modtools_lock">Lås emne eller indlæg</link>.</para></listitem>
 			</itemizedlist>
 			
 			<section id="posting_special">
 				<title>Emnetyper</title>
 				<para>Har du de rette tilladelser, har du mulighed for at vælge hvilken type dit nye emne skal vises som. Når du skriver et nyt emne kan denne mulighed benyttes med valgmuligheden <guilabel>Skriv emne som</guilabel> i indstillingsfanen umiddelbart under feltet hvor teksten skrives. Der er fire emnetyper: <guilabel>Normal</guilabel>, <guilabel>Opslag</guilabel>, <guilabel>Bekendtgørelse</guilabel>, og <guilabel>Global</guilabel>. Standardindstillingen er <guilabel>Normal</guilabel>.</para>
 				<itemizedlist>				
-					<listitem><para><guilabel>Normal</guilabel> - emnet indsendes som et standardemne i forummet.</para></listitem>
-					<listitem><para><guilabel>Opslag</guilabel> - vises i øverst på forummets første side, før alle normale emner.</para></listitem>
-					<listitem><para><guilabel>Bekendtgørelser</guilabel> - er meget lig med opslag, i det de også er &quot;låst&quot; øverst i det forum de er indsendt. Der er imidlertid to forskelle: 1) De vises over opslag, og 2) de vises øverst på <emphasis>alle</emphasis> sider i forummet, ikke kun på den første side.</para></listitem>
-					<listitem><para><guilabel>Global</guilabel> -  eller globale bekendtgørelser, er helt særlige bekendtgørelser som vises øverst på alle sider og i alle fora på boardet. De vises over alle andre typer emner.</para></listitem>
+					<listitem><para><guilabel>Normal</guilabel>: Emnet indsendes som et standardemne i forummet.</para></listitem>
+					<listitem><para><guilabel>Opslag</guilabel>: Vises i øverst på forummets første side, før alle normale emner.</para></listitem>
+					<listitem><para><guilabel>Bekendtgørelser</guilabel>: Som opslag, i det de også er &quot;låst&quot; øverst i det forum de er indsendt. Der er imidlertid to forskelle: De vises over opslag, og vises øverst på <emphasis>alle</emphasis> sider i forummet, ikke kun på den første side.</para></listitem>
+					<listitem><para><guilabel>Global</guilabel>: Eller globale bekendtgørelser, er helt særlige bekendtgørelser som vises øverst på alle sider og i alle fora på boardet. De vises over alle andre typer emner.</para></listitem>
 				</itemizedlist>
 				<para>Der er også mulighed for at bestemme hvor længe et emne skal vises som denne type (opslag, bekendtgørelse og global) emne. Hvis man definerer varigheden for eksempelvis et opslag til at vare fire dage, vil emnet efter udløb af perioden automatisk blive ændret til et normalt emne.</para>
 			</section>

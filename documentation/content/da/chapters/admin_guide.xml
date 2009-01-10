@@ -1313,116 +1313,116 @@
 		    		<para>Nedenstående beskrives hvordan ændringer i de tre kategorier kan foretages. Bemærk at der for alles vedkommende er tre valgmuligheder. Du kan vælge <guilabel>Ja</guilabel>, <guilabel>Nej</guilabel> eller <guilabel>Aldrig</guilabel>. Vælges <guilabel>Ja</guilabel> tildeles bruger denne tilladelse, mens <guilabel>Nej</guilabel> tildeles bruger ikke tilladelsen, <emphasis>medmindre en anden tilladelse givet andetsteds tilsidesætter dette</emphasis>. Ønsker du derfor <emphasis>helt</emphasis> at udelukke bruger fra denne tilladelse vælges <guilabel>Aldrig</guilabel>. <guilabel>Aldrig</guilabel> tilsidesætter alle andre valg angående denne tilladelse.</para>
 		    	</important>
 			
-			<para>For at ændre en brugers <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
+			<para>For at ændre en brugers <guilabel>Brugertilladelser</guilabel> vælges <guimenuitem>Brugertilladelser</guimenuitem> i dropdownmenuen ud for <guilabel>Vælg type</guilabel>, vælg herefter <guilabel>Udfør</guilabel>. Vælg den tilladelserolle bruger skal tildeles. Ønsker du en mere nuanceret tilladelsestildeling for bruger, klikkes på linket <guilabel>Avancerede tilladelser</guilabel> til højre. En ny formular vises nu under <guilabel>Rolle</guilabel>-valget. I denne vises fire typer tilladelser der kan ændres: <guilabel>Indlæg</guilabel>, <guilabel>Profil</guilabel>, <guilabel>Diverse</guilabel> og <guilabel>Private beskeder</guilabel>. </para>
 		
-			<para>For at ændre en brugers <guilabel>Moderative permissions</guilabel>, select "<guimenuitem>Moderator permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are three categories of permissions you may edit: <guilabel>Post actions</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Topic actions</guilabel>.</para>
+			<para>For at ændre en brugers <guilabel>Globale redaktørtilladelser</guilabel> vælges <guimenuitem>Globale redaktørtilladelser</guimenuitem> i dropdownmenuen ud for <guilabel>Vælg type</guilabel>, vælg herefter <guilabel>Udfør</guilabel>. Vælg den tilladelserolle bruger skal tildeles. Ønsker du en mere nuanceret tilladelsestildeling for bruger, klikkes på linket <guilabel>Avancerede tilladelser</guilabel> til højre. En ny formular vises nu under <guilabel>Rolle</guilabel>-valget. I denne vises tre typer tilladelser der kan ændres: <guilabel>Indlægshandlinger</guilabel>, <guilabel>Diverse</guilabel> og <guilabel>Emnehandlinger</guilabel>.</para>
 		
-			<para>For at ændre en brugers <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
+			<para>For at ændre en brugers <guilabel>Administratortilladelser</guilabel> vælg <guimenuitem>Administratortilladelser</guimenuitem> i dropdownmenuen ud for <guilabel>Vælg type</guilabel>, vælg herefter <guilabel>Udfør</guilabel>. Vælg den tilladelserolle bruger skal tildeles. Ønsker du en mere nuanceret tilladelsestildeling for bruger, klikkes på linket <guilabel>Avancerede tilladelser</guilabel> til højre. En ny formular vises nu under <guilabel>Rolle</guilabel>-valget. I denne vises seks typer tilladelser der kan ændres: <guilabel>Tilladelser</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Diverse</guilabel>, <guilabel>Brugere &amp; Grupper</guilabel>, <guilabel>Indstillinger</guilabel> og <guilabel>Fora</guilabel>.</para>
 		</section>
 		
 		<section id="acp_users_forum_permissions">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Users' forum permissions</title>
+			<title>Brugeres forumtilladelser</title>
 			
-			<para>Along with editing your users' user account-related permissions, you can also edit their forum permissions, which relate to the forums in your board. Forum permissions are different from user permissions in that they are directly related and tied to the forums. <guimenuitem>Users' forum permissions</guimenuitem> allows you to edit your users' forum permissions. When doing so, you can only assign forum permissions to one user at a time.</para>
+			<para>Sammen med muligheden for at ændre brugeres kontorelaterede tilladelser, er det også muligt at ændre disses forumtilladelser. Forumtilladelser er forskellige fra brugertilladelser, på den måde at de er direkte relateret og bundet til fora. I <guimenuitem>Brugeres forumtilladelser</guimenuitem> kan du ændre indstillinger for én bruger ad gangen.</para>
 		
-			<para>To start editing a user's forum permissions, start by typing in the user's username into the <guilabel>Find a member</guilabel> text box. If you would like to edit the forum permissions that pertain to the anonymous user, check the <guilabel>Select anonymous user</guilabel> text box. Click <guilabel>Submit</guilabel> to continue.</para>
+			<para>Start med at angive brugers brugernavn i feltet <guilabel>Find en tilmeldt bruger</guilabel>. Vil du ændre gæstebrugers forumtilladelser mærkes boksen <guilabel>Vælg gæstebruger</guilabel> af. Klik på <guilabel>Udfør</guilabel> for at fortsætte.</para>
 			
 			<figure id="img_acp_u_forum_permissions">
-				<title>Selecting forums for users' forum permissions</title>
+				<title>Udvælg fora til brugers forumtilladelser</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/users_forum_permissions.png"/>
 					</imageobject>
 					<caption>
-						<para>Selecting forums to assign forum permissions to users. In this example, the &quot;Cats&quot; and &quot;Dogs&quot; subforums (their parent forum is &quot;Pets&quot;) are selected. The user's forum permissions for these two forums will be edited/updated.</para>
+						<para>Udvælg de fora hvor brugers forumtilladelser skal tildeles eller ændres. I dette eksempel er de to underfora &quot;Typografier&quot; og &quot;MODs&quot; i overforummet &quot;Olympus&quot; valgt. Brugers tilladelser i disse to underfora kan nu ændres eller opdateres.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>You should now be able to assign forum permissions to the user. You now have two ways to assign forum permissions to the user: you may either select the forum(s) manually with a multiple selection menu, or select a specific forum or category, along with its associated subforums. Click <guilabel>Submit</guilabel> to continue with the forum(s) you have picked. Now, you should be greeted with the <guilabel>Setting permissions</guilabel> screen, where you can actually assign the forum permissions to the user. You should now select what kind of forum permissions you want to edit now; you may either edit the user's <guimenuitem>Forum permissions</guimenuitem> or <guimenuitem>Moderator permissions</guimenuitem>. Click <guilabel>Go</guilabel>. You should now be able to select the role to assign to the user for each forum you selected previously. If you would like to configure these permissions with more detail, click the <guilabel>Advanced permissions</guilabel> link located in the appropriate forum permissions box, and then update the permissions accordingly. When you are done, click <guilabel>Apply all permissions</guilabel> if you are in the <guilabel>Advanced permissions</guilabel> area, or click <guilabel>Apply all permissions</guilabel> at the bottom of the page to submit all of your changes on the page.</para>
+			<para>Du kan nu tildele forumtilladelser til bruger. Der er to metoder at gøre det på: Du kan vælge et eller flere specifikke fora eller vælge en kategori eller et overforum sammen med alle tilknyttede underfora. Klik på <guilabel>Udfør</guilabel> for at fortsætte tildeling af tilladelser i de valgte fora. Siden <guilabel>Indstilling af tilladelser</guilabel> vises nu med samtlige valgte fora repræsenteret. Nu vælges hvilke forumtilladelser du ønsker at ændre. I dropdownmenuen øverst vælges enten <guimenuitem>Forumtilladelser</guimenuitem> eller <guimenuitem>Redaktørtilladelser</guimenuitem>. Klik på <guilabel>Udfør</guilabel> umiddelbart til højre for valgmenuen. Nu kan du vælge den rette rolle for bruger i hvert af foraen. Ønsker du en mere nuanceret tilladelsetildeling, klikkes på linket <guilabel>Avancerede tilladelser</guilabel> ved det pågældende forum (brug radioknapperne i denne nye menu). Når de ønskede ændringer er foretaget, klikkes på <guilabel>Tilføj alle tilladelser</guilabel> hvis du er i <guilabel>Avancerede tilladelser</guilabel>, eller på samme <guilabel>Tilføj alle tilladelser</guilabel> nederst på siden for at udføre alle ændringer foretaget på siden.</para>
 		</section>
 		
 		<section id="acp_users_custom_profile_fields">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Custom profile fields</title>
+			<title>Tilpassede profilfelter</title>
 			
-			<para>One of the many new features in phpBB3 that enhance the user experience is <guilabel>Custom Profile Fields</guilabel>. In the past, users could only fill in information in the common profile fields that were displayed; administrators had to add MODifications to their board to accommodate their individual needs. In phpBB3, however, administrators can comfortably create custom profile fields through the <acronym>ACP</acronym>.</para>
+			<para>Det er muligt at oprette til formålet <guilabel>Tilpassede profilfelter</guilabel>, hvor brugere eller administrator har mulighed for at angive yderligere personlig information. Administrator bestemmer hvor disse felter vises og om de skal vises for alle.</para>
 		
-			<para>To create your custom profile field, login to your ACP. Click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then locate the <guimenuitem>Custom profile fields</guimenuitem> link in the left-hand menu to click on. You should now be on the proper page. Locate the empty textbox below the custom profile fields headings, which is next to a selection menu and a <guilabel>Create new field</guilabel> button. Type in the empty textbox the name of the new profile field you want to create first. Then, select the field type in the selection menu. Available options are <guimenuitem>Numbers</guimenuitem>, <guimenuitem>Single text field</guimenuitem>, <guimenuitem>Textarea</guimenuitem>, <guimenuitem>Boolean (Yes/No)</guimenuitem>, <guimenuitem>Dropdown box</guimenuitem>, and <guimenuitem>Date</guimenuitem>. Click the <guilabel>Create new field</guilabel> button to continue. The following describes each of the three sets of settings that the new custom profile field will have.
+			<para>Opret et tilpasset profilfelt fra <acronym>ACP</acronym>, klik på fanen <guimenuitem>Brugere og Grupper</guimenuitem> og herefter på linket <guimenuitem>Tilpas profilfelter</guimenuitem> i venstre side. Under oversigten til venstre for dropdownmenuen og knappen <guilabel>Opret et nyt felt</guilabel>, angives først navnet på det nye profilfelt der skal oprettes. Vælg herefter felttype i dropdownmenuen, hvor der kan vælges  mellem <guimenuitem>Tal</guimenuitem>, <guimenuitem>Enkelt tekstfelt</guimenuitem>, <guimenuitem>Tekstområde</guimenuitem>, <guimenuitem>Boolsk udtryk (ja/nej)</guimenuitem>, <guimenuitem>Dropdownmenu</guimenuitem> og <guimenuitem>Dato</guimenuitem>.  For at fortsætte klikkes på <guilabel>Opret et nyt felt</guilabel>. Nedenfor gennemgås de tre typer indstillinger et tilpasset profilfelt kan indeholde.
 				<itemizedlist>
-					<title>Add profile field</title>
-					<listitem><para><guilabel>Field type:</guilabel> This is the kind of the field that your new custom profile field is. That means that it can consist of numbers, dates, etc. This should already be set.</para></listitem>
-					<listitem><para><guilabel>Field identification:</guilabel> This is the name of the profile field. This name will identify the profile field within phpBB3's database and templates.</para></listitem>
-					<listitem><para><guilabel>Display profile field:</guilabel> This setting determines if the new profile field will be displayed at all. The profile field will be shown on topic pages, profiles and the memberlist if this is enabled within the load settings. Only showing within the users profile is enabled by default.</para></listitem>
+					<title>Tilføj profilfelt</title>
+					<listitem><para><guilabel>Felttype</guilabel>: Beskrivelse af feltets indhold, jævnfør ovennævnte og bestemmes allerede ved oprettelsen, hvorfor det ikke kan ændres her.</para></listitem>
+					<listitem><para><guilabel>Feltidentifikation</guilabel>: Feltidentifikationen er et entydigt navn til at identificere profilfeltet i databasen og i skabeloner.</para></listitem>
+					<listitem><para><guilabel>Vis profilfelt</guilabel>: Profilfeltet vises på alle sider valgt under <guimenuitem>Belastning</guimenuitem>. Vælges <guilabel>Nej</guilabel>, vises feltet ikke på emnesider, profiler og liste over tilmeldte brugere.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Visibility option</title>
-					<listitem><para><guilabel>Display in user control panel:</guilabel> This setting determines if your users will be able to change the profile field within the <acronym>UCP</acronym>.</para></listitem>
-					<listitem><para><guilabel>Display at registration screen:</guilabel> If this option is enabled, the profile field will be displayed on the registration page. Users will be able to be change this field within the <acronym>UCP</acronym>.</para></listitem>
-					<listitem><para><guilabel>Required field:</guilabel> This setting determines if you want to force your users to fill in this profile field. This will display the profile field at registration and within the user control panel.</para></listitem>
-					<listitem><para><guilabel>Hide profile field:</guilabel> If this option is enabled, this profile field will only show up in users' profiles. Only administrators and moderators will be able to see or fill out this field in this case.</para></listitem>
+					<title>Synlighedsindstillinger</title>
+					<listitem><para><guilabel>Vis i brugerkontrolpanel</guilabel>: Afmærkes boksen kan brugere ændre i profilfeltet via brugerkontrolpanelet.</para></listitem>
+					<listitem><para><guilabel>Vis på tilmeldingsskærmbilledet</guilabel>: Afmærk boksen for at vise feltet på skærmbilledet for tildmelding.</para></listitem>
+					<listitem><para><guilabel>Krævet felt</guilabel>: Profilfeltet forlanges udfyldt eller at der foretages valg af bruger eller administrator. Er <guilabel>Vis på tilmeldingsskærmbilledet</guilabel> fravalgt forlanges feltet udfyldt når brugere ændrer i profilinformationer.</para></listitem>
+					<listitem><para><guilabel>Skjul profilfelt</guilabel>: Feltet kan kun ses af brugeren, administratorer og redaktører. Er <guilabel>Vis på tilmeldingsskærmbilledet</guilabel> fravalgt, kan brugeren ikke se eller ændre i feltet. Feltet vil kun kunne ændres af administratorer.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Language specific options</title>
-					<listitem><para><guilabel>Field name/title presented to the user:</guilabel> This is the actual name of the profile field that will be displayed to your users.</para></listitem>
-					<listitem><para><guilabel>Field description:</guilabel> This is a simple description/explanation for your users filling out this field.</para></listitem>
+					<title>Sprogspecifikke indstillinger</title>
+					<listitem><para><guilabel>Feltnavn som brugere ser det</guilabel>: Feltet vises med denne titel overfor brugere.</para></listitem>
+					<listitem><para><guilabel>Feltbeskrivelse</guilabel>: Forklaringen på feltet som den vises til brugere.</para></listitem>
 				</itemizedlist>
 			</para>
 			
-			<para>When you are done with the above settings, click the <guilabel>Profile type specific options</guilabel> button to continue. Fill out the appropriate settings with what you desire, then click the <guilabel>Next</guilabel> button. If your new custom profile field was created successfully, you should be greeted with a green success message. Congratulations!</para>
+			<para>Når disse indstillinger er foretaget klikkes på knappen <guilabel>Indstillinger for felttype</guilabel> nederst. Angiv her de ønskede parametre og klik herefter på <guilabel>Gem</guilabel>. Har du mere end ét sprog installeret på boardet vil du i stedet for knappen <guilabel>Gem</guilabel>, se knappen <guilabel>Sproglige definitioner</guilabel>, hvor du kan oversætte feltnavn og beskrivelse til disse sprog, herefter kan du gemme. Oprettes feltet uden problemer ser du herefter en bekræftelse herpå. Tillykke!</para>
 		</section>
 		
 		<section id="acp_user_ranks">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Managing ranks</title>
+			<title>Administrér brugerrang</title>
 			
-			<para>Ranks are special titles that can be applied to forum users. As an administrator, it is up to you to create and manage the ranks that exist on your board. The actual names for the ranks are completely up to you; it's usually best to tailor them to the main purpose of your board.</para>
+			<para>Brugere kan tildeles en rang eller specielle titler. Som administrator er det op til dig at oprette og administrere disse. Rangnavne bestemmes alene af administrator, det naturligvis er en god idé at rangordner følger boardets overordnede formål.</para>
 			
 			<note>
-				<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
+				<para>Når en bruger tildeles en rang, er det vigtigt at huske at der ikke tilknyttes eller ændres på brugers tilladelser i den forbindelse. Hvis du for eksempel opretter en rang med navnet &quot;Superredaktør&quot; og tildeler den til en bruger, får bruger ikke automatisk redaktørtilladelser. Tilladelser tilknyttes særskilt pr. bruger eller gruppe.</para>
 			</note>
 			
-			<para>To manage your board's ranks, login to your <acronym>ACP</acronym>, click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on the <guimenuitem>Manage ranks</guimenuitem> link located in the left-hand menu. You should now be on the rank management page. All current existing ranks are displayed.</para>
+			<para>Rangadministration foretages i <acronym>ACP</acronym>, ved at klikke på fanen <guimenuitem>Brugere og Grupper</guimenuitem> og herefter på linket <guimenuitem>Administrér brugerrang</guimenuitem> i venstre side. Alle eksisterende rangordner vises.</para>
 			
-			<para>To create a new rank, click on the <guilabel>Add new rank</guilabel> button located below the existing ranks list. Fill in the first field <guilabel>Rank title</guilabel> with the name of the rank. If you uploaded an image you want to attribute to the rank into the <filename>/images/ranks/</filename> folder, you can select an image from the selection menu. The last setting you can set is if you want the rank to be a "special" rank. Special ranks are ranks that administrators assign to users; they are not automatically assigned to users based on their postcount. If you selected <guilabel>No</guilabel>, then you can fill in the <guilabel>Minimum posts</guilabel> field with the minimum number of posts your users must have before getting assigned this rank. When you are done, click the <guilabel>Submit</guilabel> button to add this new rank.</para>
+			<para>Klik på knappen <guilabel>Tilføj ny rang</guilabel> under ranglisten, for at oprette en ny. Angiv først <guilabel>Rangtitel</guilabel> with the name of the rank. Hvis du har uploadet et billede, som skal tilknyttes denne rang, i mappen <filename>/images/ranks/</filename>, vælges dette i dropdownmenuen. Til sidst vælges om rangen skal være en &quot;speciel rang&quot;. En speciel rang kan tildeles brugere af administrator, og tildeles ikke med baggrund i antal indsendte indlæg. Vælges <guilabel>Nej</guilabel> skal <guilabel>Minimum antal indlæg</guilabel> udfyldes med det antal indlæg bruger skal have indsendt før rangen tildeles. Klik på <guilabel>Udfør</guilabel> for at tilføje den nye rang.</para>
 			
-			<para>To edit a rank's current settings, locate the rank's row, and then click on its "Edit" button located in the <guilabel>Action</guilabel> column.</para>
+			<para>For at ændre en eksisterende rangs indstillinger, klikkes på den grønne &quot;Redigér&quot; ud for rangen i oversigtens kolonne <guilabel>Handling</guilabel>.</para>
 			
-			<para>To delete a rank, locate the rank's row, and then click on its "Delete" button located in the <guilabel>Action</guilabel> column. Then, you must confirm the action by clicking on the <guilabel>Yes</guilabel> button when prompted.</para>
+			<para>En en rang slettes samme sted, her benyttes  den røde knap &quot;Slet&quot; i kolonnen <guilabel>Handling</guilabel>. Bekræft handlingen ved at klikke på <guilabel>Ja</guilabel> i det efterfølgende skærmbillede.</para>
 		</section>
 				
 		</section>
 		
-		<section id="acp_user_security">
+		<section id="acp_user_security"><!-- TODO: Sektionen bør flyttes ned under gruppeadm. som kommer herefter. Det er rækkefølgen i ACP? -->
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>User Security</title>
+			<title>Brugersikkerhed</title>
 			<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
 			
 			<section id="acp_ban_emails">
@@ -1566,7 +1566,6 @@
 				</warning>
 			</section>
 		</section>
-	</section>
 	
 	<section id="acp_groups">
 		<sectioninfo>
