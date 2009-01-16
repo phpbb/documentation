@@ -1621,7 +1621,7 @@
 								
 								<varlistentry>
 									<term>Registered COPPA Users</term>
-									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
+									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 13 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A. and can be disabled altogther.</para></listitem>
 								</varlistentry>
 							</variablelist>
 							
@@ -1805,7 +1805,29 @@
 		</section>
 		
 		<section id="acp_maintenance_database">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Database backup and restore</title>
+			<para>phpBB uses a database to store all the data used on the board, including users, posts, topics etc. Backing up the database can be useful as a protective measure in case of any accidents which could cause data loss or damage to the database. If any accident like this would occur, you would have a possibility to restore the database to a previous state from the backup. You can use the backup tool to move your board to another host - you will make a backup on your current server and restore it on the new one to keep all data.</para>
+      <itemizedlist>
+				<title>Database backup</title>
+				<listitem><para><guilabel>Backup type</guilabel>: You can backup the whole database or you can either backup the <guilabel>structure</guilabel> or <guilabel>data</guilabel>. The structure only contains the hiearchy in which the data is stored, on the other side, if you only backup the data, you will need a pre-prepared structure when restoring/importing data.</para></listitem>
+				<listitem><para><guilabel>File type</guilabel>: Depending on your server setup, you can save the backup in several formats. The <guilabel>Text</guilabel> option saves the backup in plain text, other options compress the file to decrease the filesize of the dump.</para></listitem>
+				<listitem><para><guilabel>Action</guilabel>: You have three options: you can both <guilabel>Store and download</guilabel> the file, saving it in the store directory and downloading it to your PC, or you can choose to <guilabel>download</guilabel> or <guilabel>store</guilabel> the file.</para></listitem>
+				<listitem><para><guilabel>Table select</guilabel>: You can either <guilabel>Select all</guilabel> tables or you can select individual tables to backup. When backing up a large database, you can exclude the search tables (do not forget to restore their structure) and recreate the search index on the new server.</listitem>
+				<tip>
+					<para>Use the CTRL and Shift keys together with your mouse to select individual tables.</para>
+				</tip>
+			</itemizedlist>
+			<itemizedlist>
+				<title>Database restore</title>
+				<listitem><para>File select: You will be offered a list of database backups which are saved in the store folder. Select the one you want to restore and click <guilabel>Start restore</guilabel>. The restoration might take some time and it will overwrite any existing data on the board.</para></listitem>
+			</itemizedlist>
 		</section>
 		<section id="acp_maintenance_search">
 			<title>Search Indexing</title>
