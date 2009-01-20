@@ -32,37 +32,41 @@
 				<author>
 					<othername>zeroK</othername>
 				</author>
+				<author>
+					<othername>battye</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Registering on a phpBB3 board</title>
-		<para>The basic procedure of registering an account on a phpBB3 board consists in the simplest case of only two steps: <orderedlist>
-				<listitem>
-					<para>After following the "Register" link you should see the board rules. If you agree to these terms the registration process continues. If you don't agree you can't register your account</para>
-				</listitem>
-				<listitem>
-					<para>Now you see a short form for entering your user information where you can specify your username, e-mail address, password, language and timezone.</para>
-				</listitem>
-
-			</orderedlist>
-		</para>
-		<para>As mentioned above, this is only the simplest case. The board can be configured to add some additional steps to the registration process. </para>
-		<itemizedlist>
-			<listitem>
-				<para>If you get a site where you have to select whether you were born before or after a specified date, the administrator has enabled this to comply with the U.S. <acronym>COPPA</acronym> act. If you are younger than 13 years, your account will stay inactive until it is approved by a parent or guardian. You will receive an e-mail where the next steps required for your account activation are described. </para>
-			</listitem>
-			<listitem>
-				<para>If you see in the form where you can specify your username, password etc. a graphic with some wierd looking characters, then you see the so called <emphasis>Visual Confirmation</emphasis>. Simply enter these characters into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. </para>
-			</listitem>
-			<listitem>
-				<para>Another option is the account activation. Here, the administrator can make it a requirement that you have to follow a link mailed to you after registering before your account is activated. In this case you will see a message similiar to this one: <blockquote>
-						<para> Your account has been created. However, this forum requires account activation, an activation key has been sent to the e-mail address you provided. Please check your e-mail for further information </para>
-					</blockquote>
-				</para>
-				<para>It is also possible that the administrator himself/herself has to activate the account. <blockquote>
-						<para> Your account has been created. However, this forum requires account activation by the administrator. An e-mail has been sent to them and you will be informed when your account has been activated. </para>
-					</blockquote> In this case please have some patience with the administrators to review your registration and activate your account. </para>
-			</listitem>
-		</itemizedlist>
+		<para>Registering an account on a phpBB3 board is typically a simple and straight forward procedure.</para>
+		<figure id="user_registering_typical_page">
+			<title>The Typical Registration Page</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/user_guide/typical_registration_page.png"/>
+				</imageobject>
+				<caption>
+					<para>This is what you should expect to see on a typical registration page.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<para>After clicking the <guilabel>Register</guilabel> link, the terms and conditions of registering will be displayed, which you must accept to proceed. Some websites will ask you to select whether you are under the age of thirteen in order to comply with <acronym>COPPA</acronym> (the United States' Children's Online Privacy Protection Act of 1998; more details can be found at <ulink url="http://www.coppa.org">http://www.coppa.org</ulink>). If you are younger than thirteen years of age, your account will stay inactive until it is approved by a parent or guardian. You will receive an e-mail in which the next steps required for your account activation are outlined.</para>
+		<para>Beyond accepting the terms and conditions, you need to fill out some important details such as selecting a username, entering your e-mail address and desired password. You can also select your timezone and language.</para>
+		<para>If you see in the form where you can specify your username, password etc. a graphic with some odd-looking characters, then you are seeing the so-called <emphasis>Visual Confirmation</emphasis>. Many boards will have this, otherwise known as a  <acronym>CAPTCHA</acronym>, which is an image with distorted letters and numbers which you must then type into an adjacent box. The reason for this is to ensure that you are a legitimate user registering (as opposed to a spam robot performing an automated registration). Simply enter the characters you see into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. If you cannot understand the code, refresh the page to get a new code.</para>
+		<figure id="user_registering_captcha">
+			<title>The Visual Confirmation Object</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/user_guide/visual_confirmation.png"/>
+				</imageobject>
+				<caption>
+					<para>This is an example of a visual confirmation code you might see.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<para>Another option available is the account activation. Here, the administrator can make it a requirement that you have to follow a link mailed to you after registering before your account is activated. In this case you will see a message similiar to this one: <blockquote><guilabel> Your account has been created. However, this forum requires account activation, an activation key has been sent to the e-mail address you provided. Please check your e-mail for further information </guilabel></blockquote> It is also possible that the administrator himself/herself has to activate the account.</para>
+		<para>Some boards will have custom profile fields. If the administrator has elected to display custom profile fields on the registration screen, these will also appear. In some cases, these custom profile fields will also be required fields, meaning they must not be left blank.</para>
+		<para>Once you have completed all of the fields on the registration page, clicking the <guilabel>Submit</guilabel> button will complete the process. If you wish to clear all fields, clicking the <guilabel>Reset</guilabel> button will do this for you. After clicking <guilabel>Submit</guilabel>, you will be advised of your next step. In most cases, you will be sent an e-mail to the address you specified with a link to finalise the registration. Other options also include being able to login immediately (i.e. there are no further actions for the registration process) or waiting until an administrator reviews your registration and accepts it, in which case you will be notified by e-mail.</para>
 	</section>
 	<section id="user_control_panel">
 		<sectioninfo>
@@ -448,6 +452,9 @@
 				<author>
 					<othername>pentapenguin</othername>
 				</author>
+				<author>
+					<othername>battye</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>The Memberlist - More Than Meets the Eye</title>
@@ -469,28 +476,28 @@
 			<varlistentry>
 				<term>Sort By Username</term>
 				<listitem>
-					<para>If you want to find all members whose usernames start with a certain letter, then you may select the letter from the drop down box and click the Display button to show only users with usernames that begin with that letter.</para>
+					<para>If you want to find all members whose usernames start with a certain letter, then you may select the letter from the list of letters shown at the top of the memberlist. For instance, clicking "A" will display all usernames beginning with the letter A, while clicking "B" will list all usernames beginning with B. Clicking the hash (#) will display a list of usernames that do not begin with one of the twenty-six letters: in other words, numbers and other characters.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Sort By Column Headers</term>
 				<listitem>
-					<para>To sort the memberlist ascending, you may click on the column headers like "Username", "Joined", "Posts", etc. If you click on the same column again, then the memberlist will be sorted descending.</para>
+					<para>Each of the column headings are also sort links. That means you can click <guilabel>Username</guilabel>, <guilabel>Rank</guilabel>, <guilabel>Posts</guilabel>, <guilabel>Website</guilabel>, <guilabel>Location</guilabel>, <guilabel>>Joined</guilabel>, or <guilabel>Last Active</guilabel> to sort by that group. Upon clicking this for the first time, the lists will be sorted in ascending order (meaning that usernames would be listed A to Z and joined date would be listed earliest to most recent.) If you want to order the list in descending order, wait until the page has loaded in ascending order and click the column heading you wish to order by for a second time.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Sort By Other Options</term>
 				<listitem>
-					<para>You may also sort the memberlist by using the drop down boxes on the bottom of the page.</para>
+					<para>You may also sort the memberlist by using the dropdown boxes on the bottom of the page.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Find a Member Search Tool</term>
 				<listitem>
-					<para>With the "Find a member" search tool, you can fine tune your search for members. You must fill out at least one field. If you don't know exactly what you are looking for, you may use the asterisk symbol (*) as a wildcard on any field.</para>
+					<para>You can narrow down your search results using the <guilabel>Find a member</guilabel> search function. This feature allows you to find members by their username, ICQ number, AIM, YIM, MSN Messenger/Windows Live Messenger address, join date, last active date, number of posts, IP address, and usergroup membership(s). All dates should be entered in the format YYYY-MM-DD (such as 2004-02-28 to represent February 28, 2004). The asterix (*) can be used as a wildcard for partial matches, such as entering "Ar*" into the username field to find all usernames beginning with Ar. Press the <guilabel>Submit</guilabel> button to begin the search, or the <guilabel>Reset</guilabel> button if you wish to clear all fields and start the search again.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
