@@ -30,39 +30,40 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>zeroK</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Tilmelding på et phpBB3 board</title>
-		<para>Proceduren ved tilmelding består i den enkleste form kun af to trin: <orderedlist>
-				<listitem>
-					<para>Linket &quot;Tilmeld&quot; øverst på siden leder dig til boardets regler. Hvis du accepterer disse fortsætter tilmeldingsproceduren. Hvis du ikke accepterer betingelserne er det ikke muligt at tilmelde sig.</para>
-				</listitem>
-				<listitem>
-					<para>Næste trin er udfyldelse af personlig information hvor du selv vælger brugernavn, emailadresse, kodeord, sprog og tidszone. Nederst på samme side vil du normalt se afsnittet <emphasis>Bekræftelse på tilmelding</emphasis> indeholdende et grafikfelt med nogle tegn som udgår din kode. Indtast disse tegn i boksen umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Har administratoren fravalgt visuel bekræftelse ved tilmeldinger, vises afsnittet ikke.</para>
-				</listitem>
-
-			</orderedlist>
-		</para>
-		<para>Som nævnt i indledningen kan der være flere trin inkluderet i tilmeldingsproceduren.</para>
-		<itemizedlist>
-			<listitem>
-				<para>I nogle tilfælde kan du blive bedt om at vælge om du er over eller under en bestemt alder. Hvis det er tilfældet, er det fordi administratoren har valgt at følge den amerikanske lov <acronym>COPPA</acronym>. Personer under 13 år skal have en forældre eller værges godkendelse for at tilmelde sig offentlige boards. Der fremsendes en email med yderligere instrukser.</para>
-			</listitem>
-			<listitem>
-				<para>If you see in the form where you can specify your username, password etc. a graphic with some wierd looking characters, then you see the so called <emphasis>Visual Confirmation</emphasis>. Simply enter these characters into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. </para>
-			</listitem>
-			<listitem>
-				<para>Administratoren kan også have valgt at din nye konto skal aktiveres. Den ene mulighed er at du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er tilfældet vil du se denne meddelelse:<blockquote>
-						<para>Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</para>
-					</blockquote>
-				</para>
-				<para>Den anden metode til kontoaktivering kræver at administratoren involveres. Du vil se denne meddelelse:<blockquote>
-						<para>Din konto er oprettet. Kontoen skal aktiveres af boardadministrator, som nu er adviseret via email. Når din konto er aktiveret, får du besked via email.</para>
-					</blockquote>Hav venligst tålmodighed med administratror, hvis det sidste er tilfældet. Din tilmelding vil blive gennemset inden din konto aktiveres.</para>
-			</listitem>
-		</itemizedlist>
+		<para>Proceduren ved tilmelding er normalt helt enkel og meget simpel.</para>
+		<figure id="user_registering_typical_page">
+			<title>Den normale tilmeldingside</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/user_guide/typical_registration_page.png"/>
+				</imageobject>
+				<caption>
+					<para>Sådan vises en typisk tilmeldingside.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<para>Linket <guilabel>Tilmeld</guilabel> øverst på siden leder dig til boardets regler. Hvis du accepterer disse fortsætter tilmeldingsproceduren. Hvis du ikke accepterer betingelserne er det ikke muligt at tilmelde sig. I nogle tilfælde kan du blive bedt om at vælge om du er over eller under en bestemt alder. Hvis det er tilfældet, er det fordi administratoren har valgt at følge den amerikanske lov <acronym>COPPA</acronym>. Personer under 13 år skal have en forældre eller værges godkendelse for at tilmelde sig offentlige boards. Der fremsendes en email med yderligere instrukser.</para>
+		<para>Næste trin er udfyldelse af personlig information hvor du selv vælger brugernavn, emailadresse, kodeord, sprog og tidszone.</para>
+		<para> Nederst på samme side vil du normalt se afsnittet <emphasis>Bekræftelse på tilmelding</emphasis> indeholdende et grafikfelt med nogle tegn som udgår din kode. Indtast disse tegn i boksen umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Many boards will have this, otherwise known as a  <acronym>CAPTCHA</acronym>, which is an image with distorted letters and numbers which you must then type into an adjacent box. The reason for this is to ensure that you are a legitimate user registering (as opposed to a spam robot performing an automated registration). Simply enter the characters you see into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. If you cannot understand the code, refresh the page to get a new code.</para>
+		<figure id="user_registering_captcha">
+			<title>The Visual Confirmation Object</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/user_guide/visual_confirmation.png"/>
+				</imageobject>
+				<caption>
+					<para>This is an example of a visual confirmation code you might see.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<para>Administratoren kan også have valgt at din nye konto skal aktiveres. Den ene mulighed er at du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er tilfældet vil du se denne meddelelse:<blockquote><guilabel> Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</guilabel></blockquote>It is also possible that the administrator himself/herself has to activate the account.</para>
+		<para>Some boards will have custom profile fields. If the administrator has elected to display custom profile fields on the registration screen, these will also appear. In some cases, these custom profile fields will also be required fields, meaning they must not be left blank.</para>
+		<para>Once you have completed all of the fields on the registration page, clicking the <guilabel>Submit</guilabel> button will complete the process. If you wish to clear all fields, clicking the <guilabel>Reset</guilabel> button will do this for you. After clicking <guilabel>Submit</guilabel>, you will be advised of your next step. In most cases, you will be sent an e-mail to the address you specified with a link to finalise the registration. Other options also include being able to login immediately (i.e. there are no further actions for the registration process) or waiting until an administrator reviews your registration and accepts it, in which case you will be notified by e-mail.</para>
 	</section>
 	<section id="user_control_panel">
 		<sectioninfo>
@@ -441,7 +442,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>pentapenguin</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -455,7 +456,7 @@
 					<imagedata format="PNG" fileref="../images/user_guide/memberlist_sorting.png" />
 				</imageobject>
 				<caption>
-					<para>Vælg hvordan listen skal sorteres</para>
+					<para>Vælg hvordan listen skal sorteres.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -471,7 +472,7 @@
 			<varlistentry>
 				<term>Sortering efter kollonneoverskrifter</term>
 				<listitem>
-					<para>For at sortere listen stigende klikker du på den kolonneoverskrift du vil sortere efter: &quot;Brugernavn&quot;, &quot;Tilmeldt&quot;, &quot;Indlæg&quot;, etc. Klikker du en gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
+					<para>For at sortere listen stigende klikker du på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Sidst aktiv</guilabel>, etc. Klikker du én gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -485,7 +486,7 @@
 			<varlistentry>
 				<term>Søgefunktionen til at finde en tilmeldt bruger</term>
 				<listitem>
-					<para>Med &quot;Find en tilmeldt bruger&quot;-funktionen kan du søge efter specifikke brugere. Du behøver ikke at udfylde alle felterne. Brug * som ubekendt for ukendte tegn.</para>
+					<para>Med <guilabel>Find en tilmeldt bruger</guilabel>-funktionen kan du søge efter specifikke brugere. Du behøver ikke at udfylde alle felterne. This feature allows you to find members by their username, ICQ number, AIM, YIM, MSN Messenger/Windows Live Messenger address, join date, last active date, number of posts, IP address, and usergroup membership(s). All dates should be entered in the format YYYY-MM-DD (such as 2004-02-28 to represent February 28, 2004). Brug * som ubekendt for ukendte tegn, such as entering "Ar*" into the username field to find all usernames beginning with Ar. Press the <guilabel>Submit</guilabel> button to begin the search, or the <guilabel>Reset</guilabel> button if you wish to clear all fields and start the search again.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>

@@ -1441,14 +1441,14 @@
 					<title>Udeluk emailadresser</title>
 					<listitem><para><guilabel>Emailadresse</guilabel>: I tekstboksen skrives de adresser der skal udelukkes. Flere adresser angives på hver sin linie, og * bruges som ubekendt, ved angivelse af delvise adresser.</para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her bestemmes hvor længe emailadressens udelukkelse skal være aktiv. I dropdownmenuen kan vælges nogle almene værdier, baseret på eksempelvis timer eller dage. Udelukkelsens varighed kan også indstilles til en bestemt dato ved at vælge <guilabel>Indtil -></guilabel>, og herefter angive datoen i formatet &quot;ÅÅÅÅ-MM-DD&quot; under dropdownmenuen.</para></listitem>
-					<listitem><para><guilabel>Ophæv udelukkelse</guilabel>: Vælg &quot;Ja&quot; hvis den angivne emailadresse ikke mere skal blokeres.</para></listitem>
+					<listitem><para><guilabel>Ekskludér fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at ekskludere den eller de angivne emailadresser fra en bredere udelukkelse.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Angiv eventuelt en kort begrundelse for udelukkelsen som en note til dig selv.</para></listitem>
 					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Denne begrundelse vises for brugere som forsøger at tilmelde sig med den blokerede emailadresse og kan være forskellig for ovennævnte interne <guilabel>Udelukkelsesgrund</guilabel>.</para></listitem>
 				</itemizedlist>
 				
-				<para>Det er desuden muligt at ophæve emailadressers udelukkelse ved at anvende det nederste afsnit <guilabel>Ophæv udelukkelse af emailadresser</guilabel>. Klik på <guilabel>Udfør</guilabel> når de ønskede adresser er markeret.</para>
+				<para>Det er desuden muligt at ophæve emailadressers udelukkelse eller ekskludering ved at anvende det nederste afsnit <guilabel>Ophæv udelukkelse eller ekskludering</guilabel>. Klik på <guilabel>Udfør</guilabel> når de ønskede adresser er markeret.</para>
 				<itemizedlist>
-					<title>Ophæv udelukkelse af emailadresser</title>
+					<title>Ophæv udelukkelse eller ekskludering</title>
 					<listitem><para><guilabel>Emailadresse</guilabel>: I oversigten vises alle emailadresser som i øjeblikket er udelukket. Vælg den eller de emailadresser hvis udelukkelse skal ophæves. <tip><para>Brug den rette kombination af mus og tastatur for at vælge flere emailadresser. Den mest almindelige metode er at holde tasten CTRL nede, og herefter med musen klikke på de adresser som skal vælges, slip CTRL-tasten når alle ønskede er valgt.</para></tip></para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af den valgte adresses udelukkelse, den kan ikke ændres. Vælges mere end én emailadresse, vises kun én udelukkelsesperiode.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end én emailadresse, vises kun én udelukkelsegrund.</para></listitem>
@@ -1472,15 +1472,15 @@
 					<title>Udeluk IP-adresser</title>
 					<listitem><para><guilabel>IP-adresser eller værtsnavne</guilabel>: I tekstboksen skrives de adresser eller værtsnavne der skal udelukkes. Flere adresser angives på hver sin linie, og * bruges som ubekendt, ved angivelse af delvise adresser.</para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her bestemmes hvor længe IP-adressens eller hostnavnet skal udelukkes. I dropdownmenuen kan vælges nogle almene værdier, baseret på eksempelvis timer eller dage. Udelukkelsens varighed kan også indstilles til en bestemt dato ved at vælge <guilabel>Indtil -></guilabel>, og herefter angive datoen i formatet &quot;ÅÅÅÅ-MM-DD&quot; under dropdownmenuen.</para></listitem>
-					<listitem><para><guilabel>Ophæv udelukkelse</guilabel>: Vælg &quot;Ja&quot; hvis den angivne IP-adresse eller værtsnavn ikke mere skal blokeres.</para></listitem>
+					<listitem><para><guilabel>Ekskludér fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at ekskludere angivne IP-adresser eller værtsnavne fra en bredere udelukkelse.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Angiv eventuelt en kort begrundelse for udelukkelsen som en note til dig selv.</para></listitem>
 					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Denne begrundelse vises for brugere som forsøger at tilmelde sig fra den blokerede IP-adresse og kan være forskellig for ovennævnte interne <guilabel>Udelukkelsesgrund</guilabel>.</para></listitem>
 				</itemizedlist>
 				
-				<para>Det er desuden muligt at ophæve IP-adresser og værtsnavnes udelukkelse ved at anvende det nederste afsnit <guilabel>Ophæv udelukkelse af IP-adresser</guilabel>. Klik på <guilabel>Udfør</guilabel> når de ønskede adresser er markeret.</para>
+				<para>Det er desuden muligt at ophæve IP-adresser og værtsnavnes udelukkelse eller ekskludering ved at anvende det nederste afsnit <guilabel>Ophæv udelukkelse eller ekskludering</guilabel>. Klik på <guilabel>Udfør</guilabel> når de ønskede adresser er markeret.</para>
 				<itemizedlist>
-					<title>Ophæv udelukkelse af IP-adresser</title>
-					<listitem><para><guilabel>IP-adresser eller værtsnavne</guilabel>: I oversigten vises alle IP-adresser og værtsnavne som i øjeblikket er udelukket. Vælg den eller de adresser eller navne hvis udelukkelse skal ophæves. <tip><para>Brug den rette kombination af mus og tastatur for at vælge flere IP-adresser eller værtsnavne. Den mest almindelige metode er at holde tasten CTRL nede, og herefter med musen klikke på de adresser og navne som skal vælges, slip CTRL-tasten når alle ønskede er valgt.</para></tip></para></listitem>
+					<title>Ophæv udelukkelse eller ekskludering</title>
+					<listitem><para><guilabel>IP-adresser eller værtsnavne</guilabel>: I oversigten vises alle IP-adresser og værtsnavne som i øjeblikket er udelukket eller ekskluderet. Vælg den eller de adresser eller navne hvis udelukkelse skal ophæves. <tip><para>Brug den rette kombination af mus og tastatur for at vælge flere IP-adresser eller værtsnavne. Den mest almindelige metode er at holde tasten CTRL nede, og herefter med musen klikke på de adresser og navne som skal vælges, slip CTRL-tasten når alle ønskede er valgt.</para></tip></para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af den valgte adresses udelukkelse, den kan ikke ændres. Vælges mere end én IP-adresse eller et værtsnavn, vises kun én udelukkelsesperiode.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end én adresse, vises kun én udelukkelsegrund.</para></listitem>
 					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede IP-adresse får vist, den kan ikke ændres. Vælges mere end én adresse, vises kun én udelukkelsebegrundelse.</para></listitem>
@@ -1503,18 +1503,18 @@
 					<title>Udeluk et eller flere brugernavne</title>
 					<listitem><para><guilabel>Brugernavn</guilabel>: I tekstboksen skrives de brugernavne der skal udelukkes. Flere navne angives på hver sin linie, og * bruges som ubekendt, ved angivelse af delvise brugernavne.</para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her bestemmes hvor længe brugernavnet skal udelukkes. I dropdownmenuen kan vælges nogle almene værdier, baseret på eksempelvis timer eller dage. Udelukkelsens varighed kan også indstilles til en bestemt dato ved at vælge <guilabel>Indtil -></guilabel>, og herefter angive datoen i formatet &quot;ÅÅÅÅ-MM-DD&quot; under dropdownmenuen.</para></listitem>
-					<listitem><para><guilabel>Ophæv udelukkelse</guilabel>: Vælg &quot;Ja&quot; hvis det angivne brugernavn ikke mere skal blokeres.</para></listitem>
+					<listitem><para><guilabel>Ekskludér fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at eksludere anførte brugere fra en bredere udelukkelse.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Angiv eventuelt en kort begrundelse for udelukkelsen som en note til dig selv.</para></listitem>
 					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Denne begrundelse vises når den udelukkede bruger forsøger at logge ind og kan være forskellig for ovennævnte interne <guilabel>Udelukkelsesgrund</guilabel>.</para></listitem>
 				</itemizedlist>
 				
-				<para>Det er desuden muligt at ophæve brugeres udelukkelse ved at anvende det nederste afsnit <guilabel>Ophæv brugeres udelukkelse</guilabel>. Klik på <guilabel>Udfør</guilabel> når de ønskede brugernavne er markeret.</para>
+				<para>Det er desuden muligt at ophæve brugeres udelukkelse eller ekskludering fra samme, ved at anvende det nederste afsnit <guilabel>Ophæv udelukkelse eller ekskludering</guilabel>. Klik på <guilabel>Udfør</guilabel> når de ønskede brugernavne er markeret.</para>
 				<itemizedlist>
-					<title>Ophæv brugeres udelukkelse</title>
+					<title>Ophæv udelukkelse eller eksludering</title>
 					<listitem><para><guilabel>Brugernavn</guilabel>: I oversigten vises alle brugere som i øjeblikket er udelukket. Vælg det eller de brugernavne hvis udelukkelse skal ophæves. <tip><para>Brug den rette kombination af mus og tastatur for at vælge flere brugernavne. Den mest almindelige metode er at holde tasten CTRL nede, og herefter med musen klikke på de navne som skal vælges, slip CTRL-tasten når alle ønskede er valgt.</para></tip></para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af det valgte brugernavns udelukkelse, den kan ikke ændres. Vælges mere end ét brugernavn vises kun én udelukkelsesperiode.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end én bruger, vises kun én udelukkelsegrund.</para></listitem>
-					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede bruger får vist, den kan ikke ændres. Vælges mere end én bruger, vises kun én udelukkelsebegrundelse..</para></listitem>
+					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede bruger får vist, den kan ikke ændres. Vælges mere end én bruger, vises kun én udelukkelsebegrundelse.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -1528,41 +1528,41 @@
 				</sectioninfo>
 				<title>Afvis brugernavne</title>
 				
-				<para>Det er muligt at forbyde tilmelding med bestemte brugernavne, eller brugernavne som indeholder dele af definerede tegnkombinationer. Det kan være nyttigt at forbyde tilmelding med brugernavne som ligner andre vigtige brugere på boardet. To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
+				<para>Det er muligt at forbyde tilmelding med bestemte brugernavne, eller brugernavne som indeholder definerede tegnkombinationer. Det kan være nyttigt at forbyde tilmelding med brugernavne som ligner andre vigtige brugere på boardet. Administration af afviste brugernavne foretages i ACP fra fanebladet <guimenuitem>Brugere og Grupper</guimenuitem>, ved at klikke på <guimenuitem>Afvis brugernavne</guimenuitem> i venstre menu.</para>
 				
-				<para>To add a disallowed username, locate the <guilabel>Add a disallowed username</guilabel> form, and then type in the username in the textbox labeled <guilabel>Username</guilabel>. <tip><para>You can use wildcards (*) to match any character. For example, to disallow any username that matches "JoeBloggs", you could type in "Joe*". This would prevent all users from registering a username that starts with "Joe".</para></tip> Once you are done, click <guilabel>Submit</guilabel>.</para>
+				<para>Find afsnittet <guilabel>Tilføj afvisning af brugernavn</guilabel> og angiv det brugernavn der skal afvises i tekstfeltet <guilabel>Brugernavn</guilabel>. <tip><para>Du kan udvide antallet af brugernavne, ved at bruge (*) som ubekendt. For eksempel kan ethvert brugernavn der  ligner &quot;JoeBloggs&quot;, dækkes ved at angive &quot;Joe*&quot;. Herved forhindres tilmelding for brugernavne startende med &quot;Joe&quot;.</para></tip> Klik på <guilabel>Udfør</guilabel> når brugernavn er angivet.</para>
 				
-				<para>To remove a disallowed username, locate the <guilabel>Remove a disallowed username</guilabel> form. Select the disallowed username that you would like to remove from the <guilabel>Username</guilabel> selection menu. Click <guilabel>Submit</guilabel> to remove the selected disallowed username.</para>
+				<para>For at fjerne et brugernavns forbud eller afvisning afvendes sektionen <guilabel>Fjern afvisning af brugernavn</guilabel> nederst. Vælg det eller de brugernavne i listen <guilabel>Brugernavn</guilabel>, som skal fjernes. Klik på <guilabel>Udfør</guilabel> når valget er foretaget.</para>
 			</section>
 			
 			<section id="acp_prune_users">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Prune users</title>
+				<title>Beskær brugere</title>
 				
-				<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
+				<para>I phpBB3 er det muligt at slette eller deaktivere brugere med det formål at fjerne inaktive brugere. <guimenuitem>Beskær brugere</guimenuitem> giver mulighed for at beskære brugere blandt andet med baggrund i antal indlæg, sidst aktiv. En brugerkonto kan også slettes sammen med alt tilknyttet denne.</para>
 				
-				<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
+				<para>I sektionen <guilabel>Beskær brugere</guilabel> kan enhver kombination af de tilgængelige kriterier anvendes. Udfyld derfor alle de felter som dækker de brugere du vil beskære. Klik på <guilabel>Udfør</guilabel> når du er klar til at beskære brugere efter de valgte kriterier.</para>
 				
 				<itemizedlist>
 					<title>Prune users</title>
-					<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
-					<listitem><para><guilabel>Email</guilabel>: The email that you want to be pruned. You can use wildcards (*) to prune users that have an email address that matches the given pattern.</para></listitem>
-					<listitem><para><guilabel>Joined</guilabel>: You can also prune users based on their date of registration. To prune users who joined before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who joined after a certain date, choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
-					<listitem><para><guilabel>Last active</guilabel>: You can also prune users based on the last time they were active. To prune users who were last active before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who were last after a certain date (this is useful to prune users who have disappeared from your board), choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
-					<listitem><para><guilabel>Posts</guilabel>: You can prune users based on their post count as well. The criteria for post count can be above, below, or equal to, a specified number. The value you enter must be a positive integer.</para></listitem>
-					<listitem><para><guilabel>Prune users</guilabel>: The usernames of the users you want to prune. Each username you want to prune should be on its own line. You can use wildcards (*) in username patterns as well.</para></listitem>
-					<listitem><para><guilabel>Delete pruned user posts</guilabel>: When users are removed (actually deleted and not just deactivated), you must choose what to do with their posts. To delete all of the posts that belong to the pruned user(s), select the radio button labeled <guilabel>Yes</guilabel>. Otherwise, select <guilabel>No</guilabel> and the pruned user(s)' posts will remain on the board, untouched.</para></listitem>
-					<listitem><para><guilabel>Deactivate or delete</guilabel>: You must choose whether you want to deactivate the pruned user(s)' accounts, or to completely delete and remove them from the board's database.</para></listitem>
+					<listitem><para><guilabel>Brugernavn</guilabel>: Angiv det brugernavn der skal beskæres. (*) kan anvendes som ubekendt og beskæring vil omfatte alle brugere der falder indenfor dette kriterie.</para></listitem>
+					<listitem><para><guilabel>Email</guilabel>: Den emailadresse der skal beskæres, også her kan (*) som ubekendt for at dække et større antal adresser.</para></listitem>
+					<listitem><para><guilabel>Tilmeldt</guilabel>: Beskæring efter tidspunktet for brugeres tilmelding på boardet. For at beskære brugere tilmeldt før en bestemt dato, vælges <guilabel>Før</guilabel>, og <guilabel>Efter</guilabel> for at beskære brugere tilmeldt efter en bestemt dato. Denne dato angives i feltet til højre for valgmenuen i formatet YYYY-MM-DD. Vær omhyggelig med dette valg.</para></listitem>
+					<listitem><para><guilabel>Senest aktiv</guilabel>: Beskæring efter brugeres seneste aktivitet på boardet. For at beskære brugere hvis seneste aktivitet er før en bestemt data, vælges <guilabel>Før</guilabel> i menuen, og efter en bestemt, vælges <guilabel>Efter</guilabel>. Sidstnævnte metode er nyttig for at beskære brugere som ikke længere er aktiv på boardet. Dato angives i feltet til højre for valgmenuen i formatet YYYY-MM-DD. Vær omhyggelig med dette valg.</para></listitem>
+					<listitem><para><guilabel>Indlæg</guilabel>: Beskæring af brugere baseret på antal indlæg. Kriteriet kan være mere end, mindre end eller svarer til - et specifikt antal indlæg. Den angivne værdi skal være et postivt heltal.</para></listitem>
+					<listitem><para><guilabel>Beskær brugere</guilabel>: De specifikke brugere der ønskes beskåret. Angiv hvert brugernavn på en ny linie. (*) kan anvendes i brugernavne som ubekendt.</para></listitem>
+					<listitem><para><guilabel>Slet beskårede brugeres indlæg</guilabel>: Når brugere slettes helt (gælder ikke for deaktivering), skal der træffes beslutning om disse brugeres indlæg skal slettes eller biholdes. Vælg <guilabel>Ja</guilabel> for at slette indlæg og <guilabel>Nej</guilabel> for at bevare indlæggene på boardet.</para></listitem>
+					<listitem><para><guilabel>Deaktivér eller slet</guilabel>: Vælg om beskårede brugere skal slettes helt fra boardet, eller blot deaktiveres.</para></listitem>
 				</itemizedlist>
 				
 				<warning>
-					<para>Pruning users cannot be undone! Be careful with the criteria you choose when pruning users.</para>
+					<para>Beskæring af brugere kan ikke fortrydes! Vær derfor omhyggelig med de kriterier der anvendes ved beskæring af brugere.</para>
 				</warning>
 			</section>
 		</section>
@@ -1571,46 +1571,38 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
-				</author>
-				
-				<author>
-					<othername>MennoniteHobbit</othername>
-				</author>
+					<othername>jask</othername>
+				</author>				
 			</authorgroup>
 		</sectioninfo>
 		
-		<title>Group Management</title>
+		<title>Grupper</title>
 		
-		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
+		<para>Når brugere tilknyttes forskellige <glossterm>Brugergrupper</glossterm>, er det langt lettere at tildele tilladelser til mange brugere på én gang. phpBB 3.0 indholder seks prædefinerede grupper: Administratorer, Bottter, Globale redaktører, Gæster, Tilmeldte brugere, and Tilmeldte COPPA-brugere.</para>
 		
 		<section id="acp_groups_types">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
-					</author>
-					
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
 			
-			<title>Group types</title>
-			<para>There are two types of groups:</para>
+			<title>Gruppetyper</title>
+			<para>Der findes to typer grupper:</para>
 			
 			<!-- TODO: More info on each pre-defined group? -->
 			<variablelist>
 				<varlistentry>
-					<term>Pre-defined groups</term>
+					<term>Prædefinerede gruppper</term>
 					<listitem>
-						<para>These are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar, and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users", for instance. Do not try to remove them manually through the database, or your board will no longer function properly.
+						<para>Disse grupper er oprette som standard i phpBB 3.0. De kan <emphasis>ikke</emphasis> slettes, da boardet bruger dem i forbindelse med boardet forskellige muligheder. Der er dog stadig mulighed for at ændrer disse gruppers egenskaber (beskrivelse, farve, rang, avatar m.m.) og gruppeledere. For eksempel tilknyttes brugere der tilmelder sig automatisk gruppen "Tilmeldte brugere". Forsøg ikke at flytte brugere manuelt via databasen, i værste fald ophører dit board med fungere.
 						
 							<variablelist>
 								<varlistentry>
-									<term>Administrators</term>
-									<listitem><para>This usergroup contains all of the administrators on your board. All founders are administrators, but not all administrators are founders. You can control what administrators can do by managing this group.</para></listitem>
+									<term>Administratorer</term>
+									<listitem><para>Denne brugergruppe indeholder alle administratorer på boardet. Alle grundlæggere er administratorer, men ikke alle administratorer er grundlæggere. Du kan bestemme hvad administratorer kan foretage sig på boardet ved at administrere denne gruppe.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
@@ -1635,7 +1627,7 @@
 								
 								<varlistentry>
 									<term>Registered COPPA Users</term>
-									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
+									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 13 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A. and can be disabled altogther.</para></listitem>
 								</varlistentry>
 							</variablelist>
 							
@@ -1819,7 +1811,32 @@
 		</section>
 		
 		<section id="acp_maintenance_database">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Database backup and restore</title>
+			<para>phpBB uses a database to store all the data used on the board, including users, posts, topics etc. Backing up the database can be useful as a protective measure in case of any accidents which could cause data loss or damage to the database. If any accident like this would occur, you would have a possibility to restore the database to a previous state from the backup. You can use the backup tool to move your board to another host - you will make a backup on your current server and restore it on the new one to keep all data.</para>
+			<itemizedlist>
+				<title>Database backup</title>
+				<listitem><para><guilabel>Backup type</guilabel>: You can backup the whole database or you can either backup the <guilabel>structure</guilabel> or <guilabel>data</guilabel>. The structure only contains the hiearchy in which the data is stored, on the other side, if you only backup the data, you will need a pre-prepared structure when restoring/importing data.</para></listitem>
+				<listitem><para><guilabel>File type</guilabel>: Depending on your server setup, you can save the backup in several formats. The <guilabel>Text</guilabel> option saves the backup in plain text, other options compress the file to decrease the filesize of the dump.</para></listitem>
+				<listitem><para><guilabel>Action</guilabel>: You have three options: you can both <guilabel>Store and download</guilabel> the file, saving it in the store directory and downloading it to your PC, or you can choose to <guilabel>download</guilabel> or <guilabel>store</guilabel> the file.</para></listitem>
+				<listitem>
+					<para><guilabel>Table select</guilabel>: You can either <guilabel>Select all</guilabel> tables or you can select individual tables to backup. When backing up a large database, you can exclude the search tables (do not forget to restore their structure) and recreate the search index on the new server.</para>
+					<tip>
+						<para>Use the CTRL and Shift keys together with your mouse to select individual tables.</para>
+					</tip>
+				</listitem>
+
+			</itemizedlist>
+			<itemizedlist>
+				<title>Database restore</title>
+				<listitem><para>File select: You will be offered a list of database backups which are saved in the store folder. Select the one you want to restore and click <guilabel>Start restore</guilabel>. The restoration might take some time and it will overwrite any existing data on the board.</para></listitem>
+			</itemizedlist>
 		</section>
 		<section id="acp_maintenance_search">
 			<title>Search Indexing</title>
@@ -1837,13 +1854,44 @@
 		<title>System Configuration</title>
 		<para><!-- TODO: Stuff about system configuration --></para>
 		<section id="acp_system_updates">
-			<title>Checking for updates</title>
+					<sectioninfo> 
+						<authorgroup>
+							<author>
+								<othername>ameeck</othername>
+							</author>
+						</authorgroup>
+					</sectioninfo>
+					<title>Checking for updates</title>
+					<para>The phpBB 3.0.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use on of the other packages provided.</para>
+					<para>You will be notified in your ACP if a new version is released, you will also have a link to the newest release announcement, which will brief you on the added features and the overall changelog.</para>
+					<para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply  go to <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
 		</section>
 		<section id="acp_system_spiders">
 			<title>Managing Search Robots</title>
 		</section>
 		<section id="acp_system_mail">
-			<title>Mass email</title>
+		  <sectioninfo>
+								<authorgroup>
+									<author>
+										<othername>ameeck</othername>
+									</author>
+								</authorgroup>
+					</sectioninfo>
+					<title>Mass email</title>
+					<para>phpBB allows you to send an e-mail or message to every user on the board, which allows it in his <link linkend="ucp_preferences">board preferences</link>. The message can serve as a newsletter, notification about changes on the board etc. You can choose whether to send the e-mail to all users, a specific group or a list of specific users. The e-mail is sent from the administrator's e-mail adress and all recipients are included in a BCC - Blind Carbon Copy.</para>
+					<para>On some hosts, sending a mass e-mail can be a problem, since sometimes the hosting company limits the number of e-mails that can be sent out at once. phpBB includes only 50 recipients per e-mail and sends another one for the next batch to prevent this, however, if you still are not able to send a mass e-mail, consult the situation with your hosting provider.</para>
+					<itemizedlist>
+								<title>Composing a mass e-mail</title>
+								<listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
+								<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</ulink>.</para></listitem>
+								<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
+								<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. BBCode or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
+								<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
+								<listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
+					</itemizedlist>
+					<note>
+											<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
+								</note>
 		</section>
 		<section id="acp_system_language">
 			<title>Language Packs</title>
