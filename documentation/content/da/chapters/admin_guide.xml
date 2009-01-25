@@ -1606,28 +1606,28 @@
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Bots</term>
-									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.0 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
+									<term>Botter</term>
+									<listitem><para>Denne brugergruppe er beregnet til &quot;botter&quot;, &quot;spiders&quot; og &quot;crawlers&quot;, som er automatiserede agenter, der normalt anvendes af søgemaskiner til at opdatere deres databaser. phpBB 3.0 har egenskaberne til at imødegå de almene problemer søgemaskiner møder når boardet gennemsøges. Læs mere information i afsnittet Administrér botter.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Global Moderators</term>
-									<listitem><para>Global moderators are moderators that have moderator permissions for every forum in your board. You can edit what permissions these moderators have by managing this group.</para></listitem>
+									<term>Globale redaktører</term>
+									<listitem><para>Globale redaktører har redaktørtilladelser i alle fora på boardet. Du kan ændre gruppens tilladelser i gruppetilladelser.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Guests</term>
-									<listitem><para>Guests are visitors to your board who aren't logged in. You can limit what guests can do by managing this usergroup.</para></listitem>
+									<term>Gæster</term>
+									<listitem><para>Gæster er de besøgende på boardet som ikke er logget ind. Du kan begrænse hvad gæster kan på boardet ved at administrere denne gruppe.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered Users</term>
-									<listitem><para>Registered users are a big part of your board. Registered users have already registered on your board. To control what registered users can do, manage this usergroup.</para></listitem>
+									<term>Tilmeldte brugere</term>
+									<listitem><para>Tilmeldte brugere udgør en stor del af boardets brugere. Administrér denne brugergruppe for at bestemme hvad tilmeldte brugere har tilladelse til.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered COPPA Users</term>
-									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 13 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A. and can be disabled altogther.</para></listitem>
+									<term>Tilmeldte COPPA-brugere</term>
+									<listitem><para>Tilmeldte COPPA-brugere er basalt set det samme som almindelig tilmeldte brugere, bortset fra at de er underlagt <acronym>COPPA</acronym>. Child Online Privacy Protection Act - en lov i USA, gældende for brugere under 13 år. Det er vigtigt at administrere tilladelser for denne gruppe for at beskytte brugere tilknyttet denne. <acronym>COPPA</acronym> gælder ikke for brugere udenfor U.S.A. og kan deaktiveres på boardet.</para></listitem>
 								</varlistentry>
 							</variablelist>
 							
@@ -1635,64 +1635,64 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>User defined groups</term>
+					<term>Brugerdefinerede grupper</term>
 					<listitem>
-						<para>The groups you create by yourself are called "User defined groups". These groups are similar to groups in 2.0. You may create as many as you want, remove them, set group leaders, and change their attributes (description, colour, rank, avatar, and so forth).</para>
+						<para>Brugergrupper oprettet udover førnævnte kaldes &quot;Brugerdefinerede grupper&quot;. Der kan oprettes et ubegrænset antal grupper, de kan slettes, gruppeledere udpeges, og som med de prædefinerede grupper, kan egenskaberne ændres.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
-			<para>The <guimenuitem>Manage Groups</guimenuitem> section in the <acronym>ACP</acronym> shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
+			<para>I afsnittet <guimenuitem>Administrér grupper</guimenuitem> i <acronym>ACP</acronym> vises &quot;Prædefinerede grupper&quot; og &quot;Brugerdefinerede grupper&quot; i to oversigter.</para>
 			
 		</section>
 		<section id="acp_groups_edit">
-			<title>Group attributes</title>
-			<para>A list of attributes a group can have:</para>
+			<title>Gruppeegenskaber</title>
+			<para>En gruppe kan have disse egenskaber:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Group name</term>
-					<listitem><para>The name of your group.</para></listitem>
+					<term>Gruppenavn</term>
+					<listitem><para>Brugergruppens navn.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group description</term>
-					<listitem><para>The description of the group that will be displayed on the group overview list..</para></listitem>
+					<term>Gruppebeskrivelse</term>
+					<listitem><para>Brugergruppens beskrivelse, som vises oversigten.</para></listitem>
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
-					<term>Display group in legend:</term>
-					<listitem><para>This will enable the display of the name of the group in the legend of the &quot;Who is Online&quot; list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
+					<term>Vis gruppe i farveforklaring</term>
+					<listitem><para>Brugergruppen vises i farveforklaringen tilknyttet funktionen &quot;Hvem er online&quot;. Bemærk at det kun giver mening hvis du har valgt en speciel farve for denne gruppe.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group able to receive private messages</term>
-					<listitem><para>This will allow the sending of Private Messages to this group. Please note, that it can be dangerous to allow this for Registered Users, for instance. There is no permission to deny the sending to groups, so anyone who is able to send Private Messages will be able to send a message to this group!</para></listitem>
+					<term>Gruppe kan modtage private beskeder</term>
+					<listitem><para>Tillader at sende private beskeder til hele gruppen. Bemærk venligst at det kan være problematisk at tillade dette for f.eks tilmeldte brugere. Der er ingen tilladelseindstilling som forhindrer at sende pb'er til grupper, så alle som er i stand til at sende private beskeder kan sende til denne til denne gruppe!</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group private message limit per folder</term>
-					<listitem><para>This setting overrides the per-user folder message limit. A value of &quot;0&quot; means the user default limit will be used. See the <link linkend="ucp_preferences">section on user preferences</link> for more information about private message settings.</para></listitem>
+					<term>Maksimalt antal private beskeder pr. mappe for medlemmer af gruppe</term>
+					<listitem><para>Denne indstilling overskriver indstillingerne for maksimalt antal private beskeder i en mappe. En værdi på &quot;0&quot; betyder at brugerens standardgrænse bruges. Se sektionen <link linkend="ucp_preferences">brugerindstillinger</link>, som indeholder mere information om private beskeder.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group colour</term>
-					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default" />) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the &quot;Who is Online&quot; listing.</para></listitem>
+					<term>Gruppefarve</term>
+					<listitem><para>Brugeres brugernavn vises med denne farve på alle forumsider, hvis gruppen er valgt som standardgruppe, se også <xref linkend="acp_groups_default" />. Er <link linkend="acp_groups_edit_legend"><guilabel>Vis gruppe i farveforklaring</guilabel></link> valgt, vises gruppens navn med denne farve underst i &quot;Hvem er online&quot;.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group rank</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting. See the <link linkend="acp_user_ranks">section on ranks</link> for more information.</para></listitem>
+					<term>Grupperang</term>
+					<listitem><para>Brugere med denne gruppe som standardgruppe (se <xref linkend="acp_groups_default" />) får tilknyttet denne rang under brugernavn. Bemærk at du kan ændre brugers rang til en anden end denne grupperang. Læs mere i <link linkend="acp_user_ranks">afsnittet om brugerrang</link>.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group avatar</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will use this avatar. Note that a member can change his avatar to a different one if he has the permission to do so. For more information on avatar settings, see the <link linkend="ucp_avatar">userguide section on avatars</link>.</para></listitem>
+					<term>Gruppeavatar</term>
+					<listitem><para>Brugere med denne gruppe som standardgruppe (se <xref linkend="acp_groups_default" />) får tilknyttet denne avatar. Bemærk at brugere med rette tilladelser kan vælge en anden avatar. Læs mere i <link linkend="ucp_avatar">afsnittet om avatars</link>.</para></listitem>
 				</varlistentry>				
 			</variablelist>
 			
 		</section>
 		<section id="acp_groups_default">
-			<title>Default groups</title>
-			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit"/>, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
-			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
+			<title>Standardgruppe</title>
+			<para>Da der kan tilknyttets forskellige egenskaber som farver og avatars til brugergrupper (se <xref linkend="acp_groups_edit"/>, og brugere kan være medlem af to eller flere grupper som har forskellige egenskaber, for eksempler avatars. Hvilken af disse avatars vil bruger få tilknyttet? </para>
+			<para>Bruger og administratorer kan vælge én af disse grupper som &quot;Standardgruppe&quot;. Herved tilknyttes denne gruppes egenskaber til bruger. Bemærk at det ikke er muligt at kombinere egenskaber fra to grupper: Har den ene gruppe en rang og ingen avatar og en anden gruppe kun en avatar, er det altså ikke muligt at vise rang fra den første gruppe og avataren fra en anden. Der må træffes beslutning om hvilken gruppe der skal være &quot;Standardgruppe&quot;.</para>
 			<important>
-				<para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para>
+				<para>Valg af standardgruppe har ingen indflydelse på tilladelser. Der er ingen gevinst på det område ved at vælge en anden standardgruppe. Brugers tilladelser vil være de samme uanset hvilken brugergruppe der vælges som standard.</para>
 			</important>
-			<para>You can change default groups in two ways. You can do this either through the user management (see <xref linkend="acp_users"/>), or directly through the groups management (<guilabel>Manage groups</guilabel>) page. Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the &quot;Registered Users&quot; group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of &quot;Registered Users&quot;.</para>
+			<para>Der er to metoder hvorpå valg af standardgruppe kan ændres. Det kan gøres enten gennem brugeradministration (se <xref linkend="acp_users"/>) eller direkte i gruppeadministrationen - <guilabel>Administrér grupper</guilabel>. Anvendes gruppeadministrationen er det vigtigt at være opmærksom på at når standardgruppen ændres her, ændres standardgruppe for <emphasis>alle</emphasis> medlemmer af gruppen og ændrer også deres standardgruppe. Som eksempel, hvis du ændrer standardgruppe for &quot;Tilmeldte brugere&quot; ved at bruge linket <guilabel>Gør til standardgruppe for samtlige medlemmer</guilabel> øverst, får alle brugere i denne gruppe ændret standardgruppe, også medlemmer af administrator- og redaktørgrupperne, i og med de også er medlemmer af gruppen &quot;Tilmeldte brugere&quot;.</para>
 			<important>
-				<para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para>
+				<para>Vælges en standardgruppe med rang og avatar tilknyttet, overskrives brugeres eksisterende avatars og rang med gruppens.</para>
 			</important>
 		</section>
 	</section>
@@ -1705,7 +1705,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Permission Overload</title>
+		<title>Tilladelser</title>
 		<para><!-- TODO: stuff about permissions --></para>
 	</section>
 
@@ -1713,12 +1713,9 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 				
-				<author>
-					<othername>MennoniteHobbit</othername>
-				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Styles</title>
@@ -1883,7 +1880,7 @@
 					<itemizedlist>
 								<title>Composing a mass e-mail</title>
 								<listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
-								<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</ulink>.</para></listitem>
+								<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</para></listitem>
 								<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
 								<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. BBCode or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
 								<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
