@@ -1843,6 +1843,9 @@
 				<author>
 					<othername>dhn</othername>
 				</author>
+				<author>
+					<othername>ameeck</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>System Configuration</title>
@@ -1856,15 +1859,39 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Checking for updates</title>
-			<para>The phpBB 3.0.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use on of the other packages provided.</para>
+			<para>The phpBB 3.0.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use one of the other packages provided.</para>
 			<para>You will be notified in your ACP if a new version is released, you will also have a link to the newest release announcement, which will brief you on the added features and the overall changelog.</para>
-			<para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply  go to <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
+			<para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply  go to the <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
 		</section>
 		<section id="acp_system_spiders">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Managing Search Robots</title>
+			<para>phpBB 3 introduced a new system for managing search indexer and bot accounts. It allows you to identify these automated bots by their IP or a part of their user-agent, which is a setting that normally identifies the browser of a user. After you add a bot and it is recognized, phpBB does not treat the session as anonymous, but uses the created bot account. Bots use permissions set by the pre-defined Bots group. Identifying bots is important so that phpBB can serve them content which is more appropriate for search engines - dead links to pages without content are omitted, e.g. posting pages, report post pages etc. Bots never recieve a session ID in the URL, which should not appear in the search results.  You can also assign a specific style and language to bots.</para>
+			<para>You can easily track if a specific search indexer visited your site recently by checking the <guilabel>Last Visit</guilabel> column on the botlist page.</para>
+			<note>
+				<para>Bots do not use permissions from the Guest group, but permissions from the Bots group. For more about pre-defined groups, please read <xref linkend="acp_groups_types"/></para>
+			</note>
+			<itemizedlist>
+				<title>Adding a bot</title>
+				<listitem><para><guilabel>Bot name</guilabel>: This is the title of the bot that will be used on the forum. You will see it in the list of bots in the <acronym>ACP</acronym> and in the Who is Online lists.</para></listitem>
+				<listitem><para><guilabel>Bot style</guilabel>: You can select the style served to the bot from the list of installed styles on the board.</para></listitem>
+				<listitem><para><guilabel>Bot language</guilabel>: You can do the same with the language. The bot will use the language selected here.</para></listitem>
+				<listitem><para><guilabel>Bot active</guilabel>: The bot session will be created only if a bot is active, if not, the data for a bot set in this form will not be used anywhere.</para></listitem>
+				<listitem><para><guilabel>Agent match</guilabel>: You can match a bot by either its user-agent or its IP. You can specify a part of the user-agent to be looked for. For example, the Google search indexer has "Googlebot" in its user-agent, so you would enter it here to identify when Google crawls your board.</para></listitem>
+				<listitem><para><guilabel>Bot IP address</guilabel>: This field is also used to identify the bot. If a bot cannot be recognized by the user-agent, you can specify what IPs should be used to identify it. Partial matches are allowed, that means you can include only the first two or three octets of the IP if the rest dynamically changes. You can also enter multiple IPs separated by a comma.</para></listitem>
+			</itemizedlist>
+			<note>
+				<para>If you enter both a user-agent and an IP address, both have to match to identify the bot.</para>
+			</note>
 		</section>
 		<section id="acp_system_mail">
-		  <sectioninfo>
+			<sectioninfo>
 				<authorgroup>
 					<author>
 						<othername>ameeck</othername>
@@ -1877,7 +1904,7 @@
 			<itemizedlist>
 				<title>Composing a mass e-mail</title>
 				<listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
-				<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</ulink>.</para></listitem>
+				<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</para></listitem>
 				<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
 				<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. BBCode or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
 				<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
@@ -1885,7 +1912,7 @@
 			</itemizedlist>
 			<note>
 					<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
-				</note>
+			</note>
 		</section>
 		<section id="acp_system_language">
 			<title>Language Packs</title>
