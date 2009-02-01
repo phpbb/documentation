@@ -1884,10 +1884,10 @@
 				<listitem><para><guilabel>Bot language</guilabel>: You can do the same with the language. The bot will use the language selected here.</para></listitem>
 				<listitem><para><guilabel>Bot active</guilabel>: The bot session will be created only if a bot is active, if not, the data for a bot set in this form will not be used anywhere.</para></listitem>
 				<listitem><para><guilabel>Agent match</guilabel>: You can match a bot by either its user-agent or its IP. You can specify a part of the user-agent to be looked for. For example, the Google search indexer has "Googlebot" in its user-agent, so you would enter it here to identify when Google crawls your board.</para></listitem>
-				<listitem><para><guilabel>Bot IP address</guilabel>: This field is also used to identify the bot. If a bot cannot be recognized by the user-agent, you can specify what IPs should be used to identify it. Partial matches are allowed, that means you can include only the first two or three octets of the IP if the rest dynamically changes. You can also enter multiple IPs separated by a comma.</para></listitem>
+				<listitem><para><guilabel>Bot IP address</guilabel>: This field is also used to identify the bot. If a bot cannot be recognized by the user-agent, you can specify what <glossterm>IP address</glossterm> should be used to identify it. Partial matches are allowed, that means you can include only the first two or three octets of the IP if the rest dynamically changes. You can also enter multiple IPs separated by a comma.</para></listitem>
 			</itemizedlist>
 			<note>
-				<para>If you enter both a user-agent and an IP address, both have to match to identify the bot.</para>
+				<para>If you enter both a user-agent and an <glossterm>IP address</glossterm>, both have to match to identify the bot.</para>
 			</note>
 		</section>
 		<section id="acp_system_mail">
@@ -1906,7 +1906,7 @@
 				<listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
 				<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</para></listitem>
 				<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
-				<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. BBCode or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
+				<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. <glossterm>BBCode</glossterm> or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
 				<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
 				<listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
 			</itemizedlist>
@@ -1915,7 +1915,21 @@
 			</note>
 		</section>
 		<section id="acp_system_language">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Language Packs</title>
+			<para>In phpBB, you can upload several language packs for your users to use. Every text string displayed by the system should be translated after you upload a new language pack. Using a different language pack does not change the contents of posts, as translating them is not possible due to the various content they can have and the limits of computer translation.</para>
+			<para>Language packs can be downloaded from the Downloads page on phpBB.com. To add a language pack, unzip the downloaded file and upload the contents to the <filename>language/</filename> directory. The files should be contained in a directory named with the language's ISO code, the default British English pack is in the <filename>en/</filename> directory for example. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
+			<note>
+					<para>To make a language pack the default language of the board, you need to change the <link linkend="acp_general_config">Board Configuration</link>.</para>
+			</note>
+			<para>If you are not comfortable with editing PHP files manually and you would like to change some text phpBB is displaying, you can use the in-built language pack editor which is accessible once you click the language pack title in the <guilabel>Installed language packs</guilabel> list. You can change the language pack details and the contents of individual language files on this page. In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
+			<para>If you choose to edit a file using the ACP you have two options on how to update the translation on the board. First you can choose to <guilabel>Submit</guilabel> or <guilabel>Submit and download</guilabel> the file, which will store the file you are editing in the <filename>store/</filename> directory and the file will be offered for download if you choose the second button. If you choose to save the file in the store directory, you will have to manually move it to the language pack directory. The second possibility, which is right under these two buttons is to move the file to the language pack directory by using FTP. You will be prompted for FTP login credentials and if possible the file be saved and updated immediately by the script.</para>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
@@ -1929,8 +1943,28 @@
 			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
 			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
 		</section>
-		<section id="acp_system_reports">
+		<section id="acp_system_reasons">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Manage reasons for reporting and denying posts</title>
+			<para>phpBB has a feature that allows you to put new posts in queue, where the post waits until it is approved or denied by a moderator, this can be set with permissions or in the <guilabel>Post settings</guilabel> for users which do not have enough posts. If a moderator chooses to deny a post in the queue, he has an option to specify a reason for the denial. The predefined options from which he can choose are specified here. These reasons are also offered to users reporting a post on the board.</para>
+			<para>For more information about queue moderation, see <xref linkend="mcp_queue"/>.</para>
+			<figure id="img_denial_reasons">
+				<title>Report/denial reasons page</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/denial_reasons.png"/>
+					</imageobject>
+					<caption>
+						<para>This is the page from which you can manage reasons shown when denying or reporting a post. Four default reasons present in a standard phpBB installation are shown. The fifth one is added manually and is not localised, this can be achieved by specifying an identifier in the <guilabel>Reason title</guilabel> containing only letters and underscores and then adding localised titles and reasons in the language file called <filename>mcp.php</filename> located in the <filename>language/</filename> directory. The predefined reasons are at the bottom of the file, you need to add your reason in the same way as the others are saved. When you localise a reason, it is shown in the correct translation for each language pack used on the board.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 		</section>
 		<section id="acp_system_modules">
 			<title>Module Management</title>
