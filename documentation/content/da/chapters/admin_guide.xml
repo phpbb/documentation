@@ -1718,24 +1718,24 @@
 				
 			</authorgroup>
 		</sectioninfo>
-		<title>Styles</title>
-		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
+		<title>Typografier</title>
+		<para>Boardets fremtræden bestemmes af den valgte typografi, og det er ganske enkelt at vælge en anden og dermed ændre boardets udseende radikalt. Netop muligheden for at give boardet sit helt eget og unikke præg er vigtigt når man ønsker et interessant board. Valg af typografi kan eventuelt også anvendes til at signalere formålet med boardet. I <guimenuitem>Typografier</guimenuitem> kan alle tilgængelige typografier på boardet administreres.</para>
 		
-		<para>phpBB 3.0 styles have three main parts: templates, themes, and imagesets.
+		<para>En typografi i phpBB 3.0 består af tre hovedelementer: skabeloner, temaer og billedpakker.
 			<variablelist>
 				<varlistentry>
-					<term>Templates</term>
-					<listitem><para>Templates are the HTML files responsible for the layout of the style.</para></listitem>
+					<term>Skabeloner</term>
+					<listitem><para>Skabeloner er de HTML-filer som bestemmer typografiens layout.</para></listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Themes</term>
-					<listitem><para>Themes are a combination of colour schemes and images that define the basic look of your forum.</para></listitem>
+					<term>Temaer</term>
+					<listitem><para>Temaer er en kombination af farveskemaer og grafik som bestemmer boardets basale udseende.</para></listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Imagesets</term>
-					<listitem><para>Imagesets are groups of images that are used throughout your board. Imagesets are comprised of all of the non-style specific images used by your board.</para></listitem>
+					<term>Billedpakker</term>
+					<listitem><para>Billedpakker indeholder de billeder og den grafik boardet benytter sig af. Billedpakkerne er uafhængig af den valgte typografi, og kan derfor i princippet anvendes på tværs i alle typografier.</para></listitem>
 				</varlistentry>
 			</variablelist>
 		</para>
@@ -1747,63 +1747,57 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 				
-				<author>
-					<othername>MennoniteHobbit</othername>
-				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Board Maintenance</title>
+		<title>Vedligeholdelse</title>
 		
-		<para>Running a phpBB 3.0 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
+		<para>Det alene boardadministratorers ansvar at driften af et phpBB 3.0 board afvikles så problemfrit som muligt.</para>
 		
-		<para><guimenuitem>Board Maintenance</guimenuitem> is a section in the <acronym>ACP</acronym> that allows you to keep track of internal phpBB information, such as logs, as well as maintaining your database (which holds your phpBB-related data), such as backing up and restoring data.</para>
+		<para><guimenuitem>Vedligehold</guimenuitem> findes i en særskilt fane i <acronym>ACP</acronym>, her stilles en række værktøjer til rådighed, som kan hjælpe med denne opgave. Der er adgang til forskellig logs og mulighed for databasevedligeholdelse.</para>
 		
 		<section id="acp_maintenance_logs">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>Graham</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Forum Logs</title>
-			<para>The <guilabel>Forum Log</guilabel> section of the <acronym>ACP</acronym> provides an overview of what has been happening on the board. This is important for you, the administrator, to keep track of. There are four types of logs:</para>
+			<title>Forumlog</title>
+			<para>Under overskriften <guilabel>Forumlog</guilabel> i <acronym>ACP</acronym> findes meget detaljerede informationer om hvad der er hændt på boardet. Det er vigtigt af have adgang til den type informationer for en administrator. Data stilles til rådighed i fire forskellige logs:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Admin Log</term>
+					<term>Administratorlog</term>
 					<listitem>
-						<para>This log records all actions carried out within the administration panel itself.</para>
+						<para>Indeholder alle hændelser udført i selve administrationkontrolpanelet.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Moderator Log</term>
+					<term>Redaktørlog</term>
 					<listitem>
-						<para>This logs records the actions performed by moderators of your board. Whenever a topic is moved or locked it will be recorded here, allowing you to see who carried out a particular action.</para>
+						<para>Indeholder alle hændelser udført af boardets redaktører. Information om ethvert emne der flyttes eller låses logges her, og det er derfor muligt at se hvem der har udført en bestemt handling.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>User Log</term>
+					<term>Brugerlog</term>
 					<listitem>
-						<para>This log records all important actions carried out either by users or on users. All email and password changes are recorded within this log.</para>
+						<para>Her gemmes alle vigtige handlinger foretaget af brugere eller på brugere. For eksempel gemmes alle ændringer foretaget af brugere omkring emailadresser og kodeord.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Error Log</term>
+					<term>Kritiske fejl i log</term>
 					<listitem>
-						<para>This log shows you any errors that were caused by actions done by the board itself, such as errors sending emails. If you are having problems with a particular feature not working, this log is a good place to start. If enabled, addtional debugging information may be written to this log.</para>
+						<para>I denne log gemmes alle fejlmeddelelser med baggrund i boardets egne funktioner, som for eksempel problemer med afsendelse af emails. Har du problemer med en bestemt funktionalitet på boardet, er denne log et godt sted at starte fejlsøgningen. Er DEBUG_EXTRA i config.php-filen valgt, tilføjes debugging information i denne log, ved opståede fejl.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
 			
-			<para>Click on one of the log links located in the left-hand <guilabel>Forum Logs</guilabel> section.</para>
+			<para>Klik på et af linkene til logs i oversigten under overskriften <guilabel>Forumlog</guilabel>.</para>
 			
-			<para>If you have appropriate permissions, you are able to remove any or all log entries from the above sections. To remove log entries, go to the appropriate log entries section, check the log entries' checkboxes, and then click on the <guilabel>Delete marked</guilabel> checkbox to delete the log entries.</para>
+			<para>Med de rette tilladelser kan enkelte eller alle hændelser slettes fra loggen. Afmærk boksen udfor den hændelse der ønskes slettet, og klik herefter på <guilabel>Slet markerede</guilabel> nederst.</para>
 		
 		</section>
 		
@@ -1811,32 +1805,31 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>ameeck</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Database backup and restore</title>
-			<para>phpBB uses a database to store all the data used on the board, including users, posts, topics etc. Backing up the database can be useful as a protective measure in case of any accidents which could cause data loss or damage to the database. If any accident like this would occur, you would have a possibility to restore the database to a previous state from the backup. You can use the backup tool to move your board to another host - you will make a backup on your current server and restore it on the new one to keep all data.</para>
+			<title>Backup og gendannelse af database</title>
+			<para>phpBB gemmer alle boardets data i en database, inklusive brugere, indlæg, emner etc. Det er en god beskyttelsesforanstaltning af gemme backups af databasen, hvis uheldet skulle være ude og databasen mistes eller beskadiges. Det er muligt at gendanne boardets database til en samme tilstand eller udgave da backup blev foretaget. Databaseværktøjerne kan også bruges hvis boardet skal flyttes til en ny vært - backup'en tages på den øjeblikkelige server og gendannes udfra backup'en på den nye server.</para>
 			<itemizedlist>
-				<title>Database backup</title>
-				<listitem><para><guilabel>Backup type</guilabel>: You can backup the whole database or you can either backup the <guilabel>structure</guilabel> or <guilabel>data</guilabel>. The structure only contains the hiearchy in which the data is stored, on the other side, if you only backup the data, you will need a pre-prepared structure when restoring/importing data.</para></listitem>
-				<listitem><para><guilabel>File type</guilabel>: Depending on your server setup, you can save the backup in several formats. The <guilabel>Text</guilabel> option saves the backup in plain text, other options compress the file to decrease the filesize of the dump.</para></listitem>
-				<listitem><para><guilabel>Action</guilabel>: You have three options: you can both <guilabel>Store and download</guilabel> the file, saving it in the store directory and downloading it to your PC, or you can choose to <guilabel>download</guilabel> or <guilabel>store</guilabel> the file.</para></listitem>
+				<title>Databasebackup</title>
+				<listitem><para><guilabel>Backuptype</guilabel>: Du kan tage backup af hele databasen,  <guilabel>Struktur alene</guilabel> eller <guilabel>Data alene</guilabel>. Ved valg af struktur alene dannes kun backup af det hierarki hvori data lagres, og vælges backup af data alene forudsætter det at hierarkiet er på plads når gendannelse foretages.</para></listitem>
+				<listitem><para><guilabel>Filtype</guilabel>: Afhængig af din serverkonfiguration, kan backupfilen gemmes i forskellige formater. Vælges <guilabel>Text</guilabel>, gemmes backup'en i almindelig tekstformat, mens valg af komprimerede formater mindsker backupfilens størrelse.</para></listitem>
+				<listitem><para><guilabel>Handling</guilabel>: Der er tre valgmuligheder: Du kan både <guilabel>Gem og download</guilabel>  filen, som gemmer den lokalt i store-mappen og downloader den til din PC, eller du kan vælge kun at <guilabel>download</guilabel>e eller kun at <guilabel>Gem fil lokalt</guilabel>.</para></listitem>
 				<listitem>
-					<para><guilabel>Table select</guilabel>: You can either <guilabel>Select all</guilabel> tables or you can select individual tables to backup. When backing up a large database, you can exclude the search tables (do not forget to restore their structure) and recreate the search index on the new server.</para>
+					<para><guilabel>Tabelvalg</guilabel>: Du kan enten <guilabel>Vælg alle</guilabel> tabeller eller udvælge individuelle tabeller til backup . Når der tages backup af en stor database, kan det være en fordel at fravælge søgetabellerne (men husk at strukturen skal være tilstede ved gendannelse) og istedet gendanne søgeindekset efter en gendannelse af databasen.</para>
 					<tip>
-						<para>Use the CTRL and Shift keys together with your mouse to select individual tables.</para>
+						<para>Brug CTRL- og skift-tasterne sammen din mus for at vælge individuelle tabeller.</para>
 					</tip>
 				</listitem>
-
 			</itemizedlist>
 			<itemizedlist>
-				<title>Database restore</title>
-				<listitem><para>File select: You will be offered a list of database backups which are saved in the store folder. Select the one you want to restore and click <guilabel>Start restore</guilabel>. The restoration might take some time and it will overwrite any existing data on the board.</para></listitem>
+				<title>Databasegendannelse</title>
+				<listitem><para>Vælg en fil: Her vises de backupfiler som er gemt i store-mappen. Vælg den du ønsker at gendanne fra og klik på <guilabel>Start gendannelse</guilabel>. Gendannelsen kan tage nogen tid og vil overskrive boardets eksisterende data.</para></listitem>
 			</itemizedlist>
 		</section>
 		<section id="acp_maintenance_search">
-			<title>Search Indexing</title>
+			<title>Søgeindeks</title>
 		</section>
 	</section>
 
@@ -1844,54 +1837,92 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>System Configuration</title>
+		<title>System</title>
 		<para><!-- TODO: Stuff about system configuration --></para>
 		<section id="acp_system_updates">
 					<sectioninfo> 
 						<authorgroup>
 							<author>
-								<othername>ameeck</othername>
+								<othername>jask</othername>
 							</author>
 						</authorgroup>
 					</sectioninfo>
-					<title>Checking for updates</title>
-					<para>The phpBB 3.0.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use on of the other packages provided.</para>
-					<para>You will be notified in your ACP if a new version is released, you will also have a link to the newest release announcement, which will brief you on the added features and the overall changelog.</para>
-					<para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply  go to <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
+					<title>Versionskontrol</title>
+					<para>phpBB 3.0.x-linien opdateres normalt med få måneders mellemrum. Fejlrettelser, nye features og andre ændringer er indeholdt i disse opdateringer. Versionnummeret (x'et) øges ved hver opdatering. Det anbefales kraftigt at du holder dit board opdateret. Opdatering fra ældre versioner, eller over flere versioner er vanskeligere og kan medføre problemer med løse mulige konflikter. Du kan anvende den automatiske opdateringspakke ved opdatering fra versionen før. Pakken kan flette ændringer udført i forbindelse med installation af MODs med opdateringer i standardfilerne. Du kan naturligvis også vælge at anvende én af de øvrige tilgængelige pakker.</para>
+					<para>Du adviseres automatisk i ACP når en ny version frigives. Her vises også et link til den nyeste bekendtgørelse af frigivelsen, hvor ændringer og tilføjelser i denne omtales.</para>
+					<para>Opdatering med den automatiske opdateringspakke er uhyre simpel. Først følges linket til downloadsiden på phpBB.com og opdateringspakken hentes herfra. Udpak indholdet lokalt på din PC og upload filerne til boardets root-mappe. Boardet vil herefter være offline for almindelige brugere. Brows til boardets <filename class='directory'>install/</filename>-mappe og vælg fanen <guilabel>Opdatér</guilabel>, opdateringsprocessen giver yderligere instrukser undervejs.</para>
 		</section>
 		<section id="acp_system_spiders">
-			<title>Managing Search Robots</title>
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Administrér botter</title>
+			<para>phpBB 3 introducerer et nyt system til at administrere søgemaskine- og bot-konti. Systemet giver mulighed for at identificere disse automatiserede agenter via deres IP-adresse eller agentstreng. Når du har tilføjet en bot og den er genkendt, behander phpBB ikke sessionen som en gæstebruger, men anvender den oprettede botkonto. Botter gør brug af de tilladelser som er tildelt den prædefinerede botgruppe. Det er vigtigt at få identificeret botter, i det boardet så vil være istand til præsentere boardets indhold på den korrekte måde for søgemaskiner - herunder at udelade links til sider uden indhold. Botter modtager ikke en session-ID i URL'en, og den vises derfor ikke i søgeresultater. Du kan knytte en speciel typografi og et bestemt sprog til botter.</para>
+			<para>Det er nemt at konstatere om en bestemt bot fornylig har aflagt besøg på dit board. Se kolonnen <guilabel>Seneste besøg</guilabel> i botoversigten.</para>
+			<note>
+				<para>Botter gør ikke brug af tilladelser fra gæstebrugergruppen, men har egne tilladelser defineret i gruppen botter. Læs mere om prædefinerede grupper i <xref linkend="acp_groups_types"/>.</para>
+			</note>
+			<itemizedlist>
+				<title>Tilføj bot</title>
+				<listitem><para><guilabel>Botnavn</guilabel>: Bottens brugernavn på boardet. Navnet vises på botlisten i <acronym>ACP</acronym> og i Hvem er online når boardet har besøg af denne.</para></listitem>
+				<listitem><para><guilabel>Bottens typografi</guilabel>: Her vælges den typografi botten præsenteres for.</para></listitem>
+				<listitem><para><guilabel>Bottens sprog</guilabel>: You can do the same with the language. The bot will use the language selected here.</para></listitem>
+				<listitem><para><guilabel>Bot active</guilabel>: The bot session will be created only if a bot is active, if not, the data for a bot set in this form will not be used anywhere.</para></listitem>
+				<listitem><para><guilabel>Agent match</guilabel>: You can match a bot by either its user-agent or its IP. You can specify a part of the user-agent to be looked for. For example, the Google search indexer has "Googlebot" in its user-agent, so you would enter it here to identify when Google crawls your board.</para></listitem>
+				<listitem><para><guilabel>Bot IP address</guilabel>: This field is also used to identify the bot. If a bot cannot be recognized by the user-agent, you can specify what <glossterm>IP address</glossterm> should be used to identify it. Partial matches are allowed, that means you can include only the first two or three octets of the IP if the rest dynamically changes. You can also enter multiple IPs separated by a comma.</para></listitem>
+			</itemizedlist>
+			<note>
+				<para>If you enter both a user-agent and an IP address, both have to match to identify the bot.</para>
+			</note>
 		</section>
 		<section id="acp_system_mail">
-		  <sectioninfo>
-								<authorgroup>
-									<author>
-										<othername>ameeck</othername>
-									</author>
-								</authorgroup>
-					</sectioninfo>
-					<title>Mass email</title>
-					<para>phpBB allows you to send an e-mail or message to every user on the board, which allows it in his <link linkend="ucp_preferences">board preferences</link>. The message can serve as a newsletter, notification about changes on the board etc. You can choose whether to send the e-mail to all users, a specific group or a list of specific users. The e-mail is sent from the administrator's e-mail adress and all recipients are included in a BCC - Blind Carbon Copy.</para>
-					<para>On some hosts, sending a mass e-mail can be a problem, since sometimes the hosting company limits the number of e-mails that can be sent out at once. phpBB includes only 50 recipients per e-mail and sends another one for the next batch to prevent this, however, if you still are not able to send a mass e-mail, consult the situation with your hosting provider.</para>
-					<itemizedlist>
-								<title>Composing a mass e-mail</title>
-								<listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
-								<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</para></listitem>
-								<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
-								<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. BBCode or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
-								<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
-								<listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
-					</itemizedlist>
-					<note>
-											<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
-								</note>
+			<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>ameeck</othername>
+				</author>
+			</authorgroup>
+			</sectioninfo>
+			<title>Mass email</title>
+			<para>phpBB allows you to send an e-mail or message to every user on the board, which allows it in his <link linkend="ucp_preferences">board preferences</link>. The message can serve as a newsletter, notification about changes on the board etc. You can choose whether to send the e-mail to all users, a specific group or a list of specific users. The e-mail is sent from the administrator's e-mail adress and all recipients are included in a BCC - Blind Carbon Copy.</para>
+			<para>On some hosts, sending a mass e-mail can be a problem, since sometimes the hosting company limits the number of e-mails that can be sent out at once. phpBB includes only 50 recipients per e-mail and sends another one for the next batch to prevent this, however, if you still are not able to send a mass e-mail, consult the situation with your hosting provider.</para>
+			<itemizedlist>
+				<title>Composing a mass e-mail</title>
+				<listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
+				<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</para></listitem>
+				<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
+				<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. <glossterm>BBCode</glossterm> or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
+				<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
+				<listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
+				</itemizedlist>
+				<note>
+					<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
+				</note>
 		</section>
 		<section id="acp_system_language">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Language Packs</title>
+			<para>In phpBB, you can upload several language packs for your users to use. Every text string displayed by the system should be translated after you upload a new language pack. Using a different language pack does not change the contents of posts, as translating them is not possible due to the various content they can have and the limits of computer translation.</para>
+			<para>Language packs can be downloaded from the Downloads page on phpBB.com. To add a language pack, unzip the downloaded file and upload the contents to the <filename>language/</filename> directory. The files should be contained in a directory named with the language's ISO code, the default British English pack is in the <filename>en/</filename> directory for example. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
+			<note>
+					<para>To make a language pack the default language of the board, you need to change the <link linkend="acp_general_config">Board Configuration</link>.</para>
+			</note>
+			<para>If you are not comfortable with editing PHP files manually and you would like to change some text phpBB is displaying, you can use the in-built language pack editor which is accessible once you click the language pack title in the <guilabel>Installed language packs</guilabel> list. You can change the language pack details and the contents of individual language files on this page. In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
+			<para>If you choose to edit a file using the ACP you have two options on how to update the translation on the board. First you can choose to <guilabel>Submit</guilabel> or <guilabel>Submit and download</guilabel> the file, which will store the file you are editing in the <filename>store/</filename> directory and the file will be offered for download if you choose the second button. If you choose to save the file in the store directory, you will have to manually move it to the language pack directory. The second possibility, which is right under these two buttons is to move the file to the language pack directory by using FTP. You will be prompted for FTP login credentials and if possible the file be saved and updated immediately by the script.</para>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
@@ -1905,8 +1936,28 @@
 			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
 			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
 		</section>
-		<section id="acp_system_reports">
+		<section id="acp_system_reasons">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Manage reasons for reporting and denying posts</title>
+			<para>phpBB has a feature that allows you to put new posts in queue, where the post waits until it is approved or denied by a moderator, this can be set with permissions or in the <guilabel>Post settings</guilabel> for users which do not have enough posts. If a moderator chooses to deny a post in the queue, he has an option to specify a reason for the denial. The predefined options from which he can choose are specified here. These reasons are also offered to users reporting a post on the board.</para>
+			<para>For more information about queue moderation, see <xref linkend="mcp_queue"/>.</para>
+			<figure id="img_denial_reasons">
+				<title>Report/denial reasons page</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/denial_reasons.png"/>
+					</imageobject>
+					<caption>
+						<para>This is the page from which you can manage reasons shown when denying or reporting a post. Four default reasons present in a standard phpBB installation are shown. The fifth one is added manually and is not localised, this can be achieved by specifying an identifier in the <guilabel>Reason title</guilabel> containing only letters and underscores and then adding localised titles and reasons in the language file called <filename>mcp.php</filename> located in the <filename>language/</filename> directory. The predefined reasons are at the bottom of the file, you need to add your reason in the same way as the others are saved. When you localise a reason, it is shown in the correct translation for each language pack used on the board.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 		</section>
 		<section id="acp_system_modules">
 			<title>Module Management</title>
