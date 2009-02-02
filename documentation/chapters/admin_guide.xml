@@ -549,7 +549,7 @@
 				<para>The next group of search settings actually only contains one setting: choosing what backend your board's search facilities, if enabled, will use. The following details this option.
 					<itemizedlist>
 						<title>Search Backend</title>
-						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext sesarch. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
+						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext search. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
 					</itemizedlist>
 					<note>
 						<para>If you choose to change your board's current search backend, you will have to create an index of your board's content for the new search backend. If you know for sure that you're not going to use the index that was used with your old, previously chosen search backend, you can also delete it in order to free up some of your system's resources. To learn more about maintaining your board's search indices, see <xref linkend="acp_maintenance_search" />.</para>
@@ -1841,15 +1841,15 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>ameeck</othername>
 				</author>
 				<author>
-					<othername>ameeck</othername>
+					<othername>Graham</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>System Configuration</title>
-		<para><!-- TODO: Stuff about system configuration --></para>
+		<para>Controls which affect the whole board and which are a key part of configuring and running phpBB are located in the System section. Most of these settings require more attention from the administrator and are not so easy to configure, fortunately you will probably not be changing them too often. This includes keeping your installation up-to-date, managing the board's languages or editing the structure of phpBB's control panels.</para>
 		<section id="acp_system_updates">
 			<sectioninfo>
 				<authorgroup>
@@ -1872,10 +1872,10 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Managing Search Robots</title>
-			<para>phpBB 3 introduced a new system for managing search indexer and bot accounts. It allows you to identify these automated bots by their IP or a part of their user-agent, which is a setting that normally identifies the browser of a user. After you add a bot and it is recognized, phpBB does not treat the session as anonymous, but uses the created bot account. Bots use permissions set by the pre-defined Bots group. Identifying bots is important so that phpBB can serve them content which is more appropriate for search engines - dead links to pages without content are omitted, e.g. posting pages, report post pages etc. Bots never recieve a session ID in the URL, which should not appear in the search results.  You can also assign a specific style and language to bots.</para>
+			<para>phpBB 3 introduced a new system for managing search indexer and bot accounts. It allows you to identify these automated bots by their IP or a part of their user-agent, which is a setting that normally identifies the browser of a user. After you add a bot and it is recognized, phpBB does not treat the session as anonymous, but uses the created bot account. Bots use permissions set by the predefined Bots group. Identifying bots is important so that phpBB can serve them content which is more appropriate for search engines - dead links to pages without content are omitted, e.g. posting pages, report post pages etc. Bots never receive a session ID in the URL, which should not appear in the search results.  You can also assign a specific style and language to bots.</para>
 			<para>You can easily track if a specific search indexer visited your site recently by checking the <guilabel>Last Visit</guilabel> column on the botlist page.</para>
 			<note>
-				<para>Bots do not use permissions from the Guest group, but permissions from the Bots group. For more about pre-defined groups, please read <xref linkend="acp_groups_types"/></para>
+				<para>Bots do not use permissions from the Guest group, but permissions from the Bots group. For more about predefined groups, please read <xref linkend="acp_groups_types"/></para>
 			</note>
 			<itemizedlist>
 				<title>Adding a bot</title>
@@ -1899,7 +1899,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Mass email</title>
-			<para>phpBB allows you to send an e-mail or message to every user on the board, which allows it in his <link linkend="ucp_preferences">board preferences</link>. The message can serve as a newsletter, notification about changes on the board etc. You can choose whether to send the e-mail to all users, a specific group or a list of specific users. The e-mail is sent from the administrator's e-mail adress and all recipients are included in a BCC - Blind Carbon Copy.</para>
+			<para>phpBB allows you to send an e-mail or message to every user on the board, which allows it in his <link linkend="ucp_preferences">board preferences</link>. The message can serve as a newsletter, notification about changes on the board etc. You can choose whether to send the e-mail to all users, a specific group or a list of specific users. The e-mail is sent from the administrator's e-mail address and all recipients are included in a BCC - Blind Carbon Copy.</para>
 			<para>On some hosts, sending a mass e-mail can be a problem, since sometimes the hosting company limits the number of e-mails that can be sent out at once. phpBB includes only 50 recipients per e-mail and sends another one for the next batch to prevent this, however, if you still are not able to send a mass e-mail, consult the situation with your hosting provider.</para>
 			<itemizedlist>
 				<title>Composing a mass e-mail</title>
@@ -1967,7 +1967,27 @@
 			</figure>
 		</section>
 		<section id="acp_system_modules">
+		  <sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Module Management</title>
+			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &raquo; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &raquo; Category (headers on the left-hand side) &raquo; Module (individual sections).</para>
+			<para>Very often, MODs that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
+			<para>To create a module category, use the text field next to the <guilabel>Create new module</guilabel> button. Enter the category title, click the button and on the next page ensure that the <guilabel>Module type</guilabel> is <guilabel>Category</guilabel>, the module is <guilabel>enabled</guilabel> and that the <guilabel>Module parent</guilabel> is set correctly. After you create a category, you can browse to it through the list of modules and add a specific module that is saved in a file. Modules are saved in the appropriate directory (acp/, mcp/ or /ucp) contained in the <filename>includes/</filename> directory.</para>
+			<itemizedlist>
+				<title>Adding a module</title>
+				<listitem><para><guilabel>Module language name</guilabel>: This should be set to the language constant that holds the module name in the different languages, which are used on the board. You can also specify a normal title here, if you do not have the module title translated.</para></listitem>
+				<listitem><para><guilabel>Module type</guilabel>: You can add a category or a module. As stated above, categories hold another level of categories or modules, they are used to organize the control panels.</para></listitem>
+				<listitem><para><guilabel>Parent</guilabel>: This setting defines under which category the module or category will be displayed.</para></listitem>
+				<listitem><para><guilabel>Module enabled</guilabel>: If a module is disabled, it will not be accessible at all, you will have to enable it to use it.</para></listitem>
+				<listitem><para><guilabel>Module displayed</guilabel>: If the module is enabled, but not displayed, you will be able to access it with a direct URL but it will not show in the menus. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+				<listitem><para><guilabel>Choose module</guilabel>: Individual module files contain the various control panels. Similar modules are grouped into one file and are called by specifying a mode. Here you select the file in which the specific module you want is located. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+				<listitem><para><guilabel>Choose module mode</guilabel>: Here you set the what mode should be used in the module file selected above. The final contents of the module are based on this setting. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+			</itemizedlist>
 		</section>
 	</section>
 </chapter>
