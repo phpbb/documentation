@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Administratorguide</title>
 	<abstract>
-		<para>Kapitlet beskriver phpBB 3.0 administrator mulighederne.</para>
+		<para>Kapitlet beskriver administrators muligheder på phpBB 3.0.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -1813,7 +1813,7 @@
 			<para>phpBB gemmer alle boardets data i en database, inklusive brugere, indlæg, emner etc. Det er en god beskyttelsesforanstaltning af gemme backups af databasen, hvis uheldet skulle være ude og databasen mistes eller beskadiges. Det er muligt at gendanne boardets database til en samme tilstand eller udgave da backup blev foretaget. Databaseværktøjerne kan også bruges hvis boardet skal flyttes til en ny vært - backup'en tages på den øjeblikkelige server og gendannes udfra backup'en på den nye server.</para>
 			<itemizedlist>
 				<title>Databasebackup</title>
-				<listitem><para><guilabel>Backuptype</guilabel>: Du kan tage backup af hele databasen,  <guilabel>Struktur alene</guilabel> eller <guilabel>Data alene</guilabel>. Ved valg af struktur alene dannes kun backup af det hierarki hvori data lagres, og vælges backup af data alene forudsætter det at hierarkiet er på plads når gendannelse foretages.</para></listitem>
+				<listitem><para><guilabel>Backuptype</guilabel>: Du kan tage backup af hele databasen, <guilabel>Struktur alene</guilabel> eller <guilabel>Data alene</guilabel>. Ved valg af struktur alene dannes kun backup af det hierarki hvori data lagres, og vælges backup af data alene forudsætter det at hierarkiet er på plads når gendannelse foretages.</para></listitem>
 				<listitem><para><guilabel>Filtype</guilabel>: Afhængig af din serverkonfiguration, kan backupfilen gemmes i forskellige formater. Vælges <guilabel>Text</guilabel>, gemmes backup'en i almindelig tekstformat, mens valg af komprimerede formater mindsker backupfilens størrelse.</para></listitem>
 				<listitem><para><guilabel>Handling</guilabel>: Der er tre valgmuligheder: Du kan både <guilabel>Gem og download</guilabel>  filen, som gemmer den lokalt i store-mappen og downloader den til din PC, eller du kan vælge kun at <guilabel>download</guilabel>e eller kun at <guilabel>Gem fil lokalt</guilabel>.</para></listitem>
 				<listitem>
@@ -1825,7 +1825,7 @@
 			</itemizedlist>
 			<itemizedlist>
 				<title>Databasegendannelse</title>
-				<listitem><para>Vælg en fil: Her vises de backupfiler som er gemt i store-mappen. Vælg den du ønsker at gendanne fra og klik på <guilabel>Start gendannelse</guilabel>. Gendannelsen kan tage nogen tid og vil overskrive boardets eksisterende data.</para></listitem>
+				<listitem><para>Vælg en fil: Her vises de backupfiler der er gemt i store-mappen. Vælg den du ønsker at gendanne fra og klik på <guilabel>Start gendannelse</guilabel>. Gendannelsen kan tage nogen tid og vil overskrive boardets eksisterende data.</para></listitem>
 			</itemizedlist>
 		</section>
 		<section id="acp_maintenance_search">
@@ -1842,7 +1842,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>System</title>
-		<para><!-- TODO: Stuff about system configuration --></para>
+		<para>Nøgleindstillinger som påvirker hele boardet og spiller en vital rolle i konfigureringen og afviklingen af phpBB er adresseret i fanebladet &quot;System&quot;. De fleste indstillinger kræver administrators opmærksomhed og kan være vanskelige at at konfigurere. Heldigvis er det sansynligvis indstillinger du sjældent behøver at ændre på. Dette inkluderer at holde din installation opdateret, administrere boardets installerede sprog og ændre i kontrolpanelernes struktur.</para>
 		<section id="acp_system_updates">
 					<sectioninfo> 
 						<authorgroup>
@@ -1874,93 +1874,113 @@
 				<title>Tilføj bot</title>
 				<listitem><para><guilabel>Botnavn</guilabel>: Bottens brugernavn på boardet. Navnet vises på botlisten i <acronym>ACP</acronym> og i Hvem er online når boardet har besøg af denne.</para></listitem>
 				<listitem><para><guilabel>Bottens typografi</guilabel>: Her vælges den typografi botten præsenteres for.</para></listitem>
-				<listitem><para><guilabel>Bottens sprog</guilabel>: You can do the same with the language. The bot will use the language selected here.</para></listitem>
-				<listitem><para><guilabel>Bot active</guilabel>: The bot session will be created only if a bot is active, if not, the data for a bot set in this form will not be used anywhere.</para></listitem>
-				<listitem><para><guilabel>Agent match</guilabel>: You can match a bot by either its user-agent or its IP. You can specify a part of the user-agent to be looked for. For example, the Google search indexer has "Googlebot" in its user-agent, so you would enter it here to identify when Google crawls your board.</para></listitem>
-				<listitem><para><guilabel>Bot IP address</guilabel>: This field is also used to identify the bot. If a bot cannot be recognized by the user-agent, you can specify what <glossterm>IP address</glossterm> should be used to identify it. Partial matches are allowed, that means you can include only the first two or three octets of the IP if the rest dynamically changes. You can also enter multiple IPs separated by a comma.</para></listitem>
+				<listitem><para><guilabel>Bottens sprog</guilabel>: Her vælges det sprog botten præsenteres for.</para></listitem>
+				<listitem><para><guilabel>Botten sætte aktiv</guilabel>: Bottens session oprettes kun hvis botten er aktiv. Angives botten som ikke aktiv anvendes botdata angivet her ikke.</para></listitem>
+				<listitem><para><guilabel>Agentmatch</guilabel>: En bot kan matches enten på browseragent eller IP-adresse. Du kan nøjes med at angive en del af den browseragent der skal matches. For eksempel har alle Google's søgeagenter inkluderet &quot;Googlebot&quot; i browseragenten, så det er nok at angive det her for at identificere besøg af Google.</para></listitem>
+				<listitem><para><guilabel>Bottens IP-adresse</guilabel>: Dette felt anvendes også til at identificere botten. Kan en bot ikke genkendes på en browseragent, kan her specificeres hvilken <glossterm>IP-adresse</glossterm> botten kan identificeres på. Delvise matches kan anvendes, du kan nøjes med at angive de to eller tre oktetter af IP-adressen, hvis resten skifter dynamisk. Du kan også angive flere adresser adskilt af et komma.</para></listitem>
 			</itemizedlist>
 			<note>
-				<para>If you enter both a user-agent and an IP address, both have to match to identify the bot.</para>
+				<para>Angives både browseragent og IP-adresse for en bot, skal begge parametre opfyldes for at identificere botten.</para>
 			</note>
 		</section>
 		<section id="acp_system_mail">
 			<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>ameeck</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 			</sectioninfo>
-			<title>Mass email</title>
-			<para>phpBB allows you to send an e-mail or message to every user on the board, which allows it in his <link linkend="ucp_preferences">board preferences</link>. The message can serve as a newsletter, notification about changes on the board etc. You can choose whether to send the e-mail to all users, a specific group or a list of specific users. The e-mail is sent from the administrator's e-mail adress and all recipients are included in a BCC - Blind Carbon Copy.</para>
-			<para>On some hosts, sending a mass e-mail can be a problem, since sometimes the hosting company limits the number of e-mails that can be sent out at once. phpBB includes only 50 recipients per e-mail and sends another one for the next batch to prevent this, however, if you still are not able to send a mass e-mail, consult the situation with your hosting provider.</para>
+			<title>Masse-email</title>
+			<para>phpBB giver mulighed for at sende emails til alle brugere som har valgt at modtage den type emails i <link linkend="ucp_preferences">boardindstillinger</link>. Denne meddelelsesform kan anvendes som nyhedsbred, advisering om ændringer på boardet etc. Du kan vælge at sende emailen til alle bruger, en udvalgt brugergruppe eller en liste af specifikke brugere. Emailen afsendes med administrator som afsender og alle modtagere er inkluderet som BCC - Blind Carbon Copy. Modtagere kan altså ikke se andres emailadresser og hvem der i øvrigt har modtaget emailen.</para>
+			<para>Det kan være et problem at afsende masse-emails, da nogle hostingudbydere defineret grænser for hvor mange emails der kan afsendes ad gangen. For at imødegå dette afsendes emailen som standard til 50 brugere ad gangen, er der 1.000 brugere som skal modtage emailen, afsendes den altså 20 gange. Giver afsendelsen alligevel problemer bør du konsultere din hostingudbyder.</para>
 			<itemizedlist>
-				<title>Composing a mass e-mail</title>
-				<listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
-				<listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</para></listitem>
-				<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
-				<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. <glossterm>BBCode</glossterm> or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
-				<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
-				<listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
+				<title>Skriv email</title>
+				<listitem><para><guilabel>Send ti gruppe</guilabel>: I dropdownmenuen vælges den gruppe du ønsker at sende emailen til. Gruppen tilmeldte brugere omfatter samtlige boardets brugere.</para></listitem>
+				<listitem><para><guilabel>Send til brugere</guilabel>: Emailen kan også fremsendes til en liste af specifikke brugere. Angivelse af brugernavne i dette felt sætter eventuel valg af brugergruppe ovenfor ud af kraft. Hvert brugernavn anføres på en linie for sig.</para></listitem>
+				<listitem><para><guilabel>Emne</guilabel>: Emailens emne eller overskrift, som også angives ved afsendelse af helt almindelig emails.</para></listitem>
+				<listitem><para><guilabel>Emailens tekst</guilabel>: I dette felt skrives selv emailens tekst, der kan kun anvendes ren tekst. Anvendelse af <glossterm>BBkode</glossterm> og HTML vises uden formatering i teksten når brugere modtager emailen.</para></listitem>
+				<listitem><para><guilabel>Prioritet for email</guilabel>: Emailen fremsendes med denne prioritet i headeren.</para></listitem>
+				<listitem><para><guilabel>Send straks</guilabel>: Du kan vælge om emailen skal afsendes straks, eller at lade cachesystemet afsende den gradvis.</para></listitem>
 				</itemizedlist>
 				<note>
-					<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
+					<para>Afsending af emails til alle boardets brugere eller en meget stor brugergruppe kan medføre lang ekspeditionstid. Afvent at scriptet bekræfter at emailen er afsendt.</para>
 				</note>
 		</section>
 		<section id="acp_system_language">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>ameeck</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Language Packs</title>
-			<para>In phpBB, you can upload several language packs for your users to use. Every text string displayed by the system should be translated after you upload a new language pack. Using a different language pack does not change the contents of posts, as translating them is not possible due to the various content they can have and the limits of computer translation.</para>
-			<para>Language packs can be downloaded from the Downloads page on phpBB.com. To add a language pack, unzip the downloaded file and upload the contents to the <filename>language/</filename> directory. The files should be contained in a directory named with the language's ISO code, the default British English pack is in the <filename>en/</filename> directory for example. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
+			<title>Sprogpakker</title>
+			<para>I phpBB kan installeres flere sprog som dine brugere kan vælge imellem. Enhver af boardets tekststrenge skulle blive oversat når en ny pakke installeres og vælges som sprog af brugere. Valg af et andet standardsprog ændrer ikke sprogbrug i boardets indsendte indlæg.</para>
+			<para>Sprogpakker kan hentes på phpBB.com's downloadside. For at tilføje installere en sprogpakke udpakkes dens indhold, det fulde indhold uploades til mappen <filename>language/</filename>. Alle sprogpakkens filer skulle være indholdt i en mappe navngivet med sprogets ISO-kode, for eksempel er standardsproget British English indeholdt i mappen <filename>en/</filename>. Når filerne er uploadet, vil sprogpakken være synlig i listen <guilabel>Ikke installerede sprogpakker</guilabel>. Klik på <guilabel>Installér</guilabel> for at tilføje den til boardet og herved gøre sproget tilgængelig for brugere.</para>
 			<note>
-					<para>To make a language pack the default language of the board, you need to change the <link linkend="acp_general_config">Board Configuration</link>.</para>
+					<para>I <link linkend="acp_general_config">Board grundlæggende</link> er det muligt at vælge en sprogpakke som boardets standardsprog.</para>
 			</note>
-			<para>If you are not comfortable with editing PHP files manually and you would like to change some text phpBB is displaying, you can use the in-built language pack editor which is accessible once you click the language pack title in the <guilabel>Installed language packs</guilabel> list. You can change the language pack details and the contents of individual language files on this page. In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
-			<para>If you choose to edit a file using the ACP you have two options on how to update the translation on the board. First you can choose to <guilabel>Submit</guilabel> or <guilabel>Submit and download</guilabel> the file, which will store the file you are editing in the <filename>store/</filename> directory and the file will be offered for download if you choose the second button. If you choose to save the file in the store directory, you will have to manually move it to the language pack directory. The second possibility, which is right under these two buttons is to move the file to the language pack directory by using FTP. You will be prompted for FTP login credentials and if possible the file be saved and updated immediately by the script.</para>
+			<para>Hvis du ikke er fortrolig med at redigere i PHP-filer i en teksteditor og alligevel gerne vil ændre tekststrenge vist på boardet, kan den indbyggede funktion til at rette sproglinier med tages i anvendelse. I oversigten <guilabel>Installerede sprogpakker</guilabel> klikkes på sprogpakkens navn i kollonnen til venstre. Herefter kan sprogpakkeinformationer og indholdet i de inkluderede sprogpakkefiler redigeres. Er der flere sprogpakker installeret og du vælger en anden end standardpakken, vises øverst en oversigt over ikke oversatte sprognøgler hvis pakkerne ikke synkroniseret. Det er nyttigt når der installeres MODs på et sprog og du ikke kan finde de sproglinier der mangler for et andet sprog.</para>
+			<para>Vælger du at redigere en fil med det indbyggede værktøj, er der to metoder hvormed oversættelsen kan opdateres på boardet. Du kan vælge at <guilabel>Udfør</guilabel>e eller <guilabel>Indsend og download</guilabel>e filen, som lagre den ændrede fil i mappen <filename>store/</filename> og bliver desuden tilbudt som download hvis du vælger sidstnævnte. Herefter skal du manuelt med FTP flytte filen fra store-mappen til sprogpakken, og herved overskrive den tidligere udgave af filen. Den anden mulighed, som findes umiddelbart under de to førnævnte knapper, giver mulighed for at flytte filen til sprogpakken direkte med FTP. Du vil her blive afkrævet FTP-login informationer, og filen kan gemmes og opdateres direkte af scriptet.</para>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>Graham</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>PHP Information</title>
-			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
-			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
+			<title>PHP-indstillinger</title>
+			<para>Denne side informerer om version og indstillinger for PHP (funktionen phpinfo()) installeret på denne server. PHP-indstillinger omfatter versionsinformation, information om indlæste moduler, tilgængelige variabler og standardindstillinger, som er egnet til at diagnosticere problemer. Disse informationer kan være sikkerhedsfølsomme og det anbefales at der kun gives adgang til disse for andre brugere som har behov herfor. Videregiv aldrig informationer om PHP-indstillinger medmindre det er absolut nødvendigt.</para>
+			<para>Bemærk at hostingudbyderen kan have begrænset adgangen til disse informationer af sikkerhedshensyn.</para>
 		</section>
 		<section id="acp_system_reasons">
 			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Administrér afvisningsbegrundelser</title>
+			<para>phpBB giver mulighed for at sætte nye indlæg i kø indtil de godkendes eller afvises af administrator eller redaktør. Det bestemmes af tilladelseindstillingerne eller i boardkonfiguration under <guilabel>Indlæg</guilabel>, hvor det kan indstilles at brugere der ikke har skrevet i vist antal indlæg får indlæg sat i kø til godkendelse. Vælger en redaktør at afvise et indlæg, er der mulighed for at begrunde afvisningen. De prædefinerede begrundelser vises her, disse begrundelser vil også kunne anvendes af brugere ved rapportering af indlæg.</para>
+			<para>For more information about queue moderation, see <xref linkend="mcp_queue"/>.</para>
+			<figure id="img_denial_reasons">
+				<title>Oversigten over rapport/afvisnings-begrundelser</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/denial_reasons.png"/>
+					</imageobject>
+					<caption>
+						<para>På denne side kan begrundelser for afvisning og rapportering af indlæg administreres. phpBB indeholder som standard fire begrundelser. The fifth one is added manually and is not localised, this can be achieved by specifying an identifier in the <guilabel>Reason title</guilabel> containing only letters and underscores and then adding localised titles and reasons in the language file called <filename>mcp.php</filename> located in the <filename>language/</filename> directory. The predefined reasons are at the bottom of the file, you need to add your reason in the same way as the others are saved. When you localise a reason, it is shown in the correct translation for each language pack used on the board.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+		</section>
+		<section id="acp_system_modules">
+		  <sectioninfo>
 				<authorgroup>
 					<author>
 						<othername>ameeck</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Manage reasons for reporting and denying posts</title>
-			<para>phpBB has a feature that allows you to put new posts in queue, where the post waits until it is approved or denied by a moderator, this can be set with permissions or in the <guilabel>Post settings</guilabel> for users which do not have enough posts. If a moderator chooses to deny a post in the queue, he has an option to specify a reason for the denial. The predefined options from which he can choose are specified here. These reasons are also offered to users reporting a post on the board.</para>
-			<para>For more information about queue moderation, see <xref linkend="mcp_queue"/>.</para>
-			<figure id="img_denial_reasons">
-				<title>Report/denial reasons page</title>
-				<mediaobject>
-					<imageobject>
-						<imagedata format="PNG" fileref="../images/admin_guide/denial_reasons.png"/>
-					</imageobject>
-					<caption>
-						<para>This is the page from which you can manage reasons shown when denying or reporting a post. Four default reasons present in a standard phpBB installation are shown. The fifth one is added manually and is not localised, this can be achieved by specifying an identifier in the <guilabel>Reason title</guilabel> containing only letters and underscores and then adding localised titles and reasons in the language file called <filename>mcp.php</filename> located in the <filename>language/</filename> directory. The predefined reasons are at the bottom of the file, you need to add your reason in the same way as the others are saved. When you localise a reason, it is shown in the correct translation for each language pack used on the board.</para>
-					</caption>
-				</mediaobject>
-			</figure>
-		</section>
-		<section id="acp_system_modules">
 			<title>Module Management</title>
+			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &raquo; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &raquo; Category (headers on the left-hand side) &raquo; Module (individual sections).</para>
+			<para>Very often, MODs that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
+			<para>To create a module category, use the text field next to the <guilabel>Create new module</guilabel> button. Enter the category title, click the button and on the next page ensure that the <guilabel>Module type</guilabel> is <guilabel>Category</guilabel>, the module is <guilabel>enabled</guilabel> and that the <guilabel>Module parent</guilabel> is set correctly. After you create a category, you can browse to it through the list of modules and add a specific module that is saved in a file. Modules are saved in the appropriate directory (acp/, mcp/ or /ucp) contained in the <filename>includes/</filename> directory.</para>
+			<itemizedlist>
+				<title>Adding a module</title>
+				<listitem><para><guilabel>Module language name</guilabel>: This should be set to the language constant that holds the module name in the different languages, which are used on the board. You can also specify a normal title here, if you do not have the module title translated.</para></listitem>
+				<listitem><para><guilabel>Module type</guilabel>: You can add a category or a module. As stated above, categories hold another level of categories or modules, they are used to organize the control panels.</para></listitem>
+				<listitem><para><guilabel>Parent</guilabel>: This setting defines under which category the module or category will be displayed.</para></listitem>
+				<listitem><para><guilabel>Module enabled</guilabel>: If a module is disabled, it will not be accessible at all, you will have to enable it to use it.</para></listitem>
+				<listitem><para><guilabel>Module displayed</guilabel>: If the module is enabled, but not displayed, you will be able to access it with a direct URL but it will not show in the menus. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+				<listitem><para><guilabel>Choose module</guilabel>: Individual module files contain the various control panels. Similar modules are grouped into one file and are called by specifying a mode. Here you select the file in which the specific module you want is located. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+				<listitem><para><guilabel>Choose module mode</guilabel>: Here you set the what mode should be used in the module file selected above. The final contents of the module are based on this setting. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+			</itemizedlist>
 		</section>
 	</section>
 </chapter>
