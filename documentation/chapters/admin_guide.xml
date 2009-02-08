@@ -95,7 +95,7 @@
 					<listitem><para>The very first board setting you can edit is perhaps the most important setting of them all: the name of your board. Your users identify your board with this name. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style; it will be the prefix to the window title of your browser.</para></listitem>
 					<listitem><para>The <guilabel>Site Description</guilabel> is the slogan or tagline of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para></listitem>
 					<listitem><para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. To temporarily disable your board, select<guilabel>Yes</guilabel>. This will keep any members of your forum who are not administrators or moderators from accessing your board. They will either see a default message instead of the forum, or a message that you create. You can add your own custom message that will be displayed when your board is disabled in the text box below the <guilabel>Disable board</guilabel> radio buttons. Administrators and moderators will still be able to browse forums and use their specific control panels when the board is disabled.</para></listitem>
-					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_system">section on Language Pack configuration</link>.</para></listitem>
+					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_system_language">section on Language Pack configuration</link>.</para></listitem>
 					<listitem><para>You can also configure your board's default date format. phpBB3 has a few basic date formats that you can set your board to use; if these are not sufficient and you would like to customise your board's date format, choose <guimenuitem>Custom</guimenuitem> from the <guilabel>Date format</guilabel> selection menu. Then, in the text box besides it, type in the format you would like to use. This is the same as the <ulink url="http://www.php.net/date">PHP date() function</ulink>.</para></listitem>
 					<listitem><para>Along with setting your board's default date format, you can also set your board's preferred timezone. The timezones available in the <guilabel>System timezone</guilabel> selection menu are all based on relative <acronym>UTC</acronym> (for most intents and purposes, it is <acronym>GMT</acronym>, or Greenwich Mean Time) times. You may also choose whether or not your board utilises Daylight Savings Time by selecting the appropriate radio button next to the <guilabel>Enable Daylight Savings time</guilabel> option.</para></listitem>
 					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
@@ -1737,6 +1737,15 @@
 			</variablelist>
 		</para>
 		
+		<section id="acp_styles_templates">
+		  <title>Templates</title>
+		</section>
+		<section id="acp_styles_themes">
+		  <title>Themes</title>
+		</section>
+		<section id="acp_styles_imagesets">
+		  <title>Imagesets</title>
+		</section>
 		<!-- TODO: More stuff about styles -->
 	</section>
 
@@ -1746,9 +1755,11 @@
 				<author>
 					<othername>dhn</othername>
 				</author>
-				
 				<author>
 					<othername>MennoniteHobbit</othername>
+				</author>
+				<author>
+					<othername>ameeck</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -1831,9 +1842,52 @@
 				<title>Database restore</title>
 				<listitem><para>File select: You will be offered a list of database backups which are saved in the store folder. Select the one you want to restore and click <guilabel>Start restore</guilabel>. The restoration might take some time and it will overwrite any existing data on the board.</para></listitem>
 			</itemizedlist>
+			<figure id="img_database_restore">
+				<title>List of backups available</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/database_restore.png"/>
+					</imageobject>
+					<caption>
+						<para>In this list, located on the <guilabel>Restore</guilabel> page, you can find a list of backups made through the phpBB <acronym>ACP</acronym> which can be selected and restored.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 		</section>
 		<section id="acp_maintenance_search">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Search Indexing</title>
+			<para>phpBB 3.0 provides you with a powerful search system which can be used to search throughout your board. The main controls for the search features are located in the <link linkend="acp_server_search">Search settings</link> section. Here you can manage the <guilabel>search index</guilabel>, which is used to hold the data necessary for quick and precise search results, it's something like an giant table of contents. By default, two search backends are available - fulltext native, which is included in the phpBB code and works on all <glossterm>DBMS</glossterm>s, and fulltext mysql, which uses the built-in MySQL fulltext searching feature. The first one offers more flexible configuration, while the second one doesn't take too much space in the database and the index is created much faster.</para>
+			<note>
+			  <para>Creating a search index can take a very long time, a new window will pop up and refresh itself while creating the necessary search table entries. Please be patient, the process can take several hours on large boards.</para>
+			</note>
+			<para>The fulltext native backend works like this: it uses two tables, one containing the words, which are used on the board and which have a numeric ID assigned and a second table, which links post IDs to word IDs. This system is very fast when you need to search a specific word(s) in the whole database, the following statistics, which are offered on the Search Index page, describe how many words and relations the system holds:</para>
+			<variablelist>
+				<varlistentry>
+					<term><guilabel>Total number of indexed words</guilabel></term>
+					<listitem>
+						<para>This setting is quite self-explanatory, it is the number of different words that have ever been posted to your board. Only words that match the criteria for indexing, set in the <link linkend="acp_server_search">Search settings</link>, are considered.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term><guilabel>Total number of word to post relations indexed</guilabel></term>
+					<listitem>
+						<para>As described above, the second search table holds a list of relations between the posts and words. For example if someone would post "airplane" in two different posts, the system would add the word once and it would add to relations, one to each post.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term><guilabel>Total number of indexed posts</guilabel> (fulltext mysql)</term>
+					<listitem>
+						<para>This statistic is shown for the mysql fulltext backend, where the search is done by a internal mechanism of the Database system. It tells you how many posts on the board were indexed.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
 		</section>
 	</section>
 
@@ -1911,7 +1965,7 @@
 				<listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
 			</itemizedlist>
 			<note>
-					<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
+				<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
 			</note>
 		</section>
 		<section id="acp_system_language">
@@ -1967,7 +2021,7 @@
 			</figure>
 		</section>
 		<section id="acp_system_modules">
-		  <sectioninfo>
+		 	<sectioninfo>
 				<authorgroup>
 					<author>
 						<othername>ameeck</othername>
