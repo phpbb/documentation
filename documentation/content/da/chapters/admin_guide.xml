@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Administratorguide</title>
 	<abstract>
-		<para>Kapitlet beskriver administrators muligheder på phpBB 3.0.</para>
+		<para>Kapitlet beskriver administrators muligheder i phpBB 3.0.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -95,7 +95,7 @@
 					<listitem><para>Den første indstilling du kan ændre er måske den vigtigste af dem alle, nemlig navnet på boardet. Brugerne identificerer dit board med dette navn. Skriv boardets navn i tekstfeltet <guilabel>Boardnavn</guilabel>, og det vises øverst i boardets hovede. Samtidig vises navnet som præfiks i de besøgendes browsertitel.</para></listitem>
 					<listitem><para><guilabel>Boardbeskrivelse</guilabel> er dit boards slogan eller formål, og vises under <guilabel>Boardnavn</guilabel>et i boardets hoved.</para></listitem>
 					<listitem><para>Har du i forbindelse med vedligeholdelse, for eksempel ved opdateringer, brug for at lukke boardet, kan det gøres ved at bruge switchen <guilabel>Slå board fra</guilabel> . Vælg <guilabel>Ja</guilabel> for midlertidigt at lukke boardet. Det forhindrer alle, undtagen administratorer og redaktører, i at får adgang til boardet. Når boardet er slået fra, møder man nu enten en standardmeddelelse, eller én du selv komponerer. Du tilføjer din egen meddelelse i teksfeltet umiddelbart under radioknapperne ja/nej i <guilabel>Slå board fra</guilabel>. Administratorer og redaktører vil stadig have adgang til deres kontrolpaneler mens boardet er slået fra.</para></listitem>
-					<listitem><para>Du skal også vælge boardets <guilabel>Standardsprog</guilabel>. Det er det sprog gæster vil se når de besøger boardet. Du kan tillade at tilmeldte brugere kan vælge andre sprog. Som standard er kun <guilabel>British English</guilabel> installeret, men du kan <ulink url="http://www.phpbb.com/languages">downloade flere sprog på phpBB websitet</ulink> og installere disse på boardet. Læs mere om sprog i <link linkend="acp_system">sektionen for konfiguration af sprogpakker</link>.</para></listitem>
+					<listitem><para>Du skal også vælge boardets <guilabel>Standardsprog</guilabel>. Det er det sprog gæster vil se når de besøger boardet. Du kan tillade at tilmeldte brugere kan vælge andre sprog. Som standard er kun <guilabel>British English</guilabel> installeret, men du kan <ulink url="http://www.phpbb.com/languages">downloade flere sprog på phpBB websitet</ulink> og installere disse på boardet. Læs mere om sprog i <link linkend="acp_system_language">sektionen for konfiguration af sprogpakker</link>.</para></listitem>
 					<listitem><para>Du kan indstille dit boards standarddatoformat. phpBB3 giver mulighed for at vælge mellem nogle meget almindelig måder at vise tid og dato på. Er ingen af disse tilfredsstillende, kan du tilpasse datoformatet ved at vælge <guimenuitem>Brugertilpasset</guimenuitem> i dropdownmenuen for <guilabel>Datoformat</guilabel>. Herefter skriver du det ønskede datoformat i teksfeltet ved siden af. Syntaks for datoformat er det samme som <ulink url="http://www.php.net/date">PHP's date() funktion</ulink>.</para></listitem>
 					<listitem><para>Sammen med indstilling af hvordan tiden skal vises, kan du også vælge boardets tidszone. De tilgængelige tidszoner kan vælges i dropdownmenuen <guilabel>Tidszone for board</guilabel>, som alle er relative i forhold til <acronym>UTC</acronym> (som næsten er identisk med det tidligere anvendte <acronym>GMT</acronym> eller Greenwich Mean Time) tider. Desuden kan du vælge om boardet skal køre med sommertid ved at vælge ja eller net ved punktet <guilabel>Slå sommertid/DST til</guilabel>.</para></listitem>
 					<listitem><para>Den typografi der vises for gæster og som standardvalg for brugere vælges i <guilabel>Standardtypografi</guilabel>. Som standard er phpBB installeret med typografien prosilver med mulighed for også at installere subsilver2. Du kan give brugere mulighed for selv kan vælge mellem de installerede typografier ved at vælge <guilabel>Nej</guilabel> til <guilabel>Tilsidesæt brugeres valg af typografi</guilabel>. Læs i <link linkend="acp_styles">typografisektion</link> hvordan nye typografier tilføjes og hvor de kan findes.</para></listitem>
@@ -139,7 +139,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -176,10 +176,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>			
@@ -190,7 +187,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -216,7 +213,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -255,7 +252,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -283,11 +280,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
-					</author>
-					
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>			
@@ -331,12 +324,8 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
-						</author>
-						
-						<author>
-							<othername>MennoniteHobbit</othername>
-						</author>
+							<othername>jask</othername>
+						</author>		
 					</authorgroup>
 				</sectioninfo>			
 				<title>Gzip, stier &amp; URL</title>
@@ -376,7 +365,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -488,7 +477,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -630,7 +619,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -697,10 +686,6 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
-					</author>
-					
-					<author>
 						<othername>jask</othername>
 					</author>
 				</authorgroup>
@@ -741,7 +726,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -781,7 +766,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -1148,7 +1133,7 @@
 				</sectioninfo>
 				<title>Brugerindstillinger</title>
 				
-				<para>Brugere har mange indstillinger som de kan anvende for deres konto. Som administrator kan du enhver af disse indstilling. Brugerindstillingerne er grupperet i tre hovedkategorier: <guilabel>Globale indstillinger</guilabel>, <guilabel>Indlægsindstillinger</guilabel> og <guilabel>Indstillinger for visning</guilabel>.</para>
+				<para>Brugere har mange indstillinger som de kan anvende for deres konto. Som administrator kan du ændre enhver af disse indstilling. Brugerindstillingerne er grupperet i tre hovedkategorier: <guilabel>Globale indstillinger</guilabel>, <guilabel>Indlægsindstillinger</guilabel> og <guilabel>Indstillinger for visning</guilabel>.</para>
 			</section>
 			
 			<section id="acp_users_manage_avatar">
@@ -1739,7 +1724,16 @@
 				</varlistentry>
 			</variablelist>
 		</para>
-		
+
+		<section id="acp_styles_templates">
+		  <title>Skabeloner</title>
+		</section>
+		<section id="acp_styles_themes">
+		  <title>Temaer</title>
+		</section>
+		<section id="acp_styles_imagesets">
+		  <title>Billedpakker</title>
+		</section>		
 		<!-- TODO: More stuff about styles -->
 	</section>
 
@@ -1827,12 +1821,55 @@
 				<title>Databasegendannelse</title>
 				<listitem><para>Vælg en fil: Her vises de backupfiler der er gemt i store-mappen. Vælg den du ønsker at gendanne fra og klik på <guilabel>Start gendannelse</guilabel>. Gendannelsen kan tage nogen tid og vil overskrive boardets eksisterende data.</para></listitem>
 			</itemizedlist>
+			<figure id="img_database_restore">
+				<title>Tilgængelige backupfiler</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/database_restore.png"/>
+					</imageobject>
+					<caption>
+						<para>Under punktet <guilabel>Gendan</guilabel> findes denne oversigt over backupfiler dannet i <acronym>ACP</acronym>, og som kan vælges til gendannelse af databasen.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 		</section>
 		<section id="acp_maintenance_search">
+		<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Søgeindeks</title>
+			<para>phpBB 3.0 stiller et kraftigt søgesystem til rådighed, systemet bruges til at søge i alle indlæg på boardet. Indstillinger for søgemulighederne findes i <link linkend="acp_server_search">Søgning</link>. På denne side kan <guilabel>søgeindeks</guilabel>et administreres. Indekset indeholder de nødvendige data for hurtige og præcise søgeresultater, og kan sammenlignes med en meget stor tabel med indhold. Som standard kan vælges mellem to søgemoterer - fulltext native, som er phpBB's indbyggede og som virker på alle <glossterm>DBMS</glossterm>, og fulltext mysql som gør brug af MySQL's indbyggede fuldtekstsøgning. Den første giver en mere fleksibel konfiguration, mens den anden ikke optager så meget plads og dannelse af indeks med denne motor er meget hurtigere.</para>
+			<note>
+			  <para>Dannelse af søgeindeks kan tage meget lang tid på store boards. Under dannelsen vises status i et popup-vindue. Vær tålmodig, processen kan som nævnt tage lang tid.</para>
+			</note>
+			<para>Fulltext native søgemotoren gør brug af to tabeller. Den ene indeholder de ord der benyttes på boardet, tilknyttet en numerisk ID. Den anden tabel linker indlægID til ordID. Metoden er meget hurtig når der søges efter specifikke ord i hele databasen. De følgende statistikker som er tilgængelige på Søgeindekssiden, viser hvor mange ord og relationer indekset indeholder:</para>
+			<variablelist>
+				<varlistentry>
+					<term><guilabel>Antal indekserede ord i alt</guilabel></term>
+					<listitem>
+						<para>Det antal forskellige ord der totalt er skrevet på boardet. Kun ord som falder inden for kriterierne for indeksering regnes med. Disse kriterier er specificeret i <link linkend="acp_server_search">Søgning</link>.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term><guilabel>Antal relationer mellem ord og indlæg</guilabel></term>
+					<listitem>
+						<para>Som beskrevet ovenfor indeholder den anden tabel en liste af relationer mellem ord og indlæg. Hvis for eksempel ordet "flyvemaskine" skrives i to forskellige indlæg, tilføjes ordet én gang og to relationer, én til hver indlæg.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term><guilabel>Det totale antal indekserede indlæg</guilabel> (Fulltext mysql)</term>
+					<listitem>
+						<para>Denne statistik vises for mysql fulltext søgemotoren, hvor søgning foretages af databasesystemets interne mekanisme. Den fortæller hvor mange af boardets indlæg der er indekseret.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
 		</section>
 	</section>
-
+	
 	<section id="acp_system">
 		<sectioninfo>
 			<authorgroup>
@@ -1902,10 +1939,10 @@
 				<listitem><para><guilabel>Emailens tekst</guilabel>: I dette felt skrives selv emailens tekst, der kan kun anvendes ren tekst. Anvendelse af <glossterm>BBkode</glossterm> og HTML vises uden formatering i teksten når brugere modtager emailen.</para></listitem>
 				<listitem><para><guilabel>Prioritet for email</guilabel>: Emailen fremsendes med denne prioritet i headeren.</para></listitem>
 				<listitem><para><guilabel>Send straks</guilabel>: Du kan vælge om emailen skal afsendes straks, eller at lade cachesystemet afsende den gradvis.</para></listitem>
-				</itemizedlist>
-				<note>
-					<para>Afsending af emails til alle boardets brugere eller en meget stor brugergruppe kan medføre lang ekspeditionstid. Afvent at scriptet bekræfter at emailen er afsendt.</para>
-				</note>
+			</itemizedlist>
+			<note>
+				<para>Afsending af emails til alle boardets brugere eller en meget stor brugergruppe kan medføre lang ekspeditionstid. Afvent at scriptet bekræfter at emailen er afsendt.</para>
+			</note>
 		</section>
 		<section id="acp_system_language">
 			<sectioninfo>
@@ -1944,42 +1981,42 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Administrér afvisningsbegrundelser</title>
+			<title>Rapport- og afvisningsårsager</title>
 			<para>phpBB giver mulighed for at sætte nye indlæg i kø indtil de godkendes eller afvises af administrator eller redaktør. Det bestemmes af tilladelseindstillingerne eller i boardkonfiguration under <guilabel>Indlæg</guilabel>, hvor det kan indstilles at brugere der ikke har skrevet i vist antal indlæg får indlæg sat i kø til godkendelse. Vælger en redaktør at afvise et indlæg, er der mulighed for at begrunde afvisningen. De prædefinerede begrundelser vises her, disse begrundelser vil også kunne anvendes af brugere ved rapportering af indlæg.</para>
-			<para>For more information about queue moderation, see <xref linkend="mcp_queue"/>.</para>
+			<para>Læs mere om redigering af indlæg i kø her <xref linkend="mcp_queue"/>.</para>
 			<figure id="img_denial_reasons">
-				<title>Oversigten over rapport/afvisnings-begrundelser</title>
+				<title>Oversigten over rapport- og afvisningsårsager</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/denial_reasons.png"/>
 					</imageobject>
 					<caption>
-						<para>På denne side kan begrundelser for afvisning og rapportering af indlæg administreres. phpBB indeholder som standard fire begrundelser. The fifth one is added manually and is not localised, this can be achieved by specifying an identifier in the <guilabel>Reason title</guilabel> containing only letters and underscores and then adding localised titles and reasons in the language file called <filename>mcp.php</filename> located in the <filename>language/</filename> directory. The predefined reasons are at the bottom of the file, you need to add your reason in the same way as the others are saved. When you localise a reason, it is shown in the correct translation for each language pack used on the board.</para>
+						<para>På denne side kan begrundelser for afvisning og rapportering af indlæg administreres. phpBB indeholder fire standardårsager. Den femte og sidste er tilføjet manuelt og er findes kun på dansk, har brugere valgt et andet sprog end dansk, vises denne begrundelse altså kun på dansk. Det er muligt at oversætte denne ved at anvende sprognøglen angivet i feltet <guilabel>Årsagstitel</guilabel> kun indeholdende bogstaver og underscores. For for eksempel at oversætte denne årsåg til engelsk tilføjes titel og begrundelse i filen <filename>mcp.php</filename> placeret i mappen <filename>language/en/</filename>. De fire standardårsagers nøgle og variabler er placeret nederst i denne fil, og din tilføjelsen udføres i samme format. Samme fremgangsmåde anvendes ved oversættelse til andre sprog.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 		</section>
 		<section id="acp_system_modules">
-		  <sectioninfo>
+			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>ameeck</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Module Management</title>
-			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &raquo; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &raquo; Category (headers on the left-hand side) &raquo; Module (individual sections).</para>
-			<para>Very often, MODs that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
-			<para>To create a module category, use the text field next to the <guilabel>Create new module</guilabel> button. Enter the category title, click the button and on the next page ensure that the <guilabel>Module type</guilabel> is <guilabel>Category</guilabel>, the module is <guilabel>enabled</guilabel> and that the <guilabel>Module parent</guilabel> is set correctly. After you create a category, you can browse to it through the list of modules and add a specific module that is saved in a file. Modules are saved in the appropriate directory (acp/, mcp/ or /ucp) contained in the <filename>includes/</filename> directory.</para>
+			<title>Moduladministration</title>
+			<para>Moduler anvendes til at skabe strukturen og indholdet i <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Moduler kan deaktiveres og reorganiseres i en anden struktur. Modulerne i bruger- og redaktørkontrolpanelerne er i 2 niveauer: Faneblad/kategori &raquo; modul, mens moduler i administratorkontrolpanelet er i tre niveauer: Faneblad (faner i toppen) &raquo; kategori (overskrifter i venstre side) &raquo; modul (individuelle moduler).</para>
+			<para>MODs med indstillelige muligheder tilføjer ofte moduler i ACP for at lette ændring af indstillinger.</para>
+			<para>For at oprette en modulkategori bruges tekstfeltet lige før knappen <guilabel>Opret nyt modul</guilabel>. Angiv kategoriens titel og klik på knappen. På næste side sikres at <guilabel>Modultype</guilabel> er <guilabel>Faneblad/kategori</guilabel>, at modulet er <guilabel>aktiveret</guilabel> og at <guilabel>Overmodul</guilabel> er valgt korrekt. Når kategorien er oprettet tilføjes modul fra dropdownmenuen. Modulerne findes i mapperne acp/, mcp/ og /ucp, som er indeholdt i <filename>includes/</filename> mappen.</para>
 			<itemizedlist>
-				<title>Adding a module</title>
-				<listitem><para><guilabel>Module language name</guilabel>: This should be set to the language constant that holds the module name in the different languages, which are used on the board. You can also specify a normal title here, if you do not have the module title translated.</para></listitem>
-				<listitem><para><guilabel>Module type</guilabel>: You can add a category or a module. As stated above, categories hold another level of categories or modules, they are used to organize the control panels.</para></listitem>
-				<listitem><para><guilabel>Parent</guilabel>: This setting defines under which category the module or category will be displayed.</para></listitem>
-				<listitem><para><guilabel>Module enabled</guilabel>: If a module is disabled, it will not be accessible at all, you will have to enable it to use it.</para></listitem>
-				<listitem><para><guilabel>Module displayed</guilabel>: If the module is enabled, but not displayed, you will be able to access it with a direct URL but it will not show in the menus. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
-				<listitem><para><guilabel>Choose module</guilabel>: Individual module files contain the various control panels. Similar modules are grouped into one file and are called by specifying a mode. Here you select the file in which the specific module you want is located. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
-				<listitem><para><guilabel>Choose module mode</guilabel>: Here you set the what mode should be used in the module file selected above. The final contents of the module are based on this setting. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+				<title>Tilføj modul</title>
+				<listitem><para><guilabel>Modulnavn</guilabel>: Den sprognøgle som identificerer modulet i de tilgængelig sprog på boardet. Der kan også angives en normal titel, hvis modulet ikke er tilstede i sprogfilerne.</para></listitem>
+				<listitem><para><guilabel>Modultype</guilabel>: Her vælger du om modulet skal være <guilabel>Faneblad/kategori</guilabel> eller <guilabel>Modul</guilabel>. Som nævnt ovenfor indeholder faneblad/kategori endnu et niveau af kategorier eller moduler, og bruges til at organisere kontrolpanelerne.</para></listitem>
+				<listitem><para><guilabel>Overmodul</guilabel>: Dette valg bestemmer under hvilket faneblad eller kategori modulet vises.</para></listitem>
+				<listitem><para><guilabel>Modul aktiveret</guilabel>: Er modulet ikke aktiveret, kan det ikke tilgås. Det skal aktiveres for at kunne anvendes.</para></listitem>
+				<listitem><para><guilabel>Modul vist</guilabel>: Hvis modulet er aktiveret, men ikke vist, kan det kun tilgås direkte via URL'en. Denne indstilling vises kun hvis modul er valgt i <guilabel>Modultype</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Modulfil</guilabel>: En modulfil indeholder ofte flere forskellige moduler eller sider i kontrolpanelerne. Moduler omhandlende samme indstillingstyper er grupperet eller samlet i en fil. Her vælges den fil, hvori det modul du ønsker at anvende, befinder sig. Nedenfor vælges det element som kalder det rette modul. Denne indstilling vises kun hvis modul er valgt i <guilabel>Modultype</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Modul</guilabel>: Her vælger du det element i ovennævnte modulfil der indeholder modulet og skal anvendes. Det endelige indhold af modulet afhænger af dette valg. Denne indstilling vises kun hvis modul er valgt i <guilabel>Modultype</guilabel>.</para></listitem>
 			</itemizedlist>
 		</section>
 	</section>
