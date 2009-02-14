@@ -128,7 +128,7 @@
 			</sectioninfo>
 			<title>Slet et emne eller indlæg</title>
 			<para>Hvis det er tilladt i <link linkend="admin_control_panel">administratorkontrolpanelets</link> tilladelsesystem kan brugerne slette egne indlæg, enten når et emne læses eller når indlægget redigeres. Emner og indlæg kan kun slettes af brugerne hvis der endnu ikke er svaret på disse.</para>
-			<para>Administratorer og redaktører har samme muligheder, men kun administratorer kan fjerne et indlæg hvis der er efterfølgende indlæg i emnet. Ved at bruge redaktørværktøjerne nederst i emnet kan et indlæg hurtigt fjernes. I <link linkend="moderator_mcp">redaktørkontrolpanelet</link> kan flere indlæg udvælges og slettes.</para>
+			<para>For kunne slette andre brugeres indlæg, skal man have de rette forumbaserede tilladelser - <guilabel>Kan slette indlæg</guilabel>. Ved at bruge redaktørværktøjerne nederst i emnet kan et indlæg hurtigt fjernes. I <link linkend="moderator_mcp">redaktørkontrolpanelet</link> kan flere indlæg udvælges og slettes.</para>
 			<tip>
 				<para>Bemærk venligst at slettede emner og indlæg ikke kan gendannes. Overvej eventuelt at oprette et skjult forum og i stedet flytte emner og indlæg hertil til brug for fremtidig reference.</para>
 			</tip>
@@ -152,16 +152,13 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>camm15h</othername>
-						</author>
-						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
 				<title>Skyggeemner</title>
 				<para>Når et emne flyttes til et andet forum er det muligt at efterlade et skyggeemne i det oprindelige forum. Et skyggeemne er blot et link til emnets nye placering. Du kan selv vælge om der skal efterlades et skyggeemne i checkboksen som første valg når du har valgt <guilabel>Flyt emne</guilabel> i redaktørværktøjerne.</para>
-				<para>For at slette et skyggeemne manøvres til det forum det er placeret i, og herefter vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link> næsten øverst. I kontrolpanelet finder du et linket &quot;Slet skyggeemne&quot; lige over emnet.</para>
+				<para>For at slette et skyggeemne manøvres til det forum det er placeret i, og herefter vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link> næsten øverst. I kontrolpanelet finder du linket &quot;Slet skyggeemne&quot; lige over emnet.</para>
 				<note>
 					<para>Når skyggeemnet slettes bliver det originale emne <emphasis>ikke</emphasis> slettet.</para>
 				</note>
@@ -400,8 +397,6 @@
 			<note>
 				<para>Det er ikke sikkert at du som redaktør har adgang til alle ovennævnte redigeringsmuligheder. Det afhænger af den tilladelserolle administrator har tilknyttet din brugerkonto.</para>
 			</note>
-			
-			<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" /> (jan: denne skal formentlig slettes, vi ledes i ring ^_^ ).</para>
 		</section>
 	</section>
 </chapter>

@@ -343,7 +343,7 @@
 						<listitem><para><guilabel>Smiliemappens placering</guilabel>: Den mappe boardet opbevarer smilies i. Sti under din phpBB-rodmappe, f.eks. images/smilies.</para></listitem>
 						<listitem><para><guilabel>Indlægikonmappens placering</guilabel>: Den mappe boardet opbevarer indlægikoner i. Sti under din phpBB-rodmappe, f.eks. images/icons.</para></listitem>
 						<listitem><para><guilabel>Filtypeikonmappens placering</guilabel>: Den mappe boardet opbevarer de filtypeikoner, som anvendes i forbindelse med  vedhæftede filers <link linkend="acp_attach_extension_groups">filtypegrupper</link>. Sti under din phpBB-rodmappe, f.eks. images/upload_icons.</para></listitem>
-						<listitem><para><guilabel>Rangikonmappens placering</guilabel>: Den mappe boardet opbevarer rangikoner i. Sti under din phpBB-rodmappe, f.eks. images/ranks.</para></listitem>
+						<listitem><para><guilabel>Rangikonmappens placering</guilabel>: Den mappe boardet opbevarer <link linkend="acp_user_ranks">rangikoner</link> i. Sti under din phpBB-rodmappe, f.eks. images/ranks.</para></listitem>
 					</itemizedlist>
 				</para>
 				
@@ -538,7 +538,7 @@
 						<title>Generelle søgeindstillinger</title>
 						<listitem><para><guilabel>Aktivér søgefaciliteter</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere brugerfladen som giver søgemulighederne, inklusiv søgning i tilmeldte brugere.</para></listitem>
 						<listitem><para><guilabel>Brugeres søgeinterval</guilabel>:  Det antal sekunder brugere skal vente mellem søgninger. Intervallet kontrolleres individuelt pr. bruger. Alle positive værdier er gyldige. Angiv &quot;0&quot; for at deaktivere kontrollen.</para></listitem>
-						<listitem><para><guilabel>Gæsters søgeinterval</guilabel>: Det antal sekunder gæster skal vente mellem søgninger. Hvis én gæst søger, må alle andre gæster vente indtil dette tidsinterval er overskredet. Alle positive værdier er gylige. Angiv &quot;0&quot; for at deaktivere kontrollen.</para></listitem>
+						<listitem><para><guilabel>Gæsters søgeinterval</guilabel>: Det antal sekunder gæster skal vente mellem søgninger. Hvis én gæst søger, må alle andre gæster vente indtil dette tidsinterval er overskredet. Alle positive værdier er gyldige. Angiv &quot;0&quot; for at deaktivere kontrol af gæsters søgeinterval.</para></listitem>
 						<listitem><para><guilabel>Grænse for søgningens belastning af systemet</guilabel>: Det er muligt at begrænse søgningers belastning af systemet. Hvis systemets belastning overskrider denne værdi i mere end 1 minut, vil søgesiden gå offline. Alle værdier mellem  0 og 1.0 (inklusive) er gyldige. &quot;1.0&quot; svarer til ~100% belastning af en processor. Denne funktion virker kun på UNIX-baserede servere.</para></listitem>
 						<listitem><para><guilabel>Mindste antal tegn for forfatternavn</guilabel>: Brugere skal angive mindst dette antal tegn i navnet, for at udføre en søgning efter forfatter ved anvendelse af (*) som ubekendt. Hvis forfatterens brugernavn er kortere end dette antal tegn, kan der søges efter dennes indlæg ved at angive forfatterens fulde brugernavn.</para></listitem>
 						<listitem><para><guilabel>Antal sekunder søgningens mellemlager opretholdes</guilabel>: Mellemlagrede søgeresultater slettes efter dette tidsinterval i sekunder. Alle positive værdier er gyldige. Angiv &quot;0&quot; for deaktivere mellemlagring af søgeresultater.</para></listitem>
@@ -564,7 +564,7 @@
 					
 					<itemizedlist>
 						<title>Fulltext native</title>
-						<listitem><para><guilabel>Aktivér fuldtekstopdatering</guilabel>: Vælg <guilabel>Ja</guilabel> for opdatering af fuldtekstindekset når der skrives nye indlæg. Indstilling har ingen betydning hvis søgning på boardet er deaktiveret.</para></listitem>
+						<listitem><para><guilabel>Aktivér fuldtekstopdatering</guilabel>: Vælg <guilabel>Ja</guilabel> for opdatering af fuldtekstindekset når der skrives nye indlæg. Denne indstilling har ingen betydning hvis søgning på boardet er deaktiveret.</para></listitem>
 						<listitem><para><guilabel>Minimalt antal tegn for indeksering til søgninger</guilabel>: Du kan bestemme det mindste antal tegn et ord skal bestå for at det medtages i boardets søgeindeks. For at bevare et søgeindeks med relevant indhold anbefales det at antal tegn ikke sættes for lavt. Alle positive værdier er gyldige.</para></listitem>
 						<listitem><para><guilabel>Maksimalt antal tegn for indeksering til søgninger</guilabel>: Det er også muligt at bestemme det højeste antal tegn et ord må indeholde for at blive medtaget i søgeindekset. Ord indeholdende flere tegn end dette, bliver ikke indekseret. Alle positive værdier er gyldige.</para></listitem>
 						<listitem><para><guilabel>Grænse for definition af et alment ord</guilabel>: Det er unødvendigt at indeksere ord som anvendes meget ofte. Her bestemmer du definition af et alment ord. Er et ord indeholdt i en større procentdel af alle indlæg end det her angivne betragtes det som et alment ord og ignoreres i søgningen. Alle positive værdier er gyldige. Ønsker du ikke at sætte denne begrænsning og give mulighed for at søge alle ord angives &quot;0&quot;. Grænsen har først virkning når boardet indeholder mere end 100 indlæg. Ændres værdien, bør der foretages en fornyet indeksering, således ændringen får konsekvens for søgningen i allerede indsendte indlæg.</para></listitem>
@@ -709,7 +709,7 @@
 			
 			<para>I feltet <guilabel>Brug af BBkode</guilabel> specificeres hvordan brugere skal gøre brug af BBkoden. For at kunne vælge en fonttype skrives i feltet
 				<code>[font={SIMPLETEXT1}]{TEXT2}[/font]</code>
-				[font] BBkoden er nu defineret sådan at brugerens skrevne tekst repræsenteres af tokenet <guilabel>TEXT2</guilabel> og selve skrifttypens  <guilabel>fontnavn</guilabel> af <guilabel>SIMPLETEXT1</guilabel>. Brugere kan hermed selv definere fonttypen i et indlæg ved at skrive [font=verdana]indlægstekst[/font].
+				[font] BBkoden er nu defineret sådan at brugerens skrevne tekst repræsenteres af tokenet <guilabel>TEXT2</guilabel> og selve skrifttypens <guilabel>fontnavn</guilabel> af <guilabel>SIMPLETEXT1</guilabel>. Brugere kan hermed selv definere fonttypen i et indlæg ved at skrive [font=verdana]indlægstekst[/font].
 			</para>
 			<para>Før BBkoden bliver virksom mangler vi at definere den HTML-kode vores nye BBkode skal gøre brug af. I feltet<guilabel>HTML-erstatning</guilabel> skal vi i dette eksempel skrive
 				<code>&lt;span style="font-family: {SIMPLETEXT1}"&gt;{TEXT2}&lt;span&gt;</code>

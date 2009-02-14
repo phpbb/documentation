@@ -243,6 +243,7 @@
 			<para>[quote="Navn på den der citeres"]Citat[/quote]: <!-- [insert screenshot of cited quoted text] --></para>
 			<para>[url]http://www.phpbb.com[/url]: <ulink url="http://www.phpbb.com">http://www.phpbb.com</ulink></para>
 			<para>[url=http://www.phpbb.com]Tekst indeholdende link[/url]: <ulink url="http://www.phpbb.com">Tekst indeholdende link</ulink></para> 
+			<para>[flash=bredde,højde]Sti til flash[/flash] afspiller flash med de anførte dimensioner.</para>
 			<para>Som nævnt kan findes en mere detaljeret vejledning i brugen af BBkode ved at klikke på linket <guilabel>BBkode</guilabel> til højre for teksfeltet hvor du skriver indlægget.</para>
 		</section>
 		
