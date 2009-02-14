@@ -84,7 +84,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Installation</title>
-		<para>phpBB 3.0 Olympus har et installationssystem, der er nemt at bruge, og som vil lede dig gennem installationsprocessen.</para>
+		<para>phpBB 3.0 Olympus har et installationssystem, der er nemt at bruge, og som vil leder dig gennem hele processen.</para>
 		<para>Efter at du har udpakket arkivet af phpBB3 og uploadet det til den placering, hvor du ønsker det installeret, skal du indtaste <acronym>URL'en</acronym> i din browser for at åbne installationssiden. Første gang du peger din browser på <acronym>URL'en</acronym> (for eksempel <uri>http://www.example.com/phpBB3</uri>), vil phpBB opdage, at phpBB endnu ikke er installeret og automatisk viderestille dig til installationssiden.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introduktion</title>
@@ -93,7 +93,7 @@
 					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
 				</imageobject>
 				<caption>
-					<para>Introduktionssiden i installationssystemet.</para>
+					<para>Introduktion til i installationssystemet.</para>
 				</caption>
 			</mediaobject>
 		</figure>
