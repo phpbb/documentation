@@ -1,4 +1,4 @@
-ï»¿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="quick_start_guide">
@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Quick Start Guide</title>
 	<abstract>
-		<para>En kort vejledning for de fÃ¸rste trin i at installere og konfigurere dit helt eget board baseret pÃ¥ phpBB 3.0.</para>
+		<para>En kort vejledning for de første trin i at installere og konfigurere dit helt eget board baseret på phpBB 3.0.</para>
 	</abstract>
 	<section id="quick_requirements">
 		<sectioninfo>
@@ -23,10 +23,10 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Systemkrav</title>
-		<para>phpBB3 har fÃ¥ krav som skal imÃ¸dekommes fÃ¸r du kan installere og bruge boardet. I dette afsnit forklares disse systemkrav.</para>
+		<para>phpBB3 har få krav som skal imødekommes før du kan installere og bruge boardet. I dette afsnit forklares disse systemkrav.</para>
 		<itemizedlist>
 			<listitem>
-				<para>En server eller et webhotel med et styresystem der understÃ¸tter PHP.</para>
+				<para>En server eller et webhotel med et styresystem der understøtter PHP.</para>
 			</listitem>
 			<listitem>
 				<para>Et SQL-databasesystem, et ud af disse:</para>
@@ -52,8 +52,8 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) med understÃ¸ttelse af den databasetype du agter at anvende. Er fÃ¸lgende moduler tilgÃ¦ngelige pÃ¥ serveren, giver de adgang til yderligere funktioner via PHP, men de er ikke krÃ¦vede.</para>
-				<para>Funktionen getimagesize() skal vÃ¦re aktiveret.</para>
+				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) med understøttelse af den databasetype du agter at anvende. Er følgende moduler tilgængelige på serveren, giver de adgang til yderligere funktioner via PHP, men de er ikke krævede.</para>
+				<para>Funktionen getimagesize() skal være aktiveret.</para>
 				<itemizedlist>
 					<listitem>
 						<para>zlib-komprimering</para>
@@ -73,7 +73,7 @@
 				</itemizedlist>
 			</listitem>
 		</itemizedlist>
-		<para> TilstedevÃ¦relsen af hver af de krÃ¦vede funktioner vil blive kontrolleret under installationsprocessen, som forklaret i  <xref linkend="quick_installation" />. </para>
+		<para> Tilstedeværelsen af hver af de krævede funktioner vil blive kontrolleret under installationsprocessen, som forklaret i  <xref linkend="quick_installation" />. </para>
 	</section>
 	<section id="quick_installation">
 		<sectioninfo>
@@ -85,7 +85,7 @@
 		</sectioninfo>
 		<title>Installation</title>
 		<para>phpBB 3.0 Olympus har et installationssystem, der er nemt at bruge, og som vil lede dig gennem installationsprocessen.</para>
-		<para>Efter at du har udpakket arkivet af phpBB3 og uploadet det til den placering, hvor du Ã¸nsker det installeret, skal du indtaste <acronym>URL'en</acronym> i din browser for at Ã¥bne installationssiden. FÃ¸rste gang du peger din browser pÃ¥ <acronym>URL'en</acronym> (for eksempel <uri>http://www.example.com/phpBB3</uri>), vil phpBB opdage, at phpBB endnu ikke er installeret og automatisk viderestille dig til installationssiden.</para>
+		<para>Efter at du har udpakket arkivet af phpBB3 og uploadet det til den placering, hvor du ønsker det installeret, skal du indtaste <acronym>URL'en</acronym> i din browser for at åbne installationssiden. Første gang du peger din browser på <acronym>URL'en</acronym> (for eksempel <uri>http://www.example.com/phpBB3</uri>), vil phpBB opdage, at phpBB endnu ikke er installeret og automatisk viderestille dig til installationssiden.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introduktion</title>
 			<mediaobject>
@@ -99,37 +99,37 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introduktion</title>
-			<para>InstallationsskÃ¦rmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at lÃ¦se den licens, hvorunder phpBB er frigivet (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnÃ¥ support. Klik pÃ¥ fanen <guilabel>InstallÃ©r</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
+			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installér</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Krav</title>
 			<important>
-				<para>LÃ¦s venligst <link linkend="quick_requirements">kapitlet om phpBB3's krav</link>, her er phpBB 3.0's minimumskrav specificeret.</para>
+				<para>Læs venligst <link linkend="quick_requirements">kapitlet om phpBB3's krav</link>, her er phpBB 3.0's minimumskrav specificeret.</para>
 			</important>
-			<para>Den fÃ¸rste side du mÃ¸der efter installationen er startet er listen over systemkrav. phpBB3 kontrollerer automatisk om alt nÃ¸dvendigt er installeret pÃ¥ serveren for at kÃ¸re phpBB3 korrekt pÃ¥ din server. Du skal have minimumversionen af <acronym>PHP</acronym> installeret og mindst Ã©n tilgÃ¦ngelig database for at fortsÃ¦tte installationen. Det er ogsÃ¥ vigtigt at alle viste mapper er tilgÃ¦ngelige og sat med rette tilladelser. LÃ¦s venligst beskrivelsen i hver sektion for at finde ud af om de enkelte komponenter og tilladelser er valgfrie eller krÃ¦vede for at kÃ¸re phpBB3. Hvis alt er i orden, kan du fortsÃ¦tte med installationen ved at klikke pÃ¥ <guilabel>Start installation</guilabel>.</para>
+			<para>Den første side du møder efter installationen er startet er listen over systemkrav. phpBB3 kontrollerer automatisk om alt nødvendigt er installeret på serveren for at køre phpBB3 korrekt på din server. Du skal have minimumversionen af <acronym>PHP</acronym> installeret og mindst én tilgængelig database for at fortsætte installationen. Det er også vigtigt at alle viste mapper er tilgængelige og sat med rette tilladelser. Læs venligst beskrivelsen i hver sektion for at finde ud af om de enkelte komponenter og tilladelser er valgfrie eller krævede for at køre phpBB3. Hvis alt er i orden, kan du fortsætte med installationen ved at klikke på <guilabel>Start installation</guilabel>.</para>
 		</section>
 		<section id="quick_installation_database">
 			<title>Databaseindstillinger</title>
-			<para>Du skal nu beslutte hvilken databasetype phpBB3 skal anvende. Se afsnittet <link linkend="quick_requirements">Systemkrav</link> for oplysninger om understÃ¸ttede databasetyper. Hvis du ikke kender dine databasemuligheder, kontakt venligst din vÃ¦rt og og udbed dig information om disse. Du kan ikke fortsÃ¦tte installationen uden disse informationer. Du skal bruge:</para>
+			<para>Du skal nu beslutte hvilken databasetype phpBB3 skal anvende. Se afsnittet <link linkend="quick_requirements">Systemkrav</link> for oplysninger om understøttede databasetyper. Hvis du ikke kender dine databasemuligheder, kontakt venligst din vært og og udbed dig information om disse. Du kan ikke fortsætte installationen uden disse informationer. Du skal bruge:</para>
 			<itemizedlist>
 				<listitem>
 					<para><guilabel>Databasetype</guilabel> - den database du vil bruge (f.eks. MySQL, Oracle, SQLite)</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>Databaseserverens vÃ¦rtsnavn eller DSN</guilabel> - adressen pÃ¥ databaseserveren.</para>
+					<para><guilabel>Databaseserverens værtsnavn eller DSN</guilabel> - adressen på databaseserveren.</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>Databaseserverens portnummer</guilabel> - den port databaseserveren kommunikerer pÃ¥ (er som regel unÃ¸dvendigt).</para>
+					<para><guilabel>Databaseserverens portnummer</guilabel> - den port databaseserveren kommunikerer på (er som regel unødvendigt).</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>Databasenavnet</guilabel> - den database der er oprettet pÃ¥ ovennÃ¦vnte server.</para>
+					<para><guilabel>Databasenavnet</guilabel> - den database der er oprettet på ovennævnte server.</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>Brugernavn</guilabel> og <guilabel>kodeord</guilabel> til databasen - logininformation for at kunne tilgÃ¥ databasen.</para>
+					<para><guilabel>Brugernavn</guilabel> og <guilabel>kodeord</guilabel> til databasen - logininformation for at kunne tilgå databasen.</para>
 				</listitem>
 			</itemizedlist>
 			<tip>
-				<para>Hvis du anvender en SQLite-database, skal den fulde sti til din databasefil angives i DSN-feltet og felterne til brugernavn og kodeord efterlades blanke. Af sikkerhedsgrunde bÃ¸r du sikre dig at databasefilen ikke opbevares i en mappe der kan tilgÃ¥s via internettet.</para>
+				<para>Hvis du anvender en SQLite-database, skal den fulde sti til din databasefil angives i DSN-feltet og felterne til brugernavn og kodeord efterlades blanke. Af sikkerhedsgrunde bør du sikre dig at databasefilen ikke opbevares i en mappe der kan tilgås via internettet.</para>
 			</tip>
 			<figure id="img_quick_installation_database">
 				<title>Database settings</title>
@@ -138,34 +138,34 @@
 						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>SkÃ¦rmbilledet hvor databaseindstillinger angives, hav venligst alle krÃ¦vede data ved hÃ¥ndenp</para>
+						<para>Skærmbilledet hvor databaseindstillinger angives, hav venligst alle krævede data ved håndenp</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Du behÃ¸ver ikke at Ã¦ndre <guilabel>tabelprÃ¦fiks for tabellerne</guilabel> i databaseindstillingerne, med mindre du har planer om at flere phpBB-installationer skal benytte samme database. Hvis det er tilfÃ¦ldet, skal du anvende forskelligt prÃ¦fiks for hver installation for at fÃ¥ det til at virke.</para>
-			<para>NÃ¥r du har angivet denne information, fortsÃ¦tter du installationen ved at klikke pÃ¥ knappen <guilabel>FortsÃ¦t til nÃ¦ste trin</guilabel> button. Nu vil phpBB3 kontrollere om de angivne data vil medfÃ¸re at der kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne prÃ¦fiks.</para>
-			<para>En<guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. KontrollÃ©r at de angivne databaseindstillinger er korrekte og prÃ¸v igen. Kontakt venligst din vÃ¦rt, hvis du er usikker pÃ¥ de korrekte indstillinger.</para>
+			<para>Du behøver ikke at ændre <guilabel>tabelpræfiks for tabellerne</guilabel> i databaseindstillingerne, med mindre du har planer om at flere phpBB-installationer skal benytte samme database. Hvis det er tilfældet, skal du anvende forskelligt præfiks for hver installation for at få det til at virke.</para>
+			<para>Når du har angivet denne information, fortsætter du installationen ved at klikke på knappen <guilabel>Fortsæt til næste trin</guilabel> button. Nu vil phpBB3 kontrollere om de angivne data vil medføre at der kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne præfiks.</para>
+			<para>En<guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. Kontrollér at de angivne databaseindstillinger er korrekte og prøv igen. Kontakt venligst din vært, hvis du er usikker på de korrekte indstillinger.</para>
 			<tip>
 				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
 			</tip>
-			<para>Hvis du tidligere har installeret en anden version af phpBB i samme database med samme prÃ¦fiks, giver phpBB3 dig information herom, og beder dig blot om at angive et andet databaseprÃ¦fiks.</para>
-			<para>NÃ¥r du ser meddelelsen <guilabel>Korrekt forbundet</guilabel>, kan du fortsÃ¦tte til nÃ¦ste trin.</para>
+			<para>Hvis du tidligere har installeret en anden version af phpBB i samme database med samme præfiks, giver phpBB3 dig information herom, og beder dig blot om at angive et andet databasepræfiks.</para>
+			<para>Når du ser meddelelsen <guilabel>Korrekt forbundet</guilabel>, kan du fortsætte til næste trin.</para>
 		</section>
 		<section id="quick_installation_admin">
 			<title>Administratoroplysninger</title>
-			<para>Nu skal du oprette din administratorbruger. Denne bruger fÃ¥r tilladelser som fuldgyldig administrator og vil vÃ¦re den fÃ¸rste bruger pÃ¥ dit board. Alle felter pÃ¥ denne side skal udfyldes. Du kan ogsÃ¥ indstille boardets standardsprog pÃ¥ denne side. I en standard phpBB3-installationspakke er kun inkludere <guilabel>engelsk [British English]</guilabel>. Du kan downloade yderligere sprogpakker pÃ¥ <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, og tilfÃ¸je disse fÃ¸r installationen eller efter denne er gennemfÃ¸rt <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+			<para>Nu skal du oprette din administratorbruger. Denne bruger får tilladelser som fuldgyldig administrator og vil være den første bruger på dit board. Alle felter på denne side skal udfyldes. Du kan også indstille boardets standardsprog på denne side. I en standard phpBB3-installationspakke er kun inkludere <guilabel>engelsk [British English]</guilabel>. Du kan downloade yderligere sprogpakker på <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, og tilføje disse før installationen eller efter denne er gennemført <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
 		</section>
 		<section id="quick_installation_config">
 			<title>Konfigurationsfilen (config.php)</title>
-			<para>PÃ¥ dette trin vil phpBB prÃ¸ve at skrive konfigurationsfilen automatisk. Den indeholder alle databaseindstillingerne, og uden den er phpBB ikke i stand til at forbinde til databasen.</para>
-			<para>Normalt fungerer den automatiske skrivning af konfigurationsfilen fint. Men i visse tilfÃ¦lde kan denne operation fejle, f.eks. pÃ¥ grund af forkerte filtilladelser. I sÃ¥fald er du nÃ¸dt til at uploade filen manuelt. phpBB beder dig om at <guilabel>downloade</guilabel> config.php-filen og fortÃ¦ller dig hvad du skal gÃ¸re med den. LÃ¦s venligst instruktionerne omhyggeligt. NÃ¥r du har uploadet filen, klik <guilabel>UdfÃ¸rt</guilabel> for at komme videre til sidste trin. Hvis <guilabel>UdfÃ¸rt</guilabel> returnerer dig til samme side som fÃ¸r, og ikke returnerer en meddelelse om at operationen blev gennemfÃ¸rt med held, skyldes det sansynligvis at du ikke fik uploadet filen korrekt.</para>
+			<para>På dette trin vil phpBB prøve at skrive konfigurationsfilen automatisk. Den indeholder alle databaseindstillingerne, og uden den er phpBB ikke i stand til at forbinde til databasen.</para>
+			<para>Normalt fungerer den automatiske skrivning af konfigurationsfilen fint. Men i visse tilfælde kan denne operation fejle, f.eks. på grund af forkerte filtilladelser. I såfald er du nødt til at uploade filen manuelt. phpBB beder dig om at <guilabel>downloade</guilabel> config.php-filen og fortæller dig hvad du skal gøre med den. Læs venligst instruktionerne omhyggeligt. Når du har uploadet filen, klik <guilabel>Udført</guilabel> for at komme videre til sidste trin. Hvis <guilabel>Udført</guilabel> returnerer dig til samme side som før, og ikke returnerer en meddelelse om at operationen blev gennemført med held, skyldes det sansynligvis at du ikke fik uploadet filen korrekt.</para>
 		</section>
 		<section id="quick_installation_advanced">
 			<title>Avancerede indstillinger</title>
-			<para>De <guilabel>Avancerede indstillinger</guilabel> giver mulighed for at Ã¦ndre pÃ¥ nogle af boardets parametre. De er valgfrie og kan altid Ã¦ndres senere. FortsÃ¦t til sidste trin og afslut installationen, hvis du er usikker pÃ¥ hvad disse indstillinger betyder.</para>
-			<para>Hvis installationen blev gennemfÃ¸rt, kan du nu bruge <guilabel>Login</guilabel>-knappen og besÃ¸ge <guilabel>Administrationkontrolpanelet</guilabel>. Tillykke, du har nu korrekt gennemfÃ¸rt installationen af phpBB3. Men der ligger stadig arbejde forude!</para>
-			<para>Hvis du ikke er i stand til at installere phpBB3, selv efter at have lÃ¦st denne vejledning, bÃ¸r du venligst se i <link linkend="quick_support">supportkapitlet</link>, for at finde ud af hvor du kan fÃ¥ yderligere assistance.</para>
-			<para>Hvis du her er ved at udfÃ¸re en konvertering fra phpBB 2.0.x, bÃ¸r du nu lÃ¦se videre i <link linkend="upgrade_guide">kapitlet om konvertering</link> for yderligere information. Hvis ikke, skal du nu slette install-mappen fra din server, da du kun kan tilgÃ¥ administratorkontrolpanelet sÃ¥ lÃ¦nge denne mappe er tilstede.</para>
+			<para>De <guilabel>Avancerede indstillinger</guilabel> giver mulighed for at ændre på nogle af boardets parametre. De er valgfrie og kan altid ændres senere. Fortsæt til sidste trin og afslut installationen, hvis du er usikker på hvad disse indstillinger betyder.</para>
+			<para>Hvis installationen blev gennemført, kan du nu bruge <guilabel>Login</guilabel>-knappen og besøge <guilabel>Administrationkontrolpanelet</guilabel>. Tillykke, du har nu korrekt gennemført installationen af phpBB3. Men der ligger stadig arbejde forude!</para>
+			<para>Hvis du ikke er i stand til at installere phpBB3, selv efter at have læst denne vejledning, bør du venligst se i <link linkend="quick_support">supportkapitlet</link>, for at finde ud af hvor du kan få yderligere assistance.</para>
+			<para>Hvis du her er ved at udføre en konvertering fra phpBB 2.0.x, bør du nu læse videre i <link linkend="upgrade_guide">kapitlet om konvertering</link> for yderligere information. Hvis ikke, skal du nu slette install-mappen fra din server, da du kun kan tilgå administratorkontrolpanelet så længe denne mappe er tilstede.</para>
 		</section>
 	</section>
 	<section id="quick_settings">
@@ -177,13 +177,13 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Generelle indstillinger</title>
-		<para>I dette afsnit gennemgÃ¥s nogle af de helt basale og generelle indstillinger for dit nye board.</para>
-		<para>Umiddelbart efter installationen er fuldfÃ¸rt videredirigeres du til det sÃ¥kaldte &quot;Administratorkontrolpanel&quot; (<acronym>ACP</acronym>). I daglig drift fÃ¥r du adgang til ACP ved at klikke pÃ¥ linket <guilabel>[Administratorkontrolpanel]</guilabel> i bunden af siden. I ACP kan du Ã¦ndre samtlige indstillinger for alle funktioner pÃ¥ dit board.</para>
+		<para>I dette afsnit gennemgås nogle af de helt basale og generelle indstillinger for dit nye board.</para>
+		<para>Umiddelbart efter installationen er fuldført videredirigeres du til det såkaldte &quot;Administratorkontrolpanel&quot; (<acronym>ACP</acronym>). I daglig drift får du adgang til ACP ved at klikke på linket <guilabel>[Administratorkontrolpanel]</guilabel> i bunden af siden. I ACP kan du ændre samtlige indstillinger for alle funktioner på dit board.</para>
 		<section id="quick_settings_boardsettings">
 			<title>Boardkonfiguration</title>
-			<para>Det fÃ¸rste skÃ¦rmbillede du sikkert Ã¸nsker at besÃ¸ge efter installation af phpBB3 er &quot;Board grundlÃ¦ggende&quot;. Her er mulighed for at Ã¦ndre navnet (<guilabel>Boardnavn</guilabel>) og beskrivelsen (<guilabel>Boardbeskrivelse</guilabel>) pÃ¥ dit board.</para>
+			<para>Det første skærmbillede du sikkert ønsker at besøge efter installation af phpBB3 er &quot;Board grundlæggende&quot;. Her er mulighed for at ændre navnet (<guilabel>Boardnavn</guilabel>) og beskrivelsen (<guilabel>Boardbeskrivelse</guilabel>) på dit board.</para>
 			<figure id="img_quick_settings_sitename">
-				<title>Board grundlÃ¦ggende</title>
+				<title>Board grundlæggende</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
@@ -193,15 +193,15 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Her er desuden mulighed for Ã¦ndre tidszone (<guilabel>Tidszone for board</guilabel>) og mÃ¥den dato vises pÃ¥ (<guilabel>Datoformat</guilabel>).</para>
-			<para>Du kan vÃ¦lge en ny typografi (efter den er installeret) for boardet og vÃ¦lge at alle skal nyde den, uanset hvad brugerne mÃ¥tte have i  &quot;Brugerkontrolpanel&quot;. Typografien bliver ogsÃ¥ gÃ¦ldende for alle de fora hvor du ikke specificeret en anden. LÃ¦s flere detaljer om hvor man kan hente nye typografier og hvordan de installeres pÃ¥ <ulink url="http://www.phpbb.com/styles/">typografisiden</ulink> pÃ¥ <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
-			<para>Skal dit board hovedsaglig anvendes nationalt, kan du ogsÃ¥ her Ã¦ndre standardsproget fra engelsk til det sprog (<guilabel>Standardsprog</guilabel>) du Ã¸nsker skal vises for gÃ¦ster. Tilmeldte brugere kan i brugerkontrolpanelet selv vÃ¦lge standardsprog imellem de sprogpakker der er installeret. Som standard downloades phpBB3 kun med den engelske sprogpakke. For at give mulighed for valg mellem flere sprog i fÃ¸rnÃ¦vnte felt, skal den rette sprogpakke installeres. LÃ¦s flere detaljer her: <link linkend="acp_system_language">Sprogpakker</link>.</para>
+			<para>Her er desuden mulighed for ændre tidszone (<guilabel>Tidszone for board</guilabel>) og måden dato vises på (<guilabel>Datoformat</guilabel>).</para>
+			<para>Du kan vælge en ny typografi (efter den er installeret) for boardet og vælge at alle skal nyde den, uanset hvad brugerne måtte have i  &quot;Brugerkontrolpanel&quot;. Typografien bliver også gældende for alle de fora hvor du ikke specificeret en anden. Læs flere detaljer om hvor man kan hente nye typografier og hvordan de installeres på <ulink url="http://www.phpbb.com/styles/">typografisiden</ulink> på <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
+			<para>Skal dit board hovedsaglig anvendes nationalt, kan du også her ændre standardsproget fra engelsk til det sprog (<guilabel>Standardsprog</guilabel>) du ønsker skal vises for gæster. Tilmeldte brugere kan i brugerkontrolpanelet selv vælge standardsprog imellem de sprogpakker der er installeret. Som standard downloades phpBB3 kun med den engelske sprogpakke. For at give mulighed for valg mellem flere sprog i førnævnte felt, skal den rette sprogpakke installeres. Læs flere detaljer her: <link linkend="acp_system_language">Sprogpakker</link>.</para>
 			<!--TODO: Correct ACP link-->
 		</section>
 		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">
 			<title>Boardfinesser</title>
-			<para>Her kan du aktivere og deaktivere nogle af boardets basale funktioner. Her kan for eksempel tillades at brugere mÃ¥ Ã¦ndre brugernavne (<guilabel>Tillad Ã¦ndring af brugernavn</guilabel>) eller at der mÃ¥ vedhÃ¦ftes filer (<guilabel>Tillad at vedhÃ¦fte filer</guilabel>).</para>
+			<para>Her kan du aktivere og deaktivere nogle af boardets basale funktioner. Her kan for eksempel tillades at brugere må ændre brugernavne (<guilabel>Tillad ændring af brugernavn</guilabel>) eller at der må vedhæftes filer (<guilabel>Tillad at vedhæfte filer</guilabel>).</para>
 			<figure id="img_quick_settings_features">
 				<title>Boardfinesser</title>
 				<mediaobject>
@@ -209,14 +209,14 @@
 						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Ã†ndre basale funktioner med to klik</para>
+						<para>Ændre basale funktioner med to klik</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Hvis du ikke Ã¸nsker at dine brugere indsÃ¦tte billeder i signaturer, kan du her helt deaktivere muligheden for at bruge BBkoder. Synes du det lige drastisk nok, kan du i stedet sÃ¦tte <guilabel>Tillad brug af BBkode-tag'en [IMG] i brugersignaturer</guilabel> til &quot;Nej&quot;, denne indstilling findes under &quot;Signaturer&quot; i venstremenuen.</para>
-			<para>I &quot;Boardfinesser&quot; har du en fin kontrol over boardets funktioner da man her kun skal vÃ¦lge ja eller nej afhÃ¦ngig af om funktionen skal vÃ¦re aktiv eller ikke. Du kan for nogle af funktionerne ogsÃ¥ vÃ¦lge at definere grÃ¦nser; for eksempel det hÃ¸jeste antal tilladte tegn i et indlÃ¦g (<guilabel>Maksimalt antal tegn pr. indlÃ¦g</guilabel> i &quot;Indstillinger for indlÃ¦g&quot;) eller hvor stor en brugers avatar mÃ¥ vÃ¦re (<guilabel>StÃ¸rste dimensioner for avatar</guilabel> i &quot;Indstillinger for avatars&quot;).</para>
+			<para>Hvis du ikke ønsker at dine brugere indsætte billeder i signaturer, kan du her helt deaktivere muligheden for at bruge BBkoder. Synes du det lige drastisk nok, kan du i stedet sætte <guilabel>Tillad brug af BBkode-tag'en [IMG] i brugersignaturer</guilabel> til &quot;Nej&quot;, denne indstilling findes under &quot;Signaturer&quot; i venstremenuen.</para>
+			<para>I &quot;Boardfinesser&quot; har du en fin kontrol over boardets funktioner da man her kun skal vælge ja eller nej afhængig af om funktionen skal være aktiv eller ikke. Du kan for nogle af funktionerne også vælge at definere grænser; for eksempel det højeste antal tilladte tegn i et indlæg (<guilabel>Maksimalt antal tegn pr. indlæg</guilabel> i &quot;Indstillinger for indlæg&quot;) eller hvor stor en brugers avatar må være (<guilabel>Største dimensioner for avatar</guilabel> i &quot;Indstillinger for avatars&quot;).</para>
 			<important>
-				<para>NÃ¥r du deaktiverer funktioner her, mister brugere, der i kraft af deres tildelte tilladelser har adgang til at bruge disse, nu muligheden. LÃ¦s mere om tilladelsesystemet her <xref linkend="quick_permissions" /> eller i administratormanualen.</para>
+				<para>Når du deaktiverer funktioner her, mister brugere, der i kraft af deres tildelte tilladelser har adgang til at bruge disse, nu muligheden. Læs mere om tilladelsesystemet her <xref linkend="quick_permissions" /> eller i administratormanualen.</para>
 				<!-- TODO: Link to admin guide -->
 			</important>
 		</section>
@@ -234,12 +234,12 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Opret fora</title>
-		<para>Fora er sektioner hvor indlÃ¦g opbevares og er normalt emneopdelt. Uden fora ville brugerne ikke vÃ¦re i stand til at indsende indlÃ¦g struktureret! Det er nemt at oprette et forum.</para>
-		<para>NÃ¥r du er logget ind og findes i bunden af siden linket <guilabel>Administratorkontrolpanel</guilabel>. Klik pÃ¥ det og efter du har afgivet kodeord endnu engang, videredirigeres du til administratorindekset.</para>
-		<para>I toppen af administratorkontrolpanelet er der et antal faner som giver adgang til boardets forskellige funktioner og indstillinger. Du kan komme til forumadministration ved at vÃ¦lge fanen <guilabel>Fora</guilabel>, samme side kan nÃ¥s ved at vÃ¦lge <guilabel>AdministrÃ©r fora</guilabel> i menuen til venstre.</para>
-		<para>I forumadministration kan du Ã¦ndre allerede oprettede fora og underfora, og naturligvis oprette nye. Et subforum er et forum indeholdt herakisk i et overforum. LÃ¦s mere om underfora i  <link linkend="acp_forums_subforums">administration af subfora</link>.</para>
-		<para>Find knappen <guilabel>Opret nyt forum</guilabel> nederst til hÃ¸jre, i tekstboksen til venstre herfor angives navnet pÃ¥ det nye forum. Du kan oprette et testforum og navngive det ved at skrive Test i tekstboksen. Klik pÃ¥ <guilabel>Opret nyt forum</guilabel> for at oprette forummet.</para>
-		<para>En ny side med overskriften &quot;Opret nyt forum :: Test&quot; vises. Du vÃ¦lger her indstillinger for forummet. For eksempel vÃ¦lges det forumbillede der skal vises, eller du kan formulere teksten til de forumregler der vises Ã¸verst i forummet. Du bÃ¸r ogsÃ¥ her angive en kort beskrivelse af forummet, sÃ¥ dine brugere er i stand til at regne ud hvad emnerne i forummet omhandler.</para>
+		<para>Fora er sektioner hvor indlæg opbevares og er normalt emneopdelt. Uden fora ville brugerne ikke være i stand til at indsende indlæg struktureret! Det er nemt at oprette et forum.</para>
+		<para>Når du er logget ind og findes i bunden af siden linket <guilabel>Administratorkontrolpanel</guilabel>. Klik på det og efter du har afgivet kodeord endnu engang, videredirigeres du til administratorindekset.</para>
+		<para>I toppen af administratorkontrolpanelet er der et antal faner som giver adgang til boardets forskellige funktioner og indstillinger. Du kan komme til forumadministration ved at vælge fanen <guilabel>Fora</guilabel>, samme side kan nås ved at vælge <guilabel>Administrér fora</guilabel> i menuen til venstre.</para>
+		<para>I forumadministration kan du ændre allerede oprettede fora og underfora, og naturligvis oprette nye. Et subforum er et forum indeholdt herakisk i et overforum. Læs mere om underfora i  <link linkend="acp_forums_subforums">administration af subfora</link>.</para>
+		<para>Find knappen <guilabel>Opret nyt forum</guilabel> nederst til højre, i tekstboksen til venstre herfor angives navnet på det nye forum. Du kan oprette et testforum og navngive det ved at skrive Test i tekstboksen. Klik på <guilabel>Opret nyt forum</guilabel> for at oprette forummet.</para>
+		<para>En ny side med overskriften &quot;Opret nyt forum :: Test&quot; vises. Du vælger her indstillinger for forummet. For eksempel vælges det forumbillede der skal vises, eller du kan formulere teksten til de forumregler der vises øverst i forummet. Du bør også her angive en kort beskrivelse af forummet, så dine brugere er i stand til at regne ud hvad emnerne i forummet omhandler.</para>
 		<mediaobject>
 			<imageobject>
 				<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
@@ -248,14 +248,14 @@
 				<para>Opret et nyt forum</para>
 			</caption>
 		</mediaobject>
-		<para>Standardindstillingerne er i de fleste tilfÃ¦lde udmÃ¦rkede og fÃ¥r dit forum til at fungere. Du kan efterfÃ¸lgende tilpasse indstillinger sÃ¥ de passer prÃ¦cis til dit behov. Der er nogle nÃ¸gleindstillinger du bÃ¸r vÃ¦re opmÃ¦rksom pÃ¥. Ved valg af overforum bestemmer du hvor dit nye forum skal vÃ¦re underforum. VÃ¦r her omhyggelig, da valg af overforum er vigtig ved oprettelse af underforum (lÃ¦s mere om i kapitlet om oprettelse af underfora). Ved at bruge &quot;Kopier tilladelser fra:&quot; kan du enkelt kopiere tilladelserne fra et af dine allerede eksisterende fora. Den er god hvis du Ã¸nsker at holde identiske tilladelser i dine fora. Du har ogsÃ¥ mulighed for at vÃ¦lge en anden typografi end boardets standardtypografi for forummet. Du kan vÃ¦lge mellem de typografier der er installeret pÃ¥ boardet.<!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
-		<para>NÃ¥r du har foretaget alle valg for dit nye forum, klikker du nederst pÃ¥ <guilabel>UdfÃ¸r</guilabel> nederst pÃ¥ siden for at oprette forummet med de valgte indstillinger. Dit board kvitterer med en bekrÃ¦ftelsesmeddelelse nÃ¥r forummet er oprettet.</para>
-		<para>Efter denne bekrÃ¦ftelse videredirigeres du automatisk til forumtilladelserne. Du kan nu Ã¦ndre tilladelserne for det nye forum (eller indstille disse, hvis du ikke fik kopieret tilladelser fra et andet). Hvis du er tilfreds med de allerede valgte tilladelser klikker du blot pÃ¥ linket <guilabel>Tilbage til foregÃ¥ende side</guilabel>. Ellers du nu tilladelserne som du Ã¸nsker og nÃ¥r tilpasningerne er foretaget klikkes pÃ¥ <guilabel>TilfÃ¸j alle tilladelser</guilabel> i bunden af siden. Herefter vises en bekrÃ¦ftelse pÃ¥ at tilladelserne er opdateret.</para>
+		<para>Standardindstillingerne er i de fleste tilfælde udmærkede og får dit forum til at fungere. Du kan efterfølgende tilpasse indstillinger så de passer præcis til dit behov. Der er nogle nøgleindstillinger du bør være opmærksom på. Ved valg af overforum bestemmer du hvor dit nye forum skal være underforum. Vær her omhyggelig, da valg af overforum er vigtig ved oprettelse af underforum (læs mere om i kapitlet om oprettelse af underfora). Ved at bruge &quot;Kopier tilladelser fra:&quot; kan du enkelt kopiere tilladelserne fra et af dine allerede eksisterende fora. Den er god hvis du ønsker at holde identiske tilladelser i dine fora. Du har også mulighed for at vælge en anden typografi end boardets standardtypografi for forummet. Du kan vælge mellem de typografier der er installeret på boardet.<!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
+		<para>Når du har foretaget alle valg for dit nye forum, klikker du nederst på <guilabel>Udfør</guilabel> nederst på siden for at oprette forummet med de valgte indstillinger. Dit board kvitterer med en bekræftelsesmeddelelse når forummet er oprettet.</para>
+		<para>Efter denne bekræftelse videredirigeres du automatisk til forumtilladelserne. Du kan nu ændre tilladelserne for det nye forum (eller indstille disse, hvis du ikke fik kopieret tilladelser fra et andet). Hvis du er tilfreds med de allerede valgte tilladelser klikker du blot på linket <guilabel>Tilbage til foregående side</guilabel>. Ellers du nu tilladelserne som du ønsker og når tilpasningerne er foretaget klikkes på <guilabel>Tilføj alle tilladelser</guilabel> i bunden af siden. Herefter vises en bekræftelse på at tilladelserne er opdateret.</para>
 		<important>
-			<para>Hvis du ikke indstiller tilladelser for forummet vil det ikke vÃ¦re synligt for nogen pÃ¥ boardet, inklusive dig selv.</para>
+			<para>Hvis du ikke indstiller tilladelser for forummet vil det ikke være synligt for nogen på boardet, inklusive dig selv.</para>
 		</important>
 		<para>Du har opdateret dine forumtilladelser og oprettet et nyt forum. For at oprette flere fora gentages denne procedure.</para>
-		<para>LÃ¦s mere om indstilling af tilladelser: <xref linkend="quick_permissions" /></para>
+		<para>Læs mere om indstilling af tilladelser: <xref linkend="quick_permissions" /></para>
 	</section>
 	<section id="quick_permissions">
 		<sectioninfo>
@@ -266,26 +266,26 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Indstilling af tilladelser</title>
-		<para>NÃ¥r du har oprettet dit fÃ¸rste forum skal du bestemme hvem der skal have adgang til det og hvem der mÃ¥ gÃ¸re hvad i forummet. Her skal du bruge tilladelseindstillingerne, hvor du for eksempel kan forbyde ikke tilmeldte brugere at skrive indlÃ¦g og uddelegere redaktÃ¸ropgaverne til andre brugere. NÃ¦sten enhver brugerhandling i phpBB3 kan kontrolleres med tilladelseindstillingerne.</para>
+		<para>Når du har oprettet dit første forum skal du bestemme hvem der skal have adgang til det og hvem der må gøre hvad i forummet. Her skal du bruge tilladelseindstillingerne, hvor du for eksempel kan forbyde ikke tilmeldte brugere at skrive indlæg og uddelegere redaktøropgaverne til andre brugere. Næsten enhver brugerhandling i phpBB3 kan kontrolleres med tilladelseindstillingerne.</para>
 
 		<section id="quick_permissions_types">
 			<title>Tilladelsetyper</title>
 			<para>Der findes fire typer af tilladelser:</para>
 			<orderedlist>
 				<listitem id="quick_permission_types_user">
-					<para>Bruger og gruppetilladelser (globale) - f.eks. forbyd Ã¦ndring af avatar</para>
+					<para>Bruger og gruppetilladelser (globale) - f.eks. forbyd ændring af avatar</para>
 				</listitem>
 				<listitem id="quick_permission_types_admin">
 					<para>Administratortilladelser (globale) - f.eks. tillad at administrere fora</para>
 				</listitem>
 				<listitem id="quick_permission_types_moderator">
-					<para>RedaktÃ¸rtilladelser (globale eller lokale) - f.eks. tillad at lÃ¥se emner eller udelukke brugere (sidstnÃ¦vnte kun globalt)</para>
+					<para>Redaktørtilladelser (globale eller lokale) - f.eks. tillad at låse emner eller udelukke brugere (sidstnævnte kun globalt)</para>
 				</listitem>
 				<listitem id="quick_permission_types_forum">
-					<para>Forumtilladelser - f.eks. tillade at se et forum og at indsende indlÃ¦g</para>
+					<para>Forumtilladelser - f.eks. tillade at se et forum og at indsende indlæg</para>
 				</listitem>
 			</orderedlist>
-			<para>Disse tilladelsetyper bestÃ¥r af hver sit sÃ¦t af tilladelser og tildeles lokalt eller globalt. En global tilladelse gÃ¦lder for hele boardet. Hvis du f.eks vil forbyde en bruger at sende private beskeder, gÃ¸res det med globale brugertilladelser. Administratortilladelser er kun globale.</para>
+			<para>Disse tilladelsetyper består af hver sit sæt af tilladelser og tildeles lokalt eller globalt. En global tilladelse gælder for hele boardet. Hvis du f.eks vil forbyde en bruger at sende private beskeder, gøres det med globale brugertilladelser. Administratortilladelser er kun globale.</para>
 			<figure id="img_quick_permissions_types">
 				<title>Globale og lokale tilladelser</title>
 				<mediaobject>
@@ -297,32 +297,32 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Lokale tilladelser er gÃ¦ldende for specifikke fora. Du kan f.eks. forbyde en bruger at skrive i et forum, uden at det fÃ¥r konsekvenser for brugerens mulighed for at skrive i andre fora pÃ¥ boardet.</para>
-			<para>Man kan udnÃ¦vne redaktÃ¸rer globalt eller lokalt. Denne vurdering er dybest set et spÃ¸rgsmÃ¥l om tillid; har du fuld tillid til din bruger kan du udnÃ¦vne vedkommende til global redaktÃ¸r. De kan nemlig redigere i alle fora pÃ¥ boardet med de tilladelser de er tildelt. En lokal redaktÃ¸r kan kun redigere i de fora du har valgt at vedkommende skal vÃ¦re redaktÃ¸r for. De lokale redaktÃ¸rer behÃ¸ver ikke nÃ¸dvendigvis at at have adgang til identiske redaktÃ¸rfunktioner. Nogle kan vÃ¦re i stand at slette emner i nogle fora, mens samme redaktÃ¸r ikke kan det i andre. Globale redaktÃ¸rer har samme tilladelser i alle boardets fora.</para>
+			<para>Lokale tilladelser er gældende for specifikke fora. Du kan f.eks. forbyde en bruger at skrive i et forum, uden at det får konsekvenser for brugerens mulighed for at skrive i andre fora på boardet.</para>
+			<para>Man kan udnævne redaktører globalt eller lokalt. Denne vurdering er dybest set et spørgsmål om tillid; har du fuld tillid til din bruger kan du udnævne vedkommende til global redaktør. De kan nemlig redigere i alle fora på boardet med de tilladelser de er tildelt. En lokal redaktør kan kun redigere i de fora du har valgt at vedkommende skal være redaktør for. De lokale redaktører behøver ikke nødvendigvis at at have adgang til identiske redaktørfunktioner. Nogle kan være i stand at slette emner i nogle fora, mens samme redaktør ikke kan det i andre. Globale redaktører har samme tilladelser i alle boardets fora.</para>
 		</section>
 		<section id="quick_permissions_forum">
 			<title>Indstil forumtilladelser</title>
-			<para>For at indstille tilladelser for dit nye forum skal de lokale <guilabel>Forumbaserede tilladelser</guilabel> anvendes. FÃ¸rst skal besluttes om tilladelserne skal omfatte en enkelt bruger eller gruppe. AfhÃ¦ngig af valget bruges enten <guilabel>Gruppers forumtilladelser</guilabel> eller <guilabel>Brugeres forumtilladelser</guilabel>, som giver dig mulighed for at vÃ¦lge en bruger eller en gruppe, og herefter det forum du vil indstille tilladelser for. </para>
-			<para>I denne Quick Start Guide koncentrerer vi os imidlertid om <guilabel>Forumtilladelser</guilabel>. Fremfor ovennÃ¦vnte metode, hvor bruger eller gruppe vÃ¦lges, starter du her med at udvÃ¦lge de fora du Ã¸nsker at Ã¦ndre tilladelser for. Fora kan vÃ¦lges enkeltvis eller som en kategori/forum inklusive alle underfora. Klik herefter pÃ¥ <guilabel>UdfÃ¸r</guilabel> for at komme til nÃ¦ste side.</para>
+			<para>For at indstille tilladelser for dit nye forum skal de lokale <guilabel>Forumbaserede tilladelser</guilabel> anvendes. Først skal besluttes om tilladelserne skal omfatte en enkelt bruger eller gruppe. Afhængig af valget bruges enten <guilabel>Gruppers forumtilladelser</guilabel> eller <guilabel>Brugeres forumtilladelser</guilabel>, som giver dig mulighed for at vælge en bruger eller en gruppe, og herefter det forum du vil indstille tilladelser for. </para>
+			<para>I denne Quick Start Guide koncentrerer vi os imidlertid om <guilabel>Forumtilladelser</guilabel>. Fremfor ovennævnte metode, hvor bruger eller gruppe vælges, starter du her med at udvælge de fora du ønsker at ændre tilladelser for. Fora kan vælges enkeltvis eller som en kategori/forum inklusive alle underfora. Klik herefter på <guilabel>Udfør</guilabel> for at komme til næste side.</para>
 			<figure id="img_quick_permissions_select">
-				<title>VÃ¦lg grupper</title>
+				<title>Vælg grupper</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
 					</imageobject>
 					<caption>
-						<para>VÃ¦lg de brugere eller grupper der skal Ã¦ndres</para>
+						<para>Vælg de brugere eller grupper der skal ændres</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Siden med<guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vÃ¦lges (se <xref linkend="img_quick_permissions_select" />). De to kollonner som Ã¸verst er navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst Ã©t af de valgte fora. Du kan vÃ¦lge disse og Ã¦ndre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel> hvis du Ã¸nsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilfÃ¸je nye brugere og grupper som i Ã¸jeblikket ikke har tilladelser til mindst Ã©t af de valgte fora.</para>
-			<para>For at tilfÃ¸je tilladelser til grupper vÃ¦lges en eller flere, enten i feltet <guilabel>TilfÃ¸j grupper</guilabel>. For at tilfÃ¸je tilladelser til en bruger, indtastes denne i tekstboksen <guilabel>TilfÃ¸j brugere</guilabel>, eller brug funktionen <guilabel>Find en tilmeldt bruger</guilabel>. Klik herefter pÃ¥ <guilabel>TilfÃ¸j tilladelser</guilabel> som dirigerer dig videre til tilladelseskÃ¦rmbilledet. Her listes alle de fora du tidligere valgte, med de grupper eller brugere der Ã¦ndres tilladelser for nedenfor hvert forum. </para>
-			<para>Der er to metoder til at tildele tilladelser: Du kan enten tildele dem manuelt eller bruge de foruddefinerede <guilabel>Tilladelseroller</guilabel>, som er noget simplere men ikke sÃ¥ fintmasket. Du kan skifte mellem begge metoder nÃ¥r som helst i processen. Du kan vÃ¦lge at ignorere introduktionen til manuelle tilladelser og hoppe direkte til <link linkend="quick_permissions_roles">sektionen &quot;Tilladelseroller&quot;</link> hvis du er ivrig efter at fÃ¥ alt til at virke hurtigst muligt. Men vÃ¦r som nÃ¦vnt opmÃ¦rksom pÃ¥ at disse roller kun tilbyder et ganske lille udsnit af de muligheder man har i tilladelsesystemet. Efter vores opfattelse forstÃ¥r en god Olympusadministrator at udnytte tilladelsesystemet fuldt ud. </para>
-			<para>De to metoder adskiller sig kun ved den mÃ¥de indstillingen foretages pÃ¥, de deler samme interface.</para>
+			<para>Siden med<guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner som øverst er navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst ét af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel> hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst ét af de valgte fora.</para>
+			<para>For at tilføje tilladelser til grupper vælges en eller flere, enten i feltet <guilabel>Tilføj grupper</guilabel>. For at tilføje tilladelser til en bruger, indtastes denne i tekstboksen <guilabel>Tilføj brugere</guilabel>, eller brug funktionen <guilabel>Find en tilmeldt bruger</guilabel>. Klik herefter på <guilabel>Tilføj tilladelser</guilabel> som dirigerer dig videre til tilladelseskærmbilledet. Her listes alle de fora du tidligere valgte, med de grupper eller brugere der ændres tilladelser for nedenfor hvert forum. </para>
+			<para>Der er to metoder til at tildele tilladelser: Du kan enten tildele dem manuelt eller bruge de foruddefinerede <guilabel>Tilladelseroller</guilabel>, som er noget simplere men ikke så fintmasket. Du kan skifte mellem begge metoder når som helst i processen. Du kan vælge at ignorere introduktionen til manuelle tilladelser og hoppe direkte til <link linkend="quick_permissions_roles">sektionen &quot;Tilladelseroller&quot;</link> hvis du er ivrig efter at få alt til at virke hurtigst muligt. Men vær som nævnt opmærksom på at disse roller kun tilbyder et ganske lille udsnit af de muligheder man har i tilladelsesystemet. Efter vores opfattelse forstår en god Olympusadministrator at udnytte tilladelsesystemet fuldt ud. </para>
+			<para>De to metoder adskiller sig kun ved den måde indstillingen foretages på, de deler samme interface.</para>
 		</section>
 		<section id="quick_permissions_manual">
 			<title>Tilladelser enkeltvis</title>
-			<para>Et af de vigtigste elementer er tilladelsernes vÃ¦rdi, som du er nÃ¸d til at forstÃ¥ for at arbejde med disse. En tilladelse kan have tre vÃ¦rdier:</para>
+			<para>Et af de vigtigste elementer er tilladelsernes værdi, som du er nød til at forstå for at arbejde med disse. En tilladelse kan have tre værdier:</para>
 			<itemizedlist>
 				<listitem>
 					<para><guilabel>JA</guilabel> tillader funktionen <emphasis>medmindre</emphasis> det underkendes af et <guilabel>ALDRIG</guilabel>.</para>
@@ -331,10 +331,10 @@
 					<para><guilabel>NEJ</guilabel> tillader ikke funktionen <emphasis>medmindre</emphasis> det underkendes af et <guilabel>JA</guilabel>.</para>
 				</listitem>
 				<listitem>
-					<para><guilabel>ALDRIG</guilabel> tillader under ingen omstÃ¦ndigheder denne funktion, og <emphasis>kan ikke</emphasis> underkendes af et <guilabel>JA</guilabel>.</para>
+					<para><guilabel>ALDRIG</guilabel> tillader under ingen omstændigheder denne funktion, og <emphasis>kan ikke</emphasis> underkendes af et <guilabel>JA</guilabel>.</para>
 				</listitem>
 			</itemizedlist>
-			<para>Disse tre vÃ¦rdier er vigtige fordi en bruger kan have mere end en tilladelse tildelt for den samme funktion via sit medlemskab i forskellige brugergrupper, som igen har andre tilladelsesroller tilknyttet i de forskellige fora. Hvis en bruger er medlem af gruppen &quot;Tilmeldte brugere&quot; og for eksempel en gruppe kaldet &quot;Seniorbrugere&quot;. Grupperne kan have forskellige tilladelser til at se et forum. I dette tilfÃ¦lde Ã¸nsker du at oprette et forum med navnet &quot;De gode gamle dage&quot;, som skal kunne ses af gruppen &quot;Seniorbrugere&quot;, men ikke af &quot;Tilmeldte brugere&quot;. Du sÃ¦tter naturligvis tilladelsen <guilabel>Kan se forum</guilabel> til <guilabel>Ja</guilabel> for &quot;Seniorbrugere&quot;. Men <emphasis>sÃ¦t ikke</emphasis> tilladelsen til <guilabel>Aldrig</guilabel> for &quot;Tilmeldte brugere&quot;. GÃ¸r du det kan &quot;Seniorbrugere&quot; ikke se forummet, da disse brugere som medlem af &quot;Tilmeldte brugere&quot; er sat til <guilabel>Aldrig</guilabel> som underkender <guilabel>Ja</guilabel>'et i &quot;Seniorbrugere&quot;. SÃ¦t tilladelsen til <guilabel>Nej</guilabel> i stedet. <guilabel>Nej</guilabel> er svagere og kan underkendes af et <guilabel>Ja</guilabel>.</para>
+			<para>Disse tre værdier er vigtige fordi en bruger kan have mere end en tilladelse tildelt for den samme funktion via sit medlemskab i forskellige brugergrupper, som igen har andre tilladelsesroller tilknyttet i de forskellige fora. Hvis en bruger er medlem af gruppen &quot;Tilmeldte brugere&quot; og for eksempel en gruppe kaldet &quot;Seniorbrugere&quot;. Grupperne kan have forskellige tilladelser til at se et forum. I dette tilfælde ønsker du at oprette et forum med navnet &quot;De gode gamle dage&quot;, som skal kunne ses af gruppen &quot;Seniorbrugere&quot;, men ikke af &quot;Tilmeldte brugere&quot;. Du sætter naturligvis tilladelsen <guilabel>Kan se forum</guilabel> til <guilabel>Ja</guilabel> for &quot;Seniorbrugere&quot;. Men <emphasis>sæt ikke</emphasis> tilladelsen til <guilabel>Aldrig</guilabel> for &quot;Tilmeldte brugere&quot;. Gør du det kan &quot;Seniorbrugere&quot; ikke se forummet, da disse brugere som medlem af &quot;Tilmeldte brugere&quot; er sat til <guilabel>Aldrig</guilabel> som underkender <guilabel>Ja</guilabel>'et i &quot;Seniorbrugere&quot;. Sæt tilladelsen til <guilabel>Nej</guilabel> i stedet. <guilabel>Nej</guilabel> er svagere og kan underkendes af et <guilabel>Ja</guilabel>.</para>
 			<figure id="img_quick_permissions_manual">
 				<title>Tilladelser enkeltvis</title>
 				<mediaobject>
@@ -349,7 +349,7 @@
 		</section>
 		<section id="quick_permissions_roles">
 			<title>Tilladelseroller</title>
-			<para>phpBB3 tilbyder som standard et antal foruddefinerede tilladelseroller, eller tilladelsekombinationer. Rollerne giver dig et rigt udpluk af standard tilladelsesroller som kan anvendes ved tildeling af tilladelser. Fremfor at skulle tillade hver enkelt funktion manuelt, kan du i stedet vÃ¦lge en <guilabel>rolle</guilabel> i rullemenuen. Rollebeskrivelsen vises nÃ¥r musen holdes over rollens navn. UdfÃ¸r dine Ã¦ndringer med knapperne <guilabel>Angiv tilladelser</guilabel> eller <guilabel>Angiv alle tilladelser</guilabel> nÃ¥r du er tilfreds med tilpasningerne.</para>
+			<para>phpBB3 tilbyder som standard et antal foruddefinerede tilladelseroller, eller tilladelsekombinationer. Rollerne giver dig et rigt udpluk af standard tilladelsesroller som kan anvendes ved tildeling af tilladelser. Fremfor at skulle tillade hver enkelt funktion manuelt, kan du i stedet vælge en <guilabel>rolle</guilabel> i rullemenuen. Rollebeskrivelsen vises når musen holdes over rollens navn. Udfør dine ændringer med knapperne <guilabel>Angiv tilladelser</guilabel> eller <guilabel>Angiv alle tilladelser</guilabel> når du er tilfreds med tilpasningerne.</para>
 			<figure id="img_quick_permissions_roles">
 				<title>Tilladelseroller</title>
 				<mediaobject>
@@ -361,7 +361,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Tilladelser defineret i roller er ikke alene en hurtig og let metode til at uddele tilladelser med, for erfarne administratorer er det ogsÃ¥ en sÃ¦rdeles struktureret mÃ¥de at uddelegere ansvar pÃ¥ store boards. Man kan oprette egne definerede roller, helt tilpasset boardets behov. Rolledefinitioner er dynamiske, nÃ¥r du Ã¦ndrer pÃ¥ tilladelserne for en allerede defineret rolle, bliver alle brugere og grupper som er tildelt tilladelser efter denne automatisk opdateret med det nye tilladelsesÃ¦t.</para>
+			<para>Tilladelser defineret i roller er ikke alene en hurtig og let metode til at uddele tilladelser med, for erfarne administratorer er det også en særdeles struktureret måde at uddelegere ansvar på store boards. Man kan oprette egne definerede roller, helt tilpasset boardets behov. Rolledefinitioner er dynamiske, når du ændrer på tilladelserne for en allerede defineret rolle, bliver alle brugere og grupper som er tildelt tilladelser efter denne automatisk opdateret med det nye tilladelsesæt.</para>
 		</section>
 		<section id="quick_permissions_moderators">
 			<sectioninfo>
@@ -371,49 +371,49 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>UdnÃ¦vn forumredaktÃ¸rer</title>
-			<para>Det er oftest i forbindelse med redigering af fora at man fÃ¥r brug for at Ã¦ndre i tilladelser og roller. phpBB3 tilbyder en sÃ¦rdeles simpel metode til at udnÃ¦vne forumredaktÃ¸rer.</para>
-			<para>Som du sikkert allerede har gÃ¦ttet, er redigering af specifikke fora en lokal indstilling, og du finder <guilabel>ForumredaktÃ¸rer</guilabel> under sektionen <guilabel>Forumbaserede tilladelser</guilabel>. FÃ¸rst skal du vÃ¦lge hvilket forum eller flere duk vil udnÃ¦vne nye redaktÃ¸rer for. SkÃ¦rmbilledet er delt i tre sektioner. I den fÃ¸rste kan du vÃ¦lge et forum eller flere (vÃ¦lg flere ved at holde CTRL tasten nede , eller cmd under MacOS X), hvor de redaktÃ¸rindstillinger du efterfÃ¸lgende foreta'r vil gÃ¸re sig gÃ¦ldende. Den anden sektion giver dig mulighed for at vÃ¦lge et forum hvor alle indstillingsÃ¦ndringer vil gÃ¦lde for dette forum inklusive alle dets underfora. I den sidste sektion vÃ¦lger du kun at Ã¦ndre for dette specifikke forum.</para>
-			<para>NÃ¥r forum er valgt og du har klikket pÃ¥ <guilabel>UdfÃ¸r</guilabel> prÃ¦senteres du for et skÃ¦rmbillede du sikkert er stÃ¸dt pÃ¥ fÃ¸r tidligere i denne manual: <xref linkend="img_quick_permissions_select"/>. Her vÃ¦lger du de brugere eller grupper der skal have tildelt redaktÃ¸rtilladelser i de fora du valgte fÃ¸r. VÃ¦lg disse og klik pÃ¥ knappen <guilabel>Angiv tilladelser</guilabel>.</para>
-			<para>I det nÃ¦ste skÃ¦rmbillede kan du vÃ¦lge hvilke redaktÃ¸rtilladelser de valgte brugere eller brugergrupper skal have tildelt. I phpBB3 er der foruddefineret fire redaktÃ¸rroller med hver sit tilladelsessÃ¦t, som skulle vÃ¦re dÃ¦kkende for langt de fleste boards:</para>
+			<title>Udnævn forumredaktører</title>
+			<para>Det er oftest i forbindelse med redigering af fora at man får brug for at ændre i tilladelser og roller. phpBB3 tilbyder en særdeles simpel metode til at udnævne forumredaktører.</para>
+			<para>Som du sikkert allerede har gættet, er redigering af specifikke fora en lokal indstilling, og du finder <guilabel>Forumredaktører</guilabel> under sektionen <guilabel>Forumbaserede tilladelser</guilabel>. Først skal du vælge hvilket forum eller flere duk vil udnævne nye redaktører for. Skærmbilledet er delt i tre sektioner. I den første kan du vælge et forum eller flere (vælg flere ved at holde CTRL tasten nede , eller cmd under MacOS X), hvor de redaktørindstillinger du efterfølgende foreta'r vil gøre sig gældende. Den anden sektion giver dig mulighed for at vælge et forum hvor alle indstillingsændringer vil gælde for dette forum inklusive alle dets underfora. I den sidste sektion vælger du kun at ændre for dette specifikke forum.</para>
+			<para>Når forum er valgt og du har klikket på <guilabel>Udfør</guilabel> præsenteres du for et skærmbillede du sikkert er stødt på før tidligere i denne manual: <xref linkend="img_quick_permissions_select"/>. Her vælger du de brugere eller grupper der skal have tildelt redaktørtilladelser i de fora du valgte før. Vælg disse og klik på knappen <guilabel>Angiv tilladelser</guilabel>.</para>
+			<para>I det næste skærmbillede kan du vælge hvilke redaktørtilladelser de valgte brugere eller brugergrupper skal have tildelt. I phpBB3 er der foruddefineret fire redaktørroller med hver sit tilladelsessæt, som skulle være dækkende for langt de fleste boards:</para>
 			<variablelist>
 				<varlistentry>
-					<term>StandardredaktÃ¸r</term>
+					<term>Standardredaktør</term>
 					<listitem>
-						<para>En standardredaktÃ¸r kan godkende og afvise indlÃ¦g i godkendelseskÃ¸en, redigere og slette indlÃ¦g, lukke og slette rapporter, men kan ikke nÃ¸dvendigvis Ã¦ndre afsender af indlÃ¦g. Denne redaktÃ¸r kan ogsÃ¥ uddele advarsler og se indlÃ¦gsdetaljer.</para>
+						<para>En standardredaktør kan godkende og afvise indlæg i godkendelseskøen, redigere og slette indlæg, lukke og slette rapporter, men kan ikke nødvendigvis ændre afsender af indlæg. Denne redaktør kan også uddele advarsler og se indlægsdetaljer.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Simpel redaktÃ¸r</term>
+					<term>Simpel redaktør</term>
 					<listitem>
-						<para>En simpel redaktÃ¸r kan redigere indlÃ¦g, lukke og slette rapporter samt se indlÃ¦gsdetaljer.</para>
+						<para>En simpel redaktør kan redigere indlæg, lukke og slette rapporter samt se indlægsdetaljer.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>KÃ¸redaktÃ¸r</term>
+					<term>Køredaktør</term>
 					<listitem>
-						<para>En kÃ¸redaktÃ¸r kan kun godkende og afvise indlÃ¦g der er havnet i godkendelseskÃ¸en, samt redigere indlÃ¦g.</para>
+						<para>En køredaktør kan kun godkende og afvise indlæg der er havnet i godkendelseskøen, samt redigere indlæg.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Fuldgyldige redaktÃ¸rer</term>
+					<term>Fuldgyldige redaktører</term>
 					<listitem>
-						<para>Fuldgyldige redaktÃ¸rer kan bruge alle redaktÃ¸rfunktioner, inklusiv udelukkelse.</para>
+						<para>Fuldgyldige redaktører kan bruge alle redaktørfunktioner, inklusiv udelukkelse.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
 			<figure id="img_quick_permissions_moderator">
-				<title>ForumredaktÃ¸rens tilladelser</title>
+				<title>Forumredaktørens tilladelser</title>
 				<mediaobject>
 					<imageobject>
 			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
 					</imageobject>
 					<caption>
-						<para>Angiv redaktÃ¸rens tilladelser</para>
+						<para>Angiv redaktørens tilladelser</para>
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>NÃ¥r du har valgt passende tilladelser klikker du ganske enkelt pÃ¥ <guilabel>Angiv tilladelser</guilabel>. De rollebaserede tilladelser kan Ã¦ndres og justeres mere detaljeret i samme skÃ¦rmbillede, hvis du ikke synes disse er helt passende.</para>
+			<para>Når du har valgt passende tilladelser klikker du ganske enkelt på <guilabel>Angiv tilladelser</guilabel>. De rollebaserede tilladelser kan ændres og justeres mere detaljeret i samme skærmbillede, hvis du ikke synes disse er helt passende.</para>
 		</section>
 
 		<section id="quick_permissions_global">
@@ -425,27 +425,27 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Globale tilladelser</title>
-			<para>Er de lokale tilladelser for lokale for dig? Her kan phpBB3 tilbyde globale tilladelser som dÃ¦kker alle fora pÃ¥ boardet:</para>
+			<para>Er de lokale tilladelser for lokale for dig? Her kan phpBB3 tilbyde globale tilladelser som dækker alle fora på boardet:</para>
 			<orderedlist>
 				<listitem><para>Brugertilladelser</para></listitem>
 				<listitem><para>Gruppetilladelser</para></listitem>
 				<listitem><para>Administratorer</para></listitem>
-				<listitem><para>Globale redaktÃ¸rer</para></listitem>
+				<listitem><para>Globale redaktører</para></listitem>
 			</orderedlist>
-			<para>Under &quot;Brugertilladelser&quot; og &quot;Gruppetilladelser&quot; kan for eksempel muligheden for bruge vedhÃ¦ftede filer, signaturer og avatars, for udvalgte brugere eller grupper, tillades eller forbydes. BemÃ¦rk at Ã¦ndringer i disse indstillinger kun for effekt hvis den pÃ¥gÃ¦ldende mulighed er aktiveret under &quot;Boardfinesser&quot;. Se flere detaljer i <xref linkend="quick_settings_boardfeatures"/>).</para>
-			<para>Under &quot;Administratorer&quot; har du mulighed for at give brugere eller gruppeledere tilladelse til at Ã¦ndre i forumopsÃ¦tningen eller Ã¦ndre andre brugeres tilladelse. Se flere detaljer i <xref linkend="acp_permissions"/>.</para>
-			<para>Globale redaktÃ¸rer har samme tilladelser som redaktÃ¸rer i de enkelte fora (beskrevet i <xref linkend="quick_permissions_moderators"/>), men kan redigere alle fora pÃ¥ boardet.</para>
+			<para>Under &quot;Brugertilladelser&quot; og &quot;Gruppetilladelser&quot; kan for eksempel muligheden for bruge vedhæftede filer, signaturer og avatars, for udvalgte brugere eller grupper, tillades eller forbydes. Bemærk at ændringer i disse indstillinger kun for effekt hvis den pågældende mulighed er aktiveret under &quot;Boardfinesser&quot;. Se flere detaljer i <xref linkend="quick_settings_boardfeatures"/>).</para>
+			<para>Under &quot;Administratorer&quot; har du mulighed for at give brugere eller gruppeledere tilladelse til at ændre i forumopsætningen eller ændre andre brugeres tilladelse. Se flere detaljer i <xref linkend="acp_permissions"/>.</para>
+			<para>Globale redaktører har samme tilladelser som redaktører i de enkelte fora (beskrevet i <xref linkend="quick_permissions_moderators"/>), men kan redigere alle fora på boardet.</para>
 		</section>
 
 	</section>
 	<section id="quick_support">
-		<title>FÃ¥ support</title>
-		<para><ulink url="http://www.phpbb.com/about/">phpBB Team</ulink>et stiller flere muligheder til rÃ¥dighed hvor der kan hentes hjÃ¦lp og support til phpBB. Udover denne onlinedokumentation, er der <ulink url="http://www.phpbb.com/community/viewforum.php?f=46">supportforummet pÃ¥ www.phpbb.com</ulink> hvor der findes svar og hjÃ¦lp til nÃ¦sten alle tÃ¦nkelige problemstillinger. Inden du spÃ¸rger om hjÃ¦lp i vore fora, bÃ¸r du fÃ¸rst bruge sÃ¸gefunktionen og se om ikke andre har haft lignende problemer. Har du ikke held med sÃ¸gningen, er du velkommen til at oprette et ny emne hvor du kan stille spÃ¸rgsmÃ¥let. VÃ¦r sÃ¥ beskrivende som muligt nÃ¥r du forklarer til problem! En prÃ¦cis beskrivelse vil altid give dig et hurtigere og korrekt svar. Brug venligst denne <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&amp;t=543515">Support Request Template</ulink>, som sikrer at du fÃ¥r de nÃ¸dvendigste informationer med, nÃ¥r du stiller dit spÃ¸rgsmÃ¥l.</para>
+		<title>Få support</title>
+		<para><ulink url="http://www.phpbb.com/about/">phpBB Team</ulink>et stiller flere muligheder til rådighed hvor der kan hentes hjælp og support til phpBB. Udover denne onlinedokumentation, er der <ulink url="http://www.phpbb.com/community/viewforum.php?f=46">supportforummet på www.phpbb.com</ulink> hvor der findes svar og hjælp til næsten alle tænkelige problemstillinger. Inden du spørger om hjælp i vore fora, bør du først bruge søgefunktionen og se om ikke andre har haft lignende problemer. Har du ikke held med søgningen, er du velkommen til at oprette et ny emne hvor du kan stille spørgsmålet. Vær så beskrivende som muligt når du forklarer til problem! En præcis beskrivelse vil altid give dig et hurtigere og korrekt svar. Brug venligst denne <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&amp;t=543515">Support Request Template</ulink>, som sikrer at du får de nødvendigste informationer med, når du stiller dit spørgsmål.</para>
 
-		<para>Udover ovennÃ¦vnte supportforum pÃ¥ www.phpbb.com, stiller vi desuden en <ulink url="http://www.phpbb.com/kb/">Videnbase</ulink> til rÃ¥dighed. Her er gode artikler skrevet og udarbejdet af andre brugere, og som dÃ¦kker mange ofte stillede spÃ¸rgsmÃ¥l. Vort community har brugt meget tid pÃ¥ at skrive disse artikler, lÃ¦s dem venligst.</para>
+		<para>Udover ovennævnte supportforum på www.phpbb.com, stiller vi desuden en <ulink url="http://www.phpbb.com/kb/">Videnbase</ulink> til rådighed. Her er gode artikler skrevet og udarbejdet af andre brugere, og som dækker mange ofte stillede spørgsmål. Vort community har brugt meget tid på at skrive disse artikler, læs dem venligst.</para>
 
-		<para>Vi yder realtidsupport pÃ¥ <ulink url="irc://irc.phpbb.com/phpbb">#phpBB</ulink>, et populÃ¦rt Open Source IRC netvÃ¦rk, <ulink url="http://www.freenode.net/">Freenode</ulink>. Normalt er der altid nogen online fra teamene, og andre brugere som gerne vil hjÃ¦lpe dig (ofte er der +60 brugere pÃ¥ kanalen). LÃ¦s venligst <ulink url="http://www.phpbb.com/support/irc/">IRC regler</ulink> inden du tilslutter dig kanalen, i det vi har nogle fÃ¥ basale regler om netikette vi beder dig fÃ¸lge, overholdes disse ikke kan man ikke forvente at fÃ¥ svar. Og forvent ikke svar indenfor 30 sekunder, men ha' lidt tÃ¥lmodighed!</para>
+		<para>Vi yder realtidsupport på <ulink url="irc://irc.phpbb.com/phpbb">#phpBB</ulink>, et populært Open Source IRC netværk, <ulink url="http://www.freenode.net/">Freenode</ulink>. Normalt er der altid nogen online fra teamene, og andre brugere som gerne vil hjælpe dig (ofte er der +60 brugere på kanalen). Læs venligst <ulink url="http://www.phpbb.com/support/irc/">IRC regler</ulink> inden du tilslutter dig kanalen, i det vi har nogle få basale regler om netikette vi beder dig følge, overholdes disse ikke kan man ikke forvente at få svar. Og forvent ikke svar indenfor 30 sekunder, men ha' lidt tålmodighed!</para>
 
-		<para>Er engelsk ikke dit modersmÃ¥l? Ingen problem! Vores <ulink url="http://www.phpbb.com/support/intl/">internationale supportside</ulink> linker til forskellige websites som yder support pÃ¥ dansk, spansk, tysk, fransk m.fl.</para>
+		<para>Er engelsk ikke dit modersmål? Ingen problem! Vores <ulink url="http://www.phpbb.com/support/intl/">internationale supportside</ulink> linker til forskellige websites som yder support på dansk, spansk, tysk, fransk m.fl.</para>
 	</section>
 </chapter>
