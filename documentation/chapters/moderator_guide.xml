@@ -128,7 +128,7 @@
 			</sectioninfo>
 			<title>Deleting a topic or post</title>
 			<para>If enabled within the <link linkend="admin_control_panel">Administration Control Panel</link> permissions, a user may delete their own posts when either viewing a topic or editing a previous post. The user may only delete a topic or post if it has not yet been replied to.</para>
-			<para>Administrators and moderators have similar editing permissions, but only administrators are allowed to remove topics regardless of replies. Using the selection menu beneath topics allows quick removal. The <link linkend="moderator_mcp">Moderator Control Panel</link> allows multiple deletions of separate posts.</para>
+			<para>To delete other user's posts, one must have appropriate moderator forum-based permission - <guilabel>Can delete posts</guilabel>. Using the selection menu beneath topics allows quick removal. The <link linkend="moderator_mcp">Moderator Control Panel</link> allows multiple deletions of separate posts.</para>
 			<tip>
 				<para>Please note that any topics or posts cannot be retrieved once deleted. Consider using a hidden forum that topics can be moved to for future reference.</para>
 			</tip>

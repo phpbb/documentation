@@ -98,7 +98,7 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introduction</title>
-			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (the <ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> button (see <xref linkend="img_quick_installation_intro" />).</para>
+			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.0 is released under (the <ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> tab (see <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Requirements</title>
