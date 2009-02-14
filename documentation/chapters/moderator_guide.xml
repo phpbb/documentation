@@ -161,7 +161,7 @@
 				</sectioninfo>
 				<title>Shadow Topics</title>
 				<para>Shadow topics can be created when moving a topic from one forum to another. A shadow topic is simply a link to the topic in the forum it’s been moved from. You may choose whether or not to leave a shadow topic by selecting or unselecting the checkbox in the <guilabel>Move Topic</guilabel> dialog.</para>
-				<para>To delete a shadow topic, navigate to the forum containing the shadow topic, and use the <link linkend="moderator_mcp">Moderator Control Panel</link>to select and delete the topic.</para>
+				<para>To delete a shadow topic, navigate to the forum containing the shadow topic, and use the <link linkend="moderator_mcp">Moderator Control Panel</link> to select and delete the topic.</para>
 				<note>
 					<para>Deleting a shadow topic will <emphasis>not</emphasis> delete the original topic that it is a shadow of.</para>
 				</note>
@@ -400,8 +400,6 @@
 			<note>
 				<para>Depending on the specific permissions set to your user account, some of the aforementioned options and abilities may not be available to you.</para>
 			</note>
-			
-			<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
 		</section>
 	</section>
 </chapter>

@@ -84,10 +84,6 @@
 		</sectioninfo>
 		<title>Installation</title>
 		<para>phpBB 3.0 Olympus has an easy to use installation system that will guide you through the installation process.</para>
-		<!--BETA SPECIFIC /-->
-		<note>
-			<para>phpBB 3.0 Beta 1 will not yet have the ability to upgrade from phpBB 2.0.x or to convert from a different software package. This will be included in the later Beta or <acronym>RC</acronym> stages.</para>
-		</note>
 		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introduction</title>
@@ -337,7 +333,7 @@
 					<para><guilabel>NEVER</guilabel> will completely disallow a permission setting for a user. It <emphasis>cannot</emphasis> be overwritten by a <guilabel>YES</guilabel>.</para>
 				</listitem>
 			</itemizedlist>
-			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>Never</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>No</guilabel> overrides any <guilabel>Yes</guilabel> they have . Leave the setting at <guilabel>No</guilabel> instead. <guilabel>No</guilabel> is a weak <guilabel>Never</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
+			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>Never</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>Never</guilabel> overrides any <guilabel>Yes</guilabel> they have. Leave the setting at <guilabel>No</guilabel> instead. <guilabel>No</guilabel> is a weak <guilabel>Never</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
 			<figure id="img_quick_permissions_manual">
 				<title>Manual permissions</title>
 				<mediaobject>

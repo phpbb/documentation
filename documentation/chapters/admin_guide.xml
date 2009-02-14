@@ -270,9 +270,8 @@
 					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
 					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
-					<listitem><para><guilabel>Jabber username</guilabel>: The Jabber username that your board will use when connecting to the specified Jabber server. If the username you specify is unregistered on the server, phpBB3 will attempt to register the username for you.</para></listitem>
+					<listitem><para><guilabel>Jabber username or JID</guilabel>: The Jabber username or a complete Jabber ID (looks like an e-mail address) that your board will use when connecting to the specified Jabber server. You must specify an already registered account.</para></listitem>
 					<listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para></listitem>
-					<listitem><para><guilabel>Jabber resource</guilabel>: This is the location of the particular connection that you can specify. For example, &quot;board&quot; or &quot;home&quot;.</para></listitem>
 					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to &quot;0&quot;, messages will be sent immediately and is will not be queued for later sending.</para></listitem>
 				</itemizedlist>
 			</section>
@@ -565,7 +564,7 @@
 					
 					<itemizedlist>
 						<title>Fulltext native</title>
-						<listitem><para><guilabel>Enable fulltext updating</guilabel>: This option allows you to control whether or not your board's search index will update when posts are made. If you would like to enable this, choose <guilabel>Yes</guilabel>. Note that this is only relevant if your board's search functionality is disabled entirely.</para></listitem>
+						<listitem><para><guilabel>Enable fulltext updating</guilabel>: This option allows you to control whether or not your board's search index will update when posts are made. If you would like to enable this, choose <guilabel>Yes</guilabel>. Note that this setting is not relevant if your board's search functionality is disabled entirely.</para></listitem>
 						<listitem><para><guilabel>Min characters indexed by search</guilabel>: You can also control the minimum number of characters words must contain in order to be included in your board's search index. It is recommended that you not set this too low in order to have a quality search index. All positive integers are valid values.</para></listitem>
 						<listitem><para><guilabel>Max characters indexed by search</guilabel>: Just like the above setting, you can also control the maximum number of characters words must contain in order to be included in your board's search index. If a word has more than this number of characters in it, it will not be included in the search index. All positive integers are valid values.</para></listitem>
 						<listitem><para><guilabel>Common word threshold</guilabel>: Like phpBB2's stopwords feature, you can prevent the use of common words that you specify. However, this feature is expanded upon in phpBB3. You can now control the threshold that a word can have; this means that if a word is contained in more than a certain percentage of posts on your board, it will be deemed as a common word, and will be ignored in search queries. All positive integers are valid values, and represent the percentage of posts on your board words can be contained in. If you would like to disable this threshold and thereby allow searches using all words, even if they can be common, set this value to &quot;0&quot;. This setting only applies if your board has more than 100 posts.</para></listitem>
@@ -718,9 +717,9 @@
 			
 			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
 				<code>[font={TEXT1}]{TEXT2}[/font]</code>
-				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>,while <guilabel>FONTNAME</guilabel> represents whatever font name the user types in.
+				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT1</guilabel>, while <guilabel>TEXT2</guilabel> represents whatever font name the user types in.
 			</para>
-			<para>In the <guilabel>HTML Replacement</guilabel>form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
+			<para>In the <guilabel>HTML Replacement</guilabel> form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
 				<code>&lt;span style="font-family: {TEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
 				This HTML code will be used to actually format the user's text.
 			</para>
