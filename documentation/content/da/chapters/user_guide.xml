@@ -48,22 +48,22 @@
 			</mediaobject>
 		</figure>
 		<para>Linket <guilabel>Tilmeld</guilabel> øverst på siden leder dig til boardets regler. Hvis du accepterer disse fortsætter tilmeldingsproceduren. Hvis du ikke accepterer betingelserne er det ikke muligt at tilmelde sig. I nogle tilfælde kan du blive bedt om at vælge om du er over eller under en bestemt alder. Hvis det er tilfældet, er det fordi administratoren har valgt at følge den amerikanske lov <acronym>COPPA</acronym>. Personer under 13 år skal have en forældre eller værges godkendelse for at tilmelde sig offentlige boards. Der fremsendes en email med yderligere instrukser.</para>
-		<para>Næste trin er udfyldelse af personlig information hvor du selv vælger brugernavn, emailadresse, kodeord, sprog og tidszone.</para>
-		<para> Nederst på samme side vil du normalt se afsnittet <emphasis>Bekræftelse på tilmelding</emphasis> indeholdende et grafikfelt med nogle tegn som udgår din kode. Indtast disse tegn i boksen umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Many boards will have this, otherwise known as a  <acronym>CAPTCHA</acronym>, which is an image with distorted letters and numbers which you must then type into an adjacent box. The reason for this is to ensure that you are a legitimate user registering (as opposed to a spam robot performing an automated registration). Simply enter the characters you see into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. If you cannot understand the code, refresh the page to get a new code.</para>
+		<para>Næste trin er udfyldelse af personlig information hvor du selv vælger brugernavn, emailadresse, kodeord, sprog og tidzone.</para>
+		<para>Nederst på samme side vil du normalt se sektionen <emphasis>Bekræftelse på tilmelding</emphasis>, indeholdende et grafikfelt med nogle bogstaver og tal som udgår din kode. Indtast disse tegn i feltet umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Mange boards anvender denne metode, kaldet <acronym>CAPTCHA</acronym>, for bedst muligt at blokere for tilmeldinger fra spamrobotter. Er tegnene for svære at aflæse, kan du prøve at genopfriske siden, for at få vist en ny kode.</para>
 		<figure id="user_registering_captcha">
-			<title>The Visual Confirmation Object</title>
+			<title>Elementet visuel bekræftelse</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/user_guide/visual_confirmation.png"/>
 				</imageobject>
 				<caption>
-					<para>This is an example of a visual confirmation code you might see.</para>
+					<para>Et eksempel på koden der vises i den visuelle bekræftelse.</para>
 				</caption>
 			</mediaobject>
 		</figure>
-		<para>Administratoren kan også have valgt at din nye konto skal aktiveres. Den ene mulighed er at du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er tilfældet vil du se denne meddelelse:<blockquote><guilabel> Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</guilabel></blockquote>It is also possible that the administrator himself/herself has to activate the account.</para>
-		<para>Some boards will have custom profile fields. If the administrator has elected to display custom profile fields on the registration screen, these will also appear. In some cases, these custom profile fields will also be required fields, meaning they must not be left blank.</para>
-		<para>Once you have completed all of the fields on the registration page, clicking the <guilabel>Submit</guilabel> button will complete the process. If you wish to clear all fields, clicking the <guilabel>Reset</guilabel> button will do this for you. After clicking <guilabel>Submit</guilabel>, you will be advised of your next step. In most cases, you will be sent an e-mail to the address you specified with a link to finalise the registration. Other options also include being able to login immediately (i.e. there are no further actions for the registration process) or waiting until an administrator reviews your registration and accepts it, in which case you will be notified by e-mail.</para>
+		<para>Administratoren kan desuden have valgt at din nye konto skal aktiveres. Den ene mulighed er at du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er tilfældet vil du se denne meddelelse:<blockquote><guilabel> Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</guilabel></blockquote> Det er også muligt at administrator selv skal aktivere din konto.</para>
+		<para>Nogle boards anvender ekstra profilfelter i tilmeldingsformularen. Administrator kan have valgt at disse skal udfyldes for at gennemføre tilmeldingen.</para>
+		<para>Når alle felter i tilmeldingsformularen er udfyldt, klikkes på <guilabel>Udfør</guilabel> for at gennemføre tilmeldingen. Ønsker du at slette alle angivne data i felterne klikkes på <guilabel>Nulstil</guilabel>. Når du klikker på <guilabel>Udfør</guilabel> bliver du adviseret om næste trin. I de fleste tilfælde får du tilsendt en email til den adresse du angav i tilmeldingsformularen. Alternativt kan du også få mulighed for at logge ind med det samme eller at afvente administrator gennemgår din tilmelding og accepterer denne. I sidstnævnte tilfælde modtager du en email når din tilmelding er accepteret.</para>
 	</section>
 	<section id="user_control_panel">
 		<sectioninfo>

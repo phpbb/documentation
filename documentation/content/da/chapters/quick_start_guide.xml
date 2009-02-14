@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="quick_start_guide">
@@ -195,7 +195,7 @@
 			</figure>
 			<para>Her er desuden mulighed for ændre tidszone (<guilabel>Tidszone for board</guilabel>) og måden dato vises på (<guilabel>Datoformat</guilabel>).</para>
 			<para>Du kan vælge en ny typografi (efter den er installeret) for boardet og vælge at alle skal nyde den, uanset hvad brugerne måtte have i  &quot;Brugerkontrolpanel&quot;. Typografien bliver også gældende for alle de fora hvor du ikke specificeret en anden. Læs flere detaljer om hvor man kan hente nye typografier og hvordan de installeres på <ulink url="http://www.phpbb.com/styles/">typografisiden</ulink> på <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
-			<para>Skal dit board hovedsaglig anvendes nationalt, kan du også her ændre standardsproget fra engelsk til det sprog (<guilabel>Standardsprog</guilabel>) du ønsker skal vises for gæster. Tilmeldte brugere kan i brugerkontrolpanelet selv vælge standardsprog imellem de sprogpakker der er installeret. Som standard downloades phpBB3 kun med den engelske sprogpakke. For at give mulighed for valg mellem flere sprog i førnævnte felt, skal den rette sprogpakke installeres. Læs flere detaljer her: <link linkend="acp_system_language">Sprogpakker</link> .</para>
+			<para>Skal dit board hovedsaglig anvendes nationalt, kan du også her ændre standardsproget fra engelsk til det sprog (<guilabel>Standardsprog</guilabel>) du ønsker skal vises for gæster. Tilmeldte brugere kan i brugerkontrolpanelet selv vælge standardsprog imellem de sprogpakker der er installeret. Som standard downloades phpBB3 kun med den engelske sprogpakke. For at give mulighed for valg mellem flere sprog i førnævnte felt, skal den rette sprogpakke installeres. Læs flere detaljer her: <link linkend="acp_system_language">Sprogpakker</link>.</para>
 			<!--TODO: Correct ACP link-->
 		</section>
 		<!--/board_settings-->
@@ -267,7 +267,7 @@
 		</sectioninfo>
 		<title>Indstilling af tilladelser</title>
 		<para>Når du har oprettet dit første forum skal du bestemme hvem der skal have adgang til det og hvem der må gøre hvad i forummet. Her skal du bruge tilladelseindstillingerne, hvor du for eksempel kan forbyde ikke tilmeldte brugere at skrive indlæg og uddelegere redaktøropgaverne til andre brugere. Næsten enhver brugerhandling i phpBB3 kan kontrolleres med tilladelseindstillingerne.</para>
-	</section>
+
 		<section id="quick_permissions_types">
 			<title>Tilladelsetyper</title>
 			<para>Der findes fire typer af tilladelser:</para>
