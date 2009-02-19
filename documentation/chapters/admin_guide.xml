@@ -402,7 +402,7 @@
 					<varlistentry>
 						<term>Session IP validation</term>
 						<listitem>
-							<para>This determines how much of the users'  <glossterm>IP address</glossterm> is used to validate a session.</para>
+							<para>This determines how much of the users' <glossterm>IP address</glossterm> is used to validate a session.</para>
 							<para>There are four settings available: <guilabel>All</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, and <guilabel>None</guilabel>. The <guilabel>All</guilabel> setting will compare the complete IP address. The <guilabel>A.B.C</guilabel> setting will compare the first x.x.x of the IP address. The <guilabel>A.B</guilabel> setting will compare the first x.x of the IP address. Lastly, selecting <guilabel>None</guilabel> will disable IP address checking altogether.</para>
 						</listitem>
 					</varlistentry>
@@ -538,7 +538,7 @@
 					<itemizedlist>
 						<title>General Search Settings</title>
 						<listitem><para><guilabel>Enable search facilities</guilabel>: Setting this option to <guilabel>Yes</guilabel> will enable the search functionality for your users; member-searching functionality will also be enabled.</para></listitem>
-						<listitem><para><guilabel>User search flood interval</guilabel>:  This value indicates the number of seconds that your users have to wait between consecutive searches. This value is checked independently for each user. All positive integers are valid values. If you want to disable checking for search intervals for users, set this value to &quot;0&quot;.</para></listitem>
+						<listitem><para><guilabel>User search flood interval</guilabel>: This value indicates the number of seconds that your users have to wait between consecutive searches. This value is checked independently for each user. All positive integers are valid values. If you want to disable checking for search intervals for users, set this value to &quot;0&quot;.</para></listitem>
 						<listitem><para><guilabel>Guest search flood interval</guilabel>: This is the number of seconds between searches that guest users must wait. This value is shared for all guest users, if one guest searches, the others will have to wait until this interval passes. All positive integers are valid values. If you want to disable checking for search intervals for guests, set this value to &quot;0&quot;.</para></listitem>
 						<listitem><para><guilabel>Search page system load limit</guilabel>: You can also limit the amount of load your system will undergo for searches. If the system load exceeds this value, your board will go offline and be temporarily disabled. All numbers between 0 and 1.0 (inclusive) are valid values. A value of &quot;1.0&quot;, for example, represents about 100% utilisation of a single processor; if the system load exceeds this value, the board will go offline. Note that this feature only works for *nix-based servers.</para></listitem>
 						<listitem><para><guilabel>Min author name characters</guilabel>: Users have to enter at least this many characters of the name when performing a wildcard author search. If the author's username is shorter than this number, your users can still search for the author's posts by entering the complete username. All positive integers are valid values.</para></listitem>
@@ -1291,22 +1291,22 @@
 			</sectioninfo>
 			<title>Users' permissions</title>
 			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
-		            
-		   	 <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
-		    
-		    	<para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
-		    
-		    	<important>
-		    		<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
-		    	</important>
-			
+
+			<para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
+
+			<para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
+
+			<important>
+				<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
+			</important>
+
 			<para>To edit the user's <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
-		
+
 			<para>To edit the user's <guilabel>Moderative permissions</guilabel>, select "<guimenuitem>Moderator permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are three categories of permissions you may edit: <guilabel>Post actions</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Topic actions</guilabel>.</para>
-		
+
 			<para>To edit the user's <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
 		</section>
-		
+
 		<section id="acp_users_forum_permissions">
 			<sectioninfo>
 				<authorgroup>
@@ -1695,12 +1695,50 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>ameeck</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Permission Overload</title>
-		<para><!-- TODO: stuff about permissions --></para>
+		<para>On your board, you will need to control what users can and cannot do. With the flexible and detailed system that Olympus provides, you have very extensive possibilities of specifying and managing user and group permissions. There are basically two type of permissions - <guilabel>Global permissions</guilabel>, which apply to the whole board or are not related to forums and posts, and <guilabel>Forum based permissions</guilabel>, which can be used to control specific permissions for each forum.</para>
+		<para>To understand how to set permissions and to know how to use the interface, it is important to recognize the different types of permissions and tools that the <guilabel>Permission</guilabel> tab in the <acronym>ACP</acronym> provides:</para>
+		<variablelist>
+			<varlistentry>
+				<term>Global Permissions</term>
+				<listitem><para>These affect the whole board and are not bound to specific forums. They include user permissions, which limit the use of the <acronym>UCP</acronym>, searching, private messaging, using of avatars/signatures etc. Administrator permissions are also set here, as they are Global.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term>Forum Based Permissions</term>
+				<listitem><para>These permissions are set for each forum/user or group combination individually. They can be divided into two types: User permissions and Moderator permissions. The first control if a user or group can see the forum, post in it, and so on, while the Moderator permissions control if the user or group can do moderator-related actions in it.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term>Permission Roles</term>
+				<listitem><para>In order to ease setting of permissions, you can create roles, that have a pre-defined set of permissions and which you can then assign to users or groups. phpBB already prepared some predefined roles for you to use - e.g., in forum based permissions, you can make each user a <guilabel>Standard Moderator</guilabel>, <guilabel>Full Moderator</guilabel> or <guilabel>Limited Moderator</guilabel>, etc. If you didn't have roles, you would have to set every single permission individually for each user.</para></listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Permission Masks</term>
+				<listitem><para>In this section, you do not set or change anything, but you can view the final permissions a user or group has depending on your settings in the other sections. This feature is particularly useful when you need to debug your permissions and for example, you cannot find out why someone doesn't have the permission you want him to have.</para></listitem>
+			</varlistentry>
+		</variablelist>
+		<para>Each permission can be assigned to a group or a user. We recommend you to use group permissions when possible - a simple example why: When you want to add a moderator to a forum, instead of assigning individual moderator permissions for each forum to him, you will just add him to the group which already has those permissions.</para>
+		<!-- TODO add link when masks section is finished -->
+		<para>When setting permissions, you will encounter three possible values - NO, YES and NEVER, with NO as the default value for each permission. If you set a YES, it overrides the NO, however, if the permissions is set to NEVER, you cannot override it by setting it to YES in another place. If you still have problems understanding this system, see the Permissions Masks section.</para>
+
+		<section id="acp_permissions_global">
+			<title>Global Permissions</title>
+		</section>
+		<section id="acp_permissions_forumbased">
+			<title>Forum Based Permissions</title>
+		</section>
+		<section id="acp_permissions_roles">
+			<title>Permission Roles</title>
+		</section>
+		<section id="acp_permissions_masks">
+			<title>Permission Masks</title>
+		</section>
 	</section>
 
 	<section id="acp_styles">
@@ -1738,13 +1776,13 @@
 		</para>
 		
 		<section id="acp_styles_templates">
-		  <title>Templates</title>
+			<title>Templates</title>
 		</section>
 		<section id="acp_styles_themes">
-		  <title>Themes</title>
+			<title>Themes</title>
 		</section>
 		<section id="acp_styles_imagesets">
-		  <title>Imagesets</title>
+			<title>Imagesets</title>
 		</section>
 		<!-- TODO: More stuff about styles -->
 	</section>
@@ -1865,7 +1903,7 @@
 			<title>Search Indexing</title>
 			<para>phpBB 3.0 provides you with a powerful search system which can be used to search throughout your board. The main controls for the search features are located in the <link linkend="acp_server_search">Search settings</link> section. Here you can manage the <guilabel>search index</guilabel>, which is used to hold the data necessary for quick and precise search results, it's something like an giant table of contents. By default, two search backends are available - fulltext native, which is included in the phpBB code and works on all <glossterm>DBMS</glossterm>s, and fulltext mysql, which uses the built-in MySQL fulltext searching feature. The first one offers more flexible configuration, while the second one doesn't take too much space in the database and the index is created much faster.</para>
 			<note>
-			  <para>Creating a search index can take a very long time, a new window will pop up and refresh itself while creating the necessary search table entries. Please be patient, the process can take several hours on large boards.</para>
+				<para>Creating a search index can take a very long time, a new window will pop up and refresh itself while creating the necessary search table entries. Please be patient, the process can take several hours on large boards.</para>
 			</note>
 			<para>The fulltext native backend works like this: it uses two tables, one containing the words, which are used on the board and which have a numeric ID assigned and a second table, which links post IDs to word IDs. This system is very fast when you need to search a specific word(s) in the whole database, the following statistics, which are offered on the Search Index page, describe how many words and relations the system holds:</para>
 			<variablelist>
@@ -1915,7 +1953,7 @@
 			<title>Checking for updates</title>
 			<para>The phpBB 3.0.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use one of the other packages provided.</para>
 			<para>You will be notified in your ACP if a new version is released, you will also have a link to the newest release announcement, which will brief you on the added features and the overall changelog.</para>
-			<para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply  go to the <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
+			<para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply go to the <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
 		</section>
 		<section id="acp_system_spiders">
 			<sectioninfo>
@@ -1926,7 +1964,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Managing Search Robots</title>
-			<para>phpBB 3 introduced a new system for managing search indexer and bot accounts. It allows you to identify these automated bots by their IP or a part of their user-agent, which is a setting that normally identifies the browser of a user. After you add a bot and it is recognized, phpBB does not treat the session as anonymous, but uses the created bot account. Bots use permissions set by the predefined Bots group. Identifying bots is important so that phpBB can serve them content which is more appropriate for search engines - dead links to pages without content are omitted, e.g. posting pages, report post pages etc. Bots never receive a session ID in the URL, which should not appear in the search results.  You can also assign a specific style and language to bots.</para>
+			<para>phpBB 3 introduced a new system for managing search indexer and bot accounts. It allows you to identify these automated bots by their IP or a part of their user-agent, which is a setting that normally identifies the browser of a user. After you add a bot and it is recognized, phpBB does not treat the session as anonymous, but uses the created bot account. Bots use permissions set by the predefined Bots group. Identifying bots is important so that phpBB can serve them content which is more appropriate for search engines - dead links to pages without content are omitted, e.g. posting pages, report post pages etc. Bots never receive a session ID in the URL, which should not appear in the search results. You can also assign a specific style and language to bots.</para>
 			<para>You can easily track if a specific search indexer visited your site recently by checking the <guilabel>Last Visit</guilabel> column on the botlist page.</para>
 			<note>
 				<para>Bots do not use permissions from the Guest group, but permissions from the Bots group. For more about predefined groups, please read <xref linkend="acp_groups_types"/></para>
