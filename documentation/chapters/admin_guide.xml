@@ -488,7 +488,7 @@
 				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
 					<itemizedlist>
 						<title>General settings</title>
-						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers are valid values for this option. (For example, if your server has two processors, a setting of 2.0 would represent 100% server utilisation of both processors.) Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
+						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the systemâ€™s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers are valid values for this option. (For example, if your server has two processors, a setting of 2.0 would represent 100% server utilisation of both processors.) Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
 						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
 						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline and be temporarily disabled. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline and be temporarily disabled. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
 						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
@@ -1723,12 +1723,81 @@
 				<listitem><para>In this section, you do not set or change anything, but you can view the final permissions a user or group has depending on your settings in the other sections. This feature is particularly useful when you need to debug your permissions and for example, you cannot find out why someone doesn't have the permission you want him to have.</para></listitem>
 			</varlistentry>
 		</variablelist>
-		<para>Each permission can be assigned to a group or a user. We recommend you to use group permissions when possible - a simple example why: When you want to add a moderator to a forum, instead of assigning individual moderator permissions for each forum to him, you will just add him to the group which already has those permissions.</para>
+		<figure id="img_quick_permissions_types_admin">
+				<title>Global and local permissions</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
+					</imageobject>
+					<caption>
+						<para>Global and local permissions</para>
+					</caption>
+				</mediaobject>
+			</figure>
+		<note id="user_group_permission_note"><para>Each permission can be assigned to a group or a user. We recommend you to use group permissions when possible - a simple example why: When you want to add a moderator to a forum, instead of assigning individual moderator permissions for each forum to him, you will just add him to the group which already has those permissions.</para></note>
 		<!-- TODO add link when masks section is finished -->
 		<para>When setting permissions, you will encounter three possible values - NO, YES and NEVER, with NO as the default value for each permission. If you set a YES, it overrides the NO, however, if the permissions is set to NEVER, you cannot override it by setting it to YES in another place. If you still have problems understanding this system, see the Permissions Masks section.</para>
 
 		<section id="acp_permissions_global">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Global Permissions</title>
+			<para>Global permissions are the first section you will find under the <guilabel>Permissions</guilabel> tab. They are used to assign user, global moderator and administrator permissions. This section has four subsections:</para>
+			<variablelist>
+			<varlistentry>
+				<term><guilabel>Users’ permissions</guilabel></term>
+				<listitem><para>These are used to assign any of the above mentioned permissions to a specific user. Generally, it is better to assign permissions to groups as <link linkend="user_group_permission_note">described here</link> to ease their later management.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><guilabel>Groups’ permissions</guilabel></term>
+				<listitem><para>Exactly the same as the above with one difference, here you will be specifying a group whose permissions will be edited.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><guilabel>Administrators</guilabel></term>
+				<listitem><para>This page tells you what users or groups on your board have access to the <acronym>ACP</acronym>. It allows you to edit their current permissions and add new administrators or administrator groups.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><guilabel>Global moderators</guilabel></term>
+				<listitem><para>Similarly to the section mentioned above, this page allows you to see the board's Global moderators, they are users which can moderate every forum on the board. phpBB added a predefined Global Moderator group for you with preset permissions.</para></listitem>
+			</varlistentry>
+		</variablelist>
+
+		<para>In order to add or change permissions to a specific user or group, click the appropriate section. Then select the group name from the drop-down box or type the user's username. See <xref linkend="img_choose_group_permissions" /> for an image of the screen.</para>
+
+		<figure id="img_choose_group_permissions">
+			<title>Choosing a group when setting permissions</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/choose_group_permissions.png"/>
+				</imageobject>
+				<caption>
+					<para>The screen you will see after you click <guilabel>Groups' permissions</guilabel>. Here you select the group for which you will edit permissions.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		
+		<para>After you select a user or group, you will see a page where you can finally set specific permissions. Notice a few things on the page - the drop-down box, where you can select what type of permissions to change, the <guilabel>Advanced Permissions</guilabel> link, which will allow you to assign more granular permissions, and the <guilabel>Role</guilabel> drop-down box, which allows you to assign a predefined set of permissions for the current case.</para>
+
+		<figure id="img_setting_global_group_permissions">
+			<title>Setting global user/group permissions</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
+				</imageobject>
+				<caption>
+					<para>The screen you will see after you select a user or group in the first two Global permissions sections. Here you edit global permissions such as profile control, search, private messaging etc. By selecting <guilabel>Global moderator permissions</guilabel> or <guilabel>Admin permissions</guilabel> from the drop-down box, you can change additional settings for the user.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		
 		</section>
 		<section id="acp_permissions_forumbased">
 			<title>Forum Based Permissions</title>
@@ -1874,7 +1943,6 @@
 						<para>Use the CTRL and Shift keys together with your mouse to select individual tables.</para>
 					</tip>
 				</listitem>
-
 			</itemizedlist>
 			<itemizedlist>
 				<title>Database restore</title>
@@ -2070,6 +2138,7 @@
 			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &raquo; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &raquo; Category (headers on the left-hand side) &raquo; Module (individual sections).</para>
 			<para>Very often, MODs that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
 			<para>To create a module category, use the text field next to the <guilabel>Create new module</guilabel> button. Enter the category title, click the button and on the next page ensure that the <guilabel>Module type</guilabel> is <guilabel>Category</guilabel>, the module is <guilabel>enabled</guilabel> and that the <guilabel>Module parent</guilabel> is set correctly. After you create a category, you can browse to it through the list of modules and add a specific module that is saved in a file. Modules are saved in the appropriate directory (acp/, mcp/ or /ucp) contained in the <filename>includes/</filename> directory.</para>
+			<warning><para>By disabling the Module Management module, it is possible to cut yourself off from the ACP and other control panels. Be careful when you are editing modules.</para></warning>
 			<itemizedlist>
 				<title>Adding a module</title>
 				<listitem><para><guilabel>Module language name</guilabel>: This should be set to the language constant that holds the module name in the different languages, which are used on the board. You can also specify a normal title here, if you do not have the module title translated.</para></listitem>
