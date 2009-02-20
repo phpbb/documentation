@@ -8,8 +8,8 @@ rm -rf build
 
 xsltproc --xinclude xsl/olympus_php.xsl olympus_doc.xml
 
-#echo "Copying style.css to $path/"
-#cp style.css $path/
+# echo "Copying style.css to $path/"
+# cp style.css $path/
 if [ "$?" == "0" ]; then
 	echo "Successfully create documentation"
 	echo "Removing $path"
