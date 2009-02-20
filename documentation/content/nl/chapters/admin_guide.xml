@@ -95,8 +95,8 @@
 					<listitem><para>The very first board setting you can edit is perhaps the most important setting of them all: the name of your board. Your users identify your board with this name. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style; it will be the prefix to the window title of your browser.</para></listitem>
 					<listitem><para>The <guilabel>Site Description</guilabel> is the slogan or tagline of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para></listitem>
 					<listitem><para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. To temporarily disable your board, select<guilabel>Yes</guilabel>. This will keep any members of your forum who are not administrators or moderators from accessing your board. They will either see a default message instead of the forum, or a message that you create. You can add your own custom message that will be displayed when your board is disabled in the text box below the <guilabel>Disable board</guilabel> radio buttons. Administrators and moderators will still be able to browse forums and use their specific control panels when the board is disabled.</para></listitem>
-					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_system">section on Language Pack configuration</link>.</para></listitem>
-					<listitem><para>You can also configure your board's default date format. phpBB3 has a few basic date formats that you can set your board to use; if these are not sufficient and you would like to customise your board's date format, choose <guimenuitem>Custom</guimenuitem> from the <guilabel>Date format</guilabel> selection menu. Then, in the text box besides it, type in the format you would like to use. This is the same as the <ulink url="http://www.php.net/date">PHP date() function</ulink>.</para></listitem>
+					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="http://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_system_language">section on Language Pack configuration</link>.</para></listitem>
+                    <listitem><para>You can also configure your board's default date format. phpBB3 has a few basic date formats that you can set your board to use; if these are not sufficient and you would like to customise your board's date format, choose <guimenuitem>Custom</guimenuitem> from the <guilabel>Date format</guilabel> selection menu. Then, in the text box besides it, type in the format you would like to use. This is the same as the <ulink url="http://www.php.net/date">PHP date() function</ulink>.</para></listitem>
 					<listitem><para>Along with setting your board's default date format, you can also set your board's preferred timezone. The timezones available in the <guilabel>System timezone</guilabel> selection menu are all based on relative <acronym>UTC</acronym> (for most intents and purposes, it is <acronym>GMT</acronym>, or Greenwich Mean Time) times. You may also choose whether or not your board utilises Daylight Savings Time by selecting the appropriate radio button next to the <guilabel>Enable Daylight Savings time</guilabel> option.</para></listitem>
 					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
 				</itemizedlist>
@@ -146,8 +146,7 @@
 				<title>Privéberichteninstellingen</title>
 				<para><glossterm>Private Messages</glossterm> are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
 				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
-				<para>Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Max Private Messages Per Box</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
-				<para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
+				<para>Olympus allows users to create own personal folders to organise Private Messages. The <guilabel>Maximum private message folders</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para><para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
 				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the &quot;Full Folder Default Action&quot; list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
 				<para>When sending a private message, it is still possible to edit the message until the recipient reads it. After a sent private message has been read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0, which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
 				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. 
@@ -270,9 +269,8 @@
 					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
 					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
-					<listitem><para><guilabel>Jabber username</guilabel>: The Jabber username that your board will use when connecting to the specified Jabber server. If the username you specify is unregistered on the server, phpBB3 will attempt to register the username for you.</para></listitem>
-					<listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para></listitem>
-					<listitem><para><guilabel>Jabber resource</guilabel>: This is the location of the particular connection that you can specify. For example, &quot;board&quot; or &quot;home&quot;.</para></listitem>
+					<listitem><para><guilabel>Jabber username or JID</guilabel>: The Jabber username or a complete Jabber ID (looks like an e-mail address) that your board will use when connecting to the specified Jabber server. You must specify an already registered account.</para></listitem>
+                    <listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para></listitem>
 					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to &quot;0&quot;, messages will be sent immediately and is will not be queued for later sending.</para></listitem>
 				</itemizedlist>
 			</section>
@@ -340,7 +338,8 @@
 						<listitem><para><guilabel>Smilies storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that your smilies are located in.</para></listitem>
 						<listitem><para><guilabel>Post icons storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that the topic icons are stored in.</para></listitem>
 						<listitem><para><guilabel>Extension group icons storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that the icons for the <link linkend="acp_attach_extension_groups">attachments extension groups</link>.</para></listitem>
-					</itemizedlist>
+					    <listitem><para><guilabel>Rank image storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that your <link linkend="acp_user_ranks">rank images</link> are located in.</para></listitem>
+                    </itemizedlist>
 				</para>
 				
 				<para>The last category of server settings is <guilabel>Server URL Settings</guilabel>. The <guilabel>Server URL Settings</guilabel> category contains settings that allow you to configure the actual <acronym>URL</acronym> that your board is located at, as well as the server protocol and port number that the board will be accessed to. The following are the five settings you may edit:
@@ -390,7 +389,7 @@
 					<varlistentry>
 						<term>Session IP validation</term>
 						<listitem>
-							<para>This determines how much of the users'  <glossterm>IP address</glossterm> is used to validate a session.</para>
+							<para>This determines how much of the users' <glossterm>IP address</glossterm> is used to validate a session.</para>
 							<para>There are four settings available: <guilabel>All</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, and <guilabel>None</guilabel>. The <guilabel>All</guilabel> setting will compare the complete IP address. The <guilabel>A.B.C</guilabel> setting will compare the first x.x.x of the IP address. The <guilabel>A.B</guilabel> setting will compare the first x.x of the IP address. Lastly, selecting <guilabel>None</guilabel> will disable IP address checking altogether.</para>
 						</listitem>
 					</varlistentry>
@@ -477,7 +476,7 @@
 					<itemizedlist>
 						<title>General settings</title>
 						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the system’s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers are valid values for this option. (For example, if your server has two processors, a setting of 2.0 would represent 100% server utilisation of both processors.) Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
-						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
+                        <listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
 						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline and be temporarily disabled. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline and be temporarily disabled. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
 						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
 					</itemizedlist>
@@ -526,9 +525,9 @@
 					<itemizedlist>
 						<title>General Search Settings</title>
 						<listitem><para><guilabel>Enable search facilities</guilabel>: Setting this option to <guilabel>Yes</guilabel> will enable the search functionality for your users; member-searching functionality will also be enabled.</para></listitem>
-						<listitem><para><guilabel>User search flood interval</guilabel>:  This value indicates the number of seconds that your users have to wait between consecutive searches. This value is checked independently for each user. All positive integers are valid values. If you want to disable checking for search intervals for users, set this value to &quot;0&quot;.</para></listitem>
-						<listitem><para><guilabel>Guest search flood interval</guilabel>: This is the number of seconds between searches that guest users must wait. This value is checked independently for each guest. All positive integers are valid values. If you want to disable checking for search intervals for guests, set this value to &quot;0&quot;.</para></listitem>
-						<listitem><para><guilabel>Search page system load limit</guilabel>: You can also limit the amount of load your system will undergo for searches. If the system load exceeds this value, your board will go offline and be temporarily disabled. All numbers between 0 and 1.0 (inclusive) are valid values. A value of &quot;1.0&quot;, for example, represents about 100% utilisation of a single processor; if the system load exceeds this value, the board will go offline. Note that this feature only works for *nix-based servers.</para></listitem>
+						<listitem><para><guilabel>User search flood interval</guilabel>: This value indicates the number of seconds that your users have to wait between consecutive searches. This value is checked independently for each user. All positive integers are valid values. If you want to disable checking for search intervals for users, set this value to &quot;0&quot;.</para></listitem>
+                        <listitem><para><guilabel>Guest search flood interval</guilabel>: This is the number of seconds between searches that guest users must wait. This value is shared for all guest users, if one guest searches, the others will have to wait until this interval passes. All positive integers are valid values. If you want to disable checking for search intervals for guests, set this value to &quot;0&quot;.</para></listitem>
+                        <listitem><para><guilabel>Search page system load limit</guilabel>: You can also limit the amount of load your system will undergo for searches. If the system load exceeds this value, your board will go offline and be temporarily disabled. All numbers between 0 and 1.0 (inclusive) are valid values. A value of &quot;1.0&quot;, for example, represents about 100% utilisation of a single processor; if the system load exceeds this value, the board will go offline. Note that this feature only works for *nix-based servers.</para></listitem>
 						<listitem><para><guilabel>Min author name characters</guilabel>: Users have to enter at least this many characters of the name when performing a wildcard author search. If the author's username is shorter than this number, your users can still search for the author's posts by entering the complete username. All positive integers are valid values.</para></listitem>
 						<listitem><para><guilabel>Search result cache length</guilabel>: phpBB3 can also cache search results. These cached search results will expire after this number of seconds. All positive integers are valid values. Set this value to &quot;0&quot; if you want to disable search caching.</para></listitem>
 					</itemizedlist>
@@ -537,8 +536,8 @@
 				<para>The next group of search settings actually only contains one setting: choosing what backend your board's search facilities, if enabled, will use. The following details this option.
 					<itemizedlist>
 						<title>Search Backend</title>
-						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext sesarch. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
-					</itemizedlist>
+						<listitem><para><guilabel>Search backend</guilabel>: This option specifies the backend that your board's search facilities will use if it is enabled. The backend is essentially the system/method that is actually responsible for conducting searches based on the queries it is given. There are two available options: <guimenuitem>Fulltext mysql</guimenuitem> and <guimenuitem>Fulltext native</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> is the default option, which is phpBB's own native fulltext search. Choosing <guimenuitem>Fulltext mysql</guimenuitem> will make your board use mySQL's fulltext search as its search backend.</para></listitem>
+                    </itemizedlist>
 					<note>
 						<para>If you choose to change your board's current search backend, you will have to create an index of your board's content for the new search backend. If you know for sure that you're not going to use the index that was used with your old, previously chosen search backend, you can also delete it in order to free up some of your system's resources. To learn more about maintaining your board's search indices, see <xref linkend="acp_maintenance_search" />.</para>
 					</note>
@@ -553,8 +552,8 @@
 					
 					<itemizedlist>
 						<title>Fulltext native</title>
-						<listitem><para><guilabel>Enable fulltext updating</guilabel>: This option allows you to control whether or not your board's search index will update when posts are made. If you would like to enable this, choose <guilabel>Yes</guilabel>. Note that this is only relevant if your board's search functionality is disabled entirely.</para></listitem>
-						<listitem><para><guilabel>Min characters indexed by search</guilabel>: You can also control the minimum number of characters words must contain in order to be included in your board's search index. It is recommended that you not set this too low in order to have a quality search index. All positive integers are valid values.</para></listitem>
+						<listitem><para><guilabel>Enable fulltext updating</guilabel>: This option allows you to control whether or not your board's search index will update when posts are made. If you would like to enable this, choose <guilabel>Yes</guilabel>. Note that this setting is not relevant if your board's search functionality is disabled entirely.</para></listitem>
+                        <listitem><para><guilabel>Min characters indexed by search</guilabel>: You can also control the minimum number of characters words must contain in order to be included in your board's search index. It is recommended that you not set this too low in order to have a quality search index. All positive integers are valid values.</para></listitem>
 						<listitem><para><guilabel>Max characters indexed by search</guilabel>: Just like the above setting, you can also control the maximum number of characters words must contain in order to be included in your board's search index. If a word has more than this number of characters in it, it will not be included in the search index. All positive integers are valid values.</para></listitem>
 						<listitem><para><guilabel>Common word threshold</guilabel>: Like phpBB2's stopwords feature, you can prevent the use of common words that you specify. However, this feature is expanded upon in phpBB3. You can now control the threshold that a word can have; this means that if a word is contained in more than a certain percentage of posts on your board, it will be deemed as a common word, and will be ignored in search queries. All positive integers are valid values, and represent the percentage of posts on your board words can be contained in. If you would like to disable this threshold and thereby allow searches using all words, even if they can be common, set this value to &quot;0&quot;. This setting only applies if your board has more than 100 posts.</para></listitem>
 					</itemizedlist>
@@ -706,10 +705,10 @@
 			
 			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
 				<code>[font={TEXT1}]{TEXT2}[/font]</code>
-				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>,while <guilabel>FONTNAME</guilabel> represents whatever font name the user types in.
-			</para>
-			<para>In the <guilabel>HTML Replacement</guilabel>form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
-				<code>&lt;span style="font-family: {TEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
+				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT1</guilabel>, while <guilabel>TEXT2</guilabel> represents whatever font name the user types in.
+            </para>
+			<para>In the <guilabel>HTML Replacement</guilabel> form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
+                <code>&lt;span style="font-family: {TEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
 				This HTML code will be used to actually format the user's text.
 			</para>
 			<para>The third option to consider when adding a custom BBCode is what sort of help message you want to display to your users if they choose to use the new BBCode. Ideally, the helpline message is a short note or tip for the user using the BBCode. This message will be displayed below the BBCode row on the posting screens.</para>
@@ -1275,14 +1274,11 @@
 			</sectioninfo>
 			<title>Gebruikerspermissies</title>
 			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
-		            
-		   	 <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
-		    
-		    	<para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
-		    
-		    	<important>
-		    		<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
-		    	</important>
+		    <para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
+            <para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
+            <important>
+		    	<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
+			</important>
 			
 			<para>To edit the user's <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
 		
@@ -1599,8 +1595,8 @@
 								
 								<varlistentry>
 									<term>Registered COPPA Users</term>
-									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 18 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A.</para></listitem>
-								</varlistentry>
+									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 13 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A. and can be disabled altogether.</para></listitem>
+                                </varlistentry>
 							</variablelist>
 							
 						</para>
@@ -1678,7 +1674,103 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Permission Overload</title>
-		<para><!-- TODO: stuff about permissions --></para>
+		<para>On your board, you will need to control what users can and cannot do. With the flexible and detailed system that Olympus provides, you have very extensive possibilities of specifying and managing user and group permissions. There are basically two type of permissions - <guilabel>Global permissions</guilabel>, which apply to the whole board or are not related to forums and posts, and <guilabel>Forum based permissions</guilabel>, which can be used to control specific permissions for each forum.</para>
+        <para>To understand how to set permissions and to know how to use the interface, it is important to recognize the different types of permissions and tools that the <guilabel>Permission</guilabel> tab in the <acronym>ACP</acronym> provides:</para>
+		<variablelist>
+		    <varlistentry>
+			    <term>Global Permissions</term>
+				<listitem><para>These affect the whole board and are not bound to specific forums. They include user permissions, which limit the use of the <acronym>UCP</acronym>, searching, private messaging, using of avatars/signatures etc. Administrator permissions are also set here, as they are Global.</para></listitem>
+			</varlistentry>
+			<varlistentry>
+			    <term>Forum Based Permissions</term>
+				<listitem><para>These permissions are set for each forum/user or group combination individually. They can be divided into two types: User permissions and Moderator permissions. The first control if a user or group can see the forum, post in it, and so on, while the Moderator permissions control if the user or group can do moderator-related actions in it.</para></listitem>
+			</varlistentry>
+			<varlistentry>
+			    <term>Permission Roles</term>
+				<listitem><para>In order to ease setting of permissions, you can create roles, that have a pre-defined set of permissions and which you can then assign to users or groups. phpBB already prepared some predefined roles for you to use - e.g., in forum based permissions, you can make each user a <guilabel>Standard Moderator</guilabel>, <guilabel>Full Moderator</guilabel> or <guilabel>Limited Moderator</guilabel>, etc. If you didn't have roles, you would have to set every single permission individually for each user.</para></listitem>
+			</varlistentry>
+			<varlistentry>
+			    <term>Permission Masks</term>
+				<listitem><para>In this section, you do not set or change anything, but you can view the final permissions a user or group has depending on your settings in the other sections. This feature is particularly useful when you need to debug your permissions and for example, you cannot find out why someone doesn't have the permission you want him to have.</para></listitem>
+			</varlistentry>
+		</variablelist>
+		<figure id="img_quick_permissions_types_admin">
+		    <title>Global and local permissions</title>
+			<mediaobject>
+			    <imageobject>
+				    <imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
+				</imageobject>
+				<caption>
+				    <para>Global and local permissions</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<note id="user_group_permission_note"><para>Each permission can be assigned to a group or a user. We recommend you to use group permissions when possible - a simple example why: When you want to add a moderator to a forum, instead of assigning individual moderator permissions for each forum to him, you will just add him to the group which already has those permissions.</para></note>
+<!-- TODO add link when masks section is finished -->
+		<para>When setting permissions, you will encounter three possible values - NO, YES and NEVER, with NO as the default value for each permission. If you set a YES, it overrides the NO, however, if the permissions is set to NEVER, you cannot override it by setting it to YES in another place. If you still have problems understanding this system, see the Permissions Masks section.</para>
+        <section id="acp_permissions_global">
+			<sectioninfo>
+			    <authorgroup>
+				    <author>
+					    <othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Global Permissions</title>
+			<para>Global permissions are the first section you will find under the <guilabel>Permissions</guilabel> tab. They are used to assign user, global moderator and administrator permissions. This section has four subsections:</para>
+		    <variablelist>
+			    <varlistentry>
+				    <term><guilabel>Users’ permissions</guilabel></term>
+					<listitem><para>These are used to assign any of the above mentioned permissions to a specific user. Generally, it is better to assign permissions to groups as <link linkend="user_group_permission_note">described here</link> to ease their later management.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+				    <term><guilabel>Groups’ permissions</guilabel></term>
+					<listitem><para>Exactly the same as the above with one difference, here you will be specifying a group whose permissions will be edited.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+				    <term><guilabel>Administrators</guilabel></term>
+					<listitem><para>This page tells you what users or groups on your board have access to the <acronym>ACP</acronym>. It allows you to edit their current permissions and add new administrators or administrator groups.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+				    <term><guilabel>Global moderators</guilabel></term>
+					<listitem><para>Similarly to the section mentioned above, this page allows you to see the board's Global moderators, they are users which can moderate every forum on the board. phpBB added a predefined Global Moderator group for you with preset permissions.</para></listitem>
+				</varlistentry>
+			</variablelist>
+			<para>In order to add or change permissions to a specific user or group, click the appropriate section. Then select the group name from the drop-down box or type the user's username. See <xref linkend="img_choose_group_permissions" /> for an image of the screen.</para>
+			<figure id="img_choose_group_permissions">
+                <title>Choosing a group when setting permissions</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/choose_group_permissions.png"/>
+				    </imageobject>
+				    <caption>
+						<para>The screen you will see after you click <guilabel>Groups' permissions</guilabel>. Here you select the group for which you will edit permissions.</para>
+				    </caption>
+				</mediaobject>
+			</figure>
+			<para>After you select a user or group, you will see a page where you can finally set specific permissions. Notice a few things on the page - the drop-down box, where you can select what type of permissions to change, the <guilabel>Advanced Permissions</guilabel> link, which will allow you to assign more granular permissions, and the <guilabel>Role</guilabel> drop-down box, which allows you to assign a predefined set of permissions for the current case.</para>
+			<figure id="img_setting_global_group_permissions">
+			    <title>Setting global user/group permissions</title>
+				<mediaobject>
+				    <imageobject>
+					    <imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
+					</imageobject>
+					<caption>
+					    <para>The screen you will see after you select a user or group in the first two Global permissions sections. Here you edit global permissions such as profile control, search, private messaging etc. By selecting <guilabel>Global moderator permissions</guilabel> or <guilabel>Admin permissions</guilabel> from the drop-down box, you can change additional settings for the user.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			
+		</section>
+		<section id="acp_permissions_forumbased">
+		    <title>Forum Based Permissions</title>
+		</section>
+		<section id="acp_permissions_roles">
+		    <title>Permission Roles</title>
+		</section>
+		<section id="acp_permissions_masks">
+		    <title>Permission Masks</title>
+		</section>
 	</section>
 
 	<section id="acp_styles">
@@ -1710,6 +1802,15 @@
 				</varlistentry>
 			</variablelist>
 		</para>
+        <section id="acp_styles_templates">
+		    <title>Templates</title>
+		</section>
+		<section id="acp_styles_themes">
+		    <title>Themes</title>
+		</section>
+		<section id="acp_styles_imagesets">
+		    <title>Imagesets</title>
+		</section>
 		
 		<!-- TODO: More stuff about styles -->
 	</section>
@@ -1773,9 +1874,69 @@
 		
 		<section id="acp_maintenance_database">
 			<title>Database backup and restore</title>
+			<para>phpBB uses a database to store all the data used on the board, including users, posts, topics etc. Backing up the database can be useful as a protective measure in case of any accidents which could cause data loss or damage to the database. If any accident like this would occur, you would have a possibility to restore the database to a previous state from the backup. You can use the backup tool to move your board to another host - you will make a backup on your current server and restore it on the new one to keep all data.</para>
+			<itemizedlist>
+                <title>Database backup</title>
+                <listitem><para><guilabel>Backup type</guilabel>: You can backup the whole database or you can either backup the <guilabel>structure</guilabel> or <guilabel>data</guilabel>. The structure only contains the hiearchy in which the data is stored, on the other side, if you only backup the data, you will need a pre-prepared structure when restoring/importing data.</para></listitem>
+                <listitem><para><guilabel>File type</guilabel>: Depending on your server setup, you can save the backup in several formats. The <guilabel>Text</guilabel> option saves the backup in plain text, other options compress the file to decrease the filesize of the dump.</para></listitem>
+                <listitem><para><guilabel>Action</guilabel>: You have three options: you can both <guilabel>Store and download</guilabel> the file, saving it in the store directory and downloading it to your PC, or you can choose to <guilabel>download</guilabel> or <guilabel>store</guilabel> the file.</para></listitem>
+                <listitem>
+				    <para><guilabel>Table select</guilabel>: You can either <guilabel>Select all</guilabel> tables or you can select individual tables to backup. When backing up a large database, you can exclude the search tables (do not forget to restore their structure) and recreate the search index on the new server.</para>
+				    <tip>
+                        <para>Use the CTRL and Shift keys together with your mouse to select individual tables.</para>
+                    </tip>
+				</listitem>	
+            </itemizedlist>
+            <itemizedlist>
+                <title>Database restore</title>
+                <listitem><para>File select: You will be offered a list of database backups which are saved in the store folder. Select the one you want to restore and click <guilabel>Start restore</guilabel>. The restoration might take some time and it will overwrite any existing data on the board.</para></listitem>
+            </itemizedlist>
+			<figure id="img_database_restore">
+			    <title>List of backups available</title>
+				<mediaobject>
+				    <imageobject>
+					    <imagedata format="PNG" fileref="../images/admin_guide/database_restore.png"/>
+					</imageobject>
+					<caption>
+					    <para>In this list, located on the <guilabel>Restore</guilabel> page, you can find a list of backups made through the phpBB <acronym>ACP</acronym> which can be selected and restored.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 		</section>
 		<section id="acp_maintenance_search">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>		
 			<title>Search Indexing</title>
+			<para>phpBB 3.0 provides you with a powerful search system which can be used to search throughout your board. The main controls for the search features are located in the <link linkend="acp_server_search">Search settings</link> section. Here you can manage the <guilabel>search index</guilabel>, which is used to hold the data necessary for quick and precise search results, it's something like an giant table of contents. By default, two search backends are available - fulltext native, which is included in the phpBB code and works on all <glossterm>DBMS</glossterm>s, and fulltext mysql, which uses the built-in MySQL fulltext searching feature. The first one offers more flexible configuration, while the second one doesn't take too much space in the database and the index is created much faster.</para>
+			<note>
+			    <para>Creating a search index can take a very long time, a new window will pop up and refresh itself while creating the necessary search table entries. Please be patient, the process can take several hours on large boards.</para>
+			</note>
+			<para>The fulltext native backend works like this: it uses two tables, one containing the words, which are used on the board and which have a numeric ID assigned and a second table, which links post IDs to word IDs. This system is very fast when you need to search a specific word(s) in the whole database, the following statistics, which are offered on the Search Index page, describe how many words and relations the system holds:</para>
+			<variablelist>
+			    <varlistentry>
+				    <term><guilabel>Total number of indexed words</guilabel></term>
+					<listitem>
+						<para>This setting is quite self-explanatory, it is the number of different words that have ever been posted to your board. Only words that match the criteria for indexing, set in the <link linkend="acp_server_search">Search settings</link>, are considered.</para>
+				    </listitem>
+				</varlistentry>
+				<varlistentry>
+				    <term><guilabel>Total number of word to post relations indexed</guilabel></term>
+					<listitem>
+					    <para>As described above, the second search table holds a list of relations between the posts and words. For example if someone would post "airplane" in two different posts, the system would add the word once and it would add to relations, one to each post.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+				    <term><guilabel>Total number of indexed posts</guilabel> (fulltext mysql)</term>
+					<listitem>
+					    <para>This statistic is shown for the mysql fulltext backend, where the search is done by a internal mechanism of the Database system. It tells you how many posts on the board were indexed.</para>
+					</listitem>
+                </varlistentry>
+			</variablelist>
 		</section>
 	</section>
 
@@ -1788,18 +1949,87 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Systeem Configuratie</title>
-		<para><!-- TODO: Stuff about system configuration --></para>
+		<para>Controls which affect the whole board and which are a key part of configuring and running phpBB are located in the System section. Most of these settings require more attention from the administrator and are not so easy to configure, fortunately you will probably not be changing them too often. This includes keeping your installation up-to-date, managing the board's languages or editing the structure of phpBB's control panels.</para>
 		<section id="acp_system_updates">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>		
 			<title>Controleren voor updates</title>
-		</section>
+			<para>The phpBB 3.0.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use one of the other packages provided.</para>
+            <para>You will be notified in your ACP if a new version is released, you will also have a link to the newest release announcement, which will brief you on the added features and the overall changelog.</para>
+            <para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply go to the <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
+        </section>
 		<section id="acp_system_spiders">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>		
 			<title>Managing Search Robots</title>
+			<para>phpBB 3 introduced a new system for managing search indexer and bot accounts. It allows you to identify these automated bots by their IP or a part of their user-agent, which is a setting that normally identifies the browser of a user. After you add a bot and it is recognized, phpBB does not treat the session as anonymous, but uses the created bot account. Bots use permissions set by the predefined Bots group. Identifying bots is important so that phpBB can serve them content which is more appropriate for search engines - dead links to pages without content are omitted, e.g. posting pages, report post pages etc. Bots never receive a session ID in the URL, which should not appear in the search results. You can also assign a specific style and language to bots.</para>
+            <para>You can easily track if a specific search indexer visited your site recently by checking the <guilabel>Last Visit</guilabel> column on the botlist page.</para>
+            <note>
+			    <para>Bots do not use permissions from the Guest group, but permissions from the Bots group. For more about predefined groups, please read <xref linkend="acp_groups_types"/></para>
+            </note>
+			<itemizedlist>
+			    <title>Adding a bot</title>
+				<listitem><para><guilabel>Bot name</guilabel>: This is the title of the bot that will be used on the forum. You will see it in the list of bots in the <acronym>ACP</acronym> and in the Who is Online lists.</para></listitem>
+				<listitem><para><guilabel>Bot style</guilabel>: You can select the style served to the bot from the list of installed styles on the board.</para></listitem>
+				<listitem><para><guilabel>Bot language</guilabel>: You can do the same with the language. The bot will use the language selected here.</para></listitem>
+				<listitem><para><guilabel>Bot active</guilabel>: The bot session will be created only if a bot is active, if not, the data for a bot set in this form will not be used anywhere.</para></listitem>
+				<listitem><para><guilabel>Agent match</guilabel>: You can match a bot by either its user-agent or its IP. You can specify a part of the user-agent to be looked for. For example, the Google search indexer has "Googlebot" in its user-agent, so you would enter it here to identify when Google crawls your board.</para></listitem>
+				<listitem><para><guilabel>Bot IP address</guilabel>: This field is also used to identify the bot. If a bot cannot be recognized by the user-agent, you can specify what <glossterm>IP address</glossterm> should be used to identify it. Partial matches are allowed, that means you can include only the first two or three octets of the IP if the rest dynamically changes. You can also enter multiple IPs separated by a comma.</para></listitem>
+            </itemizedlist>
+			<note>
+			    <para>If you enter both a user-agent and an <glossterm>IP address</glossterm>, both have to match to identify the bot.</para>
+			</note>
 		</section>
 		<section id="acp_system_mail">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>	
 			<title>Mass email</title>
+            <para>phpBB allows you to send an e-mail or message to every user on the board, which allows it in his <link linkend="ucp_preferences">board preferences</link>. The message can serve as a newsletter, notification about changes on the board etc. You can choose whether to send the e-mail to all users, a specific group or a list of specific users. The e-mail is sent from the administrator's e-mail address and all recipients are included in a BCC - Blind Carbon Copy.</para>
+            <para>On some hosts, sending a mass e-mail can be a problem, since sometimes the hosting company limits the number of e-mails that can be sent out at once. phpBB includes only 50 recipients per e-mail and sends another one for the next batch to prevent this, however, if you still are not able to send a mass e-mail, consult the situation with your hosting provider.</para>
+            <itemizedlist>
+			    <title>Composing a mass e-mail</title>
+                <listitem><para><guilabel>Send to group</guilabel>: Select the group you want to send the e-mail too. The Registered Users group contains all the users on the board.</para></listitem>
+                <listitem><para><guilabel>Send to users</guilabel>: You can also specify a list of users. Entering any usernames in this field will override the first setting. Each username should be on a new line.</para></listitem>
+                <listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
+                <listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. <glossterm>BBCode</glossterm> or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
+                <listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
+                <listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
+            </itemizedlist>
+            <note>
+			    <para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
+            </note>
 		</section>
 		<section id="acp_system_language">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>		
 			<title>Taalpakketten</title>
+			<para>In phpBB, you can upload several language packs for your users to use. Every text string displayed by the system should be translated after you upload a new language pack. Using a different language pack does not change the contents of posts, as translating them is not possible due to the various content they can have and the limits of computer translation.</para>
+            <para>Language packs can be downloaded from the Downloads page on phpBB.com. To add a language pack, unzip the downloaded file and upload the contents to the <filename>language/</filename> directory. The files should be contained in a directory named with the language's ISO code, the default British English pack is in the <filename>en/</filename> directory for example. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
+			<note>
+			    <para>To make a language pack the default language of the board, you need to change the <link linkend="acp_general_config">Board Configuration</link>.</para>
+			</note>
+			<para>If you are not comfortable with editing PHP files manually and you would like to change some text phpBB is displaying, you can use the in-built language pack editor which is accessible once you click the language pack title in the <guilabel>Installed language packs</guilabel> list. You can change the language pack details and the contents of individual language files on this page. In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
+			<para>If you choose to edit a file using the ACP you have two options on how to update the translation on the board. First you can choose to <guilabel>Submit</guilabel> or <guilabel>Submit and download</guilabel> the file, which will store the file you are editing in the <filename>store/</filename> directory and the file will be offered for download if you choose the second button. If you choose to save the file in the store directory, you will have to manually move it to the language pack directory. The second possibility, which is right under these two buttons is to move the file to the language pack directory by using FTP. You will be prompted for FTP login credentials and if possible the file be saved and updated immediately by the script.</para>
 		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
@@ -1813,11 +2043,52 @@
 			<para>This option will provide you with information about the version of PHP installed on your server, along with information on loaded modules and the configuration applicable to the current location. This information can be useful to phpBB team members in helping you to diagnose problems affecting your installation of phpBB. The information here can be security sensitive and it is recommended that you only grant access to this option to those users who need access to the information and do not disclose the information unless necessary.</para>
 			<para>Please note that some hosting providers may limit the information which is available to you on this page for security reasons.</para>
 		</section>
-		<section id="acp_system_reports">
+		<section id="acp_system_reasons">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+            </sectioninfo>				
 			<title>Manage reasons for reporting and denying posts</title>
+			<para>phpBB has a feature that allows you to put new posts in queue, where the post waits until it is approved or denied by a moderator, this can be set with permissions or in the <guilabel>Post settings</guilabel> for users which do not have enough posts. If a moderator chooses to deny a post in the queue, he has an option to specify a reason for the denial. The predefined options from which he can choose are specified here. These reasons are also offered to users reporting a post on the board.</para>
+			<para>For more information about queue moderation, see <xref linkend="mcp_queue"/>.</para>
+			<figure id="img_denial_reasons">
+			    <title>Report/denial reasons page</title>
+				<mediaobject>
+				    <imageobject>
+					    <imagedata format="PNG" fileref="../images/admin_guide/denial_reasons.png"/>
+					</imageobject>
+					<caption>
+					    <para>This is the page from which you can manage reasons shown when denying or reporting a post. Four default reasons present in a standard phpBB installation are shown. The fifth one is added manually and is not localised, this can be achieved by specifying an identifier in the <guilabel>Reason title</guilabel> containing only letters and underscores and then adding localised titles and reasons in the language file called <filename>mcp.php</filename> located in the <filename>language/</filename> directory. The predefined reasons are at the bottom of the file, you need to add your reason in the same way as the others are saved. When you localise a reason, it is shown in the correct translation for each language pack used on the board.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 		</section>
 		<section id="acp_system_modules">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+            </sectioninfo>		
 			<title>Modulebeheer</title>
+			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &raquo; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &raquo; Category (headers on the left-hand side) &raquo; Module (individual sections).</para>
+            <para>Very often, MODs that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
+			<para>To create a module category, use the text field next to the <guilabel>Create new module</guilabel> button. Enter the category title, click the button and on the next page ensure that the <guilabel>Module type</guilabel> is <guilabel>Category</guilabel>, the module is <guilabel>enabled</guilabel> and that the <guilabel>Module parent</guilabel> is set correctly. After you create a category, you can browse to it through the list of modules and add a specific module that is saved in a file. Modules are saved in the appropriate directory (acp/, mcp/ or /ucp) contained in the <filename>includes/</filename> directory.</para>
+			<warning><para>By disabling the Module Management module, it is possible to cut yourself off from the ACP and other control panels. Be careful when you are editing modules.</para></warning>
+			<itemizedlist>
+			    <title>Adding a module</title>
+				<listitem><para><guilabel>Module language name</guilabel>: This should be set to the language constant that holds the module name in the different languages, which are used on the board. You can also specify a normal title here, if you do not have the module title translated.</para></listitem>
+				<listitem><para><guilabel>Module type</guilabel>: You can add a category or a module. As stated above, categories hold another level of categories or modules, they are used to organize the control panels.</para></listitem>
+				<listitem><para><guilabel>Parent</guilabel>: This setting defines under which category the module or category will be displayed.</para></listitem>
+				<listitem><para><guilabel>Module enabled</guilabel>: If a module is disabled, it will not be accessible at all, you will have to enable it to use it.</para></listitem>
+				<listitem><para><guilabel>Module displayed</guilabel>: If the module is enabled, but not displayed, you will be able to access it with a direct URL but it will not show in the menus. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+				<listitem><para><guilabel>Choose module</guilabel>: Individual module files contain the various control panels. Similar modules are grouped into one file and are called by specifying a mode. Here you select the file in which the specific module you want is located. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+				<listitem><para><guilabel>Choose module mode</guilabel>: Here you set the what mode should be used in the module file selected above. The final contents of the module are based on this setting. This setting is shown only if the <guilabel>Module type</guilabel> is set to Module.</para></listitem>
+            </itemizedlist>
 		</section>
 	</section>
 </chapter>

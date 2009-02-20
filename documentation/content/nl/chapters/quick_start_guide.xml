@@ -85,11 +85,7 @@
 		</sectioninfo>
 		<title>Installatie</title>
 		<para>phpBB 3.0 Olympus heeft een heel gemakkelijk installatiesysteem om te gebruiken dat je helpt het installatie proces te doorlopen. </para>
-		<!--BETA SPECIFIC /-->
-		<note>
-			<para>phpBB 3.0 Beta 1 heeft nog niet de mogelijkheid om een upgrade uitvoeren vanaf phpBB 2.0.x of om te converteren van een andere forumsoftware. Dit zal later in een andere Beta of  in het <acronym>RC</acronym> stadium worden toegevoegd.</para>
-		</note>
-		<para>Nadat je phpBB3 pakket hebt uitgepakt , en de bestanden hebt geupload naar de locatie waar je het wilt installeren, Je moet de <acronym>URL</acronym> invoeren in je internetbrowser om het installatiescherm te openen. Als je de eerste keer je internetbrowser richt op de <acronym>URL</acronym> (<uri>http://www.phpBBservice.nl/phpBB3</uri> bijvoorbeeld), zal phpBB meteen herkenen als phpBB nog niet is geïnstalleerd, en zal je automatisch doorsturen naar het installatiescherm</para>
+		<para>Nadat je phpBB3 pakket hebt uitgepakt, en de bestanden hebt geupload naar de locatie waar je het wilt installeren, Je moet de <acronym>URL</acronym> invoeren in je internetbrowser om het installatiescherm te openen. Als je de eerste keer je internetbrowser richt op de <acronym>URL</acronym> (<uri>http://www.phpBBservice.nl/phpBB3</uri> bijvoorbeeld), zal phpBB meteen herkenen als phpBB nog niet is geïnstalleerd, en zal je automatisch doorsturen naar het installatiescherm</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introductie</title>
 			<mediaobject>
@@ -103,7 +99,7 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introductie</title>
-			<para>Het installatiescherm geeft je een korte introductie van phpBB. Het stelt je in staat om de licentie van phpBB 3.0 te lezen , dat is uitgebracht onder (de <ulink href="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) en het geeft je informatie over hoe je support kan verkrijgen. Om met de installatie te beginnen, klik je op de <guilabel>Installeren</guilabel> knop (zie <xref linkend="img_quick_installation_intro" />).</para>
+			<para>Het installatiescherm geeft je een korte introductie van phpBB. Het stelt je in staat om de licentie van phpBB 3.0 te lezen , dat is uitgebracht onder (de <ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) en het geeft je informatie over hoe je support kan verkrijgen. Om met de installatie te beginnen, klik je op de <guilabel>Installeren</guilabel> tab (zie <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Benodigdheden</title>
@@ -335,8 +331,8 @@
 					<para><guilabel>NEVER</guilabel> will completely disallow a permission setting for a user. It <emphasis>cannot</emphasis> be overwritten by a <guilabel>YES</guilabel>.</para>
 				</listitem>
 			</itemizedlist>
-			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>Never</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>No</guilabel> overrides any <guilabel>Yes</guilabel> they have . Leave the setting at <guilabel>No</guilabel> instead. <guilabel>No</guilabel> is a weak <guilabel>Never</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
-			<figure id="img_quick_permissions_manual">
+			<para>The three values are important as it is possible for a user to have more than one permissions for the same setting through multiple groups. If the user is a member of the default "Registered Users" group and a custom group called "Senior Users" you created for your most dedicated members, both could have different permissions for seeing a forum. In this example you want to make a forum called "Good old times" only available to the "Senior Users" group, but don't want all "Registered Users" to see it. You will of course set the <guilabel>Can see forum</guilabel> permission to <guilabel>Yes</guilabel> for "Senior Users". But <emphasis>do not</emphasis> set the permission to <guilabel>Never</guilabel> for "Registered Users". If you do this, "Senior Members" will not see the forum as the <guilabel>Never</guilabel> overrides any <guilabel>Yes</guilabel> they have. Leave the setting at <guilabel>No</guilabel> instead. <guilabel>No</guilabel> is a weak <guilabel>Never</guilabel> that a <guilabel>Yes</guilabel> can override.</para>
+            <figure id="img_quick_permissions_manual">
 				<title>Manual permissions</title>
 				<mediaobject>
 					<imageobject>
@@ -441,7 +437,7 @@
 	</section>
 	<section id="quick_support">
 		<title>verkijgen van support</title>
-		<para>The <ulink url="http://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="http://www.phpbb.com/phpBB/viewforum.php?f=46">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&t=543515">Support Request Template</ulink> with the information it asks for.</para>
+		<para>The <ulink url="http://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="http://www.phpbb.com/phpBB/viewforum.php?f=46">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="http://www.phpbb.com/community/viewtopic.php?f=46&amp;t=543515">Support Request Template</ulink> with the information it asks for.</para>
 
 		<para>In addition to the support forum on www.phpbb.com, we provide a <ulink url="http://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit articles on common answers to questions. Our community has taken a lot of time in writing these articles, so be sure to check them out.</para>
 
