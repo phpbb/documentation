@@ -1686,12 +1686,119 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Tilladelser</title>
-		<para><!-- TODO: stuff about permissions --></para>
+		<para>Du får brug for at kontrollere hvad brugere kan og ikke kan på dit board. Med det fleksible og fintmaskede tilladelsesystem i Olympus har du meget store muligheder at specificere og administrere bruger- og gruppetilladelser. Grundlæggende opereres med to typer tilladelser - <guilabel>Globale tilladelser</guilabel> som gælder for hele boardet og ikke er knyttet til fora eller indlæg, og <guilabel>Forumbaserede tilladelser</guilabel> som anvendes til at bestemme tilladelser for hvert forum.</para>
+		<para>For at forstå hvordan tilladelser indstilles og hvordan tilladelsesystemet betjenes, er det vigtigt at få identificeret de forskellige typer tilladelser og de skærmbilleder som findes under fanen <guilabel>Tilladelser</guilabel> i <acronym>ACP</acronym>:</para>
+		<variablelist>
+			<varlistentry>
+				<term>Globale Tilladelser</term>
+				<listitem><para>Har effekt på hele boardet og er ikke knyttet til specifikke fora. Disse tilladelser inkluderer brugertilladelser, som kan begrænse brugen af <acronym>UCP</acronym>, søgninger, private beskeder, avatars, signaturer etc. Administratortilladelser hører også under globale tilladelser.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term>Forumbaserede tilladelser</term>
+				<listitem><para>Har kun betydning for specifikke fora og indstilles for hvert forum pr. bruger eller gruppe individuelt. Tilladelserne er opdelt i to typer: Bruger- og redaktørtilladelser. Den første bestemmer om en bruger eller en gruppe kan se forummet, skrive indlæg osv. Den anden om brugere eller en gruppe kan udføre redaktørhandlinger i forummet.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term>Rollebaserede tilladelser</term>
+				<listitem><para>For at lette instillingerne, kan der oprettes specifikke sammensætninger af tilladelser som knyttes til roller eller opgaver på boardet. Rollerne kan efterfølgende bruges til at tildele ensartede tilladelser til brugere eller grupper. phpBB er udstyret med nogle standardroller du kan gøre brug af. F.eks er det under forumbaserede tilladelser muligt at tildele brugere rollerne <guilabel>Standardredaktør</guilabel>, <guilabel>Simpel redaktør</guilabel> eller <guilabel>Fuldgyldig redaktør</guilabel> m.fl. Var denne mulighed ikke tilstede, måtte alle tilladelser tildeles brugere individuelt.</para></listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term>Tilladelsemasker</term>
+				<listitem><para>I dette afsnit skal du ikke indstille eller ændre noget. Men du kan få et overblik over brugeres eller gruppers endelige tilladelser og se resultatet af de ændringer der er foretaget i de øvrige afsnit. Dette overblik kan være særdeles nyttigt når du har behov for at fejlrette i tilladelser, når brugere f.eks. tilsyneladende ikke har de tilladelser de burde have.</para></listitem>
+			</varlistentry>
+		</variablelist>
+		<figure id="img_quick_permissions_types_admin">
+				<title>Globale og lokal tilladelser</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
+					</imageobject>
+					<caption>
+						<para>Globale og lokale tilladelser</para>
+					</caption>
+				</mediaobject>
+			</figure>
+		<note id="user_group_permission_note"><para>Hver tilladelse kan knyttes til en gruppe eller en bruger. Hvis det er muligt, anbefales det at tildele tilladelsen til en gruppe. Et eksempel på hvorfor: Når du vil tilføje en ny redaktør til et forum, kan du blot tilføje ham til den gruppe, der allerede har disse beføjelser. Alternativet ville være at give brugeren individuelle redaktørtilladelser i forummet.</para></note>
+		<!-- TODO add link when masks section is finished -->
+		<para>Når tilladelser vælges, vil du se tre mulige valg - NEJ, JA og ALDRIG. NEJ er standardværdien i alle tilladelser. Vælger du JA, har dette valg forrang for et NEJ valgt andre steder i brugeres tilladelseindstillinger. Men vælges ALDRIG får dette valg forrang for et JA valgt andre steder i brugeres indstillinger. Dette gennemgås nøjere i afsnittet tilladelsemasker.</para>
+
+		<section id="acp_permissions_global">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Globale tilladelser</title>
+			<para>De globale indstillinger er den første sektion du finder under fanen <guilabel>Tilladelser</guilabel>. Her tildeles tilladelser til brugere, globale redaktører og administratorer. Sektionen indeholder fire underafsnit:</para>
+			<variablelist>
+			<varlistentry>
+				<term><guilabel>Brugertilladelser</guilabel></term>
+				<listitem><para>These are used to assign any of the above mentioned permissions to a specific user. Generally, it is better to assign permissions to groups as <link linkend="user_group_permission_note">described here</link> to ease their later management.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><guilabel>Gruppetilladelser</guilabel></term>
+				<listitem><para>Exactly the same as the above with one difference, here you will be specifying a group whose permissions will be edited.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><guilabel>Administratorer</guilabel></term>
+				<listitem><para>This page tells you what users or groups on your board have access to the <acronym>ACP</acronym>. It allows you to edit their current permissions and add new administrators or administrator groups.</para></listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><guilabel>Globale redaktører</guilabel></term>
+				<listitem><para>Similarly to the section mentioned above, this page allows you to see the board's Global moderators, they are users which can moderate every forum on the board. phpBB added a predefined Global Moderator group for you with preset permissions.</para></listitem>
+			</varlistentry>
+		</variablelist>
+
+		<para>In order to add or change permissions to a specific user or group, click the appropriate section. Then select the group name from the drop-down box or type the user's username. See <xref linkend="img_choose_group_permissions" /> for an image of the screen.</para>
+
+		<figure id="img_choose_group_permissions">
+			<title>Choosing a group when setting permissions</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/choose_group_permissions.png"/>
+				</imageobject>
+				<caption>
+					<para>The screen you will see after you click <guilabel>Groups' permissions</guilabel>. Here you select the group for which you will edit permissions.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		
+		<para>After you select a user or group, you will see a page where you can finally set specific permissions. Notice a few things on the page - the drop-down box, where you can select what type of permissions to change, the <guilabel>Advanced Permissions</guilabel> link, which will allow you to assign more granular permissions, and the <guilabel>Role</guilabel> drop-down box, which allows you to assign a predefined set of permissions for the current case.</para>
+
+		<figure id="img_setting_global_group_permissions">
+			<title>Setting global user/group permissions</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
+				</imageobject>
+				<caption>
+					<para>The screen you will see after you select a user or group in the first two Global permissions sections. Here you edit global permissions such as profile control, search, private messaging etc. By selecting <guilabel>Global moderator permissions</guilabel> or <guilabel>Admin permissions</guilabel> from the drop-down box, you can change additional settings for the user.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		
+		</section>
+		<section id="acp_permissions_forumbased">
+			<title>Forum Based Permissions</title>
+		</section>
+		<section id="acp_permissions_roles">
+			<title>Permission Roles</title>
+		</section>
+		<section id="acp_permissions_masks">
+			<title>Permission Masks</title>
+		</section>
 	</section>
 
 	<section id="acp_styles">
@@ -1726,13 +1833,13 @@
 		</para>
 
 		<section id="acp_styles_templates">
-		  <title>Skabeloner</title>
+			<title>Skabeloner</title>
 		</section>
 		<section id="acp_styles_themes">
-		  <title>Temaer</title>
+			<title>Temaer</title>
 		</section>
 		<section id="acp_styles_imagesets">
-		  <title>Billedpakker</title>
+			<title>Billedpakker</title>
 		</section>		
 		<!-- TODO: More stuff about styles -->
 	</section>
@@ -2008,6 +2115,7 @@
 			<para>Moduler anvendes til at skabe strukturen og indholdet i <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Moduler kan deaktiveres og reorganiseres i en anden struktur. Modulerne i bruger- og redaktørkontrolpanelerne er i 2 niveauer: Faneblad/kategori &raquo; modul, mens moduler i administratorkontrolpanelet er i tre niveauer: Faneblad (faner i toppen) &raquo; kategori (overskrifter i venstre side) &raquo; modul (individuelle moduler).</para>
 			<para>MODs med indstillelige muligheder tilføjer ofte moduler i ACP for at lette ændring af indstillinger.</para>
 			<para>For at oprette en modulkategori bruges tekstfeltet lige før knappen <guilabel>Opret nyt modul</guilabel>. Angiv kategoriens titel og klik på knappen. På næste side sikres at <guilabel>Modultype</guilabel> er <guilabel>Faneblad/kategori</guilabel>, at modulet er <guilabel>aktiveret</guilabel> og at <guilabel>Overmodul</guilabel> er valgt korrekt. Når kategorien er oprettet tilføjes modul fra dropdownmenuen. Modulerne findes i mapperne acp/, mcp/ og /ucp, som er indeholdt i <filename>includes/</filename> mappen.</para>
+			<warning><para>Deaktiveres selve Moduladministrationsmodulet er der risiko for at du afskærer dig selv fra fremtidig moduladministration eller andre kontrolpaneler. Vær derfor forsigtig når disse indstillinger ændres.</para></warning>
 			<itemizedlist>
 				<title>Tilføj modul</title>
 				<listitem><para><guilabel>Modulnavn</guilabel>: Den sprognøgle som identificerer modulet i de tilgængelig sprog på boardet. Der kan også angives en normal titel, hvis modulet ikke er tilstede i sprogfilerne.</para></listitem>
