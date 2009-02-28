@@ -1030,6 +1030,21 @@
 					</varlistentry>
 					
 					<varlistentry>
+						<term>Posts</term>
+						<listitem>
+							<para>This number indicates how many posts the user has posted on the board.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Warnings</term>
+						<listitem>
+							<para>This is the number of warnings the user currently has.</para>
+							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
+						</listitem>
+					</varlistentry>
+					
+					<varlistentry>
 						<term>Founder</term>
 						<listitem>
 							<para>Founders are users who have all administrator permissions and can never be banned, deleted or altered by non-founder members. If you want to set this user as a founder, select the <guilabel>Yes</guilabel> radio button. To remove founder status from a user, select the <guilabel>No</guilabel> radio button.</para>
@@ -1063,14 +1078,6 @@
 						<term>Confirm new password</term>
 						<listitem>
 							<para>This textbox should only be filled if you are changing the user's password. If you are changing the user's password, the <guilabel>Confirm new password:</guilabel> textbox needs to be filled in with the same password you filled in in the above <guilabel>New password:</guilabel> textbox.</para>
-						</listitem>
-					</varlistentry>
-					
-					<varlistentry>
-						<term>Warnings</term>
-						<listitem>
-							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
-							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
 						</listitem>
 					</varlistentry>
 					
