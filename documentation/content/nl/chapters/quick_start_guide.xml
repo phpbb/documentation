@@ -59,7 +59,7 @@
 				<para>PHP 4.3.3 of hoger met ondersteuning van de database dat je wilt gebruiken. De optionele voorkeuren van de volgende modules met PHP zorgen voor meer mogelijkheden, maar ze zijn niet verplicht.</para>
 				<itemizedlist>
 					<listitem>
-						<para>zlib Compressie ondersteuning</para>
+						<para>zlib-Compressie ondersteuning</para>
 					</listitem>
 					<listitem>
 						<para>FTP-afstand ondersteuning</para>
@@ -113,19 +113,19 @@
 			<para>Je moet nu beslissen welke database je wilt gebruiken. Bekijk het hoofdstuk <link linkend="quick_requirements">systeemvereisten</link> voor informatie welke database allemaal ondersteund worden. Als je niet je database instellingen weet, neem dan contact op met je hosting bedrijf en vraag het aan hun. Je kan de installatie niet hervatten zonder deze gegevens. Je hebt nodig:</para>
 			<itemizedlist>
 				<listitem>
-					<para>Het <guilabel>databasetype</guilabel> - De database die je wilt gebruiken (bijvoorbeeld: mySQL, SQL server, Oracle)</para>
+					<para>Het <guilabel>database-type</guilabel> - De database die je wilt gebruiken (bijvoorbeeld: MySQL, SQL-server, Oracle)</para>
 				</listitem>
 				<listitem>
-					<para>De <guilabel>databaseserver hostnaam of DSN:</guilabel> - Het adres van de databaseserver.</para>
+					<para>De <guilabel>database-server hostnaam of DSN:</guilabel> - Het adres van de database-server.</para>
 				</listitem>
 				<listitem>
-					<para>De <guilabel>database serverpoort:</guilabel> - De poort van de databaseserver (in de meeste gevallen is dit niet nodig).</para>
+					<para>De <guilabel>database-serverpoort:</guilabel> - De poort van de database-server (in de meeste gevallen is dit niet nodig).</para>
 				</listitem>
 				<listitem>
-					<para>De <guilabel>databasenaam</guilabel>- De naam van de database op de server.</para>
+					<para>De <guilabel>database-naam</guilabel>- De naam van de database op de server.</para>
 				</listitem>
 				<listitem>
-					<para>De <guilabel>database gebruikersnaam</guilabel> en <guilabel>database wachtwoord</guilabel> - De aanmeldingsgegevens om toegang te verkrijgen tot de database.</para>
+					<para>De <guilabel>database-gebruikersnaam</guilabel> en <guilabel>database-wachtwoord</guilabel> - De aanmeldingsgegevens om toegang te verkrijgen tot de database.</para>
 				</listitem>
 			</itemizedlist>
 			<tip>
@@ -242,10 +242,23 @@
 				<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
 			</imageobject>
 			<caption>
-				<para>Creating a new forum.</para>
+				<para>Een nieuw forum aanmaken.</para>
 			</caption>
 		</mediaobject>
-		<para>The default settings are usually good enough to get your new forum up and running; however, you may change them to suit your needs. But there are three key forum settings that you should pay attention to. The Parent Forum setting allows you to choose which forum your new forum will belong to. Be careful to what level you want your forum to be in. (The Parent Forum setting is important when creating subforums. For more information on subforums, continue reading to the section on creating subforums) The &quot;Copy Permissions&quot; setting allows you to copy the permissions from an existing forum to your new forum. Use this if you want to keep permissions constant. The forum style setting allows you to set which style your new forum will display. Your new forum can show a different style to another. <!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
+		<para>
+		De standaard instellingen zijn normaal goed genoeg om een nieuw forum op te zetten, alhoewel, je ze zelf kan veranderen naar jouw eigen behoeften. Maar er zijn drie sleutel foruminstellingen waar je op moet letten.
+		
+		The default settings are usually good enough to get your new forum up and running; however, you may change them to suit your needs. 
+		But there are three key forum settings that you should pay attention to. 
+		The Parent Forum setting allows you to choose which forum your new forum will belong to. 
+		Be careful to what level you want your forum to be in. (The Parent Forum setting is important when creating subforums. 
+		For more information on subforums, continue reading to the section on creating subforums) 
+		The &quot;Copy Permissions&quot; setting allows you to copy the permissions from an existing forum to your new forum. 
+		Use this if you want to keep permissions constant. 
+		The forum style setting allows you to set which style your new forum will display. 
+		Your new forum can show a different style to another. 
+		<!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>-->
+		</para>
 		<para>Once you're done configuring the settings of your new forum, scroll to the bottom of the page and click the <guilabel>Submit</guilabel> button to create your forum and it's settings. If your new forum was created successfully, the screen will show you a success message.</para>
 		<para>If you wish to set permissions for the forum (or if you do not click on anything), you will see the forum permissions screen. If you do not want to (and want to use the default permissions for your new forum), click on the <guilabel>Back to previous page</guilabel> link. Otherwise, continue and set each setting to what you wish. Once you are done, click the <guilabel>Apply all Permissions</guilabel> button at the bottom of the page. You will see the successful forum permissions updated screen if it worked.</para>
 		<important>
