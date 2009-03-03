@@ -18,15 +18,12 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>camm15h</othername>
-				</author>
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Redigere indlæg</title>
-		<para>Redaktører med tilladelser i relevante fora kan redigere i emner og indlæg. Normalt kan man se redaktører i forumbeskrivelserne på boardindekset. En bruger med redaktørstatus har adgang til knappen <guilabel>Redigér</guilabel> i alle indlæg. Herudover kan redaktørerne:</para>
+		<title>Redigering af indlæg</title>
+		<para>Redaktører med tilladelser i relevante fora kan redigere i emner og indlæg. Normalt kan man se redaktører i forumbeskrivelserne på boardindekset. En bruger med redaktørstatus har adgang til knappen <guilabel>Redigér</guilabel> i alle indlæg. Herudover kan redaktører:</para>
 	
 		<variablelist>
 			<varlistentry>
@@ -79,7 +76,7 @@
 			</varlistentry>
 		</variablelist>
 		
-		<para>Er der grund til at et indlæg ikke skal kunne redigeres, kan et indlæg låses for at forhindre indlægsforfatteren i dette. Ved fremtidige forsøg på at redigere indlægget adviseres brugeren. Ønsker redaktøren at begrunde årsagen til den foretagede ændring, er der mulighed for at tilføje en bemærkning til det redigerede indlæg.</para>
+		<para>Er der grund til at et indlæg ikke skal kunne redigeres, kan det låses for at forhindre indlægsforfatteren i dette. Ved fremtidige forsøg på at redigere indlægget adviseres brugeren. Ønsker redaktøren at begrunde årsagen til den foretagede ændring, er der mulighed for at tilføje en bemærkning til det redigerede indlæg.</para>
 		
 		<!--TODO: screenshot of post and edit reason?-->
 	</section>
@@ -87,10 +84,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>camm15h</othername>
-				</author>
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -119,15 +113,12 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
 			<title>Slet et emne eller indlæg</title>
-			<para>Hvis det er tilladt i <link linkend="admin_control_panel">administratorkontrolpanelets</link> tilladelsesystem kan brugerne slette egne indlæg, enten når et emne læses eller når indlægget redigeres. Emner og indlæg kan kun slettes af brugerne hvis der endnu ikke er svaret på disse.</para>
+			<para>Hvis det er tilladt i <link linkend="admin_control_panel">administratorkontrolpanelets</link> tilladelsesystem kan brugerne slette egne indlæg, enten når et emne læses eller når indlægget redigeres. Emner og indlæg kan kun slettes af brugere hvis der endnu ikke er svaret på disse.</para>
 			<para>For kunne slette andre brugeres indlæg, skal man have de rette forumbaserede tilladelser - <guilabel>Kan slette indlæg</guilabel>. Ved at bruge redaktørværktøjerne nederst i emnet kan et indlæg hurtigt fjernes. I <link linkend="moderator_mcp">redaktørkontrolpanelet</link> kan flere indlæg udvælges og slettes.</para>
 			<tip>
 				<para>Bemærk venligst at slettede emner og indlæg ikke kan gendannes. Overvej eventuelt at oprette et skjult forum og i stedet flytte emner og indlæg hertil til brug for fremtidig reference.</para>
@@ -138,10 +129,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -158,7 +146,7 @@
 				</sectioninfo>
 				<title>Skyggeemner</title>
 				<para>Når et emne flyttes til et andet forum er det muligt at efterlade et skyggeemne i det oprindelige forum. Et skyggeemne er blot et link til emnets nye placering. Du kan selv vælge om der skal efterlades et skyggeemne i checkboksen som første valg når du har valgt <guilabel>Flyt emne</guilabel> i redaktørværktøjerne.</para>
-				<para>For at slette et skyggeemne manøvres til det forum det er placeret i, og herefter vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link> næsten øverst. I kontrolpanelet finder du linket &quot;Slet skyggeemne&quot; lige over emnet.</para>
+				<para>For at slette et skyggeemne manøvreres til det forum det er placeret i, og herefter vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link> næsten øverst. I kontrolpanelet finder du linket &quot;Slet skyggeemne&quot; lige over emnet.</para>
 				<note>
 					<para>Når skyggeemnet slettes bliver det originale emne <emphasis>ikke</emphasis> slettet.</para>
 				</note>
@@ -215,16 +203,13 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
 			<title>Sammenlæg emner</title>
 			<para>I phpBB3 er det også muligt at sammenlægge emner. Hvilket er nyttigt hvis der for eksempel drøftes relaterede problemstillinger i to separate emner på boardet.</para>
-			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. [jan: det efterfølgende mener jeg umiddelbart ikke har noget at gøre med at sammenlægge mener, men kun ved sammenlægning af indlæg??] Checking the <guilabel>Mark all</guilabel> section will select all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
+			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. Vælges <guilabel>Markér alle</guilabel> bliver alle indlæg i emnet udvalgt til ....? all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
 		</section>
 		
 		<section id="modtools_mergeposts">
@@ -248,17 +233,14 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>camm15h</othername>
-				</author>
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Hvad indeholder &quot;Godkendelseskø&quot;?</title>
 		<para>Hvis tilladelser for et forum eller en bruger er indstillet (i <link linkend="admin_control_panel">Administratorkontrolpanelet</link>) til at nye indlæg skal godkendes, skal denne godkendelse foretages af en administrator eller en redaktør før indlæggene kan ses af andre brugere. Emner og indlæg der afventer godkendelse kan ses i <guilabel>godkendelseskøen</guilabel> som findes i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>.</para>
-		<para>På forumindekset er endnu ikke godkendte emner mærket med et ikon. Klik på dette ikon og du kommer direkte til redaktørkontrolpanelet og får nu mulighed fora at godkende eller afvise emnet. Individuelle indlæg der afventer godkendelse er ledsaget af en meddelese herom, når emnet gennemses. Medelelsen linker samtidig til skærmbilledet hvor det kan godkendes eller afvises.</para>
-		<para>Når du godkender et emne eller et indlæg for du mulighed for at vælge om brugeren skal adviseres om godkendelsen. På samme måde får du også mulighed for at advisere brugeren ved en afvisning, og samtidig begrunde afvisningen.</para>
+		<para>På forumindekset er endnu ikke godkendte emner mærket med et ikon. Klik på dette ikon og du kommer direkte til redaktørkontrolpanelet og får nu mulighed for at godkende eller afvise emnet. Individuelle indlæg der afventer godkendelse er ledsaget af en meddelelse herom, når emnet gennemses. Meddelelsen linker samtidig til skærmbilledet hvor det kan godkendes eller afvises.</para>
+		<para>Når du godkender et emne eller et indlæg får du mulighed for at vælge om brugeren skal adviseres om godkendelsen. På samme måde får du også mulighed for at advisere brugeren ved en afvisning, og samtidig begrunde afvisningen.</para>
 		<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" />.</para>
 	</section>
 	
@@ -266,16 +248,13 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>camm15h</othername>
-				</author>
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Hvad er &quot;Raporterede indlæg&quot;?</title>
-		<para>Brugere kan rapportere indlæg som findes upassende og begrunde rapporteringen. Et indlægget rapporteres ved at klikke på ikonet for at <guilabel>Rapportér dette indlæg</guilabel>, i standardtypografien prosilver er ikonet en trekant på spidsen med et udråbstegn i. I  <link linkend="admin_control_panel">Administratorkontrolpanelet</link>er udfærdiget et antal standardbegrundelser som kan bruges, med mulighed for at uddybe rapporten. Alle rapporter kan ses i redaktørkontrolpanelet under fanen rapporterede indlæg, hvor administrator eller redaktør kan se, lukke eller slette rapporten.</para>
-		<para>På forumindekset vises emner indeholdende rapporteringer med en anden baggrundsfarve og med samme rapporteringikonet efter emnetitlen. Herved ser administrator og redaktør at indlæg er rapporteret. I emnet vises det rapporterede indlæg også med en anden baggrundsfarve, og med et link til rapporten i redaktørkontrolpanelet.</para>
+		<title>Hvad er &quot;Rapporterede indlæg&quot;?</title>
+		<para>Brugere kan rapportere indlæg som findes upassende og begrunde rapporteringen. Et indlægget rapporteres ved at klikke på ikonet for at <guilabel>Rapportér dette indlæg</guilabel>, i standardtypografien prosilver er ikonet en trekant på spidsen med et udråbstegn i. I  <link linkend="admin_control_panel">Administratorkontrolpanelet</link> er udfærdiget et antal standardbegrundelser som kan bruges, med mulighed for at uddybe rapporten. Alle rapporter kan ses i redaktørkontrolpanelet under fanen rapporterede indlæg, hvor administrator eller redaktør kan se, lukke eller slette rapporten.</para>
+		<para>På forumindekset vises emner indeholdende rapporteringer med en anden baggrundsfarve og med rapporteringikonet efter emnetitlen. Herved ser administrator og redaktør at indlæg er rapporteret. I emnet vises det rapporterede indlæg også med en anden baggrundsfarve, og med et link til rapporten i redaktørkontrolpanelet.</para>
 		<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" />.</para>
 	</section>
 	
@@ -283,21 +262,18 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>camm15h</othername>
-				</author>
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Redaktørkontrolpanelet (MCP)</title>
 		<para>I forhold til phpBB2 er <guilabel>Redaktørkontrolpanelet</guilabel> nyt, her er alle redigeringsværktøjer samlet. Dette afsnit gennemgår grundtrækkene i en redaktørs opgaver. Ved indgangen til MCP ser redaktøren en oversigt over indlæg afventende godkendelse, rapporterede indlæg og de seneste fem loggede handlinger.</para>
-		<para>Redektørkontrolpanelet er opdelt i syv sektioner, hvert område organiseret i en fane. De syv faner indeholder:
+		<para>Redaktørkontrolpanelet er opdelt i syv sektioner, hvert område organiseret i en fane. De syv faner indeholder:
 			<variablelist>
 				<varlistentry>
 					<term>Oversigt</term>
 					<listitem>
-						<para>Indeholder seneste: Indlæg i godkendelseskøen, rapporterede indlæg og loggede handlinger.</para>
+						<para>Indeholder: Indlæg i godkendelseskøen, rapporterede indlæg og de seneste 5 loggede handlinger udført af redaktører.</para>
 					</listitem>
 				</varlistentry>
 				
@@ -332,7 +308,7 @@
 				<varlistentry>
 					<term>Redaktørlog</term>
 					<listitem>
-						<para>En komplet liste over loggede handlinger i forhold til de fem seneste som vises i oversigten på MCP.</para>
+						<para>En komplet liste over loggede handlinger udført af redaktører på boardet.</para>
 					</listitem>
 				</varlistentry>
 				
@@ -364,15 +340,12 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
 			<title>Rapporterede indlæg</title>
-			<para>Brugere har mulighed for at rapportere indlæg som ikke er i overenstemmelse med boardreglerne eller på anden måde erupassende. Alle rapporterede indlæg kan ses fra <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>. Mere information om rapporterede indlæg findes her <xref linkend="moderator_reported" />.</para>
+			<para>Brugere har mulighed for at rapportere indlæg som ikke er i overenstemmelse med boardreglerne eller på anden måde er upassende. Alle rapporterede indlæg kan ses fra <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>. Mere information om rapporterede indlæg findes her <xref linkend="moderator_reported" />.</para>
 		</section>
 		
 		<section id="mcp_forum">
@@ -390,8 +363,8 @@
 			</para>
 			
 			<para>På samme måde kan flere indlæg  i et emne redigeres samtidig. Man kan nå emneredigeringsiden enten ved at klikke på emnet fra forumredigeringsiden, eller blot klikke på linket til redaktørkontrolpanelet, når man læser i emnet.</para>
-			<para>[Jan: Denne efterfølgende sætning blander for mig at se emneredigering og redigering af indlæg ?] Når der redigeres i et emne er der mulighed for: ændre emnetitel, flytte emne til et andet forum, ændre emneikon, sammenlægge emnet med et andet og bestemme hvor mange indlæg der skal vises pr. side (tilsidesætter standardindstillingen for boardet).</para>
-			<para>Under emneredigering er der to ekstra faneblade til rådighed i MCP: Sammenlæg emner og Opdel emne, som giver mulighede for henholdsvis at sammenlægge to emner og opdele et emne i to eller flere separate emner.</para>
+			<para>Når der redigeres i et emne er der mulighed for: ændre emnetitel, flytte emne til et andet forum, ændre emneikon, sammenlægge emnet med et andet og bestemme hvor mange indlæg der skal vises pr. side (tilsidesætter standardindstillingen for boardet).</para>
+			<para>Under emneredigering er der to ekstra faneblade til rådighed i MCP: Sammenlæg emner og Opdel emne, som giver mulighed for henholdsvis at sammenlægge to emner og opdele et emne i to eller flere separate emner.</para>
 			<para>Linket <guilabel>Indlægsinformation</guilabel> til højre for emnetitlen giver mulighed for yderligere redigering. Indlægsforfatter kan ændres, Selve indlægget kan redigeres, låses og slettes. Desuden vises den <glossterm>IP-adresse</glossterm> indlægget er skrevet fra.</para>
 		
 			<note>

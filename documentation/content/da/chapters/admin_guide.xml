@@ -145,7 +145,7 @@
 				</sectioninfo>
 				<title>Private beskeder</title>
 				<para>Tilmeldte brugere har mulighed for at kommunikere via <glossterm>private beskeder</glossterm> på boardet, og behøver derfor ikke bruge email eller messengere.</para>
-				<para>Du kan deaktivere private beskeder med indstillingen <guilabel>Tillad private beskeder</guilabel>, som bestemmer om muligheden skal være aktiv eller ej for hele boardet. Du kan også deaktivere private beskeder for bestemte brugere eller grupper i<link linkend="acp_permissions">Tilladelser</link>. Se venligst kapitlet <link linkend="acp_permissions">Tilladelser</link> for flere informationer.</para>
+				<para>Du kan deaktivere private beskeder med indstillingen <guilabel>Tillad private beskeder</guilabel>, som bestemmer om muligheden skal være aktiv eller ej for hele boardet. Du kan også deaktivere private beskeder for bestemte brugere eller grupper i <link linkend="acp_permissions">Tilladelser</link>. Se venligst kapitlet <link linkend="acp_permissions">Tilladelser</link> for flere informationer.</para>
 				<para>I phpBB3 kan brugere oprette egne mapper til private beskeder. Værdien i <guilabel>Maksimalt antal mapper til private beskeder</guilabel> bestemmer hvor mange mapper det er muligt at oprette som bruger. Standardindstillingen er 4. Muligheden kan deaktiveres ved at sætte denne værdi til 0. </para>
 				<para><guilabel>Maksimalt antal private beskeder pr. mappe</guilabel> bestemmer hvor mange beskeder hver mappe kan indeholde. Standardværdien er <guilabel>50</guilabel>, sættes værdien til 0 er der ingen grænser for antal beskeder i mapperne.</para>
 				<para>Vælger du at begrænse antallet af beskeder pr. mappe, er det nødvendigt at specificere hvad der skal ske når en mappe er fyldt. Det kan ændres i <guilabel>Handling ved fuld mappe</guilabel>. Der er to muligheder; enten slettes den ældste besked automatisk, eller den nye besked holdes tilbage indtil der er gjort plads i mappen. Bemærk denne indstilling vil være boardets standardhandling og vil ikke tilsidesætte en brugers evt. andet valg, i det brugere selv er i stand til at vælge denne handling i UCP.</para>
@@ -780,11 +780,11 @@
 			
 			<itemizedlist>
 				<listitem><para><guilabel>Ikon</guilabel>: Denne kolonne viser selve ikonet.</para></listitem>
-				<listitem><para><guilabel>Iconets placering</guilabel>: Her vises stien til ikonet, relativt i forhold til mappen <filename>/images/icons/</filename>.</para></listitem>
+				<listitem><para><guilabel>Ikonets placering</guilabel>: Her vises stien til ikonet, relativt i forhold til mappen <filename>/images/icons/</filename>.</para></listitem>
 				<listitem><para><guilabel>Ikonbredde</guilabel>: Den bredde (i pixels) ikonet skal strækkes til.</para></listitem>
 				<listitem><para><guilabel>Ikonhøjde</guilabel>: Den højde (i pixels) ikonet skal strækkes til.</para></listitem>
 				<listitem><para><guilabel>Vis på siden hvor indlæg skrives</guilabel>: Mærkes feltet af, vises emneikonet på siden hvor indlæg skrives.</para></listitem>
-				<listitem><para><guilabel>Ikonorden</guilabel>: Her bestemmes hvilken rækkefølge ikonerne skal vises i. Der kan vælges mellem at vise det først, eller at vise det efter et af de øvrige installerede.</para></listitem>
+				<listitem><para><guilabel>Ikonorden</guilabel>: Her bestemmes hvilken rækkefølge ikonerne vises i. Der kan vælges mellem at vise det først, eller at vise det efter et af de øvrige installerede.</para></listitem>
 				<listitem><para><guilabel>Tilføj</guilabel>: Når instillingerne for dit nye emneikon er i orden, afmærkes dette felt for at tilføje ikonet.</para></listitem>
 			</itemizedlist>
 			
@@ -818,7 +818,7 @@
 				<listitem><para><guilabel>Smileyhøjde</guilabel>: Den højde i pixels smileyen skal strækkes til.</para></listitem>
 				<listitem><para><guilabel>Vis på siden hvor indlæg skrives</guilabel>: Mærkes feltet af, vises smileyen på siden hvor indlæg skrives.</para></listitem>
 				<listitem><para><guilabel>Smileyorden</guilabel>: Her bestemmes hvilken rækkefølge smileyen skal vises i. Der kan vælges mellem at vise den først, eller at vise den efter et af de øvrige installerede.</para></listitem>
-				<listitem><para><guilabel>Tilføj</guilabel>: Når instillingerne for din nye smiley er i orden, afmærkes dette felt for at tilføje den.</para></listitem>
+				<listitem><para><guilabel>Tilføj</guilabel>: Når indstillingerne for din nye smiley er i orden, afmærkes dette felt for at tilføje den.</para></listitem>
 			</itemizedlist>
 			
 			<para>For at ændre indstillinger for allerede installerede smilies klikkes på <guilabel>Ret smilies</guilabel> nederst på siden. Du får  nu vist oversigten <guilabel>Smileykonfiguration</guilabel>. Felternes betydning er beskrevet ovenfor.</para>
@@ -1012,19 +1012,19 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Sidst aktiv</term>
+						<term>Senest aktiv</term>
 						<listitem>
-							<para>Bruger var sidst aktiv på det viste tidspunkt.</para>
+							<para>Bruger seneste aktivitet på boardet var det viste tidspunkt.</para>
 						</listitem>
 					</varlistentry>
-
+					
 					<varlistentry>
 						<term>Indlæg</term>
 						<listitem>
 							<para>Brugers samlede antal indlæg på boardet.</para>
 						</listitem>
 					</varlistentry>
-
+					
 					<varlistentry>
 						<term>Advarsler</term>
 						<listitem>
@@ -1036,7 +1036,7 @@
 					<varlistentry>
 						<term>Grundlægger</term>
 						<listitem>
-							<para>En grundlægger har alle administratortilladelser og kan ikke udelukkes, slettes eller dennes indstillinger kan kun ændres af en anden grundlægger. Vælg <guilabel>Yes</guilabel> hvis du ønsker at gøre bruger til grundlægger. En brugers grundlæggerstatus fjernes ved at vælge <guilabel>Nej</guilabel> radio button.</para>
+							<para>En grundlægger har alle administratortilladelser og kan ikke udelukkes, slettes eller dennes indstillinger kan kun ændres af en anden grundlægger. Vælg <guilabel>Ja</guilabel> hvis du ønsker at gøre bruger til grundlægger. En brugers grundlæggerstatus fjernes ved at vælge <guilabel>Nej</guilabel>.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -1535,7 +1535,7 @@
 				<para>I sektionen <guilabel>Beskær brugere</guilabel> kan enhver kombination af de tilgængelige kriterier anvendes. Udfyld derfor alle de felter som dækker de brugere du vil beskære. Klik på <guilabel>Udfør</guilabel> når du er klar til at beskære brugere efter de valgte kriterier.</para>
 				
 				<itemizedlist>
-					<title>Prune users</title>
+					<title>Beskæring af brugere</title>
 					<listitem><para><guilabel>Brugernavn</guilabel>: Angiv det brugernavn der skal beskæres. (*) kan anvendes som ubekendt og beskæring vil omfatte alle brugere der falder indenfor dette kriterie.</para></listitem>
 					<listitem><para><guilabel>Email</guilabel>: Den emailadresse der skal beskæres, også her kan (*) som ubekendt for at dække et større antal adresser.</para></listitem>
 					<listitem><para><guilabel>Tilmeldt</guilabel>: Beskæring efter tidspunktet for brugeres tilmelding på boardet. For at beskære brugere tilmeldt før en bestemt dato, vælges <guilabel>Før</guilabel>, og <guilabel>Efter</guilabel> for at beskære brugere tilmeldt efter en bestemt dato. Denne dato angives i feltet til højre for valgmenuen i formatet YYYY-MM-DD. Vær omhyggelig med dette valg.</para></listitem>
@@ -1698,12 +1698,12 @@
 				<term>Globale Tilladelser</term>
 				<listitem><para>Har effekt på hele boardet og er ikke knyttet til specifikke fora. Disse tilladelser inkluderer brugertilladelser, som kan begrænse brugen af <acronym>UCP</acronym>, søgninger, private beskeder, avatars, signaturer etc. Administratortilladelser hører også under globale tilladelser.</para></listitem>
 			</varlistentry>
-
+			
 			<varlistentry>
 				<term>Forumbaserede tilladelser</term>
 				<listitem><para>Har kun betydning for specifikke fora og indstilles for hvert forum pr. bruger eller gruppe individuelt. Tilladelserne er opdelt i to typer: Bruger- og redaktørtilladelser. Den første bestemmer om en bruger eller en gruppe kan se forummet, skrive indlæg osv. Den anden om brugere eller en gruppe kan udføre redaktørhandlinger i forummet.</para></listitem>
 			</varlistentry>
-
+			
 			<varlistentry>
 				<term>Rollebaserede tilladelser</term>
 				<listitem><para>For at lette instillingerne, kan der oprettes specifikke sammensætninger af tilladelser som knyttes til roller eller opgaver på boardet. Rollerne kan efterfølgende bruges til at tildele ensartede tilladelser til brugere eller grupper. phpBB er udstyret med nogle standardroller du kan gøre brug af. F.eks er det under forumbaserede tilladelser muligt at tildele brugere rollerne <guilabel>Standardredaktør</guilabel>, <guilabel>Simpel redaktør</guilabel> eller <guilabel>Fuldgyldig redaktør</guilabel> m.fl. Var denne mulighed ikke tilstede, måtte alle tilladelser tildeles brugere individuelt.</para></listitem>
@@ -1727,8 +1727,8 @@
 			</figure>
 		<note id="user_group_permission_note"><para>Hver tilladelse kan knyttes til en gruppe eller en bruger. Hvis det er muligt, anbefales det at tildele tilladelsen til en gruppe. Et eksempel på hvorfor: Når du vil tilføje en ny redaktør til et forum, kan du blot tilføje ham til den gruppe, der allerede har disse beføjelser. Alternativet ville være at give brugeren individuelle redaktørtilladelser i forummet.</para></note>
 		<!-- TODO add link when masks section is finished -->
-		<para>Når tilladelser vælges, vil du se tre mulige valg - NEJ, JA og ALDRIG. NEJ er standardværdien i alle tilladelser. Vælger du JA, har dette valg forrang for et NEJ valgt andre steder i brugeres tilladelseindstillinger. Men vælges ALDRIG får dette valg forrang for et JA valgt andre steder i brugeres indstillinger. Dette gennemgås nøjere i afsnittet tilladelsemasker.</para>
-
+		<para>Når tilladelser vælges, vil du se tre mulige valg - NEJ, JA og ALDRIG. NEJ er standardværdien i alle tilladelser. Vælger du JA, har dette valg forrang for et NEJ valgt andre steder. Men vælges ALDRIG får dette valg forrang for et JA valgt andre steder i brugeres indstillinger. Dette gennemgås nøjere i afsnittet tilladelsemasker.</para>
+		
 		<section id="acp_permissions_global">
 			<sectioninfo>
 				<authorgroup>
@@ -1742,49 +1742,49 @@
 			<variablelist>
 			<varlistentry>
 				<term><guilabel>Brugertilladelser</guilabel></term>
-				<listitem><para>These are used to assign any of the above mentioned permissions to a specific user. Generally, it is better to assign permissions to groups as <link linkend="user_group_permission_note">described here</link> to ease their later management.</para></listitem>
+				<listitem><para>Her kan ovennævnte tilladelser tildeles til specifikke brugere. For at lette det administrationen af tilladelser anbefales det generelt at tildele tilladelser til grupper, som beskrevet <link linkend="user_group_permission_note">her</link>.</para></listitem>
 			</varlistentry>
-
+			
 			<varlistentry>
 				<term><guilabel>Gruppetilladelser</guilabel></term>
-				<listitem><para>Exactly the same as the above with one difference, here you will be specifying a group whose permissions will be edited.</para></listitem>
+				<listitem><para>Samme som ovennævnte, med den forskel at her angiver du en gruppe som skal tildeles eller have ændret tilladelser.</para></listitem>
 			</varlistentry>
-
+			
 			<varlistentry>
 				<term><guilabel>Administratorer</guilabel></term>
-				<listitem><para>This page tells you what users or groups on your board have access to the <acronym>ACP</acronym>. It allows you to edit their current permissions and add new administrators or administrator groups.</para></listitem>
+				<listitem><para>På denne side bestemmer du hvilke af boardets brugere eller grupper der skal have adgang til <acronym>ACP</acronym>. Her er det muligt at ændre nuværende tilladelser og at tilføje nye administratorer eller administratorgrupper.</para></listitem>
 			</varlistentry>
-
+			
 			<varlistentry>
 				<term><guilabel>Globale redaktører</guilabel></term>
-				<listitem><para>Similarly to the section mentioned above, this page allows you to see the board's Global moderators, they are users which can moderate every forum on the board. phpBB added a predefined Global Moderator group for you with preset permissions.</para></listitem>
+				<listitem><para>Her ses boardets globale redaktører, altså brugere som kan redigere i alle boardets fora. phpBB er udstyret med standardgruppen globale redaktører, hvor de rette og nødvendige tilladelser er tildelt.</para></listitem>
 			</varlistentry>
 		</variablelist>
-
-		<para>In order to add or change permissions to a specific user or group, click the appropriate section. Then select the group name from the drop-down box or type the user's username. See <xref linkend="img_choose_group_permissions" /> for an image of the screen.</para>
-
+		
+		<para>For at tilføje eller ændre tilladelser vælges det afsnit. Vælg herefter gruppenavn i dropdownmenuen eller indtast brugernavn. Se <xref linkend="img_choose_group_permissions" /> skærmbilledet.</para>
+		
 		<figure id="img_choose_group_permissions">
-			<title>Choosing a group when setting permissions</title>
+			<title>Vælg en gruppe når tilladelser ændres</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/admin_guide/choose_group_permissions.png"/>
 				</imageobject>
 				<caption>
-					<para>The screen you will see after you click <guilabel>Groups' permissions</guilabel>. Here you select the group for which you will edit permissions.</para>
+					<para>Denne side vises når du klikker på <guilabel>Gruppetilladelser</guilabel>. Her vælges den gruppe du ønsker at ændre tilladelser for.</para>
 				</caption>
 			</mediaobject>
 		</figure>
 		
-		<para>After you select a user or group, you will see a page where you can finally set specific permissions. Notice a few things on the page - the drop-down box, where you can select what type of permissions to change, the <guilabel>Advanced Permissions</guilabel> link, which will allow you to assign more granular permissions, and the <guilabel>Role</guilabel> drop-down box, which allows you to assign a predefined set of permissions for the current case.</para>
-
+		<para>Når du har valgt bruger eller gruppe, vises en side hvor du kan vælge specifikke tilladelser. Bemærk nogle få punkter på dene side - dropdownmenuen, hvor der vælges hvilken typ tilladelser der skal ændres, linket til <guilabel>Avancerede tilladelser</guilabel>, hvor der er mulighed for meget fintmasket tildeling af tilladelser, og dropdownmenuen <guilabel>Rolle</guilabel>, som giver mulighed for at tildele et helt foruddefineret tilladelsesæt som passer til den givne opgave.</para>
+		
 		<figure id="img_setting_global_group_permissions">
-			<title>Setting global user/group permissions</title>
+			<title>Indstilling af globale tilladelser for brugerer og grupper</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
 				</imageobject>
 				<caption>
-					<para>The screen you will see after you select a user or group in the first two Global permissions sections. Here you edit global permissions such as profile control, search, private messaging etc. By selecting <guilabel>Global moderator permissions</guilabel> or <guilabel>Admin permissions</guilabel> from the drop-down box, you can change additional settings for the user.</para>
+					<para>Dette skærmbillede vises når du har har valgt en bruger eller gruppe i én af de to første sektioner af de globale tilladelser. Her ændrer du globale tilladelser som f.eks kontrol over profilindstillinger, søgning, private beskeder etc. By selecting <guilabel>Global moderator permissions</guilabel> or <guilabel>Admin permissions</guilabel> from the drop-down box, you can change additional settings for the user.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -1831,7 +1831,7 @@
 				</varlistentry>
 			</variablelist>
 		</para>
-
+		
 		<section id="acp_styles_templates">
 			<title>Skabeloner</title>
 		</section>
@@ -1964,7 +1964,7 @@
 				<varlistentry>
 					<term><guilabel>Antal relationer mellem ord og indlæg</guilabel></term>
 					<listitem>
-						<para>Som beskrevet ovenfor indeholder den anden tabel en liste af relationer mellem ord og indlæg. Hvis for eksempel ordet "flyvemaskine" skrives i to forskellige indlæg, tilføjes ordet én gang og to relationer, én til hver indlæg.</para>
+						<para>Som beskrevet ovenfor indeholder den anden tabel en liste af relationer mellem ord og indlæg. Hvis for eksempel ordet "flyvemaskine" skrives i to forskellige indlæg, tilføjes ordet én gang og to relationer, én til hvert indlæg.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
