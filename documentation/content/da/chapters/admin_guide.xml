@@ -258,8 +258,8 @@
 				</sectioninfo>
 				<title>Jabber</title>
 				
-				<para>phpBB3 kan også give brugerne mulighed for at kommunikere via <glossterm>Jabber</glossterm>. Desuden kan dit board sende beskeder og adviseringer via Jabber. Her kan du aktivere og bestemme præcist hvordan boardet gør brug af Jabber.</para>
-			
+				<para>phpBB3 kan desuden sende beskeder og adviseringer til brugere via <glossterm>Jabber</glossterm>. Her kan du aktivere og bestemme hvordan boardet gør brug af Jabber.</para>
+				
 				<note>
 					<para>Nogle Jabber servere inkluderer gateways eller transporter, der tillader dig at kontakte brugere af andre netværk. Ikke alle servere tilbyder alle former for transporter, og ændringer i protokoller kan forhindre transporter i at fungere. Bemærk at det kan tage flere sekunder at opdatere detaljer for en Jabber-konto, stop ikke før scriptet er afsluttet!</para>
 				</note>

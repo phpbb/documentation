@@ -23,7 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Hvordan brugertilladelser påvirker oplevelsen af boardet</title>
-		<para>phpBB3 anvender et tilladelser, defineret pr. brugere eller brugergruppe, til at bestemme hvilke af softwarens funktioner og muligheder der skal gives mulighed for at benytte. Det kan inkludere hvilke fora der kan indsendes indlæg i, mulighed for at benytte avatar eller at sende private beskeder. Alle tilladelser indstilles via administratorkontrolpanelet.</para>
+		<para>phpBB3 anvender tilladelser, defineret pr. brugere eller brugergruppe, til at bestemme hvilke af softwarens funktioner og muligheder der skal gives mulighed for at benytte. Det kan inkludere hvilke fora der kan indsendes indlæg i, mulighed for at benytte avatar eller at sende private beskeder. Alle tilladelser indstilles via administratorkontrolpanelet.</para>
 		<para>Tilladelser giver også mulighed for at udpege brugere til at udføre specielle opgaver eller at have bestemte roller på boardet. Administratoren kan ved hjælp af tilladelsesystemet bestemme hvilke redigeringsmuligheder udvalgte brugere eller brugergrupper skal have og i hvilke fora de skal kunne anvende dem. Det giver også mulighed for at udpege redaktører på boardet. Administratoren kan også give brugere adgang til bestemte sektioner i administratorkontrolpanelet, og dermed stadig have restriktioner og sikkerhed på vigtige indstillinger. For eksempel kan en gruppe af redaktører have lov til at ændre brugernes avatar eller signatur i administratorkontrolpanelet. Uden disse beføjelser vil en redaktør skulle involvere en administrator at ændre i en brugers profil.</para>
 	</section>
 	<section id="user_registering">
@@ -49,7 +49,7 @@
 		</figure>
 		<para>Linket <guilabel>Tilmeld</guilabel> øverst på siden leder dig til boardets regler. Hvis du accepterer disse fortsætter tilmeldingsproceduren. Hvis du ikke accepterer betingelserne er det ikke muligt at tilmelde sig. I nogle tilfælde kan du blive bedt om at vælge om du er over eller under en bestemt alder. Hvis det er tilfældet, er det fordi administratoren har valgt at følge den amerikanske lov <acronym>COPPA</acronym>. Personer under 13 år skal have en forældre eller værges godkendelse for at tilmelde sig offentlige boards. Der fremsendes en email med yderligere instrukser.</para>
 		<para>Næste trin er udfyldelse af personlig information hvor du selv vælger brugernavn, emailadresse, kodeord, sprog og tidzone.</para>
-		<para>Nederst på samme side vil du normalt se sektionen <emphasis>Bekræftelse på tilmelding</emphasis>, indeholdende et grafikfelt med nogle bogstaver og tal som udgår din kode. Indtast disse tegn i feltet umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Mange boards anvender denne metode, kaldet <acronym>CAPTCHA</acronym>, for bedst muligt at blokere for tilmeldinger fra spamrobotter. Er tegnene for svære at aflæse, kan du prøve at genopfriske siden, for at få vist en ny kode.</para>
+		<para>Nederst på samme side vil du normalt se sektionen <emphasis>Bekræftelse på tilmelding</emphasis>, indeholdende et grafikfelt med nogle bogstaver og tal som udgør din kode. Indtast disse tegn i feltet umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Mange boards anvender denne metode, kaldet <acronym>CAPTCHA</acronym>, for bedst muligt at blokere for tilmeldinger fra spamrobotter. Er tegnene for svære at aflæse, kan du prøve at genopfriske siden, for at få vist en ny kode.</para>
 		<figure id="user_registering_captcha">
 			<title>Elementet visuel bekræftelse</title>
 			<mediaobject>
@@ -73,11 +73,11 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Orientér dig i brugerkontrolpanelet</title>
+		<title>Brugerkontrolpanelet</title>
 		<para>Brugerkontrolpanelet (<glossterm>UCP</glossterm>) giver mulighed for bl. a. at ændre personlige indstillinger, administrere overvågninger og bogmærker, sende og læse private beskeder. For at få adgang til UCP klikkes på linket &quot;Brugerkontrolpanel&quot; som ses øverst på siden når du er logget ind.</para>
 		<para>UCP er opdelt i seks faner: Oversigt, Profil, Boardindstillinger, Private beskeder, Brugergrupper og Venner og ignorerede brugere. Hver fane indeholder yderligere underpunkter i venstre side af skærmbilledet. Afhængig af de tilladelser du er tildelt af administrator kan de tilgængelige underpunkter være forskellige fra bruger til bruger.</para>
 		<para>Alle siderne i UCP viser også listen over dine venner. Du kan til enhver tid sende en privat besked til dem blot ved at klkke på brugernavnet.</para>
-		<para>TODO: Note that Private messaging will be discussed in its own section</para>
+		<para><!-- TODO: Note that Private messaging will be discussed in its own section --></para>
 		<section id="ucp_overview">
 			<title>Oversigt</title>
 			<para>Forsiden viser en status over din aktivitet og historik på boardet, med mulighed for se dine overvågninger, bogmærker og gemte kladder.</para>
@@ -110,6 +110,10 @@
 				<para>Du kan gemme en kladde når du skriver nye emner eller indlæg ved at klikke på knappen <guilabel>Gem</guilabel>. I oversigten over gemte kladder vises titlen på dit indlæg, det forum eller emne du skrev kladden til og datoen du gemte den.</para>
 				<para>For at fortsætte redigeringen af kladden klikkes på linket &quot;Indlæs kladde&quot;. Når du har færdiggjort redigeringen og vil indsende indlægget, klikker du på <guilabel>Udfør</guilabel>. For at slette en kladde vinges boksen til højre for kladden af og der klikkes på <guilabel>Slet markerede</guilabel>.</para>
 			</section>
+			<section id="ucp_attachments">
+			<title>Private beskeder</title>
+			<para>TODO<!-- The attachment section of the UCP shows you a list of all attachments that you have uploaded to the board so far ... --> </para>
+		</section>
 		</section>
 		<section id="ucp_profile">
 			<title>Profilindstillinger</title>
@@ -164,7 +168,7 @@
 						<listitem><para><guilabel>Mit sprog</guilabel>: I dropdownmenuen vises de sprog der er installeret på boardet, du kan vælge hvilket af disse du ønsker at anvende på boardet. Bemærk at indlæg skrevet på et andet sprog stadig bliver vist på dette.</para></listitem>
 						<listitem><para><guilabel>Min tidszone</guilabel>: Du indstiller her den tidszone du befinder dig i.</para></listitem>
 						<listitem><para><guilabel>Sommertid/DST er slået til</guilabel>: Vælges <guilabel>Ja</guilabel> vises tider en time tidligere end den valgte tidszone. Bemærk at denne indstilling skal ændres manuelt hved hvert skift fra sommer- til vintertid og omvendt.</para></listitem>
-						<listitem><para><guilabel>Mit datoformat</guilabel>: Bestemmer hvordan dato og tid vises. Du kan vælge mellem de tilgængelige standardformater i dropdownmenuen. Ønsker du et andet format end de tilgængelig, vælges &quot;<guilabel>Valgfri...</guilabel>&quot; og du definerer selv formatet. Syntaksen er identisk med PHP <ulink url="http://www.php.net/date">date</ulink>-funktionen.</para></listitem>
+						<listitem><para><guilabel>Mit datoformat</guilabel>: Bestemmer hvordan dato og tid vises. Du kan vælge mellem de tilgængelige standardformater i dropdownmenuen. Ønsker du et andet format end de tilgængelige, vælges &quot;<guilabel>Valgfri...</guilabel>&quot; og du definerer selv formatet. Syntaksen er identisk med PHP <ulink url="http://www.php.net/date">date</ulink>-funktionen.</para></listitem>
 					</itemizedlist>
 				</para>
 			</section>
@@ -182,33 +186,33 @@
 				</para>
 			</section>
 			<section id="ucp_display">
-				<title>Display</title>
-				<para>TODO: Explain the settings you can edit here. </para>
+				<title>Visning</title>
+				<para>TODO<!-- Explain the settings you can edit here. --> </para>
 			</section>
 		</section>
-		<section id="ucp_friends_foes">
-			<title>Venner og ignorerede brugere</title>
-			<para>TODO: (Not sure if this deserves its own section yet. For 3.0 this does not have much of an influence on the overall forum experience, this might change with 3.2, so leaving it here for now.) Write a detailed explanation about what Friends and Foes are and how they affect the forum like hiding posts of foes, adding users to the friends list for fast access / online checks, and so forth.</para>
-		</section>
-		<section id="ucp_attachments">
-			<title>Vedhæfte filer</title>
-			<para>TODO: The attachment section of the UCP shows you a list of all attachments that you have uploaded to the board so far ... </para>
+		<section id="ucp_pm">
+			<title>Private beskeder</title>
+			<para>TODO<!-- Her er i EN udgave attachments - den er flyttet til 113 pb gennemgås i <section id="user_pm"> lin 318 --> </para>
 		</section>
 		<section id="ucp_usergroups">
 			<title>Brugergrupper</title>
-			<para>TODO: Work in progress, might change, so not sure how this is going to be structured.</para>
+			<para>TODO<!-- Work in progress, might change, so not sure how this is going to be structured. --></para>
+		</section>
+				<section id="ucp_friends_foes">
+			<title>Venner og ignorerede brugere</title>
+			<para>TODO<!-- Denne var anført efter Visning men fanen er sidst i UCP. For 3.0 this does not have much of an influence on the overall forum experience, this might change with 3.2, so leaving it here for now. Write a detailed explanation about what Friends and Foes are and how they affect the forum like hiding posts of foes, adding users to the friends list for fast access / online checks, and so forth. --></para>
 		</section>
 	</section>
 	<section id="user_posting">
 	<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>AdamR</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Gennemgang af skærmbilledet til indlægskrivning</title>
-		<para>TODO: How to write a new post and how to reply. Special items like attachments or polls are subsections. Don't forget to mention the "someone has replied before you replied" feature, the topic review, and so forth. Topic icons, smilies, post options, usage of HTML ... it would probably best to add a screenshot with arrows to the different sections.</para>
+		<title>Skrivning af indlæg</title>
+		<para><!-- TODO: How to write a new post and how to reply. Special items like attachments or polls are subsections. Don't forget to mention the "someone has replied before you replied" feature, the topic review, and so forth. Topic icons, smilies, post options, usage of HTML ... it would probably best to add a screenshot with arrows to the different sections. --></para>
 		<para>Indsendelse af indlæg er et af de primære formål ved bulletin boards. Der findes to overordnede typer indlæg: et emne eller et svar. Ved at vælge knappen <guilabel>Nyt emne</guilabel> i et forum bliver du ledt til et skærmbillede hvor indlæg kan skrives. Ved at klikke på udfør nederst indsendes indlægget som et nyt emne i forummet. Andre kan nu deltage i debatten ved at klikke på knappen <guilabel>Skriv indlæg</guilabel>. Også her bliver man ledt til det skærmbillede hvor indlæg skrives.</para>
 		<section id="posting_form">
 			<title>Skriv indlæg</title>
@@ -216,7 +220,7 @@
 			<itemizedlist>	
 				<listitem><para><guilabel>Emne/Indlægsikon</guilabel>: Er små billeder som kan tilknyttes et indlæg for at indikere indholdet i emnet. Muligheden for at anvende emneikonerne afhænger af de tilladelser administratoren har defineret.</para></listitem>
 				<listitem><para><guilabel>Emne</guilabel>: Hvis du skriver et nyt emne, er angivelse af emne obligatorisk og bliver titlen på emnet. Besvarer du eller skriver indlæg i et eksisterende emne, er feltet udfyldt men kan ændres.</para></listitem>
-				<listitem><para>Indlægsindhold - den store teksboks umiddelbart herunder bruges til at skrive dit indlæg. Hvis administratoren har tilladt det, kan du udover almindelig tekst, også anvende <emphasis role="strong">smilies og BBkode</emphasis>.</para></listitem>
+				<listitem><para>Indlægsindhold - den store tekstboks umiddelbart herunder bruges til at skrive dit indlæg. Hvis administratoren har tilladt det, kan du udover almindelig tekst, også anvende <emphasis role="strong">smilies og BBkode</emphasis>.</para></listitem>
 				<listitem><para>Smilies - kan benyttes til at signalere følelser. Er brug af smilies tilladt på boardet ses teksten &quot;<guilabel>Smilies er slået TIL</guilabel>&quot; til højre for feltet hvor du skriver din indlægstekst. I modsat fald ses samme sted teksten &quot;<guilabel>Smilies er slået FRA</guilabel>&quot;. Se yderligere information i <link linkend="posting_smilies">Smilies</link>.</para></listitem>
 				<listitem><para>BBkode - er en formateringsmetode som kan anvendes i indlæg, hvis det er tilladt af administratoren. Er BBkode tilladt ses teksten &quot;<guilabel>BBkode er slået TIL</guilabel>&quot; til højre for feltet hvor du skriver din indlægstekst. I modsat fald ses samme sted teksten &quot;<guilabel>BBkode er slået FRA</guilabel>&quot;. Se yderligere information i <link linkend="posting_bbcodes">BBkoder</link>.</para></listitem>
 			</itemizedlist>
@@ -231,11 +235,11 @@
 		
 		<section id="posting_bbcodes">
 			<title>BBkoder</title>
-			<para>TODO: What are BBcodes. Again, permission based which ones you can use. Explain syntax of the default ones (quote and URL for instance). How to disable BBcode by default, how to disable/enable it for one post.</para>
+			<para><!-- TODO: What are BBcodes. Again, permission based which ones you can use. Explain syntax of the default ones (quote and URL for instance). How to disable BBcode by default, how to disable/enable it for one post. --></para>
 			<para>BBkode er en speciel implementering af HTML. Hvorvidt du aktuelt har muligheden for at anvende BBkode i dine indlæg, er defineret af administratoren. Du kan selv fravælge denne mulighed pr. emne når du skriver et indlæg. BBkode skrives på samme måde som HTML, hvor teksten omsluttes af en start- og en slutkode, koderne er omsluttet af hakparenteser [ og ] i stedet for &lt; og &gt;.</para>
 			<para>En mere detaljeret vejledning i brugen af BBkode kan findes ved at klikke på linket <guilabel>BBkode</guilabel> til højre for teksfeltet hvor du skriver indlægget. Bemærk også at administrator har mulighed for at tilføje yderligere tilpassede BBkoder, så der kan være flere end nedennævnte tilgængelige.</para>
 			<para>Standard BBkoder og måden de vises på:</para>
-			<para>TODO: How do we want to go about displaying the output?</para>
+			<para>TODO: Hvordan ønsker vi at vise outputtet?</para>
 			<para>[b]Fed tekst[/b]:</para>
 			<para>[i]Kursiv tekst[/i]:</para>
 			<para>[u]Understreget tekst[/u]:</para>
@@ -249,7 +253,7 @@
 		
 		<section id="posting_options">
 			<title>Indlægsindstillinger</title>
-			<para>TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc.</para>
+			<para>TODO<!-- Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc. --></para>
 			<para>Når du skriver et indlæg eller et svar, har du adskillige muligheder for at ændre i standardindstillingerne for dette specifikke indlæg. Umiddelbart under feltet hvor du skriver dit svar findes fanen <guilabel>Indstillinger</guilabel>, og afhængig af de tilladelser administratoren har tildelt dig har du forskellige muligheder. Valgmulighederne varierer også afhængig af om du skriver et nyt indlæg eller svarer i et eksisterende emne.</para>
 			<itemizedlist>	
 				<listitem><para><guilabel>Slå BBkode fra</guilabel>: Hvis BBkode er slået til på boardet, og du har tilladelse til bruge den, er denne mulighed tilgængelig. Vinges boksen bliver ingen BBkoder fortolket som sådan. Som eksempel vil kombinationen [b]Fed tekst[/b] blive vist nøjagtig sådan [b]Fed tekst[/b] i indlægget.</para></listitem> 
@@ -262,7 +266,7 @@
 			
 			<section id="posting_special">
 				<title>Emnetyper</title>
-				<para>Har du de rette tilladelser, har du mulighed for at vælge hvilken type dit nye emne skal vises som. Når du skriver et nyt emne kan denne mulighed benyttes med valgmuligheden <guilabel>Skriv emne som</guilabel> i indstillingsfanen umiddelbart under feltet hvor teksten skrives. Der er fire emnetyper: <guilabel>Normal</guilabel>, <guilabel>Opslag</guilabel>, <guilabel>Bekendtgørelse</guilabel>, og <guilabel>Global</guilabel>. Standardindstillingen er <guilabel>Normal</guilabel>.</para>
+				<para>Har du de rette tilladelser, har du mulighed for at vælge hvilken type dit nye emne skal vises som. Når du skriver et nyt emne kan denne mulighed benyttes med valgmuligheden <guilabel>Skriv emne som</guilabel> i indstillingsfanen umiddelbart under feltet hvor teksten skrives. Der er fire emnetyper: <guilabel>Normal</guilabel>, <guilabel>Opslag</guilabel>, <guilabel>Bekendtgørelse</guilabel> og <guilabel>Global</guilabel>. Standardindstillingen er <guilabel>Normal</guilabel>.</para>
 				<itemizedlist>				
 					<listitem><para><guilabel>Normal</guilabel>: Emnet indsendes som et standardemne i forummet.</para></listitem>
 					<listitem><para><guilabel>Opslag</guilabel>: Vises i øverst på forummets første side, før alle normale emner.</para></listitem>
@@ -289,7 +293,7 @@
 		<section id="posting_polls">
 			<title>Afstemning</title>
 			<para>Oprettelse af afstemninger giver brugere mulighed for at anvende et emne til at få andre brugere til at give deres holdning til kende om en idé eller lignende. Afstemninger kan kun oprettes i det første indlæg i et emne. Brugeres mulighed for at oprette afstemninger og afgive stemme er bestemt af administrator.</para>
-			<para>For at oprette en afstemning benyttes fanten <guilabel>Oprettelse af afstemning</guilabel> umiddelbart under feltet hvor indlæg skrives.</para>
+			<para>For at oprette en afstemning benyttes fanen <guilabel>Oprettelse af afstemning</guilabel> umiddelbart under feltet hvor indlæg skrives.</para>
 			<itemizedlist>
  				<listitem><para><guilabel>Afstemningsspørgsmål</guilabel>: Det overordnede spørgsmål for afstemningen angives her.</para></listitem>
 				<listitem><para><guilabel>Afstemningsmuligheder</guilabel>: Her angives de svar brugere kan vælge imellem. Hver svarmulighed angives på en separat linie og der skal angives mindst to.</para></listitem>
@@ -305,7 +309,7 @@
  				<listitem><para><guilabel>Gem</guilabel> - Indlægget gemmes som en kladde. Kun emnetitel og indlægstekst gemmes. Emneikoner og vedhæftede filer mistes.</para></listitem>
 				<listitem><para><guilabel>Indlæs</guilabel> - Genindlæser en gemt kladde. Når denne vælges, vises en liste af tilgængelige kladder, vælg den rette ved at klikke på dens titel. Allerede skrevet indlægstekst erstattes med kladdens fulde tekst..</para></listitem>
 			</itemizedlist>
-			<para>Når en kladde er anvendt slettes den. Læs mere om anvendelse af håndtering af kladder i <link linkend="ucp_drafts">UCP Kladder</link>.</para>
+			<para>Når en kladde er anvendt slettes den. Læs mere om brug af kladder i <link linkend="ucp_drafts">UCP Kladder</link>.</para>
 			<note>
 				<para>Er ingen kladder gemt, vises <guilabel>Indlæs</guilabel>-knappen ikke.</para>
  			</note>
@@ -328,20 +332,20 @@
 		</orderedlist>
 		<para>Du kan under fanen <link linkend="ucp_preferences">boardindstillinger</link> vælge hvilke metoder du foretrækker. Bemærk at du i nogle browsere skal tillade popupvinduer fra boardet, for at få glæde at denne advisering.</para>
 		<para>Du kan fravælge at modtage private beskeder fra andre brugere i <link linkend="ucp_preferences">boardindstillinger</link>. Administratorer og redaktører vil stadig kunne sende dig private beskeder selvom du har fravalgt at modtage beskeder fra andre brugere.</para>
-		<para>[For at bruge bruge denne mulighed skal du være tilmeldt boardet og have de rette tilladelser.]</para>
+		<para>Muligheden for at anvende private beskeder forudsætter at du er tilmeldt boardet og har de rette tilladelser.</para>
 		<section id="pm_display">
 			<title>Vis beskeder</title>
 			<para>Indbakken er standardmodtagemappen for indkommende beskeder og indeholder alle beskeder afsendt til dig. </para>
 		</section>
 		<section id="pm_new">
 			<title>Skriv en besked</title>
-			<para>TODO: Similar to the posting screen, so a reference for the basic functions should be enough. What needs to be explained are the To and Bcc fields, how they integrate with the friends list and how to find members (which could also be a link to the memberlist section).</para>
+			<para>TODO<!-- Similar to the posting screen, so a reference for the basic functions should be enough. What needs to be explained are the To and Bcc fields, how they integrate with the friends list and how to find members (which could also be a link to the memberlist section). --></para>
 		</section>
 		<section id="pm_folders">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -387,37 +391,37 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
 				<title>Farvemarkering af private beskeder</title>
 				
-				<para>Beskeder i de forskellige mapper kan være farvemarkerede. Farvelægningen kan variere afhængig af den anvendte typografi. Se venligst farvenes betydning i <guilabel>Beskedfarver</guilabel> som kan ses i mapper der indeholder beskeder.  Der anvendes fire forskellige farvemarkeringer med disse betydninger:</para>
+				<para>Beskeder i de forskellige mapper kan være farvemarkerede. Farvelægningen kan variere afhængig af den anvendte typografi. Se venligst farvenes betydning i <guilabel>Farveforklaring</guilabel> som kan ses i mapper der indeholder beskeder.  Der anvendes fire forskellige farvemarkeringer med disse betydninger:</para>
 				<variablelist>
 					<varlistentry>
-						<term>Markeret besked</term>
+						<term>Vigtig</term>
 						<listitem>
 							<para>Du kan vælge at markere en besked som &quot;Vigtig&quot; med <guilabel>Markér/afmarkér som vigtig</guilabel> muligheden i dropdownmenuen.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Besvaret besked</term>
+						<term>Besvaret</term>
 						<listitem>
 							<para>Når du besvarer en besked, bliver den automatisk markeret som sådan. På denne måde har du kontrol over hvilke beskeder der skal behandles og hvilke der allerede er besvaret.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Besked fra ven</term>
+						<term>Fra ven</term>
 						<listitem>
 							<para>Er afsenderen på din venneliste (se kapitlet <link linkend="ucp_friends_foes">Venner &amp; Ignorede brugere</link> for mere information), farvemarkeres beskeden automatisk herefter.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Besked fra ignoreret bruger</term>
+						<term>Fra ignoreret bruger</term>
 						<listitem>
 							<para>Er afsenderen en bruger du har valgt at ignorere, farvemarkeres beskeden automatisk herefter.</para>
 						</listitem>
@@ -431,12 +435,12 @@
 		</section>
 		<section id="pm_filters">
 			<title>Meddelelsefiltre</title>
-			<para>TODO: How to work with message filters. That is quite a complex system</para>
+			<para>TODO<!-- How to work with message filters. That is quite a complex system --></para>
 		</section>
 	</section>
 	<section id="user_search">
-		<title>Søgning - Hvordan finder du det du leder efter</title>
-		<para>TODO: Explain how to use the search system. This should also include the results page, and the refine function. Also note, that the title (Search: search term) is a link that one can copy and paste into a post to directly link to the results. Egosearch and the global search field should also be included here.</para>
+		<title>Søgning - finder det du leder efter</title>
+		<para>TODO<!-- Explain how to use the search system. This should also include the results page, and the refine function. Also note, that the title (Search: search term) is a link that one can copy and paste into a post to directly link to the results. Egosearch and the global search field should also be included here. --></para>
 	</section>
 	
 	<section id="user_memberlist">
@@ -485,9 +489,9 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Søgefunktionen til at finde en tilmeldt bruger</term>
+				<term>Søgefunktionen - find en tilmeldt bruger</term>
 				<listitem>
-					<para>Med <guilabel>Find en tilmeldt bruger</guilabel>-funktionen kan du søge efter specifikke brugere. Du behøver ikke at udfylde alle felterne. This feature allows you to find members by their username, ICQ number, AIM, YIM, MSN Messenger/Windows Live Messenger address, join date, last active date, number of posts, IP address, and usergroup membership(s). All dates should be entered in the format YYYY-MM-DD (such as 2004-02-28 to represent February 28, 2004). Brug * som ubekendt for ukendte tegn, such as entering "Ar*" into the username field to find all usernames beginning with Ar. Press the <guilabel>Submit</guilabel> button to begin the search, or the <guilabel>Reset</guilabel> button if you wish to clear all fields and start the search again.</para>
+					<para>Med <guilabel>Find en tilmeldt bruger</guilabel> kan du søge efter specifikke brugere. Du behøver ikke at udfylde alle felterne. Søgningen kan udføres efter brugernavn, ICQ nummer, AIM, YIM, MSN Messenger/Windows Live Messenger adresser, tilmeldt dato, senest aktiv dato, antal indlæg, IP-addresse og gruppemedlemskab. Alle datoer skal angive i formatet YYYY-MM-DD (eksempelvis skal d. 28. februar 2008 angives som 2008-02-28). Brug * som ubekendt for ukendte tegn. Ved at søge efter &quot;Mi*&quot; i brugernavn, findes alle brugernavne startende med Mi. Klik på <guilabel>Udfør</guilabel> før at begynde søgningen, eller på <guilabel>Nulstil</guilabel> hvis du vil slette alle udfyldte felter og starte forfra.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>

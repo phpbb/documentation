@@ -79,7 +79,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -93,7 +93,7 @@
 					<imagedata fileref="../images/quick_start_guide/installation_intro.png" format="PNG" />
 				</imageobject>
 				<caption>
-					<para>Introduktion til installationssystemet.</para>
+					<para>Introduktion til installationsystemet.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -104,9 +104,9 @@
 		<section id="quick_installation_requirements">
 			<title>Krav</title>
 			<important>
-				<para>Læs venligst <link linkend="quick_requirements">kapitlet om phpBB3's krav</link>, her er phpBB 3.0's minimumskrav specificeret.</para>
+				<para>Læs venligst <link linkend="quick_requirements">kapitlet om phpBB3's krav</link>, hvor minimumskravene er specificeret.</para>
 			</important>
-			<para>Den første side du møder efter installationen er startet er listen over systemkrav. phpBB3 kontrollerer automatisk om alt nødvendigt er installeret på serveren for at køre phpBB3 korrekt på din server. Du skal have minimumversionen af <acronym>PHP</acronym> installeret og mindst én tilgængelig database for at fortsætte installationen. Det er også vigtigt at alle viste mapper er tilgængelige og sat med rette tilladelser. Læs venligst beskrivelsen i hver sektion for at finde ud af om de enkelte komponenter og tilladelser er valgfrie eller krævede for at køre phpBB3. Hvis alt er i orden, kan du fortsætte med installationen ved at klikke på <guilabel>Start installation</guilabel>.</para>
+			<para>Den første side du møder efter installationen er startet er listen over systemkrav. phpBB3 kontrollerer automatisk om alt nødvendigt er installeret på serveren for at phpBB3 kan afvikles korrekt. Du skal have minimumversionen af <acronym>PHP</acronym> installeret og mindst én tilgængelig database for at fortsætte installationen. Det er også vigtigt at alle viste mapper er tilgængelige og sat med rette tilladelser. Læs venligst beskrivelsen i hver sektion for at finde ud af om de enkelte komponenter og tilladelser er valgfrie eller krævede for at køre phpBB3. Hvis alt er i orden, kan du fortsætte ved at klikke på <guilabel>Start installation</guilabel>.</para>
 		</section>
 		<section id="quick_installation_database">
 			<title>Databaseindstillinger</title>
@@ -132,28 +132,28 @@
 				<para>Hvis du anvender en SQLite-database, skal den fulde sti til din databasefil angives i DSN-feltet og felterne til brugernavn og kodeord efterlades blanke. Af sikkerhedsgrunde bør du sikre dig at databasefilen ikke opbevares i en mappe der kan tilgås via internettet.</para>
 			</tip>
 			<figure id="img_quick_installation_database">
-				<title>Database settings</title>
+				<title>Databaseindstillinger</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Skærmbilledet hvor databaseindstillinger angives, hav venligst alle krævede data ved håndenp</para>
+						<para>Skærmbilledet hvor databaseindstillinger angives, hav venligst alle krævede data ved hånden</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			<para>Du behøver ikke at ændre <guilabel>tabelpræfiks for tabellerne</guilabel> i databaseindstillingerne, med mindre du har planer om at flere phpBB-installationer skal benytte samme database. Hvis det er tilfældet, skal du anvende forskelligt præfiks for hver installation for at få det til at virke.</para>
-			<para>Når du har angivet denne information, fortsætter du installationen ved at klikke på knappen <guilabel>Fortsæt til næste trin</guilabel> button. Nu vil phpBB3 kontrollere om de angivne data vil medføre at der kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne præfiks.</para>
-			<para>En<guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. Kontrollér at de angivne databaseindstillinger er korrekte og prøv igen. Kontakt venligst din vært, hvis du er usikker på de korrekte indstillinger.</para>
+			<para>Når du har angivet denne information, fortsætter du installationen ved at klikke på knappen <guilabel>Fortsæt til næste trin</guilabel> button. phpBB3 kontrollerer nu om der med de angivne data kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne præfiks.</para>
+			<para>En <guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. Kontrollér at de angivne databaseindstillinger er korrekte og prøv igen. Kontakt venligst din vært, hvis du er usikker på de korrekte indstillinger.</para>
 			<tip>
-				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
+				<para>Husk at anvendelse af store og små bogstaver i brugernavn og kodeord til databasen skal følges stringent. Der skal altså angives nøjagtig de data du angav ved oprettelse af databasen eller dem du har fået udleveret af din vært.</para>
 			</tip>
 			<para>Hvis du tidligere har installeret en anden version af phpBB i samme database med samme præfiks, giver phpBB3 dig information herom, og beder dig blot om at angive et andet databasepræfiks.</para>
 			<para>Når du ser meddelelsen <guilabel>Korrekt forbundet</guilabel>, kan du fortsætte til næste trin.</para>
 		</section>
 		<section id="quick_installation_admin">
 			<title>Administratoroplysninger</title>
-			<para>Nu skal du oprette din administratorbruger. Denne bruger får tilladelser som fuldgyldig administrator og vil være den første bruger på dit board. Alle felter på denne side skal udfyldes. Du kan også indstille boardets standardsprog på denne side. I en standard phpBB3-installationspakke er kun inkludere <guilabel>engelsk [British English]</guilabel>. Du kan downloade yderligere sprogpakker på <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, og tilføje disse før installationen eller efter denne er gennemført <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+			<para>Nu skal du oprette din administratorbruger. Denne bruger får tilladelser som fuldgyldig administrator og vil være den første bruger på dit board. Alle felter på denne side skal udfyldes. Du kan også indstille boardets standardsprog på denne side. I en standard phpBB3-installationspakke er kun inkludere <guilabel>engelsk [British English]</guilabel>. Du kan downloade yderligere sprogpakker på <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, og tilføje disse før installationen eller efter denne er gennemført. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
 		</section>
 		<section id="quick_installation_config">
 			<title>Konfigurationsfilen (config.php)</title>
@@ -189,7 +189,7 @@
 						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Her bestemmer du boardets navn og beskrivelse.</para>
+						<para>Her bestemmer du boardets navn og beskrivelse</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -226,10 +226,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>Anon</othername>
-				</author>
-				<author>
-					<othername>MennoniteHobbit</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -240,14 +237,17 @@
 		<para>I forumadministration kan du ændre allerede oprettede fora og underfora, og naturligvis oprette nye. Et subforum er et forum indeholdt herakisk i et overforum. Læs mere om underfora i  <link linkend="acp_forums_subforums">administration af subfora</link>.</para>
 		<para>Find knappen <guilabel>Opret nyt forum</guilabel> nederst til højre, i tekstboksen til venstre herfor angives navnet på det nye forum. Du kan oprette et testforum og navngive det ved at skrive Test i tekstboksen. Klik på <guilabel>Opret nyt forum</guilabel> for at oprette forummet.</para>
 		<para>En ny side med overskriften &quot;Opret nyt forum :: Test&quot; vises. Du vælger her indstillinger for forummet. For eksempel vælges det forumbillede der skal vises, eller du kan formulere teksten til de forumregler der vises øverst i forummet. Du bør også her angive en kort beskrivelse af forummet, så dine brugere er i stand til at regne ud hvad emnerne i forummet omhandler.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
-			</imageobject>
-			<caption>
-				<para>Opret et nyt forum</para>
-			</caption>
-		</mediaobject>
+		<figure id="img_quick_create_forum">
+			<title>Opret et nyt forum</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
+				</imageobject>
+				<caption>
+					<para>Her angives navnet på og beskrivelsen for det nye forum</para>
+				</caption>
+			</mediaobject>
+		</figure>
 		<para>Standardindstillingerne er i de fleste tilfælde udmærkede og får dit forum til at fungere. Du kan efterfølgende tilpasse indstillinger så de passer præcis til dit behov. Der er nogle nøgleindstillinger du bør være opmærksom på. Ved valg af overforum bestemmer du hvor dit nye forum skal være underforum. Vær her omhyggelig, da valg af overforum er vigtig ved oprettelse af underforum (læs mere om i kapitlet om oprettelse af underfora). Ved at bruge &quot;Kopier tilladelser fra:&quot; kan du enkelt kopiere tilladelserne fra et af dine allerede eksisterende fora. Den er god hvis du ønsker at holde identiske tilladelser i dine fora. Du har også mulighed for at vælge en anden typografi end boardets standardtypografi for forummet. Du kan vælge mellem de typografier der er installeret på boardet.<!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
 		<para>Når du har foretaget alle valg for dit nye forum, klikker du nederst på <guilabel>Udfør</guilabel> nederst på siden for at oprette forummet med de valgte indstillinger. Dit board kvitterer med en bekræftelsesmeddelelse når forummet er oprettet.</para>
 		<para>Efter denne bekræftelse videredirigeres du automatisk til forumtilladelserne. Du kan nu ændre tilladelserne for det nye forum (eller indstille disse, hvis du ikke fik kopieret tilladelser fra et andet). Hvis du er tilfreds med de allerede valgte tilladelser klikker du blot på linket <guilabel>Tilbage til foregående side</guilabel>. Ellers du nu tilladelserne som du ønsker og når tilpasningerne er foretaget klikkes på <guilabel>Tilføj alle tilladelser</guilabel> i bunden af siden. Herefter vises en bekræftelse på at tilladelserne er opdateret.</para>
@@ -261,7 +261,7 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -301,7 +301,7 @@
 			<para>Man kan udnævne redaktører globalt eller lokalt. Denne vurdering er dybest set et spørgsmål om tillid; har du fuld tillid til din bruger kan du udnævne vedkommende til global redaktør. De kan nemlig redigere i alle fora på boardet med de tilladelser de er tildelt. En lokal redaktør kan kun redigere i de fora du har valgt at vedkommende skal være redaktør for. De lokale redaktører behøver ikke nødvendigvis at at have adgang til identiske redaktørfunktioner. Nogle kan være i stand at slette emner i nogle fora, mens samme redaktør ikke kan det i andre. Globale redaktører har samme tilladelser i alle boardets fora.</para>
 		</section>
 		<section id="quick_permissions_forum">
-			<title>Indstil forumtilladelser</title>
+			<title>Forumtilladelser</title>
 			<para>For at indstille tilladelser for dit nye forum skal de lokale <guilabel>Forumbaserede tilladelser</guilabel> anvendes. Først skal besluttes om tilladelserne skal omfatte en enkelt bruger eller gruppe. Afhængig af valget bruges enten <guilabel>Gruppers forumtilladelser</guilabel> eller <guilabel>Brugeres forumtilladelser</guilabel>, som giver dig mulighed for at vælge en bruger eller en gruppe, og herefter det forum du vil indstille tilladelser for. </para>
 			<para>I denne Quick Start Guide koncentrerer vi os imidlertid om <guilabel>Forumtilladelser</guilabel>. Fremfor ovennævnte metode, hvor bruger eller gruppe vælges, starter du her med at udvælge de fora du ønsker at ændre tilladelser for. Fora kan vælges enkeltvis eller som en kategori/forum inklusive alle underfora. Klik herefter på <guilabel>Udfør</guilabel> for at komme til næste side.</para>
 			<figure id="img_quick_permissions_select">
@@ -315,7 +315,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Siden med<guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner som øverst er navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst ét af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel> hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst ét af de valgte fora.</para>
+			<para>Siden med <guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner som øverst er navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst ét af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel> hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst ét af de valgte fora.</para>
 			<para>For at tilføje tilladelser til grupper vælges en eller flere, enten i feltet <guilabel>Tilføj grupper</guilabel>. For at tilføje tilladelser til en bruger, indtastes denne i tekstboksen <guilabel>Tilføj brugere</guilabel>, eller brug funktionen <guilabel>Find en tilmeldt bruger</guilabel>. Klik herefter på <guilabel>Tilføj tilladelser</guilabel> som dirigerer dig videre til tilladelseskærmbilledet. Her listes alle de fora du tidligere valgte, med de grupper eller brugere der ændres tilladelser for nedenfor hvert forum. </para>
 			<para>Der er to metoder til at tildele tilladelser: Du kan enten tildele dem manuelt eller bruge de foruddefinerede <guilabel>Tilladelseroller</guilabel>, som er noget simplere men ikke så fintmasket. Du kan skifte mellem begge metoder når som helst i processen. Du kan vælge at ignorere introduktionen til manuelle tilladelser og hoppe direkte til <link linkend="quick_permissions_roles">sektionen &quot;Tilladelseroller&quot;</link> hvis du er ivrig efter at få alt til at virke hurtigst muligt. Men vær som nævnt opmærksom på at disse roller kun tilbyder et ganske lille udsnit af de muligheder man har i tilladelsesystemet. Efter vores opfattelse forstår en god Olympusadministrator at udnytte tilladelsesystemet fuldt ud. </para>
 			<para>De to metoder adskiller sig kun ved den måde indstillingen foretages på, de deler samme interface.</para>
@@ -367,7 +367,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>zeroK</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
