@@ -10,9 +10,9 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Administration Guide</title>
+	<title>Administratie Gids</title>
 	<abstract>
-		<para>This chapter describes the phpBB 3.0 admin controls.</para>
+		<para>Dit hoofdstuk beschrijft de phpBB 3.0 admin bediening.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -23,19 +23,18 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Het Beheerderspaneel</title>
-		<para>testtesttest</para>
-		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
-		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
-		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
+		<para>Meer dan zijn voorganger, is phpBB 3.0 &quot;Olympus&quot; heel erg configureerbaar. Je kan bijna alle functies aanpassen, afstellen of uitzetten. Om deze hoeveelheid van instellingen zo toegankelijk mogelijk te maken, hebben we de Beheerderspaneel (ACP) compleet veranderd. </para>
+		<para>Klik op de <guilabel>Beheerderspaneel</guilabel> link onder aan de pagina van de standaard forum stijl om de <acronym>ACP</acronym> te bezoeken.</para>
+		<para>De <acronym>ACP</acronym> heeft standaard zeven verschillende secties welke elk een aantal subsecties bevat. We zullen elke sectie bespreken in deze Admin Gids.</para>
 		
 		<figure id="img_acp_index">
-			<title>Administration Control Panel Index</title>
+			<title>Beheerderspaneel Index</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
 				</imageobject>
 				<caption>
-					<para>The Administration Control Panel Index, the home of managing your phpBB board. Administration functions are grouped into eight different categories: <guimenuitem>General</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Posting</guimenuitem>, <guimenuitem>Users and Groups</guimenuitem>, <guimenuitem>Permissions</guimenuitem>, <guimenuitem>Styles</guimenuitem>, <guimenuitem>Maintenance</guimenuitem>, and <guimenuitem>System</guimenuitem>. Each category is a tab located at the top of the page. Specific functions of the category you're in can be found in the left-hand sidebar of each page.</para>
+					<para>De Beheerderspaneel Index, het begin van het beheren van je phpBB forum. Administratie functies zijn gegroepeerd in acht verschillende categorieën: <guimenuitem>Algemeen</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Berichten</guimenuitem>, <guimenuitem>Groepen en Gebruikers</guimenuitem>, <guimenuitem>Permissies</guimenuitem>, <guimenuitem>Stijlen</guimenuitem>, <guimenuitem>Onderhoud</guimenuitem> en <guimenuitem>Systeem</guimenuitem>. Elke categorie is gelocaliseerd boven aan de pagina in een tabblad. Specifieke functies van de categorie kan je vinden aan de linkerkant van elke pagina.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -49,9 +48,9 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>General Configuration and Front Page</title>
-		<para>The <guimenuitem>General</guimenuitem> section is the first screen you see each time you log into the <acronym>ACP</acronym>. It contains some basic statistics and information about your forum. It also has a subsection called <guimenuitem>Quick Access</guimenuitem>. It provides quick access to some of the admin pages that are frequently used, like <link linkend="acp_users">User Management</link> or <link linkend="acp_maintenance">Moderator Logs</link>. We will discuss its items later in their specific sections.</para>
-		<para>We will concentrate on the other three subsections: <link linkend="acp_general_config">Board Configuration</link>, <link linkend="acp_general_client">Client Communication</link>, and <link linkend="acp_general_server">Server Configuration</link>.</para>
+		<title>Algemene Configuratie en Voorpagina</title>
+		<para>De <guimenuitem>Algemeen</guimenuitem> sectie is het eerste scherm dat je iedere keer ziet als je aanmeld in de <acronym>ACP</acronym>. Het bevat enkele basis statistieken en informatie over je forum. Het bevat ook subsecties genaamd <guimenuitem>Snelkoppelingen</guimenuitem>. Het geeft je toegang tot sommige administratie pagina's die regelmatig gebruikt worden, zoals <link linkend="acp_users">Gebruikersbeheer</link> of <link linkend="acp_maintenance">Moderatielogboek</link>. We zullen deze items later bespreken in hun specifieke secties.</para>
+		<para>We zullen ons concentreren op de andere drie subsecties: <link linkend="acp_general_config">Forumconfiguratie</link>, <link linkend="acp_general_client">Gebruikerscommunicatie</link> en <link linkend="acp_general_server">Serverconfiguratie</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
 				<authorgroup>
@@ -61,7 +60,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Forumconfiguratie</title>
-			<para>This subsection contains items to adjust the overall features and settings of the forum. </para>
+			<para>Deze subsectie This subsection contains items to adjust the overall features and settings of the forum. </para>
 			
 			<section id="acp_board_attachments">
 				<sectioninfo>
@@ -72,8 +71,8 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Bijlageninstellingen</title>
-				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
-				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
+				<para>Eén van de vele nieuwe functies in phpBB 3.0 is <glossterm>Bijlagen</glossterm>. Bijlagen zijn bestanden die begevoegd kunnen worden bij berichten, zoals e-mail bijlagen. Bepaalde restricties, ingesteld door de forum administrator, controleren wat gebruikers kunnen bijvoegen. Je kan deze restricites instellen via de <guimenuitem>Bijlageninstellingen</guimenuitem> pagina.</para>
+				<para>Voor meer informatie, bekijk de sectie over <link linkend="acp_attach_settings">hoe je je forum bijlageninstellingen moet configureren</link>.</para>
 			</section>
 			
 			<section id="acp_general_settings">
@@ -89,7 +88,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Foruminstellingen</title>
-				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change many settings that govern your board. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
+				<para>De <guimenuitem>Foruminstellingen</guimenuitem> staan je toe om vele instellingen over over je forum gaan aan te passen. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
 				
 				<itemizedlist>
 					<title>Foruminstellingen</title>
