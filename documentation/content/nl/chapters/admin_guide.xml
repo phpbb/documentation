@@ -23,6 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Het Beheerderspaneel</title>
+		<para>testtesttest</para>
 		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
