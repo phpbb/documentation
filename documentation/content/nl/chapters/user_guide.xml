@@ -36,18 +36,18 @@
 		</sectioninfo>
 		<title>Registering on a phpBB3 board</title>
 		<para>Registering an account on a phpBB3 board is typically a simple and straight forward procedure.</para>
-        <figure id="user_registering_typical_page">
-            <title>The Typical Registration Page</title>
-            <mediaobject>
-                <imageobject>
-                    <imagedata format="PNG" fileref="../images/user_guide/typical_registration_page.png"/>
-                </imageobject>
-                <caption>
-                    <para>This is what you should expect to see on a typical registration page.</para>
+		<figure id="user_registering_typical_page">
+			<title>The Typical Registration Page</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/user_guide/typical_registration_page.png"/>
+				</imageobject>
+				<caption>
+					<para>This is what you should expect to see on a typical registration page.</para>
 				</caption>
 			</mediaobject>
 		</figure>
-        <para>After clicking the <guilabel>Register</guilabel> link, the terms and conditions of registering will be displayed, which you must accept to proceed. Some websites will ask you to select whether you are under the age of thirteen in order to comply with <acronym>COPPA</acronym> (the United States' Children's Online Privacy Protection Act of 1998; more details can be found at <ulink url="http://www.coppa.org">http://www.coppa.org</ulink>). If you are younger than thirteen years of age, your account will stay inactive until it is approved by a parent or guardian. You will receive an e-mail in which the next steps required for your account activation are outlined.</para>
+		<para>After clicking the <guilabel>Register</guilabel> link, the terms and conditions of registering will be displayed, which you must accept to proceed. Some websites will ask you to select whether you are under the age of thirteen in order to comply with <acronym>COPPA</acronym> (the United States' Children's Online Privacy Protection Act of 1998; more details can be found at <ulink url="http://www.coppa.org">http://www.coppa.org</ulink>). If you are younger than thirteen years of age, your account will stay inactive until it is approved by a parent or guardian. You will receive an e-mail in which the next steps required for your account activation are outlined.</para>
 		<para>Beyond accepting the terms and conditions, you need to fill out some important details such as selecting a username, entering your e-mail address and desired password. You can also select your timezone and language.</para>
 		<para>If you see in the form where you can specify your username, password etc. a graphic with some odd-looking characters, then you are seeing the so-called <emphasis>Visual Confirmation</emphasis>. Many boards will have this, otherwise known as a  <acronym>CAPTCHA</acronym>, which is an image with distorted letters and numbers which you must then type into an adjacent box. The reason for this is to ensure that you are a legitimate user registering (as opposed to a spam robot performing an automated registration). Simply enter the characters you see into the <guilabel>Confirmation code</guilabel> field and proceed with the registration. If you cannot understand the code, refresh the page to get a new code.</para>
         <figure id="user_registering_captcha">
@@ -81,7 +81,7 @@
 		<section id="ucp_overview">
 			<title>Overview</title>
 			<para>The Overview displays a snapshot of information about your posting habits such as the date you joined the forum, your most active topic, and how many total posts you have submitted. Overview sub pages include Subscriptions, Bookmarks, and Drafts.</para>
-				
+
 			<figure id="ucp_overview_index">
 				<title>User Control Panel Overview (Index)</title>
 				<mediaobject>
@@ -93,7 +93,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			
+
 			<section id="ucp_subscriptions">
 				<title>Subscriptions</title>
 				<para>Subscriptions are forums or individual topics that you have elected to watch for any new posts. Whenever a new post is made inside an area you have subscribed to, an e-mail will be sent you to informing you of the new addition. To create a subscription, visit the forum or topic you would like to subscribe to and click the 'Subscribe' link located at the bottom of the page.</para>
@@ -168,7 +168,7 @@
                         </itemizedlist>
 					</para>
             </section>
-			
+
 			<section id="ucp_posting">
 				<title>Posting</title>
 					<para>Posting settings control the default settings of the posting editors when you create a post. Note that these options are controllable on an individual basis while posting.</para>
@@ -212,7 +212,7 @@
 		<section id="posting_form">
 			<title>Posting Form</title>
 			<para>You will be taken to the posting form when you decide to post either a new topic or reply, where you can enter your post content.</para>
-			<itemizedlist>	
+			<itemizedlist>
 				<listitem><para><guilabel>Topic/Post Icon</guilabel>: The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para></listitem>
                 <listitem><para><guilabel>Subject</guilabel>: If you are creating a new topic with your post, the subject is required and will become the title of the topic. If you are replying to an existing topic, this is optional, but it can be changed.</para></listitem>
                 <listitem><para>Post Content - While not being labled, the large text box is where your actual post content will be entered. Here, along with your text, you may use things like <emphasis role="strong">Smilies or BBCode</emphasis> if the board administrator has them enabled.</para></listitem>
@@ -220,14 +220,14 @@
 				<listitem><para>BBCode - BBCode is a type of formatting that can be applied to your post content if BBCode has been enabled by the board administrator. If BBCode is enabled, you will see the text "<guilabel>BBCode is ON</guilabel>" to the righthand of the Post Content box. Otherwise, you will see the text "<guilabel>BBCode is OFF</guilabel>." See <link linkend="posting_bbcodes">Posting BBCode</link> for further details.</para></listitem>
 			</itemizedlist>
 		</section>
-		
+
 		<section id="posting_smilies">
 			<title>Smilies</title>
 			<para>Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. To use Smiles, certain characters are put together to get the desired output. For example, typing :) will insert [insert smilie here], ;) will insert [insert wink smilie here], etc. Other smilies require the format :texthere: to display. For example, :roll: will insert smilie whose eyes are rolling: [insert rolling smilie here], and :cry: will insert a smilie who is crying: [insert crying smilie here].</para>
 			<para>In many cases you can also select which smilie you'd like to insert by clicking its picture on the right side of the Post Content text box. When clicked, the smilie's characters will appear at the current location of the curser in the text box.</para>
             <para>If you wish to be able to use these characters in your post, but not have them appear as smilies, please see <link linkend="posting_options">Posting Options</link>.</para>
 		</section>
-		
+
 		<section id="posting_bbcodes">
 			<title>BBCodes</title>
 			<para>TODO: What are BBcodes. Again, permission based which ones you can use. Explain syntax of the default ones (quote and URL for instance). How to disable BBcode by default, how to disable/enable it for one post.</para>
@@ -245,24 +245,24 @@
 			<para>[flash=width,height]Path to flash[/flash] will play the flash animation with the specified dimensions.</para>
 			<para>Again, for more detailed instructions on the useage of BBCode and the many other available BBCodes, please click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text bos.</para>
 		</section>
-		
+
 		<section id="posting_options">
 			<title>Post Options</title>
 			<para>TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc.</para>
 			<para>When posting either a new topic or reply, there are several post options that are available to you. You can view these options by selecting the <guilabel>Options</guilabel> tab from the section below the posting form. Depending on the permissions the board administrator has assigned to you or whether you are posting a topic or reply, these options will be different.</para>
-			<itemizedlist>	
-				<listitem><para><guilabel>Disable BBCode</guilabel>: If BBCode is enabled on the board and you are allowed to use it, this option will be available. Checking this box will not convert any BBCode in your post content into its respected output. For example, [b]Bolded text[/b] will be seen in your post as exactly [b]Bolded text[/b].</para></listitem> 
-                <listitem><para><guilabel>Disable Smilies</guilabel>: If Smilies are enabled on the board and you are allowed to use them, this option will be available. Checking this box will not convert any of the smilie's characters to their respected image. For example, ;) will be seen in your post as exactly ;).</para></listitem> 
-                <listitem><para><guilabel>Do not automatically parse URLs</guilabel>: When entering a URL directly into your post content (in the format of http://....com or www.etc.com), by default it will be converted to a clickable string of text. However, if this box is checked when posting, these URLs will stay as a standard string of text.</para></listitem> 
-                <listitem><para><guilabel>Attach a signature (signatures can be altered via the UCP)</guilabel>: If this box is checked, the signature you have set in your profile will be attached to the post provided signatures have been enabled by the administrator and you have the proper permissions. For more information about signatures, please see <link linkend="ucp_signature">UCP Signatures</link>.</para></listitem> 
+			<itemizedlist>
+				<listitem><para><guilabel>Disable BBCode</guilabel>: If BBCode is enabled on the board and you are allowed to use it, this option will be available. Checking this box will not convert any BBCode in your post content into its respected output. For example, [b]Bolded text[/b] will be seen in your post as exactly [b]Bolded text[/b].</para></listitem>
+                <listitem><para><guilabel>Disable Smilies</guilabel>: If Smilies are enabled on the board and you are allowed to use them, this option will be available. Checking this box will not convert any of the smilie's characters to their respected image. For example, ;) will be seen in your post as exactly ;).</para></listitem>
+                <listitem><para><guilabel>Do not automatically parse URLs</guilabel>: When entering a URL directly into your post content (in the format of http://....com or www.etc.com), by default it will be converted to a clickable string of text. However, if this box is checked when posting, these URLs will stay as a standard string of text.</para></listitem>
+                <listitem><para><guilabel>Attach a signature (signatures can be altered via the UCP)</guilabel>: If this box is checked, the signature you have set in your profile will be attached to the post provided signatures have been enabled by the administrator and you have the proper permissions. For more information about signatures, please see <link linkend="ucp_signature">UCP Signatures</link>.</para></listitem>
                 <listitem><para><guilabel>Send me an email when a reply is posted</guilabel>: If this box is checked, you will receive a notification (either by email, Jabber, etc) every time another user replies to the topic. This is called subscribing to the topic. For more information, please see <link linkend="ucp_subscriptions">UCP Subscriptions</link>.</para></listitem>
                 <listitem><para><guilabel>Lock topic</guilabel>: Provided you have moderation permissions in this forum, checking this box will result in the topic being locked after your reply has been posted. At this point, no one but moderators or administrators may reply to the topic. For more information, please see <link linkend="modtools_lock">Locking a topic or post</link>.</para></listitem>
             </itemizedlist>
-			
+
 			<section id="posting_special">
 				<title>Topic Types</title>
 				<para>Provided you have the right permissions, you have the option of selecting various topic types when posting a new topic by using <guilabel>Post topic as</guilabel>. The four possible types are: <guilabel>Normal</guilabel>, <guilabel>Sticky</guilabel>, <guilabel>Announcement</guilabel>, and <guilabel>Global</guilabel>. By default, all new posts are <guilabel>Normal</guilabel>.</para>
-				<itemizedlist>	
+				<itemizedlist>
 					<listitem><para><guilabel>Normal</guilabel>: By selecting normal, your new topic will be a standard topic in the forum.</para></listitem>
                     <listitem><para><guilabel>Sticky</guilabel>: Stickies are special topics in the forum. They are "stuck" to the top of the first page of the forum in which they are posted, above every Normal topic.</para></listitem>
                     <listitem><para><guilabel>Announcement</guilabel>: Announcements are much like Stickies in that they are "stuck" to the top of the forum. However, they are different from stickies in two ways: 1) they are above Stickies, and 2) they appear at the top of <emphasis>every</emphasis> page of the forum instead of only the first page of topics.</para></listitem>
@@ -271,7 +271,7 @@
 				<para>You also have the ability to specify how long the special (stickies, announcements, and global announcements) keep their type. For example, an announcement is created and specified to stay "stuck" for 4 days. After the 4 days are over, the announcement will automatically be switched to a Normal topic.</para>
 			</section>
 		</section>
-		
+
 		<section id="posting_attachments">
 			<title>Attachments</title>
 			<para>Attachments allow users to upload files and attach them to their post. The ability to attach and download attachments is determined by the &quot;Can attach files&quot; and &quot;Can download files&quot; permissions respectively.</para>
@@ -350,7 +350,7 @@
 			<note>
 				<para>Please note that the total amount of messages allowed is a per-folder setting. You can have multiple folders which each allow 50 messages for instance. If you have 3 folders, your actual global limit is 150 messages, but each folder can only contain up to 50 messages by itself. It is not possible to merge folders and have one with more messages than the limit.</para>
 			</note>
-			
+
 			<section id="pm_folders_custom">
 				<sectioninfo>
 					<authorgroup>
@@ -360,11 +360,11 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Custom Folders</title>
-				
+
 				<para>If the administrator allows it, you can create your own custom <glossterm>private message</glossterm> folders in phpBB 3.0. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
 				<para>To add a new folder, enter the folder's name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_filters">Private Message Filters</link> for more information about filters) to automatically do it for you.</para>
 			</section>
-			
+
 			<section id="pm_folders_moving">
 				<sectioninfo>
 					<authorgroup>
@@ -374,13 +374,13 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Moving Messages</title>
-				
+
 				<para>It wouldn't make sense to have custom folders if you weren't able to move messages between them. To do exactly that, visit the folder from which you want to move the messages away. Select the messages you want to move, and use the <guilabel>Moved marked</guilabel> pull-down menu to select the destination folder.</para>
 				<note>
 					<para>Please note that if after the move, the destination folder would have more messages in it than the message limit allows, you will receive an error message and the move will be discarded.</para>
 				</note>
 			</section>
-			
+
 			<section id="pm_folders_marking">
 				<sectioninfo>
 					<authorgroup>
@@ -390,7 +390,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Message Markers</title>
-				
+
 				<para>Messages inside folders can have colour markings. Please refer to the <guilabel>Message colours</guilabel> legend to see what each colour means. The exact type of colouring depends on the used theme. Coloured messages can have four different meanings:</para>
 				<variablelist>
 					<varlistentry>
@@ -399,21 +399,21 @@
 							<para>You can set a message as marked with the <guilabel>Mark as important</guilabel> option from the pull-down menu.</para>
 						</listitem>
 					</varlistentry>
-					
+
 					<varlistentry>
 						<term>Replied to message</term>
 						<listitem>
 							<para>If you reply to a message, the message will be marked as this. This way, you can keep hold of which messages still need your attention and which messages you have already replied to.</para>
 						</listitem>
 					</varlistentry>
-					
+
 					<varlistentry>
 						<term>Message from a friend</term>
 						<listitem>
 							<para>If the sender of a message is in your friends list (see the section on <link linkend="ucp_friends_foes">Friends &amp; Foes</link> for more information), this colour will highlight the message.</para>
 						</listitem>
 					</varlistentry>
-					
+
 					<varlistentry>
 						<term>Message from a foe</term>
 						<listitem>
@@ -421,7 +421,7 @@
 						</listitem>
 					</varlistentry>
 				</variablelist>
-				
+
 				<note>
 					<para>Please note that a message can only have one label, and it will always be the last action you take. If you mark a message as <guilabel>important</guilabel> and reply to it afterwards, for instance, the <guilabel>replied to</guilabel> label will overwrite the <guilabel>important</guilabel> label.</para>
 				</note>
@@ -436,7 +436,7 @@
 		<title>Search - How to Find What You are Looking For</title>
 		<para>TODO: Explain how to use the search system. This should also include the results page, and the refine function. Also note, that the title (Search: search term) is a link that one can copy and paste into a post to directly link to the results. Egosearch and the global search field should also be included here.</para>
 	</section>
-	
+
 	<section id="user_memberlist">
 		<sectioninfo>
 			<authorgroup>
@@ -447,7 +447,7 @@
 		</sectioninfo>
 		<title>The Memberlist - More Than Meets the Eye</title>
 		<para>phpBB3 introduces several new ways to search for users.</para>
-		
+
 		<figure id="user_memberlist_sorting">
 			<title>Sorting the memberlist</title>
 			<mediaobject>
@@ -459,7 +459,7 @@
 				</caption>
 			</mediaobject>
 		</figure>
-		
+
 		<variablelist>
 			<varlistentry>
 				<term>Sort By Username</term>
@@ -467,21 +467,21 @@
 					<para>If you want to find all members whose usernames start with a certain letter, then you may select the letter from the list of letters shown at the top of the memberlist. For instance, clicking "A" will display all usernames beginning with the letter A, while clicking "B" will list all usernames beginning with B. Clicking the hash (#) will display a list of usernames that do not begin with one of the twenty-six letters: in other words, numbers and other characters.</para>
                 </listitem>
 			</varlistentry>
-			
+
 			<varlistentry>
 				<term>Sort By Column Headers</term>
 				<listitem>
 					<para>Each of the column headings are also sort links. That means you can click <guilabel>Username</guilabel>, <guilabel>Rank</guilabel>, <guilabel>Posts</guilabel>, <guilabel>Website</guilabel>, <guilabel>Location</guilabel>, <guilabel>>Joined</guilabel>, or <guilabel>Last Active</guilabel> to sort by that group. Upon clicking this for the first time, the lists will be sorted in ascending order (meaning that usernames would be listed A to Z and joined date would be listed earliest to most recent.) If you want to order the list in descending order, wait until the page has loaded in ascending order and click the column heading you wish to order by for a second time.</para>
                 </listitem>
 			</varlistentry>
-			
+
 			<varlistentry>
 				<term>Sort By Other Options</term>
 				<listitem>
 					<para>You may also sort the memberlist by using the dropdown boxes on the bottom of the page.</para>
 				</listitem>
 			</varlistentry>
-			
+
 			<varlistentry>
 				<term>Find a Member Search Tool</term>
 				<listitem>
