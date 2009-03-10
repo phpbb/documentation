@@ -143,7 +143,7 @@
 				</mediaobject>
 			</figure>
 			<para>Du behøver ikke at ændre <guilabel>tabelpræfiks for tabellerne</guilabel> i databaseindstillingerne, med mindre du har planer om at flere phpBB-installationer skal benytte samme database. Hvis det er tilfældet, skal du anvende forskelligt præfiks for hver installation for at få det til at virke.</para>
-			<para>Når du har angivet denne information, fortsætter du installationen ved at klikke på knappen <guilabel>Fortsæt til næste trin</guilabel> button. phpBB3 kontrollerer nu om der med de angivne data kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne præfiks.</para>
+			<para>Når du har angivet denne information, fortsætter du installationen ved at klikke på knappen <guilabel>Fortsæt til næste trin</guilabel>. phpBB3 kontrollerer nu om der med de angivne data kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne præfiks.</para>
 			<para>En <guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. Kontrollér at de angivne databaseindstillinger er korrekte og prøv igen. Kontakt venligst din vært, hvis du er usikker på de korrekte indstillinger.</para>
 			<tip>
 				<para>Husk at anvendelse af store og små bogstaver i brugernavn og kodeord til databasen skal følges stringent. Der skal altså angives nøjagtig de data du angav ved oprettelse af databasen eller dem du har fået udleveret af din vært.</para>

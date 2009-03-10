@@ -26,20 +26,8 @@
 		<para>phpBB 3.0 &quot;Olympus&quot; er meget konfigurerbar og kan tilpasses næsten ethvert behov. Næsten alle funktioner og muligheder kan aktiveres, deaktiveres, fintunes og tilpasses. For at lette tilgangen til disse mange muligheder, er administratorkontrolpanelet (ACP) fuldstændig redesignet i forhold til phpBB 2.0. </para>
 		<para>Klik på linket <guilabel>Administratorkontrolpanel</guilabel> nederst på siden for at få adgang til <acronym>ACP</acronym>.</para>
 		<para>Som standard er <acronym>ACP</acronym> opdelt i otte sektioner eller faner, som hver indholder et antal under sektioner. Vi gennemgår hver sektion i denne administratorguide. </para>
-		
-		<figure id="img_acp_index">
-			<title>Administratorindeks</title>
-			<mediaobject>
-				<imageobject>
-					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
-				</imageobject>
-				<caption>
-					<para>Administratorindekset er stedet hvorfra du administrerer dit phpBB board. Funktionerne er grupperet i otte kategorier: <guimenuitem>Generel</guimenuitem>, <guimenuitem>Fora</guimenuitem>, <guimenuitem>Meddelelser</guimenuitem>, <guimenuitem>Brugere og Grupper</guimenuitem>, <guimenuitem>Tilladelser</guimenuitem>, <guimenuitem>Typografi</guimenuitem>, <guimenuitem>Vedligehold</guimenuitem> og <guimenuitem>System</guimenuitem>. Hver kategori er repræsenteret med en fane i toppen af siden. Specifikke funktioner i hver kategori findes i navigeringsmenuen til venstre.</para>
-				</caption>
-			</mediaobject>
-		</figure>
-	</section>
-	
+	</section>	
+
 	<section id="acp_general">
 		<sectioninfo>
 			<authorgroup>
@@ -50,12 +38,24 @@
 		</sectioninfo>
 		<title>Generel konfiguration og forside</title>
 		<para>Det første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her findes nogle af de mest anvendte administrationssider blandt andet <link linkend="acp_users">Administrér brugere</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
-		<para>Her koncentrerer vi os om de tre andre undersektioner: <link linkend="acp_general_config">Boardkonfiguration</link>, <link linkend="acp_general_client">Trafikkonfiguration</link> og <link linkend="acp_general_server">Serverkonfiguration</link>.</para>
+		<figure id="img_acp_index">
+			<title>Administratorindeks</title>
+				<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
+				</imageobject>
+				<caption>
+					<para>Administratorindekset er stedet hvorfra du administrerer dit phpBB board. Funktionerne er grupperet i otte kategorier: <guimenuitem>Generel</guimenuitem>, <guimenuitem>Fora</guimenuitem>, <guimenuitem>Meddelelser</guimenuitem>, <guimenuitem>Brugere og Grupper</guimenuitem>, <guimenuitem>Tilladelser</guimenuitem>, <guimenuitem>Typografi</guimenuitem>, <guimenuitem>Vedligehold</guimenuitem> og <guimenuitem>System</guimenuitem>. Hver kategori er repræsenteret med en fane i toppen af siden. Specifikke funktioner i hver kategori findes i navigeringsmenuen til venstre.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+
+		<para>Her vil vi fokusere på undersektionerne: <link linkend="acp_general_config">Boardkonfiguration</link>, <link linkend="acp_general_client">Trafikkonfiguration</link> og <link linkend="acp_general_server">Serverkonfiguration</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>dhn</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -129,8 +129,8 @@
 				</sectioninfo>
 				<title>Avatars</title>
 				<para>Avatars er generelt små, unikke billeder en bruger kan knytte til sin profil. Afhængig af boardets typografi, vises disse oftest lige under brugernavnet, når man læser et indlæg. Herfra styrer du hvordan brugerne kan definere deres avatars.</para>
-				<para>Der er tre forskellige måder hvorpå en bruger kan tilknytte en avatar til sin profil. Den første metode er via et avatargalleri du har stillet til rådighed. Bemærk at phpBB3 som standard ikke er udstyret med et sådant galleri.  <guilabel>Avatargallerimappens placering</guilabel> angiver stien til de avatars brugerne kan vælge imellem. Standardplaceringen er <guilabel>images/avatars/gallery</guilabel>. Mappen er imidlertid ikke oprettet i en standardinstallation, den skal altså tilføjes denne manuelt hvis du ønsker at stille et avatargalleri til rådighed.</para>
-				<para>De billedfiler du ønsker at placere i dit avatargalleri skal gemmes i undermapper i gallerymappen. Billeder gemt direkte i gallerymappen bliver ikke genkendt. [jan: efterfølgende er modsigende?]Undermapper i gallerymappen understøttes ikke.</para>
+				<para>Der er tre forskellige måder hvorpå brugere kan tilknytte en avatar til profiler. Den første metode er via et avatargalleri du har stillet til rådighed. Bemærk at phpBB3 som standard ikke er udstyret med et sådant galleri. <guilabel>Avatargallerimappens placering</guilabel> angiver stien til de avatars brugerne kan vælge imellem. Standardplaceringen er <guilabel>images/avatars/gallery</guilabel>. Mappen er imidlertid ikke oprettet i en standardinstallation, den skal altså tilføjes denne manuelt hvis du ønsker at stille et avatargalleri til rådighed.</para>
+				<para>De billedfiler du ønsker at placere i dit avatargalleri skal gemmes i undermapper i gallerymappen. Filer gemt direkte i gallerymappen bliver ikke genkendt.</para>
 				<para>Den anden metode er anvendelse af <guilabel>Eksterne avatars</guilabel>. Herved får brugerne mulighed for at linke til et billede på en anden hjemmeside, og bruge dette som avatar i deres profil. For at have lidt kontrol over eksterne avatars kan du sætte minimum og maksimum dimensioner for billeder. Ulempen ved <guilabel>Eksterne avatars</guilabel> er at man ikke kan kontrollere filstørrelsen.</para>
 				<para>Den tredje metode er med <guilabel>Uploud af avatars</guilabel>. Brugere kan uploade et billede til serveren, du bestemmer med <guilabel>Avatarmappens placering</guilabel> hvor disse skal gemmes. Standardplaceringen er <guilabel>images/avatars/upload</guilabel> og denne mappe er allerede oprettet ved installationen. Du skal sikre at denne mappe er <glossterm>skrivbar</glossterm>. Avatars kan uploades i filformaterne gif, jpeg og png. Fil- og billedestørrelse kontrolleres ved upload, overskrides de satte værdier afvises uploadet. Du kan ændre grænserne for <guilabel>Maksimal filstørrelse for avatar</guilabel> og <guilabel>Største dimensioner for avatar</guilabel>.</para>
 			</section>
@@ -193,7 +193,7 @@
 				</sectioninfo>
 				<title>Autentifikation</title>
 				
-				<para>phpBB understøtter forskellige autentifikationsmoduler, som giver mulighed for at bestemme hvordan en bruger skal autentificeres ved login på boardet. Der er tre standardmoduler med i phpBB: DB, LDAP og Apache. Før der skiftes fra phpBB's indbyggede autentifikationsmetode (DB-metoden) til et af de andre moduler, skal du sikrer dig at din server understøtter dette. <emphasis>Når autentifikationsmetode omkonfigureres, skal kun indstillingerne for den valgte metode (Apache or LDAP) udfyldes.</emphasis></para>
+				<para>phpBB understøtter forskellige autentifikationsmoduler, som alle kan anvendes til autentificere brugere ved login på boardet. Der er tre standardmoduler med i phpBB: DB, LDAP og Apache. Før der skiftes fra phpBB's indbyggede autentifikationsmetode (DB-metoden) til et af de andre moduler, skal du sikrer dig at din server understøtter dette. <emphasis>Når autentifikationsmetode omkonfigureres, skal kun indstillingerne for den valgte metode (Apache or LDAP) udfyldes.</emphasis></para>
 			
 				<itemizedlist>
 					<title>Autentifikation<!-- [jan: jeg har omsorteret listen, den er nu i overenstemmelse med ACP-skærmbilledet, desuden er manglende punkter tilføjet] --></title>
@@ -655,13 +655,13 @@
 			<para>Her kan tilføjes nye fora eller kategorier, ændres forumbeskrivelser og rækkefølge eller navn på eksisterende fora, kategorier og links.</para>
 			
 			<figure id="img_acp_forums_manage_legend">
-				<title>Ikoner til forumadministration</title>
+				<title>Symbolerne i forumadministration</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/manage_forums_icon_legend.png"/>
 					</imageobject>
 					<caption>
-						<para>Ikonerne har hver deres funktion når fora skal administreres. Du vil se en dansk mouseover-tekst ved hvert ikon.</para>
+						<para>Symbolerne repræsenterer hver deres funktion, som også vises i en mouseover-tekst.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -707,15 +707,11 @@
 				</mediaobject>
 			</figure>
 			
-			<para>I feltet <guilabel>Brug af BBkode</guilabel> specificeres hvordan brugere skal gøre brug af BBkoden. For at kunne vælge en fonttype skrives i feltet
-				<code>[font={SIMPLETEXT1}]{TEXT2}[/font]</code>
-				[font] BBkoden er nu defineret sådan at brugerens skrevne tekst repræsenteres af tokenet <guilabel>TEXT2</guilabel> og selve skrifttypens <guilabel>fontnavn</guilabel> af <guilabel>SIMPLETEXT1</guilabel>. Brugere kan hermed selv definere fonttypen i et indlæg ved at skrive [font=verdana]indlægstekst[/font].
+			<para>I feltet <guilabel>Brug af BBkode</guilabel> specificeres hvordan brugere skal gøre brug af BBkoden. For at kunne vælge en fonttype skrives i feltet <code>[font={SIMPLETEXT1}]{TEXT2}[/font]</code>. BBkoden [font] er nu defineret sådan at brugeres skrevne tekst repræsenteres af tokenet <guilabel>TEXT2</guilabel> og selve skrifttypens <guilabel>fontnavn</guilabel> af <guilabel>SIMPLETEXT1</guilabel>. Brugere kan hermed selv definere fonttypen i et indlæg ved at skrive [font=verdana]indlægstekst[/font].
 			</para>
-			<para>Før BBkoden bliver virksom mangler vi at definere den HTML-kode vores nye BBkode skal gøre brug af. I feltet<guilabel>HTML-erstatning</guilabel> skal vi i dette eksempel skrive
-				<code>&lt;span style="font-family: {SIMPLETEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
-				Bemærk at vi i dette eksempel anvender tokenet {TEXT2} fremfor {SIMPLETEXT2}. Selvom det ikke anbefales at anvende {TEXT} i HTML-tags, er vi nødt til det her for også at kunne formatere de danske specialtegn æ, ø og å med denne BBkode.
+			<para>Før BBkoden kan tages i anvendelse, mangler vi at definere den HTML-erstatning vores nye BBkode skal gøre brug af. I feltet <guilabel>HTML-erstatning</guilabel> skriver vi <code>&lt;span style="font-family: {SIMPLETEXT1}"&gt;{TEXT2}&lt;span&gt;</code>.	Bemærk at vi i eksemplet anvender tokenet {TEXT2} fremfor {SIMPLETEXT2}. Selvom det ikke anbefales at anvende {TEXT} i HTML-erstatninger, er vi nødsaget til det, for også at kunne formatere de danske specialtegn æ, ø og å med denne BBkode.
 			</para>
-			<para>I næste felt <guilabel>Hjælpelinie</guilabel> kan forfattes en kort note eller et tip som vises under rækken med BBkoder når der skrives indlæg.</para>
+			<para>I det næste felt <guilabel>Hjælpelinie</guilabel> kan forfattes en kort note eller et tip som vises under rækken med BBkoder når der skrives indlæg.</para>
 			<note>
 				<para>Er <guilabel>Vis på siden hvor indlæg skrives</guilabel> ikke tilvalgt, vises hjælpelinien ikke.</para>
 			</note>
@@ -2098,7 +2094,7 @@
 						<imagedata format="PNG" fileref="../images/admin_guide/denial_reasons.png"/>
 					</imageobject>
 					<caption>
-						<para>På denne side kan begrundelser for afvisning og rapportering af indlæg administreres. phpBB indeholder fire standardårsager. Den femte og sidste er tilføjet manuelt og er findes kun på dansk, har brugere valgt et andet sprog end dansk, vises denne begrundelse altså kun på dansk. Det er muligt at oversætte denne ved at anvende sprognøglen angivet i feltet <guilabel>Årsagstitel</guilabel> kun indeholdende bogstaver og underscores. For for eksempel at oversætte denne årsåg til engelsk tilføjes titel og begrundelse i filen <filename>mcp.php</filename> placeret i mappen <filename>language/en/</filename>. De fire standardårsagers nøgle og variabler er placeret nederst i denne fil, og din tilføjelsen udføres i samme format. Samme fremgangsmåde anvendes ved oversættelse til andre sprog.</para>
+						<para>Fra denne side administreres begrundelser for afvisning og rapportering af indlæg. phpBB indeholder fire standardårsager. Den femte og sidste er tilføjet manuelt og findes kun på dansk, har brugere valgt et andet sprog end dansk, vises denne begrundelse altså kun på dansk. Det er muligt at oversætte denne ved at anvende sprognøglen angivet i feltet <guilabel>Årsagstitel</guilabel> kun indeholdende bogstaver og underscores. For for eksempel at oversætte denne årsag til engelsk, tilføjes titel og begrundelse i filen <filename>mcp.php</filename> placeret i mappen <filename>language/en/</filename>. De fire standardårsagers nøgle og variabler er placeret nederst i denne fil, og din tilføjelsen udføres i samme format.</para>
 					</caption>
 				</mediaobject>
 			</figure>

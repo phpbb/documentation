@@ -23,7 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Hvordan brugertilladelser påvirker oplevelsen af boardet</title>
-		<para>phpBB3 anvender tilladelser, defineret pr. brugere eller brugergruppe, til at bestemme hvilke af softwarens funktioner og muligheder der skal gives mulighed for at benytte. Det kan inkludere hvilke fora der kan indsendes indlæg i, mulighed for at benytte avatar eller at sende private beskeder. Alle tilladelser indstilles via administratorkontrolpanelet.</para>
+		<para>phpBB3 anvender tilladelser, defineret pr. bruger eller brugergruppe, til at bestemme hvilke af softwarens funktioner og muligheder der skal gives mulighed for at benytte. Det kan inkludere hvilke fora der kan indsendes indlæg i, mulighed for at benytte avatar eller at sende private beskeder. Alle tilladelser indstilles via administratorkontrolpanelet.</para>
 		<para>Tilladelser giver også mulighed for at udpege brugere til at udføre specielle opgaver eller at have bestemte roller på boardet. Administratoren kan ved hjælp af tilladelsesystemet bestemme hvilke redigeringsmuligheder udvalgte brugere eller brugergrupper skal have og i hvilke fora de skal kunne anvende dem. Det giver også mulighed for at udpege redaktører på boardet. Administratoren kan også give brugere adgang til bestemte sektioner i administratorkontrolpanelet, og dermed stadig have restriktioner og sikkerhed på vigtige indstillinger. For eksempel kan en gruppe af redaktører have lov til at ændre brugernes avatar eller signatur i administratorkontrolpanelet. Uden disse beføjelser vil en redaktør skulle involvere en administrator at ændre i en brugers profil.</para>
 	</section>
 	<section id="user_registering">
@@ -253,7 +253,7 @@
 		
 		<section id="posting_options">
 			<title>Indlægsindstillinger</title>
-			<para>TODO<!-- Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc. --></para>
+			<para><!-- TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc. --></para>
 			<para>Når du skriver et indlæg eller et svar, har du adskillige muligheder for at ændre i standardindstillingerne for dette specifikke indlæg. Umiddelbart under feltet hvor du skriver dit svar findes fanen <guilabel>Indstillinger</guilabel>, og afhængig af de tilladelser administratoren har tildelt dig har du forskellige muligheder. Valgmulighederne varierer også afhængig af om du skriver et nyt indlæg eller svarer i et eksisterende emne.</para>
 			<itemizedlist>	
 				<listitem><para><guilabel>Slå BBkode fra</guilabel>: Hvis BBkode er slået til på boardet, og du har tilladelse til bruge den, er denne mulighed tilgængelig. Vinges boksen bliver ingen BBkoder fortolket som sådan. Som eksempel vil kombinationen [b]Fed tekst[/b] blive vist nøjagtig sådan [b]Fed tekst[/b] i indlægget.</para></listitem> 
@@ -311,7 +311,7 @@
 			</itemizedlist>
 			<para>Når en kladde er anvendt slettes den. Læs mere om brug af kladder i <link linkend="ucp_drafts">UCP Kladder</link>.</para>
 			<note>
-				<para>Er ingen kladder gemt, vises <guilabel>Indlæs</guilabel>-knappen ikke.</para>
+				<para>Er ingen kladder gemt, vises knappen <guilabel>Indlæs</guilabel> ikke.</para>
  			</note>
 		</section>
 	</section>
@@ -455,7 +455,7 @@
 		<para>I phpBB3 introduceres flere nye metoder til at søge efter brugere.</para>
 		
 		<figure id="user_memberlist_sorting">
-			<title>Sortering af listen</title>
+			<title>Sortering af brugere</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/user_guide/memberlist_sorting.png" />
@@ -477,7 +477,7 @@
 			<varlistentry>
 				<term>Sortering efter kollonneoverskrifter</term>
 				<listitem>
-					<para>For at sortere listen stigende klikker du på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Sidst aktiv</guilabel>, etc. Klikker du én gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
+					<para>For at sortere listen stigende klikker du på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Senest aktiv</guilabel>, etc. Klikker du én gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
 				</listitem>
 			</varlistentry>
 			
