@@ -7,7 +7,7 @@
 	<chapterinfo>
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
-			<year>2006</year>
+			<year>2009</year>
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
@@ -21,18 +21,10 @@
 				<author>
 					<othername></othername>
 				</author>
-				
-				<author>
-					<othername></othername>
-				</author>
-				
-				<author>
-					<othername></othername>
-				</author>
 			</authorgroup>
 		</sectioninfo>
 		
-		<title>Terms</title>
+		<title>Termen</title>
 		<para>There are quite a few terms that are commonly used throughout phpBB and the support forums. Here is some information on these terms.</para>
 		
 		<!-- TODO: Add links to sections on the respective item for whichever terms need it. For example, the ACP bit needs to link to the section of the Admin Guide. -->
@@ -53,9 +45,9 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Attachments</term>
+				<term>Bijlagen</term>
 				<listitem>
-					<para><link linkend="acp_board_attachments">Attachments</link> are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach.</para>
+					<para><link linkend="acp_board_attachments">Bijlagen</link> zijn bestanden die toegevoegd kunnen worden bij berichten, zoals e-mailbijlagen. Bepaalde beperkingen, kunnen worden ingesteld door de forumbeheerder, zodat hij een controle heeft wat gebruikers kunnen toevoegen.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -88,7 +80,7 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Category</term>
+				<term>Categorie</term>
 				<listitem>
 					<para>A category is a group of any sort of similar items; for example, forums.</para>
 				</listitem>
@@ -144,7 +136,7 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Founder</term>
+				<term>Oprichter</term>
 				<listitem>
 					<para>A founder is a special board administrator that cannot be edited or deleted. This is a new user level introduced in phpBB 3.0.</para>
 				</listitem>
@@ -158,7 +150,7 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>IP address</term>
+				<term>IP-adres</term>
 				<listitem>
 					<para>An IP address, or Internet Protocol address, is a unique address that identifies a specific computer or user.</para>
 				</listitem>
@@ -207,14 +199,14 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Private Messages</term>
+				<term>Privéberichten</term>
 				<listitem>
 					<para>Private messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient. The user guide contains more information on <link linkend="user_pm">using phpBB3's private messaging system</link>.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Rank</term>
+				<term>Rang</term>
 				<listitem>
 					<para>A rank is a sort of title that is assigned to a user. Ranks can be added, edited, and deleted by administrators.</para>
 					
@@ -232,14 +224,14 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Session</term>
+				<term>Sessie</term>
 				<listitem>
 					<para>A session is a visit to your phpBB forums. For phpBB, a session is how long you spend on the forums. It is created when you login deleted when you log off. Session <acronym>IDs</acronym> are usually stored in a cookie, but if phpBB is unable to get cookie information from your computer, then a session <acronym>ID</acronym> is appended to the URL (e.g. index.php?sid=999). This session <acronym>ID</acronym> preserves the user's session without use of a cookie. If sessions were not preserved, then you would find yourself being logged out every time you clicked on a link in the forum.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Signature</term>
+				<term>Onderschrift</term>
 				<listitem>
 					<para>A signature is a message displayed at the end of a user's post. Signatures are set by the user. Whether or not a signature is displayed after a post is set by the user's profile settings.</para>
 				</listitem>
@@ -253,7 +245,7 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Style</term>
+				<term>Stijl</term>
 				<listitem>
 					<para>A style is made up of a template set, image set, and stylesheet. A style controls the overall look of your forum.</para>
 				</listitem>
@@ -288,7 +280,7 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Usergroup</term>
+				<term>Gebruikersgroep</term>
 				<listitem>
 					<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page within the <link linkend="user_control_panel">group control panel</link>. phpBB 3.0 has six pre-defined usergroups.</para>
 				</listitem>

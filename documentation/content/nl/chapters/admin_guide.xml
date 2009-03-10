@@ -25,7 +25,7 @@
 		<title>Het Beheerderspaneel</title>
 		<para>Meer dan zijn voorganger, is phpBB 3.0 &quot;Olympus&quot; heel erg makkelijk configureerbaar. Je kan bijna alle functies aanpassen of uitzetten. Om deze veranderingen van instellingen zo toegankelijk mogelijk te maken, hebben we het beheerderspaneel compleet vernieuwd.</para>
 		<para>Klik op de <guilabel>Beheerderspaneel</guilabel> link onderaan van elke pagina van de standaard forumstijl om het <acronym>Beheerderspaneel</acronym> te bezoeken.</para>
-		<para>Het <acronym>Beheerderspaneel</acronym> heeft zeven verschillende secties die standaard weer onderverdeeld zijn. We zullen elk onderdeel in deze beheerdershandleiding uitleggen..</para>
+		<para>Het <acronym>Beheerderspaneel</acronym> heeft zeven verschillende secties die standaard weer onderverdeeld zijn. We zullen elk onderdeel in deze beheerdershandleiding uitleggen.</para>
 		
 		<figure id="img_acp_index">
 			<title>De indexpagina van het beheerderspaneel</title>
@@ -219,7 +219,7 @@
 				</note>
 				
 				<itemizedlist>
-					<title>General Settings</title>
+					<title>Algemene instellingen</title>
 					<listitem><para><guilabel>Enable board-wide emails</guilabel>: If this is set to disabled, no emails will be sent by the board at all.</para></listitem>
 					<listitem><para><guilabel>Users send email via board:</guilabel>: If this is set to enabled, a form allowing users to send emails to each other via the board will be displayed, rather than an email address.</para></listitem>
 					<listitem><para><guilabel>Email function name</guilabel>: If you are using the native, PHP-based email service, this should be the name of the email function. This is most likely going to be &quot;mail&quot;.</para></listitem>
@@ -231,7 +231,7 @@
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>SMTP Settings</title>
+					<title>SMTP-instellingen</title>
 					<listitem><para><guilabel>Use SMTP server for email</guilabel>: Select <guilabel>Yes</guilabel> if you want your board to send emails via an SMTP server. If you are not sure that you have an SMTP server available for use, set this to <guilabel>No</guilabel>; this will make your board use the native, PHP-based email service, which in most cases is the safest available option.</para></listitem>
 					<listitem><para><guilabel>SMTP server address</guilabel>: The address of the SMTP server.</para></listitem>
 					<listitem><para><guilabel>SMTP server port</guilabel>: The port that the SMTP server is located on. In most cases, SMTP servers are located on port 25; do not change this value if you are unsure about this.</para></listitem>
@@ -260,10 +260,10 @@
 				<itemizedlist>
 					<title>Jabber-instellingen</title>
 					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
-					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
-					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
-					<listitem><para><guilabel>Jabber username or JID</guilabel>: The Jabber username or a complete Jabber ID (looks like an e-mail address) that your board will use when connecting to the specified Jabber server. You must specify an already registered account.</para></listitem>
-                    <listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para></listitem>
+					<listitem><para><guilabel>Jabber-server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
+					<listitem><para><guilabel>Jabber-poort</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
+					<listitem><para><guilabel>Jabber-gebruikersnaam of JID</guilabel>: The Jabber username or a complete Jabber ID (looks like an e-mail address) that your board will use when connecting to the specified Jabber server. You must specify an already registered account.</para></listitem>
+                    <listitem><para><guilabel>Jabber-wachtwoord</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para></listitem>
 					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to &quot;0&quot;, messages will be sent immediately and is will not be queued for later sending.</para></listitem>
 				</itemizedlist>
 			</section>
@@ -298,10 +298,10 @@
 				
 					<itemizedlist>
 						<title>Cookie-instellingen</title>
-						<listitem><para><guilabel>Cookie domain</guilabel>: This is the domain that your board runs on. Do not include the path that phpBB is installed in; only the domain itself is important here.</para></listitem>
-						<listitem><para><guilabel>Cookie name</guilabel>: This is the name that will be assigned to the cookie when it is sent to your users' browsers and stored. This should be a unique cookie name that will not conflict with any other cookies.</para></listitem>
-						<listitem><para><guilabel>Cookie path</guilabel>: This is the path that the cookie will apply to. In most cases, this should be left as &quot;/&quot;, so that the cookie can be accessible across your site. If for some reason you must restrict the cookie to the path that your board is installed in, set the value to the path of your board.</para></listitem>
-						<listitem><para><guilabel>Cookie secure</guilabel>: If your board is accessible via <acronym>SSL</acronym>, set this to <guilabel>Enabled</guilabel>. If the board is not accessible via SSL, then leave this value set to <guilabel>Disabled</guilabel>, otherwise server errors will result during redirections.</para></listitem>
+						<listitem><para><guilabel>Cookie-domein</guilabel>: This is the domain that your board runs on. Do not include the path that phpBB is installed in; only the domain itself is important here.</para></listitem>
+						<listitem><para><guilabel>Cookie-naam</guilabel>: This is the name that will be assigned to the cookie when it is sent to your users' browsers and stored. This should be a unique cookie name that will not conflict with any other cookies.</para></listitem>
+						<listitem><para><guilabel>Cookie-pad</guilabel>: This is the path that the cookie will apply to. In most cases, this should be left as &quot;/&quot;, so that the cookie can be accessible across your site. If for some reason you must restrict the cookie to the path that your board is installed in, set the value to the path of your board.</para></listitem>
+						<listitem><para><guilabel>Cookie-beveiliging</guilabel>: If your board is accessible via <acronym>SSL</acronym>, set this to <guilabel>Enabled</guilabel>. If the board is not accessible via SSL, then leave this value set to <guilabel>Disabled</guilabel>, otherwise server errors will result during redirections.</para></listitem>
 					</itemizedlist>
 				</para>
 				
@@ -579,7 +579,7 @@
 				<varlistentry>
 					<term>Forum</term>
 					<listitem>
-						<para>In a forum people can post their topics.</para>
+						<para>In een forum kunnen mensen hun onderwerpen plaatsen.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -589,7 +589,7 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Category</term>
+					<term>Categorie</term>
 					<listitem>
 						<para>If you want to combine multiple forums or links for a specific topic, you can put them inside a category. The forums will appear below the category title, clearly separated from other categories. Users are not able to post inside categories.</para>
 					</listitem>
@@ -610,7 +610,7 @@
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 				
 			<figure id="img_acp_subforums_list">
-				<title>Creëren van subforums</title>
+				<title>Aanmaken van subforums</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
@@ -653,10 +653,6 @@
 	<section id="acp_posting">
 		<sectioninfo>
 			<authorgroup>
-				<author>
-					<othername></othername>
-				</author>
-				
 				<author>
 					<othername></othername>
 				</author>
@@ -949,7 +945,7 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Users Management</title>
+		<title>Gebruikersbeheer</title>
 
 		<section id="acp_users_manage">
 			<title>Manage Users</title>
@@ -974,7 +970,7 @@
 				
 				<variablelist>
 					<varlistentry>
-						<term>Username</term>
+						<term>Gebruikersnaam</term>
 						<listitem>
 							<para>This is the name of the user you're currently managing. If you want to change the user's username, type in a new username between three and twenty characters long into the textbox labeled <guilabel>Username:</guilabel></para>
 						</listitem>
@@ -1002,14 +998,14 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Founder</term>
+						<term>oprichter</term>
 						<listitem>
 							<para>Founders are users who have all administrator permissions and can never be banned, deleted or altered by non-founder members. If you want to set this user as a founder, select the <guilabel>Yes</guilabel> radio button. To remove founder status from a user, select the <guilabel>No</guilabel> radio button.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Email</term>
+						<term>E-mail</term>
 						<listitem>
 							<para>This is the user's currently set email address. To change the email address, fill in the <guilabel>Email:</guilabel> textbox with a valid email.</para>
 						</listitem>
@@ -1023,7 +1019,7 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>New password</term>
+						<term>Nieuw wachtwoord</term>
 						<listitem>
 							<para>As an administrator, you cannot see any of your users' password. However, it is possible to change passwords. To change the user's password, type in a new password in the <guilabel>New password:</guilabel> textbox. The new password has to be between six and thirty characters long.</para>
 						
@@ -1039,7 +1035,7 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Warnings</term>
+						<term>Waarschuwingen</term>
 						<listitem>
 							<para>This is the number of warnings the user currently has. You can edit this number by typing in a number into the <guilabel>Warnings:</guilabel> number field. Only positive integers are allowed.</para>
 							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
@@ -1118,7 +1114,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Gebruikersavatar</title>
+				<title>Gebruikers-avatar</title>
 				
 				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
 				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
@@ -1558,27 +1554,27 @@
 						
 							<variablelist>
 								<varlistentry>
-									<term>Administrators</term>
+									<term>Beheerders</term>
 									<listitem><para>This usergroup contains all of the administrators on your board. All founders are administrators, but not all administrators are founders. You can control what administrators can do by managing this group.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Bots</term>
+									<term>Zoekrobots</term>
 									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.0 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Global Moderators</term>
+									<term>Hoofdmoderators</term>
 									<listitem><para>Global moderators are moderators that have moderator permissions for every forum in your board. You can edit what permissions these moderators have by managing this group.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Guests</term>
+									<term>Gasten</term>
 									<listitem><para>Guests are visitors to your board who aren't logged in. You can limit what guests can do by managing this usergroup.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered Users</term>
+									<term>Geregistreerde gebruikers</term>
 									<listitem><para>Registered users are a big part of your board. Registered users have already registered on your board. To control what registered users can do, manage this usergroup.</para></listitem>
 								</varlistentry>
 								
@@ -1606,11 +1602,11 @@
 			<para>A list of attributes a group can have:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Group name</term>
+					<term>Groepsnaam</term>
 					<listitem><para>The name of your group.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group description</term>
+					<term>Groepsbeschrijving</term>
 					<listitem><para>The description of the group that will be displayed on the group overview list..</para></listitem>
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
@@ -1626,15 +1622,15 @@
 					<listitem><para>This setting overrides the per-user folder message limit. A value of &quot;0&quot; means the user default limit will be used. See the <link linkend="ucp_preferences">section on user preferences</link> for more information about private message settings.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group colour</term>
+					<term>Groepskleur</term>
 					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default" />) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the &quot;Who is Online&quot; listing.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group rank</term>
+					<term>Groepsrang</term>
 					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting. See the <link linkend="acp_user_ranks">section on ranks</link> for more information.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group avatar</term>
+					<term>Groeps-avatar</term>
 					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will use this avatar. Note that a member can change his avatar to a different one if he has the permission to do so. For more information on avatar settings, see the <link linkend="ucp_avatar">userguide section on avatars</link>.</para></listitem>
 				</varlistentry>				
 			</variablelist>
@@ -1752,7 +1748,7 @@
 			
 		</section>
 		<section id="acp_permissions_forumbased">
-		    <title>Forum Based Permissions</title>
+		    <title>Forum gebaseerde permissies</title>
 		</section>
 		<section id="acp_permissions_roles">
 		    <title>Permission Roles</title>
@@ -1781,12 +1777,12 @@
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Themes</term>
+					<term>Thema's</term>
 					<listitem><para>Themes are a combination of colour schemes and images that define the basic look of your forum.</para></listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Imagesets</term>
+					<term>Afbeeldingensets</term>
 					<listitem><para>Imagesets are groups of images that are used throughout your board. Imagesets are comprised of all of the non-style specific images used by your board.</para></listitem>
 				</varlistentry>
 			</variablelist>
@@ -1795,10 +1791,10 @@
 		    <title>Templates</title>
 		</section>
 		<section id="acp_styles_themes">
-		    <title>Themes</title>
+		    <title>Thema's</title>
 		</section>
 		<section id="acp_styles_imagesets">
-		    <title>Imagesets</title>
+		    <title>Afbeeldingensets</title>
 		</section>
 		
 		<!-- TODO: More stuff about styles -->
