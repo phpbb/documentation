@@ -10,9 +10,10 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Administratie Gids</title>
+	<title>Beheerdershandleiding</title>
 	<abstract>
-		<para>Dit hoofdstuk beschrijft de phpBB 3.0 admin bediening.</para>
+		<para>
+		Dit hoofdstuk beschrijft de phpBB 3.0 beheerders opties.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -23,18 +24,18 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Het Beheerderspaneel</title>
-		<para>Meer dan zijn voorganger, is phpBB 3.0 &quot;Olympus&quot; heel erg configureerbaar. Je kan bijna alle functies aanpassen, afstellen of uitzetten. Om deze hoeveelheid van instellingen zo toegankelijk mogelijk te maken, hebben we de Beheerderspaneel (ACP) compleet veranderd. </para>
-		<para>Klik op de <guilabel>Beheerderspaneel</guilabel> link onder aan de pagina van de standaard forum stijl om de <acronym>ACP</acronym> te bezoeken.</para>
-		<para>De <acronym>ACP</acronym> heeft standaard zeven verschillende secties welke elk een aantal subsecties bevat. We zullen elke sectie bespreken in deze Admin Gids.</para>
+		<para>Meer dan zijn voorganger, is phpBB 3.0 &quot;Olympus&quot; heel erg makkelijk configureerbaar. Je kan bijna alle functies aanpassen of uitzetten. Om deze veranderingen van instellingen zo toegankelijk mogelijk te maken, hebben we het beheerderspaneel compleet vernieuwd.</para>
+		<para>Klik op de <guilabel>beheerderspaneel</guilabel> link onderaan van elke pagina van de standaard forumstijl om het <acronym>beheerderspaneel</acronym> te bezoeken.</para>
+		<para>Het <acronym>beheerderspaneel</acronym> heeft zeven verschillende secties die standaard weer onderverdeeld zijn. We zullen elk onderdeel in deze beheerdershandleiding uitleggen..</para>
 		
 		<figure id="img_acp_index">
-			<title>Beheerderspaneel Index</title>
+			<title>De indexpagina van het beheerderspaneel</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/admin_guide/acp_index.png"/>
 				</imageobject>
 				<caption>
-					<para>De Beheerderspaneel Index, het begin van het beheren van je phpBB forum. Administratie functies zijn gegroepeerd in acht verschillende categorieën: <guimenuitem>Algemeen</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Berichten</guimenuitem>, <guimenuitem>Groepen en Gebruikers</guimenuitem>, <guimenuitem>Permissies</guimenuitem>, <guimenuitem>Stijlen</guimenuitem>, <guimenuitem>Onderhoud</guimenuitem> en <guimenuitem>Systeem</guimenuitem>. Elke categorie is gelocaliseerd boven aan de pagina in een tabblad. Specifieke functies van de categorie kan je vinden aan de linkerkant van elke pagina.</para>
+					<para>De indexpagina van het beheerderspaneel is de beginpagina om jouw forum te beheren. De beheerdersfuncties zijn onderverdeeld in acht verschillende categorieën:<guimenuitem>Algemeen</guimenuitem>, <guimenuitem>Forums</guimenuitem>, <guimenuitem>Berichten</guimenuitem>, <guimenuitem>Groepen en Gebruikers</guimenuitem>, <guimenuitem>Permissies</guimenuitem>, <guimenuitem>Stijlen</guimenuitem>, <guimenuitem>Onderhoud</guimenuitem>, en <guimenuitem>Systeem</guimenuitem>. Elke categorie is een tabblad die je terug kan vinden bovenaan de pagina. Specifieke functies van de categorie waar je je momenteel in bevindt, kan je vinden aan de linkerkant van het zij-menu van elke pagina.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -48,9 +49,9 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Algemene Configuratie en Voorpagina</title>
-		<para>De <guimenuitem>Algemeen</guimenuitem> sectie is het eerste scherm dat je iedere keer ziet als je aanmeld in de <acronym>ACP</acronym>. Het bevat enkele basis statistieken en informatie over je forum. Het bevat ook subsecties genaamd <guimenuitem>Snelkoppelingen</guimenuitem>. Het geeft je toegang tot sommige administratie pagina's die regelmatig gebruikt worden, zoals <link linkend="acp_users">Gebruikersbeheer</link> of <link linkend="acp_maintenance">Moderatielogboek</link>. We zullen deze items later bespreken in hun specifieke secties.</para>
-		<para>We zullen ons concentreren op de andere drie subsecties: <link linkend="acp_general_config">Forumconfiguratie</link>, <link linkend="acp_general_client">Gebruikerscommunicatie</link> en <link linkend="acp_general_server">Serverconfiguratie</link>.</para>
+		<title>Algemene configuratie en beginpagina</title>
+		<para>De <guimenuitem>algemene</guimenuitem> sectie is het eerste scherm dat je iedere keer ziet als je aanmeld in het <acronym>beheerderspaneel</acronym>. Het bevat enkele basis statistieken en informatie over je forum. Het heeft ook een subsectie genaamd <guimenuitem>snelkoppelingen</guimenuitem>. Het geeft je snelle toegang tot sommige beheerderspagina's dat je regelmatig gebruikt, zoals <link linkend="acp_users">gebruikersbeheer</link> of <link linkend="acp_maintenance">Moderatielogboek</link>. We zullen deze items later bespreken in hun specifieke secties.</para>
+		<para>We zullen ons concentreren op de andere drie subsecties: <link linkend="acp_general_config">forumconfiguratie</link>, <link linkend="acp_general_client">gebruikerscommunicatie</link> en <link linkend="acp_general_server">serverconfiguratie</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
 				<authorgroup>
@@ -60,7 +61,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Forumconfiguratie</title>
-			<para>Deze subsectie This subsection contains items to adjust the overall features and settings of the forum. </para>
+			<para>Deze subsectie bevat de items om de algemene functies en instellingen van je forum aan te passen.</para>
 			
 			<section id="acp_board_attachments">
 				<sectioninfo>
@@ -71,8 +72,8 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Bijlageninstellingen</title>
-				<para>Eén van de vele nieuwe functies in phpBB 3.0 is <glossterm>Bijlagen</glossterm>. Bijlagen zijn bestanden die begevoegd kunnen worden bij berichten, zoals e-mail bijlagen. Bepaalde restricties, ingesteld door de forum administrator, controleren wat gebruikers kunnen bijvoegen. Je kan deze restricites instellen via de <guimenuitem>Bijlageninstellingen</guimenuitem> pagina.</para>
-				<para>Voor meer informatie, bekijk de sectie over <link linkend="acp_attach_settings">hoe je je forum bijlageninstellingen moet configureren</link>.</para>
+				<para>Eén van de vele nieuwe functies in phpBB 3.0 zijn <glossterm>bijlagen</glossterm>. Bijlagen zijn bestanden die toegevoegd kunnen worden bij berichten, zoals e-mailbijlagen. Bepaalde beperkingen, kunnen worden ingesteld door de forumbeheerder, zodat hij een controle heeft wat gebruikers kunnen toevoegen. Je kan deze beperkingen instellingen via de <guimenuitem>bijlageninstellingen</guimenuitem>-pagina.</para>
+				<para>Voor meer informatie, bekijk de sectie over het <link linkend="acp_attach_settings">configuren van jouw forum bijlageninstellingen</link>.</para>
 			</section>
 			
 			<section id="acp_general_settings">
@@ -88,7 +89,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Foruminstellingen</title>
-				<para>De <guimenuitem>Foruminstellingen</guimenuitem> staan je toe om vele instellingen over over je forum gaan aan te passen. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
+				<para>De <guimenuitem>foruminstellingen</guimenuitem> laat je toe om vele instellingen te veranderen dat jouw forum beheerd. Deze instellingen bevatten belangrijke dingen zoals de naam van je forum! Er zijn twee hoofdgroepen van foruminstellingen: de algemene <guilabel>foruminstellingen</guilabel>, en de <guilabel>waarschuwings</guilabel>instellingen.</para>
 				
 				<itemizedlist>
 					<title>Foruminstellingen</title>
@@ -258,7 +259,7 @@
 				</sectioninfo>
 				<title>Jabber-instellingen</title>
 				
-				<para>phpBB3 also has the ability to allow users to communicate via <glossterm>Jabber</glossterm>. Your board can send instant messages and board notices via Jabber, too. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
+				<para>phpBB3 also has the ability to communicate messages to users via <glossterm>Jabber</glossterm>, your board can be configured to board notifications via Jabber. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
 			
 				<note>
 					<para>Some Jabber servers include gateways or transports which allow you to contact users on other networks. Not all servers offer all transports and changes in protocols can prevent transports from operating. Note that it may take several seconds to update Jabber account details, so do not stop the script until it has finished!</para>
