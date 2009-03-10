@@ -12,8 +12,7 @@
 	</chapterinfo>
 	<title>Beheerdershandleiding</title>
 	<abstract>
-		<para>
-		Dit hoofdstuk beschrijft de phpBB 3.0 beheerders opties.</para>
+		<para>Dit hoofdstuk beschrijft de phpBB 3.0 beheerders opties.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -175,9 +174,6 @@
 		<section id="acp_general_client">
 			<sectioninfo>
 				<authorgroup>
-					<author>
-						<othername></othername>
-					</author>
 					<author>
 						<othername></othername>
 					</author>
@@ -678,10 +674,6 @@
 		<section id="acp_posting_bbcodes">
 			<sectioninfo>
 				<authorgroup>
-					<author>
-						<othername></othername>
-					</author>
-					
 					<author>
 						<othername></othername>
 					</author>
