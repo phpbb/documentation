@@ -144,7 +144,7 @@
 			</figure>
 			<para>Je hoeft niet de <guilabel>prefix voor de database tabellen</guilabel> instellingen te veranderen, Tenzei je van plan bent om meerdere phpBB forums te installeren op één database. In dat geval gebruik je dan steeds een andere prefix voor elke installatie om het werkend te maken.</para>
 			<para>Zodra je alle gegevens hebt ingevoerd, kan je de installatie hervatten door op de knop <guilabel>Volgende stap</guilabel> te klikken. Nu gaat phpBB 3.0 de gegevens controleren die je hebt ingevoerd.</para>
-			<para>Een "<guilabel>Could not connect to the database</guilabel>"fout betekend dat je de database gegevens niet corect hebt ingevoerd, en phpBB kan daardoor geen verbinding leggen met de database. Wees er zeker van dat alle ingevoerde database gegevens kloppen en probeer het dan opnieuw. Als je niet zeker bent van je database instellingen, neem dan contact op met je host.</para>
+			<para>Een "<guilabel>Could not connect to the database</guilabel>" fout betekend dat je de database gegevens niet corect hebt ingevoerd, en phpBB kan daardoor geen verbinding leggen met de database. Wees er zeker van dat alle ingevoerde database gegevens kloppen en probeer het dan opnieuw. Als je niet zeker bent van je database instellingen, neem dan contact op met je host.</para>
 			<tip>
 				<para>Vergeet niet dat je database gebruikersnaam en wachtwoord hoofdletter gevoelig zijn. Je moet exact de gegevens invoeren die je hebt gekregen van je host.</para>
 			</tip>
@@ -189,7 +189,7 @@
 						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Hier kan je de sitenaam en siteomschrijving bewerken van je forum.</para>
+						<para>Hier kan je de sitenaam en siteomschrijving wijzigen van je forum.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -315,7 +315,7 @@
 			<para>To set the permissions for your new forum we need the local <guilabel>Forum Based Permissions</guilabel>. First you have to decide how you want to set the permissions. If you want to set them for a single group or user, you should use the <guilabel>Group</guilabel> or <guilabel>User Forum Permissions</guilabel>. They will allow you to select one group or user, and then select the forums you want to set the permissions for. </para>
 			<para>But for this Quick Start Guide we will concentrate on the <guilabel>Forum Permissions</guilabel>. Instead of selecting a user or group, you select the forums you want to change first. You can select them either by selecting the forums manually in the top list, or by single forum and single forum plus subforums respectively in the lower pull down menus. <guilabel>Submit</guilabel> will bring you to the next page.</para>
 			<figure id="img_quick_permissions_select">
-				<title>Select Groups</title>
+				<title>Groepen selecteren</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />

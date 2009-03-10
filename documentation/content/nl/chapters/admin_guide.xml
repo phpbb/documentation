@@ -24,8 +24,8 @@
 		</sectioninfo>
 		<title>Het Beheerderspaneel</title>
 		<para>Meer dan zijn voorganger, is phpBB 3.0 &quot;Olympus&quot; heel erg makkelijk configureerbaar. Je kan bijna alle functies aanpassen of uitzetten. Om deze veranderingen van instellingen zo toegankelijk mogelijk te maken, hebben we het beheerderspaneel compleet vernieuwd.</para>
-		<para>Klik op de <guilabel>beheerderspaneel</guilabel> link onderaan van elke pagina van de standaard forumstijl om het <acronym>beheerderspaneel</acronym> te bezoeken.</para>
-		<para>Het <acronym>beheerderspaneel</acronym> heeft zeven verschillende secties die standaard weer onderverdeeld zijn. We zullen elk onderdeel in deze beheerdershandleiding uitleggen..</para>
+		<para>Klik op de <guilabel>Beheerderspaneel</guilabel> link onderaan van elke pagina van de standaard forumstijl om het <acronym>Beheerderspaneel</acronym> te bezoeken.</para>
+		<para>Het <acronym>Beheerderspaneel</acronym> heeft zeven verschillende secties die standaard weer onderverdeeld zijn. We zullen elk onderdeel in deze beheerdershandleiding uitleggen..</para>
 		
 		<figure id="img_acp_index">
 			<title>De indexpagina van het beheerderspaneel</title>
@@ -49,8 +49,8 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Algemene configuratie en beginpagina</title>
-		<para>De <guimenuitem>algemene</guimenuitem> sectie is het eerste scherm dat je iedere keer ziet als je aanmeld in het <acronym>beheerderspaneel</acronym>. Het bevat enkele basis statistieken en informatie over je forum. Het heeft ook een subsectie genaamd <guimenuitem>snelkoppelingen</guimenuitem>. Het geeft je snelle toegang tot sommige beheerderspagina's dat je regelmatig gebruikt, zoals <link linkend="acp_users">gebruikersbeheer</link> of <link linkend="acp_maintenance">Moderatielogboek</link>. We zullen deze items later bespreken in hun specifieke secties.</para>
-		<para>We zullen ons concentreren op de andere drie subsecties: <link linkend="acp_general_config">forumconfiguratie</link>, <link linkend="acp_general_client">gebruikerscommunicatie</link> en <link linkend="acp_general_server">serverconfiguratie</link>.</para>
+		<para>De <guimenuitem>Algemene</guimenuitem> sectie is het eerste scherm dat je iedere keer ziet als je aanmeld in het <acronym>Beheerderspaneel</acronym>. Het bevat enkele basis statistieken en informatie over je forum. Het heeft ook een subsectie genaamd <guimenuitem>Snelkoppelingen</guimenuitem>. Het geeft je snelle toegang tot sommige beheerderspagina's dat je regelmatig gebruikt, zoals <link linkend="acp_users">Gebruikersbeheer</link> of <link linkend="acp_maintenance">Moderatielogboek</link>. We zullen deze items later bespreken in hun specifieke secties.</para>
+		<para>We zullen ons concentreren op de andere drie subsecties: <link linkend="acp_general_config">Forumconfiguratie</link>, <link linkend="acp_general_client">Gebruikerscommunicatie</link> en <link linkend="acp_general_server">Serverconfiguratie</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
 				<authorgroup>
@@ -71,8 +71,8 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Bijlageninstellingen</title>
-				<para>Eén van de vele nieuwe functies in phpBB 3.0 zijn <glossterm>bijlagen</glossterm>. Bijlagen zijn bestanden die toegevoegd kunnen worden bij berichten, zoals e-mailbijlagen. Bepaalde beperkingen, kunnen worden ingesteld door de forumbeheerder, zodat hij een controle heeft wat gebruikers kunnen toevoegen. Je kan deze beperkingen instellingen via de <guimenuitem>bijlageninstellingen</guimenuitem>-pagina.</para>
-				<para>Voor meer informatie, bekijk de sectie over het <link linkend="acp_attach_settings">configuren van jouw forum bijlageninstellingen</link>.</para>
+				<para>Eén van de vele nieuwe functies in phpBB 3.0 zijn <glossterm>Bijlagen</glossterm>. Bijlagen zijn bestanden die toegevoegd kunnen worden bij berichten, zoals e-mailbijlagen. Bepaalde beperkingen, kunnen worden ingesteld door de forumbeheerder, zodat hij een controle heeft wat gebruikers kunnen toevoegen. Je kan deze beperkingen instellingen via de <guimenuitem>Bijlageninstellingen</guimenuitem>-pagina.</para>
+				<para>Voor meer informatie, bekijk de sectie over het <link linkend="acp_attach_settings">Configuren van jouw forum bijlageninstellingen</link>.</para>
 			</section>
 			
 			<section id="acp_general_settings">
@@ -81,14 +81,10 @@
 						<author>
 							<othername></othername>
 						</author>
-						
-						<author>
-							<othername></othername>
-						</author>
 					</authorgroup>
 				</sectioninfo>
 				<title>Foruminstellingen</title>
-				<para>De <guimenuitem>foruminstellingen</guimenuitem> laat je toe om vele instellingen te veranderen dat jouw forum beheerd. Deze instellingen bevatten belangrijke dingen zoals de naam van je forum! Er zijn twee hoofdgroepen van foruminstellingen: de algemene <guilabel>foruminstellingen</guilabel>, en de <guilabel>waarschuwings</guilabel>instellingen.</para>
+				<para>De <guimenuitem>Foruminstellingen</guimenuitem> laat je toe om vele instellingen te veranderen dat jouw forum beheerd. Deze instellingen bevatten belangrijke dingen zoals de naam van je forum! Er zijn twee hoofdgroepen van foruminstellingen: de algemene <guilabel>Foruminstellingen</guilabel>, en de <guilabel>Waarschuwings</guilabel>instellingen.</para>
 				
 				<itemizedlist>
 					<title>Foruminstellingen</title>
