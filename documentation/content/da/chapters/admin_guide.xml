@@ -37,7 +37,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Generel konfiguration og forside</title>
-		<para>Det første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her findes nogle af de mest anvendte administrationssider blandt andet <link linkend="acp_users">Administrér brugere</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
+		<para>Det første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her er link til mest anvendte administrationssider, blandt andet <link linkend="acp_users">Administrér brugere</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
 		<figure id="img_acp_index">
 			<title>Administratorindeks</title>
 				<mediaobject>
@@ -358,7 +358,7 @@
 					</itemizedlist>
 				</para>
 				
-				<para>Husk til sidst at klikke på <guilabel>Udfør</guilabel> for at få indlæst de ændringer der er foretaget.</para>
+				<para>Husk til sidst at klikke på <guilabel>Udfør</guilabel> for at få indlæst de foretagede ændringer.</para>
 			</section>
 			
 			<section id="acp_server_security">
@@ -379,7 +379,7 @@
 						<term>Tillad automatisk login</term>
 						<listitem>
 							<para>Ved første login kan brugere få mulighed for at vælge at blive logget automatisk ind ved fremtidige besøg på boardet.</para>
-							<para>De tilgængelige valgmuligheder <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. Vælges <guilabel>Ja</guilabel> aktiveres automatisk login.</para>
+							<para>De tilgængelige valgmuligheder <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. <guilabel>Ja</guilabel> aktiverer automatisk login.</para>
 						</listitem>
 					</varlistentry>
 						
@@ -387,7 +387,7 @@
 						<term>Loginnøgle udløber efter (i dage)</term>
 						<listitem>
 							<para>Automatisk login udløber efter det angivne antal dage.</para>
-							<para>I tekstboksen til venstre for ordet <guilabel>Dage</guilabel> angives et helt tal. Tallet bestemmer hvor mange dage en loginnøgle er gyldig. Ønsker du ikke at loginnøgler udløber, angives &quot;0&quot;.</para>
+							<para>I tekstboksen til venstre for <guilabel>Dage</guilabel> angives et helt tal. Tallet bestemmer hvor mange dage en loginnøgle er gyldig. Ønsker du ikke at loginnøgler udløber, angives <guilabel>0</guilabel>.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -395,7 +395,7 @@
 						<term>Validering af IP-adresser</term>
 						<listitem>
 							<para>Bestem hvor stor en del af brugeres <glossterm>IP-adresse</glossterm> der anvendes for at validere en session.</para>
-							<para>Der er fire mulige valg: <guilabel>Alle</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel> og <guilabel>Ingen</guilabel>. <guilabel>Alle</guilabel> sammenligner hele IP-adressen. <guilabel>A.B.C</guilabel> sammenligner de første x.x.x af adressen og <guilabel>A.B</guilabel> de første xx. Vælges <guilabel>Ingen</guilabel> valideres IP-adresser ikke i forbindelse med sessioner. I IPv6 adresser vil <samp>A.B.C</samp> sammenligne de første 4 blokke og <samp>A.B</samp> de første 3 blokke.</para>
+							<para>Der er fire mulige valg: <guilabel>Alle</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel> og <guilabel>Ingen</guilabel>. <guilabel>Alle</guilabel> sammenligner hele IP-adressen. <guilabel>A.B.C</guilabel> sammenligner de første x.x.x af adressen og <guilabel>A.B</guilabel> de første xx. Vælges <guilabel>Ingen</guilabel> valideres IP-adresser ikke i forbindelse med sessioner. I IPv6 adresser vil <guilabel>A.B.C</guilabel> sammenligne de første 4 blokke og <guilabel>A.B</guilabel> de første 3 blokke.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -403,7 +403,7 @@
 						<term>Validér browser</term>
 						<listitem>
 							<para>Aktiverer browservalidering for hver session, hvilket forøger sikkerheden.</para>
-							<para>De tilgængelige valgmuligheder <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. Vælges <guilabel>Ja</guilabel> aktiveres valideringen.</para>
+							<para>De tilgængelige valgmuligheder er <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. <guilabel>Ja</guilabel> aktiverer valideringen.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -411,7 +411,7 @@
 						<term>Validér X_FORWARDED_FOR-hoved</term>
 						<listitem>
 							<para>Sessioner vil kun blive fortsat, hvis det sendte X_FORWARDED_FOR-hoved svarer til dét, der blev sendt med den forrige anmodning. Udelukkelser bliver også kontrolleret imod <glossterm>IP-adresse</glossterm>r i X_FORWARDED_FOR.</para>
-							<para>De tilgængelige valgmuligheder <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. Vælges <guilabel>Ja</guilabel> aktiveres valideringen.</para>
+							<para>De tilgængelige valgmuligheder er <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. <guilabel>Ja</guilabel> aktiverer valideringen.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -425,7 +425,7 @@
 					<varlistentry>
 						<term>Kontrollér IP-adresser imod DNS blackhole liste</term>
 						<listitem>
-							<para>Du kan kontrollere brugeres <glossterm>IP-adresse</glossterm>r imod <acronym>DNS</acronym> blackhole lister. Her anmeldes og sortlistes IP-adresser som anvendes til misbrug. Vælges "Ja", kontrolleres mod listerne på <ulink url="http://www.spamcop.net">spamcop.net</ulink> og <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>. Opslaget kan tage lidt tid, afhængig af serverkonfigurationen. Hvis kontrollen medfører for mange fejlagtige afvisninger eller nedsætter "ekspeditionstiden", anbefales det at slå kontrollen fra.</para>
+							<para>Du kan kontrollere brugeres <glossterm>IP-adresse</glossterm>r imod <acronym>DNS</acronym> blackhole lister. Her anmeldes og sortlistes IP-adresser som anvendes til misbrug. Vælges <guilabel>Ja</guilabel>, kontrolleres mod listerne på <ulink url="http://www.spamcop.net">spamcop.net</ulink> og <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>. Opslaget kan tage lidt tid, afhængig af serverkonfigurationen. Hvis kontrollen medfører for mange fejlagtige afvisninger eller nedsætter "ekspeditionstiden", anbefales det at slå kontrollen fra.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -433,14 +433,14 @@
 						<term>Kontrollér emaildomæne</term>
 						<listitem>
 							<para>Det er muligt at kontrollere om brugeres emailadresser er gyldige. Emaildomæne kontrolleres for en gyldig <ulink url="http://www.wikipedia.org/wiki/MX_record">MX-record</ulink> ved tilmelding og ændring af emailadressen i brugerprofiler.</para>
-							<para>De tilgængelige valgmuligheder <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. Vælges <guilabel>Ja</guilabel> aktiveres valideringen.</para>
+							<para>De tilgængelige valgmuligheder <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. <guilabel>Ja</guilabel> aktiverer valideringen.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
 						<term>Kodeordskompleksitet</term>
 						<listitem>
-							<para>For at sikre dine brugeres kodeord bedst muligt, kan du her bestemme hvor komplekst sammensat de skal være. Ændre du i denne konfiguration på et allerede kørende board, får ændringen kun betydning for nye brugere eller når eksisterende brugere ændrer kodeord.</para>
+							<para>For at sikre dine brugeres kodeord bedst muligt, kan du her bestemme hvor komplekst sammensat de skal være. Ændrer du i denne konfiguration på et allerede kørende board, får ændringen kun betydning for nye brugere eller når eksisterende brugere ændrer kodeord.</para>
 							<para>Du har fire valgmuligheder i dropdownmenuen. <guimenuitem>Ingen krav</guimenuitem>, <guimenuitem>Skal indeholde store og små bogstaver</guimenuitem>, <guimenuitem>Skal indeholde bogstaver og tal</guimenuitem> og til sidst <guimenuitem>Skal indeholde symboler</guimenuitem>.</para>
 							<note>
 								<para>Når valget træffes vil det foranstående krav også være gældende. Hvis du for eksempelt vælger <guimenuitem>Skal indeholde bogstaver og tal</guimenuitem> kræves det samtidig anvendelse af store og små bogstaver.</para>
@@ -452,7 +452,7 @@
 						<term>Gennemtving kodeordsændring</term>
 						<listitem>
 							<para>Det kan være fornuftigt at ændre kodeord med mellemrum. I denne indstilling kan brugere tvinges til at ændre kodeord efter et fastsat tidsrum.</para>
-							<para>Kun hele tal kan angives i tekstboksen til højre, og bestemmer det antal dage brugeres kodeord er gyldigt. Når denne periode overskrides bliver brugere bedt om at ændre kodeord. Ønsker du ikke at anvende denne mulighed, angives &quot;0&quot; dage.</para>
+							<para>Kun hele tal kan angives i tekstboksen til højre, og bestemmer det antal dage brugeres kodeord er gyldigt. Når denne periode overskrides bliver brugere bedt om at ændre kodeord. Ønsker du ikke at anvende denne mulighed, angives <guilabel>0</guilabel> dage.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -467,7 +467,7 @@
 					<varlistentry>
 						<term>Tillad PHP i skabeloner</term>
 						<listitem>
-							<para>phpBB3 har mulighed for at fortolke PHP-kode inkluderet i skabelonfilerne. Aktivér den mulighed her, og herved genkendes og fortolkes både <guilabel>PHP</guilabel> og <guilabel>INCLUDEPHP</guilabel> kommandoer indholdeholdt i disse filer.</para>
+							<para>phpBB3 har mulighed for at fortolke PHP-kode inkluderet i skabelonfilerne. Aktivér den mulighed her, og herved genkendes og fortolkes både <guilabel>PHP</guilabel> og <guilabel>INCLUDEPHP</guilabel> kommandoer indeholdt i disse filer.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -489,7 +489,7 @@
 						<title>Generelle indstillinger</title>
 						<listitem><para><guilabel>Begræns systembelastning</guilabel>: Hvis systembelastningen i gennemsnit over 1 minut overskrider denne værdi, vil boardet gå offline, &quot;1.0&quot; er lig ~100% belastning af én processor. Dette virker kun på UNIX-baserede servere og hvor denne information er tilgængelig. Værdien nulstiller sig selv hvis phpBB ikke var i stand til at finde belastningsgrænsen. Alle positive værdier er gyldige. Hvis din server er udstyret med to CPU'er svarer værdien &quot;2.0&quot; til 100% belastning af begge CPU'er. &quot;0&quot; deaktiverer denne begrænsning.</para></listitem>
 						<listitem><para><guilabel>Sessioners varighed</guilabel>: Dine brugeres sessioner udløber efter det angivne antal sekunder. Alle positive heltal er gyldige. Angiv &quot;0&quot; hvis du ønsker at sessioner ikke skal udløbe.</para></listitem>
-						<listitem><para><guilabel>Begræns sessioner</guilabel>: Det er muligt at kontrollere hvor mange samtidige sessioner der tillades på boardet. Overskrides antallet inden for et minut, vil boardet midlertidigt gå offline. Alle positive heltal er gyldige. Angiv &quot;0&quot; hvis du ikke ønsker denne begrænsning.</para></listitem>
+						<listitem><para><guilabel>Begræns sessioner</guilabel>: Det er muligt at kontrollere hvor mange samtidige sessioner der tillades på boardet. Overskrides antallet inden for et minut, vil boardet midlertidigt gå offline. Alle positive heltal er gyldige. Angiv <guilabel>0</guilabel> hvis du ikke ønsker denne begrænsning.</para></listitem>
 						<listitem><para><guilabel>Varighed af onlineinformation</guilabel>: Tid i minutter hvorefter inaktive brugere bliver fjernet fra listen <guilabel>Hvem er online</guilabel>. Jo større tidsrum, desto længere behandlingstid for at generere listen. Alle positive heltal er gyldige.</para></listitem>
 					</itemizedlist>
 				</para>
@@ -499,7 +499,7 @@
 						<title>Generelle valg</title>
 						<listitem><para><guilabel>Anvend prikkede emner</guilabel>: Et prikket emneikon viser bruger om denne har skrevet indlæg i et emne. Vælg <guilabel>Ja</guilabel> for at aktivere muligheden.</para></listitem>
 						<listitem><para><guilabel>Anvend database-emnemarkering</guilabel>: phpBB3 tilbyder mulighed for at opbevare informationer om hvilke emner brugere har læst i databasen. Vælg <guilabel>Ja</guilabel> for at gøre brug af denne mulighed. Aktiveres muligheden ikke, opbevares information om læste emner i en cookie.</para></listitem>
-						<listitem><para><guilabel>Emnemarkering for gæster</guilabel>: Gem information om læste emner og indlæg for gæster. Vælges &quot;Nej&quot; vises emner altid som læste for gæster.</para></listitem>
+						<listitem><para><guilabel>Emnemarkering for gæster</guilabel>: Gem information om læste emner og indlæg for gæster. Vælges <guilabel>Nej</guilabel> vises emner altid som læste for gæster.</para></listitem>
 						<listitem><para><guilabel>Vis brugere online</guilabel>: Brugernavne vises nederst på boardindeks, forum og emnesider. Vælg <guilabel>Ja</guilabel> for at få listet brugere online.</para></listitem>
 						<listitem><para><guilabel>Antal gæster online</guilabel>: Vælg <guilabel>Ja</guilabel> for at få vist antal gæster i listen <guilabel>Hvem er online</guilabel>, i fora og emner.</para></listitem>
 						<listitem><para><guilabel>Vis brugeres online og offline-status</guilabel>: Vælges <guilabel>Ja</guilabel> vises status med relevant ikon i profilfelt.</para></listitem>
@@ -970,7 +970,7 @@
 				
 			<para>Find fanebladet <guimenuitem>Brugere og grupper</guimenuitem> i <acronym>ACP</acronym>. Brugeradministrationen kan også nås fra forsiden, via det øverste punkt i Hurtig Tilgang <guimenuitem>Administrér brugere</guimenuitem> i navigationmenuen til venstre.</para>
 				
-			<para>For at kunne administrere en bruger skal du kende og angive brugernavn i tekstfeltet ud for<guilabel>Find en tilmeldt bruger:</guilabel>. Ønsker du at søge efter en tilmeldt bruger, klikkes på <guilabel>[ Find en tilmeldt bruger ]</guilabel>, umiddelbart under indtastningsfeltet. Ikke tilmeldte/anonyme besøgende (gæstebruger) kan administreres ved at afmærke feltet <guilabel>"Vælg gæstebruger"</guilabel>. Når den rette bruger er fundet og valgt klikkes på <guilabel>Udfør</guilabel>.</para>
+			<para>For at kunne administrere en bruger skal du kende og angive brugernavn i tekstfeltet ud for <guilabel>Find en tilmeldt bruger:</guilabel>. Ønsker du at søge efter en tilmeldt bruger, klikkes på <guilabel>[ Find en tilmeldt bruger ]</guilabel>, umiddelbart under indtastningsfeltet. Ikke tilmeldte/anonyme besøgende (gæstebruger) kan administreres ved at afmærke feltet <guilabel>"Vælg gæstebruger"</guilabel>. Når den rette bruger er fundet og valgt klikkes på <guilabel>Udfør</guilabel>.</para>
 				
 			<para>Der er 10 forskellige formularer relateret til brugerindstillinger, den relevante vælges i dropdownmenuen øverst til højre. Hver formular giver mulighed for at ændre en række indstillinger samlet i denne. I det følgende gennemgås disse og deres indhold. Når der ændres i én af formularerne klikkes på <guilabel>Udfør</guilabel> placeret nederst på hver af formularerne.</para>
 			
@@ -1386,7 +1386,7 @@
 			
 			<para>Rangadministration foretages i <acronym>ACP</acronym>, ved at klikke på fanen <guimenuitem>Brugere og Grupper</guimenuitem> og herefter på linket <guimenuitem>Administrér brugerrang</guimenuitem> i venstre side. Alle eksisterende rangordner vises.</para>
 			
-			<para>Klik på knappen <guilabel>Tilføj ny rang</guilabel> under ranglisten, for at oprette en ny. Angiv først <guilabel>Rangtitel</guilabel> with the name of the rank. Hvis du har uploadet et billede, som skal tilknyttes denne rang, i mappen <filename>/images/ranks/</filename>, vælges dette i dropdownmenuen. Til sidst vælges om rangen skal være en &quot;speciel rang&quot;. En speciel rang kan tildeles brugere af administrator, og tildeles ikke med baggrund i antal indsendte indlæg. Vælges <guilabel>Nej</guilabel> skal <guilabel>Minimum antal indlæg</guilabel> udfyldes med det antal indlæg bruger skal have indsendt før rangen tildeles. Klik på <guilabel>Udfør</guilabel> for at tilføje den nye rang.</para>
+			<para>Klik på knappen <guilabel>Tilføj ny rang</guilabel> under ranglisten, for at oprette en ny. Angiv først rangens navn i <guilabel>Rangtitel</guilabel>. Hvis du har uploadet et billede, som skal tilknyttes denne rang, i mappen <filename>/images/ranks/</filename>, vælges dette i dropdownmenuen. Til sidst vælges om rangen skal være en &quot;speciel rang&quot;. En speciel rang kan tildeles brugere af administrator, og tildeles ikke med baggrund i antal indsendte indlæg. Vælges <guilabel>Nej</guilabel> skal <guilabel>Minimum antal indlæg</guilabel> udfyldes med det antal indlæg bruger skal have indsendt før rangen tildeles. Klik på <guilabel>Udfør</guilabel> for at tilføje den nye rang.</para>
 			
 			<para>For at ændre en eksisterende rangs indstillinger, klikkes på den grønne &quot;Redigér&quot; ud for rangen i oversigtens kolonne <guilabel>Handling</guilabel>.</para>
 			
@@ -1404,7 +1404,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Brugersikkerhed</title>
-			<para>I supplement til brugeradministrationen, er det desuden vigtigt at beskytte boardet mod uønskede tilmeldinger og brugere. I sektionen <guilabel>Brugersikkerhed</guilabel> kan administreres udelukkelse og blokering af brugernavne, email- og IP-adresser, og brugere kan beskæres. Brugere, hvis data matcher blot én af udelukkelsedefinitionerne, vil ikke være i stand til at tilgå boardet.</para>
+			<para>Som supplement til brugeradministrationen, er det desuden vigtigt at beskytte boardet mod uønskede tilmeldinger og brugere. I sektionen <guilabel>Brugersikkerhed</guilabel> kan administreres udelukkelse og blokering af brugernavne, email- og IP-adresser, og brugere kan beskæres. Brugere, hvis data matcher blot én af udelukkelsedefinitionerne, vil ikke være i stand til at tilgå boardet.</para>
 			
 			<section id="acp_ban_emails">
 				<sectioninfo>
@@ -1869,7 +1869,7 @@
 				<varlistentry>
 					<term>Administratorlog</term>
 					<listitem>
-						<para>Indeholder alle hændelser udført i selve administrationkontrolpanelet.</para>
+						<para>Indeholder alle hændelser udført i administratorkontrolpanelet.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>

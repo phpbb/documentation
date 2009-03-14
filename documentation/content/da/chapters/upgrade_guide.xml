@@ -12,19 +12,85 @@
 	</chapterinfo>
 	<title>Konverteringsanvisning</title>
 	<abstract>
-		<para>Hvis du ønsker at konvertere dit phpBB2 board til phpBB3, gennemgås processen i dette kapitel.</para>
+		<para>Hvis du ønsker at konvertere dit phpBB2 board eller et andet boardsystem til phpBB3, gennemgås processen i dette kapitel.</para>
 	</abstract>
 	<section id="upgrade">
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>Techie-Micheal</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Konvertering fra 2.0 til 3.0</title>
-		<para>Konverteringsprocessen fra 2.0.x til 3.0.x er helt enkel og simpel.</para>
-		<para>Scriptet til konverteringen findes i en PHP-fil, svarende til opdateringsfilen der findes i phpBB 2.0.x. Filen sørger for at du under hele processen præsenteres for en række informative skærmbilleder indtil konverteringen til 3.0.x er gennemført.</para>
-		<para>Advarsel: Foretag backup af både databasen og filerne inden konverteringen igangsættes.</para>
+		<title>Konvertering fra phpBB2.0 til phpBB3.0</title>
+			<para>Konverteringsprocessen fra 2.0.x til 3.0.x er helt enkel.</para>
+			<para>Scriptet til konverteringen er indeholdt i en PHP-fil. Filen sørger for at du under hele processen præsenteres for en række informative skærmbilleder indtil konverteringen til 3.0.x er gennemført. Vejledning og problemløsninger til denne del findes <ulink url="http://www.phpbb.com/docs/INSTALL.html#convert">her</ulink>.</para>
+			<warning>Husk at tage backup af både databasen og filerne inden konverteringen igangsættes.</warning>
+	</section>
+	<section id="convert">
+		<sectioninfo>
+			<authorgroup>
+			</authorgroup>
+		</sectioninfo>
+		<title>Konvertering fra andre boardsystemer til phpBB3</title>
+		<para>Fremgangsmåden er principielt den samme som en konvertering fra phpBB2.</para>
+					<section id="convert_requirements">
+				<title>Krav</title>
+				<itemizedlist>
+				<listitem><para>At phpBB3 er installeret. Se evt. <link linkend="quick_start_guide">installationsvejledningen</link>.</para></listitem>
+				<listitem><para>Adgang til det boards database du ønsker at konvertere.</para></listitem>
+				<listitem><para>Adgang til det boards filer du ønsker at konvertere.</para></listitem>
+				<listitem><para>Ovennævnte database og filer skal være befinde sig på samme server og filerne under samme domæne som din phpBB3-installation. Bruger du subdomæner, skal filerne befinde sig i samme subdomæne.</para></listitem>
+				</itemizedlist>
+			</section>
+			<section id="convert_preliminary">
+				<title>Forberedelser</title>
+				<para>Som nævnt skal phpBB3 være installeret, men slet IKKE mappen <uri>install</uri> hvis du vil i gang med konvertering med det samme. Vil du inden konvertering teste phpBB3 og udføre denne senere, bør du omdøbe mappen til for eksempel <uri>_install</uri>. Herved kan boardet aftestes og install-mappen er ikke slettet, den skal bruges igen ved den efterfølgende konvertering.</para>
+				<para>Du skal bruge specifikke konverteringfiler til den boardsoftware du vil konvertere. Filerne til konvertering af phpBB2 er indeholdt i installationspakken til phpBB3. Filerne til anden boardsoftware skal downloades fra det rette emne i <ulink url="http://www.phpbb.com/community/viewforum.php?f=65">dette forum</ulink>.</para>
+				<para>For at starte konverteringen kaldes filen <uri>{phpBB3_root_directory}/install/index.php</uri> i din browsers adressefelt. Klik på fanen Konvertér og følg instruktionerne. Er det en konvertering fra phpBB2 er de nødvendige filer på plads, mens det for andre boardsystemer er nødvendigt at uploade konverteringfiler til de rette mapper. Afhængig af hvilket system der skal konverteres, skal der bruges to eller tre filer: convert_xxx.php, functions_xxx.php og muligvis auth_xxx.php. xxx'erne repræsenterer som regel navnet på det system du vil konvertere fra.</para>
+				<warning>Husk at tage backup af både databasen og filerne inden konverteringen igangsættes.</warning>
+			</section>
+			<section id="convert_conversion">
+				<title>Konverteringens faser</title>
+				<itemizedlist>
+				<listitem><para>phpBB3 skal installeres på samme server som boardsystemet der skal konverteres.</para></listitem>
+				<listitem><para>Konverterer du fra andet end phpBB2, uploades de filer til konverteringen, som du hentede fra emnet i <ulink url="http://www.phpbb.com/community/viewforum.php?f=65">forummet</ulink> på www.phpbb.com.</para></listitem>
+				<listitem><para>Downloadet udpakkes og uploades til phpBB3-rodmappen, og mappestrukturen bibeholdes. Herved vil auth_xxx.php være at finde i mappen /includes/auth, functions_xxx.php &amp; convert_xxx.php i mappen /install/convertors. Filen auth_xxx.php tillader at du foretage log in efter konverteringen.</para></listitem>
+				<listitem><para>Den downloade zip-fil skulle have filerne pakket korrekt i forhold til phpBB rod-mappen, hvorfor det kun er nødvendigt at uploade mapperne indeholdende disse filer. Mappestrukturen vil være således:<uri>{phpBB3_root}/install/convertors/convert_xxx.php</uri>, <uri>{phpBB3_root}/install/convertors/functions_xxx.php</uri> &amp; <uri>{phpBB3_root}/includes/auth/auth_xxx.php</uri>.</para></listitem>
+				<listitem><para>Kald <uri>{phpbb_root_directory}/install/index.php</uri> i din browsers adressefelt, klik på fanen konvertér. Nedenstående skærmbillede viser alle tilgængelige konvertorer.</para></listitem>
+				</itemizedlist>
+				<figure id="user_registering_typical_page">
+			<title>Tilgængelige konverterer</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/upgrade_guide/convert_select.png"/>
+				</imageobject>
+				<caption>
+					<para>I oversigten vælges nu den boardsoftware der ønskes konverteret ved at klikke på konvertér ud for den rette</para>
+				</caption>
+			</mediaobject>
+		</figure>
+				<itemizedlist>
+				<listitem><para>Efterfølgende bliver du bedt om databaseinformationerne for boardet du konverterer fra. Når disse er angivet, gennemføres en kontrol af de anførte data ved at klikke på <guilabel>Begynd konvertering</guilabel>. Godkendes informationerne vises en bekræftelse og klik på <guilabel>Fortsæt konvertering</guilabel> for at komme videre.</para></listitem>
+				<listitem><para>På samme side har du mulighed for at vælge om siden skal opdateres for at forsætte konvertering. Som standard er <guilabel>Ja</guilabel> valgt, og vil medfører at processen automatisk går videre til næste trin. Vælges <guilabel>Nej</guilabel>, skal hvert trin manuelt igangsættes med et klik. Denne mulighed anvendes normalt kun til testformål.</para></listitem>
+				<listitem><para>After you click the <guilabel>Begin Conversion</guilabel> button, the convertor will check the convertor files. If everything is okay, you will be presented with a <guilabel>Continue Conversion</guilabel> button.</para></listitem>
+				<listitem><para>The convertor will now proceed to convert your old board. Pages will be displayed informing you of the convertor progress.</para></listitem>
+				<listitem><para>When the convertor is finished, you will see a message that the Search Index has not been converted. You must go into the Administration Control Panel and build the Search Index. In the <acronym>ACP</acronym>, click the Maintenance tab and select Search Index from the submenu. The default search backend index is Fulltext native and will be marked active. This is normally the index that you want to use to create your search index.</para></listitem>
+				<listitem><para>You should now check your phpBB3 board for proper operation, that permissions are set correctly and fora &amp; indlæg vises korrekt. Also make sure files got copied correctly, for example avatars and smilies and attachments (if you have them.)</para></listitem>
+			</itemizedlist>
+			<note>The convertor will not harm the database of the board software you are converting from. In case of a problem, your old board software will still be fully operational.</note>
+			<para>If you experience any problems or have questions, please refer to the <ulink url="http://www.phpbb.com/docs/INSTALL.html#convert">Convertor docs</ulink> for common problems or ask in the topic where you got the convertor files from in the case of converting from a non-phpBB board.</para>
+			</section>
+			<section id="convert_converters">
+			<title>Tilgængelige konvertorer til phpBB3 (pr. 30/09/2008)</title>
+			<itemizedlist>
+				<listitem><para><ulink url="http://www.phpbb.com/community/viewtopic.php?p=3207210#p3207210">IPB 2.3.x</ulink></para></listitem>
+				<listitem><para>PHP-Nuke</para><!--The link:<ulink url="http://www.phpbb.com/community/viewtopic.php?f=65&t=642955#p3568405">PHP-Nuke</ulink> will not parse correct? /--></listitem>
+				<listitem><para>phpBB2 med Simple Subforums</para><!--The link:<ulink url="http://www.phpbb.com/community/viewtopic.php?f=65&t=575697#p3167740">phpBB2 with Simple Subforums</ulink> will not parse correct? /--></listitem>
+				<listitem><para>SMF 1.1.x</para><!--The link:<ulink url="http://www.phpbb.com/community/viewtopic.php?f=65&t=589439#p3248385">SMF 1.1.x</ulink> will not parse correct? /--></listitem>
+				<listitem><para><ulink url="http://www.phpbb.com/community/viewtopic.php?p=5833105#p5833105">SMF 2.0 Beta</ulink></para></listitem>
+				<listitem><para><ulink url="http://www.phpbb.com/community/viewtopic.php?p=5862045#p5862045">vB 3.x</ulink></para></listitem>
+			</itemizedlist>			
+			</section>
 	</section>
 </chapter>

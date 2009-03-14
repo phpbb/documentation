@@ -172,10 +172,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -187,10 +184,7 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -209,17 +203,14 @@
 			</sectioninfo>
 			<title>Sammenlæg emner</title>
 			<para>I phpBB3 er det også muligt at sammenlægge emner. Hvilket er nyttigt hvis der for eksempel drøftes relaterede problemstillinger i to separate emner på boardet.</para>
-			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. Vælges <guilabel>Markér alle</guilabel> bliver alle indlæg i emnet udvalgt til ....? all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
+			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. Vælges <guilabel>Markér alle</guilabel> bliver alle indlæg i emnet udvalgt til sammenlægning og kan flyttes til det modtagende emne. Flyttede emner bevarer eksisterende tidstempel, og vil derfor blive sorteret efter alder sammen med de eksisterende indlæg i emnet.</para>
 		</section>
 		
 		<section id="modtools_mergeposts">
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
@@ -273,7 +264,7 @@
 				<varlistentry>
 					<term>Oversigt</term>
 					<listitem>
-						<para>Indeholder: Indlæg i godkendelseskøen, rapporterede indlæg og de seneste 5 loggede handlinger udført af redaktører.</para>
+						<para>Indeholder oversigt over indlæg i godkendelseskøen, rapporterede indlæg og de seneste 5 loggede handlinger udført af redaktører.</para>
 					</listitem>
 				</varlistentry>
 				
