@@ -94,12 +94,12 @@
 					<listitem><para>Je moet ook de <guilabel>Standaard forumtaal</guilabel> van je forum instellen. Dit is de taal die gasten zullen zien wanneer ze je forum bezoeken. Je kan geregistreerde gebruikers toestaan om een andere taal te kiezen. Standaard is alleen één taal geïnstalleerd, namelijk <guilabel>Engels [GB]</guilabel>, maar je kan <ulink url="http://www.phpbb.com/languages">meer talen downloaden van de phpBB website</ulink> en deze installeren op je forum. Lees meer over het werken met talen in de <link linkend="acp_system_language">sectie over Taal pakketen configuratie</link>.</para></listitem>
                     <listitem><para>Je kan ook je forums standaard datum formaat instellen. phpBB3 heeft enkele basis datum formaten die je kan instellen om te gebruiken; als er niet genoeg formaten zijn en je wilt je forum datum formaat aanpassen, kies dan <guimenuitem>Aangepast</guimenuitem> uit de <guilabel>Datumformaat</guilabel> selectie menu. Type dan het formaat in het tekstvak eronder, zoals je het wil gebruiken. Dit is het zelfde als de <ulink url="http://www.php.net/date">PHP date() functie</ulink>.</para></listitem>
 					<listitem><para>Samen met het instellen van je forum standaard datumformaat, kan je ook je voorkeurs tijdzone voor je forum instellen. De tijdzones die beschikbaar zijn in de <guilabel>Systeemtijdzone</guilabel> selectie menu zijn allemaal gebaseerd op de relatieve <acronym>UTC</acronym> (voor de meeste bedoelingen en doeleinden, het is <acronym>GMT</acronym>, of Greenwich Mean Time) tijden. Je kan ook kiezen of je forum gebruik maakt van Zomertijd door de juiste radio knop te selecteren naast de <guilabel>Zomertijd inschakelen</guilabel> optie.</para></listitem>
-					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
+					<listitem><para>Je kan ook een standaard stijle instellen voor je forum. Het forum zal dan voor je gasten en gebruikers in de <guilabel>Standaard Stijl</guilabel> getoond worden. In de standaard phpBB installatie zijn er twee stijlen beschikbaar: prosilver en subsilver2. Je kan ook gebruikers toestaan om een andere stijl te selecteren dan die jij hebt ingesteld door het selecteren van <guilabel>Nee</guilabel> in de <guilabel>Gebruikerstijl overschrijven</guilabel> instelling of om het niet toe te staan. Bezoek de <link linkend="acp_styles">stijlen sectie</link> om uit te vinden hoe je nieuwe stijlen toevoegd en waar je ze kan vinden.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Warnings</title>
-					<listitem><para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. All positive integers are valid values. For more about warnings, please read <xref linkend="moderator_mcp" />.</para></listitem>
+					<title>Waarschuwingen</title>
+					<listitem><para>Moderators kunnen waarschuwingen sturen naar gebruikers die de forum regels overtreden. De waarde van <guilabel>de Duur van de Waarschuwingen</guilabel> definieert het aantal dagen dat een waarschuwing duurt tot dat het vervalt. Alle positiefe waardes zijn geldig. Voor meer informatie, lees <xref linkend="moderator_mcp" />.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -112,7 +112,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Forumfuncties</title>
-				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
+				<para>Met de <guimenuitem>Forumfuncties</guimenuitem> sectie, kan je verschillende forumfuncties aan of uitschakelen. Let op dat elke functie die je hier uitschakeld niet beschikbaar zal zijn op je forum, zelfs niet als je je gebruikers de permissies geeft om ze te gebruiken.</para>
 			</section>
 			
 			<section id="acp_board_avatars">
