@@ -99,7 +99,7 @@
 				
 				<itemizedlist>
 					<title>Waarschuwingen</title>
-					<listitem><para>Moderators kunnen waarschuwingen sturen naar gebruikers die de forum regels overtreden. De waarde van <guilabel>de Duur van de Waarschuwingen</guilabel> definieert het aantal dagen dat een waarschuwing duurt tot dat het vervalt. Alle positiefe waardes zijn geldig. Voor meer informatie, lees <xref linkend="moderator_mcp" />.</para></listitem>
+					<listitem><para>Moderators kunnen waarschuwingen versturen naar gebruikers die de forumregels overtreden. De waarde van <guilabel>de Duur van de Waarschuwingen</guilabel> bepaalt het aantal dagen dat een waarschuwing geldig is, tot dat het vervalt. Alle positieve hele getallen zijn geldig. Voor meer informatie over waarschuwingen, lees <xref linkend="moderator_mcp" />.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -112,7 +112,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Forumfuncties</title>
-				<para>Met de <guimenuitem>Forumfuncties</guimenuitem> sectie, kan je verschillende forumfuncties aan of uitschakelen. Let op dat elke functie die je hier uitschakeld niet beschikbaar zal zijn op je forum, zelfs niet als je je gebruikers de permissies geeft om ze te gebruiken.</para>
+				<para>Met de <guimenuitem>Forumfuncties</guimenuitem> sectie, kan je verschillende forumfuncties aan of uitschakelen. Let op dat elke functie die je hier uitschakeld niet beschikbaar zal zijn op je forum, ook al geef je de gebruikers de permissies om ze te gebruiken.</para>
 			</section>
 			
 			<section id="acp_board_avatars">
@@ -124,11 +124,11 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Avatar-instellingen</title>
-				<para>Avatars are generally small, unique images a user can associate with themselves. Depending on the style, they are usually displayed below the user name when viewing topics. Here you can determine how users can define their avatars.</para>
-				<para>There are three different ways a user can add an avatar to their profile. The first way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
-				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised. There is also no support for sub folders inside the gallery folder. </para>
-				<para>The second approach to avatars is through <guilabel>Remote Avatars</guilabel>. This are simply images linked from another website. Your members can add a link to the image they want to use in their profile. To give you some control over the size of the avatars you can define the minimum and maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not able to control the file size.</para>
-				<para>The third approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image form their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is <glossterm>server-writable</glossterm>. The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
+				<para>Avatars zijn over het algemeen kleine, unieke afbeeldingen waarmee gebruikers zichzelf mee kunnen associeren. Afhankelijk van de stijl, worden ze meestal onder de gebruikersnaam weergegeven bij het bekijken van onderwerpen. Hier kan je bepalen hoe gebruikers hun avatar kunnen kiezen.</para>
+				<para>Er zijn drie verschilende manieren waarmee een gebruiker hun avatar kunnen toevoegen in hun profiel. De eerste manier is via een avatar gallerij die jij verzorgt. Let op dat er geen avatar gallerij beschikbaar is in een standaard phpBB installatie. De <guilabel>Avatargallerijmap</guilabel> is de map naar de gallerij afbeeldingen. De standaard map is <guilabel>images/avatars/gallery</guilabel>.  De gallerij map bestaat niet in een standaard installatie dus je zal de map handmatig moeten toevoegen wanneer je het wenst te gebruiken.</para>
+				<para>De afbeeldingen die je wilt gebruiken voor de gallerij moeten in een map staan die weer in de hoofd gallerij map staat. Afbeeldingen die direct in de gallerij hoofdmap staan zullen niet worden herkend. Er is ook geen ondersteuning voor de submappen die in de gallerij hoofdmap staan.</para>
+				<para>De tweede manier om avatars te gebruiken is door middel van de <guilabel>Gelinkte Avatars</guilabel> optie. Dit is simpel gezegt afbeeldingen die gelinkt worden van een andere website. Jouw gebruikers kunnen een link toevoegen naar een afbeelding, die ze willen gebruiken in hun profiel. Om je wat controle te geven over de grootte van de avatars kan je de minimale en maximale grootte bepalen van de afbeeldingen. Het nadeel van <guilabel>Gelinkte Avatars</guilabel> is dat je de bestandsgrootte niet kan controleren.</para>
+				<para>De derde manier om avatars te gebruiken is door middel van <guilabel>Geüploade Avatars</guilabel>. Je gebruikers kunnen dan een afbeelding uploaden van hun locale systeem (bv vanaf je computer) welke opgeslagen zullen worden op je server. Ze zullen geüpload worden naar de <guilabel>Avataropslagmap</guilabel> die je zelf kan opgeven. De standaard map is <guilabel>images/avatars/upload</guilabel> en bestaat al na een installatie. Je moet er zeker van zijn dat de map <glossterm>serverschrijfbaar</glossterm> is. Het bestandsformaat van de afbeeldingen moeten gif, jpeg of png zijn, en de avatars zullen automatisch gecontroleerd worden voor afbeeldingsbestand en grootte na het uploaden. Je kan de <guilabel>Maximum Avatarbestandsgrootte</guilabel> bepalen en afbeeldingen die groter zijn dan de opgegeven waarden zullen automatisch niet geaccepteerd worden.</para>
 			</section>
 			
 			<section id="acp_board_pms">
