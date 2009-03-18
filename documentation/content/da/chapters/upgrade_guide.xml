@@ -10,9 +10,9 @@
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Konverteringsanvisning</title>
+	<title>Opdatering og konvertering</title>
 	<abstract>
-		<para>Hvis du ønsker at konvertere dit phpBB2 board eller et andet boardsystem til phpBB3, gennemgås processen i dette kapitel.</para>
+		<para>Her gennemgås hvordan et kørende phpBB3-board opdateres og i sidste sektion, hvordan phpBB2 eller et andet boardsystem konverteres til phpBB3.</para>
 	</abstract>
 	<section id="upgrade">
 		<sectioninfo>
@@ -22,19 +22,111 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Konvertering fra phpBB2.0 til phpBB3.0</title>
-			<para>Konverteringsprocessen fra 2.0.x til 3.0.x er helt enkel.</para>
-			<para>Scriptet til konverteringen er indeholdt i en PHP-fil. Filen sørger for at du under hele processen præsenteres for en række informative skærmbilleder indtil konverteringen til 3.0.x er gennemført. Vejledning og problemløsninger til denne del findes <ulink url="http://www.phpbb.com/docs/INSTALL.html#convert">her</ulink>.</para>
-			<warning>Husk at tage backup af både databasen og filerne inden konverteringen igangsættes.</warning>
+		<title>Opdatering af phpBB3.0.x</title>
+			<para>Her gennemgås de mulige teknikker til opdatering af phpBB3.0.x. Og nogle af de overvejelser der bør gøres inden valg af opdateringsstrategi.</para>
+				<section id="update_strategy">
+				<title>Opdateringsmetode</title>
+				<para>En opdatering af phpBB3 består af to separate procedurer:</para>
+				<itemizedlist>
+					<listitem><para>Filerne i rodmappen skal opdateres med de ændringer der er foretaget siden sidste version.</para></listitem>
+					<listitem><para>Databasen skal opdateres med de ændringer der måtte være foretaget i databaseskemaet siden sidste version.</para></listitem>
+					</itemizedlist>
+				<para>Nedenstående gennemgås nogle overvejelser der bør gøres inden valg af opdateringspakke.</para>
+					<section id="update_clean">
+					<title>Board uden modifikationer</title>
+					<para>Det er helt uden problemer at gennemføre en opdatering. Den absolut hurtigste metode er at anvende pakken <guilabel>Kun ændrede filer</guilabel>, og har du styr på at uploade de ændrede filer rette sted, bør operationen kunne gennemføres på mindre end ti minutter. Den anbefalede automatiske opdateringspakke er ligeså anvendelig, den avancede filkontrol betyder imidlertid at man skal igennem mindst endnu et upload, inden opdateringen er fuldstændig.</para>
+					</section>
+					<section id="update_mods">
+					<title>Board med MODs</title>
+					<para>Alle de filændringer du har foretaget ved installation af et MOD er i fare for at blive overskrevet ved en opdatering. Her er den automatiske opdateringspakke at foretrække. Den vil finde de filer du har ændret i og udpege kodeændringerne ift. til den originale fil. Samtidig foreslår den at sammenlægge disse ændringer med den nye fil, således MOD'et bevares.</para>
+					<figure>
+					<title>Forskel på filer</title>
+					<mediaobject>
+						<imageobject>
+						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_diff.png"/>
+						</imageobject>
+						<caption>
+						<para>I opdateringsfasen kan foreslåede sammenlægninger kontrolleres direkte. Disse kan afvises, og du kan i stedet vælge at anvende den nye opdaterede fil uden dine filændringer eller at anvende din oprindelige uden opdateringer.</para>
+						</caption>
+					</mediaobject>
+					</figure>
+					<para>Er sket en opdatering af lige præcis den kodelinie du har ændret i tidligere, kan du blive nødsaget til at undlade sammenlægning, og tilføje MOD'et manuelt efterfølgende.</para>
+					</section>
+					<section id="update_lan_styles">
+					<title>Sprog og typografier</title>
+					<para>Husk at den opdaterede danske sprogpakke ikke er indeholdt i opdateringerne fra phpBB.com, her er kun indeholdt den opdaterede engelske. Det anbefales derfor at du inden opdatering henter og uploader den nyeste danske sprogpakke. Det samme gør sig naturligvis gældende hvis du har andre sprog installeret.</para>
+					<para>Er der i forbindelse med opdateringen kommet nye sprognøgler til, vil boardet vise underlige tegn, hvor denne nye nøgle anvendes. Boardet vil dog fungere udmærket og sprogpakken kan opdateres efterfølgende.</para>
+					<para>Har du andre typografier end standardtypografierne installeret, er det også vigtigt at undersøge om der er opdateringer til disse. De officielle opdateringspakker indeholder evt. opdateringer af prosilver &amp; subSilver2.</para>
+					</section>
+					<section id="update_older">
+					<title>Opdatering af ældre versioner</title>
+					<para>Er dit board mange versioner bagud, kan det virke meget uoverskueligt at få det fuldt opdateret. De officielle pakker giver almindeligvis mulighed for at opdatere fra fem versioner tilbage. Som eksempel vil opdateringspakken til 3.0.5 give mulighed for at opdatere et 3.0.0 board.  Scriptet indeholdt i 3.0.5 kan altså opdatere en 3.0.0 database. Imidlertid er scriptet <uri>install/database_update.php</uri> indeholdt i phpBB3.0.4 i undtagelse herfra, det er i stand til at opdatere en RC1 database med alle ændringer helt frem til 3.0.4.</para>
+					<para>Det er altså muligt at opdatere alle boards fra RC1 med afvikling af et antal opdateringscripts, afhængig af hvilken version du er på. Kun <uri>install/database_update.php</uri> er vigtig her, da du blot uploader den fulde opdateringspakke eksklusiv filen<uri>config.php</uri> og install-mappen til sidst.</para>
+					<para>Indeholder det uddaterede board samtidig en masse MODs, der er meget vigtige at bibeholde, mister du disse ved at anvende ovennævnte, men nemme og hurtige metode. Du må i så fald installere disse efterfølgende endnu engang. Ønsker du for enhver pris at undgå dette, er der kun den omstændelige process tilbage. Der må opdateres én version ad gangen, med den automatiske opdateringspakke. Og håbe at alle MODs overlever.</para>
+					<para>Ældre versioner af phpBB3's opdateringscripts kan hentes ud af tidligere opdateringspakker, som kan hentes <ulink url="http://www.phpbb.com/downloads/olympus.php">her</ulink>, under <guilabel>Previous phpBB3 Releases</guilabel>. Samme sted findes også de automatiske opdateringspakker for tidligere versioner.</para>
+					<para>TO DO</para>
+					</section>
+				</section>
+				<section id="update_packages">
+				<title>Opdateringspakkerne</title>
+				<para>TO DO</para>
+				<para>Fælles for alle pakkerne nævnt nedenfor, er at opdateringen af databasen skal afvikles særskilt. Derfor er scriptet, indeholdt i filen <uri>install/database_update.php</uri>, med i samtlige opdateringpakker. Scriptet vil opdatere dit databaseskema og øge versionsnummeret og sættes igang ved fra browseren ved at kalde eksempelvis http://www.ditdomæne.dk/phpBB3/<uri>install/database_update.php</uri>.</para>
+				<figure id="convert_dbupdate">
+				<title>Status for afvikling af database_update.php</title>
+					<mediaobject>
+						<imageobject>
+						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_dbupdate.png"/>
+						</imageobject>
+						<caption>
+						<para>I oversigten ses status for de udførte SQL-forspørgsler. Her ses en enkelt fejl, som skyldes at opdateringen er kørt én gang før og group_legend indekset blev slettet allerede her.</para>
+						</caption>
+					</mediaobject>
+				</figure>
+				<important>Husk, uanset valg af opdateringsmetode, at tage backup af filer og database inden opdateringen igangsættes.</important>
+					<section id="pack_auto">
+					<title>Automatisk opdateringspakke</title>
+					<para>Anvendelse af denne pakke er den anbefalede metode til opdatering. Under opdateringen opdages ændrede filer automatisk og sammenlægger automatisk ændringerne fra disse til nye opdaterede filer.</para>
+					<para>Den automatiske opdateringspakke indeholder - i modsætning til de andre - kun opdateringsinformation til at opdatere <emphasis>fra forrige til senest tilgængelige version</emphasis>. Denne pakke er udelukkende til brug for det automatiske opdateringsværktøj indbygget i phpBB3.</para>
+					<para>Følg enten instruktionerne fra fanebladet Administratorkontrolpanel -&gt; System for at foretage opdateringen. Versionskontrollen fortæller at der er en nyere version tilgængelig og leder dig gennem både download og opdatering - eller du kan følge instruktionerne nedenfor.</para>
+					<itemizedlist>
+					<listitem><para>Gå til downloadsiden og hent den senest frigivne opdateringspakke, og som matcher din øjeblikkelige version.</para></listitem>
+					<listitem><para>Upload mappeindholdet til din phpBB-installation - kun install-mappen er nødvendig. Upload hele install-mappen og bevar filstrukturen.</para></listitem>
+					<listitem><para>Når install-mappen er tilstede går phpBB3 automatisk offline.</para></listitem>
+					<listitem><para>Kald install-mappen med din browser, f.eks. http://www.ditdomæne.dk/phpBB3/install/.</para></listitem>
+					<listitem><para>Vælg fanebladet <guilabel>Opdatér</guilabel> og følg instruktionerne.</para></listitem>
+					</itemizedlist>
+					</section>
+					<section id="pack_changedfiles">
+					<title>Kun ændrede filer</title>
+					<para>Denne pakke giver mulighed for at erstatte filer som er ændret i forbindelse med opdateringen. Pakken indeholder normalt ændrede filer, så der er mulighed for at opdatere fra fem versioner tilbage. Denne pakke der stilles til rådighed i forbindelse med frigivelsen af phpBB3.0.5, giver altså mulighed for umiddelbart at opdatere et 3.0.0 board.</para>
+					<para>Pakken indeholder et antal pakkede filer, som hver indeholder de filer der er ændret fra en given version til den seneste version. Du skal vælge den rette fil i forhold din nuværende version af phpBB3, hvis dit board eksempelvis er version 3.0.3, vælges <uri>phpBB-3.0.3_to_3.0.x.zip/tar.gz</uri>, hvor x'et er seneste version.</para>
+					<para>Mappestrukturen er organiseret så du har mulighed for at uploade hele indholdet af den pakkede fil til den rette placering på din server og derved overskrive alle eksisterende filer med den seneste versions filer, hvis du ønsker det.</para>
+					<note>Husk, hvis du har installeret MODs risikerer du med denne metode at overskrive og ødelægge dem. Du er da nødt til at genindsætte de berørte filmodifikationer før upload.</note>
+					</section>
+					<section id="pack_full">
+					<title>Den komplette pakke</title>
+					<para>Den fulde pakke anvendes normalt kun i nye installationer, men hvis du ønsker at udskifte samtlige filer er denne pakke ideel.</para>
+					<para>Opret først en kopi af din eksisterende config.php-fil, og opbevar den et sikkert sted! Slet dernæst alle eksisterende phpBB3-filer. Du skal dog bevare mapperne <uri>files/</uri> og <uri>images/</uri> intakte. Du kan også vælge at efterlade alternative typografier (styles). Når dette er udført kan du uploade de nye phpBB3-filer (se Ny installation for yderligere information, hvis nødvendigt). Den sikkert opbevarede kopi af den oprindelige config.php-fil uploades herefter som erstatning for den nye. Som alternativ kan metoden med blot at erstatte eller overskrive de eksisterende filer med filerne fra den fulde pakke anvendes - men undlad endelig at overskrive den eksisterende config.php-fil.</para>
+					</section>
+					<section id="pack_patch">
+					<title>Patchfil</title>
+					<para>Patch file-pakken er ideel hvis man er fortrolig med anvendelsen af UNIX patch-applikationen.
+Anvendelse af patch file-pakken er én af mulighederne for at opdatere et board med mange MODs og andre tilpasninger installeret, som betyder at man ikke skal genindsætte alle filmodifikationerne i de nye filer. For at anvende patchfilen behøver du kommandolinieadgang til standard UNIX patch-applikationen.</para>
+					<para>Et antal patchfiler giver mulighed for at opdatere fra tidligere stabile og eventuelle RC-versioner. Vælg den rigtige patchfil i forhold til din nuværende version, dvs. hvis det er 3.0.3, skal du vælge filen phpBB-3.0.3_to_3.0.4.patch. Upload den korrekte patch i rodmappen som indeholder phpBB3-filerne (index.php, viewforum.php, m.fl.). Når den er på plads, skal du bruge denne kommando: <emphasis>patch -cl -d [PHPBB DIRECTORY] -p1 &lt; [PATCH NAME]</emphasis> (hvor PHPBB DIRECTORY er navnet på den mappe hvor din phpBB-installation er placeret, f.eks. phpBB3, og PATCH NAME er patchfilens navn). Scriptet burde fuldendes hurtigt, og forhåbentligt uden HUNK FAILED kommentarer.</para>
+					<para>Hvis du modtager nogle af disse fejlmeddelelser, bør du bruge pakken <guilabel>Kun ændrede filer</guilabel> for at erstatte de filer som fejlede under patchet</para>
+					<note>Bliver du nødsaget til at anvende filer fra opdateringspakken, er der en god sansynlighed for at filmodifikationerne foretaget i forbindelse med tidligere installationer af MODs skal foretages igen i disse bestemte filer. Hvis du er bekendt med at undersøge .rej filer, kan du alternativt bruge denne teknik for at identificere fejlene og derefter foretage tilpasningerne manuelt. Husk også at slette patchfilen efter brug.</note>
+					</section>
+				</section>
 	</section>
 	<section id="convert">
 		<sectioninfo>
 			<authorgroup>
 			</authorgroup>
 		</sectioninfo>
-		<title>Konvertering fra andre boardsystemer til phpBB3</title>
-		<para>Fremgangsmåden er principielt den samme som en konvertering fra phpBB2.</para>
-					<section id="convert_requirements">
+		<title>Konvertering af phpBB2 &amp; andre boardsystemer til phpBB3</title>
+		<para>Fremgangsmåderne for at konvertere henholdsvis phpBB2 og andre boardsystemer er principielt identiske. Scriptet til konvertering af phpBB2, stilles til rådighed i installationsfilerne til phpBB3. Mens filer til konvertering af andre systemer skal hentes andre steder. Nederst er listet hvilke der i øjeblikket er tilgængelige og afprøvet.</para>
+		<para>Det tilrådes også at læse <ulink url="http://www.phpbb.com/docs/INSTALL.html#convert">denne</ulink> initielle vejledning igennem. Samme fil findes også på dansk, stillet til rådighed af Olympus DK Team.</para>
+			<section id="convert_requirements">
 				<title>Krav</title>
 				<itemizedlist>
 				<listitem><para>At phpBB3 er installeret. Se evt. <link linkend="quick_start_guide">installationsvejledningen</link>.</para></listitem>
@@ -59,27 +151,39 @@
 				<listitem><para>Den downloade zip-fil skulle have filerne pakket korrekt i forhold til phpBB rod-mappen, hvorfor det kun er nødvendigt at uploade mapperne indeholdende disse filer. Mappestrukturen vil være således:<uri>{phpBB3_root}/install/convertors/convert_xxx.php</uri>, <uri>{phpBB3_root}/install/convertors/functions_xxx.php</uri> &amp; <uri>{phpBB3_root}/includes/auth/auth_xxx.php</uri>.</para></listitem>
 				<listitem><para>Kald <uri>{phpbb_root_directory}/install/index.php</uri> i din browsers adressefelt, klik på fanen konvertér. Nedenstående skærmbillede viser alle tilgængelige konvertorer.</para></listitem>
 				</itemizedlist>
-				<figure id="user_registering_typical_page">
-			<title>Tilgængelige konverterer</title>
-			<mediaobject>
-				<imageobject>
-					<imagedata format="PNG" fileref="../images/upgrade_guide/convert_select.png"/>
-				</imageobject>
-				<caption>
-					<para>I oversigten vælges nu den boardsoftware der ønskes konverteret ved at klikke på konvertér ud for den rette</para>
-				</caption>
-			</mediaobject>
-		</figure>
+				<figure id="convert_select_intropage">
+				<title>Tilgængelige konverterer</title>
+					<mediaobject>
+						<imageobject>
+						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_select.png"/>
+						</imageobject>
+						<caption>
+						<para>I oversigten vælges nu den boardsoftware der ønskes konverteret ved at klikke på konvertér ud for den rette</para>
+						</caption>
+					</mediaobject>
+				</figure>
 				<itemizedlist>
-				<listitem><para>Efterfølgende bliver du bedt om databaseinformationerne for boardet du konverterer fra. Når disse er angivet, gennemføres en kontrol af de anførte data ved at klikke på <guilabel>Begynd konvertering</guilabel>. Godkendes informationerne vises en bekræftelse og klik på <guilabel>Fortsæt konvertering</guilabel> for at komme videre.</para></listitem>
-				<listitem><para>På samme side har du mulighed for at vælge om siden skal opdateres for at forsætte konvertering. Som standard er <guilabel>Ja</guilabel> valgt, og vil medfører at processen automatisk går videre til næste trin. Vælges <guilabel>Nej</guilabel>, skal hvert trin manuelt igangsættes med et klik. Denne mulighed anvendes normalt kun til testformål.</para></listitem>
-				<listitem><para>After you click the <guilabel>Begin Conversion</guilabel> button, the convertor will check the convertor files. If everything is okay, you will be presented with a <guilabel>Continue Conversion</guilabel> button.</para></listitem>
-				<listitem><para>The convertor will now proceed to convert your old board. Pages will be displayed informing you of the convertor progress.</para></listitem>
-				<listitem><para>When the convertor is finished, you will see a message that the Search Index has not been converted. You must go into the Administration Control Panel and build the Search Index. In the <acronym>ACP</acronym>, click the Maintenance tab and select Search Index from the submenu. The default search backend index is Fulltext native and will be marked active. This is normally the index that you want to use to create your search index.</para></listitem>
-				<listitem><para>You should now check your phpBB3 board for proper operation, that permissions are set correctly and fora &amp; indlæg vises korrekt. Also make sure files got copied correctly, for example avatars and smilies and attachments (if you have them.)</para></listitem>
+				<listitem><para>Efterfølgende bliver du bedt om databaseinformationerne for boardet du konverterer fra. Når disse er angivet, gennemføres en kontrol af de anførte data ved at klikke på <guilabel>Begynd konvertering</guilabel>. Godkendes informationerne vises en bekræftelse og klik på <guilabel>Fortsæt konvertering</guilabel> for at komme videre. Samtidig kontrolleres også om de nødvendige filer til konverteringen er tilstede.</para></listitem>
+				<listitem><para>På samme side har du mulighed for at vælge om siden skal opdateres for at forsætte konvertering. Som standard er <guilabel>Ja</guilabel> valgt, og medfører at processen automatisk går videre til næste trin. Vælges <guilabel>Nej</guilabel>, skal hvert trin manuelt igangsættes med et klik. Denne mulighed anvendes normalt kun til testformål.</para></listitem>
+				<listitem><para>Konverteringen af det eksisterende board fortsætter nu. Undervejs vises processens status.</para></listitem>
+				</itemizedlist>
+				<figure id="convert_status_page">
+				<title>Statusskærmbillede</title>
+					<mediaobject>
+						<imageobject>
+						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_status.png"/>
+						</imageobject>
+						<caption>
+						<para>Databasekonverteringens status vises i hvert trin</para>
+						</caption>
+					</mediaobject>
+				</figure>
+				<itemizedlist>
+				<listitem><para>Når konverteringen er gennemført, vises en meddelelse som fortæller at søgeindekset ikke er konverteret. Det skal dannes i administratorkontrolpanelet, hvor der klikkes på fanen <guilabel>Vedligehold</guilabel> og <guilabel>Søgeindeks</guilabel> vælges i menuen til venstre. Dannelse af søgeindekset og de to mulige søgemotorer gennemgås nøje i administratorvejledningen.</para></listitem>
+				<listitem><para>Inden dannelse af søgeindekset bør du kontrollere om dit nye phpBB3-board fungerer korrekt, søgefunktionen vil i så fald naturligvis ikke fungere. Kontrollér at tilladelseindstillinger er korrekt konverteret, at fora &amp; indlæg vises korrekt. Check også om filer blev kopieret korrekt, for eksempel avatars, smilies &amp; vedhæftede filer, hvis nogle af disse elementer er indeholdt på boardet du konverterede.</para></listitem>
 			</itemizedlist>
-			<note>The convertor will not harm the database of the board software you are converting from. In case of a problem, your old board software will still be fully operational.</note>
-			<para>If you experience any problems or have questions, please refer to the <ulink url="http://www.phpbb.com/docs/INSTALL.html#convert">Convertor docs</ulink> for common problems or ask in the topic where you got the convertor files from in the case of converting from a non-phpBB board.</para>
+			<tip>Denne konvertering vil ikke ændre i databasen du konverterer fra og dermed ikke skade dette board. Skulle der opstå problemer under konverteringen, vil dit eksisterende board stadig være fuldt funktionsdygtigt.</tip>
+			<para>Støder du ind i problemer eller har spørgsmål, anbefales det først at læse afsnittet om konvertering <ulink url="http://www.phpbb.com/docs/INSTALL.html#convert">her</ulink>, hvor almene problemstillinger behandles. Konverterer du fra andet end phpBB2, bør spørgsmål stilles i det emne hvor du hentede filerne til konvertering.</para>
 			</section>
 			<section id="convert_converters">
 			<title>Tilgængelige konvertorer til phpBB3 (pr. 30/09/2008)</title>

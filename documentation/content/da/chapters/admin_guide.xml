@@ -781,12 +781,12 @@
 				<listitem><para><guilabel>Ikonhøjde</guilabel>: Den højde (i pixels) ikonet skal strækkes til.</para></listitem>
 				<listitem><para><guilabel>Vis på siden hvor indlæg skrives</guilabel>: Mærkes feltet af, vises emneikonet på siden hvor indlæg skrives.</para></listitem>
 				<listitem><para><guilabel>Ikonorden</guilabel>: Her bestemmes hvilken rækkefølge ikonerne vises i. Der kan vælges mellem at vise det først, eller at vise det efter et af de øvrige installerede.</para></listitem>
-				<listitem><para><guilabel>Tilføj</guilabel>: Når instillingerne for dit nye emneikon er i orden, afmærkes dette felt for at tilføje ikonet.</para></listitem>
+				<listitem><para><guilabel>Tilføj</guilabel>: Når indstillingerne for dit nye emneikon er i orden, afmærkes dette felt for at tilføje ikonet.</para></listitem>
 			</itemizedlist>
 			
 			<para>For at ændre indstillinger for allerede installerede emneikoner klikkes på <guilabel>Ret ikoner</guilabel> nederst på siden. Du bliver nu præsenteret for <guilabel>Ikonkonfiguration</guilabel> for alle emneikonerne. Felternes betydning er beskrevet ovenfor.</para>
 		
-			<para>På startsiden er det muligt direkte at ændre ikonernes rækkefølge ved at benytte pilikonerne for "flyt op" og "flyt ned". Det enkelte ikons indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette et ikon benyttes den røde "Slet".</para>
+			<para>På startsiden er det muligt direkte at ændre ikonernes rækkefølge ved at benytte symbolerne for "flyt op" og "flyt ned". Det enkelte ikons indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette et ikon benyttes den røde "Slet".</para>
 		</section>
 		
 		<section id="acp_posting_smilies">
@@ -915,7 +915,7 @@
 			
 			<para>Tilladte filtyper kan med fordel arrangeres i grupper, herved opnås et bedre overblik og en væsentlig nemmere administration. Klik på <guimenuitem>Administrér filtypegrupper</guimenuitem> under indstillingerne for <guilabel>Meddelelser</guilabel> i  <glossterm>ACP</glossterm>. Du kan vælge separate indstillinger for hver filtypegruppe.</para>
 			
-			<para>For at oprette en ny filtypegruppe bruges tekstfeltet ved siden af <guilabel>Opret en ny gruppe</guilabel> nederst på siden. Indtast navnet på den nye filtypegruppe og klik på <guilabel>Udfør</guilabel>. Du bliver nu bedt om at konfigurere indstillinger for den nye filtypegruppe. I det følgende gennemgås alle indstillingsparametre for tiltypegrupper.</para>
+			<para>For at oprette en ny filtypegruppe bruges tekstfeltet ved siden af <guilabel>Opret en ny gruppe</guilabel> nederst på siden. Indtast navnet på den nye filtypegruppe og klik på <guilabel>Udfør</guilabel>. Du bliver nu bedt om at konfigurere indstillinger for den nye filtypegruppe. I det følgende gennemgås alle indstillingsparametre for filtypegrupper.</para>
 		
 			<itemizedlist>
 				<title>Tilføj filtypegruppe</title>
