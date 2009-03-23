@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Opdatering og konvertering</title>
 	<abstract>
-		<para>Her gennemgås hvordan et kørende phpBB3-board opdateres og i sidste sektion, hvordan phpBB2 eller et andet boardsystem konverteres til phpBB3.</para>
+		<para>Vejledning i opdatering af et kørende phpBB3-board og hvordan phpBB2 eller et andet boardsystem konverteres til phpBB3.</para>
 	</abstract>
 	<section id="upgrade">
 		<sectioninfo>
@@ -26,31 +26,42 @@
 			<para>Her gennemgås de mulige teknikker til opdatering af phpBB3.0.x. Og nogle af de overvejelser der bør gøres inden valg af opdateringsstrategi.</para>
 				<section id="update_strategy">
 				<title>Opdateringsmetode</title>
-				<para>En opdatering af phpBB3 består af to separate procedurer:</para>
+				<para>En opdatering af phpBB3 består af to adskilte procedurer:</para>
 				<itemizedlist>
-					<listitem><para>Filerne i rodmappen skal opdateres med de ændringer der er foretaget siden sidste version.</para></listitem>
+					<listitem><para>Alle phpBB3-filer skal opdateres med de ændringer der er foretaget siden sidste version.</para></listitem>
 					<listitem><para>Databasen skal opdateres med de ændringer der måtte være foretaget i databaseskemaet siden sidste version.</para></listitem>
 					</itemizedlist>
 				<para>Nedenstående gennemgås nogle overvejelser der bør gøres inden valg af opdateringspakke.</para>
 					<section id="update_clean">
-					<title>Board uden modifikationer</title>
-					<para>Det er helt uden problemer at gennemføre en opdatering. Den absolut hurtigste metode er at anvende pakken <guilabel>Kun ændrede filer</guilabel>, og har du styr på at uploade de ændrede filer rette sted, bør operationen kunne gennemføres på mindre end ti minutter. Den anbefalede automatiske opdateringspakke er ligeså anvendelig, den avancede filkontrol betyder imidlertid at man skal igennem mindst endnu et upload, inden opdateringen er fuldstændig.</para>
+					<title>Boards uden modifikationer</title>
+					<para>Det er helt uden problemer at gennemføre en opdatering. Den absolut hurtigste metode er at anvende pakken <guilabel>Kun ændrede filer</guilabel>, og har du styr på at uploade de ændrede filer rette sted, bør operationen kunne gennemføres på mindre end ti minutter. Den automatiske opdateringspakke er ligeså anvendelig, den avancede filkontrol betyder imidlertid at man skal igennem mindst endnu et upload, inden opdateringen er fuldstændig.</para>
 					</section>
 					<section id="update_mods">
-					<title>Board med MODs</title>
-					<para>Alle de filændringer du har foretaget ved installation af et MOD er i fare for at blive overskrevet ved en opdatering. Her er den automatiske opdateringspakke at foretrække. Den vil finde de filer du har ændret i og udpege kodeændringerne ift. til den originale fil. Samtidig foreslår den at sammenlægge disse ændringer med den nye fil, således MOD'et bevares.</para>
+					<title>Boards med MODs</title>
+					<para>Alle filændringer udført i forbindelse med installation af et MOD er i fare for at blive overskrevet ved en opdatering. Her er den automatiske opdateringspakke at foretrække. Den vil finde de filer du har ændret i og udpege kodeændringerne ift. til den originale fil. Samtidig foreslås en sammenlægning af disse ændringer med den nye fil, således MOD'et bevares.</para>
 					<figure>
-					<title>Forskel på filer</title>
+					<title>Filer indeholdende ændringer</title>
+					<mediaobject>
+						<imageobject>
+						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_mergefile.png"/>
+						</imageobject>
+						<caption>
+						<para>For hver fil der findes afvigelser i, er tre valgmuligheder. Desuden kan filindholdet kontrolleres.</para>
+						</caption>
+					</mediaobject>
+					</figure>
+					<figure>
+					<title>Vis sammenlægning</title>
 					<mediaobject>
 						<imageobject>
 						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_diff.png"/>
 						</imageobject>
 						<caption>
-						<para>I opdateringsfasen kan foreslåede sammenlægninger kontrolleres direkte. Disse kan afvises, og du kan i stedet vælge at anvende den nye opdaterede fil uden dine filændringer eller at anvende din oprindelige uden opdateringer.</para>
+						<para>Her vises at de udførte ændringer sammenlægges fint i den nye opdaterede fil og vinduet kan lukkes.</para>
 						</caption>
 					</mediaobject>
 					</figure>
-					<para>Er sket en opdatering af lige præcis den kodelinie du har ændret i tidligere, kan du blive nødsaget til at undlade sammenlægning, og tilføje MOD'et manuelt efterfølgende.</para>
+					<para>Er sket en opdatering i lige præcis den kodelinie du har ændret i tidligere, eller medfører en sammenlægning andre problemer, kan du blive nødsaget til at vælge <guilabel>Sammenlæg ikke - brug ny fil</guilabel>. MOD'et må i så fald tilføjes manuelt efterfølgende.</para>
 					</section>
 					<section id="update_lan_styles">
 					<title>Sprog og typografier</title>
@@ -60,16 +71,14 @@
 					</section>
 					<section id="update_older">
 					<title>Opdatering af ældre versioner</title>
-					<para>Er dit board mange versioner bagud, kan det virke meget uoverskueligt at få det fuldt opdateret. De officielle pakker giver almindeligvis mulighed for at opdatere fra fem versioner tilbage. Som eksempel vil opdateringspakken til 3.0.5 give mulighed for at opdatere et 3.0.0 board.  Scriptet indeholdt i 3.0.5 kan altså opdatere en 3.0.0 database. Imidlertid er scriptet <uri>install/database_update.php</uri> indeholdt i phpBB3.0.4 i undtagelse herfra, det er i stand til at opdatere en RC1 database med alle ændringer helt frem til 3.0.4.</para>
-					<para>Det er altså muligt at opdatere alle boards fra RC1 med afvikling af et antal opdateringscripts, afhængig af hvilken version du er på. Kun <uri>install/database_update.php</uri> er vigtig her, da du blot uploader den fulde opdateringspakke eksklusiv filen<uri>config.php</uri> og install-mappen til sidst.</para>
+					<para>Er dit board mange versioner bagud, kan det virke meget uoverskueligt at få det fuldt opdateret. De officielle pakker giver almindeligvis mulighed for at opdatere fra fem versioner tilbage. Opdateringspakkerne til 3.0.5 kan altså opdatere et 3.0.0 board. Imidlertid er scriptet <uri>install/database_update.php</uri> indeholdt i phpBB3.0.4 en undtagelse herfra, det er i stand til at opdatere en RC1 database med alle ændringer helt frem til 3.0.4.</para>
+					<para>Det er altså muligt at opdatere alle boards fra RC1 med afvikling af et antal databaseopdateringscripts, afhængig af hvilken version du er på. Kun <uri>install/database_update.php</uri> er vigtig her, da du blot uploader den fulde opdateringspakke eksklusiv filen <uri>config.php</uri> og install-mappen til sidst.</para>
 					<para>Indeholder det uddaterede board samtidig en masse MODs, der er meget vigtige at bibeholde, mister du disse ved at anvende ovennævnte, men nemme og hurtige metode. Du må i så fald installere disse efterfølgende endnu engang. Ønsker du for enhver pris at undgå dette, er der kun den omstændelige process tilbage. Der må opdateres én version ad gangen, med den automatiske opdateringspakke. Og håbe at alle MODs overlever.</para>
-					<para>Ældre versioner af phpBB3's opdateringscripts kan hentes ud af tidligere opdateringspakker, som kan hentes <ulink url="http://www.phpbb.com/downloads/olympus.php">her</ulink>, under <guilabel>Previous phpBB3 Releases</guilabel>. Samme sted findes også de automatiske opdateringspakker for tidligere versioner.</para>
-					<para>TO DO</para>
+					<para>Ældre versioner af phpBB3's opdateringscripts kan hentes ud af tidligere opdateringspakker, som kan downloades <ulink url="http://www.phpbb.com/downloads/olympus.php">her</ulink>, under <guilabel>Previous phpBB3 Releases</guilabel>. Samme sted findes også de automatiske opdateringspakker for tidligere versioner.</para>
 					</section>
 				</section>
 				<section id="update_packages">
 				<title>Opdateringspakkerne</title>
-				<para>TO DO</para>
 				<para>Fælles for alle pakkerne nævnt nedenfor, er at opdateringen af databasen skal afvikles særskilt. Derfor er scriptet, indeholdt i filen <uri>install/database_update.php</uri>, med i samtlige opdateringpakker. Scriptet vil opdatere dit databaseskema og øge versionsnummeret og sættes igang ved fra browseren ved at kalde eksempelvis http://www.ditdomæne.dk/phpBB3/<uri>install/database_update.php</uri>.</para>
 				<figure id="convert_dbupdate">
 				<title>Status for afvikling af database_update.php</title>
@@ -78,15 +87,15 @@
 						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_dbupdate.png"/>
 						</imageobject>
 						<caption>
-						<para>I oversigten ses status for de udførte SQL-forspørgsler. Her ses en enkelt fejl, som skyldes at opdateringen er kørt én gang før og group_legend indekset blev slettet allerede her.</para>
+						<para>I oversigten ses status for de enkelte operationer. Opstår der fejl eller problemer, vises disse også her.</para>
 						</caption>
 					</mediaobject>
 				</figure>
 				<important>Husk, uanset valg af opdateringsmetode, at tage backup af filer og database inden opdateringen igangsættes.</important>
 					<section id="pack_auto">
 					<title>Automatisk opdateringspakke</title>
-					<para>Anvendelse af denne pakke er den anbefalede metode til opdatering. Under opdateringen opdages ændrede filer automatisk og sammenlægger automatisk ændringerne fra disse til nye opdaterede filer.</para>
-					<para>Den automatiske opdateringspakke indeholder - i modsætning til de andre - kun opdateringsinformation til at opdatere <emphasis>fra forrige til senest tilgængelige version</emphasis>. Denne pakke er udelukkende til brug for det automatiske opdateringsværktøj indbygget i phpBB3.</para>
+					<para>Anvendelse af denne pakke er den anbefalede metode til opdatering. Under opdateringen opdages ændrede filer og tilbyder automatisk sammenlægning af ændringerne fra disse til nye opdaterede filer.</para>
+					<para>Den automatiske opdateringspakke indeholder normalt kun opdateringsinformation til at opdatere <emphasis>fra forrige til senest tilgængelige version</emphasis>. Denne pakke er udelukkende til brug for det automatiske opdateringsværktøj indbygget i phpBB3.</para>
 					<para>Følg enten instruktionerne fra fanebladet Administratorkontrolpanel -&gt; System for at foretage opdateringen. Versionskontrollen fortæller at der er en nyere version tilgængelig og leder dig gennem både download og opdatering - eller du kan følge instruktionerne nedenfor.</para>
 					<itemizedlist>
 					<listitem><para>Gå til downloadsiden og hent den senest frigivne opdateringspakke, og som matcher din øjeblikkelige version.</para></listitem>
@@ -121,6 +130,9 @@ Anvendelse af patch file-pakken er én af mulighederne for at opdatere et board 
 	<section id="convert">
 		<sectioninfo>
 			<authorgroup>
+				<author>
+					<othername>jask</othername>
+				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Konvertering af phpBB2 &amp; andre boardsystemer til phpBB3</title>
