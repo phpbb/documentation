@@ -89,7 +89,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Redaktørværktøjer</title>
-		<para>For redaktøren er der, i hvert emne, en række værktøjer til rådighed. Det ønskede vælges fra dropdownmenuen. De tilgængelige værktøjer herfra er: låse, låse op, slette, flytte, dele, sammenlæg og kopiér emne. Desuden kan emnetype ændres herfra (opslag, bekendtgørelse og global) og emnets log hentes. Herunder beskrives redaktørmulighederne mere detaljeret.</para>
+		<para>I alle emner har redaktører en række værktøjer til rådighed nederst i emnet. Det ønskede vælges fra dropdownmenuen. De tilgængelige værktøjer herfra er: låse, låse op, slette, flytte, dele, sammenlæg og kopiér emne. Desuden kan emnetype ændres herfra (opslag, bekendtgørelse og global) og emnets log hentes. Herunder beskrives redaktørmulighederne mere detaljeret.</para>
 		
 		<figure id="quick_mod_tools">
 			<title>Redigeringsværktøjer</title>
@@ -228,8 +228,8 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Hvad indeholder en godkendelsekø?</title>
-		<para>Hvis tilladelser for et forum eller en bruger er indstillet (i <link linkend="admin_control_panel">Administratorkontrolpanelet</link>) til at nye indlæg skal godkendes, skal denne godkendelse foretages af en administrator eller en redaktør før indlæggene kan ses af andre brugere. Emner og indlæg der afventer godkendelse kan ses i <guilabel>godkendelseskøen</guilabel> som findes i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>.</para>
+		<title>Hvad indeholder godkendelsekøen?</title>
+		<para>Hvis tilladelser for fora eller brugere er indstillet (i <link linkend="admin_control_panel">Administratorkontrolpanelet</link>) til at nye indlæg skal godkendes, skal denne godkendelse foretages af en administrator eller en redaktør før indlæggene kan ses af andre brugere. Emner og indlæg der afventer godkendelse kan ses i <guilabel>godkendelsekøen</guilabel> som findes i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>.</para>
 		<para>På forumindekset er endnu ikke godkendte emner mærket med et ikon. Klik på dette ikon og du kommer direkte til redaktørkontrolpanelet og får nu mulighed for at godkende eller afvise emnet. Individuelle indlæg der afventer godkendelse er ledsaget af en meddelelse herom, når emnet gennemses. Meddelelsen linker samtidig til skærmbilledet hvor det kan godkendes eller afvises.</para>
 		<para>Når du godkender et emne eller et indlæg får du mulighed for at vælge om brugeren skal adviseres om godkendelsen. På samme måde får du også mulighed for at advisere brugeren ved en afvisning, og samtidig begrunde afvisningen.</para>
 		<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" />.</para>
@@ -264,12 +264,12 @@
 				<varlistentry>
 					<term>Oversigt</term>
 					<listitem>
-						<para>Indeholder oversigt over indlæg i godkendelseskøen, rapporterede indlæg og de seneste 5 loggede handlinger udført af redaktører.</para>
+						<para>Indeholder oversigt over indlæg i godkendelsekøen, rapporterede indlæg og de seneste 5 loggede handlinger udført af redaktører.</para>
 					</listitem>
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Godkendelseskø</term>
+					<term>Godkendelsekø</term>
 					<listitem>
 						<para>Indeholder komplet liste over emner og indlæg, der afventer en godkendelse.</para>
 					</listitem>
@@ -316,15 +316,12 @@
 			<sectioninfo>
 				<authorgroup>
 					<author>
-						<othername>camm15h</othername>
-					</author>
-					<author>
-						<othername>MennoniteHobbit</othername>
+						<othername>jask</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Godkendelseskø</title>
-			<para>Godkendelseskøen indeholder en liste over henholdsvis emner og indlæg som afventer godkendelse fra redaktør. Godkendelseskøen kan ses i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>. Mere information om godkendelseskøen findes her <xref linkend="moderator_queue" />.</para>
+			<title>Godkendelsekø</title>
+			<para>Køen indeholder en liste over henholdsvis emner og indlæg som afventer godkendelse fra redaktør. Godkendelsekøen kan ses i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>. Mere information om godkendelsekøen findes her <xref linkend="moderator_queue" />.</para>
 		</section>
 		
 		<section id="mcp_reported">
@@ -356,10 +353,10 @@
 			<para>På samme måde kan flere indlæg  i et emne redigeres samtidig. Man kan nå emneredigeringsiden enten ved at klikke på emnet fra forumredigeringsiden, eller blot klikke på linket til redaktørkontrolpanelet, når man læser i emnet.</para>
 			<para>Når der redigeres i et emne er der mulighed for: ændre emnetitel, flytte emne til et andet forum, ændre emneikon, sammenlægge emnet med et andet og bestemme hvor mange indlæg der skal vises pr. side (tilsidesætter standardindstillingen for boardet).</para>
 			<para>Under emneredigering er der to ekstra faneblade til rådighed i MCP: Sammenlæg emner og Opdel emne, som giver mulighed for henholdsvis at sammenlægge to emner og opdele et emne i to eller flere separate emner.</para>
-			<para>Linket <guilabel>Indlægsinformation</guilabel> til højre for emnetitlen giver mulighed for yderligere redigering. Indlægsforfatter kan ændres, Selve indlægget kan redigeres, låses og slettes. Desuden vises den <glossterm>IP-adresse</glossterm> indlægget er skrevet fra.</para>
+			<para>Linket <guilabel>Indlægsinformation</guilabel> til højre for emnetitlen giver mulighed for yderligere redigering. Indlægsforfatter kan ændres, selve indlægget kan redigeres, låses og slettes. Desuden vises den <glossterm>IP-adresse</glossterm> indlægget er skrevet fra.</para>
 		
 			<note>
-				<para>Det er ikke sikkert at du som redaktør har adgang til alle ovennævnte redigeringsmuligheder. Det afhænger af den tilladelserolle administrator har tilknyttet din brugerkonto.</para>
+				<para>Det er ikke sikkert at du som redaktør har adgang til alle ovennævnte muligheder for redigering. Det afhænger af den tilladelserolle administrator har tilknyttet din brugerkonto.</para>
 			</note>
 		</section>
 	</section>

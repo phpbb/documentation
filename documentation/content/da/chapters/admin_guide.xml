@@ -623,8 +623,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Subfora</title>
-			<para>I phpBB 3.0.x kan oprettes <glossterm>subfora</glossterm>. Det kan være nyttigt på boards med mange fora. Herved er det muligt at skabe en logisk opbygning af dit boardindeks. Fremfor at have samtlige fora præsenteret på boardindekset, kan det være fornuftigt at tilknytte beslægtede fora som underfora til et overordnet forum. Der er ingen øvre grænse for hvor mange kategorier, fora og links der kan tilknyttes som underfora.</para>
+			<title>Underfora</title>
+			<para>I phpBB 3.0.x kan oprettes <glossterm>underfora</glossterm>. Det kan være nyttigt på boards med mange fora. Herved er det muligt at skabe en logisk opbygning af dit boardindeks. Fremfor at have samtlige fora præsenteret på boardindekset, kan det være fornuftigt at tilknytte beslægtede fora som underfora til et overordnet forum. Der er ingen øvre grænse for hvor mange kategorier, fora og links der kan tilknyttes som underfora.</para>
 			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
 			<para>Hvis du for eksempel har et forum om kæledyr, er det muligt at oprette underfora i dette omhandlende katte, hunde oa, uden at skulle ændre det eksisterende kæledyrsforum til en kategori. I dette eksempel vil kun forummet kæledyr blive vist på boardindekset. Underfora bliver vist under forumbeskrivelsen med et link, medmindre denne visning deaktiveres.</para>
 				

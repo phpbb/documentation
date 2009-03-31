@@ -75,7 +75,7 @@
 		</sectioninfo>
 		<title>Brugerkontrolpanelet</title>
 		<para>Brugerkontrolpanelet (<glossterm>UCP</glossterm>) giver mulighed for bl. a. at ændre personlige indstillinger, administrere overvågninger og bogmærker, sende og læse private beskeder. For at få adgang til UCP klikkes på linket &quot;Brugerkontrolpanel&quot; som ses øverst på siden når du er logget ind.</para>
-		<para>UCP er opdelt i seks faner: Oversigt, Profil, Boardindstillinger, Private beskeder, Brugergrupper og Venner og ignorerede brugere. Hver fane indeholder yderligere underpunkter i venstre side af skærmbilledet. Afhængig af de tilladelser du er tildelt af administrator kan de tilgængelige underpunkter være forskellige fra bruger til bruger.</para>
+		<para>UCP er opdelt i seks faner: Oversigt, Profil, Boardindstillinger, Private beskeder, Brugergrupper og Venner og ignorerede brugere. Hver fane indeholder yderligere underpunkter i venstre side af skærmbilledet. Afhængig af de tilladelser du er tildelt af administrator, kan du have færre tilgængelige underpunkter.</para>
 		<para>Alle siderne i UCP viser også listen over dine venner. Du kan til enhver tid sende en privat besked til dem blot ved at klkke på brugernavnet.</para>
 		<para><!-- TODO: Note that Private messaging will be discussed in its own section --></para>
 		<section id="ucp_overview">
@@ -477,7 +477,7 @@
 			<varlistentry>
 				<term>Sortering efter kollonneoverskrifter</term>
 				<listitem>
-					<para>For at sortere listen stigende klikker du på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Senest aktiv</guilabel>, etc. Klikker du én gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
+					<para>For at sortere listen stigende, klikkes på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Senest aktiv</guilabel>, etc. Klikker du én gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
 				</listitem>
 			</varlistentry>
 			
