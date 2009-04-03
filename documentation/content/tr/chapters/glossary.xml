@@ -123,86 +123,86 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>DBAL</term>
+				<term>DBAL (VTSK)</term>
 				<listitem>
-					<para><acronym>DBAL</acronym>, or &quot;Database Abstraction Layer&quot;, is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
+					<para><acronym>DBAL (VTSK)</acronym>, ya da &quot;Database Abstraction Layer (Veritabanı Soyutlama Katmanı)&quot;, az miktarda ek yük ile çok farklı <acronym>DBMSlere (VTYSlere)</acronym> erişmek için phpBB 3.0'a izin veren bir sistemdir. Performans kararlılıkları ve uyumluluk sebebiyle phpBB için yapılan tüm kodların (MODlar dahil), phpBB DBAL (VTSK) sistemini kullanmaya ihtiyacı vardır.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>DBMS</term>
+				<term>DBMS (VTYS)</term>
 				<listitem>
-					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
+					<para>Bir <acronym>DBMS (VTYS)</acronym>, ya da &quot;Database Management System (Veritabanı Yönetim Sistemi)&quot;, bir sistemdir ya da bir veritabanını yönetmek için tasarlanan yazılımdır. phpBB 3.0 şu DBMSleri (VTYSleri) destekler: Firebird, MS SQL Sunucusu, mySQL, Oracle, postgreSQL, ve SQLite.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>FTP</term>
 				<listitem>
-					<para><acronym>FTP</acronym> stands for &quot;File Transfer Protocol&quot;. It is a protocol which allows files to be transferred between computers. <acronym>FTP</acronym> clients are programs that are used to transfer files via <acronym>FTP</acronym>.</para>
+					<para><acronym>FTP</acronym>, &quot;File Transfer Protocol (Dosya Transfer Protokolü)&quot; anlamına gelmektedir. Bu protokol bilgisayarlar arasındaki dosya transferlerine izin verir. <acronym>FTP</acronym> bağlantı programları, <acronym>FTP</acronym> yoluyla dosyaları transfer etmek için kullanılır.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Founder (Kurucu)</term>
 				<listitem>
-					<para>A founder is a special board administrator that cannot be edited or deleted. This is a new user level introduced in phpBB 3.0.</para>
+					<para>Kurucu, özel bir mesaj panosu yöneticisidir ve değiştirilmiş ya da silinmiş olamaz. Bu, phpBB 3.0 içerisinde tanıtılan yeni bir kullanıcı seviyesidir.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>GZip</term>
 				<listitem>
-					<para>GZip is a compression method often used in web applications and software such as phpBB to improve speed. Most modern browsers support this on-the-fly algorithm. Gzip is also used to compress an archive of files. Higher compression levels, however, will increase server load.</para>
+					<para>GZip, çoğunlukla web uygulamalarında ve phpBB gibi yazılımların hızını arttırmak için kullanılan sıkıştırma metodudur. En modern tarayıcılar bu on-the-fly (uçuşta) algoritmasını destekler. Gzip ayrıca dosya arşivlerini sıkıştırmak için kullanılır. Ancak, yüksek sıkıştırma seviyeleri sunucu yükünü arttıracaktır.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>IP address (IP adresi)</term>
 				<listitem>
-					<para>An IP address, or Internet Protocol address, is a unique address that identifies a specific computer or user.</para>
+					<para>Bir IP adresi, ya da Internet Protocol Address (İnternet Protokol Adresi), belirli bir bilgisayar ya da kullanıcıya belirlenen tek adrestir.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Jabber</term>
 				<listitem>
-					<para>Jabber is an open-source protocol that can be used for instant messenging. For more information on Jabber's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
+					<para>Jabber, anlık mesajlaşma için kullanılabilen bir açık-kaynak protokolüdür. phpBB'de Jabber'in rolü hakkındaki daha fazla bilgi için, buraya bakın: <xref linkend="acp_client_jabber" />.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>MCP (MKP)</term>
 				<listitem>
-					<para>The <acronym>MCP</acronym>, or Moderation Control Panel, is the central point from which all moderators can moderate their forums. All moderation-related features are contained in this control panel.</para>
+					<para><acronym>MCP (MKP)</acronym>, ya da Moderation Control Panel (Moderasyon Kontrol Paneli), tüm moderatörlerin kendi forumlarını yönetebilmesi için kullanılan merkez noktasıdır. Bütün moderasyon ile ilgili özellikler bu kontrol panelinde mevcuttur.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>MD5</term>
 				<listitem>
-					<para><acronym>MD5</acronym> (Message Digest algorithm 5) is a commonly-used hash function used by phpBB. MD5 is an algorithm which takes an input of any length and outputs a message digest of a fixed length (128-bit, 32 characters). MD5 is used in phpBB to turn the users' passwords into a one-way hash, meaning that you cannot &quot;decrypt&quot; (reverse) an MD5 hash and get users' passwords. User passwords are stored as MD5 hashes in the database.</para>
+					<para><acronym>MD5</acronym> (Message Digest algorithm 5 (Mesaj Derleme algoritması 5)) genellikle ve phpBB tarafından kullanılan hash (karmaşıklık) fonksiyonudur. MD5, herhangi bir uzunluğun girişini ve düzeltilmiş bir uzunluğun çıkışını alan bir algoritmadır (128-bit, 32 karakter). MD5, phpBB'de one-way hash (tek-yön karmaşıklık) içerisinde kullanıcıların şifrelerini dönüştürmek için kullanılır, bu demek oluyor ki bir MD5 karmaşıklığındaki &quot;şifreleri çözemezsiniz (decrypt)&quot; ve kullanıcıların şifrelerini alamazsınız. Kullanıcı şifreleri MD5 karmaşıklığı halinde veritabanında saklanmaktadır.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>MOD</term>
 				<listitem>
-					<para>A <abbrev>MOD</abbrev> is a code modification for phpBB that either adds, changes, or in some other way enhances, phpBB. <abbrev>MODs</abbrev> are written by third-party authors; as such, the phpBB Group does not assume any responsibility for MODs.</para>
+					<para><abbrev>MOD</abbrev>, phpBB için eklemeler, değişiklikler ya da bazı diğer gelişmiş şeyler yapmaya yarayan kod modifikasyonudur. <abbrev>MODlar</abbrev> üçüncü-parti yapımcılar tarafından yazılır; bu nedenle, phpBB Grubu MODlar için herhangi bir sorumluluk üstlenmez.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>PHP</term>
 				<listitem>
-					<para><acronym>PHP</acronym>, or &quot;PHP: Hypertext Preprocessor&quot;, is a commonly-used open-source scripting language. phpBB is written in <acronym>PHP</acronym> and requires the <acronym>PHP</acronym> runtime engine to be installed and properly configured on the server phpBB is run on. For more information about <acronym>PHP</acronym>, please see the <ulink url="http://www.php.net">PHP</ulink> home page.</para>
+					<para><acronym>PHP</acronym>, ya da &quot;PHP: Hypertext Preprocessor&quot;, yaygın olarak kullanılan açık-kaynak yazılımı dilidir. phpBB, <acronym>PHP</acronym> içerisinde yazılmıştır ve sunucunuzda phpBB'nin düzgün bir şekilde çalışabilmesi ve kurulabilmesi için <acronym>PHP</acronym> çalışma motoruna ihtiyacı vardır. <acronym>PHP</acronym> hakkında daha fazla bilgi için, lütfen <ulink url="http://www.php.net">PHP</ulink> ana sayfasına bakın.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>phpMyAdmin</term>
 				<listitem>
-					<para>phpMyAdmin is a popular open-source program that is used to manage MySQL databases. When <abbrev>MODding</abbrev> phpBB or otherwise changing it, you may have to edit your database. phpMyAdmin is one such tool that will allow you to do so. For more information regarding phpMyAdmin, please see the <ulink url="http://www.phpmyadmin.net">phpMyAdmin project home page</ulink>.</para>
+					<para>phpMyAdmin, MySQL veritabanlarını yönetmek için kullanılan popüler bir açık-kaynak programıdır. phpBB'ye <abbrev>MOD</abbrev> kuracağınız zaman ya da başka türlü değişiklikler yapacağınız zaman, veritabanınızı düzenlemeniz gerekebilir. phpMyAdmin bunu yapmanıza izin veren bir araçtır. phpMyAdmin hakkında daha fazla bilgi için, lütfen <ulink url="http://www.phpmyadmin.net">phpMyAdmin projesi ana sayfasına</ulink> bakın.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -216,7 +216,7 @@
 			<varlistentry>
 				<term>Rank (Rütbe)</term>
 				<listitem>
-					<para>A rank is a sort of title that is assigned to a user. Ranks can be added, edited, and deleted by administrators.</para>
+					<para>Rütbe bir kullanıcıya tanımlanan kısa bir başlıktır. Rütbeler yöneticiler tarafından eklenebilir, düzenlenebilir, ve silinebilir.</para>
 					
 					<note>
 						<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
@@ -255,19 +255,19 @@
 			<varlistentry>
 				<term>Style (Stil)</term>
 				<listitem>
-					<para>A style is made up of a template set, image set, and stylesheet. A style controls the overall look of your forum.</para>
+					<para>Stil bir şablon setinin, görüntü setinin ve stil tabakasının toplanmış halidir. Bir stil, forumunuzun baştan aşağı görüntüsünü düzenler.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Sub-forum (Alt-forum)</term>
 				<listitem>
-					<para>Sub-forums are a new feature introduced in phpBB 3.0. Sub-forums are forums that are nested in, or located in, other forums.</para>
+					<para>Alt-forumlar phpBB 3.0 içerisinde tanıtılan yeni bir özelliktir. Alt forumlar diğer forumların içerisine sıralanmış ve yerleşmiş forumlardır.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Template (Tema)</term>
+				<term>Template (Şablon)</term>
 				<listitem>
 					<para>A template is what controls the layout of a style. phpBB 3.0 template files have the .html file extension. These template files contain mostly <acronym>HTML</acronym> (no <acronym>PHP</acronym>, however), with some variables that phpBB uses (contained in braces: { and }).</para>
 				</listitem>
@@ -283,7 +283,7 @@
 			<varlistentry>
 				<term>UNIX Timestamp</term>
 				<listitem>
-					<para>phpBB stores all times in the <ulink url="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</ulink> format for easy conversion to other time zones and time formats.</para>
+					<para>phpBB, diğer zaman dilimlerine ve zaman formatlarına kolay dönüşüm için bütün zamanları <ulink url="http://en.wikipedia.org/wiki/Unix_time">UNIX timestamp</ulink> formatında depolar.</para>
 				</listitem>
 			</varlistentry>
 			
