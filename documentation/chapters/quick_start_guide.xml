@@ -152,7 +152,7 @@
 		</section>
 		<section id="quick_installation_admin">
 			<title>Administrator details</title>
-			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com">www.phpbb.com</ulink>, and add them later. <!--TODO LINK TO THE LANGUAGE DOWNLOAD PAGE/--></para>
+			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.0 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com/languages/">www.phpbb.com</ulink>, and add them later.</para>
 		</section>
 		<section id="quick_installation_config">
 			<title>Configuration file</title>
@@ -195,7 +195,6 @@
 			<para>This form also holds the options for changing things like the timezone (<guilabel>System timezone</guilabel>) as well as the date format used to render dates/times (<guilabel>Date format</guilabel>).</para>
 			<para>There you can also select a new style (after having installed it) for your board and enforce it on all members ignoring whatever style they've selected in their "User Control Panel". The style will also be used for all forums where you haven't specified a different one. For details on where to get new styles and how to install them, please visit the <ulink url="http://www.phpbb.com/styles/">styles home page</ulink> at <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
 			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default, phpBB3 only ships with the English language pack. So, before using this field, you will have to download the language pack for the language you want to use and install it. For details, please read <link linkend="acp_system_language">Language packs</link> .</para>
-			<!--TODO: Correct ACP link-->
 		</section>
 		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">
@@ -215,8 +214,7 @@
 			<para>Disabling BBCode completely is a little bit to harsh for your taste but you don't want your users to abuse the signature field for tons of images? Simply set <guilabel>Allow use of IMG BBCode Tag in user signatures</guilabel> to "No". If you want to be a little bit more specific on what you want to allow and disallow in users' signatures, have a look at the "Signature Settings" form.</para>
 			<para>The "Board Features" form offers you a great way to control the features in an all-or-nothing way. If you want to get into the details on each feature, there is for everything also a separated form which let's you specify everything from the maximum number of characters allowed in a post (<guilabel>Max characters per post</guilabel> in "Post Settings") to how large a user's avatar can be (<guilabel>Maximum Avatar Dimensions</guilabel> in "Avatar Settings").</para>
 			<important>
-				<para>If you disable features, these will also be unavailable to users who would normally have them according to their respective permissions. For details on the permissions system, please read <xref linkend="quick_permissions" /> or the in-depth guide in the Administrator Guide.</para>
-				<!-- TODO: Link to admin guide -->
+				<para>If you disable features, these will also be unavailable to users who would normally have them according to their respective permissions. For details on the permissions system, please read <xref linkend="quick_permissions" /> or the <link linkend="acp_permissions">in-depth guide in the Administrator Guide.</link></para>
 			</important>
 		</section>
 		<!--<para>TODO: Probably needs a better title. How to change the default forum settings, forum name or description, for instance. Does not need to have all settings explained in detail. We have the Admin Guide for that. It would be good to provide a link if there is anything that is discussed more detailed in the Admin Guide. </para>-->
@@ -232,22 +230,25 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Creating forums</title>
+		<title>Creating and setting up forums</title>
 		<para>Forums are the sections where topics are stored. Without forums, your users would have nowhere to post! Creating forums is very easy.</para>
 		<para>Firstly, make sure you are logged in. Find the <guilabel>[ Administration Control Panel ]</guilabel> link at the bottom of the page, and click it. You should be in the Administration Index. You can administer your board here.</para>
 		<para>There are tabs at the top for the Administration Control Panel that will guide you to each category. You must get to the Forum Administration section to create a forum, so click the <guilabel>Forums</guilabel> tab.</para>
 		<para>The Forum Administration Index is where you can manage forums on your site. Along with being able to create forums, you are also able to create subforums. Subforums are forums that are located in a parent forum in a hierachy. For more information about subforums, see the <link linkend="acp_forums_subforums">administration guide on subforums</link>.</para>
 		<para>Find the <guilabel>Create new forum</guilabel> button on the right side of the page. Type in the name of the forum you wish in the textbox located directly to the left of this button. For example, if the forum name was to be Test, in the text box put Test. Once you are done, click the <guilabel>Create new forum</guilabel> button create the forum.</para>
 		<para>You should see a page headed with the text &quot;Create new forum :: Test&quot;. You can change options for your forum; for example you can set what forum image the forum can use, if it's a category, or what forum rules text will belong to the forum. You should type up a brief description for the forum as users will be able to figure out what the forum is for.</para>
-		<mediaobject>
-			<imageobject>
-				<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
-			</imageobject>
-			<caption>
-				<para>Creating a new forum.</para>
-			</caption>
-		</mediaobject>
-		<para>The default settings are usually good enough to get your new forum up and running; however, you may change them to suit your needs. But there are three key forum settings that you should pay attention to. The Parent Forum setting allows you to choose which forum your new forum will belong to. Be careful to what level you want your forum to be in. (The Parent Forum setting is important when creating subforums. For more information on subforums, continue reading to the section on creating subforums) The &quot;Copy Permissions&quot; setting allows you to copy the permissions from an existing forum to your new forum. Use this if you want to keep permissions constant. The forum style setting allows you to set which style your new forum will display. Your new forum can show a different style to another. <!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>--></para>
+		<figure id="img_quick_create_forum">
+			<title>Creating a new forum</title>
+			<mediaobject>
+				<imageobject>
+					<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
+				</imageobject>
+				<caption>
+					<para>Here you can choose the name and the description of your a new forum.</para>
+				</caption>
+			</mediaobject>
+		</figure>
+		<para>The default settings are usually good enough to get your new forum up and running; however, you may change them to suit your needs. But there are three key forum settings that you should pay attention to. The Parent Forum setting allows you to choose which forum your new forum will belong to. Be careful to what level you want your forum to be in. (The Parent Forum setting is important when creating subforums. For more information on subforums, continue reading to the section on creating subforums) The &quot;Copy Permissions&quot; setting allows you to copy the permissions from an existing forum to your new forum. Use this if you want to keep permissions constant. The forum style setting allows you to set which style your new forum will display. Your new forum can show a different style to another. For more information on each forum setting, see the <xref linkend="acp_forums">in-depth section on forum creation</xref></para>
 		<para>Once you're done configuring the settings of your new forum, scroll to the bottom of the page and click the <guilabel>Submit</guilabel> button to create your forum and it's settings. If your new forum was created successfully, the screen will show you a success message.</para>
 		<para>If you wish to set permissions for the forum (or if you do not click on anything), you will see the forum permissions screen. If you do not want to (and want to use the default permissions for your new forum), click on the <guilabel>Back to previous page</guilabel> link. Otherwise, continue and set each setting to what you wish. Once you are done, click the <guilabel>Apply all Permissions</guilabel> button at the bottom of the page. You will see the successful forum permissions updated screen if it worked.</para>
 		<important>
@@ -433,7 +434,7 @@
 			</orderedlist>
 			<para>In "User Permissions" and "Group Permissions" you can allow and disallow features like attachments, signatures and avatars for specific users and user groups. Note that some of these settings only matter, if the respective feature is enabled in the "Board Features" (see <xref linkend="quick_settings_boardfeatures"/> for details).</para>
 			<para>Under "Administrators" you can give users or groups administrator privileges like the ability to manage forums or change user permissions. For details on these settings please read the <xref linkend="acp_permissions"/>.</para>
-			<para>The "Global Moderators" form offers you the same settings as the forum specific form (described in <xref linkend="quick_permissions_moderators"/>) but applies to all forums on your baord.</para>
+			<para>The "Global Moderators" form offers you the same settings as the forum specific form (described in <xref linkend="quick_permissions_moderators"/>) but applies to all forums on your board.</para>
 		</section>
 
 	</section>
