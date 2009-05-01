@@ -1851,15 +1851,65 @@
 			</variablelist>
 		</para>
 		
+		<figure id="img_styles_overview">
+				<title>Styles overview</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/styles_overview.png"/>
+					</imageobject>
+					<caption>
+						<para>This is a list of the styles that are installed on the board and the styles that can be installed on the board. You can see the number of users using the style and you can follow the links to change the style's details.</para>
+					</caption>
+				</mediaobject>
+		</figure>
+			
+		<para>Creating a style is not an easy task and it takes quite a lot of time. Skilled designers from the phpBB community create styles that are available publicly and anyone can download them. This is a good place to start if you want to download and install a new style and you cannot afford to create your own, for any possible reason. The first place where you should stop is the <ulink url="http://www.phpbb.com/styles/">Styles section on phpBB.com</ulink>, you will find a list of useful links for places like the:
+		<variablelist>
+				<varlistentry>
+					<term><ulink url="http://www.phpbb.com/styles/demo/3.0/">Styles Demo</ulink></term>
+					<listitem><para>The Styles demo allows you to display each style on a live forum and see how each part of the board looks like using the specified style. You can browse through the styles until you find one that suits you and/or the board. The Styles demo does not provide a download link, see the next link for downloads.</para></listitem>
+				</varlistentry>
+				
+				<varlistentry>
+					<term><ulink url="http://www.phpbb.com/styles/db/">Styles Database</ulink></term>
+					<listitem><para>The Style Database contains all the styles that were validated by the phpBB.com Styles Team. All styles are validated to ensure they are safe to use, work correctly and do not have any other caveats. You can filter styles by parameters like version, color or category to easily find a style that you would like. Each style entry in the database contains a link to the Style Demo, to show a live example of the style in use.</para></listitem>
+				</varlistentry>
+
+			</variablelist>
+		</para>
+		
+		<para>After you choose a style and you are ready to install it, unpack it on your PC and upload the directory with the style to your board's server. Make sure that the directory you upload to the server's <filename class='directory'>styles</filename> contains the <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> and <filename class='directory'>imageset</filename> directories. The only exception is when a style has its template, theme or imageset based on another one, you will however be informed of that when you download the style. Having the dependent style component installed is required to install such a style.</para>
+		
+		<para>Since you have uploaded all the necessary files, you can continue to install your style. Go to the <guilabel>Styles</guilabel> tab in the ACP. You should see a table containing several items - the preinstalled prosilver style, subsilver2, and any of your uploaded styles. The list is divided into two parts, the first one contains styles that are installed on the board and the second one contains styles that were uploaded, but not installed. If you want to install your downloaded style, click the <guilabel>Install</guilabel> link next to its title.</para>
+		
+		<para>After you click <guilabel>Install</guilabel>, you will be asked about two options:</para>
+		<itemizedlist>
+					<listitem><para><guilabel>Active</guilabel>: If set to No, the style will not be available for users and only the admin will be able to preview it through the ACP.</para></listitem>
+					<listitem><para><guilabel>Make default style</guilabel>: This will set the style as the default one for the board, making it the style that new users and guests see. For more about setting the default style, read <xref linkend="acp_general_settings"/>.</para></listitem>
+		</itemizedlist>
+		<para>When you are finished, just click <guilabel>Submit</guilabel>.</para>
+		
+		<para>At this moment, you should know how to install a new style. However, there are some links and features on the Styles overview page that we have missed. They are:</para>
+		<itemizedlist>
+					<listitem><para><guilabel>Details</guilabel>: This link will take you to the details of style, where you can change its name, author, the style components it uses and determine if the style is active or not.</para></listitem>
+					<listitem><para><guilabel>Activate/Deactivate</guilabel>: Pretty clear without an explanation, this link allows you to switch the style on and off very quickly and easily.</para></listitem>
+					<listitem><para><guilabel>Export</guilabel>: This will offer the style for download with any of its components. You will be able to choose between downloading the file to your PC or storing in in the store folder on your server. This feature is useful when you want to move your board and want to have the whole style packed up so you can use it in another place.</para></listitem>
+					<listitem><para><guilabel>Delete</guilabel>: If you or your users do not like the style anymore, use this link. When you delete a style, you will be requested to choose another style which will be set for users using the deleted one. Choose that style in <guilabel>Replace style with</guilabel> and click <guilabel>Delete</guilabel> to complete the process.</para></listitem>
+					<listitem><para><guilabel>Preview</guilabel>: This is a very useful and powerful feature for administrators. If you click this link, you will be taken to the board and the style you have selected will be applied - this is great when you want to see if the style looks good on your board and you want to make sure you should activate it. This feature can be used even with deactivated styles. The style ID is passed through the URL, so you can browse through the board and see any page you need.</para></listitem>
+		</itemizedlist>
+		
 		<section id="acp_styles_templates">
 			<title>Templates</title>
 		</section>
+		
 		<section id="acp_styles_themes">
 			<title>Themes</title>
 		</section>
+		
 		<section id="acp_styles_imagesets">
 			<title>Imagesets</title>
 		</section>
+		
 		<!-- TODO: More stuff about styles -->
 	</section>
 
