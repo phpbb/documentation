@@ -158,95 +158,95 @@
 			<varlistentry>
 				<term>Jabber</term>
 				<listitem>
-					<para>Jabber is an open-source protocol that can be used for instant messenging. For more information on Jabber's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
+					<para>Jabber je otevřený protokol, který lze použít pro posílání instatních zpráv, pro více informací o použití Jabberu v phpBB viz <xref linkend="acp_client_jabber" />.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>MCP</term>
 				<listitem>
-					<para>The <acronym>MCP</acronym>, or Moderation Control Panel, is the central point from which all moderators can moderate their forums. All moderation-related features are contained in this control panel.</para>
+					<para><acronym>MCP</acronym> je zkratka pro Moderation Control Panel, česky Moderátorský panel. Je to centrální rozhraní, přes které mohou moderátoři spravovat diskuze na fóru. Všechny funkce týkající se moderování se nacházejí zde.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>MD5</term>
 				<listitem>
-					<para><acronym>MD5</acronym> (Message Digest algorithm 5) is a commonly-used hash function used by phpBB. MD5 is an algorithm which takes an input of any length and outputs a message digest of a fixed length (128-bit, 32 characters). MD5 is used in phpBB to turn the users' passwords into a one-way hash, meaning that you cannot &quot;decrypt&quot; (reverse) an MD5 hash and get users' passwords. User passwords are stored as MD5 hashes in the database.</para>
+					<para><acronym>MD5</acronym> (Message Digest algorithm 5) je často používanou funkci pro vytváření hashů (otisků). MD5 je algoritmus, který vezme vstup a vrátí výstup s pevnou délkou (128-bitů, 32 znaků). MD5 je používáno pro jednosměrné zahashování hesel v phpBB, proto nejdou "dešifrovat". Uživatelská hesla jsou uložena pomocí pokročilých funkcí, které jsou založeny na md5 a zajišťují tak bezpečnost hesel.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>MOD</term>
 				<listitem>
-					<para>A <abbrev>MOD</abbrev> is a code modification for phpBB that either adds, changes, or in some other way enhances, phpBB. <abbrev>MODs</abbrev> are written by third-party authors; as such, the phpBB Group does not assume any responsibility for MODs.</para>
+					<para><abbrev>MOD</abbrev> je balíček, který umožní upravit phpBB. Může přidat, upravit nebo jinak změnit chování a funkce fóra. <abbrev>MODy</abbrev> píší různí autoři, žádný nepochází od phpBB Group, které nemá žádnou odpovědnost za ně.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>PHP</term>
 				<listitem>
-					<para><acronym>PHP</acronym>, or &quot;PHP: Hypertext Preprocessor&quot;, is a commonly-used open-source scripting language. phpBB is written in <acronym>PHP</acronym> and requires the <acronym>PHP</acronym> runtime engine to be installed and properly configured on the server phpBB is run on. For more information about <acronym>PHP</acronym>, please see the <ulink url="http://www.php.net">PHP</ulink> home page.</para>
+					<para><acronym>PHP</acronym> nebo-li &quot;PHP: Hypertext Preprocessor&quot; je velmi často používaný otevřený skriptovací jazyk. phpBB je napsáno v <acronym>PHP</acronym> a potřebuje jej, aby mohlo být spuštěno a načteno správně. Více informací o PHP naleznete na <ulink url="http://www.php.net">domovské stránce PHP</ulink>.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>phpMyAdmin</term>
 				<listitem>
-					<para>phpMyAdmin is a popular open-source program that is used to manage MySQL databases. When <abbrev>MODding</abbrev> phpBB or otherwise changing it, you may have to edit your database. phpMyAdmin is one such tool that will allow you to do so. For more information regarding phpMyAdmin, please see the <ulink url="http://www.phpmyadmin.net">phpMyAdmin project home page</ulink>.</para>
+					<para>phpMyAdmin je oblíbená otevřená aplikace, které se používá k správě databází MySQL. Během <abbrev>MODování</abbrev> phpBB nebo provádění jiných úprav budete občas vyzvání k úpravě databáze. phpMyAdmin vám to umožní v přívětivém grafickém prostředí. Více informací naleznete na <ulink url="http://www.phpmyadmin.net">domovské stránce projektu phpMyAdmin</ulink>.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Private Messages</term>
+				<term>Soukromé zprávy</term>
 				<listitem>
-					<para>Private messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient. The user guide contains more information on <link linkend="user_pm">using phpBB3's private messaging system</link>.</para>
+					<para>Soukromé zprávy umožňují uživatelům komunikovat soukromně na vašem fóru bez toho, aniž by museli použít e-mail nebo instatní zprávy. Pouze adresát zprávy si ji může přečíst, zprávy lze kopírovat i přeposílat. Uživatelský průvodce popisuje <link linkend="user_pm">používání soukromých zpráv</link> podrobněji.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Rank</term>
+				<term>Hodnost</term>
 				<listitem>
-					<para>A rank is a sort of title that is assigned to a user. Ranks can be added, edited, and deleted by administrators.</para>
+					<para>Hodnost je druh titulu nebo hodnocení, které lze přiřadit k uživateli. Ranky mohou spravovat administrátoři.</para>
 					
 					<note>
-						<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
+						<para>Pamatujte, že přiřazením hodnosti uživatel nedostane žádné zvláštní oprávnění. Pokud například vytvoříte hodnost &quot;Super Moderátor&quot; a přiřadíte ji uživateli, neznamená to, že může automaticky moderovat fórum. Musíte ho ještě přidat do skupiny, která má tyto oprávnění.</para>
 					</note>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Server-writable</term>
+				<term>Zapisovatelné serverem</term>
 				<listitem>
-					<para>Anything on your server that is server-writable means that the file(s) or folder(s) in question have their permissions properly set so that the server can write to them. Some phpBB3 functions that may require some files and/or folders to be writable by the server include caching and the actual installation of phpBB3 (the config.php file needs to be written during the installation process). Making files or folders server-writable, however, depends on the operating system that the server is running under. On *nix-based servers, users can configure file and folder permissions via the <glossterm>CHMOD</glossterm> utility, while Windows-based servers offer their own permissions scheme. It is possible with some <glossterm>FTP</glossterm> clients to change file and folder permissions as well.</para>
+					<para>Všechny soubory nebo složky, které jsou zapisovatelné serverem, mají nastavená taková oprávnění, že PHP nebo konkrétně phpBB může upravovat jejich obsah a nakládat s nimi. Některé funkce phpBB3 vyžadují, aby určité soubory nebo adresáře byly zapisovatelné. Nastavení oprávnění souboru se liší podle operačního systému. Na *nixových server se k nastavení oprávnění souborů a adresářů používá příkaz <glossterm>CHMOD</glossterm>, u serverů založených na Windows se používá vlastní systém. Někteří <glossterm>FTP</glossterm> klienti umožňují změnit oprávnění souborů přes kontextová menu.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Session</term>
+				<term>Session/sezení</term>
 				<listitem>
-					<para>A session is a visit to your phpBB forums. For phpBB, a session is how long you spend on the forums. It is created when you login deleted when you log off. Session <acronym>IDs</acronym> are usually stored in a cookie, but if phpBB is unable to get cookie information from your computer, then a session <acronym>ID</acronym> is appended to the URL (e.g. index.php?sid=999). This session <acronym>ID</acronym> preserves the user's session without use of a cookie. If sessions were not preserved, then you would find yourself being logged out every time you clicked on a link in the forum.</para>
+					<para>Session (česky někdy překládáno sezení) je de facto návštěva phpBB fóra. Session se vytvoří při vstupu na fórum a odstraní se po určité době, nastavitelné v administraci, po odchodu z fóra. Session <acronym>ID</acronym> jsou často uloženy v cookie, pokud ale phpBB je nemůže vytvořit, předá je v URL (např. index.php?sid=999). ID session zachovává informace o uživateli bez použití cookie. Pokud by se nepoužilo předání v URL a uživatel by měl vypnuté cookies, ocitl by se odhlášený po každém kliknutí na fóru.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Signature</term>
+				<term>Podpis</term>
 				<listitem>
-					<para>A signature is a message displayed at the end of a user's post. Signatures are set by the user. Whether or not a signature is displayed after a post is set by the user's profile settings.</para>
+					<para>Podpis je krátký text, který se zobrazuje pod každým příspěvkem uživatele. Podpisy si nastavují uživatelé. Zobrazení podpisu pod příspěvky určuje nastavení uživatele v jeho profilu.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>SMTP</term>
 				<listitem>
-					<para><acronym>SMTP</acronym> stands for &quot;Simple Mail Transfer Protocol&quot;. It is a protocol for sending email. By default, phpBB uses <acronym>PHP</acronym>'s built-in <ulink url="http://www.php.net/manual/en/function.mail.php">mail()</ulink> function to send email. However, phpBB will use <acronym>SMTP</acronym> to send emails if the required <acronym>SMTP</acronym> data is correctly set up.</para>
+					<para><acronym>SMTP</acronym> je zkratka pro &quot;Simple Mail Transfer Protocol&quot;. SMTP je protokol používaný k posílaní e-mailových zpráv. Běžne phpBB používá vestavěnou funkci <acronym>PHP</acronym>, která se nazývá <ulink url="http://www.php.net/manual/en/function.mail.php">mail()</ulink>. Umožňuje ale posílání zpráv i přímo přes <acronym>SMTP</acronym>, pokud jsou správně nastaveny údaje pro připojení v administraci.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Style</term>
+				<term>Styl</term>
 				<listitem>
-					<para>A style is made up of a template set, image set, and stylesheet. A style controls the overall look of your forum.</para>
+					<para>Styl se skládá ze sady šablon, sady obrázků a stylopisu. Styl určuje, jak bude vypadat vaše fórum.</para>
 				</listitem>
 			</varlistentry>
 			
