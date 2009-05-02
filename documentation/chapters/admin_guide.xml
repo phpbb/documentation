@@ -757,7 +757,7 @@
 				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow attachments to be used in private messages.</para></listitem>
-				<listitem><para><guilabel>Allow signature in private messages</guilabel>: Select <guilabel>Yes</guilabel> to let your users include their <glossterm>signature</glossterm> in their private messages..</para></listitem>
+				<listitem><para><guilabel>Allow signature in private messages</guilabel>: Select <guilabel>Yes</guilabel> to let your users include their <glossterm>signature</glossterm> in their private messages.</para></listitem>
 				<listitem><para><guilabel>Allow print view in private messages</guilabel>: Another new feature in phpBB 3.0 is a printer-friendly view. Select <guilabel>Yes</guilabel> to allow your users to view any of their PMs in print view.</para></listitem>
 				<listitem><para><guilabel>Allow forwarding in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow your users to forward private messages.</para></listitem>
 				<listitem><para><guilabel>Allow use of [img] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline images in their private messages.</para></listitem>
@@ -1655,7 +1655,7 @@
 				</varlistentry>
 				<varlistentry>
 					<term>Group description</term>
-					<listitem><para>The description of the group that will be displayed on the group overview list..</para></listitem>
+					<listitem><para>The description of the group that will be displayed on the group overview list.</para></listitem>
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
 					<term>Display group in legend:</term>
@@ -1821,9 +1821,8 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>ameeck</othername>
 				</author>
-				
 				<author>
 					<othername>MennoniteHobbit</othername>
 				</author>
@@ -1878,28 +1877,57 @@
 			</variablelist>
 		</para>
 		
-		<para>After you choose a style and you are ready to install it, unpack it on your PC and upload the directory with the style to your board's server. Make sure that the directory you upload to the server's <filename class='directory'>styles</filename> contains the <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> and <filename class='directory'>imageset</filename> directories. The only exception is when a style has its template, theme or imageset based on another one, you will however be informed of that when you download the style. Having the dependent style component installed is required to install such a style.</para>
+		<section id="acp_styles_manage">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+			</sectioninfo>
+			<title>Installing and managing styles</title>
+			<para>After you choose a style and you are ready to install it, unpack it on your PC and upload the directory with the style to your board's server. Make sure that the directory you upload to the server's <filename class='directory'>styles</filename> contains the <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> and <filename class='directory'>imageset</filename> directories. The only exception is when a style has its template, theme or imageset based on another one, you will however be informed of that when you download the style. Having the dependent style component installed is required to install such a style.</para>
 		
-		<para>Since you have uploaded all the necessary files, you can continue to install your style. Go to the <guilabel>Styles</guilabel> tab in the ACP. You should see a table containing several items - the preinstalled prosilver style, subsilver2, and any of your uploaded styles. The list is divided into two parts, the first one contains styles that are installed on the board and the second one contains styles that were uploaded, but not installed. If you want to install your downloaded style, click the <guilabel>Install</guilabel> link next to its title.</para>
+			<para>Since you have uploaded all the necessary files, you can continue to install your style. Go to the <guilabel>Styles</guilabel> tab in the ACP. You should see a table containing several items - the preinstalled prosilver style, subsilver2, and any of your uploaded styles. The list is divided into two parts, the first one contains styles that are installed on the board and the second one contains styles that were uploaded, but not installed. If you want to install your downloaded style, click the <guilabel>Install</guilabel> link next to its title.</para>
 		
-		<para>After you click <guilabel>Install</guilabel>, you will be asked about two options:</para>
-		<itemizedlist>
-					<listitem><para><guilabel>Active</guilabel>: If set to No, the style will not be available for users and only the admin will be able to preview it through the ACP.</para></listitem>
-					<listitem><para><guilabel>Make default style</guilabel>: This will set the style as the default one for the board, making it the style that new users and guests see. For more about setting the default style, read <xref linkend="acp_general_settings"/>.</para></listitem>
-		</itemizedlist>
-		<para>When you are finished, just click <guilabel>Submit</guilabel>.</para>
+			<para>After you click <guilabel>Install</guilabel>, you will be asked about two options:</para>
+			<itemizedlist>
+						<listitem><para><guilabel>Active</guilabel>: If set to No, the style will not be available for users and only the admin will be able to preview it through the ACP.</para></listitem>
+						<listitem><para><guilabel>Make default style</guilabel>: This will set the style as the default one for the board, making it the style that new users and guests see. For more about setting the default style, read <xref linkend="acp_general_settings"/>.</para></listitem>
+			</itemizedlist>
+			<para>When you are finished, just click <guilabel>Submit</guilabel>.</para>
 		
-		<para>At this moment, you should know how to install a new style. However, there are some links and features on the Styles overview page that we have missed. They are:</para>
-		<itemizedlist>
-					<listitem><para><guilabel>Details</guilabel>: This link will take you to the details of style, where you can change its name, author, the style components it uses and determine if the style is active or not.</para></listitem>
-					<listitem><para><guilabel>Activate/Deactivate</guilabel>: Pretty clear without an explanation, this link allows you to switch the style on and off very quickly and easily.</para></listitem>
-					<listitem><para><guilabel>Export</guilabel>: This will offer the style for download with any of its components. You will be able to choose between downloading the file to your PC or storing in in the store folder on your server. This feature is useful when you want to move your board and want to have the whole style packed up so you can use it in another place.</para></listitem>
-					<listitem><para><guilabel>Delete</guilabel>: If you or your users do not like the style anymore, use this link. When you delete a style, you will be requested to choose another style which will be set for users using the deleted one. Choose that style in <guilabel>Replace style with</guilabel> and click <guilabel>Delete</guilabel> to complete the process.</para></listitem>
-					<listitem><para><guilabel>Preview</guilabel>: This is a very useful and powerful feature for administrators. If you click this link, you will be taken to the board and the style you have selected will be applied - this is great when you want to see if the style looks good on your board and you want to make sure you should activate it. This feature can be used even with deactivated styles. The style ID is passed through the URL, so you can browse through the board and see any page you need.</para></listitem>
-		</itemizedlist>
+			<para>At this moment, you should know how to install a new style. However, there are some links and features on the Styles overview page that we have missed. They are:</para>
+			<itemizedlist>
+				<listitem><para><guilabel>Details</guilabel>: This link will take you to the details of style, where you can change its name, author, the style components it uses and determine if the style is active or not.</para></listitem>
+				<listitem><para><guilabel>Activate/Deactivate</guilabel>: Pretty clear without an explanation, this link allows you to switch the style on and off very quickly and easily.</para></listitem>
+				<listitem><para><guilabel>Export</guilabel>: This will offer the style for download with any of its components. You will be able to choose between downloading the file to your PC or storing in in the store folder on your server. This feature is useful when you want to move your board and want to have the whole style packed up so you can use it in another place.</para></listitem>
+				<listitem><para><guilabel>Delete</guilabel>: If you or your users do not like the style anymore, use this link. When you delete a style, you will be requested to choose another style which will be set for users using the deleted one. Choose that style in <guilabel>Replace style with</guilabel> and click <guilabel>Delete</guilabel> to complete the process. If you delete a style, no files will be touched, the style will appear in the <guilabel>Uninstalled styles</guilabel> section.</para></listitem>
+				<listitem><para><guilabel>Preview</guilabel>: This is a very useful and powerful feature for administrators. If you click this link, you will be taken to the board and the style you have selected will be applied - this is great when you want to see if the style looks good on your board and you want to make sure you should activate it. This feature can be used even with deactivated styles. The style ID is passed through the URL, so you can browse through the board and see any page you need.</para></listitem>
+			</itemizedlist>
+		</section>
 		
 		<section id="acp_styles_templates">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+			</sectioninfo>
 			<title>Templates</title>
+			<para>Templates create the basic skeleton of your board, they define the structure of the content and contain all the HTML markup. Templates are then style using the theme and any buttons and images are taken from the imageset. Often you will be asked to edit a template when installing a <glossterm>MOD</glossterm>. Each style has its own template (an exception is when it inherits the template from another style) and you will need to make the change for each style individually. The template files can usually be found in the <filename class="directory">styles/[your_style]/template/</filename> directory.</para>
+			<note>
+				<para>After you change a style through the filesystem, remember to Purge the cache. To do this, press the appropriate button on the ACP index page.</para>
+			</note>
+			<para>On the <guimenuitem>Templates</guimenuitem> page, there are several links to pages where you can manage and work with templates. Let's take a closer look at them and see what you can do on each of them.</para>
+			<itemizedlist>
+				<title>Features on the <guimenuitem>Templates</guimenuitem> page</title>
+					<listitem><para><guilabel>Edit</guilabel>: On this page, you can edit the individual template files through the ACP. Click the link and you will see a list of all the template files. You can select one and a editor for editing it will show up. If the file you are editing is not <glossterm>server-writable</glossterm>, the whole template will be stored in the database. This can cause some problems in the future, for example you won't be able to edit the templates through the filesystem. All the template files have to be writable, including the <filename class="directory">template/</filename> directory in order for the script to write directly into the files.</para></listitem>
+					<listitem><para><guilabel>Cache</guilabel>: phpBB caches all of the template files to increase the performance of your board. It compiles them and makes them ready to use, then, once every while, it refreshes the template set to reflect changes you made to it manually. On this page, you will see a list of all the template files cached for the template set. If you made changes to a template file and you want to apply them, select the template file and clicked <guilabel>Delete marked</guilabel> at the bottom of the page. phpBB will then regnerate the file for you. Do not worry about deleting files here, they are only temporary files and you cannot break anything.</para></listitem>
+					<listitem><para><guilabel>Details</guilabel>: When you click this item, you will see three things: the name of the template, shown in the lists; the template copyright and last, but not least the place where the template is stored. If the template is stored in the filesystem, you can edit the files through a text editor after you download them from your server. After you re-upload them, you must purge the cache. If the templates are stored in the database, you must edit them through the ACP editor. No cache purge is needed afterwards. Storing the template in the database however takes more resources than having it in the filesystem.</para></listitem>
+					<listitem><para><guilabel>Refresh</guilabel>: Very similar to the cache menu item, clicking <guilabel>Refresh</guilabel> will clear all the cached files for the template set. This is useful after editing the files on the filesystem, when you want to apply changes.</para></listitem>
+					<listitem><para><guilabel>Export</guilabel>: If you need to download the files of the template to your PC and transfer them elsewhere, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
+					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the template from the database. It will, however, leave the files of the template set on the server.</para></listitem>
+			</itemizedlist>
 		</section>
 		
 		<section id="acp_styles_themes">
