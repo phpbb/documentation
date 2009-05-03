@@ -1866,7 +1866,7 @@
 		<variablelist>
 				<varlistentry>
 					<term><ulink url="http://www.phpbb.com/styles/demo/3.0/">Styles Demo</ulink></term>
-					<listitem><para>The Styles demo allows you to display each style on a live forum and see how each part of the board looks like using the specified style. You can browse through the styles until you find one that suits you and/or the board. The Styles demo does not provide a download link, see the next link for downloads.</para></listitem>
+					<listitem><para>The styles demo allows you to display each style on a live forum and see how each part of the board looks like using the specified style. You can browse through the styles until you find one that suits you and/or your board. The styles demo provides links to download the style and see its entry in the styles database.</para></listitem>
 				</varlistentry>
 				
 				<varlistentry>
