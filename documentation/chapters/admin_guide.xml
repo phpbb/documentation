@@ -1931,7 +1931,14 @@
 		</section>
 		
 		<section id="acp_styles_themes">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+			</sectioninfo>
 			<title>Themes</title>
+			<para>Now that we have described the style component that defines the structure of the site, the templates, we will continue to the themes. This style components takes care of all the styling. It adds colors, dimensions, formatting, fonts, and whatever else you can think of concerning styles. Basically it is a set of one or more CSS files that put together the final look of the board.</para>
 		</section>
 		
 		<section id="acp_styles_imagesets">
