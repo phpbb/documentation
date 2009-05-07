@@ -1918,15 +1918,18 @@
 			<note>
 				<para>After you change a style through the filesystem, remember to Purge the cache. To do this, press the appropriate button on the ACP index page.</para>
 			</note>
+			<warning>
+				<para>If you make changed to the template files through the ACP and then refresh the template, the changes made through the ACP will be overwritten with the contents of the files on the server.</para>
+			</warning>
 			<para>On the <guimenuitem>Templates</guimenuitem> page, there are several links to pages where you can manage and work with templates. Let's take a closer look at them and see what you can do on each of them.</para>
 			<itemizedlist>
 				<title>Features on the <guimenuitem>Templates</guimenuitem> page</title>
 					<listitem><para><guilabel>Edit</guilabel>: On this page, you can edit the individual template files through the ACP. Click the link and you will see a list of all the template files. You can select one and a editor for editing it will show up. If the file you are editing is not <glossterm>server-writable</glossterm>, the whole template will be stored in the database. This can cause some problems in the future, for example you won't be able to edit the templates through the filesystem. All the template files have to be writable, including the <filename class="directory">template/</filename> directory in order for the script to write directly into the files.</para></listitem>
 					<listitem><para><guilabel>Cache</guilabel>: phpBB caches all of the template files to increase the performance of your board. It compiles them and makes them ready to use, then, once every while, it refreshes the template set to reflect changes you made to it manually. On this page, you will see a list of all the template files cached for the template set. If you made changes to a template file and you want to apply them, select the template file and clicked <guilabel>Delete marked</guilabel> at the bottom of the page. phpBB will then regnerate the file for you. Do not worry about deleting files here, they are only temporary files and you cannot break anything.</para></listitem>
 					<listitem><para><guilabel>Details</guilabel>: When you click this item, you will see three things: the name of the template, shown in the lists; the template copyright and last, but not least the place where the template is stored. If the template is stored in the filesystem, you can edit the files through a text editor after you download them from your server. After you re-upload them, you must purge the cache. If the templates are stored in the database, you must edit them through the ACP editor. No cache purge is needed afterwards. Storing the template in the database however takes more resources than having it in the filesystem.</para></listitem>
-					<listitem><para><guilabel>Refresh</guilabel>: Very similar to the cache menu item, clicking <guilabel>Refresh</guilabel> will clear all the cached files for the template set. This is useful after editing the files on the filesystem, when you want to apply changes.</para></listitem>
+					<listitem><para><guilabel>Refresh</guilabel>: Very similar to the cache menu item, clicking <guilabel>Refresh</guilabel> will clear all the cached files for the template set. This is useful after editing the files on the filesystem, when you want to apply changes. It will overwrite any stored data in the database with the contents of the files on the server.</para></listitem>
 					<listitem><para><guilabel>Export</guilabel>: If you need to download the files of the template to your PC and transfer them elsewhere, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
-					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the template from the database. It will, however, leave the files of the template set on the server.</para></listitem>
+					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the template from the database. It will, however, leave the files of the template set on the server. When deleting the template you will be asked for another template that will replace the deleted one.</para></listitem>
 			</itemizedlist>
 		</section>
 		
@@ -1938,11 +1941,38 @@
 					</author>
 			</sectioninfo>
 			<title>Themes</title>
-			<para>Now that we have described the style component that defines the structure of the site, the templates, we will continue to the themes. This style components takes care of all the styling. It adds colors, dimensions, formatting, fonts, and whatever else you can think of concerning styles. Basically it is a set of one or more CSS files that put together the final look of the board.</para>
+			<para>Now that we have described the style component that defines the structure of the site, the templates, we will continue to the themes. This style components takes care of all the styling. It adds colors, dimensions, formatting, fonts, and whatever else you can think of concerning styles. Basically it is a set of one or more CSS files that put together the final look of the board. The theme files can usually be found in the <filename class="directory">styles/[your_style]/theme/</filename> directory.</para>
+			
+			<para>There are two possible theme setups. The first one is used by subsilver2, where it has one stylesheet file which is loaded directly by specifying the URL of it in the templates. If you are editing such a file, the only thing you need to do after a change is to refresh the page in your browser. The second option is used by prosilver, there is one file that includes the others and the compiled and complete stylesheet is stored in the database. After you change on of the theme files, you will have to <guilabel>refresh</guilabel> the themes.</para>
+			
+			<warning>
+				<para>If you make changed to the stylesheet through the ACP and then refresh the theme, the changes made through the ACP will be overwritten with the contents of the stylesheet files on the server.</para>
+			</warning>
+			
+			<para>The themes page is very similar to the templates page, a lot of features are common, the main difference is that the theme contains a different type of files</para>
+			
+			<itemizedlist>
+				<title>Features on the <guimenuitem>Themes</guimenuitem> page</title>
+					<listitem><para><guilabel>Edit</guilabel>: On this page, you can edit the stylesheet for the board. If the theme is stored in the database in various files, they will be all joined in one stylesheet file for you to edit. Save your changes with the <guilabel>Submit</guilabel> button. If you want to edit the file manually on the filesystem, you will find it in the <filename class="directory">theme/</filename> directory of your style.</para></listitem>
+					<listitem><para><guilabel>Details</guilabel>: When you click this item, you will see three things: the name of the theme, shown in the lists; the theme copyright and last, but not least the place where the theme is stored. If the theme is stored in the filesystem, you can edit the files through a text editor after you download them from your server. After you re-upload them, you must refresh the theme (this option is described just below). If the theme is stored in the database, you can edit it through the ACP editor. No theme refresh is needed afterwards.</para></listitem>
+					<listitem><para><guilabel>Refresh</guilabel>: Be careful when using this option, as it will load the data from the files and overwrite any stylesheets in the database. If you edited your theme through the ACP, these changes will be lost. You can <guilabel>Export</guilabel> the theme to your PC if you need to save the changes. You will use this option when you make changes to the theme through the filesystem and you need to apply them to your board.</para></listitem>
+					<listitem><para><guilabel>Export</guilabel>: If you need to download the theme to your PC and transfer it elsewhere or save any changes it, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
+					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the theme from the database. It will, however, leave the files of the template set on the server. When deleting the theme you will be asked to choose a theme that will replace the deleted one.</para></listitem>
+			</itemizedlist>
+			
+			
 		</section>
 		
 		<section id="acp_styles_imagesets">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+			</sectioninfo>
 			<title>Imagesets</title>
+			<para>The first and last component of a style is the imageset. It contains all the images that are not included in the theme. For example they are the posting buttons, online banners, or topic and forum markers.</para>
+			
 		</section>
 		
 		<!-- TODO: More stuff about styles -->
