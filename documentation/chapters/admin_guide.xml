@@ -1877,12 +1877,14 @@
 			</variablelist>
 		</para>
 		
+		
 		<section id="acp_styles_manage">
 			<sectioninfo>
 				<authorgroup>
 					<author>
 						<othername>ameeck</othername>
 					</author>
+				</authorgroup>
 			</sectioninfo>
 			<title>Installing and managing styles</title>
 			<para>After you choose a style and you are ready to install it, unpack it on your PC and upload the directory with the style to your board's server. Make sure that the directory you upload to the server's <filename class='directory'>styles</filename> contains the <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> and <filename class='directory'>imageset</filename> directories. The only exception is when a style has its template, theme or imageset based on another one, you will however be informed of that when you download the style. Having the dependent style component installed is required to install such a style.</para>
@@ -1912,6 +1914,7 @@
 					<author>
 						<othername>ameeck</othername>
 					</author>
+				</authorgroup>
 			</sectioninfo>
 			<title>Templates</title>
 			<para>Templates create the basic skeleton of your board, they define the structure of the content and contain all the HTML markup. Templates are then style using the theme and any buttons and images are taken from the imageset. Often you will be asked to edit a template when installing a <glossterm>MOD</glossterm>. Each style has its own template (an exception is when it inherits the template from another style) and you will need to make the change for each style individually. The template files can usually be found in the <filename class="directory">styles/[your_style]/template/</filename> directory.</para>
@@ -1939,6 +1942,7 @@
 					<author>
 						<othername>ameeck</othername>
 					</author>
+				</authorgroup>
 			</sectioninfo>
 			<title>Themes</title>
 			<para>Now that we have described the style component that defines the structure of the site, the templates, we will continue to the themes. This style components takes care of all the styling. It adds colors, dimensions, formatting, fonts, and whatever else you can think of concerning styles. Basically it is a set of one or more CSS files that put together the final look of the board. The theme files can usually be found in the <filename class="directory">styles/[your_style]/theme/</filename> directory.</para>
@@ -1969,6 +1973,7 @@
 					<author>
 						<othername>ameeck</othername>
 					</author>
+				</authorgroup>
 			</sectioninfo>
 			<title>Imagesets</title>
 			<para>The first and last component of a style is the imageset. It contains all the images that are not included in the theme. For example they are the posting buttons, online banners, or topic and forum markers.</para>
