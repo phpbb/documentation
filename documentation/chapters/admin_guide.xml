@@ -6,7 +6,7 @@
 	<chapterinfo>
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
-			<year>2006</year>
+			<year>2009</year>
 			<holder>phpBB Group</holder>
 		</copyright>
 	</chapterinfo>
@@ -1176,7 +1176,6 @@
 				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
 				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
-				<!-- TODO: Add a specific section on ranks of course. -->
 			</section>
 			
 			<section id="acp_users_manage_signature">
@@ -1961,10 +1960,8 @@
 					<listitem><para><guilabel>Details</guilabel>: When you click this item, you will see three things: the name of the theme, shown in the lists; the theme copyright and last, but not least the place where the theme is stored. If the theme is stored in the filesystem, you can edit the files through a text editor after you download them from your server. After you re-upload them, you must refresh the theme (this option is described just below). If the theme is stored in the database, you can edit it through the ACP editor. No theme refresh is needed afterwards.</para></listitem>
 					<listitem><para><guilabel>Refresh</guilabel>: Be careful when using this option, as it will load the data from the files and overwrite any stylesheets in the database. If you edited your theme through the ACP, these changes will be lost. You can <guilabel>Export</guilabel> the theme to your PC if you need to save the changes. You will use this option when you make changes to the theme through the filesystem and you need to apply them to your board.</para></listitem>
 					<listitem><para><guilabel>Export</guilabel>: If you need to download the theme to your PC and transfer it elsewhere or save any changes it, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
-					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the theme from the database. It will, however, leave the files of the template set on the server. When deleting the theme you will be asked to choose a theme that will replace the deleted one.</para></listitem>
+					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the theme from the database. It will, however, leave the files of the theme on the server. When deleting the theme you will be asked to choose a theme that will replace the deleted one.</para></listitem>
 			</itemizedlist>
-			
-			
 		</section>
 		
 		<section id="acp_styles_imagesets">
@@ -1976,11 +1973,40 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Imagesets</title>
-			<para>The first and last component of a style is the imageset. It contains all the images that are not included in the theme. For example they are the posting buttons, online banners, or topic and forum markers.</para>
-			
+			<para>The first and last component of a style is the imageset. It contains all the images that are not included in the theme. For example they are the posting buttons, online banners, or topic and forum markers. The files which make up the imageset of your style can usually be found in the <filename class="directory">styles/[your_style]/imageset/</filename> directory.</para>
+			<para>The imageset is always stored in the database. The details about each image (its location and dimensions) are taken from a <filename>imageset.cfg</filename> file located in the imageset directory and stored in the database from which they are loaded.</para>
+			<para>Before we describe the interface in the <acronym>ACP</acronym>, which allows you to edit the imageset through a graphical interface, let's take a look at how the imageset.cfg file is created in case you would like to edit the file manually by yourself. A typical row in the files looks like this: <code>img_sticky_read = sticky_read.gif*27*27</code>. The text before the equals sign is the image on the board. The location follows next. At the end, the height and width (in this order) of the file is defined. The last three items are separated by an asterisk without spaces.</para>			
+			<itemizedlist>
+				<title>Features on the <guimenuitem>Imagesets</guimenuitem> page</title>
+					<listitem>
+						<para><guilabel>Edit</guilabel>: Here you can edit the individual images of the set. The imageset consists of a list of image entities with defined attributes, e.g. an entity is &quot;Sticky topic icon&quot;, which has the attributes height, width and location. In order to explain what you can do on this page, let's go through all the controls present on it:</para>
+						<itemizedlist>
+							<listitem><para><guilabel>Current image</guilabel>: This shows the image that is currently assigned to the image.</para></listitem>
+							<listitem><para><guilabel>Selected image</guilabel>: This gives you a preview of the image you select in the <guilabel>Image</guilabel> field.</para></listitem>
+							<listitem><para><guilabel>Image</guilabel>: The <acronym>ACP</acronym> pulls all the images located in the <filename class="directory">imageset/</filename> directory and lists them here. You can then assign any image file uploaded to that directory to an image on the board.</para></listitem>
+							<listitem><para><guilabel>Include dimensions</guilabel>: If set to <guilabel>Yes</guilabel>, the dimensions from the fields below will be taken in account, otherwise they will be detected automatically.</para></listitem>
+							<listitem><para><guilabel>Image width</guilabel>: Sets the width of the image file.</para></listitem>
+							<listitem><para><guilabel>Image height</guilabel>: Sets the height of the image file.</para></listitem>				
+						</itemizedlist>				
+					</listitem>
+					<listitem><para><guilabel>Details</guilabel>: On this page, you can edit the name and copyright of the imageset (of course leave copyrights of the respectful authors).</para></listitem>
+					<listitem><para><guilabel>Refresh</guilabel>: This option will take the details about each image from the <filename>imageset.cfg</filename> file and save them in the database. This will <emphasis>overwrite</emphasis> any changes you have made through the ACP editor and weren't saved on the filesystem.</para></listitem>
+					<listitem><para><guilabel>Export</guilabel>: If you need to download the imageset to your PC and transfer it elsewhere or save any changes it, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
+					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the imageset from the database. It will, however, leave the files of the imageset on the server. When deleting the imageset you will be asked to choose another set that will replace the deleted one. You always must have at least one imageset installed.</para></listitem>
+			</itemizedlist>
+			<figure id="img_acp_imageset_edit">
+				<title>Interface for editing imagesets</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/imageset_edit.png"/>
+					</imageobject>
+					<caption>
+						<para>On this page, you can edit the details of individual images that make up the imageset.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 		</section>
-		
-		<!-- TODO: More stuff about styles -->
+
 	</section>
 
 	<section id="acp_maintenance">
@@ -2262,7 +2288,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Module Management</title>
-			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &raquo; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &raquo; Category (headers on the left-hand side) &raquo; Module (individual sections).</para>
+			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &#187; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &#187; Category (headers on the left-hand side) &#187; Module (individual sections).</para>
 			<para>Very often, MODs that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
 			<para>To create a module category, use the text field next to the <guilabel>Create new module</guilabel> button. Enter the category title, click the button and on the next page ensure that the <guilabel>Module type</guilabel> is <guilabel>Category</guilabel>, the module is <guilabel>enabled</guilabel> and that the <guilabel>Module parent</guilabel> is set correctly. After you create a category, you can browse to it through the list of modules and add a specific module that is saved in a file. Modules are saved in the appropriate directory (acp/, mcp/ or /ucp) contained in the <filename>includes/</filename> directory.</para>
 			<warning><para>By disabling the Module Management module, it is possible to cut yourself off from the ACP and other control panels. Be careful when you are editing modules.</para></warning>

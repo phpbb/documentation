@@ -104,9 +104,9 @@
 					<listitem><para>After entering the database information and pressing the <guilabel>Begin conversion</guilabel> button, the convertor will verify that you have entered the correct information. If the information is confirmed, you will have another <guilabel>Begin Conversion</guilabel> button.</para></listitem>
 					<listitem><para>After you click the <guilabel>Begin Conversion</guilabel> button, the convertor will check the convertor files.
 If everything is okay, you will be presented with a <guilabel>Continue Conversion</guilabel> button.</para></listitem>
-					<listitem><para>The convertor will now proceed to convert your old board. Pages will be displayed informing you of the convertor progress.</para></listitem>
+					<listitem><para>The convertor will now proceed to convert your old board. Pages will be displayed informing you about the progress of the conversion.</para></listitem>
 					<listitem><para>When the convertor is finished, you will see a message that the Search Index has not been converted. You must go into the Administration Control Panel and build the <guilabel>Search Index</guilabel>. In the <acronym>ACP</acronym>, click the <guilabel>Maintenance</guilabel> tab and select <guilabel>Search Index</guilabel> from the submenu. The default search backend index is <guilabel>Fulltext native</guilabel> and will be marked active. This is normally the index that you want to use to create your search index. For more information about search indexing, see <xref linkend="acp_maintenance_search" /></para></listitem>
-					<listitem><para>You should now check your phpBB3 board for proper operation, that permissions are set correctly and forums &amp; posts are displaying correctly. Also make sure files got copied correctly, for example avatars and smilies and attachments (if you have them.)</para></listitem>
+					<listitem><para>You should now check your phpBB3 board for proper operation, that permissions are set correctly and forums &amp; posts are displaying correctly. Also make sure files got copied from the old location, for example avatars and smilies and attachments (if you have them.)</para></listitem>
 				</orderedlist>				
 			</section>
 
