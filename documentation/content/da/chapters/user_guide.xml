@@ -61,7 +61,7 @@
 				</caption>
 			</mediaobject>
 		</figure>
-		<para>Administratoren kan desuden have valgt at din nye konto skal aktiveres. Den ene mulighed er at du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er tilfældet vil du se denne meddelelse:<blockquote><guilabel> Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</guilabel></blockquote> Det er også muligt at administrator selv skal aktivere din konto.</para>
+		<para>Administratoren kan have valgt at din nye konto skal aktiveres. Enten skal du selv skal aktivere kontoen via en aktiveringsnøgle som du modtager med email. Er det tilfældet vil du se denne meddelelse:<blockquote><guilabel> Din konto er oprettet. Du skal selv aktivere kontoen med en aktiveringsnøgle. Nøglen er netop afsendt til den emailadresse, du angav ved tilmeldingen. Læs venligst denne email for yderligere information.</guilabel></blockquote> Alternativt er det administrator der skal aktivere din konto.</para>
 		<para>Nogle boards anvender ekstra profilfelter i tilmeldingsformularen. Administrator kan have valgt at disse skal udfyldes for at gennemføre tilmeldingen.</para>
 		<para>Når alle felter i tilmeldingsformularen er udfyldt, klikkes på <guilabel>Udfør</guilabel> for at gennemføre tilmeldingen. Ønsker du at slette alle angivne data i felterne klikkes på <guilabel>Nulstil</guilabel>. Når du klikker på <guilabel>Udfør</guilabel> bliver du adviseret om næste trin. I de fleste tilfælde får du tilsendt en email til den adresse du angav i tilmeldingsformularen. Alternativt kan du også få mulighed for at logge ind med det samme eller at afvente administrator gennemgår din tilmelding og accepterer denne. I sidstnævnte tilfælde modtager du en email når din tilmelding er accepteret.</para>
 	</section>
@@ -241,7 +241,7 @@
 			<para>Standard BBkoder og måden de vises på:</para>
 			<para>TODO: Hvordan ønsker vi at vise outputtet?</para>
 			<para>[b]Fed tekst[/b]:</para>
-			<para>[i]Kursiv tekst[/i]:</para>
+			<para>[i]Kursiv tekst[/i]: <emphasis>Kursiv tekst</emphasis></para>
 			<para>[u]Understreget tekst[/u]:</para>
 			<para>[quote]Citeret tekst[/quote]:</para>
 			<para>[quote="Navn på den der citeres"]Citat[/quote]: <!-- [insert screenshot of cited quoted text] --></para>

@@ -72,7 +72,7 @@
 				</sectioninfo>
 				<title>Vedhæftede filer</title>
 				<para> En af de mange nye funktioner i phpBB 3.0 er muligheden for at <glossterm>vedhæfte filer</glossterm>. Filer kan vedhæftes til indlæg, på samme måde som når man sender en email. Boardadministratoren kan sætte restriktioner for hvad brugere kan vedhæfte via <guimenuitem>Vedhæftede filer</guimenuitem>.</para>
-				<para>Læs mere i <link linkend="acp_attach_settings">Konfigurering af boardets indstillinger for vedhæftede filer</link>.</para>
+				<para>Læs mere i <link linkend="acp_attach_settings">boardets indstillinger for vedhæftede filer</link>.</para>
 			</section>
 			
 			<section id="acp_general_settings">
@@ -641,7 +641,7 @@
 			</figure>
 			
 			<para>Teoretisk set kan phpBB3.0.x indeholde ubegrænsede niveauer af underfora. Og du kan derfor tilknytte nye underfora i allerede eksisterende underfora. På nye boards kan det være en god idé at starte med få fora, aktiviteten vil synes højere, fremfor på forhånd at have struktureret boardet så detaljeret at de første indlæg forsvinder i denne.  Efterfølgende er det enkelt at flytte emner i passende fora eller underfora.</para>
-			<para>Læs <link linkend="acp_forums_manage">afsnittet om forumadministration</link> hvor oprettelse af underfora er beskrevet.</para>
+			<para>Læs <link linkend="acp_forums_manage">afsnittet om forumadministration</link>, hvor oprettelse af underfora er beskrevet.</para>
 		</section>
 		<section id="acp_forums_manage">
 			<sectioninfo>
@@ -1162,8 +1162,7 @@
 				<title>Rang</title>
 				
 				<para>Her kan brugers <glossterm>rang</glossterm> vælges. Du kan vælge en rang fra <guilabel>Brugerrang:</guilabel> dropdownmenuen. Når du har valgt en rang, klikkes på <guilabel>Udfør</guilabel> for at opdatere brugers rang.</para>
-				<para>Læs mere om rangordener her <xref linkend="acp_user_ranks"/>.</para>
-				<!-- TODO: Add a specific section on ranks of course. -->
+				<para>Læs mere om rangordener i <xref linkend="acp_user_ranks"/>.</para>
 			</section>
 			
 			<section id="acp_users_manage_signature">
@@ -1251,7 +1250,7 @@
 				<varlistentry>
 					<term>Profilinformation ændret</term>
 					<listitem>
-						<para>Boardet er indstillet til at forlange brugeraktivering ved ændring af nøgleinformationer. Denne bruger har ændret i sine profilinformationerne, for eksempel emailadresse. Kontoen afventer brugers genaktivering.</para>
+						<para>Boardet er indstillet til at forlange brugeraktivering ved ændring af nøgleinformationer. Denne bruger har ændret i sine profilinformationer, for eksempel emailadresse. Kontoen afventer brugers genaktivering.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -1263,7 +1262,7 @@
 				<varlistentry>
 					<term>Tvungen genaktivering af brugerkonto</term>
 					<listitem>
-						<para>En administrator har bedt bruger om at genaktivering af kontoen i værtøjet  <link linkend="acp_users_manage">Administrér brugere</link>. I brugernoter findes oplysning hvilken administrator der bad om genaktering, og måske en note om årsagen til denne handling.</para>
+						<para>En administrator har bedt bruger om at genaktivering af kontoen i værktøjet  <link linkend="acp_users_manage">Administrér brugere</link>. I brugernoter findes oplysning hvilken administrator der bad om genaktivering, og måske en note om årsagen til denne handling.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -1780,20 +1779,20 @@
 					<imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
 				</imageobject>
 				<caption>
-					<para>Dette skærmbillede vises når du har har valgt en bruger eller gruppe i én af de to første sektioner af de globale tilladelser. Her ændrer du globale tilladelser som f.eks kontrol over profilindstillinger, søgning, private beskeder etc. By selecting <guilabel>Global moderator permissions</guilabel> or <guilabel>Admin permissions</guilabel> from the drop-down box, you can change additional settings for the user.</para>
+					<para>Dette skærmbillede vises når du har har valgt en bruger eller gruppe i én af de to første sektioner af de globale tilladelser. Her ændrer du globale tilladelser som f.eks kontrol over profilindstillinger, søgning, private beskeder etc. Ved at vælge <guilabel>Globale redaktørtilladelser</guilabel> eller <guilabel>Administratortilladelser</guilabel> i dropdownmenuen kan yderligere indstillinger ændres for bruger eller gruppe.</para>
 				</caption>
 			</mediaobject>
 		</figure>
 		
 		</section>
 		<section id="acp_permissions_forumbased">
-			<title>Forum Based Permissions</title>
+			<title>Forumbaserede tilladelser</title>
 		</section>
 		<section id="acp_permissions_roles">
-			<title>Permission Roles</title>
+			<title>Rollebaserede tilladelser</title>
 		</section>
 		<section id="acp_permissions_masks">
-			<title>Permission Masks</title>
+			<title>Tilladelseroller</title>
 		</section>
 	</section>
 
@@ -1828,16 +1827,164 @@
 			</variablelist>
 		</para>
 		
+		<figure id="img_styles_overview">
+				<title>Typografioversigt</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/styles_overview.png"/>
+					</imageobject>
+					<caption>
+						<para>Her vises alle boardet typografier, både installerede og ikke installerede, og hvor mange brugere der anvender de enkelte typografier. Herfra er det også muligt at ændre en typografis oplysninger.</para>
+					</caption>
+				</mediaobject>
+		</figure>
+			
+		<para>Det er ikke en simpel opgave at oprette en ny typografi og er normalt særdeles tidskrævende. phpBB-communityets talentfulde designere gør deres typografier offentligt tilgængelige for alle. Ønsker du ikke selv at bruge ressourcer på at oprette din egen typografi, men gerne vil installere en anden typografi, er det første sted at søge <ulink url="http://www.phpbb.com/styles/">typografisektionen på phpBB.com</ulink>, hvor der findes en række nyttige links, blandt andet:
+		<variablelist>
+				<varlistentry>
+					<term><ulink url="http://www.phpbb.com/styles/demo/3.0/">Typografidemoer</ulink></term>
+					<listitem><para>Her er der mulighed for at afprøve og se de tilgængelige typografier i funktion på et kørende board, og afprøve hvordan alle elementer på boardet ser ud. Du kan browse alle typografier indtil du finder én der falder i din smag. Demoen giver samtidig links til download af de enkelte typografier og til typografidatabasen.</para></listitem>
+				</varlistentry>
+				
+				<varlistentry>
+					<term><ulink url="http://www.phpbb.com/styles/db/">Typografidatabase</ulink></term>
+					<listitem><para>Indeholder alle typografier valideret og godkendt af phpBB.com's Styles Team. Typografierne kontrolleres for at sikre at de ikke implementerer sikkerhedshuller på boardet og at de virker korrekt. Typografierne kan sorteres efter versionnumre, farve og kategori for at gøre det enklere at finde en bestemt slags typografi. Alle typografier i databasen har link til demoen, hvor det er muligt at se dem i funktion.</para></listitem>
+				</varlistentry>
+
+			</variablelist>
+		</para>
+		
+		<section id="acp_styles_manage">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Installation og administration af typografier</title>
+			<para>Når du har valgt og downloadet en ny typografi udpakkes filen lokalt på din PC, herefter uploades hele det udpakkede indhold til boardets server. Vær omhyggelig med at uploade hele typografimappen indeholde undermapperne <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> og <filename class='directory'>imageset</filename> til serverens <filename class='directory'>styles</filename>-mappe. Eneste undtagelse er når en typografi baserer sine skabeloner, tema eller billedpakke på en andens. Du bliver ved download informeret, hvis dette er tilfældet og hvilken typografi der arves elementer fra. Den typografi, der genbruges elementer fra, skal også være installeret.</para>
+		
+			<para>Når alle nødvendige filer er uploadet, kan den nye typografi installeres. Installation foretages i fanen <guilabel>Typografier</guilabel> i ACP. Her vises en oversigt med flere typografier, den forudinstallerede prosilver, subsilver2, og også de typografier du netop har uploadet. Oversigtet er delt i to, den første indeholdende allerede installerede typografier og den anden uploadede, men ikke installerede typografier. Sidstnævnte installeres ved at klikke på linket <guilabel>Installér</guilabel> udfor typografiens navn.</para>
+		
+			<para>Når du klikker på <guilabel>Installér</guilabel> bliver du bedt om at tage stilling til to spørgsmål:</para>
+			<itemizedlist>
+						<listitem><para><guilabel>Aktiv</guilabel>: Vælges Nej, vil typografien ikke være tilgængelig for brugere, kun administratorer kan afprøve den fra ACP.</para></listitem>
+						<listitem><para><guilabel>Standardtypografi for boardet</guilabel>: Her vælges om typografien skal være boardets fremtidige standard, den som nye brugere og gæster ser. Læs mere om indstilling og ændring af boardets standardtypografi i <xref linkend="acp_general_settings"/>.</para></listitem>
+			</itemizedlist>
+			<para>Klik på <guilabel>Udfør</guilabel> når disse valg er foretaget.</para>
+		
+			<para>Nu har vi gennemgået installationen af en typografi. Imidlertid sprang vi over de resterende muligheder på oversigtsiden, de er:</para>
+			<itemizedlist>
+				<listitem><para><guilabel>Oplysninger</guilabel>: Linket leder til typografiens detaljer, med mulighed for at ændre dens navn, copyrights og de elementer den anvender. Desuden er der mulighed for at bestemme om den skal være aktiv eller ej.</para></listitem>
+				<listitem><para><guilabel>Aktivér/Deaktivér</guilabel>: Linket giver mulighed for, let og hurtigt, at sætte typografien inaktiv eller aktiv.</para></listitem>
+				<listitem><para><guilabel>Eksportér</guilabel>: Giver mulighed for at eksportere typografien inklusive ønskede elementer. Der kan vælges mellem at downloade filen eller at gemme den i serverens store-mappe. Det er nyttigt at pakke hele typografien, så den kan anvendes et andet sted eller af andre.</para></listitem>
+				<listitem><para><guilabel>Slet</guilabel>: Brug dette link til at slette typografier. I forbindelse med sletning af en typografi, bliver du bedt om at vælge en anden til erstatning for de brugere som har valgt denne som standard. I dropdownmenuen ud for <guilabel>Erstat typografi med</guilabel> vælges den erstattende, klik på <guilabel>Slet</guilabel> for at afslutte handlingent. Selvom en typografi slettes bevares alle filer, og den vil stadig kunne ses i oversigten <guilabel>Ikke installerede typografier</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Vis prøve</guilabel>: En nyttig mulighed for administratorer. Klikkes på linket vil du se dit board med denne typografi, det er god mulighed for at sikre om udseendet er tilfredstillende, inden typografien aktiveres og gøres tilgængelige for brugere. Typografiens ID kaldes automatisk i URL'en, og derfor kan alle boardets sider vises med denne typografi.</para></listitem>
+			</itemizedlist>
+		</section>
+		
 		<section id="acp_styles_templates">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup> 
+			</sectioninfo>
 			<title>Skabeloner</title>
+			<para>Skabelonerne danner boardets basale opbygning, de indeholder al HTML opmærkning og bestemmer strukturen på indholdet. Skabelonfilerne gør brug af tema og billedpakkens indhold af knapper og danner hermed hver enkelt sides udseende. Ved installation af et <glossterm>MOD</glossterm> bliver du ofte bedt om at ændre i én eller flere skabelonfiler. Da hver typografi indeholder sit eget sæt skabelonfiler (eneste undtagelser er hvis den arver skabeloner fra en anden typografi), skal denne ændring foretages for samtlige installerede typografier. Skabelonfilerne findes normalt i mappen <filename class="directory">styles/[din_typografi]/template/</filename>.</para>
+			<note>
+				<para>Ved enhver ændring i filerne tilhørende en typografi, er det vigtigt at få tømt cachen. Cachen kan tømmes direkte fra administratorindekset.</para>
+			</note>
+			<warning>
+				<para>Ændrer du i skabelonfilerne via ACP og efterfølgende genopfrisker skabelonerne, vil ændringerne blive overskrevet af indholdet af filerne på serveren.</para>
+			</warning>
+			<para>På siden <guimenuitem>Skabeloner</guimenuitem> findes adskillige links til sider hvor der kan ændres og arbejdes med skabelonerne. I det efterfølgende gennemgår vi disse og ser på hvad de kan anvendes til.</para>
+			<itemizedlist>
+				<title>Muligheder på siden <guimenuitem>Skabeloner</guimenuitem></title>
+					<listitem><para><guilabel>Redigér</guilabel>: Fra denne side kan alle de enkelte skabelonfiler ændres via ACP. Ved et klik på linket præsenteres en dropdownmenu, hvor alle skabelonfiler kan vælges. Ved valg af én af filerne dirigeres du til en editor som giver mulighed for at ændre direkte i filen. Hvis filen du ændrer i, ikke er <glossterm>skrivbar</glossterm>, gemmes alle skabelonerne i databasen. Det kan medføre fremadrettede problemer, for eksempel vil du ikke kunne ændre skabelonfilerne direkte i filsystemet. Alle skabelonfilerne bør derfor være skrivbare, inklusiv mappen <filename class="directory">template/</filename>, for at sikre at de ændringer scriptet forsøger at ændre i filen også bliver udført</para></listitem>
+					<listitem><para><guilabel>Mellemlager</guilabel>: phpBB mellemlagrer eller cacher alle templatefiler, og øger dermed boardets ydelse. Filerne kompileres og gøres klar til brug, for efterfølgende, med mellemrum at rekompilere dem, for at afspejle de ændringer der måtte være foretaget. På denne side vises alle mellemlagrede skabelonfiler. Foretager du ændringer i én af disse, markeres den pågældende fil og klik på <guilabel>Slet markerede</guilabel> nederst. phpBB regenererer filen med de foretagne ændringer. Der er ingen fare ved at slette mellemlagrede filer, de er kun midlertidige og du kan ikke ødelægge noget.</para></listitem>
+					<listitem><para><guilabel>Oplysninger</guilabel>: Her kan skabelonens navn og dens copyrights ses, og sidst men ikke mindst, hvor skabelonen gemmes. Gemmes den i filsystemet, kan filerne ændres i en teksteditor efter download fra serveren. Ved genupload skal cachen tømmes. Gemmes skabelonen i databasen, skal filerne ændres via editoren i <glossterm>ACP</glossterm>. Her er tømning af cachen unødvendig. Databaselagring af skabeloner er mere resourcekrævende af serveren, end lagring i filsystem.</para></listitem>
+					<listitem><para><guilabel>Genopfrisk</guilabel>: Meget lig mellemlager funktionen, ved at klikke <guilabel>Genopfrisk</guilabel> slettes samtlige denne skabelons mellemlagrede filer. En nyttig funktion efter ændring af filer i filsystemet, og du ønsker disse ændringer synlige. Alle gemte data i databasen overskrives med indholdet af filerne på serveren.</para></listitem>
+					<listitem><para><guilabel>Eksportér</guilabel>: Brug denne mulighed hvis du har behov for at downloade samtlige skabelonens filer for at anvende dem andre steder. Du bliver spurgt om du vil downloade til din PC eller gemme i boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
+					<listitem><para><guilabel>Slet</guilabel>: Sletter alle skabelonens referencer i databasen. Imidlertid efterlades skabelonfilerne intakte på serverens filsystem. Når en skabelon slettes, bliver du bedt om at vælge en anden skabelon til erstatning for den der slettes.</para></listitem>
+			</itemizedlist>
 		</section>
+		
 		<section id="acp_styles_themes">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
 			<title>Temaer</title>
+			<para>Nu, da vi har gennemgået skabelonerne som bestemmer boardets struktur, fortsætter vi med temaet. Typografitemaet sørger for at tilføje farver, dimensioner, formatering og skrifttyper. Temaet består af én eller flere CSS-filer som samlet set bestemmer boardets endelige udseende. Temafilerne kan normalt findes i mappen <filename class="directory">styles/[din_typografi]/theme/</filename>.</para>
+			
+			<para>Der er to mulige modeller for opsætning af temaer. Det første model anvendes i subsilver2, som anvender én stylesheet-fil, som hentes direkte ved at specificere dens URL i skabelonerne. Ændres i denne en fil, er genopfriskning af temaet unødvendig, det er nok at genfriske siden i browseren. Den anden model afvendes i prosilver, her er én fil som inkluderer alle de andre og herved kompilerer det komplette typografiark som gemmes i databasen. Når der foretages ændringer i én af disse temafiler, er det derfor nødvendigt at <guilabel>genopfriske</guilabel> temaet.</para>
+			
+			<warning>
+				<para>Ændringer i typografiarket foretaget via ACP, vil ved genopfriskning af temaet bliver overskrevet med indholdet af filerne placeret på serveren.</para>
+			</warning>
+			
+			<para>Siden <guimenuitem>Temaer</guimenuitem> er opbygget som skabelonsiden, med mange lighedspunkter. Den primære forskel er at temaer indeholder en anden type filer.</para>
+			
+			<itemizedlist>
+				<title>Muligheder på siden <guimenuitem>Temaer</guimenuitem></title>
+					<listitem><para><guilabel>Redigér</guilabel>: Herfra kan ændres i boardets typografiark. Består temaet af flere filer gemt i databasen, bliver alle samlet i et typografiark som kan ændres. Gem ændringer ved at klikke på <guilabel>Udfør</guilabel>. Ønsker du at ændre i den enkelte fil direkte, findes den i typografiens mappe <filename class="directory">theme/</filename>.</para></listitem>
+					<listitem><para><guilabel>Oplysninger</guilabel>: Her kan temaets navn og dets copyrights ses, og sidst men ikke mindst, hvor det gemmes. Gemmes det i filsystemet, kan filerne ændres i en teksteditor efter download fra serveren. Ved genupload skal temaet genopfriskes, som beskrevet umiddelbart herunder. Gemmes temaet i databasen, kan typografiarket ændres via editoren i <glossterm>ACP</glossterm>. Her er genopfriskning unødvendig.</para></listitem>
+					<listitem><para><guilabel>Genopfrisk</guilabel>: Vær forsigtig med denne mulighed, den indlæser data fra filerne og overskriver typografiark gemt i databasenas. Ændringer foretaget via ACP mistes herved. Hvis du ønsker at gemme ændringerne, kan temaet <guilabel>Eksporteres</guilabel> til din PC, herved kan de tilføjes igen.</para></listitem>
+					<listitem><para><guilabel>Eksportér</guilabel>: Brug denne mulighed hvis du har behov for at downloade samtlige temaets filer for at anvende dem andre steder. Du bliver bedt om at tage stilling til om download skal ske til din PC eller til boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
+					<listitem><para><guilabel>Slet</guilabel>: Sletter alle temaets referencer i databasen. Imidlertid efterlades temafilerne intakte på serverens filsystem. Når et tema slettes, bliver du bedt om at vælge et andet til erstatning for det der slettes.</para></listitem>
+			</itemizedlist>
 		</section>
+		
 		<section id="acp_styles_imagesets">
-			<title>Billedpakker</title>
-		</section>		
-		<!-- TODO: More stuff about styles -->
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>jask</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Grafikpakker</title>
+			<para>Det sidste komponent i en typografi er grafikpakken. Den indeholder alle grafikelementer som ikke er inkluderet i temaet. Eksempler er knapper der anvendes ved indsendelse af nye emner og besvarelse af disse, emne- og forummarkeringer. De filer som udgør grafikpakken findes normalt i mappen <filename class="directory">styles/[your_style]/imageset/</filename>.</para>
+			<para>Grafikpakken gemmes altid i databasen. Grafikfilernes specifikationer (placering og dimensioner) er listet i filen <filename>imageset.cfg</filename>, placeret i mappen imageset og gemt i databasen, hvorfra de indlæses.</para>
+			<para>I <acronym>ACP</acronym>s brugerflade kan der ændres i en grafikpakke, men før vi beskriver disse muligheder, gennemgår vi hvordan filen imageset.cfg er opbygget, i fald du får brug for at ændre i denne manuelt. En typisk linie i filen ser sådan ud: <code>img_sticky_read = sticky_read.gif*27*27</code>. Teksten før lighedstegnet er selve elementets navn og og efter lighedstegnet den tilsvarende grafikfil med angivelse af dens højde og bredde (i denne rækkefølge). Disse sidste tre specifikationer er adskilt af en asterisk og ingen mellemrum.</para>			
+			<itemizedlist>
+				<title>Muligheder på siden <guimenuitem>Ændre grafikpakke</guimenuitem></title>
+					<listitem>
+						<para><guilabel>Redigér</guilabel>: Her ændres de individuelle elementer i pakken. Grafikpakken består af en række grafikelementer med specifikke egenskaber. &quot;Sticky topic icon&quot; er for eksempel et element med egenskaberne grafikfil, højde og bredde tilknyttet. Herunder gennemgås hvilke muligheder der er tilgængelige på denne side:</para>
+						<itemizedlist>
+							<listitem><para><guilabel>Vælg grafikelement</guilabel>: I dropdownmenuen vælges det element der ønskes ændret.</para></listitem>
+							<listitem><para><guilabel>Nuværende grafik</guilabel>: Viser den grafikfil der er i øjeblikket er tilknyttet elementet.</para></listitem>
+							<listitem><para><guilabel>Valgte grafikfil</guilabel>: Viser den fil du har valgt i dropdownmenuen <guilabel>Grafikfil</guilabel> umiddelbart herunder.</para></listitem>
+							<listitem><para><guilabel>Grafikfil</guilabel>: <acronym>ACP</acronym> henter alle grafikfiler placeret i mappen <filename class="directory">imageset/</filename> og lister dem i dropdownmenuen. Her kan enhver grafikfil tilknyttes et grafikelement på boardet.</para></listitem>
+							<listitem><para><guilabel>Inkludér dimensioner</guilabel>: Vælges <guilabel>Ja</guilabel> vil dimensionerne herunder blive anvendt, ellers bliver størrelsen automatisk detekteret.</para></listitem>
+							<listitem><para><guilabel>Grafikbredde</guilabel>: Bestemmer grafikkens bredde.</para></listitem>
+							<listitem><para><guilabel>Grafikhøjde</guilabel>: Bestemmer grafikkens højde.</para></listitem>				
+						</itemizedlist>				
+					</listitem>
+					<listitem><para><guilabel>Oplysninger</guilabel>: Her har du mulighed for at ændre grafikpakkens navn og dens copyright. Husk at respektere den oprindelige skaber af pakken.</para></listitem>
+					<listitem><para><guilabel>Genopfrisk</guilabel>: Ved at klikke her bliver alle grafikelementers specifikationer genindlæst fra filen <filename>imageset.cfg</filename> og gemt i databasen. Handlingen vil derfor <emphasis>overskrive</emphasis> enhver ændring du har foretaget via ACP-editoren og som ikke er gemt på filesystemet.</para></listitem>
+					<listitem><para><guilabel>Eksportér</guilabel>: Brug denne mulighed hvis du har behov for at downloade hele grafikpakken for eventuelt at anvende den andre steder. Du bliver bedt om at tage stilling til om download skal ske til din PC eller til boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
+					<listitem><para><guilabel>Slet</guilabel>: Sletter alle grafikpakkens referencer i databasen. Imidlertid efterlades alle pakkens filer intakte på serverens filsystem. Når en grafikpakke slettes, bliver du bedt om at vælge en anden til erstatning for den der slettes. Der skal altid være mindst én grafikpakke installeret.</para></listitem>
+			</itemizedlist>
+			<figure id="img_acp_imageset_edit">
+				<title>Skærmbilledet ved ændring af grafikpakke</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/imageset_edit.png"/>
+					</imageobject>
+					<caption>
+						<para>På denne side kan hvert grafikelements detaljer ændres individuelt.</para>
+					</caption>
+				</mediaobject>
+			</figure>			
+		</section>
+		
 	</section>
 
 	<section id="acp_maintenance">
@@ -1845,15 +1992,14 @@
 			<authorgroup>
 				<author>
 					<othername>jask</othername>
-				</author>
-				
+				</author>				
 			</authorgroup>
 		</sectioninfo>
 		<title>Vedligeholdelse</title>
 		
 		<para>Det alene boardadministratorers ansvar at driften af et phpBB 3.0 board afvikles så problemfrit som muligt.</para>
 		
-		<para><guimenuitem>Vedligehold</guimenuitem> findes i en særskilt fane i <acronym>ACP</acronym>, her stilles en række værktøjer til rådighed, som kan hjælpe med denne opgave. Der er adgang til forskellig logs og mulighed for databasevedligeholdelse.</para>
+		<para><guimenuitem>Vedligehold</guimenuitem> findes i en særskilt fane i <acronym>ACP</acronym>, her stilles en række værktøjer til rådighed, som kan hjælpe med denne opgave. Der er adgang til forskellige logs og mulighed for databasevedligeholdelse.</para>
 		
 		<section id="acp_maintenance_logs">
 			<sectioninfo>
@@ -2108,7 +2254,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Moduladministration</title>
-			<para>Moduler anvendes til at skabe strukturen og indholdet i <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Moduler kan deaktiveres og reorganiseres i en anden struktur. Modulerne i bruger- og redaktørkontrolpanelerne er i 2 niveauer: Faneblad/kategori &raquo; modul, mens moduler i administratorkontrolpanelet er i tre niveauer: Faneblad (faner i toppen) &raquo; kategori (overskrifter i venstre side) &raquo; modul (individuelle moduler).</para>
+			<para>Moduler anvendes til at skabe strukturen og indholdet i <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Moduler kan deaktiveres og reorganiseres i en anden struktur. Modulerne i bruger- og redaktørkontrolpanelerne er i 2 niveauer: Faneblad/kategori &#187; modul, mens moduler i administratorkontrolpanelet er i tre niveauer: Faneblad (faner i toppen) &#187; kategori (overskrifter i venstre side) &#187; modul (individuelle moduler).</para>
 			<para>MODs med indstillelige muligheder tilføjer ofte moduler i ACP for at lette ændring af indstillinger.</para>
 			<para>For at oprette en modulkategori bruges tekstfeltet lige før knappen <guilabel>Opret nyt modul</guilabel>. Angiv kategoriens titel og klik på knappen. På næste side sikres at <guilabel>Modultype</guilabel> er <guilabel>Faneblad/kategori</guilabel>, at modulet er <guilabel>aktiveret</guilabel> og at <guilabel>Overmodul</guilabel> er valgt korrekt. Når kategorien er oprettet tilføjes modul fra dropdownmenuen. Modulerne findes i mapperne acp/, mcp/ og /ucp, som er indeholdt i <filename>includes/</filename> mappen.</para>
 			<warning><para>Deaktiveres selve Moduladministrationsmodulet er der risiko for at du afskærer dig selv fra fremtidig moduladministration eller andre kontrolpaneler. Vær derfor forsigtig når disse indstillinger ændres.</para></warning>
