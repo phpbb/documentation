@@ -25,7 +25,7 @@
 		<title>Upgrading from 2.0 to 3.0</title>
 		<para>In order to allow administrators of phpBB2 boards to use phpBB3 and all of its features. There is a convertor packed with the default installation. The conversion framework is flexible and allows you to convert other bulletin board systems as well. Read more if you need help with converting your board to phpBB3</para>
 		
-		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.0.x. Basic instructions and troubleshooting for doing this conversion are <ulink url="http://www.phpbb.com/docs/INSTALL.html#convert">here</ulink>.</para>
+		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.0.x. Basic instructions and troubleshooting for doing this conversion are <ulink url="http://www.phpbb.com/community/docs/INSTALL.html#convert">here</ulink>.</para>
 		
 		<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>
 	</section>
