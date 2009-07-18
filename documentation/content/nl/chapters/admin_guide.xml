@@ -277,7 +277,7 @@
 				</authorgroup>
 			</sectioninfo>			
 			<title>Serverconfiguratie</title>
-			<para>As an administrator of a board, being able to fine-tune the settings that your phpBB board uses for the server is a must. Configuring your board's server settings is very easy. There are five main categories of server settings: <guimenuitem>Cookie settings</guimenuitem>, <guimenuitem>Server settings</guimenuitem>, <guimenuitem>Security settings</guimenuitem>, <guimenuitem>Load settings</guimenuitem>, and <guimenuitem>Search settings</guimenuitem>. Properly configuring these settings will help your board not only function, but also work efficiently and as intended. The following subsections will outline each server configuration category. Once you are done with updating settings in each setting, remember to click <guilabel>Submit</guilabel> to apply your changes.</para>
+			<para>Als een beheerder van een forum, is het fijn instellen van de instellingen die jouw phpBB forum gebruikt van de server een must. Het configureren van jouw serverinstellingen die het forum gebruikt is heel gemakkelijk. Er zijn vijf hoofdcategorieën: <guimenuitem>Cookie-instellingen</guimenuitem>, <guimenuitem>Serverinstellingen</guimenuitem>, <guimenuitem>Veiligheidsinstellingen</guimenuitem>, <guimenuitem>Laadinstellingen</guimenuitem>, en <guimenuitem>Zoekinstellingen</guimenuitem>. Het juist instellen van deze instellingen helpt je forum niet alleen goed functioneren, maar ook het efficient werken zoals het is voorgenomen. De volgende subsecties zullen elke serverconfiguratie uitleggen in hun eigen categorie. Wanneer je klaar bent met het bijwerken van je instellingen in elke instelling, vergeet dan niet om op de <guilabel>Versturen</guilabel> knop te klikken, om al je veranderingen op te slaan.</para>
 		
 			<section id="acp_server_cookies">
 				<sectioninfo>
@@ -288,24 +288,24 @@
 					</authorgroup>
 				</sectioninfo>			
 				<title>Cookie-instellingen</title>
-				<para>Your board uses cookies all the time. Cookies can store information and data; for example, cookies are what enable users to automatically login to the board when they visit it. The settings on this page define the data used to send cookies to your users' browsers.</para>
+				<para>Je forum gebruikt cookies de hele tijd. Cookies kunnen informatie en data opslaan, als bijvoorbeeld: Cookies zorgen er eigenlijk voor dat gebruikers automatisch worden aangemeld op het forum, wanneer ze het forum bezoeken. De instellingen op deze pagina definieren de gegevens die worden verstuurd naar jouw gebruikersbrowser.</para>
 				
 				<warning>
-					<para>When editing your board's cookie settings, do so with caution. Incorrect settings can cause such consequences as preventing your users from logging in.</para>
+					<para>Wanneer je de forum cookie-instellingen aan het aanpassen bent, doe het dan voorzichtig. Verkeerde instellingen kunnen er voor zorgen dat gebruikers niet meer zich kunnen aanmelden op jouw forum.</para>
 				</warning>
 				
-				<para>To edit your board's cookie settings, locate the <guilabel>Cookie Settings</guilabel> form. The following are four settings you may edit:
+				<para>Om jouw cookie-instellingen aan te passen, zul je naar het <guilabel>Cookie-instellingen</guilabel> forumulier moeten gaan. De volgende vier instellingen kan je aanpassen:
 				
 					<itemizedlist>
 						<title>Cookie-instellingen</title>
-						<listitem><para><guilabel>Cookie-domein</guilabel>: This is the domain that your board runs on. Do not include the path that phpBB is installed in; only the domain itself is important here.</para></listitem>
-						<listitem><para><guilabel>Cookie-naam</guilabel>: This is the name that will be assigned to the cookie when it is sent to your users' browsers and stored. This should be a unique cookie name that will not conflict with any other cookies.</para></listitem>
-						<listitem><para><guilabel>Cookie-pad</guilabel>: This is the path that the cookie will apply to. In most cases, this should be left as &quot;/&quot;, so that the cookie can be accessible across your site. If for some reason you must restrict the cookie to the path that your board is installed in, set the value to the path of your board.</para></listitem>
-						<listitem><para><guilabel>Cookie-beveiliging</guilabel>: If your board is accessible via <acronym>SSL</acronym>, set this to <guilabel>Enabled</guilabel>. If the board is not accessible via SSL, then leave this value set to <guilabel>Disabled</guilabel>, otherwise server errors will result during redirections.</para></listitem>
+						<listitem><para><guilabel>Cookie-domein</guilabel>: Dit is het domein waar je forum op staat. Schrijf hier niet de map op waar phpBB geïnstalleerd is, alleen het domein is belangrijk hier.</para></listitem>
+						<listitem><para><guilabel>Cookie-naam</guilabel>: Dit is de naam die wordt toegewezen aan de cookie wanneer het verzonden en opgeslagen wordt naar de gebruikersbrowsers. Dit zal een unieke cookie-naam moeten zijn, zodat het geen conflict kan hebben met andere cookies.</para></listitem>
+						<listitem><para><guilabel>Cookie-pad</guilabel>: Dit is de map die toegepast wordt voor de cookie. In sommige gevallen zal dit leeg gelaten moeten worden als &quot;/&quot;, zodat de cookie gebruikt kan worden door heel jouw site. Als in sommige gevallen de cookie beperkt moet worden tot de map waar je forum is geïnstalleerd, stel dan dit in naar de map van jouw forum.</para></listitem>
+						<listitem><para><guilabel>Cookie-beveiliging</guilabel>: Als je forum gebruikt maakt van <acronym>SSL</acronym>, stel dit dan in naar <guilabel>Ingeschakeld</guilabel>. Als je forum geen gebruikt maakt van SSL, laat dan deze waarde staan op <guilabel>Uitgeschakeld</guilabel>, anders zullen server fouten optreden tijdens redirects.</para></listitem>
 					</itemizedlist>
 				</para>
 				
-				<para>When you are done editing your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+				<para>Wanneer je klaar bent met het aanpassen van de serverinstellingen van je forum, klik dan op de <guilabel>Versturen</guilabel> knop, zodat je instellingen worden opgeslagen.</para>
 			</section>
 			
 			<section id="acp_server_settings">
@@ -317,36 +317,36 @@
 					</authorgroup>
 				</sectioninfo>			
 				<title>Serverinstellingen</title>
-				<para>On this page, you can define server and domain-dependent settings. There are three main categories of server settings: <guilabel>Server Settings</guilabel>, <guilabel>Path Settings</guilabel>, and <guilabel>Server URL Settings</guilabel>. The following describes each server settings category and the corresponding settings in more detail. When you are done configuring your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+				<para>Op deze pagina kan je de server en domein gerelateerde instellingen aanpassen. Er zijn dire hoofdcategorieën van de serverinstellingen: <guilabel>Serverinstellingen</guilabel>, <guilabel>Mapinstellingen</guilabel>, en <guilabel>Server-url instellingen</guilabel>. De volgende subsercties zullen elke serverinstellinge uitgebreid uitleggen in hun eigen categorie. Wanneer je klaar bent met het bijwerken van de serverinstellingen van jouw forum, vergeet dan niet om op de <guilabel>Versturen</guilabel> knop te klikken, om al je veranderingen op te slaan.</para>
 				
 				<warning>
-					<para>When editing your board's server settings, do so with caution. Incorrect settings can cause such consequences as emails being sent out with incorrect links and/or information, or even the board being inaccessible.</para>
+					<para>Wanneer je de serverinstellingen van het forum aan het aanpassen bent, doe het dan met voorzichtigheid. Verkeerde instellingen kunnen er voor zorgen dat verzonden e-mailberichten verkeerde links en/of informatie kunnen bevatten, en het kan er zelfs voor zorgen dat het forum niet meer toegankelijk is.</para>
 				</warning>
 				
-				<para>The <guilabel>Server Settings</guilabel> form allows you to set some settings that phpBB will use on the server level. The only available option at this time is <guilabel>Enable GZip Compression</guilabel>. Setting this value will enable <glossterm>GZip</glossterm> compression on your server. This means that all content generated by the server will be compressed before it is sent to users' browsers, if the users' browsers support it. Though this can reduce network traffic/bandwidth used, this will also increase the server and CPU load, on both the user's and server's sides.</para>
+				<para>Met het <guilabel>Serverinstellingen</guilabel> formulier kan je sommige instellingen aanpassen, die phpBB zal gebruiken op serverniveau. De enige optie die beschikbaar is op dit moment is <guilabel>GZip-compressie gebruiken</guilabel>. Als je deze optie inschakeld, gebruikt je server <glossterm>GZip</glossterm>-compressie. Dit betekend dat alle inhoud die gegenereerd wordt door de server eerst gecomprimeerd wordt voordat het verstuurd wordt naar de gebruikersbrowser, als de gebruikersbrowser dit ondersteunt. Dit zal het dataverkeer verminderen, maar het vormt wel een zwaardere last voor de server (CPU) en voor de computer van de gebruikers.</para>
 			
-				<para>Next, the <guilabel>Path Settings</guilabel> form allows you to set the various paths that phpBB uses for certain board content. For default installations, the default settings should be sufficient. The following are the four values that you can set:
+				<para>Volgende, het <guilabel>Mapinstellingen</guilabel> formulier staat je toe om verschillende mappen in te stellen dat phpBB gebruikt voor diverse foruminhoud. Voor standaard installaties zullen de standaard instellingen prima werken. De volgende vier waarden kan je instellen:
 					<itemizedlist>
-						<title>Path Settings</title>
-						<listitem><para><guilabel>Smilies storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that your smilies are located in.</para></listitem>
-						<listitem><para><guilabel>Post icons storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that the topic icons are stored in.</para></listitem>
-						<listitem><para><guilabel>Extension group icons storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that the icons for the <link linkend="acp_attach_extension_groups">attachments extension groups</link>.</para></listitem>
-					    <listitem><para><guilabel>Rank image storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that your <link linkend="acp_user_ranks">rank images</link> are located in.</para></listitem>
+						<title>Mapinstellingen</title>
+						<listitem><para><guilabel>Smilies opslagmap</guilabel>: Dit is de map naar de plek, relevant aan de map waar je forum in is geïnstalleerd, waar je smilies worden opgeslagen.</para></listitem>
+						<listitem><para><guilabel>Berichtpictogrammen opslagmap</guilabel>: Dit is de map naar de plek, relevant aan de map waar je forum in is geïnstalleerd, waar je berichtpictogrammen worden opgeslagen.</para></listitem>
+						<listitem><para><guilabel>Extensiepictogrammen opslagmap</guilabel>: Dit is de map naar de plek, relevant aan de map waar je forum in is geïnstalleerd, waar je pictogrammen voor de <link linkend="acp_attach_extension_groups">bijlagen extentiegroepen</link> worden opgeslagen.</para></listitem>
+					    <listitem><para><guilabel>Rangafbeeldingen opslagmap</guilabel>: Dit is de map naar de plek, relevant aan de map waar je forum in is geïnstalleerd, waar je <link linkend="acp_user_ranks">rangafbeeldingen</link> worden opgeslagen.</para></listitem>
                     </itemizedlist>
 				</para>
 				
-				<para>The last category of server settings is <guilabel>Server URL Settings</guilabel>. The <guilabel>Server URL Settings</guilabel> category contains settings that allow you to configure the actual <acronym>URL</acronym> that your board is located at, as well as the server protocol and port number that the board will be accessed to. The following are the five settings you may edit:
+				<para>De laatste categorie van de serverinstellingen zijn de <guilabel>Server-url instellingen</guilabel>. De <guilabel>Server-url instellingen</guilabel> categorie bevat de instellingen die je kan configureren, van de actuele <acronym>URL</acronym> waar je forum op te bereiken is, ook kan je de serverprotocol en het poortnummer die je forum gebruikt instellen. De volgende vijf instellingen kan je instellen:
 					<itemizedlist>
-						<title>Server URL Settings</title>
-						<listitem><para><guilabel>Force server URL settings</guilabel>: If for some reason the default settings for the server URL are incorrect, then you can force your phpBB board to use the server URL settings you specify below by selecting the <guilabel>Yes</guilabel> radio button.</para></listitem>
-						<listitem><para><guilabel>Server protocol</guilabel>: This is the server protocol (http:// or https://, for example) that your board uses, if the default settings are forced. If this value is empty or the above <guilabel>Force server URL settings</guilabel> setting is disabled, then the protocol will be determined by the cookie secure settings.</para></listitem>
-						<listitem><para><guilabel>Domain name</guilabel>: This is the name of the domain that your board runs on. Include &quot;www&quot; if applicable. Again, this value is only used if the server URL settings are forced.</para></listitem>
-						<listitem><para><guilabel>Server port</guilabel>: This is the port that the server is running on. In most cases, a value of &quot;80&quot; is the port to set. You should only change this value if, for some reason, your server runs on a different port. Again, this value is only used if the server URL settings are forced.</para></listitem>
-						<listitem><para><guilabel>Script path</guilabel>: This is the directory where phpBB is installed, relative to the domain name. For example, if your board was located at www.example.com/phpBB3/, the value to set for your script path is &quot;/phpBB3&quot;. Again, this value is only used if the server URL settings are forced.</para></listitem>
+						<title>Server-url instellingen</title>
+						<listitem><para><guilabel>Forceer server-url instellingen</guilabel>: Als er om een bepaalde reden de standaard instellingen voor de server-url verkeerd zijn, dan  kan je het laten forceren door URL instellingen die je hier invoert doormiddel van de <guilabel>Ja</guilabel> radio-knop te selecteren.</para></listitem>
+						<listitem><para><guilabel>Serverprotocol</guilabel>: Dit is de serverprotocol (http:// of https://, bijvoorbeeld) dat je forum kan gebruiken, als de standaardinstellingen zijn geforceerd. Als deze waardes leeg zijn of als hierboven <guilabel>Forceer server-url instellinge</guilabel> instelling is uitgeschakeld, dan zal de protocol worden herkend door de cookie-beveiliginsinstelling.</para></listitem>
+						<listitem><para><guilabel>Domainnaam</guilabel>: Dit is de naam van het domein waar het forum op draait. Inclusief &quot;www&quot; als het nodig is. Nogmaals, deze waarde wordt alleen gebruikt als de server-url instellingen zijn geforceerd.</para></listitem>
+						<listitem><para><guilabel>Serverpoort</guilabel>: Dit is de poort waar de server op draait. In de meeste gevallen zal je deze waarde van de poort op &quot;80&quot; moeten zetten. Je zal alleen deze waarde moeten veranderen als, om een bepaalde reden, de server op een andere poort draait. Opnieuw, deze waarde wordt alleen gebruikt als de server-url instellingen zijn geforceerd.</para></listitem>
+						<listitem><para><guilabel>Scriptmap</guilabel>: Dit is de map waar phpBB is geïnstalleerd op je domeinnaam. Als voorbeeld, als je forum te bereiken is op www.voorbeeld.nl/phpBB3/, dan is de waarde die je in moet vullen voor je scriptmap &quot;/phpBB3&quot;. Opnieuw, deze waarde wordt alleen gebruikt als de server-url instellingen zijn geforceerd.</para></listitem>
 					</itemizedlist>
 				</para>
 				
-				<para>When you are done editing your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+				<para>Wanneer je klaar bent met het aanpassen van de serverinstellingen van je forum, klik dan op de <guilabel>Versturen</guilabel> knop om je veranderingen op te slaan.</para>
 			</section>
 			
 			<section id="acp_server_security">
