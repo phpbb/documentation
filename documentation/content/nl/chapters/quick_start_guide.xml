@@ -26,8 +26,7 @@
 		<para>phpBB heeft een paar systeemeisen nodig, waar je aan moet voldoen om het te kunnen installeren en gebruiken. In dit hoofdstuk worden deze systeemeisen uitgelegt.</para>
 		<itemizedlist>
 			<listitem>
-				<para>Een webserver of een web hostingpakket die moet staan op een goede stabiele systeem software en ondersteuning voor PHP hebben.
-				</para>
+				<para>Een webserver of een web hostingpakket die moet staan op een goede stabiele systeem software en ondersteuning voor PHP hebben.</para>
 			</listitem>
 			<listitem>
 				<para>Eén van de hier onder genoemde SQL-database systemen:</para>
@@ -196,7 +195,6 @@
 			<para>Dit formulier bevat ook de opties om dingen te veranderen bijvoorbeeld de tijdzone (<guilabel>Systeemtijdzone</guilabel>) en ook het datumformaat, dat gebruikt wordt om datums en tijden te kunnnen weergeven (<guilabel>Datumformaat</guilabel>).</para>
 			<para>Je kan ook nieuwe stijlen selecteren (nadat ze geïnstalleerd zijn) voor je forum en het instellen dat bij alle gebruikers de nieuwe stijl wordt weergeven, en dat de stijl die ze hebben geselecteerd in hun "Gebruikerspaneel" wordt genegeerd. De stijl zal gelden voor het hele forum tenminste waar je geen andere stijl hebt geselecteerd in bepaalde forums. Voor verdere informatie waar je nieuwe stijlen kan verkrijgen en hoe je ze kan installeren , bezoek dan de <ulink url="http://www.phpbb.com/styles/">stijlenpagina</ulink> op <ulink url="http://www.phpbb.com/">phpBB.com</ulink>.</para>
 			<para>Als je jouw forum wilt gebruiken voor een niet-Engelse gemeenschap, laat dit formulier je toe om de standaard taal te veranderen (<guilabel>Standaard forumtaal</guilabel>) (wat kan overschreven worden door de gebruiker in hun eigen gebruikerspaneel). Standaard wordt bij phpBB3 een Engels talenpakket meegeleverd. Dus voor dat je dit formulier gaat gebruiken, zal je een andere taal als Engels moeten hebben gedownload voordat je het kan installeren en gebruiken. Voor verdere informatie lees het hoofdstuk <link linkend="acp_system_language">Taalpakketten</link> .</para>
-			<!--TODO: Correct ACP link-->
 		</section>
 		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">
@@ -217,7 +215,6 @@
 			<para>De "Forumfuncties" formulier biedt je grote mogelijkheden in ja of nee antwoorden. Als je bij elke functie uitgebreide informatie wilt hebben, dan is er voor alles een apart formulier waar je bijvoorbeeld specificeerd hoeveel maximaal aantal tekens je in een bericht mag gebruiken. Dit kan je instellingen bij het formulier (<guilabel>Maximaal aantal tekens per bericht</guilabel> in het paneel "Berichteninstellingen"). Om te kiezen hoe groot een gebruikersavatar mag zijn kan dit worden veranderd bij het formulier (<guilabel>Maximale avatargrootte</guilabel> in het paneel "Avatar-instellingen").</para>
 			<important>
 				<para>Als je functies uitschakelt, zullen deze ook voor de gebruikers onbeschikbaar zijn die normaal hun premissies hebben om het te kunnen gebruiken. Voor verdere informatie over het permissiesysteem lees <xref linkend="quick_permissions" /> of in de verdere uitleg van de beheerdershandleiding.</para>
-				<!-- TODO: Link to admin guide -->
 			</important>
 		</section>
 		<!--<para>TODO: Probably needs a better title. How to change the default forum settings, forum name or description, for instance. Does not need to have all settings explained in detail. We have the Admin Guide for that. It would be good to provide a link if there is anything that is discussed more detailed in the Admin Guide. </para>-->
@@ -259,6 +256,12 @@
 		Your new forum can show a different style to another. 
 		<!-- TODO For more information on each forum setting, see the <xref linkend="">in-depth section on forum creation</xref>-->
 		</para>
+
+
+
+
+
+
 		<para>Once you're done configuring the settings of your new forum, scroll to the bottom of the page and click the <guilabel>Submit</guilabel> button to create your forum and it's settings. If your new forum was created successfully, the screen will show you a success message.</para>
 		<para>If you wish to set permissions for the forum (or if you do not click on anything), you will see the forum permissions screen. If you do not want to (and want to use the default permissions for your new forum), click on the <guilabel>Back to previous page</guilabel> link. Otherwise, continue and set each setting to what you wish. Once you are done, click the <guilabel>Apply all Permissions</guilabel> button at the bottom of the page. You will see the successful forum permissions updated screen if it worked.</para>
 		<important>
