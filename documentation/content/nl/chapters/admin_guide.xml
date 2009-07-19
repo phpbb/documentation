@@ -358,97 +358,97 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Veiligheidsinstellingen</title>
-				<para>Here, on the <guimenuitem>Security settings</guimenuitem> page, you are able to manage security-related settings; namely, you can define and edit session and login-related settings. The following describes the available security settings that you can manage. When you are done configuring your board's security settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+				<para>Hier op de <guimenuitem>Veiligheidsinstellingen</guimenuitem> pagina, kan je veiligheid gerelateerde instellingen beheren, namelijk; je kan de sessies en de aanmelding gerelateerde instellingen bepalen en aanpassen. Het volgende beschrijft welke veiligheidsinstellingen beschikbaar zijn, en welke je kan beheren. Wanneer je klaar bent met het configureren van de veiligheidsinstellingen van het forum, vergeet dan niet om op de <guilabel>Versturen</guilabel> knop te klikken, om al je veranderingen op te slaan.</para>
 				
 				<!-- Perhaps include more introduction information? :-/ -->
 				
 				<variablelist>
 					<varlistentry>
-						<term>Allow persistent logins</term>
+						<term>Automatischi aanmelden toestaan</term>
 						<listitem>
-							<para>This determines whether users can automatically login to your board when they visit it.</para>
-							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable automatic logins.</para>
+							<para>Dit bepaald of een gebruiker automatisch wordt aangemeld, wanneer ze het forum bezoeken.</para>
+							<para>De beschikbare opties zijn <guilabel>Ja</guilabel> en <guilabel>Nee</guilabel>. Door <guilabel>Ja</guilabel> te kiezen zal automatisch aanmelden ingeschakeld zijn.</para>
 						</listitem>
 					</varlistentry>
 						
 					<varlistentry>
-						<term>Persistent login key expiration length (in days)</term>
+						<term>Aanmeldingssleutel aflooplengte (in dagen)</term>
 						<listitem>
-							<para>This is the set number of days that login keys will last before they expire and are removed from the database.</para>
-							<para>You may enter an integer in the text box located to the left of the word <guilabel>Days</guilabel>. This integer is the number of days for the persistent login key expiration. If you would like to disable this setting (and thereby allow use of login keys indefinitely), enter a &quot;0&quot; into the text box.</para>
+							<para>Dit is het aantal dagen dat aanmeldingssleutels zullen blijven staan tot dat ze verlopen en verwijderd worden van de database.</para>
+							<para>Je kan een getal invullen in de tekstvak links naast het woord <guilabel>Dagen</guilabel>. Dit getal is het aantal dagen van de aanmeldingssleutel aflooplengte. Als je deze instelling uit wilt schakelen (en hierbij het gebruik van oneindige aanmeldingssleutels), voer dan een &quot;0&quot; in in het tekstvak.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Session IP validation</term>
+						<term>IP-sessie controleren</term>
 						<listitem>
-							<para>This determines how much of the users' <glossterm>IP address</glossterm> is used to validate a session.</para>
-							<para>There are four settings available: <guilabel>All</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, and <guilabel>None</guilabel>. The <guilabel>All</guilabel> setting will compare the complete IP address. The <guilabel>A.B.C</guilabel> setting will compare the first x.x.x of the IP address. The <guilabel>A.B</guilabel> setting will compare the first x.x of the IP address. Lastly, selecting <guilabel>None</guilabel> will disable IP address checking altogether.</para>
+							<para>Dit bepaald hoeveel van de gebruikers zijn <glossterm>IP adres</glossterm> gebruikt wordt om een sessie te controleren.</para>
+							<para>Er zijn vier verschillende instellingen beschikbaar: <guilabel>Alles</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, en <guilabel>Geen</guilabel>. De <guilabel>Alles</guilabel> instelling zal het complete IP-adres vergelijken. De <guilabel>A.B.C</guilabel> instelling zal de eerste x.x.x van het IP-adres vergelijken. De <guilabel>A.B</guilabel> instelling zal de eerste x.x van het IP-adres vergelijken. Als laatst zal <guilabel>Geen</guilabel> de IP-adres controle uitschakelen.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Validate browser</term>
+						<term>Browser controleren</term>
 						<listitem>
-							<para>This enables the validation of the users' browsers for each session. This can help improve the users' security.</para>
-							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable this browser validation.</para>
+							<para>Dit zal de controle van de gebruikers browser inschakelen. Dit kan helpen om de gebruikersveiligheid te verbeteren.</para>
+							<para>De beschikbare opties zijn <guilabel>Ja</guilabel> en <guilabel>Nee</guilabel>. Het kiezen van <guilabel>Ja</guilabel> zal de browser controle inschakelen.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Validate X_FORWARDED_FOR header</term>
+						<term>X_FORWARDED_FOR-header controleren</term>
 						<listitem>
-							<para>This setting controls whether sessions will only be continued if the sent X_FORWARDED_FOR header is the same as the one sent with the previous request. Bans will be checked against <glossterm>IP address</glossterm>es in the X_FORWARDED_FOR header too.</para>
-							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable the validation of the X_FORWARDED_FOR header.</para>
+							<para>Deze instelling controleert of sessies alleen mee wordt voortgezet als de verzonden X_FORWARDED_FOR-header gelijk is met de vorige aanvraag. Verbanningen zullen ook gecontroleerd worden tegen <glossterm>IP-adressen</glossterm> in de X_FORWARDED_FOR-header.</para>
+							<para>De beschikbare instellingen zijn <guilabel>Ja</guilabel> en <guilabel>Nee</guilabel>. Door het kiezen van <guilabel>Ja</guilabel> zal het controleren van de X_FORWARDED_FOR-header ingeschakeld zijn.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Check IP against DNS Blackhole List:</term>
+						<term>IP-adres controleren of het voorkomt in de DNS zwarte lijst</term>
 						<listitem>
-							<para>You are also able to check the users' <glossterm>IP address</glossterm>es against <acronym>DNS</acronym> blackhole lists. These lists are blacklists that list bad IP addresses. Enabling this setting will allow your board to check your users' IP addresses and compare them against the DNS blackhole lists. Currently, the DNS blacklist services on the sites <ulink url="http://www.spamcop.net">spamcop.net</ulink>, <ulink url="http://www.dsbl.org">dsbl.org</ulink>, and <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>.</para>
+							<para>Je kan ook controleren of de gebruikers <glossterm>IP adressen</glossterm> voorkomen op de <acronym>DNS</acronym> zwarte lijsten. Deze lijsten zijn lijsten die slechte IP-adressen bevatten. Door dit in te schakelen kan je foryum de gebruikers IP-adres controleren en vergelijken met de DNS zwarte lijsten. Momenteel worden de DNS zwartelijst services gebruikt van de sites <ulink url="http://www.spamcop.net">spamcop.net</ulink>, <ulink url="http://www.dsbl.org">dsbl.org</ulink>, en <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Check email domain for valid MX record</term>
+						<term>E-maildomein controleren voor een geldig MX-record</term>
 						<listitem>
-							<para>It is also possible to attempt to validate emails used by your board's users. If this setting is enabled, emails that are entered when users register or change the email in their profile will be checked for a valid <ulink url="http://www.wikipedia.org/wiki/MX_record">MX record</ulink>.</para>
-							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable the checking of MX records for emails.</para>
+							<para>Het is ook mogelijk e-mails te controleren die gebruikt worden door je forum gebruikers. Als je deze instelling inschakeld, zullen de e-mailadressen die ingevuld worden wanneer gebruikers zich registreren of wanneer het e-mailadres veranderd in hun profiel, gecontroleerd worden voor een geldig <ulink url="http://www.wikipedia.org/wiki/MX_record">MX record</ulink>.</para>
+							<para>De beschikbare instellingen zijn <guilabel>Ja</guilabel> en <guilabel>Nee</guilabel>. Door <guilabel>Ja</guilabel> te kiezen zal de instelling voor het controleren van een gelidg MX records ingeschakeld worden.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Password complexity</term>
+						<term>moeilijkheidsgraad wachtwoord</term>
 						<listitem>
-							<para>Usually, more complex passwords fare well; they are better than simple passwords. To help your users try to make their account as secure as possible, you also have the option of requiring that they use a password as complex as you define. This requirement will apply to all users registering a new account, or when existing users change their current passwords.</para>
-							<para>There are four options in the selection menu. <guimenuitem>No requirements</guimenuitem> will disable password complexity checking completely. The <guimenuitem>Must be mixed case</guimenuitem> setting requires that your users' passwords have both lowercase and uppercase letters in their password. The <guimenuitem>Must contain alphanumerics</guimenuitem> setting requires that your users' password include both letters from the alphabet and numbers. Lastly, the <guimenuitem>Must contain symbols</guimenuitem> setting will require that your users' passwords include symbols.</para>
+							<para>Normaal zijn complexe wachtwoorden beter dan simpele wachtwoorden. Om je gebruikers te helpen om hun account zo veilig mogelijk te maken, heb je de optie om te zorgen dat een wachtwoord zo complex wordt als je wilt. Deze eis zal van toepassing zijn op alle gebruikers die een nieuw account aanmaken, of wanneer bestaande gebruikers hun wachtwoord veranderen.</para>
+							<para>Er zijn vier opties in het selectie menu. <guimenuitem>Geen vereisten</guimenuitem> zal de moeilijkeheidsgraad voor wachtwoorden compleet uitschakelen. De <guimenuitem>Moeten gemengde letters, nummers en symbolen bevatten</guimenuitem> instelling benodigd dat je gebruikers wachtwoord zowel normale als hoofdletters bevat. De <guimenuitem>Moeten letters en nummers bevatten</guimenuitem> instelling benodigd dat je gebruikers wachtwoord zowel letters en nummers bevat. Als laatste, de <guimenuitem>Moeten symbolen bevatten</guimenuitem> instelling benodigd dat je gebruikers wachtwoord symbolen moet bevatten.</para>
 							<note>
-								<para>For each password complexity requirement, the setting(s) above it in the selection menu will also apply. For example, selecting <guimenuitem>Must contain alphanumerics</guimenuitem> will require your users' passwords to include not only alphanumeric characters, but also have both lowercase and uppercase letters.</para>
+								<para>Voor ieder wachtwoord moeilijkheidsgraad, de instelling(en) boven de selectie worden dan ook toegepast. Bijvoorbeeld, het selecteren van <guimenuitem>Moeten letters en nummers bevatten</guimenuitem> benodigd ook dat je gebruikers wachtwoord niet alleen alfabetische karakters bevat, maar ook letters bevatten van zowel normale als hoofdletter.</para>
 							</note>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Force password change</term>
+						<term>Wachtwoordwijzigingen forceren</term>
 						<listitem>
-							<para>It is always ideal to change passwords once in a while. With this setting, you can force your users to change their passwords after a set number of days that their passwords have been used.</para>
-							<para>Only integers can be entered in the text box, which is located next to the <guilabel>Days</guilabel> label. This integer is the number of days that, after which, your users will have to change their passwords. If you would like to disable this feature, enter a value of &quot;0&quot;.</para>
+							<para>Het is altijd goed om wachtwoorden te veranderen eens in de zoveel tijd. Met deze instelling, kan je je gebruikers forceren om van wachtwoord te veranderen na het ingestelde aantal dagen dat ze hun wachtwoord hebben gebruikt.</para>
+							<para>Alleen nummers kunnen ingevuld worden in het tekstvak, welke is geplaatst naast de <guilabel>Dagen</guilabel> label. Dit nummer is het aantal dagen dat, na welke, je gebruikers hun wachtwoord moeten veranderen. Als je deze toepassing wilt uitschakelen, voer dan een waarde van &quot;0&quot; in.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Maximum number of login attempts</term>
+						<term>Maximum aantal aanmeldingspogingen</term>
 						<listitem>
-							<para>It is also possible to limit the number of attempts that your users can have to try to login. Setting a specific limit will enable this feature. This can be useful in temporarily preventing bots or other users from trying to log into other users' accounts.</para>
-							<para>Only integers can be entered for this setting. The number entered it the maximum number of times a user can attempt to login to an account before having to confirm his login visually, with the visual confirmation.</para>
+							<para>Het is ook mogelijk om het aantal aanmeldingspogingen die je gebruikers hebben om aan te melden te limiteren. Door een specifiek aantal in te stellen zal deze toepassing inschakelen. Dit kan nuttig zijn om tijdelijk te voorkomen dat robots of andere gebruikers proberen aan te melden met iemand anders zijn account.</para>
+							<para>Alleen nummers kunnen ingevuld worden voor deze instelling. Het aantal dat ingevuld is, is het maximum aantal keer een gebruiker kan proberen om aan te melden voor een bepaalde account voordat hij zijn aanmelding visueel moet bevestigen (door middel van een CAPTCHA).</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Allow PHP in templates</term>
+						<term>PHP in templates toestaan</term>
 						<listitem>
-							<para>Unlike phpBB2, phpBB3 allows the use of PHP code in the template files themselves, if enabled. If this option is enabled, <guilabel>PHP</guilabel> and <guilabel>INCLUDEPHP</guilabel> statements will be recognized and parsed by the template engine.</para>
+							<para>In tegenstelling tot phpBB2, staat phpBB3 toe om PHP code te gebruiken in de template bestanden, wanneer ingeschakeld. Als de optie is ingeschakeld, <guilabel>PHP</guilabel> en <guilabel>INCLUDEPHP</guilabel> schakelaars zullen herkend worden  en ze zullen worden geparsed door de template machine.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
