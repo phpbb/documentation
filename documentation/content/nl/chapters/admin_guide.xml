@@ -636,13 +636,13 @@
 						<imagedata format="PNG" fileref="../images/admin_guide/subforums_list.png"/>
 					</imageobject>
 					<caption>
-						<para>Creating subforums. In this example, the subforums titled &quot;Cats&quot; and &quot;Dogs&quot; belong in the &quot;Pets&quot; parent forum. Pay close attention to the breadcrumbs on the page, located right above the list of the subforums. This tells you exactly where you are in the forums hierarchy.</para>
+						<para>Het aanmaken van subforums. In dit voorbeeld, de subforum genaamd &quot;Katten&quot; en &quot;Honden&quot; behoren in het hoofdforum &quot;Dieren&quot;. Hoe goed je aandacht op de breadcrmbs op de pagina, die je meteen bovenaan van het subforum overzicht kan zien. Dit verteld je precies waar je bent in de forumhiërachie.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>This system theoretically allows unlimited levels of subforums. You can put as many subforums inside subforums as you like. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use subforums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
-			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create subforums.</para>
+			<para>Met dit systeem mag je theoretisch, onbeperkt aantal niveau's van subforums aanmaken. Je kan zoveel subforums binnen subforums aanmaken als je wilt. Echter, ga niet overboord met deze functie. Op forums met vijf of tien forums of minder, is het geen goed idee om subforums te gebruiken. Onthou, hoe minder forums je hebt, hoe aktiever je forum zal zijn. Je kan later nog altijd forums toevoegen.</para>
+			<para>Lees het <link linkend="acp_forums_manage">hoofdstuk over het beheren van forums</link> om meer te weten te komen over hoe je subforums kan aanmaken.</para>
 		</section>
 		<section id="acp_forums_manage">
 			<sectioninfo>
@@ -653,21 +653,21 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Beheren van forums</title>
-			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
+			<para>Hier kan je toevoegen, bewerken, verwijderen en het herrangschikken van de forums, categorieën en de links.</para>
 			
 			<figure id="img_acp_forums_manage_legend">
-				<title>Managing Forums Icon Legend</title>
+				<title>Beheren van forums afbeeldingslegenda</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/manage_forums_icon_legend.png"/>
 					</imageobject>
 					<caption>
-						<para>This is the legend for the icons on the manage forums page. Each icon allows you to commit a certain action. Pay close attention to which action you click on when managing your forums.</para>
+						<para>Dit is de legenda van de afbeeldingen op de forum beheer pagina. Elke afbeelding staat voor een bepaalde functie. Hou goed je aandacht erbij, op welke actie je klikt wanneer je jouw forums aan het beheren bent.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>The initial <guilabel>Manage forums</guilabel> page shows you a list of your top level forums and categories. Note, that this is not analogue to the forum index, as categories are not expanded here. If you want to reorder the forums inside a category, you have to open the category first.</para>
+			<para>De <guilabel>Forumbeheer</guilabel> pagina weergeeft een lijst van je bovenstse niveau forums en categorieën. Notitie, dit is niet vergelijkbaar met de forumindex pagina, categorieën zijn niet uigebreid hier. Als je de forums binnen een categorie wil herrangschikken, zal je eerst de categorie moeten openen.</para>
 		</section>
 	</section>
 	<section id="acp_posting">
@@ -684,8 +684,8 @@
 		</sectioninfo>
 		<title>Berichteninstellingen</title>
 		
-		<para>Forums are nothing without content. Content is created and posted by your users; as such, it is very important to have the right posting settings that control how the content is posted. You can reach this section by clicking the <guimenuitem>Posting</guimenuitem> navigation tab.</para>
-		<para>The first page you are greeted with after getting to the <guimenuitem>Posting Settings</guimenuitem> section is <guilabel>BBCodes</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
+		<para>Forums zijn niks zonder inhoud. Inhoud wordt gemaakt en geplaatst door je gebruikers; het is ook heel belangrijk dat ze de goede berichteninstellingen hebben dat controleerd hoe de inhoud is geplaatst. Je kan dit onderdeel bereiken door op de navigatie tab <guimenuitem>Berichten</guimenuitem> te klikken.</para>
+		<para>De eerste pagina die je tegenkomt, nadat je op de optie <guimenuitem>Berichteninstellingen</guimenuitem> hebt geklikt, is het onderdeel <guilabel>BBCodes</guilabel>. De andere beschikbare subonderdelen zijn verdeeld in twee hoofd groepen: <guilabel>Berichten</guilabel> en <guilabel>Bijlagen</guilabel>. <guimenuitem>Privéberichteninstellingen</guimenuitem>, <guimenuitem>Onderwerppictogrammen</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, en <guimenuitem>Woordcensuur</guimenuitem> zijn bericht gerelateerde instellingen. <guimenuitem>Bijlageninstellingen</guimenuitem>, <guimenuitem>Extensiebeheer</guimenuitem>, <guimenuitem>Extensiegroepen beheer</guimenuitem>, en <guimenuitem>Bijlagen zonder plek</guimenuitem> zijn bijlagen gerelateerde instellingen.</para>
 	
 		<section id="acp_posting_bbcodes">
 			<sectioninfo>
@@ -701,34 +701,34 @@
 			</sectioninfo>
 			<title>BBCodes</title>
 			
-			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
-			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
+			<para><glossterm>BBCodes</glossterm> is een speciale manier van weergeven van berichtformaten, die gelijk zijn aan HTML. Met phpBB 3.0 kan je heel gemakkelijk je eigen BBCode creëren. Op deze pagina, kan je zien welke aangepaste BBCodes momenteel bestaan.</para>
+			<para>Het toevoegen van een BBCode is heel erg makkelijk. Als je het juist doet, mag je het toestaan dat gebruikers je nieuwe BBCode mogen gebruiken, dat is veiliger dan dat ze HTML code mogen gebruiken. Om een BBCode te kunnen toevoegen, klik je op <guilabel>Voeg een nieuwe BBCode toe</guilabel> om te gaan beginnen. Er zijn vier dingen wat je moet overwegen als je een BBCode wilt toevoegen: hoe wil je dat gebruikers de BBCode kunnen gebruiken, welke HTML code mag de eigen BNCode gebruiken (de gebruikers zullen dit niet zien), welke korte informatie berichten wil je bij de BBCode laten zien, en wil je een BBCode knop voor de nieuwe BBCode om die te laten weergeven op de berichten plaatsingspagina. Wanneer je helemaal klaar bent met het instellen van de nieuwe BBCode, klik je op de knop <guilabel>Versturen</guilabel> om je nieuwe BBCode te kunnen opslaan.</para>
 			
 			<figure id="img_acp_creating_bbcodes">
-				<title>Creating BBCodes</title>
+				<title>Creëren BBCodes</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/creating_bbcodes.png"/>
 					</imageobject>
 					<caption>
-						<para>Creating a new BBCode. In this example, we are creating a new [font] BBCode that will allow users to specify the font face of the specified text.</para>
+						<para>Creëren van een nieuwe BBCode. In dit voorbeeld, creëren we een nieuwe [font] BBCode dat toestaat dat gebruikers de lettergezicht van de geselecteerde tekst kunnen bepalen.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
+			<para>In het <guilabel>BBCode gebruik</guilabel> formulier, kan je bepalen hoe je gebruikers de BBCode kunnen gebruiken. Laten we zeggen dat je een nieuw lettertype BBCode wilt creëren, dat gebruikers een lettertype kunnen kiezen voor hun eigen tekst. Een voorbeeld van wat je dan in het veld <guilabel>BBCode gebruik</guilabel> moet invoeren is:
 				<code>[font={TEXT1}]{TEXT2}[/font]</code>
-				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT1</guilabel>, while <guilabel>TEXT2</guilabel> represents whatever font name the user types in.
+				Dit maakt een nieuw [font] BBCode, en hierbij mag een gebruiker kiezen welk lettertype ze willen gebruiken voor hun tekst. De gebruiker zijn tekst wordt weergegeven door <guilabel>TEXT1</guilabel>, terwijl <guilabel>TEXT2</guilabel> de lettertype naam weergeeft wat de gebruiker intypt.
 			</para>
-			<para>In the <guilabel>HTML Replacement</guilabel> form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
+			<para>In het <guilabel>HTML vervangings</guilabel> formulier, kan je bepalen welke HTML code je nieuwe BBCode zal gebruiken in het weergeven van de tekst. In dit geval maken we gebruik van een nieuwe [font] BBCode, probeer
 				<code>&lt;span style="font-family: {TEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
-				This HTML code will be used to actually format the user's text.
+				. Deze HTML code zal gebruikt worden voor het weergeven van de gebruiker zijn tekst.
 			</para>
-			<para>The third option to consider when adding a custom BBCode is what sort of help message you want to display to your users if they choose to use the new BBCode. Ideally, the helpline message is a short note or tip for the user using the BBCode. This message will be displayed below the BBCode row on the posting screens.</para>
+			<para>De derde optie is waarmee je rekening mee moet houden wanneer je een aangepaste BBCode toevoegt, is welk help bericht dat je wilt weergeven voor je gebruikers wanneer ze de nieuwe BBCode gebruiken. Iegenlijk is het help bericht een korte notitie of tip, voor de gebruiker hoe hij de BBCode kan gebruiken. Dit bericht wordt weergegeven onder de BBCode regel wanneer je een bericht plaatst.</para>
 			<note>
-				<para>If the next option described, <guilabel>Display on posting</guilabel>, isn't enabled, the helpline message will not be displayed.</para>
+				<para>Als de volgende beschreven optie, <guilabel>Weergeven op de berichtenpagina</guilabel>, niet is ingeschakeld, zal het help bericht niet getoond worden.</para>
 			</note>
-			<para>Lastly, when adding a new BBCode, you can decide whether or not you want an actual BBCode button for your new BBCode to be displayed on the posting screens. If you want this, then check the <guilabel>Display on posting</guilabel> checkbox.</para>
+			<para>Als laatste bij het toevoegen van een nieuwe BBCode, kan je beslissen of je een daadwerkelijke BBCode knop wilt hebben om getoond te worden op de berichtenpagina of niet. Als je dit wilt, vink dan de <guilabel>Weergeven op berichtenpagina</guilabel> aan.</para>
 		</section>
 		
 		<section id="acp_posting_pm_settings">
@@ -741,32 +741,32 @@
 			</sectioninfo>
 			<title>Privéberichteninstellingen</title>
 			
-			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
+			<para>Veel gebruikers gebruiken je forums privéberichtensysteem. Hier kan je alle standaard <glossterm>privéberichten</glossterm>-gerelateerde instellingen beheren. Hieronder staan de instellingen die je kan veranderen. Wanneer je klaar bent met het instellen van de privéberichteninstellingen, klik dan op <guilabel>Versturen</guilabel> om je veranderingen op te slaan.</para>
 			<itemizedlist>
-				<title>General settings</title>
-				<listitem><para><guilabel>Private messaging</guilabel>: You can enable to disable your board's private messaging system. If you want to enable it, select <guilabel>Yes</guilabel>.</para></listitem>
-				<listitem><para><guilabel>Max private message folders</guilabel>: This is the maximum number of new private message folders your users can each create.</para></listitem>
-				<listitem><para><guilabel>Max private messages per box</guilabel>: This is the maximum number of private messages your users can have in each of their folders.</para></listitem>
-				<listitem><para><guilabel>Full folder default action</guilabel>: Sometimes your users want to send each other a private message, but the intended recipient has a full folder. This setting will define exactly what will happen to the sent message. You can either set it so that an old message will be deleted to make room for the new message, or the new messages will be held back until the recipient makes room in his inbox. Note that the default action for the <guilabel>Sentbox</guilabel> is the deletion of old messages.</para></listitem>
-				<listitem><para><guilabel>Limit editing time</guilabel>: Users are usually allowed to edit their sent private messages before the recipient reads it, even if it's already in their outbox. You can control the amount of time your users have to edit sent private messages.</para></listitem>
+				<title>Algemene instellingen</title>
+				<listitem><para><guilabel>Privéberichten</guilabel>: Hier kan je je forums privéberichtensysteem uitschakelen. Als je het wilt inschakelen, selecteer dan <guilabel>Ja</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Maximaal aantal privéberichtenmappen</guilabel>: Dit is het maximaal aantal nieuwe privéberichtenmappen je gebruikers kunnen aanmaken.</para></listitem>
+				<listitem><para><guilabel>Maximaal aantal privéberichten per postvak</guilabel>: Dit is het maximaal aantal privéberichten in elke map die je gebrukers kunnen hebben.</para></listitem>
+				<listitem><para><guilabel>Standaardactie bij volle map</guilabel>: Soms willen je gebruikers elkaar een privébericht sturen, maar de inbox van de ontvanger is vol. Deze instelling bepaald wat er zal gebeuren met het verzonden bericht. Je kan het zo instellen dat een oud bericht verwijderd zal worden om plaats te maken voor het nieuwe bericht, of het nieuwe bericht zal achtergehouden worden tot dat de ontvanger ruimte maakt in zijn inbox. Let op dat de standaard actie voor de Note that the default action for the <guilabel>Verzonden-berichten map</guilabel> het verwijderen van oude berichten.</para></listitem>
+				<listitem><para><guilabel>Wijzigingstijd voor privéberichten</guilabel>: Gebruikers kunnen gewoonlijk hun verzonden privébericht wijzigen voordat de ontvanger deze heeft gelezen, ook al staat het bericht al in de verzonden-berichten map. Je kan bepalen hoeveel tijd je gebruikers hebben om hun verzonden privébericht aan te passen.</para></listitem>
 			</itemizedlist>	
 			
 			<itemizedlist>
-				<title>General options</title>
-				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.0, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
-				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
-				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
-				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow attachments to be used in private messages.</para></listitem>
-				<listitem><para><guilabel>Allow signature in private messages</guilabel>: Select <guilabel>Yes</guilabel> to let your users include their <glossterm>signature</glossterm> in their private messages.</para></listitem>
-				<listitem><para><guilabel>Allow print view in private messages</guilabel>: Another new feature in phpBB 3.0 is a printer-friendly view. Select <guilabel>Yes</guilabel> to allow your users to view any of their PMs in print view.</para></listitem>
-				<listitem><para><guilabel>Allow forwarding in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow your users to forward private messages.</para></listitem>
-				<listitem><para><guilabel>Allow use of [img] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline images in their private messages.</para></listitem>
-				<listitem><para><guilabel>Allow use of [flash] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline Macromedia Flash objects in their private messages.</para></listitem>
-				<listitem><para><guilabel>Enable use of topic icons in private messages</guilabel>: Select <guilabel>Yes</guilabel> if you want to enable your users to include topic icons with their private messages. (Topic icons are displayed next to the private messages' titles.).</para></listitem>
+				<title>Algemene opties</title>
+				<listitem><para><guilabel>Versturen van privéberichten naar meerdere gebruikers en groepen toestaan</guilabel>: In phpBB 3.0, is het mogelijk om een privébericht naar meerdere gebruikers te sturen. Om dit toe te staan, selecteer <guilabel>Ja</guilabel>.</para></listitem>
+				<listitem><para><guilabel>BBCode in privéberichten toestaan</guilabel>: Selecteer <guilabel>Ja</guilabel> om BBCodes toe te staan in privéberichten.</para></listitem>
+				<listitem><para><guilabel>Smilies in privéberichten toestaan</guilabel>: Selecteer <guilabel>Ja</guilabel> om smilies toe te staan in privéberichten.</para></listitem>
+				<listitem><para><guilabel>Bijlagen in privéberichten toestaan</guilabel>: Selecteer <guilabel>Ja</guilabel> om bijlagen toe te staan in privéberichten.</para></listitem>
+				<listitem><para><guilabel>Onderschriften in privéberichten toestaan</guilabel>: Selecteer <guilabel>Ja</guilabel> om je gebruikers toe te staan om hun <glossterm>onderschrift</glossterm> in privéberichten te gebruiken.</para></listitem>
+				<listitem><para><guilabel>Afdrukken van privéberichten toestaan</guilabel>: Nog een nieuwe optie in phpBB 3.0 is een printervriendelijke weergave. Selecteer <guilabel>Ja</guilabel> om je gebruikers toe te staan om privéberichten weer te geven in printer weergave.</para></listitem>
+				<listitem><para><guilabel>Doorsturen van privéberichten toestaan</guilabel>: Selecteer <guilabel>Ja</guilabel> om je gebruikers toe te staan om privéberichten door te sturen.</para></listitem>
+				<listitem><para><guilabel>[img] BBCode-tag toestaan</guilabel>: Selecteer <guilabel>Ja</guilabel> als je je gebruikers toe wilt staan om afbeeldingen te plaatsen in hun privéberichten.</para></listitem>
+				<listitem><para><guilabel>[flash] BBCode=tag toestaan</guilabel>: Selecteer <guilabel>Ja</guilabel> als je je gebruikers toe wilt staan om Macromedia Flash objecten te plaatsen in hun privéberichten.</para></listitem>
+				<listitem><para><guilabel>Onderwerppictogrammen in privéberichten inschakelen</guilabel>: Selecteer <guilabel>Ja</guilabel> als je je gebruikers wilt toe staan om onderwerppictogrammen in hun privéberichten te kunnen gebruiken. (Onderwerppictogrammen woorden weergegeven naast de privéberichttitels.).</para></listitem>
 			</itemizedlist>
 			
 			<tip>
-				<para>If you want to set any of the above numerical settings so that the setting will allow unlimited amounts of the item, set the numerical setting to 0.</para>
+				<para>Als je één van de hierboven genoemde nummerieke instelligen wilt instellen, zodat de instelling ongelimiteerde hoeveelheid van het item toestaat, stel dan die nummerieke instelling in op 0.</para>
 			</tip>
 		</section>
 		
@@ -780,9 +780,9 @@
 			</sectioninfo>
 			<title>Onderwerppictogrammen</title>
 			
-			<para>A new feature in phpBB3 is the ability to assign icons to topics. On this page, you can manage what topic icons are available for use on your board. You can add, edit, delete, or move topic icons. The <guilabel>Topic Icons</guilabel> form displays the topic icons currently installed on your board. You can add topic icons manually, install a premade icons pack, export or download an icons pack file, or edit your currently installed topic icons.</para>
+			<para>Een nieuw onderdeel in phpBB 3.0 is de mogelijkheid om pictogrammen toe te wijzen aan onderwerpen. Op deze pagina, kan je bepalen welke onderwerppictogrammen beschikbaar zijn voor gebruik op het forum. Je kan onderwerppictogrammen toevoegen, aanpasssen, verwijderen, of verplaatsen. Dee <guilabel>Onderwerppictogrammen</guilabel> formulier geeft de onderwerppictogrammen weer die op dit moment geïnstalleerd zijn op je forum. Je kan onderwerppictogrammen handmatig toevoegen, een gemaakte pictogrammenpakket installeren,een pictogrammenpakket exporteren of downloaden, of je geïnstalleerde onderwerppictogrammen aanpassen.</para>
 		
-			<para>Your first option to add topic icons to your board is to use a premade icons pack. Icon packs have the file extension <filename>pak</filename>. To install an icons pack, you must first download an icons pack. Upload the icon files themselves and the pack file into the <filename>/images/icons/</filename> directory. Then, click <guilabel>Install icons pak</guilabel>. The <guilabel>Install icons pak</guilabel> form displays all of the options you have regarding topic icon installation. Select the icon pack you wish to add (you may only install one icon pack at a time). You then have the option of what to do with currently installed topic icons if the new icon pack has icons that may conflict with them. You can either keep the existing icon(s) (there may be duplicates), replace the matches (overwriting the icon(s) that already exist), or just delete all of the conflicting icons. Once you have selected the proper option, click <guilabel>Install icons pak</guilabel>.</para>
+			<para>Je eerste optie om onderwerppictogrammen aan je forum toe te voegen is het gebruik van een pictogrammenpakket. Pictogrammenpakketten hebben de bestandsextensie <filename>pak</filename>. Om een pictogrammenpakket te instaleren moet je eerst een pictogrammenpakket downloaden. Upload de pictogrammenbestanden en het pakketbestand afzonderlijk naar de <filename>/images/icons/</filename> map. Klik daarna op <guilabel>Install icons pak</guilabel>. The <guilabel>Install icons pak</guilabel> form displays all of the options you have regarding topic icon installation. Select the icon pack you wish to add (you may only install one icon pack at a time). You then have the option of what to do with currently installed topic icons if the new icon pack has icons that may conflict with them. You can either keep the existing icon(s) (there may be duplicates), replace the matches (overwriting the icon(s) that already exist), or just delete all of the conflicting icons. Once you have selected the proper option, click <guilabel>Install icons pak</guilabel>.</para>
 			
 			<para>To add topic icon(s) manually, you must first upload the icons into the icons directory of your site. Navigate to the <guimenuitem>Topic icons</guimenuitem> page. Click <guilabel>Add multiple icons</guilabel>, which is located in the <guilabel>Topic Icons</guilabel> form. If you correctly uploaded your new desired topic icon(s) into the proper <filename>/images/icons/</filename> directory, you should see a row of settings for each new icon you uploaded. The following has a description on what each field is for. Once you are done with adding the topic icon(s), click, <guilabel>Submit</guilabel> to submit your additions.</para>
 			
