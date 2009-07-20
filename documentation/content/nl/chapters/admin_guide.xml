@@ -584,7 +584,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Forumbeheer</title>
-		<para>The <guilabel>Forum</guilabel> section offers the tools to manage your forums. Whether you want to add new forums, add new categories, change forum descriptions, reorder or rename your forums, this is the place to go.</para>
+		<para>Het <guilabel>Forum</guilabel> onderdeel bied je hulpmiddelen om je forums te beheren. Of je nou nieuwe forums wilt toevoegen, nieuwe categorieën wilt toevoegen, aanpassen van de forumbeschrijving, herrangschikken of hernoemen van je forums, dan is dit de plaats waar je moet zijn.</para>
 		<section id="acp_forums_types">
 			<sectioninfo>
 				<authorgroup>
@@ -594,7 +594,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Uitleg van de forumtypes</title>
-			<para>In phpBB 3.0, there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
+			<para>In phpBB 3.0, zijn er drie verschillende forumtypes. Een forum kan normaal een forum zijn waar gebruikers berichten in kunnen plaatsen, een categorie dat de forums bevat, of het kan een simpele link zijn.</para>
 			<variablelist>
 				<varlistentry>
 					<term>Forum</term>
@@ -605,13 +605,13 @@
 				<varlistentry>
 					<term>Link</term>
 					<listitem>
-						<para>The forum list displays a forum link like a normal forum. But instead of linking to a forum, you can point it to a URL of your choice. It can display a hit counter, which shows how many times the link was clicked.</para>
+						<para>Dit forum geeft een forumlink zoals een normaal forum weer. Maar in plaats van het linken naar een forum, kan je het richten naar een andere URL naar jouw keuze. Het kan een teller weergeven, wat je laat zien hoeveel keer er op de link is geklikt.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Categorie</term>
 					<listitem>
-						<para>If you want to combine multiple forums or links for a specific topic, you can put them inside a category. The forums will appear below the category title, clearly separated from other categories. Users are not able to post inside categories.</para>
+						<para>Als je meerdere forums of links wilt combineren voor een speciaal onderwerp, kan je ze plaatsen binnen een categorie. De forums zullen dan worden weergegeven onder de categorie titel, duidelijk gescheiden van andere categorieën. Gebruikers kunnen geen berichten plaatsen in de categorieën.</para>
 					</listitem>
 				</varlistentry>				
 			</variablelist>
@@ -625,9 +625,9 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Subforums</title>
-			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums.</para>
+			<para>Een van de vele nieuwe functies in phpBB3 zijn <glossterm>subforums</glossterm>. Vooral forums met een hoog aantal forums hebben voordeel hier mee. In de eenvoudige vlakke categorie en forum benadering in phpBB2, werden alle forums en categorieën weergegeven op de forumindex pagina. In phpBB3 kan je zoveel forums, links of categorieën aanmaken binnen andere forums als je wilt.</para>
 			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
-			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
+			<para>Als je een forum hebt bijvoorbeeld over dieren, kan je subforums aanmaken voor katten, honden, of cavia`s binnenin zonder gebruik te maken van het hoofd forum &quot;dieren&quot; als een categorie. In dit voorbeeld, alleen het forum &quot;Dieren&quot; zal worden weergegeven op de indexpagina als een normaal forum. Het subforum zal tevoorschijn komen als een simpele link onder de forumbeschrijving (tenzij je dit uitschakeld).</para>
 				
 			<figure id="img_acp_subforums_list">
 				<title>Aanmaken van subforums</title>
