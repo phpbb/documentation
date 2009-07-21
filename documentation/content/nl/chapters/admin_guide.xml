@@ -147,25 +147,25 @@
 				<para><glossterm>Privéberichten</glossterm> is een manier om persoonlijk te communiceren met andere geregistreerde gebruikers via het forum zonder dat ze moeten terugvallen op e-mail of IM programma's. </para>
 				<para>Je kan deze functie uitschakelen met de <guilabel>Privéberichten</guilabel> instelling. Dit zal de functie uitgeschakeld houden voor het hele forum. Je kan privéberichten uitschakelen voor bepaalde gebruikers of groepen met de <link linkend="acp_permissions">Permissies</link>. Lees het gedeelte over <link linkend="acp_permissions">Permissies</link> voor meer informatie.</para>
 				<para>Olympus stelt gebruikers in staat om persoonlijke mappen te maken voor het rangschrikken van de privéberichten. De <guilabel>Maximaal Privéberichtmappen</guilabel> instelling bepaalt het aantal berichtmappen dat gebruikers kunnen maken. De standaardwaarde is 4. Je kan deze functie uitschakelen door bij deze instelling de waarde 0 in te voeren.</para>
-				<para><guilabel>Maximaal aantal Privéberichten per postvak</guilabel> bepaalt het aantal Privéberichten die iedere map kan bevatten. De standaard waarde is <guilabel>50</guilabel>. Als je het instelt op 0 dan kunnen er ongelimiteerd aantal privéberichten per map.</para>
-				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the &quot;Full Folder Default Action&quot; list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
-				<para>When sending a private message, it is still possible to edit the message until the recipient reads it. After a sent private message has been read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0, which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
-				<para>The <guilabel>General Options</guilabel> allow you to further define the functionality of Private Messages on your board. 
+				<para><guilabel>Maximaal aantal Privéberichten per postvak</guilabel> bepaalt het aantal Privéberichten die iedere map kan bevatten. De standaard waarde is <guilabel>50</guilabel>. Als je het instelt op 0 dan kunnen er ongelimiteerd aantal privéberichten zijn per map.</para>
+				<para>Als je het aantal berichten beperkt dat gebruikers kunnen ontvangen in hun mappen, zal je ook een standaard actie moeten kiezen die zal worden uitgevoerd zodra een map eenmaal vol is. Dit kan veranderd worden bij de "Actie bij een volle berichtenmap" lijst. Het oudste bericht zal worden verwijderd, of het nieuwe bericht zal achtergehouden worden, totdat er ruimte vrij is in de map voor het nieuwe bericht. Hou wel in de gaten dat gebruikers zelf de aktie kunnen kiezen in hun eigen privéberichten opties en deze instellinge veranderd alleen de standaard waarde, die voor hun geld. Dit zal niet worden overschreven worden met de aktie die de gebruiker kiest. </para>
+				<para>Wanneer je een privébericht verstuurt, is het nog mogelijk om het bericht te bewerken voordat de ontvanger het gelezen heeft. Nadat een verzonden privébericht is gelezen, is het bewerken van het bericht niet meer mogelijk. Om de tijd te limiteren dat een bericht nog kan worden bewerkt, voordat de ontvanger het gelezen heeft, kan je met de optie <guilabel>Bewerkingstijd voor privéberichten limiteren</guilabel> instellen. De standaard waarde is 0, wat toestaat om het bericht te bewerken totdat het gelezen is. Hou in de gaten dat je met de <link linkend="acp_permissions">Permissies</link> kan bepalen of een gebruiker of een groep een bericht kan bewerken nadat ze het verzonden hebben. Als de permissie om berichten te bewerken is uitgeschakeld, zal het deze instelling overschrijven.</para>
+				<para>De <guilabel>Algemene opties</guilabel> staan je toe om verder de functionaliteit van de privéberichten op je forum te bepalen. 
 					<itemizedlist>
 						<listitem>
-							<para><guilabel>Allow Mass PMs:</guilabel> enables the sending of Private Messages to multiple recipients. This feature is enabled by default. Disabling it will also disallow sending of Private Messages to groups. </para>
+							<para><guilabel>Massa privéberichten toestaan</guilabel>: Deze instelling laat toe om privéberichten te versturen naar meerdere ontvangers. Deze functie is standaard ingeschakeld. Wanneer je het uitschakeld zal ook het versturen van privéberichten naar groepen uitgeschakeld worden.</para>
 							<tip>
-								<para>See the <link linkend="acp_groups">Groups section</link> for information on how to enable the ability to send a message to a whole group.</para>
+								<para>Bekijk het hoofdstuk <link linkend="acp_groups">Groepen</link> voor meer informatie en over hoe je de mogelijkheid inschakeld voor het versturen van berichten naar een hele groep.</para>
 							</tip>
 						</listitem>
 						<listitem>
-							<para>By default, <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> are allowed in Private Messages.</para>
+							<para>Standaard zijn <glossterm>BBCode</glossterm> en <glossterm>Smilies</glossterm> toegestaan in privéberichten.</para>
 							<tip>
-								<para>Even if enabled, you can still disallow users or groups to use <glossterm>BBCode</glossterm> and <glossterm>Smilies</glossterm> in Private Messages through <link linkend="acp_permissions">Permissions</link>.</para>
+								<para>Zelfs als dit is ingeschakeld, kan je nog steeds gebruikers of groepen verbieden dat ze <glossterm>BBCode</glossterm> en <glossterm>Smilies</glossterm> mogen gebruiken in hun privéberichten door middel van de <link linkend="acp_permissions">Permissies</link>.</para>
 							</tip>
 						</listitem>
 						<listitem>
-							<para>We don't allow attachments by default. Further settings for attachments in Private Messages are in the <link linkend="acp_board_attachments">Attachment Settings</link>. There you can define the number of attachments per message for instance.</para>
+							<para>We laten standaard geen bijlagen toe in privéberichten. Verdere instellingen voor bijlagen in privéberichten kan je vinden in de <link linkend="acp_board_attachments">Bijlageninstellingen</link>. Daar kan je bijvoorbeeld het aantal bijlagen per bericht bepalen.</para>
 						</listitem>
 					</itemizedlist>
 				</para>
@@ -384,7 +384,7 @@
 				
 				<variablelist>
 					<varlistentry>
-						<term>Automatischi aanmelden toestaan</term>
+						<term>Automatisch aanmelden toestaan</term>
 						<listitem>
 							<para>Dit bepaald of een gebruiker automatisch wordt aangemeld, wanneer ze het forum bezoeken.</para>
 							<para>De beschikbare opties zijn <guilabel>Ja</guilabel> en <guilabel>Nee</guilabel>. Door <guilabel>Ja</guilabel> te kiezen zal automatisch aanmelden ingeschakeld zijn.</para>
@@ -907,11 +907,11 @@
 			</sectioninfo>
 			<title>Extensiebeheer</title>
 			
-			<para>You can further configure your board's attachments settings by controlling what file extensions attached files can have to be uploaded. It is recommended that you do not allow scripting file extensions (such as php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, and so forth) for security reasons. You can find this page by clicking <guimenuitem>Manage extensions</guimenuitem> once you're in the <glossterm>ACP</glossterm>.</para>
+			<para>Je kan je forum bijlagen instellingen verder instellen door te controleren welke bestandsextensies bijgevoegde bestanden kunnen hebben om geüpload te kunnen worden. Het is aanbevolen dat je geen enkele script taalextensie (zoals php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, etc.) toestaat vanwege veiligheidsredenen. Je kan deze pagina vinden door te klikken op <guimenuitem>Extensiebeheer</guimenuitem> wanneer je in de <glossterm>beheerderspaneel</glossterm> bent.</para>
 			
-			<para>To add an allowed file extension, find the <guilabel>Add Extension</guilabel> form on the page. In the field labeled <guilabel>Extension</guilabel>, type in the file extension. Do not include the period before the file extension. Then, select the extension group that this new file extension should be added to via the <guilabel>Extension group</guilabel> selection menu. Then, click <guilabel>Submit</guilabel>.</para>
+			<para>Om een toegestaande bestandsextensie toe te voegen, zoek de <guilabel>Extensie toevoegen</guilabel> formulier op de pagina. In het veld genaamd <guilabel>Extensie</guilabel>, type de bestandsextensie in. Voer niet de punt in die voor de bestandsextensie staat. Selecteer daarna de extensiegroep waar deze nieuwe bestandsextensie aan toegevoegd dient te worden, via de <guilabel>Extensiegroep</guilabel> selectie menu. Klik daarna op <guilabel>Versturen</guilabel> om het op te slaan.</para>
 		
-			<para>You can also view your board's current allowed file extensions. On the page, you should see a table listing all of the allowed file extensions. To change the group that an extension belongs to, select a new extension group from the selection menu located in the extension's row. To delete an extension, check the checkbox in the <guilabel>Delete</guilabel> column. When you're done managing your board's current file extensions, click <guilabel>Submit</guilabel> at the bottom of the page.</para>
+			<para>Je kan ook je bestaande toegestaande forum bestandsextensie bekijken. Op de pagina zal je een tabel zien met alle toegestaande bestandsextensies. Om de groep te veranderen waartoe een extensie behoort, selecteer dan een nieuwe extensiegroep in de selectie menu dat in de extensierij staat. Om een extensie te verwijderen, vink het vakje aan in de <guilabel>Verwijderen</guilabel> kolom. Wanneer je klaar bent met het beheren van je bestaande forum bestandsextensies, klik op <guilabel>Versturen</guilabel> onderaan de pagina om je wijzigingen op te slaan.</para>
 		</section>
 		
 		<section id="acp_attach_extension_groups">
@@ -924,25 +924,25 @@
 			</sectioninfo>
 			<title>Extensiegroepen beheren</title>
 			
-			<para>Allowed file extensions can be placed into groups for easy management and viewing. To manage the extension groups, click <guimenuitem>Manage extension groups</guimenuitem> once you get into the <guilabel>Posting</guilabel> settings part of the <glossterm>ACP</glossterm>. You can configure specific settings regarding each extension group.</para>
+			<para>Toegestaande bestandsextensies kunnen geplaatst worden in een groep om gemakkelijk te kunnen beheren en te bekijken. Om de extensiegroepen te beheren, klik op <guimenuitem>Extensiegroepen beheren</guimenuitem> wanneer je op de <guilabel>Berichten</guilabel> instellingen pagina bent van het <glossterm>Beheerderspaneel</glossterm>. Je kan bepaalde instellingen configureren betreffende een bepaalde extensiegroep.</para>
 			
-			<para>To add a new file extension group, find the textbox that corresponds to the <guilabel>Create new group</guilabel> button. Type in the name of the extension group, then click <guilabel>Submit</guilabel>. You will be greeted with the extension group settings form. The following contains descriptions for each option available, and applies to extension groups that either already exist or are being added.</para>
+			<para>Om een nieuwe bestandsextensie groep toe te voegen, zoek de tekstvak dat overeenkomt met <guilabel>Nieuwe groep aanmaken</guilabel>. Vul de naam in van de extensiegroep, en klik op <guilabel>Versturen</guilabel>. Een extensiegroep instellingenformulier zal nu worden weergegeven. Het volgende bevat beschrijvingen voor iedere optie die beschikbaar is, en bestemt zijn voor extensiegroepen die al bestaan of toegevoegd worden.</para>
 		
 			<itemizedlist>
-				<title>Add Extension Group</title>
-				<listitem><para><guilabel>Group name</guilabel>: The name of the extension group.</para></listitem>
-				<listitem><para><guilabel>Special category</guilabel>: Files in this extension group can be displayed differently. Select a special category from this selection menu to change the way the attachments in this extension group is presented within a post.</para></listitem>
-				<listitem><para><guilabel>Allowed</guilabel>: Enable this if you want to allow attachments that belong in this extension group.</para></listitem>
-				<listitem><para><guilabel>Allowed in private messaging</guilabel>: Enable this if you want to allow attachments that belong in this extension group in private messages.</para></listitem>
-				<listitem><para><guilabel>Upload icon</guilabel>: The small icon that is displayed next to all attachments that belong in this extension group.</para></listitem>
-				<listitem><para><guilabel>Maximum filesize</guilabel>: The maximum filesize for attachments in this extension group.</para></listitem>
-				<listitem><para><guilabel>Assigned extensions</guilabel>: This is a list of all file extensions that belong in this extension group. Click <guilabel>Go to extension management screen</guilabel> to manage what extensions belong in this extension group.</para></listitem>
-				<listitem><para><guilabel>Allowed forums</guilabel>: This allows you to control what forums your users are allowed to post attachments that belong in this extension group. To enable this extension group in all forums, select the <guilabel>Allow all forums</guilabel> radio button. To set which specific forums this extension group is allowed in, select the <guilabel>Only forums selected below</guilabel> radio button, and then select the forums in the selection menu.</para></listitem>
+				<title>Extensiegroep toevoegen</title>
+				<listitem><para><guilabel>Groepsnaam</guilabel>: De naam van de extensiegroep.</para></listitem>
+				<listitem><para><guilabel>Speciale categorie</guilabel>: Bestanden in deze extensiegroep kunnen verschillend weergegeven worden. Selecteer een speciale categorie uit dit selectie menu om de manier te veranderen waarop de bijlagen in deze extensiegroep getoond worden in een bericht.</para></listitem>
+				<listitem><para><guilabel>Toegestaan</guilabel>: Schakel dit in als je bijlagen wilt toestaan die bij deze extensiegroep horen.</para></listitem>
+				<listitem><para><guilabel>Toegestaan in privéberichten</guilabel>: Schakel dit in als je bijlagen wilt toestaan in privéberichten die bij deze extensiegroep horen.</para></listitem>
+				<listitem><para><guilabel>Upload-pictogram</guilabel>: Het kleine pictogram dat getoond word naast alle bijlagen die bij deze extensiegroep horen.</para></listitem>
+				<listitem><para><guilabel>Maximale bestandsgrootte</guilabel>: De maximale bestandsgrootte voor bijlagen van deze extensiegroep.</para></listitem>
+				<listitem><para><guilabel>Toegewezen extensies</guilabel>: Dit is een lijst van alle bestandsextensies die behoren bij deze extensiegroep. Klik op de <guilabel>Naar het extensiebeheer gaan</guilabel> om de extensies te beheren die bij deze extensiegroep horen.</para></listitem>
+				<listitem><para><guilabel>Toegestaande forums</guilabel>: Dit stelt je in staat om te controleren in welke forums je gebruikers toegestaan zijn om bijlagen te plaatsen die behoren tot deze extensiegroep. Om deze extensiegroep in te schakelen voor alle forums, selecteer dan de <guilabel>Toestaan in alle forums</guilabel> radioknop boven de lijst. Om in te stellen voor welke specifieke forums deze extensiegroep is toegestaan, selecteer de <guilabel>Alleen de forums hieronder zijn geselecteerd</guilabel> radioknop, en selecteer dan de forums in het selectie menu. Hou in de gaten dat je meerdere forums kan selecteren door de CTRL-knop ingedrukt te houden en met de muis de gewenste forums aan te klikken</para></listitem>
 			</itemizedlist>
 			
-			<para>To edit a current file extension group's settings, click the "Settings" icon that is in the extension group's row. Then, go ahead and edit the extension group's settings. For more information about each setting, see the above.</para>
+			<para>Om een bestaande extensiegroep instellingen te bewerken, klik dan op de groene "Wijzigen" icoon dat is geplaatst in de extensiegroepsrij. Voor meer informatie over iedere instelling, bekijk dan de paragraaf hierboven.</para>
 		
-			<para>To delete an extension group, click the "Delete" icon that is in the extension group's row.</para>
+			<para>Om een extensiegroep te verwijderen, klik dan op de rode "Verwijder" icoon dat is geplaatst in de extensiegroepsrij.</para>
 		</section>
 		
 		<section id="acp_attach_orphaned">
@@ -953,11 +953,11 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Bijlagen zonder plek</title>
+			<title>Berichtloze bijlagen</title>
 			
-			<para>Sometimes, attachments may be orphaned, which means that they exist in the specified files directory (to configure this directory, see the section on <link linkend="acp_attach_settings">attachment settings</link>), but aren't assigned to any post(s). This can happen when posts are deleted or edited, or even when users attach a file, but don't submit their post.</para>
+			<para>Soms kunnen bijlagen berichtloos zijn, wat betekend dat ze bestaan in de gespecificeerde bestandenmap (om deze map in te stellen, bekijk hoofdstuk over <link linkend="acp_attach_settings">Bijlageninstellingen</link>), maar zijn niet toegewezen aan een bericht. Dit kan gebeuren wanneer berichten verwijderd worden, of aangepast, of zelfs wanneer gebruikers een bestand bijvoegen, maar hun bericht niet versturen.</para>
 			
-			<para>To manage orphaned attachments, click on <guimenuitem>Orphaned attachments</guimenuitem> on the left-hand menu once you're in the <guimenuitem>Posting</guimenuitem> settings section of the <glossterm>ACP</glossterm>. You should see a list of all orphaned attachments in the table, along with all the important information regarding each orphaned attachment.</para>
+			<para>Om berichtloze bijlagen te beheren, klik op de <guimenuitem>Berichtloze bijlagen</guimenuitem> in de linkerkant menu wanneer je in de <guimenuitem>Berichten</guimenuitem> instellingen hoofdstuk bent van het <glossterm>Beheerderspaneel</glossterm>. You should see a list of all orphaned attachments in the table, along with all the important information regarding each orphaned attachment.</para>
 			
 			<para>You can assign an orphaned post to a specific post. To do so, you must first find the post's post ID. Enter this value into the <guilabel>Post ID</guilabel> column for the particular orphaned attachment. Enable <guilabel>Attach file to post</guilabel>, then click <guilabel>Submit</guilabel>.</para>
 		
