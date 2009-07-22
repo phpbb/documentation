@@ -957,11 +957,11 @@
 			
 			<para>Soms kunnen bijlagen berichtloos zijn, wat betekend dat ze bestaan in de gespecificeerde bestandenmap (om deze map in te stellen, bekijk hoofdstuk over <link linkend="acp_attach_settings">Bijlageninstellingen</link>), maar zijn niet toegewezen aan een bericht. Dit kan gebeuren wanneer berichten verwijderd worden, of aangepast, of zelfs wanneer gebruikers een bestand bijvoegen, maar hun bericht niet versturen.</para>
 			
-			<para>Om berichtloze bijlagen te beheren, klik op de <guimenuitem>Berichtloze bijlagen</guimenuitem> in de linkerkant menu wanneer je in de <guimenuitem>Berichten</guimenuitem> instellingen hoofdstuk bent van het <glossterm>Beheerderspaneel</glossterm>. You should see a list of all orphaned attachments in the table, along with all the important information regarding each orphaned attachment.</para>
+			<para>Om berichtloze bijlagen te beheren, klik op de <guimenuitem>Berichtloze bijlagen</guimenuitem> in de linkerkant menu wanneer je in de <guimenuitem>Berichten</guimenuitem> instellingen hoofdstuk bent van het <glossterm>Beheerderspaneel</glossterm>. Je zal nu een lijst zien van elle berichtloze bijlagen, samen met alle belangrijke informatie over iedere berichtloze bijlage.</para>
 			
-			<para>You can assign an orphaned post to a specific post. To do so, you must first find the post's post ID. Enter this value into the <guilabel>Post ID</guilabel> column for the particular orphaned attachment. Enable <guilabel>Attach file to post</guilabel>, then click <guilabel>Submit</guilabel>.</para>
+			<para>Je kan een berichtloze bijlage toewijzen aan een specifiek bericht. Om dit te doen, moet je eerst het bericht zijn bericht-ID vinden. Voer deze waarde in de <guilabel>Bericht-ID</guilabel> kolom in voor de bepaalde berichtloze bijlage. Schakel <guilabel>Bijlage toevoegen aan het bericht</guilabel> in, en klik op <guilabel>Versturen</guilabel>.</para>
 		
-			<para>To delete an orphaned attachment, check the orphaned attachment's <guilabel>Delete</guilabel> checkbox, then click <guilabel>Submit</guilabel>. Note that this cannot be undone.</para>
+			<para>Om een berichtloze bijlage te verwijderen, schakel <guilabel>Verwijderen</guilabel> in en klik op <guilabel>Versturen</guilabel>. Hou in de gaten dat deze actie niet ongedaan gemaakt kan worden.</para>
 		</section>
 	</section>
 
@@ -980,14 +980,14 @@
 		<title>Gebruikersbeheer</title>
 
 		<section id="acp_users_manage">
-			<title>Manage Users</title>
-			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
+			<title>Gebruikersbeheer</title>
+			<para>Gebruikers zijn de basis van je forum. Als een forum administrator is het erg belangrijk dat je je gebruikers kan beheren. Het beheren van je gebruikers, hun informatie en hun specifike opties is gemakkelijk, en kan gedaan worden via het <acronym>Beheerderspaneel</acronym>.</para>
 				
-			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem> to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
+			<para>Om te beginnen, meld je aan en ga naar je <acronym>Beheerderspaneel</acronym>. Klik op de <guimenuitem>Gebruikers en Groepen</guimenuitem> tabblad om de benodigde pagina te openen. Klik op het <guimenuitem>Gebruikersbeheer</guimenuitem> link in het navigatie menu aan de linkerkant van de pagina.</para>
 				
-			<para>To continue and manage a user, you must know the username(s) that you want to manage. In the textbox for the <guilabel>"Find a member:"</guilabel> field, type in the username of the user whose information and settings you wish to manage. On the other hand, if you want to find a member, click on <guilabel>[ Find a Member ]</guilabel> (which is below the textbox) and follow all the steps appropriate to find and select a user. If you wiant to manage the information and settings for the Anonymous user (any visitor who is not logged in is set as the Anonymous user), check the checkbox labeled <guilabel>"Select Anonymous User"</guilabel>. Once you have selected a user, click <guilabel>Submit</guilabel>.</para>
+			<para>Om door te gaan en een gebruiker te beheren, moet je de gebruikersnaam weten die je wilt beheren. In het tekstvlak na de <guilabel>"Een gebruiker zoeken:"</guilabel> veld, type de gebruikersnaam in van de gebruiker die je wilt beheren. Aan de andere kant, als je een gebruiker wilt zoeken, klik dan op <guilabel>[ Een gebruiker zoeken ]</guilabel> (welke onder het tekstvak staat voor de gebruikersnaam) en volg de stappen op om een gebruiker te zoeken en te selecteren. Als je de informatie en instellingen voor de Gastgebruiker (iedere bezoeker die niet is aangemeld, wordt ingesteld als Gastgebruiker) wilt instellen, vink dan het vakje aan genaamd <guilabel>"Gastgebruiker selecteren"</guilabel>. Wanneer je een gebruiker hebt geselecteerd, klik dan op <guilabel>Versturen</guilabel>.</para>
 				
-			<para>There are many sections relating to a user's settings. The following are subsections that have more information on each form. Each form allows you to manage specific settings for the user you have selected. When you are done with editing the data on each form, click <guilabel>Submit</guilabel> (located at the bottom of each form) to submit your changes.</para>
+			<para>Er zijn vele hoofdstukken die gerelateerd zijn aan gebruikersinstellingen. Het volgende zijn subsecties die meer informatie bevatten over ieder formulier. Ieder formulier staat je toe om een specifieke instelling voor de gebruiker te beheren die je hebt geselecteerd. Wanneer je klaar bent met het aanpassen van de data van ieder formulier, klik dan op <guilabel>Versturen</guilabel> (onderaan iedere forumlier) om je veranderingen door te voeren.</para>
 			
 			<section id="acp_users_manage_overview">
 				<sectioninfo>
@@ -997,94 +997,94 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Overview</title>
-				<para>This is the first form that shows up when you first select a user to manage. Here, all of the general information and settings for each user is displayed.</para>
+				<title>Gebruikers overzicht</title>
+				<para>Dit is het eerste formulier dat getoond zal worden wanneer je een gebruiker hebt geselecteerd om te beheren. Hier zijn alle algemene informatie en instellingen voor de gebruiker getoond.</para>
 				
 				<variablelist>
 					<varlistentry>
 						<term>Gebruikersnaam</term>
 						<listitem>
-							<para>This is the name of the user you're currently managing. If you want to change the user's username, type in a new username between three and twenty characters long into the textbox labeled <guilabel>Username:</guilabel></para>
+						</listitem>
+							<para>Dit is de naam van de gebruiker die je op dit ogenblik aan het beheren bent. Als je de gebruikersnaam wilt veranderen, type dan een nieuwe gebruikersnaam, tussen de drie en twintig karakters lang, in het veld genaamd <guilabel>Gebruikersnaam</guilabel>:.</para>
+					</varlistentry>
+					
+					<varlistentry>
+						<term>Geregistreerd</term>
+						<listitem>
+							<para>Dit is de complete datum van wanneer de gebruiker is geregistreerd. Je kan deze waarde niet veranderen.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Registered</term>
+						<term>Geregistreerd vanaf IP-adres</term>
 						<listitem>
-							<para>This is the complete date on which the user registered. You cannot edit this value.</para>
+							<para>Dit is het <acronym>IP</acronym> adres van waar de gebruiker zijn of haar account heeft geregistreerd. Als je de hostnaam van het <acronym>IP</acronym> adres wilt bepalen, klik dan op het <acronym>IP</acronym> adres zelf. De bestaande pagina zal herladen en zal de gevraagde informatie weergeven. Als je een whois wilt uitvoeren op het <acronym>IP</acronym> adres, klik dan op <guilabel>[Whois]</guilabel> link. Een nieuw scherm zal verschijnen (pop-up) met deze informatie.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Registered from IP</term>
+						<term>Laatst actief</term>
 						<listitem>
-							<para>This is the <acronym>IP</acronym> address from which the user registered his or her account. If you want to determine the <acronym>IP</acronym> hostname, click on the <acronym>IP</acronym> address itself. The current page will reload and will display the appropriate information. If you want to perform a whois on the <acronym>IP</acronym> address, click on the <guilabel>Whois</guilabel> link. A new window will pop up with this data.</para>
+							<para>Dit is de volledige datum van wanneer de gebruiker voor het laatst actief was.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Last Active</term>
+						<term>Berichten</term>
 						<listitem>
-							<para>This is the complete date on which the user was last active.</para>
+							<para>Dit nummer geeft het aantal berichten weer die de gebruiker heeft geplaatst op het forum.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Posts</term>
+						<term>Waarschuwingen</term>
 						<listitem>
-							<para>This number indicates how many posts the user has posted on the board.</para>
+							<para>Dit nummer geeft het aantal waarschuwingen weer die de gebruiker heeft op dit moment.</para>
+							<para>Voor meer informatie over waarschuwingen, zie <xref linkend="mcp_warnings"/>.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Warnings</term>
+						<term>Oprichter</term>
 						<listitem>
-							<para>This is the number of warnings the user currently has.</para>
-							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
-						</listitem>
-					</varlistentry>
-					
-					<varlistentry>
-						<term>Founder</term>
-						<listitem>
-							<para>Founders are users who have all administrator permissions and can never be banned, deleted or altered by non-founder members. If you want to set this user as a founder, select the <guilabel>Yes</guilabel> radio button. To remove founder status from a user, select the <guilabel>No</guilabel> radio button.</para>
+							<para>Oprichters zijn gebruikers die alle administrator permissies hebben en nooit verbannen, verwijderd of aangepast kan worden door gebruikers zonder oprichterstatus. Als je deze gebruiker als oprichter wilt instellen, selecteer de <guilabel>Ja</guilabel> radioknop. Om oprichterstatus te verwijderen van een gebruiker, selecteer de <guilabel>Nee</guilabel> radioknop.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
 						<term>E-mail</term>
 						<listitem>
-							<para>This is the user's currently set email address. To change the email address, fill in the <guilabel>Email:</guilabel> textbox with a valid email.</para>
+							<para>Dit is de e-mailadres van de gebruiker op dit moment. Om het e-mailadres te veranderen, vul het tekstveld <guilabel>Email</guilabel>: in met een geldig e-mailadres.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Confirm email address</term>
+						<term>E-mailadres bevestigen</term>
 						<listitem>
-							<para>This textbox should only be filled if you are changing the user's email address. If you are changing the email address, both the <guilabel>Email:</guilabel> textbox and this one should be filled with the same email address. If you do not fill this in, the user's email address will not be changed.</para>
+							<para>Deze tekstvak moet alleen ingevuld worden als je de gebruikers e-mailadres veranderd hebt. Als je het e-mailadres aan het veranderen bent, moeten het <guilabel>Email</guilabel>: tekstvak en deze ingevuld worden met hetzelfde e-mailadres. Als je dit niet invuld, zal het gebruikers e-mailadres niet veranderd worden.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
 						<term>Nieuw wachtwoord</term>
 						<listitem>
-							<para>As an administrator, you cannot see any of your users' password. However, it is possible to change passwords. To change the user's password, type in a new password in the <guilabel>New password:</guilabel> textbox. The new password has to be between six and thirty characters long.</para>
+							<para>Als een administrator, kan je geen enkel wachtwoord van je gebruikers zien. Het is echter mogelijk om wachtwoorden te veranderen. Om een wachtwoord van een gebruiker te veranderen, type dan een nieuw wachtwoord in het veld <guilabel>Nieuw wachtwoord</guilabel>:. Het nieuwe wachtwoord moet tussen de zes en dertig karakters lang zijn.</para>
 						
-							<important><para>Before submitting any changes to the user, make sure this field is blank, unless you really want to change the user's password. If you accidentally change the user's password, the original password cannot be recovered!</para></important>
+							<important><para>Voordat je iedere verandering van de gebruiker wilt versturen, wees er dan zeker van dat dit veld leeg is, tenzij je daadwerkelijk het wachtwoord van de gebruiker wilt veranderen. Als je per ongeluk het wachtwoord van de gebruiker veranderd, kan het originele wachtwoord niet terug gehaald worden!</para></important>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Confirm new password</term>
+						<term>Wachtwoord bevestigen</term>
 						<listitem>
-							<para>This textbox should only be filled if you are changing the user's password. If you are changing the user's password, the <guilabel>Confirm new password:</guilabel> textbox needs to be filled in with the same password you filled in in the above <guilabel>New password:</guilabel> textbox.</para>
+							<para>Dit tekstvak moet alleen ingevuld worden als je het wachtwoord van de gebruiker aan het veranderen bent. Als je het wachtwoord van de gebruiker aan het veranderen bent, de <guilabel>Wachtwoord bevestigen</guilabel>: tekstvak moet dan ingevuld worden met hetzelfde wachtwoord dat je ingevuld hebt bij <guilabel>Wachtwoord</guilabel>: tekstvak.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Quick Tools</term>
+						<term>Snelle hulpmiddelen</term>
 						<listitem>
-							<para>The options in the <guilabel>Quick Tools</guilabel> drop-down selection box allow you to quickly and easily change one of the user's options. The available options are <guilabel>Delete Signature</guilabel>, <guilabel>Delete Avatar</guilabel>, <guilabel>Move all Posts</guilabel>, <guilabel>Delete all Posts</guilabel>, and <guilabel>Delete all attachments</guilabel>.</para>
+							<para>De opties in de <guilabel>Snelle hulpmiddelen</guilabel> selectie vak staan je toe om snel en gemakkelijk één van de opties van de gebruiker te veranderen. De beschikbare opties zijn: <guilabel>Onderschrif verwijderen</guilabel>, <guilabel>Avatar verwijderen</guilabel>, <guilabel>Alle berichten verplaatsen</guilabel>, <guilabel>Alle berichten verwijderen</guilabel>, en <guilabel>Alle bijlagen verwijderen</guilabel>.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -1098,7 +1098,7 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Feedback</title>
+				<title>Gebruikersfeedback</title>
 				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
 				
 				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued. <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
