@@ -1099,11 +1099,11 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Gebruikersfeedback</title>
-				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
+				<para>Een ander aspect van het beheren van een gebruiker is het aanpassen van hun feedback data. Feedback bestaat uit iedere soort van gebruikerswaarschuwing die aan de gebruiker is uitgedeeld door een forumadministrator.</para>
 				
-				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued. <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
+				<para>Om de weergave van de bestaande gebruikers logboekitems aan te passen, selecteer een criteria van je aanpassing door het selecteren van je opties in de drop-down selectie vakken genaamd<guilabel>Weergaveopties van vorige:</guilabel> en <guilabel>Sorteer op:</guilabel>. <guilabel>Weergaveopties van vorige:</guilabel> staat je toe om een specifieke tijdsperiode in te stellen waarin de feedback was gegeven. <guilabel>Sorteer op:</guilabel> staat je toe om de bestaande logboekitems te sorteren op <guimenuitem>Gebruikersnaam</guimenuitem>, <guimenuitem>Datum</guimenuitem>, <guimenuitem>IP-adres</guimenuitem>, en <guimenuitem>Logboekactie</guimenuitem>. De logboekitems kunnen dan oplopend of aflopend gesorteerd worden. Wanneer je klaar bent met het instellen van deze opties, klik dan op de <guilabel>Ok</guilabel> knop om de pagina met je aanpassingen bij te werken.</para>
 			
-				<para>Another way of managing a user's feedback data is by adding feedback. Simply find the section entitled <guilabel>Add feedback</guilabel> and enter your message into the <guilabel>FEEDBACK</guilabel> text area. When you are done, click <guilabel>Submit</guilabel> to add the feedback.</para>
+				<para>Een andere manier van het beheren van gebruikers feedback data is door het toevoegen van feedback. Zoek het gedeelte genaamd <guilabel>Feedback toevoegen</guilabel> en vul je bericht in in het <guilabel>Feedback</guilabel> tekstvak. Wanneer je klaar bent, klik dan op <guilabel>Versturen</guilabel> om de feedback toe te voegen.</para>
 			</section>
 			
 			<section id="acp_users_manage_profile">
@@ -1116,18 +1116,18 @@
 				</sectioninfo>
 				<title>Gebruikersprofiel</title>
 				
-				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
+				<para>Gebruikers kunnen soms inhoud op hun profiel hebben staan, dat van jou vraag om het aan te passen of te verwijderen. Als je geen veld wilt veranderen, laat het dan leeg. Het volgende zijn de profielvelden die je kan veranderen:
 					<itemizedlist>
-						<listitem><para><guilabel>ICQ Number</guilabel> has to be a number at least three digits long.</para></listitem>
-						<listitem><para><guilabel>AOL Instant Messenger</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>MSN Messenger</guilabel> can have any alphanumeric characters, but should look similar to an email address (joebloggs@example.com).</para></listitem>
-						<listitem><para><guilabel>Yahoo Messenger</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Jabber address</guilabel> can have any alphanumeric characters, but needs to look like an email address would (joebloggs@example.com).</para></listitem>
-						<listitem><para><guilabel>Website</guilabel> can have any alphanumeric characters and symbols, but must have the protocol included (ex. http://www.example.com).</para></listitem>
-						<listitem><para><guilabel>Location</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Occupation</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Interests</guilabel> can have any alphanumeric characters and symbols.</para></listitem>
-						<listitem><para><guilabel>Birthday</guilabel> can be set with three different drop-down selection boxes: <guilabel>Day:</guilabel>, <guilabel>Month:</guilabel>, and <guilabel>Year:</guilabel>, respectively. Setting a year will list the user's age when it is his or her birthday.</para></listitem>
+						<listitem><para><guilabel>ICQ-nummer</guilabel> moet een nummer zijn van minstens drie cijfers lang.</para></listitem>
+						<listitem><para><guilabel>AOL Instant Messenger</guilabel> kan zowel iedere letter als cijfer hebben.</para></listitem>
+						<listitem><para><guilabel>MSN Messenger/WLM</guilabel> kan iedere letter hebben, maar moet lijken op een e-mailadres (hierjenaam@voorbeeld.nl).</para></listitem>
+						<listitem><para><guilabel>Yahoo Messenger</guilabel> kan zowel iedere letter als symbool hebben.</para></listitem>
+						<listitem><para><guilabel>Jabber-adres</guilabel> kan iedere letter hebben, maar moet lijken op een e-mailadres (hierjenaam@voorbeeld.nl).</para></listitem>
+						<listitem><para><guilabel>Website</guilabel> kan iedere letter en symbool hebben, maar moet het protocol bezitten (bv. http://www.voorbeeld.nl).</para></listitem>
+						<listitem><para><guilabel>Woonplaats</guilabel> kan zowel iedere letter als symbool hebben.</para></listitem>
+						<listitem><para><guilabel>Beroep</guilabel> kan zowel iedere letter als symbool hebben.</para></listitem>
+						<listitem><para><guilabel>Interesses</guilabel> kan zowel iedere letter als symbool hebben.</para></listitem>
+						<listitem><para><guilabel>Verjaardag</guilabel> kan ingesteld worden in drie verschillende drop-down selectie vakken, respectievelijk: <guilabel>Dag:</guilabel>, <guilabel>Maand:</guilabel>, en <guilabel>Jaar:</guilabel>. Het instellen van een jaar zal de gebruikers leeftijd tonen wanneer hij of zij jarig is.</para></listitem>
 					</itemizedlist>
 				</para>
 			</section>
@@ -1140,9 +1140,9 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>User Preferences</title>
+				<title>Gebruikersvoorkeuren</title>
 				
-				<para>Users have many settings they can use for their account. As an administrator, you can change any of these settings. The user settings (also known as preferences) are grouped into three main categories: <guilabel>Global Settings</guilabel>, <guilabel>Posting Defaults</guilabel>, and <guilabel>Display Options</guilabel>.</para>
+				<para>Gebruikers hebben vele instellingen, die ze kunnen gebruiken voor hun account. Als een administrator, kan je iedere instelling veranderen. De gebruikersinstellingen (ook wel bekend als voorkeuren) zijn gegroepeerd in drie hoofcategorieën: <guilabel>Algemene instellingen</guilabel>, <guilabel>Berichtstandaardwaarden</guilabel>, en <guilabel>Weergaveopties</guilabel>.</para>
 			</section>
 			
 			<section id="acp_users_manage_avatar">
@@ -1155,13 +1155,13 @@
 				</sectioninfo>
 				<title>Gebruikers-avatar</title>
 				
-				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
-				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
+				<para>Hier kan je de gebruikers <glossterm>avatar</glossterm> beheren. Als de gebruiker al een avatar heeft ingesteld, dan kan je die zien als avatar afbeelding.</para>
+				<para>Afhankelijk van je avatarinstellingen (voor meer informatie over avatarinstellinge, bekijk <link linkend="acp_board_avatars">Avatar-instellingen</link>), je kan iedere beschikbare optie kiezen om de gebruikers avatar te veranderen: <guilabel>Upload vanaf je computer</guilabel>, <guilabel>Upload vanaf een URL</guilabel>, of <guilabel>Extern linken</guilabel>. Je kan ook een avatar kiezen uit je forums avatar gallerij door te klikken op de <guilabel>Gallerij weergeven</guilabel> knop naast de <guilabel>Locale gallerij:</guilabel> te klikken.</para>
 				<note>
-					<para>The changes you make to the user's avatar still has to comply with the limitations you've set in the avatar settings.</para>
+					<para>De veranderingen die je maakt aan de gebruikers avatar moeten nog steeds overeenkomen met de limieten die je hebt ingesteld in de avatar-instellingen.</para>
 				</note>
-				<para>To delete the avatar image, simply check the <guilabel>Delete image</guilabel> checkbox underneath the avatar image.</para>
-				<para>When you are done choosing what avatar the user will have, click <guilabel>Submit</guilabel> to update the user's avatar.</para>
+				<para>Om de avatar afbeelding te verwijderen, vink dan de <guilabel>Afbeelding verwijderen</guilabel> vakje onder aan de avatar afbeelding.</para>
+				<para>Wanneer je klaar bent met het kiezen van welke avatar de gebruiker zal hebben, klik <guilabel>Versturen</guilabel> om de gebruikers avatar bij te werken.</para>
 			</section>
 			
 			<section id="acp_users_manage_rank">
@@ -1174,8 +1174,8 @@
 				</sectioninfo>
 				<title>Gebruikersrang</title>
 				
-				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
-				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
+				<para>Hier kan je de gebruikers<glossterm>rang</glossterm> instellen. Je kan de gebruikersrang instellen door de rang te selecteren uit de <guilabel>Gebruikersrang:</guilabel> drop-down selectievak. Nadat je een rang hebt geselecteerd, klik op <guilabel>Versturen</guilabel> om de gebruikersrang bij te werken.</para>
+				<para>Voor meer informatie over rangen, bekijk <xref linkend="acp_user_ranks"/>.</para>
 			</section>
 			
 			<section id="acp_users_manage_signature">
@@ -1188,10 +1188,10 @@
 				</sectioninfo>
 				<title>Gebruikersonderschrift</title>
 				
-				<para>Here you can add, edit, or delete the user's <glossterm>signature</glossterm>.</para>
-				<para>The user's current signature should be displayed in the <guilabel>Signature</guilabel> form. Just edit the signature by typing whatever you want into the text area. You can use <glossterm>BBCode</glossterm> and any other special formatting with what's provided. When you are done editing the user's signature, click <guilabel>Submit</guilabel> to update the user's signature.</para>
+				<para>Hier kan je het gebruikers<glossterm>onderschrift</glossterm> toevoegen, aanpassen, verwijderen.</para>
+				<para>Het gebruikersonderschrift zal getoond worden in het <guilabel>Onderschrift</guilabel> formulier. Verander het onderschrift door te typen wat je wilt in het tekstvak. Je kan <glossterm>BBCode</glossterm> gebruiken en ieder andere speciale formaten die zijn meegeleverd. Wanneer je klaar bent met het aanpassen van het gebruikersonderschrift, klik op <guilabel>Versturen</guilabel> om de het gebruikersonderschrift bij te werken.</para>
 				<note>
-					<para>The signature that you set has to obey the board's signature limitations that you currently have set.</para>
+					<para>De onderschrift die je hebt ingesteld moet voldoen aan de forum onderschrift instellingen die je op dit moment hebt ingesteld.</para>
 				</note>
 			</section>
 			
@@ -1203,11 +1203,11 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Groepen</title>
+				<title>Gebruikersgroepen</title>
 				
-				<para>Here you can see all of the <glossterm>usergroups</glossterm> that the user is in. From this page you can easily remove the user from any usergroup, or add the user to an existing group. The table entitled <guilabel>Special groups user is a member of</guilabel> lists out the usergroups the user is currently a member of.</para>
-				<para>Adding the user to a new usergroup is very easy. To do so, find the pull-down menu labeled <guilabel>Add user to group:</guilabel> and select a usergroup from that menu. Once the usergroup is selected, click <guilabel>Submit</guilabel>. Your addition will immediately take effect.</para>
-				<para>To delete the user from a group he/she is currently a member of, find the row that the usergroup is in, and click <guilabel>Delete</guilabel>. You will be greeted with a confirmation screen; if you want to go ahead and do so, click <guilabel>Yes</guilabel>.</para>
+				<para>Hier kan je alle <glossterm>gebruikersgroepen</glossterm> zien waar de gebruiker lid van is. Via deze pagina kan je de gebruiker makkelijk verwijderen van iedere gebruikersgroep, of de gebruiker aan een bestaande groep toevoegen. De tabel genaamd <guilabel>Deze gebruiker is lid van de volgende ingestelde gebruikersgroepen</guilabel> toont alle gebruikersgroepen waar de gebruiker op dit moment lid van is.</para>
+				<para>De gebruiker toevoegen aan een nieuwe gebruikersgroep is erg gemakkelijk. Om dit te doen, zoek de drop-down menu genaamd <guilabel>Een gebruiker toevoegen aan de groep:</guilabel> en selecteer een gebruikersgroep uit het menu. Wanneer de gebruikersgroep is geselecteerd, klik op <guilabel>Versturen</guilabel>. Je toevoeging zal onmiddelijk plaats vinden.</para>
+				<para>Om de gebruiker te verwijderen uit een groep waarvan hij/zij lid van is, zoek je de rij op waar de gebruikersgroep staat, en klik op <guilabel>Verwijderen</guilabel>. Je zal nu een bevestigingsscherm zien; als je door wilt gaan met het verwijderen, klik op <guilabel>Ja</guilabel>.</para>
 			</section>
 			
 			<section id="acp_users_manage_permissions">
@@ -1220,7 +1220,7 @@
 				</sectioninfo>
 				<title>Permissies</title>
 				
-				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
+				<para>Hier kan je alle permissies zien die op dit moment ingesteld zijn voor de gebruiker. Voor iedere groep waar de gebruiker lid van is, is een aparte gedeelte op de pagina voor de permissies die gerelateerd zijn aan die categorie. Om daadwerkelijk de gebruikerspermissies in te stellen, bekijk <xref linkend="acp_permissions"/>.</para>
 			</section>
 			
 			<section id="acp_users_manage_attachments">
@@ -1233,11 +1233,11 @@
 				</sectioninfo>
 				<title>Bijlagen</title>
 				
-				<para>Depending on the current attachments settings, your users may already have <glossterm>attachments</glossterm> posted. If the user has already uploaded at least one attachment, you can see the listing of the attachment(s) in the table. The data available for each attachment consist of: <guilabel>Filename</guilabel>, <guilabel>Topic title</guilabel>, <guilabel>Post time</guilabel>, <guilabel>Filesize</guilabel>, and <guilabel>Downloads</guilabel>.</para>
-				<para>To help you in managing the user's attachment(s), you can choose the sorting order of the attachments list. Find the <guilabel>Sort by:</guilabel> pull-down menu and pick the category you want to use the sort the list (the possible options are <guimenuitem>Filename</guimenuitem>, <guimenuitem>Extension</guimenuitem>, <guimenuitem>Filesize</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Post time</guimenuitem>, and <guimenuitem>Topic title</guimenuitem>. To choose the sorting order, choose either <guimenuitem>Descending</guimenuitem> or <guimenuitem>Ascending</guimenuitem> from the pull-down menu besides the sorting category. Once you are done, click <guilabel>Go</guilabel>.</para>
-				<para>To view the attachment, click on the attachment's filename. The attachment will open in the same browser window. You can also view the topic in which the attachment was posted by clicking on the link besides the <guilabel>Topic:</guilabel> label, which is below the filename. Deleting the user's attachment(s) is very easy. In the attachments listing, check the checkboxes that are next to the attachment(s) you want to delete. When everything you want has been selected, click <guilabel>Delete marked</guilabel>, which is located below the attachments listing.</para>
+				<para>Afhankelijk van de bestaandew bijlageninstellingen, kunnen je gebruikers al <glossterm>bijlagen</glossterm> geplaatst hebben. Als de gebruiker al minstens één bijlage heeft geüpload, kan je de lijst van bijlage(n) in de tabel zien. De beschikbare data voor iedere bijlage bestaat uit: <guilabel>Bestandsnaam</guilabel>, <guilabel>Onderwerptitel</guilabel>, <guilabel>Plaatsingstijd</guilabel>, <guilabel>Bestandsgrootte</guilabel>, en <guilabel>Downloads</guilabel>.</para>
+				<para>Om je te helpen bij het beheren van je gebruikersbijlage(n), kan je de sorteervolgorde kiezen van de bijlagenlijst. Vind de <guilabel>Sorteer op:</guilabel> drop-down menu en selecteer de categorie die je wilt gebruiken om de lijst te sorteren (de mogelijke opties zijn <guimenuitem>Bestandsnaam</guimenuitem>, <guimenuitem>Extensie</guimenuitem>, <guimenuitem>Bestandsgrootte</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Plaatsingstijd</guimenuitem>, en <guimenuitem>Onderwerptitel</guimenuitem>). Om de sorteervolgorde te kiezen, kies of <guimenuitem>Aflopend</guimenuitem> of <guimenuitem>Oplopend</guimenuitem> van de drop-down menu naast de sorteringscategorie. Wanneer je klaar bent, klik <guilabel>Ok</guilabel>.</para>
+				<para>Om de bijlage te bekijken, klik op de bestandsnaam. De bijlage zal geopend worden in dezelfde browserscherm. Je kan ook het onderwerp bekijken waarin de bijlage geplaatst is door te klikken op de link naast de <guilabel>Bericht:</guilabel> label, welke onder de bestandsnaam staat. Gebruikers bijlage(n) verwijderen is erg gemakkelijk. In de bijlagenlijst, selecteer de afvinkvakken die naast de bijlage(n) staan die je wilt verwijderen. Wanneer alles wat je wilt geselecteerd is, klik <guilabel>Gemarkeerde verwijderen</guilabel>, welke onder de bijlagenlijst staat.</para>
 				<tip>
-					<para>To select all of the attachments shown on the page, click the <guilabel>Mark all</guilabel> link, which is below the attachments listing. This helps especially if you want to delete all of the attachments shown on the page at once.</para>
+					<para>Om alle bijlagen te selecteren die getoond zijn op de pagina, klik op de <guilabel>Alles markeren</guilabel> link, welke onder de bijlagenlijst staat. Dit helpt vooral als je alle bijlagen die getoond worden op de pagina allemaal in één keer wilt verwijderen.</para>
 				</tip>
 			</section>
 		</section>
@@ -1250,38 +1250,38 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Inactieve gebruikers</title>
-			<para>Here you are able to view details of all users who are currently marked as inactive along with the reason their account is marked as inactive and when this occurred.</para>
-			<para>Using the checkboxes on this page it is possible to perform bulk actions on the users, these include activating the accounts, sending them a reminder email indicating that they need to activate their account or deleting the account.</para>
-			<para>There are 5 reasons which may be indicated for an account being inactive:</para>
+			<para>Hier kan je de details zien van alle gebruikers die op dit moment gemarkeerd zijn als inactief samen met de reden waarom hun account is gemarkeerd als inactief en wanneer dit gebreurd is.</para>
+			<para>Door gebruik te maken van de afvinkvakken op deze pagina is het mogelijk om bulk acties uit te voeren op deze gebruikers, Dit houd mede in het activeren van de accounts, het versturen van een herinnerings e-mail waarin staat dat ze hun account moeten activeren of het account te verwijderen.</para>
+			<para>Er zijn 5 redenen waarmee getoond kan worden dat een account inactief is:</para>
 			<variablelist>
 				<varlistentry>
-					<term>Account deactivated by administrator</term>
+					<term>Account gedeactiveerd door administrator</term>
 					<listitem>
-						<para>This account has been manually deactivated by an administrator via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
+						<para>Dit account is handmatig gedeactiveerd door een administrator via de <link linkend="acp_users_manage">gebruikersbeheergereedschap</link>. Meer details over wie deze actie heeft uitgevoerd en de reden kunnen beschikbaar zijn via de gebruikersnotities.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Profile details changed</term>
+					<term>Profieldetails gewijzigd</term>
 					<listitem>
-						<para>The board is configured to require user activation and this user has changed key information related to their account such as the email address and is required to reactivate the account to confirm these changes.</para>
+						<para>Het forum is zo ingesteld dat wanneer een gebruiker zijn sleutelinformatie, bijvoorbeeld het e-mailadres, heeft veranderd dat hij zich weer opnieuw moet activeren, om de veranderingen te bevestigen.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Newly registered account</term>
+					<term>Nieuw geregistreerde gebruiker</term>
 					<listitem>
-						<para>The board is configured to require user activation and either the user or an administrator (depending on the settings) has not yet activated this new account.</para>
+						<para>Het forum is zo ingesteld dat gebruikersactivatie benodigd is en of de gebruiker of een administrator (afhankelijk van de instelling) dit nog niet gedaan heeft voor dit nieuwe account.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Forced user account reactivation</term>
+					<term>Geforceerde gebruikersaccount heractivatie</term>
 					<listitem>
-						<para>An administrator has forced this user to reactivate their account via the <link linkend="acp_users_manage">user management tools</link>. More details on who performed this action and the reasons may be available via the User Notes.</para>
+						<para>Een administrator heeft deze gebruiker geforceerd zijn account te heractiveren via de <link linkend="acp_users_manage">gebruikersbeheer gereedschappen</link>. Meer informatie over wie deze actie heeft uitgevoerd en de reden waarom kunnen beschikbaar zijn via de gebruikersnotities.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Unknown</term>
+					<term>Onbekend</term>
 					<listitem>
-						<para>No reason was recorded for this user being inactive; it is likely that the change was made by an external application or that this user was added from another source.</para>
+						<para>Er is geen reden opgenomen voor het inactief zijn van deze gebruiker; het is waarschijnlijk dat de verandering is gedaan door een externe applicatie of dat deze gebruiker is toegevoegd via een andere bron.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
@@ -1296,14 +1296,14 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Gebruikerspermissies</title>
-			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
+			<para>Samen smet het beheren van gebruiker informatie, is het ook belangerijk om regelmatig permissies te controleren en bij te houden van de gebruikers op je forum. Gebruikerspermissies bevatten onder andere capabiliteiten zoals het gebruik van avatars en het versturen van privéberichten. Algemene moderator permissies bevatten de mogelijkeheden zoals het goedkeuren van berichten, het beheren van onderwerpen, en het beheren van verbanningen. Als laatste bevatten administrator permissies zaken zoals het aanpassen van permissies, het definieren van eigen BBCodes, en het beheren van forums.</para>
 
-			<para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
+			<para>Om te beginnen met het beheren van gebruikerspermissies, localiseer de <guimenuitem>Groepen en Gebruikers</guimenuitem> tab en klik op de <guimenuitem>Gebruikerspermissies</guimenuitem> in het menu aan de linkerkant. Hier kan je globale permissies aan gebruikers toewijzen. In de <guilabel>Een gebruiker zoeken</guilabel> veld, type de gebruikersnaam in van de gebruiker waarvan je de permissies wilt aanpassen. (Als je de gastgebruiker wilt aanpassen, vink dan de <guilabel>Gastgebruiker kiezen</guilabel> afvinkvak aan.) Klik op <guilabel>Versturen</guilabel>.</para>
 
-			<para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
+			<para>Permissies zijn gegroepeerd in drie verschillende categoriën: gebruiker, moderator, en administrator. Iedere gebruiker kan specifieke instellingen in iedere permissiecategorie hebben. Om het aanpassen van gebruikerspermissies te faciliteren, is het mogelijk om specifieke voorkeuze rollen toe te wijzen aan de gebruiker.</para>
 
 			<important>
-				<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
+				<para>Voor de volgende permissies wijzigingsacties die worden beschreven, zijn er drie keuzes waaruit je kan kiezen. Je kan kiezen uit <guilabel>Ja</guilabel>, <guilabel>Nee</guilabel>, of <guilabel>Nooit</guilabel>. Door het selecteren van <guilabel>Ja</guilabel> zal de geselecteerde permissie ingeschakeld worden voor de gebruiker, terwijl het selecteren van <guilabel>Nee</guilabel> de geselecteerde instelling zal uitschakelen voor de gebruiker, <emphasis>tenzij een andere permissie-instelling uit een ander gebied de instelling overtreft</emphasis>. Als je de gebruiker helemaal wilt verbieden om <emphasis>ooit</emphasis> gebruik te maken van de geselecteerde instelling, selecteer dan <guilabel>Nooit</guilabel>. De <guilabel>Nooit</guilabel> instelling zal alle andere waardes die aan de instelling zijn toegewezen overtreffen.</para>
 			</important>
 
 			<para>To edit the user's <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
