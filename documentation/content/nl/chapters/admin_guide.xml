@@ -1325,7 +1325,7 @@
 			
 			<para>Naast het wijzigen van de gebruikersaccount gerelateerde permissies, kan je ook hun forumpermissies wijzigen, welke gerelateerd zijn aan je forums. Forumpermissies zijn verschillend van gebruikerspermissies op een manier dat ze direct gereleateerd zijn aan en verbonden met de forums. <guimenuitem>Gebruikerspermissies voor forums</guimenuitem> staat je toe om je gebruikers forumpermissies te wijzigen. Als je dit doet, moet je onthouden dat je maar aan één  gebruiker per keer forumpermissies aan kan toewijzen.</para>
 		
-			<para>Om te beginnen met het wijzigen van een gebruiker zijn forumpermissies, type de naam van de gebruiker in de <guilabel>Een gebruiker zoeken</guilabel> tekstvak. Als je de forumpermissies van de gasten, ook wel gastgebruikers, vink dan de <guilabel>Gasgebruiker selecteren</guilabel> tekstvak aan. Klik op <guilabel>Versturen</guilabel> om door te gaan.</para>
+			<para>Om te beginnen met het wijzigen van een gebruiker zijn forumpermissies, type de naam van de gebruiker in de <guilabel>Een gebruiker zoeken</guilabel> tekstvak. Als je de forumpermissies van de gasten, ook wel gastgebruikers, vink dan de <guilabel>Gastgebruiker selecteren</guilabel> tekstvak aan. Klik op <guilabel>Versturen</guilabel> om door te gaan.</para>
 			
 			<figure id="img_acp_u_forum_permissions">
 				<title>Forums selecteren voor gebruikers forumpermissies</title>
@@ -1334,12 +1334,12 @@
 						<imagedata format="PNG" fileref="../images/admin_guide/users_forum_permissions.png"/>
 					</imageobject>
 					<caption>
-						<para>Selecting forums to assign forum permissions to users. In this example, the &quot;Cats&quot; and &quot;Dogs&quot; subforums (their parent forum is &quot;Pets&quot;) are selected. The user's forum permissions for these two forums will be edited/updated.</para>
+						<para>Het selecteren van forums om forumpermissies toe te wijzen aan gebruikers. In dit voorbeeld, de &quot;Katten&quot; en &quot;Honden&quot; subforums (hun hoofdforum is &quot;Dieren&quot;) zijn geselecteerd. De gebruikers forumpermissies voor deze twee forums zullen worden gewijzigd/bijgewerkt worden.</para>
 					</caption>
 				</mediaobject>
 			</figure>
 			
-			<para>You should now be able to assign forum permissions to the user. You now have two ways to assign forum permissions to the user: you may either select the forum(s) manually with a multiple selection menu, or select a specific forum or category, along with its associated subforums. Click <guilabel>Submit</guilabel> to continue with the forum(s) you have picked. Now, you should be greeted with the <guilabel>Setting permissions</guilabel> screen, where you can actually assign the forum permissions to the user. You should now select what kind of forum permissions you want to edit now; you may either edit the user's <guimenuitem>Forum permissions</guimenuitem> or <guimenuitem>Moderator permissions</guimenuitem>. Click <guilabel>Go</guilabel>. You should now be able to select the role to assign to the user for each forum you selected previously. If you would like to configure these permissions with more detail, click the <guilabel>Advanced permissions</guilabel> link located in the appropriate forum permissions box, and then update the permissions accordingly. When you are done, click <guilabel>Apply all permissions</guilabel> if you are in the <guilabel>Advanced permissions</guilabel> area, or click <guilabel>Apply all permissions</guilabel> at the bottom of the page to submit all of your changes on the page.</para>
+			<para>Je kan nu forumpermissies toewijzen aan de gebruiker. Je hebt twee manieren om forumpermissies toe te wijzen aan de gebruiker: je kan de forum(s) handmatig selecteren met een meerdere selectie menu, of door een specifieke forum of categorie te selecteren, samen met zijn toegewezen subforums. Klik op <guilabel>Versturen</guilabel> om door te gaan met de forum(s) die je hebt gekozen. Nu zal je verwelkomt worden met de <guilabel>Permissies instellen</guilabel> scherm, waar je daadwerkelijk de forumpermissies aan de gebruiker kan toewijzen. Je moet nu selecteren wat voor forumpermissies jr wilt wijzigen; je kan de gebruikers <guimenuitem>Forumpermissies</guimenuitem> of <guimenuitem>Moderatorpermissies</guimenuitem> wijzigen. Klik op <guilabel>Ok</guilabel>. Je kan nu de rol selecteren die je wilt toewijzen aan de gebruiker voor iedere forum die je eerder hebt geselecteerd. Als je deze permissies met meer detail wilt instellen, klik dan op de <guilabel>Uitgebreide permissies</guilabel> link die in de daar toe behorende forumpermissies vak, en wijzig dan de permissies naar eigen keus. Wanneer je klaar bent, klik op <guilabel>Permissies opslaan</guilabel> als je in de <guilabel>Uitgebreide permissies</guilabel> gedeelte bent, of klik op de <guilabel>Alle permissies opslaan</guilabel> onder aan de pagina om alle veranderingen die je hebt gedaan op de pagina op te slaan.</para>
 		</section>
 		
 		<section id="acp_users_custom_profile_fields">
@@ -1350,34 +1350,34 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Custom profile fields</title>
-			
-			<para>One of the many new features in phpBB3 that enhance the user experience is <guilabel>Custom Profile Fields</guilabel>. In the past, users could only fill in information in the common profile fields that were displayed; administrators had to add MODifications to their board to accommodate their individual needs. In phpBB3, however, administrators can comfortably create custom profile fields through the <acronym>ACP</acronym>.</para>
+			<title>Aangepaste profielvelden</title>
+
+			<para>Eén van de nieuwe mogelijkheden in phpBB3 om de gebruikers beleving uit te breiden is <guilabel>Aangepaste profielvelden</guilabel>. In het verleden, konden gebruikers alleen de informatie invullen die in de gewone profielvelden die werden getoond; administrators moesten modificaties toevoegen aan hun forum om hun eigen wensen te kunnen vervullen. In phpBB3 echter, kunnen administrators nu gemakkelijk eigen profielvelden aanmaken via de <acronym>ACP</acronym>.</para>
 		
-			<para>To create your custom profile field, login to your ACP. Click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then locate the <guimenuitem>Custom profile fields</guimenuitem> link in the left-hand menu to click on. You should now be on the proper page. Locate the empty textbox below the custom profile fields headings, which is next to a selection menu and a <guilabel>Create new field</guilabel> button. Type in the empty textbox the name of the new profile field you want to create first. Then, select the field type in the selection menu. Available options are <guimenuitem>Numbers</guimenuitem>, <guimenuitem>Single text field</guimenuitem>, <guimenuitem>Textarea</guimenuitem>, <guimenuitem>Boolean (Yes/No)</guimenuitem>, <guimenuitem>Dropdown box</guimenuitem>, and <guimenuitem>Date</guimenuitem>. Click the <guilabel>Create new field</guilabel> button to continue. The following describes each of the three sets of settings that the new custom profile field will have.
+			<para>Om je eigen aangepaste profiel velden te maken, klik je op de <guimenuitem>Gebruikers en Groepen</guimenuitem> tabblad in je <acronym>ACP</acronym>, en zoek dan de <guimenuitem>Aangepaste profielvelden</guimenuitem> link in het menu aan de linkerkant om op te klikken. Je zal nu op de juiste pagina komen. Zoek het lege tekstvlak onder de aangepaste profielvelden tabel, welke naast een selectie menu en een <guilabel>Een nieuw veld aanmaken</guilabel> knop is. Type in het lege tekstvak de naam van het nieuwe profielveld die je als eerste wilt aanmaken. Selecteer daarna het type veld in het selectie menu. De beschikbare opties zijn <guimenuitem>Getallen</guimenuitem>, <guimenuitem>Enkel invoerveld</guimenuitem>, <guimenuitem>Tekstveld</guimenuitem>, <guimenuitem>Boolean (Ja/Nee)</guimenuitem>, <guimenuitem>Dropdown box</guimenuitem>, en <guimenuitem>Datum</guimenuitem>. Klik op de <guilabel>Een nieuw veld aanmaken</guilabel> knop om door te gaan. Het volgende beschrijft iedere set van instellingen dat het nieuwe aangepaste profielveld zal hebben.
 				<itemizedlist>
-					<title>Add profile field</title>
-					<listitem><para><guilabel>Field type:</guilabel> This is the kind of the field that your new custom profile field is. That means that it can consist of numbers, dates, etc. This should already be set.</para></listitem>
-					<listitem><para><guilabel>Field identification:</guilabel> This is the name of the profile field. This name will identify the profile field within phpBB3's database and templates.</para></listitem>
-					<listitem><para><guilabel>Display profile field:</guilabel> This setting determines if the new profile field will be displayed at all. The profile field will be shown on topic pages, profiles and the memberlist if this is enabled within the load settings. Only showing within the users profile is enabled by default.</para></listitem>
+					<title>Profielveld toevoegen</title>
+					<listitem><para><guilabel>Veldtype</guilabel>: Dit is het soort veld dat je nieuwe aangepaste profielveld zal zijn. Het betekend dat het kan bestaan uit getallen, datums, etc. Dit zal al ingesteld moeten zijn.</para></listitem>
+					<listitem><para><guilabel>Veld identificatie</guilabel>: Dit is de naam van het profielveld. Deze naam zal het profielveld in phpBB3 zijn database en templates identificeren.</para></listitem>
+					<listitem><para><guilabel>Profielveld publiekelijk weergeven</guilabel>: Deze instelling bepaald of het nieuwe profielveld weergegeven zal worden. Het profielveld zal getoond worden op de berichtenpagina's, profielen en de ledenlijst als dit is ingeschakeld bij de laadinstellingen. Alleen getoond worden in het gebruikersprofiel is standaard ingeschakeld.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Visibility option</title>
-					<listitem><para><guilabel>Display in user control panel:</guilabel> This setting determines if your users will be able to change the profile field within the <acronym>UCP</acronym>.</para></listitem>
-					<listitem><para><guilabel>Display at registration screen:</guilabel> If this option is enabled, the profile field will be displayed on the registration page. Users will be able to be change this field within the <acronym>UCP</acronym>.</para></listitem>
-					<listitem><para><guilabel>Required field:</guilabel> This setting determines if you want to force your users to fill in this profile field. This will display the profile field at registration and within the user control panel.</para></listitem>
-					<listitem><para><guilabel>Hide profile field:</guilabel> If this option is enabled, this profile field will only show up in users' profiles. Only administrators and moderators will be able to see or fill out this field in this case.</para></listitem>
+					<title>Weergave mogelijkheden</title>
+					<listitem><para><guilabel>In gebruikerspaneel weergeven</guilabel>: Deze instelling bepaalt of je gebruikers de profielveld kunnen veranderen in de <acronym>UCP</acronym>.</para></listitem>
+					<listitem><para><guilabel>Op registratiescherm weergeven</guilabel>: Als deze optie ingeschakeld is, zal het profielveld getoond worden op de registratie pagina. Gebruikers kunnen dit veld veranderen in de <acronym>UCP</acronym>.</para></listitem>
+					<listitem><para><guilabel>Verplicht veld</guilabel>: Deze instelling bepaalt of je gebruikers wilt forceren om dit profielveld in te vullen. Dit zal het profielveld tonen bij registratie en in de <acronym>UCP</acronym>.</para></listitem>
+					<listitem><para><guilabel>Profielveld verbergen</guilabel>: Als deze optie ingeschakeld is, zal dit profielveld alleen getoond worden in de gebruikersprofielen. Alleen administrators en moderators kunnen dit veld zien en invullen.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
-					<title>Language specific options</title>
-					<listitem><para><guilabel>Field name/title presented to the user:</guilabel> This is the actual name of the profile field that will be displayed to your users.</para></listitem>
-					<listitem><para><guilabel>Field description:</guilabel> This is a simple description/explanation for your users filling out this field.</para></listitem>
+					<title>Taal specifieke opties</title>
+					<listitem><para><guilabel>Veldnaam / titel weergeven aan de gebruiker</guilabel>: Dit is de daadwerkelijke naam van het profielveld dat getoond zal worden aan je gebruikers.</para></listitem>
+					<listitem><para><guilabel>Veldbeschrijving</guilabel>: Dit is een simpele beschrijving/uitleg voor je gebruikers bij het invullen van dit veld.</para></listitem>
 				</itemizedlist>
 			</para>
 			
-			<para>When you are done with the above settings, click the <guilabel>Profile type specific options</guilabel> button to continue. Fill out the appropriate settings with what you desire, then click the <guilabel>Next</guilabel> button. If your new custom profile field was created successfully, you should be greeted with a green success message. Congratulations!</para>
+			<para>Wanneer je klaar bent met de bovenstaande instellingen, klik op de <guilabel>Profieltype specifieke opties</guilabel> knop om door te gaan. Vul de benodigde instellingen in die je wilt, en klik op de <guilabel>Volgende</guilabel> knop. Als je nieuwe aangepaste profielveld succesvol is aangemaakt, dan wordt je nu begroet door een groen succes scherm.</para>
 		</section>
 		
 		<section id="acp_user_ranks">
@@ -1388,21 +1388,21 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Managing ranks</title>
+			<title>Rangenbeheer</title>
 			
-			<para>Ranks are special titles that can be applied to forum users. As an administrator, it is up to you to create and manage the ranks that exist on your board. The actual names for the ranks are completely up to you; it's usually best to tailor them to the main purpose of your board.</para>
+			<para>Rangen zijn speciale titels die toegewezen kunnen worden aan forumgebruikers. Als een administrator, is het aan jou om rangen aan te maken en te beheren die bestaan op je forum. De daadwerkelijke namen voor de rangen mag je helemaal zelf bedenken; het is meestal het beste om ze aan te passen naar de thema van je forum.</para>
 			
 			<note>
-				<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
+				<para>Wanneer je een speciale rangnaam aan een gebruiker toewijst, onthoud dat er geen permissies er aan gekoppeld zijn. Bijvoorbeeld, als je een &quot;Support Moderator&quot; rang maakt en deze toewijst aan een gebruiker, dan zal die gebruiker niet automatisch moderatorpermissies verkrijgen. Je moet de speciale permissies aan de gebruiker apart toewijzen.</para>
 			</note>
 			
-			<para>To manage your board's ranks, login to your <acronym>ACP</acronym>, click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on the <guimenuitem>Manage ranks</guimenuitem> link located in the left-hand menu. You should now be on the rank management page. All current existing ranks are displayed.</para>
+			<para>Om je forumrangen te beheren, klik op de <guimenuitem>Gebruikers en Groepen</guimenuitem> tabblad in de <acronym>ACP</acronym>, en klik daarna op de <guimenuitem>Rangenbeheer</guimenuitem> link die in het menu aan de linkerkant staat. Je wordt nu mee genomen naar de rangenbeheer pagina. Alle bestaande rangen worden hier getoond.</para>
 			
-			<para>To create a new rank, click on the <guilabel>Add new rank</guilabel> button located below the existing ranks list. Fill in the first field <guilabel>Rank title</guilabel> with the name of the rank. If you uploaded an image you want to attribute to the rank into the <filename>/images/ranks/</filename> folder, you can select an image from the selection menu. The last setting you can set is if you want the rank to be a "special" rank. Special ranks are ranks that administrators assign to users; they are not automatically assigned to users based on their postcount. If you selected <guilabel>No</guilabel>, then you can fill in the <guilabel>Minimum posts</guilabel> field with the minimum number of posts your users must have before getting assigned this rank. When you are done, click the <guilabel>Submit</guilabel> button to add this new rank.</para>
+			<para>Om een nieuwe rang aan te maken, klik op de <guilabel>Voeg een nieuwe rang toe</guilabel> knop dat onder de bestaande rangenlijst staat. Vul in het eerste veld <guilabel>Rang titel</guilabel> de naam van de rang. Als je een afbeelding hebt geüpload in de <filename>/images/ranks/</filename> map, die je wilt koppelen aan de rang, dan kan je de afbeelding selecteren in het selectiemenu <guilabel>Rang afbeelding</guilabel>. De laatste instelling die je kan instellen is of de rang een &quot;speciale&quot; rang is. Speciale rangen zijn rangen die de administrator kan toewijzen aan gebruikers; ze worden niet automatisch toegewezen aan gebruikers gebasseerd op hun berichten aantal. Als je <guilabel>Nee</guilabel> hebt geselecteerd, dan kan je de <guilabel>Minimale berichten</guilabel> veld invullen met het minimale aantal berichten die je gebruikers moeten hebben voordat ze deze rang toegewezen krijgen. Wanneer je klaar bent, klik op de <guilabel>Versturen</guilabel> knop om deze nieuwe rang aan te maken.</para>
 			
-			<para>To edit a rank's current settings, locate the rank's row, and then click on its "Edit" button located in the <guilabel>Action</guilabel> column.</para>
+			<para>Om een rang instelling te wijzigen, zoek de rij van de rang, en klik dan op de groene &quot;Wijzigen&quot; knop die in de <guilabel>Actie</guilabel> kolom staat.</para>
 			
-			<para>To delete a rank, locate the rank's row, and then click on its "Delete" button located in the <guilabel>Action</guilabel> column. Then, you must confirm the action by clicking on the <guilabel>Yes</guilabel> button when prompted.</para>
+			<para>Om een rang te verwijderen, zoek de rij van de rang, en klik dan op de rode &quot;Verwijderen&quot; knop die in de <guilabel>Actie</guilabel> kolom staat. Daarna moet je de actie bevestigen door te klikken op de <guilabel>Ja</guilabel> knop wanneer erom gevraagd wordt.</para>
 		</section>
 				
 		<section id="acp_user_security">
@@ -1413,8 +1413,8 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>User Security</title>
-			<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
+			<title>Gebruikersveiligheid</title>
+			<para>Anders dan de mogelijkheid om je gebruikers op je forum te beheren, is het ook belangrijk om je forum te beschermen tegen ongewenste registraties en gebruikers. De <guilabel>Gebruikersveiligheid</guilabel> sectie laat je toe om verbannen e-mails, IP's, en gebruikersnamen te beheren, als mede het beheren van niet toegestaande gebruikersnamen en het opschonen van gebruikers. Verbannen gebruikers die informatie hebben die overeenkomt met één van de verbanregels zullen niet bij één gedeelte van je forum kunnen komen.</para>
 			
 			<section id="acp_ban_emails">
 				<sectioninfo>
@@ -1424,26 +1424,26 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban e-mails</title>
-				<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
+				<title>E-mailadressen verbannen</title>
+				<para>Soms is het nodig om e-mailadressen te verbannen om zo ongewenste registraties te voorkomen. Er kunnen bepaalde gebruikers of spamrobots zijn die e-mailadressen gebruiken die je kent. Hier in de <guimenuitem>E-mailadressen verbannen</guimenuitem> gedeelte, kan je dit doen. Je kan controleren welke e-mailadressen verbannen zijn, hoe lang een verbanning duurt, en de reden(en) voor de verbanning.</para>
 				
-				<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+				<para>Om één of meerdere e-mailadressen te verbannen, vul het formulier <guilabel>Eén of meer e-mailadressen verbannen</guilabel> in. Wanneer je klaar bent met je aanpassingen, klik op <guilabel>Versturen</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more email addresses</title>
-					<listitem><para><guilabel>Email address</guilabel>: This textbox should contain all the emails that you want to ban under a single rule. If you want to ban more than one email at this time, put each email on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
-					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the email address(es) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the email address(es) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
-					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered email address from all current bans.</para></listitem>
-					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the email address(es). This is optional, and can help you remember in the future why you banned the email address(es).</para></listitem>
-					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned email address(es). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
+					<title>Eén of meer e-mailadressen verbannen</title>
+					<listitem><para><guilabel>E-mailadres</guilabel>: Dit tekstvak zal alle e-mailadressen bevatten die je wilt verbannen onder één enkele regel. Als je meer dan één e=mailadres wilt verbannenn deze keer, zet dan ieder e-mailadres op een eigen regel. Je kan ook jokers (*) gebruiken om een een geeltelijk e-mailadres te vergelijken.</para></listitem>
+					<listitem><para><guilabel>Duur van de verbanning</guilabel>: Dit is hoe lang de e-mailadressen verbannen zullen zijn. De beschikbare opties bevatten enkele vaak voorkomende tijdsduraties, zoals aantal uur of dagen. Je kan ook een datum instellen tot wanneer de e-mailadressen verbannen zullen zijn; om dit in te stellen, selecteer <guilabel>Tot -></guilabel> uit het selectiemenu, en specificeer een datum in het formaat &quot;YYYY-MM-DD&quot; in het tekstvak onder het selectiemenu.</para></listitem>
+					<listitem><para><guilabel>Uitsluiten van verbanning</guilabel>: Je moet dit inschakelen als je alle ingevoerde e-mailadressen  wilt uitsluiten van alle bestaande verbanningen.</para></listitem>
+					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dit is een korte reden voor waarom je de e-mailadressen wilt verbannen. Dit is optioneel, en kan je helpen te onthouden in de toekomst waarom je de e-mailadressen hebt verbannen. Deze reden is alleen zichtbaar voor moderators met de juiste permissies.</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergeven aan de verbannen gebruiker</guilabel>: Dit is een korte uitleg dat getoond zal worden aan de gebruikers met de verbannen e-mailadressen. Dit kan verschillend zijn van de hierboven staande <guilabel>Reden voor verbanning</guilabel>.</para></listitem>
 				</itemizedlist>
 				
-				<para>Other than adding emails to be banned, you can also un-ban or un-exclude email addresses from bans. To un-ban or exclude one or more email addresses from bans, fill in the <guilabel>Un-ban or un-exclude emails</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
+				<para>Anders dan het toevoegen van e-mailadressen om verbannen te worden, kan je ook e-mailadressen die verbannen of uitgesloten zijn opheffen. Om van één of meer e-mailadressen de verbanning of uitsluitsels op te heffen, vul het  <guilabel>Verbannen of uitgesloten e-mailadressen opheffen</guilabel> formulier in. Wanneer je klaar bent, klik op <guilabel>Versturen</guilabel>.</para>
 				<itemizedlist>
-					<title>Un-ban or un-exclude emails</title>
-					<listitem><para><guilabel>Email address</guilabel>: This multiple selection menu lists all currently banned emails. Select the email that you want to un-ban or exclude by clicking on the email in the multiple selection menu. <tip><para>To select more than one email address, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the emails you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
-					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected email. If more than one email address is selected, only one of the ban lengths will be displayed.</para></listitem>
-					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected email. If more than one email address is selected, only one of the ban reasons will be displayed.</para></listitem>
-					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected email. If more than one email address is selected, only one of the shown ban reasons will be displayed.</para></listitem>
+					<title>Verbannen of uitgesloten e-mailadressen opheffen</title>
+					<listitem><para><guilabel>E-mailadres</guilabel>: Dit meerdere selectiemenu bevat alle verbannen e-mailadressen. Selecteer het e-mailadres waarvan je de verbanning of uitsluiting wilt opheffen door op het e-mailadres te klikken in de meerdere selectiemenu. <tip><para>Om meer dan één e-mailadres te selecteren, moet je de juiste combinatie tussen muis en toetsenbord commando's uitvoeren. De meest voorkomende manier om dit te doen is door de CTRL knop in te drukken en ingedrukt te houden op je toetsenbord, en met de muis op alle e-mailadressen die je wilt selecteren. Laat de CTRL knop los als je klaar met het selecteren bent.</para></tip></para></listitem>
+					<listitem><para><guilabel>Duur van de verbanning</guilabel>: Dit is een niet te wijzigen informatie vak dat de lengte van de verbanning voor de geselecteerde e-mailadressen toont. Als er meer dan één e-mailadres is geselecteerd, alleen één van de verbanningslengtes zal getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden voor de verbanning</guilabel>: Dit is een niet te wijzigen informatie vak det de reden voor de verbanning voor de geselecteerde e-mailadressen toont. Als er meer dan één e-mailadres is geselecteerd, alleen één van de verbannings redenen zal getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergeven aan de verbannen gebruiker</guilabel>: Dit is een niet te wijzigen informatie vak dat de reden toont die getoond wordt aan de verbannen gebruiker van de geselecteerde e-mailadressen. Als meer dan één e-mailadres is geselecteerd, alleen één van de getoonde redenen zal getoond worden.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -1455,15 +1455,15 @@
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Ban IPs</title>
-				<para>Sometimes, it is necessary to ban <glossterm>IP address</glossterm>es or hostnames in order to prevent unwanted users. There may be certain users or spam bots that use IPs or hostnames that you are aware of. Here, in the <guimenuitem>Ban IPs</guimenuitem> section, you can do this. You can control which IP addresses or hostnames are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
+				<title>IP-adressen verbannen</title>
+				<para>Soms is het nodig om een <glossterm>IP-adres</glossterm> of hostnaam te verbannen om ongewenste gebruikers te voorkomen. ER kunnen bepaalde gebruikers of spambots zijn dat bepaalde IP-adressen of hostnamen gebruikt die je kent. Hier in de <guimenuitem>IP-adressen verbannen</guimenuitem> gedeelte, kan je dit doen. Je kan hiet controleren welke IP-adressen of hostnamen verbannen zullen zijn, hoe lang een verbanning duurt, en de gegeven reden(en) voor de verbanning.</para>
 				
-				<para>To ban or exclude one or more IP addresses and/or hostnames, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
+				<para>Om één of meerdere IP-adressen en/of hostnamen te verbannen of uit te sluiten, vul het <guilabel>Eén of meer IP-adressen verbannen</guilabel> formulier in. Wanneer je klaar bent met je aanpassingen, klik dan op <guilabel>Versturen</guilabel>.</para>
 				<itemizedlist>
-					<title>Ban one or more IPs</title>
-					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This textbox should contain all of the IP addresses and/or hostnames that you want to ban under a single rule. If you want to ban more than one IP address and/or hostname at this time, put each IP address and/or hostname on its own line. You can also use wildcards (*) to match partial addresses.</para></listitem>
-					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the IP address(es) and/or hostname(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the IP address(es) and/or hostname(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
-					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered IP address(es) and/or hostnames from all current bans.</para></listitem>
+					<title>Eén of meer IP-adressen verbannen</title>
+					<listitem><para><guilabel>IP-adressen of hostnamen</guilabel>: Dit tekstvak bevat alle IP-adressen en/of hostnamen die je wilt verbannen of uitsluiten in een enkele regel. Als je meer dan één IP-adres en/of hostnaam per keer wilt toevoegen, vul dan ieder IP-adres en/of hostnaam op een aparte regel. Je kan ook jokers (*) gebruiken om gedeeltes van IP-adressen in te voeren.</para></listitem>
+					<listitem><para><guilabel>Duur van verbanning</guilabel>: Dit is hoe lang de IP-adressen en/of hostnamen verbannen zullen zijn. De beschikbare opties bevatten enkele vaak voorkomende tijdsduraties, zoals aantal uur of dagen. Je kan ook een datum instellen tot wanneer de IP-adressen en/of hostnamen verbannen zullen zijn; om dit in te stellen, selecteer <guilabel>Tot -></guilabel> uit het selectiemenu, en specificeer een datum in het formaat &quot;YYYY-MM-DD&quot; in het tekstvak onder het selectiemenu.</para></listitem>
+					<listitem><para><guilabel>Uitsluiten van verbanning</guilabel>: You should enable this if you want to exclude the entered IP address(es) and/or hostnames from all current bans.</para></listitem>
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the IP address(es) and/or hostname(s). This is optional, and can help you remember in the future why you banned the IP address(es) and/or hostname(s).</para></listitem>
 					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned IP address(es) and/or hostname(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
 				</itemizedlist>
