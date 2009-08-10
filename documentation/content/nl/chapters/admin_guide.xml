@@ -1404,161 +1404,7 @@
 			
 			<para>Om een rang te verwijderen, zoek de rij van de rang, en klik dan op de rode &quot;Verwijderen&quot; knop die in de <guilabel>Actie</guilabel> kolom staat. Daarna moet je de actie bevestigen door te klikken op de <guilabel>Ja</guilabel> knop wanneer erom gevraagd wordt.</para>
 		</section>
-				
-		<section id="acp_user_security">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername></othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Gebruikersveiligheid</title>
-			<para>Anders dan de mogelijkheid om je gebruikers op je forum te beheren, is het ook belangrijk om je forum te beschermen tegen ongewenste registraties en gebruikers. De <guilabel>Gebruikersveiligheid</guilabel> sectie laat je toe om verbannen e-mails, IP's, en gebruikersnamen te beheren, als mede het beheren van niet toegestaande gebruikersnamen en het opschonen van gebruikers. Verbannen gebruikers die informatie hebben die overeenkomt met één van de verbanregels zullen niet bij één gedeelte van je forum kunnen komen.</para>
-			
-			<section id="acp_ban_emails">
-				<sectioninfo>
-					<authorgroup>
-						<author>
-							<othername></othername>
-						</author>
-					</authorgroup>
-				</sectioninfo>
-				<title>E-mailadressen verbannen</title>
-				<para>Soms is het nodig om e-mailadressen te verbannen om zo ongewenste registraties te voorkomen. Er kunnen bepaalde gebruikers of spamrobots zijn die e-mailadressen gebruiken die je kent. Hier in de <guimenuitem>E-mailadressen verbannen</guimenuitem> gedeelte, kan je dit doen. Je kan controleren welke e-mailadressen verbannen zijn, hoe lang een verbanning duurt, en de reden(en) voor de verbanning.</para>
-				
-				<para>Om één of meerdere e-mailadressen te verbannen, vul het formulier <guilabel>Eén of meer e-mailadressen verbannen</guilabel> in. Wanneer je klaar bent met je aanpassingen, klik op <guilabel>Versturen</guilabel>.</para>
-				<itemizedlist>
-					<title>Eén of meer e-mailadressen verbannen</title>
-					<listitem><para><guilabel>E-mailadres</guilabel>: Dit tekstvak zal alle e-mailadressen bevatten die je wilt verbannen onder één enkele regel. Als je meer dan één e=mailadres wilt verbannenn deze keer, zet dan ieder e-mailadres op een eigen regel. Je kan ook jokers (*) gebruiken om een een geeltelijk e-mailadres te vergelijken.</para></listitem>
-					<listitem><para><guilabel>Duur van de verbanning</guilabel>: Dit is hoe lang de e-mailadressen verbannen zullen zijn. De beschikbare opties bevatten enkele vaak voorkomende tijdsduraties, zoals aantal uur of dagen. Je kan ook een datum instellen tot wanneer de e-mailadressen verbannen zullen zijn; om dit in te stellen, selecteer <guilabel>Tot -></guilabel> uit het selectiemenu, en specificeer een datum in het formaat &quot;YYYY-MM-DD&quot; in het tekstvak onder het selectiemenu.</para></listitem>
-					<listitem><para><guilabel>Uitsluiten van verbanning</guilabel>: Je moet dit inschakelen als je alle ingevoerde e-mailadressen wilt uitsluiten van alle bestaande verbanningen.</para></listitem>
-					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dit is een korte reden voor waarom je de e-mailadressen hebt verbannen. Dit is optioneel, en kan je helpen te onthouden in de toekomst waarom je de e-mailadressen hebt verbannen. Deze reden is alleen zichtbaar voor moderators en administrators met de juiste permissies.</para></listitem>
-					<listitem><para><guilabel>Reden die wordt weergegeven aan de verbannen gebruiker</guilabel>: Dit is een korte uitleg dat getoond zal worden aan de gebruikers met de verbannen e-mailadressen. Dit kan verschillend zijn van de hierboven staande <guilabel>Reden voor verbanning</guilabel>.</para></listitem>
-				</itemizedlist>
-				
-				<para>Anders dan het toevoegen van e-mailadressen om verbannen te worden, kan je ook e-mailadressen die verbannen of uitgesloten zijn opheffen. Om van één of meer e-mailadressen de verbanning of uitsluitsels op te heffen, vul het  <guilabel>Verbannen of uitgesloten e-mailadressen opheffen</guilabel> formulier in. Wanneer je klaar bent, klik op <guilabel>Versturen</guilabel>.</para>
-				<itemizedlist>
-					<title>Verbannen of uitgesloten e-mailadressen opheffen</title>
-					<listitem><para><guilabel>E-mailadres</guilabel>: Dit meerdere selectiemenu bevat alle verbannen e-mailadressen. Selecteer het e-mailadres waarvan je de verbanning of uitsluiting wilt opheffen door op het e-mailadres te klikken in de meerdere selectiemenu. <tip><para>Om meer dan één e-mailadres te selecteren, moet je de juiste combinatie tussen muis en toetsenbord commando's uitvoeren. De meest voorkomende manier om dit te doen is door de CTRL knop in te drukken en ingedrukt te houden op je toetsenbord, en met de muis op alle e-mailadressen die je wilt selecteren. Laat de CTRL knop los als je klaar met het selecteren bent.</para></tip></para></listitem>
-					<listitem><para><guilabel>Duur van de verbanning</guilabel>: Dit is een niet te wijzigen informatie vak dat de lengte van de verbanning voor de geselecteerde e-mailadressen toont. Als er meer dan één e-mailadres is geselecteerd, alleen één van de verbanningslengtes zal getoond worden.</para></listitem>
-					<listitem><para><guilabel>Reden voor de verbanning</guilabel>: Dit is een niet te wijzigen informatie vak det de reden voor de verbanning voor de geselecteerde e-mailadressen toont. Als er meer dan één e-mailadres is geselecteerd, alleen één van de verbannings redenen zal getoond worden.</para></listitem>
-					<listitem><para><guilabel>Reden die wordt weergeven aan de verbannen gebruiker</guilabel>: Dit is een niet te wijzigen informatie vak dat de reden toont die getoond wordt aan de verbannen gebruiker van de geselecteerde e-mailadressen. Als meer dan één e-mailadres is geselecteerd, alleen één van de getoonde redenen zal getoond worden.</para></listitem>
-				</itemizedlist>
-			</section>
-			
-			<section id="acp_ban_ips">
-				<sectioninfo>
-					<authorgroup>
-						<author>
-							<othername></othername>
-						</author>
-					</authorgroup>
-				</sectioninfo>
-				<title>IP-adressen verbannen</title>
-				<para>Soms is het nodig om een <glossterm>IP-adres</glossterm> of hostnaam te verbannen om ongewenste gebruikers te voorkomen. ER kunnen bepaalde gebruikers of spambots zijn dat bepaalde IP-adressen of hostnamen gebruikt die je kent. Hier in de <guimenuitem>IP-adressen verbannen</guimenuitem> gedeelte, kan je dit doen. Je kan hiet controleren welke IP-adressen of hostnamen verbannen zullen zijn, hoe lang een verbanning duurt, en de gegeven reden(en) voor de verbanning.</para>
-				
-				<para>Om één of meerdere IP-adressen en/of hostnamen te verbannen of uit te sluiten, vul het <guilabel>Eén of meer IP-adressen verbannen</guilabel> formulier in. Wanneer je klaar bent met je aanpassingen, klik dan op <guilabel>Versturen</guilabel>.</para>
-				<itemizedlist>
-					<title>Eén of meer IP-adressen verbannen</title>
-					<listitem><para><guilabel>IP-adressen of hostnamen</guilabel>: Dit tekstvak bevat alle IP-adressen en/of hostnamen die je wilt verbannen of uitsluiten in een enkele regel. Als je meer dan één IP-adres en/of hostnaam per keer wilt toevoegen, vul dan ieder IP-adres en/of hostnaam op een aparte regel. Je kan ook jokers (*) gebruiken om gedeeltes van IP-adressen in te voeren.</para></listitem>
-					<listitem><para><guilabel>Duur van verbanning</guilabel>: Dit is hoe lang de IP-adressen en/of hostnamen verbannen zullen zijn. De beschikbare opties bevatten enkele vaak voorkomende tijdsduraties, zoals aantal uur of dagen. Je kan ook een datum instellen tot wanneer de IP-adressen en/of hostnamen verbannen zullen zijn; om dit in te stellen, selecteer <guilabel>Tot -></guilabel> uit het selectiemenu, en specificeer een datum in het formaat &quot;YYYY-MM-DD&quot; in het tekstvak onder het selectiemenu.</para></listitem>
-					<listitem><para><guilabel>Uitsluiten van verbanning</guilabel>: Je moet dit inschakelen als je alle ingevoerde IP-adressen en/of hostnamen wilt uitsluiten van alle bestaande verbanningen.</para></listitem>
-					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dit is een korte reden voor waarom je de IP-adressen en/of hostnamen hebt verbannen. Dit is optioneel, en kan je helpen te onthouden in de toekomst waarom je de IP-adressen en/of hostnamen hebt verbannen. Deze reden is alleen zichtbaar voor moderators en administrators met de juiste permissies</para></listitem>
-					<listitem><para><guilabel>Reden die wordt weergegeve aan de verbannen gebruiker</guilabel>: This is a short explanation that will actually be shown to the users with the banned IP address(es) and/or hostname(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
-				</itemizedlist>
-				
-				<para>Other than adding IP address(es) and/or hostname(s) to be banned, you can also un-ban or un-exclude IP address(es) and/or hostname(s) from bans. To un-ban or exclude one or more IP address(es) and/or hostname(s) from bans, fill in the <guilabel>Un-ban or un-exclude IPs</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
-				<itemizedlist>
-					<title>Un-ban or un-exclude IPs</title>
-					<listitem><para><guilabel>IP addresses or hostnames</guilabel>: This multiple selection menu lists all currently banned IP address(es) and/or hostname(s). Select the IP address(es) and/or hostname(s) that you want to un-ban or exclude by clicking on the IP address(es) and/or hostname(s) in the multiple selection menu. <tip><para>To select more than one IP address and/or hostname, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the IP address(es) and/or hostname(s) you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
-					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban lengths will be displayed.</para></listitem>
-					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the ban reasons will be displayed.</para></listitem>
-					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the shown ban reasons will be displayed.</para></listitem>
-				</itemizedlist>
-			</section>
-			
-			<section id="acp_ban_users">
-				<sectioninfo>
-					<authorgroup>
-						<author>
-							<othername>MennoniteHobbit</othername>
-						</author>
-					</authorgroup>
-				</sectioninfo>
-				<title>Ban Users</title>
-				<para>Whenever you encounter troublesome users on your board, you may have to ban them. On the <guimenuitem>Ban usernames</guimenuitem> page, you can do exactly that. On this page, you can manage all banned usernames.</para>
-				
-				<para>To ban or exclude one or more users, fill in the <guilabel>Ban one or more users</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
-				<itemizedlist>
-					<title>Ban one or more usernames</title>
-					<listitem><para><guilabel>Username</guilabel>: This textbox should contain all of the usernames that you want to ban under a single rule. If you want to ban more than one username at this time, put each username on its own line. You can also use wildcards (*) to partially match usernames.</para></listitem>
-					<listitem><para><guilabel>Length of ban</guilabel>: This is how long you want the username(s) to be banned for. The available options include some common durations, such as number of hours or days. You may also set a date for which the username(s) will be banned until; to set this, select <guilabel>Until -></guilabel> from the selection menu, and specify a date in the format "YYYY-MM-DD" in the textbox located below the selection menu.</para></listitem>
-					<listitem><para><guilabel>Exclude from banning</guilabel>: You should enable this if you want to exclude the entered username(s) from all current bans.</para></listitem>
-					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the username(s). This is optional, and can help you remember in the future why you banned the user(s).</para></listitem>
-					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the banned user(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
-				</itemizedlist>
-				
-				<para>Other than adding users to be banned, you can also un-ban or un-exclude usernames from bans. To un-ban or exclude one or more users from bans, fill in the <guilabel>Un-ban or un-exclude usernames</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
-				<itemizedlist>
-					<title>Un-ban or un-exclude usernames</title>
-					<listitem><para><guilabel>Username</guilabel>: This multiple selection menu lists all currently banned usernames. Select the username(s) that you want to un-ban or exclude by clicking on the username(s) in the multiple selection menu. <tip><para>To select more than one username, you have to use the appropriate combination of mouse and keyboard commands. The most common way to do this is to press and hold down the CTRL button on your keyboard, and then click all of the usernames you want to select. Let go of the CTRL button once you are done.</para></tip></para></listitem>
-					<listitem><para><guilabel>Length of ban</guilabel>: This is an uneditable information box that shows the length of the ban for the currently selected username. If more than one username is selected, only one of the ban lengths will be displayed.</para></listitem>
-					<listitem><para><guilabel>Reason for ban</guilabel>: This is an uneditable information box that shows the reason for the ban for the currently selected username. If more than one username is selected, only one of the ban reasons will be displayed.</para></listitem>
-					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected username. If more than one username is selected, only one of the shown ban reasons will be displayed.</para></listitem>
-				</itemizedlist>
-			</section>
-			
-			<section id="acp_disallow_users">
-				<sectioninfo>
-					<authorgroup>
-						<author>
-							<othername></othername>
-						</author>
-					</authorgroup>
-				</sectioninfo>
-				<title>Disallow usernames</title>
-				
-				<para>In phpBB3, it is also possible to disallow the registration of certain usernames that match any usernames that you configure. (This is useful if you want to prevent users from registering with usernames that might confuse them with an important board member.) To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
-				
-				<para>To add a disallowed username, locate the <guilabel>Add a disallowed username</guilabel> form, and then type in the username in the textbox labeled <guilabel>Username</guilabel>. <tip><para>You can use wildcards (*) to match any character. For example, to disallow any username that matches "JoeBloggs", you could type in "Joe*". This would prevent all users from registering a username that starts with "Joe".</para></tip> Once you are done, click <guilabel>Submit</guilabel>.</para>
-				
-				<para>To remove a disallowed username, locate the <guilabel>Remove a disallowed username</guilabel> form. Select the disallowed username that you would like to remove from the <guilabel>Username</guilabel> selection menu. Click <guilabel>Submit</guilabel> to remove the selected disallowed username.</para>
-			</section>
-			
-			<section id="acp_prune_users">
-				<sectioninfo>
-					<authorgroup>
-						<author>
-							<othername></othername>
-						</author>
-					</authorgroup>
-				</sectioninfo>
-				<title>Prune users</title>
-				
-				<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
-				
-				<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
-				
-				<itemizedlist>
-					<title>Prune users</title>
-					<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
-					<listitem><para><guilabel>Email</guilabel>: The email that you want to be pruned. You can use wildcards (*) to prune users that have an email address that matches the given pattern.</para></listitem>
-					<listitem><para><guilabel>Joined</guilabel>: You can also prune users based on their date of registration. To prune users who joined before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who joined after a certain date, choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
-					<listitem><para><guilabel>Last active</guilabel>: You can also prune users based on the last time they were active. To prune users who were last active before a certain date (be careful with this setting), choose <guilabel>Before</guilabel> from the selection menu. To prune users who were last after a certain date (this is useful to prune users who have disappeared from your board), choose <guilabel>After</guilabel> from the selection menu. The date must be in the format YYYY-MM-DD.</para></listitem>
-					<listitem><para><guilabel>Posts</guilabel>: You can prune users based on their post count as well. The criteria for post count can be above, below, or equal to, a specified number. The value you enter must be a positive integer.</para></listitem>
-					<listitem><para><guilabel>Prune users</guilabel>: The usernames of the users you want to prune. Each username you want to prune should be on its own line. You can use wildcards (*) in username patterns as well.</para></listitem>
-					<listitem><para><guilabel>Delete pruned user posts</guilabel>: When users are removed (actually deleted and not just deactivated), you must choose what to do with their posts. To delete all of the posts that belong to the pruned user(s), select the radio button labeled <guilabel>Yes</guilabel>. Otherwise, select <guilabel>No</guilabel> and the pruned user(s)' posts will remain on the board, untouched.</para></listitem>
-					<listitem><para><guilabel>Deactivate or delete</guilabel>: You must choose whether you want to deactivate the pruned user(s)' accounts, or to completely delete and remove them from the board's database.</para></listitem>
-				</itemizedlist>
-				
-				<warning>
-					<para>Pruning users cannot be undone! Be careful with the criteria you choose when pruning users.</para>
-				</warning>
-			</section>
-		</section>
-	</section>
-	
+
 	<section id="acp_groups">
 		<sectioninfo>
 			<authorgroup>
@@ -1574,7 +1420,7 @@
 		
 		<title>Groepsbeheer</title>
 		
-		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
+		<para><glossterm>Gebruikersgroepen</glossterm> zijn een manier om gebruikers te groeperen. Dit maakt het makkelijk om permissies aan veel gebruikers tegelijkertijd toe te wijzen. phpBB 3.0 heeft zes voor gedefinieerde groepen: Administrators, Zoekrobots, Hoofdmoderators, Gasten, Geregistreerde gebruikers, en Geregistreerde COPPA-gebruikers.</para>
 		
 		<section id="acp_groups_types">
 			<sectioninfo>
@@ -1590,44 +1436,44 @@
 			</sectioninfo>
 			
 			<title>Groeptypes</title>
-			<para>There are two types of groups:</para>
+			<para>Er zijn twee types van groepen:</para>
 			
 			<!-- TODO: More info on each pre-defined group? -->
 			<variablelist>
 				<varlistentry>
-					<term>Pre-defined groups</term>
+					<term>Voor gedefinieerde groepen</term>
 					<listitem>
-						<para>These are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar, and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users", for instance. Do not try to remove them manually through the database, or your board will no longer function properly.
+						<para>Dit zijn groepen die standaard beschikbaar zijn in phpBB 3.0. Je kan ze <emphasis>NIET</emphasis> verwijderen, omdat het forum ze voor verschillende toepassingen nodig heeft. Je kan nog steeds hun attributen (beschrijving, kleur, rang, avatar, etc) en groepsleiders veranderen. Gebruikers die op je forum registreren worden automatisch in de voor gedefinieerde groep &quot;Geregistreerde gebruikers&quot; geplaatst. Probeer ze niet handmatig te verplaatsen via de database, of je forum functioneerd niet meer goed.
 						
 							<variablelist>
 								<varlistentry>
 									<term>Beheerders</term>
-									<listitem><para>This usergroup contains all of the administrators on your board. All founders are administrators, but not all administrators are founders. You can control what administrators can do by managing this group.</para></listitem>
+									<listitem><para>Deze gebruikersgroep bevat alle administrators van je forum. Alle beheerders zijn administrators, maar niet alle administrators zijn beheerders. Je kan controleren wat administrators kunnen doen door deze groep te beheren.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
 									<term>Zoekrobots</term>
-									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.0 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
+									<listitem><para>Deze groep is bedoeld voor zoekmachine robots. phpBB 3.0 heeft de mogelijkheid om de bekende problemen die zoekmachine robots tegen komen wanneer ze he forum indexeren. Voor meer informatie over het beheren van de instellingen voor iedere robot, bekijk de Zoekrobots gedeelte.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
 									<term>Hoofdmoderators</term>
-									<listitem><para>Global moderators are moderators that have moderator permissions for every forum in your board. You can edit what permissions these moderators have by managing this group.</para></listitem>
+									<listitem><para>Hoofdmoderators zijn moderators die moderatorpermissies hebben voor alle forums. Je kan wijzigen welke permissies deze moderators hebben door het beheren van deze groep.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
 									<term>Gasten</term>
-									<listitem><para>Guests are visitors to your board who aren't logged in. You can limit what guests can do by managing this usergroup.</para></listitem>
+									<listitem><para>Gasten zijn bezoekers op je forum die niet aangemeld zijn. Je kan limiteren wat gasten kunen doen door deze gebruikersgroep te beheren.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
 									<term>Geregistreerde gebruikers</term>
-									<listitem><para>Registered users are a big part of your board. Registered users have already registered on your board. To control what registered users can do, manage this usergroup.</para></listitem>
+									<listitem><para>geregistreerde gebruikers is een groot deel van je forum. Geregistreerde gebruikers zijn al geregistreerd op je forum. Om te controleren wat geregistreerde gebruikers kunnen doen, beheer deze gebruikersgroep.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
-									<term>Registered COPPA Users</term>
-									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 13 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A. and can be disabled altogether.</para></listitem>
+									<term>Geregistreerde COPPA-gebruikers</term>
+									<listitem><para>Geregistreerde COPPA-gebruikers zijn in principe het zelfde als geregistreerde gebruikers, behalve dan dat ze onder de <acronym>COPPA</acronym>, ook wel Child Online Privacy Protection Act, wet, wat betekend dat als ze onder de 13 zijn in de U.S.A. ze onder deze wet vallen. Het beheren van deze gebruikersgroep is belangrijk om deze mensen te beschermen. <acronym>COPPA</acronym> is niet van toepassing op gebruikers die buiten de U.S.A. wonen en de COPPA kan uitgezet worden.</para></listitem>
 								</varlistentry>
 							</variablelist>
 							
@@ -1635,9 +1481,9 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>User defined groups</term>
+					<term>Gebruiker ingestelde groepen</term>
 					<listitem>
-						<para>The groups you create by yourself are called "User defined groups". These groups are similar to groups in 2.0. You may create as many as you want, remove them, set group leaders, and change their attributes (description, colour, rank, avatar, and so forth).</para>
+						<para>De groepen die jezelf aanmaakt worden &quot;Gebruiker ingestelde groepen&quot; genoemd. Deze groepen komen overeen met de groepen in phpBB2.0. Je mag zoveel aanmaken als je wilt, ze verwijderen, groepsleiders instellen en hun attributen (beschrijving, kleur, rang, avatar, etc) aanpassen.</para>
 					</listitem>
 				</varlistentry>
 			</variablelist>
@@ -1694,6 +1540,160 @@
 			<important>
 				<para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para>
 			</important>
+		</section>
+	</section>
+
+		<section id="acp_user_security">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername></othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Gebruikersveiligheid</title>
+			<para>Anders dan de mogelijkheid om je gebruikers op je forum te beheren, is het ook belangrijk om je forum te beschermen tegen ongewenste registraties en gebruikers. De <guilabel>Gebruikersveiligheid</guilabel> sectie laat je toe om verbannen e-mails, IP's, en gebruikersnamen te beheren, als mede het beheren van niet toegestaande gebruikersnamen en het opschonen van gebruikers. Verbannen gebruikers die informatie hebben die overeenkomt met één van de verbanregels zullen niet bij één gedeelte van je forum kunnen komen.</para>
+			
+			<section id="acp_ban_emails">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername></othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>E-mailadressen verbannen</title>
+				<para>Soms is het nodig om e-mailadressen te verbannen om zo ongewenste registraties te voorkomen. Er kunnen bepaalde gebruikers of spamrobots zijn die e-mailadressen gebruiken die je kent. Hier in de <guimenuitem>E-mailadressen verbannen</guimenuitem> gedeelte, kan je dit doen. Je kan controleren welke e-mailadressen verbannen zijn, hoe lang een verbanning duurt, en de reden(en) voor de verbanning.</para>
+				
+				<para>Om één of meerdere e-mailadressen te verbannen, vul het formulier <guilabel>Eén of meer e-mailadressen verbannen</guilabel> in. Wanneer je klaar bent met je aanpassingen, klik op <guilabel>Versturen</guilabel>.</para>
+				<itemizedlist>
+					<title>Eén of meer e-mailadressen verbannen</title>
+					<listitem><para><guilabel>E-mailadres</guilabel>: Dit tekstvak zal alle e-mailadressen bevatten die je wilt verbannen onder één enkele regel. Als je meer dan één e=mailadres wilt verbannenn deze keer, zet dan ieder e-mailadres op een eigen regel. Je kan ook jokers (*) gebruiken om een een geeltelijk e-mailadres te vergelijken.</para></listitem>
+					<listitem><para><guilabel>Duur van de verbanning</guilabel>: Dit is hoe lang de e-mailadressen verbannen zullen zijn. De beschikbare opties bevatten enkele vaak voorkomende tijdsduraties, zoals aantal uur of dagen. Je kan ook een datum instellen tot wanneer de e-mailadressen verbannen zullen zijn; om dit in te stellen, selecteer <guilabel>Tot -></guilabel> uit het selectiemenu, en specificeer een datum in het formaat &quot;YYYY-MM-DD&quot; in het tekstvak onder het selectiemenu.</para></listitem>
+					<listitem><para><guilabel>Uitsluiten van verbanning</guilabel>: Je moet dit inschakelen als je alle ingevoerde e-mailadressen wilt uitsluiten van alle bestaande verbanningen.</para></listitem>
+					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dit is een korte reden voor waarom je de e-mailadressen hebt verbannen. Dit is optioneel, en kan je helpen bij het onthouden waarom je de e-mailadressen hebt verbannen. Deze reden is alleen zichtbaar voor moderators en administrators met de juiste permissies.</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergegeven aan de verbannen gebruiker</guilabel>: Dit is een korte uitleg dat getoond zal worden aan de gebruikers met de verbannen e-mailadressen. Dit kan verschillend zijn van de hierboven staande <guilabel>Reden voor verbanning</guilabel>.</para></listitem>
+				</itemizedlist>
+				
+				<para>Anders dan het toevoegen van e-mailadressen om verbannen/uitgesloten te worden, kan je ook e-mailadressen die verbannen of uitgesloten zijn opheffen. Om van één of meer e-mailadressen de verbanning of uitsluiting op te heffen, vul het  <guilabel>Verbannen of uitgesloten e-mailadressen opheffen</guilabel> formulier in. Wanneer je klaar bent, klik op <guilabel>Versturen</guilabel>.</para>
+				<itemizedlist>
+					<title>Verbannen of uitgesloten e-mailadressen opheffen</title>
+					<listitem><para><guilabel>E-mailadres</guilabel>: Dit meerdere selectiemenu bevat alle verbannen e-mailadressen. Selecteer het e-mailadres waarvan je de verbanning of uitsluiting wilt opheffen door op het e-mailadres te klikken in de meerdere selectiemenu. <tip><para>Om meer dan één e-mailadres te selecteren, moet je de juiste combinatie tussen muis en toetsenbord commando's uitvoeren. De meest voorkomende manier om dit te doen is door de CTRL knop in te drukken en ingedrukt te houden op je toetsenbord, en met de muis op alle e-mailadressen die je wilt selecteren te klikken. Laat de CTRL knop los als je klaar met het selecteren bent.</para></tip></para></listitem>
+					<listitem><para><guilabel>Duur van de verbanning</guilabel>: Dit is een niet te wijzigen informatie vak dat de lengte van de verbanning voor de geselecteerde e-mailadressen toont. Als er meer dan één e-mailadres is geselecteerd, zal alleen één van de verbanningslengtes getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden voor de verbanning</guilabel>: Dit is een niet te wijzigen informatie vak dat de reden voor de verbanning voor de geselecteerde e-mailadressen toont. Als er meer dan één e-mailadres is geselecteerd, zal alleen één van de verbannings redenen getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergeven aan de verbannen gebruiker</guilabel>: Dit is een niet te wijzigen informatie vak dat de reden toont die getoond wordt aan de verbannen gebruiker van de geselecteerde e-mailadressen. Als meer dan één e-mailadres is geselecteerd, zal alleen één van de getoonde redenen getoond worden.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_ban_ips">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername></othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>IP-adressen verbannen</title>
+				<para>Soms is het nodig om een <glossterm>IP-adres</glossterm> of hostnaam te verbannen om ongewenste gebruikers te voorkomen. ER kunnen bepaalde gebruikers of spambots zijn dat bepaalde IP-adressen of hostnamen gebruikt die je kent. Hier in de <guimenuitem>IP-adressen verbannen</guimenuitem> gedeelte, kan je dit doen. Je kan hiet controleren welke IP-adressen of hostnamen verbannen zullen zijn, hoe lang een verbanning duurt, en de gegeven reden(en) voor de verbanning.</para>
+				
+				<para>Om één of meerdere IP-adressen en/of hostnamen te verbannen of uit te sluiten, vul het <guilabel>Eén of meer IP-adressen verbannen</guilabel> formulier in. Wanneer je klaar bent met je aanpassingen, klik dan op <guilabel>Versturen</guilabel>.</para>
+				<itemizedlist>
+					<title>Eén of meer IP-adressen verbannen</title>
+					<listitem><para><guilabel>IP-adressen of hostnamen</guilabel>: Dit tekstvak moet alle IP-adressen en/of hostnamen die je wilt verbannen of uitsluiten bevatten in een enkele regel. Als je meer dan één IP-adres en/of hostnaam per keer wilt toevoegen, vul dan ieder IP-adres en/of hostnaam op een aparte regel. Je kan ook jokers (*) gebruiken om gedeeltes van IP-adressen in te voeren.</para></listitem>
+					<listitem><para><guilabel>Duur van verbanning</guilabel>: Dit is hoe lang de IP-adressen en/of hostnamen verbannen zullen zijn. De beschikbare opties bevatten enkele vaak voorkomende tijdsduraties, zoals aantal uur of dagen. Je kan ook een datum instellen tot wanneer de IP-adressen en/of hostnamen verbannen zullen zijn; om dit in te stellen, selecteer <guilabel>Tot -></guilabel> uit het selectiemenu, en specificeer een datum in het formaat &quot;YYYY-MM-DD&quot; in het tekstvak onder het selectiemenu.</para></listitem>
+					<listitem><para><guilabel>Uitsluiten van verbanning</guilabel>: Je moet dit inschakelen als je alle ingevoerde IP-adressen en/of hostnamen wilt uitsluiten van alle bestaande verbanningen.</para></listitem>
+					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dit is een korte reden voor waarom je de IP-adressen en/of hostnamen hebt verbannen. Dit is optioneel, en kan je helpen bij het onthouden waarom je de IP-adressen en/of hostnamen hebt verbannen. Deze reden is alleen zichtbaar voor moderators en administrators met de juiste permissies</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergegeven aan de verbannen gebruiker</guilabel>: Dit is een korte uitleg dat getoond zal worden aan de gebruikers met de verbannen IP-adressen en/of hostnamen. Dit kan verschillend zijn van de hierboven staande <guilabel>Reden voor verbanning</guilabel>.</para></listitem>
+				</itemizedlist>
+				
+				<para>Anders dan het toevoegen van IP=adressen en/of hostnamen om verbannen/uitgesloten te worden, kan je ook IP-adressen en/of hostnamen die verbannen of uitgesloten zijn opheffen. Om van één of meer IP-adressen en/of hostnamen de verbanning of uitsluiting op te heffen, vul het <guilabel>Verbannen of uitgesloten IP-adressen opheffen</guilabel> formulier in. Wanneer je klaar bent, klik op <guilabel>Versturen</guilabel>.</para>
+				<itemizedlist>
+					<title>Verbannen of uitgesloten IP-adressen opheffen</title>
+					<listitem><para><guilabel>IP-adressen of hostnamen</guilabel>: Dit meerdere selectiemenu bevat alle verbannen IP-adressen en/of hostnamen. Selecteer het IP-adres en/of hostnaam waarvan je de verbanning of uitsluiting wilt opheffen door op het IP-adres en/of hostnaam te klikken in het meerdere selectiemenu. <tip><para>Om meer dan één IP-adres en/of hostnaam te selecteren, moet je de juiste combinatie tussen muis en toetsenbord commando's uitvoeren. De meest voorkomende manier om dit te doen is door de CTRL knop in te drukken en ingedrukt te houden op je toetsenbord, en met de muis op alle IP-adressen en/of hostnamen die je wilt selecteren te klikken. Laat de CTRL knop los als je klaar met selecteren bent.</para></tip></para></listitem>
+					<listitem><para><guilabel>Duur van verbanning</guilabel>: Dit is een niet te wijzigen informatie vak dat de lengte van de verbanning voor het geselecteerde IP-adres of hostnaam toont. Als er meer dan één IP-adres of hostnaam is geselecteerd, zal alleen één van de verbanningslengtes getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dt is een niet te wijzigen informatie vak dat de reden voor de verbanning voor de geselecteerde IP-adres of hostnaam toont. Als er meer dan één IP-adres of hostnaam is geselecteerd, zal alleen één van de verbannings redenen getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergegeven aan de verbannen gebruiker</guilabel>: Dit is een niet te wijzigen informatie vak dat de reden toont die getoond wordt aan de verbannen gebruiker van de geselecteerde IP-adres of hostnaam. Als meer dan één IP-adres of hostnaam is geselecteerd, zal alleen één van de verbannings redenen getoond worden.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_ban_users">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>MennoniteHobbit</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Gebruikersnamen verbannen</title>
+				<para>Wanneer je problematische gebruikers op je forum tegenkomt, dan kan het voorkomen dat je ze wilt verbannen. Op de <guimenuitem>Gebruikersnamen verbannen</guimenuitem> pagina, kan je dit doen. Op deze pagina, kan je alle verbannen gebruikersnamen beheren.</para>
+				
+				<para>Om één of meerdere gebruikers te verbannen of uit te sluiten, vul dan het <guilabel>Eén of meer gebruikersnamen verbannen</guilabel> formulier in. Wanneer je klaar bent met je aanpassingen, klik op <guilabel>Versturen</guilabel>.</para>
+				<itemizedlist>
+					<title>Eén of meer gebruikersnamen verbannen</title>
+					<listitem><para><guilabel>Gebruikersnaam</guilabel>: Deze tekstvak moet alle gebruikersnamen die je wilt verbannen of uitsluiten bevatten op één regel. Als je meer dan één gebruikersnaam wilt verbannen per keer, plaats dan iedere gebruikersnaam op een eigen regel. Je kan gebruik maken van jokers (*) om gedeeltes van gebruikersnamen in te voeren.</para></listitem>
+					<listitem><para><guilabel>Duur van verbanning</guilabel>: Dit is hoe lang de gebruikersnamen verbannen zullen zijn. De beschikbare opties bevatten enkele vaak voorkomende tijdsduraties, zoals aantal uur of dagen. Je kan ooko een datum instellen tot wanneer de gebruikersnamen verbannen zullen zijn; om dit in te stellen, selecteer <guilabel>Tot -></guilabel> uit het selectiemenu, en specificeer een datum in het formaat &quot;YYYY-MM-DD&quot; in het tekstvak onder het selectiemenu.</para></listitem>
+					<listitem><para><guilabel>Uitsluiten van verbanning</guilabel>: Je moet dit inschakelen als je alle ingevoerde gebruikersnamen wilt uitsluiten van alle bestaande verbanningen.</para></listitem>
+					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dit is een korte reden voor waarom je de gebruikersnamen hebt verbannen. Dit is optioneel, en kan je helpen bij het onthouden waarom je de gebruikersnamen hebt verbannen. Deze reden is alleen zichtbaar voor moderators en administrators met de juiste permissies</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergegeven aan de verbannen gebruiker</guilabel>: Dit is een korte uitleg dat getoond zal worden aan de gebruikers met de verbannen gebruikersnamen. Dit kan verschillend zijn van de hierboven staande <guilabel>Reden voor verbanning</guilabel>.</para></listitem>
+				</itemizedlist>
+				
+				<para>Anders dan het toevoegen van gebruikersnamen om verbannen/uitgesloten te worden, kan je ook gebruikersnamen die verbannen of uitgesloten zijn opheffen. Om van één of meer gebruikersnamen de verbanning of uitsluiting op te heffen, vul het <guilabel>Verbannen of uitgesloten gebruikersnamen opheffen</guilabel> formulier in. Wanneer je klaar bent, klik op <guilabel>Versturen</guilabel>.</para>
+				<itemizedlist>
+					<title>Verbannen of uitgesloten gebruikersnamen opheffen</title>
+					<listitem><para><guilabel>Gebruikersnaam</guilabel>: Dit meerdere selectiemenu bevat alle verbannen gebruikersnamen. Selecteer de gebruikersnaam waarvan je de verbanning of uitsluiting wilt opheffen door op de gebruikersnaam te klikken in het meerdere selectiemenu. <tip><para>Om meer dan één gebruikersnaam te selecteren, moet je de juiste combinatie tussen muis en toetsenbord commando's uitvoeren. De meest voorkomende manier om dit te doen is door de CTRL knop in te drukken en ingedrukt te houden op je toetsenbord, en met de muis op alle gebruikersnamen die je wilt selecteren te klikken. Laat de CTRL knop los als je klaar met selecteren bent.</para></tip></para></listitem>
+					<listitem><para><guilabel>Duur van verbanning</guilabel>: Dit is een niet te wijzigen informatie vak dat de lengte van de verbanning voor de geselecteerde gebruikersnaam. Als er meer dan één gebruikersnaam is geselecteerd, zal alleen één van de verbanningslengtes getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden voor verbanning</guilabel>: Dit is ee niet te wijzigen informatie vak dat de reden van de verbanning voor de geselecteerde gebruikersnaam. Als er meer dan één gebruikersnaam is geselecteerd, zal alleen één van de verbannings redenen getoond worden.</para></listitem>
+					<listitem><para><guilabel>Reden die wordt weergegeven aan de verbannen gebruiker</guilabel>: Dit is een niet te wijzigen informatie vak dat de reden toont die getoond wordt aan de verbannen gebruiker van de gebruikersnaam. Als meer dan één gebruikersnaam is geselecteerd, zal aleen één van de verbannings redenen getoond worden.</para></listitem>
+				</itemizedlist>
+			</section>
+			
+			<section id="acp_disallow_users">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername></othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Verboden gebruikersnamen</title>
+				
+				<para>In phpBB3, is het ook mogelijk om registraties van bepaalde gebruikersnamen die overeenkomen met gebruikersnamen die jij hebt ingesteld te weigeren. (Dit is handig als je wilt voorkomen dat gebruikers zich registreren met gebruikersnamen die mogelijk te veel overeen komen met een belangrijke forumlid en dat mensen zich daarmee verwarren.) Om verboden gebruikersnamen te beheren, klik op de <guimenuitem>Gebruikers en Groepen</guimenuitem> tabblad in de ACP, en klik daarna op de <guimenuitem>Verboden gebruikersnamen</guimenuitem> link, welke in het menu aan de linkerkant bevind.</para>
+				
+				<para>Om een verboden gebruikersnaam toe te voegen, zoek de <guilabel>Voeg een verboden gebruikersnaam toe</guilabel> formulier, en type dan de gebruikersnaam in het invoervak genaamd <guilabel>Gebruikersnaam</guilabel>. <tip><para>Je kan gebruik maken van jokers (*) om met iedere karakter overeen te komen. Bijvoorbeeld, om gebruikersnamen te verbieden die overeenkomen met &quot;JoeBloggs&quot;, kan je &quot;Joe*&quot; invoeren. Dit voorkomt dat gebruikers zich kunnen registeren met een gebruikersnaam dat begint met &quot;Joe&quot;.</para></tip> Wanneer je klaar bent, klik op <guilabel>Versturen</guilabel>.</para>
+				
+				<para>Om een verboden gebruiekrsnaam te verwijderen, zoek de <guilabel>Verwijder een verboden gebruikersnaam</guilabel> formulier. Selecteer de verboden gebruikersnaam, die je wilt verwijderen, uit het <guilabel>Gebruikersnaam</guilabel> selectiemenu. Klik op <guilabel>Versturen</guilabel> om de geselecteerde verboden gebruikersnaam te verwijderen.</para>
+			</section>
+			
+			<section id="acp_prune_users">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername></othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Gebruikers automatisch opschonen</title>
+				
+				<para>In phpBB3, is het mogelijk om gebruikers automatisch op te schonen van je forum om alleen je actieve gebruikers te behouden. Je kan ook de complete gebruikersaccount verwijderen, samen met alles wat geassocieerd is met de gebruikersaccount. <guimenuitem>Gebruikers automatisch opschonen</guimenuitem> staat je toe om gebruikersaccounts op te schonen en te deactiveren op je forum op berichten aantal, Laatste bezoekdatum, en veel meer.</para>
+				
+				<para>Om het opschoningsproces te beginnen, zoek de <guilabel>Gebruikers automatisch opschonen</guilabel> formulier. Je kan gebruikers opschonen op iedere combinatie van de beschikbare criteria. (Met andere woorden, vul ieder veld in het formulier in dat toegepast dient te worden op de gebruikers die je zoekt om opgeschoond te worden.) Wanneer je klaar bent om gebruikers op te schonen die overeenkomen met je specifieke instellingen, klik dan op <guilabel>Versturen</guilabel>.</para>
+				
+				<itemizedlist>
+					<title>Gebruikers automatisch opschonen</title>
+					<listitem><para><guilabel>Gebruikersnaam</guilabel>: Voer een gebruikersnaam in waarvan je wilt dat hij opgeschoond moet worden. Je kan jokers (*) gebruiken om gebruikers waarvan de gebruikersnaam overeenkomt met het patroon dat je hebt opgegeven, op te schonen.</para></listitem>
+					<listitem><para><guilabel>E-mail</guilabel>: Het e-mailadres waarvan je wilt dat hij opgeschoond moet worden. Je kan jokers (*) gebruiken om gebruikers waarvan het e-mailadres overeenkomt met het patroon dat je hebt opgegeven, op te schonen.</para></listitem>
+					<listitem><para><guilabel>Geregistreerd</guilabel>: Je kan ook gebruikers automatisch opschonen gebaseerd op hun datum waarop ze geregistreerd zijn. Om gebruikers op te schonen die voor een bepaalde datum (wees voorzichtig met deze instelling) zijn geregistreerd, kies <guilabel>Ervoor</guilabel> uit het selectiemenu. Om gebruikers automatisch op te schonen die na een bepaalde datum zijn geregistreerd, kies <guilabel>Erna</guilabel> uit het selectiemenu. De datum moet ingevoerd worden in het formaat &quot;YYYY-MM-DD&quot;.</para></listitem>
+					<listitem><para><guilabel>Laatst actief</guilabel>: Je kan ook gebruikers automatisch opschonen gebaseerd op de laatst actieve tijd dat ze actief waren. Om gebruiker op te schonen die voor het laatst actief waren voor een bepaalde datum (wees voorzichting met deze instelling), kies <guilabel>Ervoor</guilabel> uit het selectiemenu. Om gebruikers op te schonen die na een bepaalde datum actief waren (dit is handig om gebruikers op te schonen die verdwenen zijn van je forum), kies <guilabel>Erna</guilabel> uit de selectiemenu. De datum moeet ingevoerd worden in het formaat &quot;YYYY-MM-DD&quot;.</para></listitem>
+					<listitem><para><guilabel>Berichten</guilabel>: Je kan ook gebruikers automatisch opschonen gebaseerd op hun berichten aantal. De criteria voor het berichten aantal kan groter, kleiner, of gelijk aan, een specifiek getal zijn. De waarde die je hier invoert moet een positief heel getal zijn.</para></listitem>
+					<listitem><para><guilabel>Gebruikers automatisch opschonen</guilabel>: De gebruikersnamen van de gebruikers die je automatisch wilt opschonen. Elk gebruikersnaam die je wilt opschonen moet op een aparte regel gezet worden. Je kan ook jokers (*) gebruiken om gebruikersnaam patronen te maken.</para></listitem>
+					<listitem><para><guilabel>Automatisch verwijderen van gebruikers berichten</guilabel>: Wanneer gebruikers verwijderd zijn (daadwerkelijk verwijderd en niet gedeactiveerd), moet je kiezen wat te doen met hun berichten. Om alle berichten die behoren bij de gebruikers die opgeschoond zijn/worden, selecteer de radioknop genaamd <guilabel>Ja</guilabel>. Kies anders voor <guilabel>Nee</guilabel> en de berichten van de opgeschoonde gebruikers zullen blijven staan op het forum.</para></listitem>
+					<listitem><para><guilabel>Deactiveren of verwijderen</guilabel>: Je moet kiezen of je de opgeschoonde gebruikersaccounts compleet wilt verwijderen en ze hierdoor verwijderen uit de forum database, of ze te deactiveren.</para></listitem>
+				</itemizedlist>
+				
+				<warning>
+					<para>Het automatisch opschonen van gebruikers kan niet ongedaan gemaakt worden! Wees voorzichtig met de criteria's die je instelt bij het opschonen van gebruikers.</para>
+				</warning>
+			</section>
 		</section>
 	</section>
 	
