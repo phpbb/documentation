@@ -1727,38 +1727,38 @@
 		<variablelist>
 			<varlistentry>
 				<term>Algemene permissies</term>
-				<listitem><para>These affect the whole board and are not bound to specific forums. They include user permissions, which limit the use of the <acronym>UCP</acronym>, searching, private messaging, using of avatars/signatures etc. Administrator permissions are also set here, as they are Global.</para></listitem>
+				<listitem><para>Deze permissies hebben effect op het hele forum en zijn niet gebonden aan specifieke forums. Ze bevatten gebruikerpermissies, welke het gebruik van de <acronym>UCP</acronym>, zoeken, privéberichten, gebruik van avatars/onderschrift etc. limiteren. Administratorpermissies kunnen hier ook ingesteld worden, als ze globaal zijn.</para></listitem>
 			</varlistentry>
 
 			<varlistentry>
-				<term>Forum Based Permissions</term>
-				<listitem><para>These permissions are set for each forum/user or group combination individually. They can be divided into two types: User permissions and Moderator permissions. The first control if a user or group can see the forum, post in it, and so on, while the Moderator permissions control if the user or group can do moderator-related actions in it.</para></listitem>
+				<term>Forum gebaseerde permissies</term>
+				<listitem><para>Deze permissies worden individueel ingesteld voor iedere forum/gebruiker of groep combinatie. Ze kunnen gescheiden worden in twee types: <guilabel>Gebruikerpermissies</guilabel> en <guilabel>Moderatorpermissies</guilabel>. De eerste controleert of een gebruiker of groep het forum kan zien, berichten er in kan plaatsen, etc, terwijl de <guilabel>Moderatorpermissies</guilabel> controleren of de gebruiker of groep moderator gerelateerde acties in het forum kunnen uitvoeren.</para></listitem>
 			</varlistentry>
 
 			<varlistentry>
-				<term>Permission Roles</term>
-				<listitem><para>In order to ease setting of permissions, you can create roles, that have a pre-defined set of permissions and which you can then assign to users or groups. phpBB already prepared some predefined roles for you to use - e.g., in forum based permissions, you can make each user a <guilabel>Standard Moderator</guilabel>, <guilabel>Full Moderator</guilabel> or <guilabel>Limited Moderator</guilabel>, etc. If you didn't have roles, you would have to set every single permission individually for each user.</para></listitem>
+				<term>Permissierollen</term>
+				<listitem><para>Om het instellen van permissies nog gemakkelijker te maken, kan je rollen aanmaken, dat al een voor gedefinieerde set van permissies heeft en welke je dan kan toewijzen aan gebruikers of groepen. phpBB heeft al enkele vor gedefinieerde rollen voor je gemaakt om te gebruiken - bijvoorbeeld, in forum gebaseerde permissies, kan je elke gebruiker een <guilabel>Standaard moderator</guilabel>, <guilabel>Gehele moderator</guilabel> of <guilabel>Simpele moderator</guilabel>, etc, geven. Als je geen rollen zou hebben, dan zou je iedere permissie individueel moeten instellen voor iedere gebruiker.</para></listitem>
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Permission Masks</term>
-				<listitem><para>In this section, you do not set or change anything, but you can view the final permissions a user or group has depending on your settings in the other sections. This feature is particularly useful when you need to debug your permissions and for example, you cannot find out why someone doesn't have the permission you want him to have.</para></listitem>
+				<term>Permissiemaskers</term>
+				<listitem><para>In dit gedeelte, kan je niks instellen of veranderen, maar je kan de uiteindelijke permissies die een gebruiker of groep heeft, afhankelijk van je instellingen in de andere gedeeltes, bekijken. Deze optie is vooral handig wanneer je problemen hebt met je permissies. Bijvoorbeeld, je kan niet uitvinden waarom iemand niet de permissies heeft die je wilt dat hij moet hebben.</para></listitem>
 			</varlistentry>
 		</variablelist>
 		<figure id="img_quick_permissions_types_admin">
-				<title>Global and local permissions</title>
+				<title>Globale en locale permissies</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
 					</imageobject>
 					<caption>
-						<para>Global and local permissions</para>
+						<para>Globale en locale permissies</para>
 					</caption>
 				</mediaobject>
 			</figure>
-		<note id="user_group_permission_note"><para>Each permission can be assigned to a group or a user. We recommend you to use group permissions when possible - a simple example why: When you want to add a moderator to a forum, instead of assigning individual moderator permissions for each forum to him, you will just add him to the group which already has those permissions.</para></note>
+		<note id="user_group_permission_note"><para>Iedere permissie kan toegewezen worden aan een groep of een gebruiker. Wij bevelen aan dat je groeppermissies gebruikt waar mogelijk - een simpele voorbeeld van waarom: Wanneer je een moderator wilt toevoegen aan een forum, in plaats van het toewijzen van individuele permissies voor ieder forum voor hem, voeg je hem gewoon toe aan de groep die al die permissies heeft.</para></note>
 		<!-- TODO add link when masks section is finished -->
-		<para>When setting permissions, you will encounter three possible values - NO, YES and NEVER, with NO as the default value for each permission. If you set a YES, it overrides the NO, however, if the permissions is set to NEVER, you cannot override it by setting it to YES in another place. If you still have problems understanding this system, see the Permissions Masks section.</para>
+		<para>Wanneer je permissies aan het instellen bent, kom je drie mogelijke waardes tegen - <emphasis>Nee</emphasis>, <emphasis>Ja</emphasis> en <emphasis>Nooit</emphasis>, met <emphasis>Nee</emphasis> als de standaard waarde voor iedere permissie. Als je de permissie instelt op <emphasis>Ja</emphasis>, overschrijft het de Nee, echter, als de permissie is ingestelt op <emphasis>Nooit</emphasis>, kan je deze instelling niet overschrijven met een Ja in een andere plek. Als je nog steeds problemen hebt met het snappen van dit systeem, bekijk dan de Permissiemaskers gedeelte.</para>
 
 		<section id="acp_permissions_global">
 			<sectioninfo>
