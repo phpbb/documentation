@@ -1487,58 +1487,74 @@
 					</listitem>
 				</varlistentry>
 			</variablelist>
-			<para>The <guimenuitem>Manage Groups</guimenuitem> section in the <acronym>ACP</acronym> shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
+			<para>Het <guimenuitem>Groepenbeheer</guimenuitem> gedeelte in de <acronym>ACP</acronym> toont je aparte lijsten voor &quot;Gebruiker ingestelde groepen&quot; en de &quot;Voor ingestelde groepen&quot;.</para>
 			
 		</section>
 		<section id="acp_groups_edit">
 			<title>Groepinstellingen</title>
-			<para>A list of attributes a group can have:</para>
+			<para>Een lijst van attributen die een groep kan hebben:</para>
 			<variablelist>
 				<varlistentry>
 					<term>Groepsnaam</term>
-					<listitem><para>The name of your group.</para></listitem>
+					<listitem><para>De naam van je groep.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Groepsbeschrijving</term>
-					<listitem><para>The description of the group that will be displayed on the group overview list.</para></listitem>
+					<listitem><para>De beschrijving van de groep dat getoond zal worden op de groepsoverzicht lijst.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Groepstype</term>
+					<listitem><para>Het groepstype bepaald onder andere of gebruikers zomaar zich kunnen aanmelden voor een groep</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Permissies kopiëren van</term>
+					<listitem><para>Wanneer de groep aangemaakt is, zal deze dezelfde permisises hebben als dat je hier geselecteerd hebt.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Alleen oprichters mogen beheren</term>
+					<listitem><para>Het beheer van deze groep beperken naar oprichters alleen. Gebruikers die groeppermissies hebben zullen deze groep wel kunnen zien en ook deze groepsleden.</para></listitem>
 				</varlistentry>
 				<varlistentry id="acp_groups_edit_legend">
-					<term>Display group in legend:</term>
-					<listitem><para>This will enable the display of the name of the group in the legend of the &quot;Who is Online&quot; list. Note, that this will only make sense if you specified a colour for the group.</para></listitem>
+					<term>Groep weergeven in de legenda:</term>
+					<listitem><para>Dit zal de weergave van de naam van de groep in de legenda van &quot;Wie is Online&quot; lijst inschakelen. Let op, dit maakt alleen van nut als je een specifieke kleur voor de groep hebt ingesteld.</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group able to receive private messages</term>
-					<listitem><para>This will allow the sending of Private Messages to this group. Please note, that it can be dangerous to allow this for Registered Users, for instance. There is no permission to deny the sending to groups, so anyone who is able to send Private Messages will be able to send a message to this group!</para></listitem>
+					<term>Groep kan privéberichten ontvangen</term>
+					<listitem><para>Dit staat het sturen van privéberichten naar deze groep toe. Let op, dit kan gevaarlijk zijn om het toe te staan voor de geeregistreerde gebruikers groep. Er is namelijk geen permissie die het versturen van privéberichten naar groepen verbied, dus iedereen die privéberichten kan versturen, kan een bericht versturen naar deze groep!</para></listitem>
 				</varlistentry>
 				<varlistentry>
-					<term>Group private message limit per folder</term>
-					<listitem><para>This setting overrides the per-user folder message limit. A value of &quot;0&quot; means the user default limit will be used. See the <link linkend="ucp_preferences">section on user preferences</link> for more information about private message settings.</para></listitem>
+					<term>Groeps-PB limiet van berichten per map</term>
+					<listitem><para>Deze instelling oversschrijft de per gebruiker berichten map limiet. Een waarde van &quot;0&quot; betekend dat de gebruikers standaard limiet wordt gebruikt. Bekijk het <link linkend="ucp_preferences">gedeelte over de gebruikers voorkeuren</link> voor meer informatie over privéberichten instellingen.</para></listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>Maximaal aantal toegestaande ontvangers per privébericht</term>
+					<listitem><para>Het maximaal aantal toegestaande ontvangers in een privébericht. De waarde &quot;0&quot; betekent dat de globale foruminstelling wordt gebruikt.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Groepskleur</term>
-					<listitem><para>The name of members that have this group as their default group (see <xref linkend="acp_groups_default" />) will be displayed in this colour on all forum pages. If you enable <link linkend="acp_groups_edit_legend"><guilabel>Display group in legend</guilabel></link>, an legend entry with the same colour will appear below the &quot;Who is Online&quot; listing.</para></listitem>
+					<listitem><para>De naam van de leden die deze groep heeft als hun standaard groep (zie <xref linkend="acp_groups_default" />) zal worden getoond in deze kleur op alle forum pagina`s. Als je <link linkend="acp_groups_edit_legend"><guilabel>Groep weergeven in legenda</guilabel></link> hebt ingeschakeld, dan zal de legenda item met dezelfde kleur weergegeven worden als de het lid in de &quot;Wie is Online&quot; lijst.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Groepsrang</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will have this rank below his username. Note, that you can change the rank of this member to a different one that overrides the group setting. See the <link linkend="acp_user_ranks">section on ranks</link> for more information.</para></listitem>
+					<listitem><para>Een lid die deze groep als standaard groep (zie <xref linkend="acp_groups_default" />) heeft, zal deze rang onder zijn gebruikersnaam hebben. Let op, je kan de rang van dit lid veranderen naar een andere rang die dan de groepsrang instelling overschrijft. Zie het <link linkend="acp_user_ranks">gedeelte over rangen</link> voor meer informatie.</para></listitem>
 				</varlistentry>
 				<varlistentry>
 					<term>Groeps-avatar</term>
-					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will use this avatar. Note that a member can change his avatar to a different one if he has the permission to do so. For more information on avatar settings, see the <link linkend="ucp_avatar">userguide section on avatars</link>.</para></listitem>
+					<listitem><para>Een lid die deze groep als standaard groep (zie <xref linkend="acp_groups_default" />) heeft, zal deze avatar gebruiken. Let op, een lid kan zijn avatar veranderen naar een andere avatar als hij daarvoor de permissies heeft. Voor meer informatie over avatar instellingen, bekijk de <link linkend="ucp_avatar">gebruikersgids gedeelte over avatars</link>.</para></listitem>
 				</varlistentry>				
 			</variablelist>
 			
 		</section>
 		<section id="acp_groups_default">
 			<title>Standaard groepen</title>
-			<para>As it is now possible to assign attributes like colours or avatars to groups (see <xref linkend="acp_groups_edit"/>, it can happen that a user is a member of two or more different groups that have different avatars or other attributes. So, which avatar will the user now inherit? </para>
-			<para>To overcome this problem, you are able to assign each user exactly one "Default group". The user will only inherit the attributes of this group. Note, that it is not possible to mix attributes: If one group has a rank but no avatar, and another group has only a avatar, it is not possible to display the avatar from one group and the rank from the other group. You have to decide for one "Default group".</para>
+			<para>Zoals het nu mogelijk is om attributen zoals kleuren of avatars toe te wijzen aan groepen (zie <xref linkend="acp_groups_edit"/>, kan het gebeuren dat een gebruiker lid is van twee of meer verschillende groepen die verschillende avatars of andere attributen hebben. Dus nu komt de vraag: welke avatar zal de gebruiker gebruiken? </para>
+			<para>Om dit probleem op te lossen, kan je voor iedere gebruiker precies één &quot;Standaard groep&quot; toewijzen. De gebruiker zal dan alleen de attributen van deze groep krijgen. Let op, het is niet mogelijk om attributen te mixen: Als een groep een rang heeft maar geen avatar, en een andere groep heeft alleen een avatar, dan is het niet mogelijk om de avatar van de ene groep weer te geven en de rang van de andere groep. Je moet beslissen welke de &quot;Standaard groep&quot; word.</para>
 			<important>
-				<para>Default groups have no influence on permissions. There is no added permissions bonus for your default group, so a user's permissions will stay the same, no matter what group is his default one.</para>
+				<para>Standaard groepen hebben geen invloed op permissies. Er is geen toegevoegde permissie bonus voor je standaard groep, dus de permissies van de gebruiker blijven het zelfde, ongeacht welke groep zijn standaard groep is.</para>
 			</important>
-			<para>You can change default groups in two ways. You can do this either through the user management (see <xref linkend="acp_users"/>), or directly through the groups management (<guilabel>Manage groups</guilabel>) page. Please be careful with the second option, as when you change the default group through a group directly, this will change the default group for <emphasis>all</emphasis> its group members and overwrite their old default groups. So, if you change the default group for the &quot;Registered Users&quot; group by using the <guilabel>Default</guilabel> link, all members of your forum will have this group as their default one, even members of the Administrators and Moderators groups as they are also members of &quot;Registered Users&quot;.</para>
+			<para>Je kan standaard groepen veranderen op twee manieren. Je kan dit doen via de gebruikersbeheer (zie <xref linkend="acp_users"/>), of direct via de groepsbeheer (<guilabel>Groepsbeheer</guilabel>) pagina. Wees voorzichtig met de tweede optie, als je de standaard groep vie de groep verandert, zal dit de standaard groep voor <emphasis>ALLE</emphasis> groepsleden veranderen en hun oude standaard groep overschrijven. Dus als je de standaard groep voor de &quot;Geregistreerde gebruikers&quot; groep wilt veranderen door gebruik te maken van de <guilabel>Standaard</guilabel> link, zullen alle gebruikers van je forum deze groep als hun standaard groep hebben, zelfs de leden van de Beheerders en Moderatorgroepen omdat ze ook leden zijn van de &quot;Geregistreerde gebruikers&quot; groep.</para>
 			<important>
-				<para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para>
+				<para>Als je een groep een standaard groep maakt die een rang en avatar hebben, de gebruikers oude rang en avatar zullen overschreven worden door de groep.</para>
 			</important>
 		</section>
 	</section>
@@ -1705,12 +1721,12 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Permission Overload</title>
-		<para>On your board, you will need to control what users can and cannot do. With the flexible and detailed system that Olympus provides, you have very extensive possibilities of specifying and managing user and group permissions. There are basically two type of permissions - <guilabel>Global permissions</guilabel>, which apply to the whole board or are not related to forums and posts, and <guilabel>Forum based permissions</guilabel>, which can be used to control specific permissions for each forum.</para>
-		<para>To understand how to set permissions and to know how to use the interface, it is important to recognize the different types of permissions and tools that the <guilabel>Permission</guilabel> tab in the <acronym>ACP</acronym> provides:</para>
+		<title>Permissie Overload</title>
+		<para>Op je forum, moet je kunnen controleren wat gebruikers kunnen en niet kunnen doen. Met de flexibele en gedetaileerde systeem dat phpBB3 &quot;Olympus&quot; bied, heb je een veel uitgebreide mogelijkheden in het beheren van gebruikers- en groepspermissies. Er zijn in principe twee type permissies - <guilabel>Algemene permissies</guilabel>, welke toegepast worden op het hele forum of niet gerelateerd zijn aan berichten, onderwerpen en een enkel forum, en <guilabel>Forum gebaseerde permissies</guilabel>, welke gebruikt kunnen worden om specifieke permissies voor ieder forum te controleren.</para>
+		<para>Om te begrijpen hoe de permissies in te stellen en om hoe de interface te gebruiken, is het erg belangrijk om de verschillende type permissies te herkennen en de gereedschappen dat de <guilabel>Permissies</guilabel> tabblad in de <acronym>ACP</acronym> aanbied te begrijpen:</para>
 		<variablelist>
 			<varlistentry>
-				<term>Global Permissions</term>
+				<term>Algemene permissies</term>
 				<listitem><para>These affect the whole board and are not bound to specific forums. They include user permissions, which limit the use of the <acronym>UCP</acronym>, searching, private messaging, using of avatars/signatures etc. Administrator permissions are also set here, as they are Global.</para></listitem>
 			</varlistentry>
 
