@@ -32,7 +32,7 @@
 				<para>Et af nedenstående SQL-databasesystemer:</para>
 				<itemizedlist>
 					<listitem>
-						<para>Firebird 2.0+</para>
+						<para>Firebird 2.1+</para>
 					</listitem>
 					<listitem>
 						<para>MySQL 3.23 eller over</para>
@@ -232,7 +232,7 @@
 		<title>Opret fora</title>
 		<para>Fora er sektioner hvor indlæg opbevares og er normalt emneopdelt. Uden fora ville brugerne ikke være i stand til at indsende indlæg struktureret! Det er nemt at oprette et forum.</para>
 		<para>Når du er logget ind og findes i bunden af siden linket <guilabel>Administratorkontrolpanel</guilabel>. Klik på det og efter du har afgivet kodeord endnu engang, videredirigeres du til administratorindekset.</para>
-		<para>I toppen af administratorkontrolpanelet er der et antal faner som giver adgang til boardets forskellige funktioner og indstillinger. Du kan komme til forumadministration ved at vælge fanen <guilabel>Fora</guilabel>, samme side kan nås ved at vælge <guilabel>Administrér fora</guilabel> i menuen til venstre.</para>
+		<para>I toppen af administratorkontrolpanelet er der et antal faner som giver adgang til boardets forskellige funktioner og indstillinger. Du kan komme til forumadministration ved at vælge fanen <guilabel>Fora</guilabel>, samme side kan nås ved at vælge <guilabel>Forumadministation</guilabel> i menuen til venstre.</para>
 		<para>I forumadministration kan du ændre allerede oprettede fora og underfora, og naturligvis oprette nye. Et underforum er herakisk indeholdt i et overforum. Læs mere i  <link linkend="acp_forums_subforums">administration af underfora</link>.</para>
 		<para>Find knappen <guilabel>Opret nyt forum</guilabel> nederst til højre, i tekstboksen til venstre herfor angives navnet på det nye forum. Du kan oprette et testforum og navngive det ved at skrive Test i tekstboksen. Klik på <guilabel>Opret nyt forum</guilabel> for at oprette forummet.</para>
 		<para>En ny side med overskriften &quot;Opret nyt forum :: Test&quot; vises. Du vælger her indstillinger for forummet. For eksempel vælges det forumbillede der skal vises, eller du kan formulere teksten til de forumregler der vises øverst i forummet. Du bør også her angive en kort beskrivelse af forummet, så dine brugere er i stand til at regne ud hvad emnerne i forummet omhandler.</para>
@@ -316,7 +316,7 @@
 			</figure>
 			<para>Siden med <guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst ét af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel>, hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst ét af de valgte fora.</para>
 			<para>For at tilføje tilladelser til grupper vælges en eller flere, i feltet <guilabel>Tilføj grupper</guilabel>. For at tilføje tilladelser til en bruger, indtastes denne i tekstboksen <guilabel>Tilføj brugere</guilabel>, eller brug funktionen <guilabel>Find en tilmeldt bruger</guilabel>. Klik herefter på <guilabel>Tilføj tilladelser</guilabel>, som dirigerer dig videre til tilladelseskærmbilledet. Her listes alle de fora du tidligere valgte, med de grupper eller brugere der ændres tilladelser for nedenfor hvert forum. </para>
-			<para>Der er to metoder til at tildele tilladelser: Du kan enten tildele dem manuelt eller bruge de foruddefinerede <guilabel>Tilladelseroller</guilabel>, som er noget simplere, men ikke så fintmaskede. Du kan skifte mellem begge metoder når som helst i processen. Du kan vælge at ignorere introduktionen til manuelle tilladelser og hoppe direkte til afsnittet <link linkend="quick_permissions_roles">&quot;Tilladelseroller&quot;</link>, hvis du er ivrig efter at få alt til at virke hurtigst muligt. Men vær som nævnt opmærksom på at disse roller kun tilbyder et ganske lille udsnit af de muligheder man har i tilladelsesystemet. Efter vores opfattelse forstår en god Olympusadministrator at udnytte tilladelsesystemet fuldt ud. </para>
+			<para>Der er to metoder til at tildele tilladelser: Du kan enten tildele dem manuelt eller bruge de foruddefinerede <guilabel>Tilladelseroller</guilabel>, som er noget simplere, men ikke så fintmaskede. Du kan skifte mellem begge metoder når som helst i processen. Du kan vælge at ignorere introduktionen til manuelle tilladelser og hoppe direkte til afsnittet <link linkend="quick_permissions_roles">&quot;Tilladelseroller&quot;</link>, hvis du er ivrig efter at få alt til at virke hurtigst muligt. Men vær som nævnt opmærksom på at disse roller kun tilbyder et ganske lille udsnit af de muligheder man har i tilladelsesystemet. Efter vores opfattelse forstår en god Olympusadministrator at udnytte tilladelsesystemet fuldt ud.</para>
 			<para>De to metoder adskiller sig kun ved den måde indstillingen foretages på, de deler samme interface.</para>
 		</section>
 		<section id="quick_permissions_manual">

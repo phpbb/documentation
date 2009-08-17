@@ -7,7 +7,7 @@
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2009</year>
-			<holder>phpBB4.dk</holder>
+			<holder>phpBB3.dk</holder>
 		</copyright>
 	</chapterinfo>
 	<title>Administratorguide</title>
@@ -37,7 +37,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Generel konfiguration og forside</title>
-		<para>Det første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her er link til mest anvendte administrationssider, blandt andet <link linkend="acp_users">Administrér brugere</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
+		<para>Det første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her er link til mest anvendte administrationssider, blandt andet <link linkend="acp_users">Brugeradministration</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
 		<figure id="img_acp_index">
 			<title>Administratorindeks</title>
 				<mediaobject>
@@ -79,11 +79,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
-						</author>
-						
-						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -94,10 +90,10 @@
 					<title>Board grundlæggende</title>
 					<listitem><para>Den første indstilling du kan ændre er måske den vigtigste af dem alle, nemlig navnet på boardet. Brugerne identificerer dit board med dette navn. Skriv boardets navn i tekstfeltet <guilabel>Boardnavn</guilabel>, og det vises øverst i boardets hovede. Samtidig vises navnet som præfiks i de besøgendes browsertitel.</para></listitem>
 					<listitem><para><guilabel>Boardbeskrivelse</guilabel> er dit boards slogan eller formål, og vises under <guilabel>Boardnavn</guilabel>et i boardets hoved.</para></listitem>
-					<listitem><para>Har du i forbindelse med vedligeholdelse, for eksempel ved opdateringer, brug for at lukke boardet, kan det gøres ved at bruge switchen <guilabel>Slå board fra</guilabel> . Vælg <guilabel>Ja</guilabel> for midlertidigt at lukke boardet. Det forhindrer alle, undtagen administratorer og redaktører, i at får adgang til boardet. Når boardet er slået fra, møder man nu enten en standardmeddelelse, eller én du selv komponerer. Du tilføjer din egen meddelelse i teksfeltet umiddelbart under radioknapperne ja/nej i <guilabel>Slå board fra</guilabel>. Administratorer og redaktører vil stadig have adgang til deres kontrolpaneler mens boardet er slået fra.</para></listitem>
+					<listitem><para>Har du i forbindelse med vedligeholdelse, for eksempel ved opdateringer, brug for at lukke boardet, kan det gøres ved at bruge switchen <guilabel>Deaktiver boardet</guilabel> . Vælg <guilabel>Ja</guilabel> for midlertidigt at lukke boardet. Det forhindrer alle, undtagen administratorer og redaktører, i at få adgang til boardet. Når boardet er slået fra, møder man nu enten en standardmeddelelse, eller en du selv komponerer. Du tilføjer din egen meddelelse i teksfeltet umiddelbart under radioknapperne ja/nej i <guilabel>Deaktiver boardet</guilabel>. Administratorer og redaktører vil stadig have adgang til deres kontrolpaneler mens boardet er slået fra.</para></listitem>
 					<listitem><para>Du skal også vælge boardets <guilabel>Standardsprog</guilabel>. Det er det sprog gæster vil se når de besøger boardet. Du kan tillade at tilmeldte brugere kan vælge andre sprog. Som standard er kun <guilabel>British English</guilabel> installeret, men du kan <ulink url="http://www.phpbb.com/languages">downloade flere sprog på phpBB websitet</ulink> og installere disse på boardet. Læs mere om sprog i <link linkend="acp_system_language">sektionen for konfiguration af sprogpakker</link>.</para></listitem>
 					<listitem><para>Du kan indstille dit boards standarddatoformat. phpBB3 giver mulighed for at vælge mellem nogle meget almindelig måder at vise tid og dato på. Er ingen af disse tilfredsstillende, kan du tilpasse datoformatet ved at vælge <guimenuitem>Brugertilpasset</guimenuitem> i dropdownmenuen for <guilabel>Datoformat</guilabel>. Herefter skriver du det ønskede datoformat i teksfeltet ved siden af. Syntaks for datoformat er det samme som <ulink url="http://www.php.net/date">PHP's date() funktion</ulink>.</para></listitem>
-					<listitem><para>Sammen med indstilling af hvordan tiden skal vises, kan du også vælge boardets tidszone. De tilgængelige tidszoner kan vælges i dropdownmenuen <guilabel>Tidszone for board</guilabel>, som alle er relative i forhold til <acronym>UTC</acronym> (som næsten er identisk med det tidligere anvendte <acronym>GMT</acronym> eller Greenwich Mean Time) tider. Desuden kan du vælge om boardet skal køre med sommertid ved at vælge ja eller net ved punktet <guilabel>Slå sommertid/DST til</guilabel>.</para></listitem>
+					<listitem><para>Sammen med indstilling af hvordan tiden skal vises, kan du også vælge boardets tidszone. De tilgængelige tidszoner kan vælges i dropdownmenuen <guilabel>Tidszone for board</guilabel>, som alle er relative i forhold til <acronym>UTC</acronym> (som næsten er identisk med det tidligere anvendte <acronym>GMT</acronym> eller Greenwich Mean Time) tider. Desuden kan du vælge om boardet skal køre med sommertid ved at vælge ja eller net ved punktet <guilabel>Vælg sommertid/DST</guilabel>.</para></listitem>
 					<listitem><para>Den typografi der vises for gæster og som standardvalg for brugere vælges i <guilabel>Standardtypografi</guilabel>. Som standard er phpBB installeret med typografien prosilver med mulighed for også at installere subsilver2. Du kan give brugere mulighed for selv kan vælge mellem de installerede typografier ved at vælge <guilabel>Nej</guilabel> til <guilabel>Tilsidesæt brugeres valg af typografi</guilabel>. Læs i <link linkend="acp_styles">typografisektion</link> hvordan nye typografier tilføjes og hvor de kan findes.</para></listitem>
 				</itemizedlist>
 				
@@ -111,7 +107,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -227,8 +223,8 @@
 				
 				<itemizedlist>
 					<title>Generelle indstillinger</title>
-					<listitem><para><guilabel>Aktivér boardets emailsystem</guilabel>: Hvis servicen er slået fra vil boardet ikke sende nogen emails overhovedet.</para></listitem>
-					<listitem><para><guilabel>Brugere sender emails via boardet</guilabel>: I stedet for at vise brugerens emailadresse kan brugere sende emails via boardet.</para></listitem>
+					<listitem><para><guilabel>Boardets emailsystem er</guilabel>: Hvis systemet er inkativt, vil boardet ikke sende nogen emails overhovedet.</para></listitem>
+					<listitem><para><guilabel>Brugere sender emails via boardet</guilabel>: I stedet for at vise brugeres emailadresse kan brugere sende emails via boardet.</para></listitem>
 					<listitem><para><guilabel>Navn på emailfunktion</guilabel>: Navnet på den anvendte emailfunktion ved forsendelse af emails gennem PHP. Normalt er dette &quot;mail&quot;.</para></listitem>
 					<listitem><para><guilabel>Pakkestørrelse for emails</guilabel>: Antallet af emails der afsendes i en pakke. Indstillingen er nyttig hvis du vil afsend masse-emails og har et stort antal brugere.</para></listitem>
 					<listitem><para><guilabel>Emailadresse for kontakt</guilabel>: Denne emailadresse bruges overalt, hvor der er specifikke kontaktpunkter, f.eks. spam, fejlmeddelelser, problemer med tilmelding osv. Den vil altid blive anvendt som &quot;From&quot; og &quot;Reply-To&quot;-adresserne i emails.</para></listitem>
@@ -266,7 +262,7 @@
 				
 				<itemizedlist>
 					<title>Jabber-indstillinger</title>
-					<listitem><para><guilabel>Aktivér Jabber</guilabel>: Vælg <guilabel>Slået til</guilabel>, hvis du vil benyttet Jabber til beskeder og adviseringer.</para></listitem>
+					<listitem><para><guilabel>Jabber er</guilabel>: Vælg <guilabel>Aktiv</guilabel>, hvis du vil benyttet Jabber til beskeder og adviseringer.</para></listitem>
 					<listitem><para><guilabel>Jabber server</guilabel>: Den server dit board skal benyttet. Se <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">liste over offentligt tilgængelige servere</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabberport</guilabel>: Den port ovennævnte Jabber-server benytter. Port 5222 er den mest anvendte. Er du usikker på dette, undlad at ændre værdien.</para></listitem>
 					<listitem><para><guilabel>Jabberbrugernavn eller JID:</guilabel>: Angiv en tilmeldt Jabberkonto eller et gyldigt JID. Brugernavnets gyldighed kontrolleres ikke. Anfører du alene brugernavn, sættes dit JID som dette og serveren som specificeret ovenfor. Ellers angives et gyldigt JID, eksempelvis user@jabber.org.</para></listitem>
@@ -313,7 +309,7 @@
 						<listitem><para><guilabel>Cookiedomæne</guilabel>: Domænenavnet dit board kaldes med. Stien til boardet under domænet er ikke vigtigt her.</para></listitem>
 						<listitem><para><guilabel>Cookienavn</guilabel>: Det navn cookien tildeles når den afsendes. Det bør være et unikt navn, som ikke konflikter med andre cookienavne.</para></listitem>
 						<listitem><para><guilabel>Sti til cookie</guilabel>: Normalt er &quot;/&quot; tilstrækkeligt. Herved kan cookien nås fra hele dit site. Er der behov for at gøre stien mere specifik, vælges stien til hvor dit board er installeret.</para></listitem>
-						<listitem><para><guilabel>Sikker cookie</guilabel>: Hvis dit board kan nås med <acronym>SSL</acronym>, skal denne <guilabel>Slåes til</guilabel>. Hvis ikke efterlades valget som <guilabel>Slået fra</guilabel>, ellers vil man opleve serverfejl rediregeringer.</para></listitem>
+						<listitem><para><guilabel>Sikker cookie</guilabel>: Hvis dit board kan nås med <acronym>SSL</acronym>, skal denne være <guilabel>Aktiv</guilabel>. Hvis ikke, efterlades valget som <guilabel>Inaktiv</guilabel>, ellers vil man opleve serverfejl rediregeringer.</para></listitem>
 					</itemizedlist>
 				</para>
 				
@@ -335,7 +331,7 @@
 					<para>Vær omhyggelig når disse indstillinger ændres. Fejlkonfiguration kan eksempelvis medføre at emails afsendes med fejlagtige links og information, i værste fald at boardet ikke kan tilgås.</para>
 				</warning>
 				
-				<para>I kategorien <guilabel>Gzip</guilabel> findes nogle indstillinger som phpBB gør brug af på server-niveau. I øjeblikket er der kun mulighed for at vælge ja eller nej til <guilabel>Aktivér GZip-komprimering</guilabel>, som får serveren til at komprimere indholdet med <glossterm>GZip</glossterm>-algoritmen. Det kan medvirke til at mindske netværkstrafikken, og dermed også båndbreddeforbruget, til gengæld øges belastningen af både serverens og brugeres CPU.</para>
+				<para>I kategorien <guilabel>Gzip</guilabel> findes nogle indstillinger som phpBB gør brug af på server-niveau. I øjeblikket er der kun mulighed for at vælge ja eller nej til <guilabel>Aktiver GZip-komprimering</guilabel>, som får serveren til at komprimere indholdet med <glossterm>GZip</glossterm>-algoritmen. Det kan medvirke til at mindske netværkstrafikken, og dermed også båndbreddeforbruget, til gengæld øges belastningen af både serverens og brugeres CPU.</para>
 			
 				<para>I kategorien <guilabel>Stikonfigurationer</guilabel> kan placeringen af specifikt boardindhold bestemmes. For standardinstallationer, skulle de i forvejen valgte placeringer være dækkende. Følgende fire stier kan indstilles:
 					<itemizedlist>
@@ -352,7 +348,7 @@
 						<title>Servers URL-indstillinger</title>
 						<listitem><para><guilabel>Gennemtving servers URL-indstillinger</guilabel>: Er de automatisk læste værdier af serverens URL-indstillinger, af en eller anden årsag ikke korrekt, kan de nedenfor angivne indstillinger gennemtvinges ved at vælge <guilabel>Ja</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Serverprotokol</guilabel>: Denne indstilling kan sættes til enten http:// eller https:// og er dermed fast defineret. Angives ingen protokol eller er <guilabel>Gennemtving servers URL-indstillinger</guilabel> fravalgt ovenfor, bliver protokollen bestemt udfra indstillingen sikker cookie.</para></listitem>
-						<listitem><para><guilabel>Domænenavn</guilabel>: Domænenavn hvorfra dette board kører. Inkludér &quot;www&quot; hvis det indgår i navnet. Indstillingen har kun betydning hvis URL-indstillingerne gennemtvinges.</para></listitem>
+						<listitem><para><guilabel>Domænenavn</guilabel>: Domænenavn hvorfra dette board kører. Inkluder &quot;www&quot; hvis det indgår i navnet. Indstillingen har kun betydning hvis URL-indstillingerne gennemtvinges.</para></listitem>
 						<listitem><para><guilabel>Serverport</guilabel>: Port &quot;80&quot; anvendes som standard af alle webservere. Indstillingen skal kun ændres i helt særlige tilfælde. Også denne indstilling har kun betydning hvis URL-indstillingerne gennemtvinges.</para></listitem>
 						<listitem><para><guilabel>Sti til script</guilabel>: Mappen hvor phpBB er installeret, relativt i forhold til domænenavnet. Nås dit board f.eks på www.eksempel.dk/phpBB3/, angives stien til scriptet således &quot;/phpBB3&quot;. Også denne indstilling har kun betydning hvis URL-indstillingerne gennemtvinges.</para></listitem>
 					</itemizedlist>
@@ -400,7 +396,7 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Validér browser</term>
+						<term>Valider browser</term>
 						<listitem>
 							<para>Aktiverer browservalidering for hver session, hvilket forøger sikkerheden.</para>
 							<para>De tilgængelige valgmuligheder er <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. <guilabel>Ja</guilabel> aktiverer valideringen.</para>
@@ -408,29 +404,29 @@
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Validér X_FORWARDED_FOR-hoved</term>
+						<term>Valider X_FORWARDED_FOR-hoved</term>
 						<listitem>
-							<para>Sessioner vil kun blive fortsat, hvis det sendte X_FORWARDED_FOR-hoved svarer til dét, der blev sendt med den forrige anmodning. Udelukkelser bliver også kontrolleret imod <glossterm>IP-adresse</glossterm>r i X_FORWARDED_FOR.</para>
+							<para>Sessioner vil kun blive fortsat, hvis det sendte X_FORWARDED_FOR-hoved svarer til det, der blev sendt med den forrige anmodning. Udelukkelser bliver også kontrolleret imod <glossterm>IP-adresse</glossterm>r i X_FORWARDED_FOR.</para>
 							<para>De tilgængelige valgmuligheder er <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. <guilabel>Ja</guilabel> aktiverer valideringen.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Validér reference</term>
+						<term>Valider reference</term>
 						<listitem>
 							<para>Hvis kontrollen er aktiveret, bliver referencens POST-requests kontrolleret mod værten/indstillinger for scriptsti. Denne kontrol kan medføre problemer på boards med flere domæner og/eller eksterne logins.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Kontrollér IP-adresser imod DNS blackhole liste</term>
+						<term>Kontroller IP-adresser imod DNS blackhole liste</term>
 						<listitem>
 							<para>Du kan kontrollere brugeres <glossterm>IP-adresse</glossterm>r imod <acronym>DNS</acronym> blackhole lister. Her anmeldes og sortlistes IP-adresser som anvendes til misbrug. Vælges <guilabel>Ja</guilabel>, kontrolleres mod listerne på <ulink url="http://www.spamcop.net">spamcop.net</ulink> og <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>. Opslaget kan tage lidt tid, afhængig af serverkonfigurationen. Hvis kontrollen medfører for mange fejlagtige afvisninger eller nedsætter "ekspeditionstiden", anbefales det at slå kontrollen fra.</para>
 						</listitem>
 					</varlistentry>
 					
 					<varlistentry>
-						<term>Kontrollér emaildomæne</term>
+						<term>Kontroller emaildomæne</term>
 						<listitem>
 							<para>Det er muligt at kontrollere om brugeres emailadresser er gyldige. Emaildomæne kontrolleres for en gyldig <ulink url="http://www.wikipedia.org/wiki/MX_record">MX-record</ulink> ved tilmelding og ændring af emailadressen i brugerprofiler.</para>
 							<para>De tilgængelige valgmuligheder <guilabel>Ja</guilabel> og <guilabel>Nej</guilabel>. <guilabel>Ja</guilabel> aktiverer valideringen.</para>
@@ -459,7 +455,7 @@
 					<varlistentry>
 						<term>Maksimalt antal loginforsøg</term>
 						<listitem>
-							<para>For at hindre botter og andre brugere i at forsøge at gætte andre tilmeldte brugeres kodeord, er det en god idé at sætte en grænse for antallet af loginforsøg.</para>
+							<para>For at hindre botter og andre brugere i at forsøge at gætte andre tilmeldte brugeres kodeord, er det en god ide at sætte en grænse for antallet af loginforsøg.</para>
 							<para>Angiv i hele tal antal mislykkede loginforsøg boardet skal acceptere, hvorefter brugere desuden vil blive afkrævet visuel bekræftelse.</para>
 						</listitem>
 					</varlistentry>
@@ -467,7 +463,7 @@
 					<varlistentry>
 						<term>Tillad PHP i skabeloner</term>
 						<listitem>
-							<para>phpBB3 har mulighed for at fortolke PHP-kode inkluderet i skabelonfilerne. Aktivér den mulighed her, og herved genkendes og fortolkes både <guilabel>PHP</guilabel> og <guilabel>INCLUDEPHP</guilabel> kommandoer indeholdt i disse filer.</para>
+							<para>phpBB3 har mulighed for at fortolke PHP-kode inkluderet i skabelonfilerne. Aktiver den mulighed her, og herved genkendes og fortolkes både <guilabel>PHP</guilabel> og <guilabel>INCLUDEPHP</guilabel> kommandoer indeholdt i disse filer.</para>
 						</listitem>
 					</varlistentry>
 				</variablelist>
@@ -487,7 +483,7 @@
 				<para>Den første kategori, <guilabel>Generelle indstillinger</guilabel>, giver dig kontrol og de mest basale belastningsrelaterede indstillinger, som for eksempel systembelasning og sessioners varighed. Nedenfor gennemgås hver indstilling detaljeret.
 					<itemizedlist>
 						<title>Generelle indstillinger</title>
-						<listitem><para><guilabel>Begræns systembelastning</guilabel>: Hvis systembelastningen i gennemsnit over 1 minut overskrider denne værdi, vil boardet gå offline, &quot;1.0&quot; er lig ~100% belastning af én processor. Dette virker kun på UNIX-baserede servere og hvor denne information er tilgængelig. Værdien nulstiller sig selv hvis phpBB ikke var i stand til at finde belastningsgrænsen. Alle positive værdier er gyldige. Hvis din server er udstyret med to CPU'er svarer værdien &quot;2.0&quot; til 100% belastning af begge CPU'er. &quot;0&quot; deaktiverer denne begrænsning.</para></listitem>
+						<listitem><para><guilabel>Begræns systembelastning</guilabel>: Hvis systembelastningen i gennemsnit over 1 minut overskrider denne værdi, vil boardet gå offline, &quot;1.0&quot; er lig ~100% belastning af en processor. Dette virker kun på UNIX-baserede servere og hvor denne information er tilgængelig. Værdien nulstiller sig selv hvis phpBB ikke var i stand til at finde belastningsgrænsen. Alle positive værdier er gyldige. Hvis din server er udstyret med to CPU'er svarer værdien &quot;2.0&quot; til 100% belastning af begge CPU'er. &quot;0&quot; deaktiverer denne begrænsning.</para></listitem>
 						<listitem><para><guilabel>Sessioners varighed</guilabel>: Dine brugeres sessioner udløber efter det angivne antal sekunder. Alle positive heltal er gyldige. Angiv &quot;0&quot; hvis du ønsker at sessioner ikke skal udløbe.</para></listitem>
 						<listitem><para><guilabel>Begræns sessioner</guilabel>: Det er muligt at kontrollere hvor mange samtidige sessioner der tillades på boardet. Overskrides antallet inden for et minut, vil boardet midlertidigt gå offline. Alle positive heltal er gyldige. Angiv <guilabel>0</guilabel> hvis du ikke ønsker denne begrænsning.</para></listitem>
 						<listitem><para><guilabel>Varighed af onlineinformation</guilabel>: Tid i minutter hvorefter inaktive brugere bliver fjernet fra listen <guilabel>Hvem er online</guilabel>. Jo større tidsrum, desto længere behandlingstid for at generere listen. Alle positive heltal er gyldige.</para></listitem>
@@ -507,7 +503,7 @@
 						<listitem><para><guilabel>Vis redaktører</guilabel>: Selvom det kan være nyttigt at få listet redaktører for de enkelte fora, er det muligt at deaktivere denne visning, og dermed reducere serverens processorbelastning.</para></listitem>
 						<listitem><para><guilabel>Vis &quot;Hop til&quot; boksen</guilabel>: Boksen er et nyttigt værktøj til at navigere rundt på boardet med. I boksens dropdownmenu kan alle tilgængelige fora på boardet vælges direkte. Vælg <guilabel>Ja</guilabel> for at få boksen vist.</para></listitem>
 						<listitem><para><guilabel>Brugeres aktivitet</guilabel>: Denne mulighed kontrollerer hvorvidt aktivt emne og forum vises i brugerprofil og <glossterm>UCP</glossterm>. Vælg <guilabel>Ja</guilabel> hvis du ønsker denne visning. Det anbefales imidlertid at deaktivere dette for boards med mere end en million indlæg.</para></listitem>
-						<listitem><para><guilabel>Rekompilér fastfrosne typografikomponenter</guilabel>: Kontrollerer rekompilering af forældede skabelonfiler. Finder kontrollen opdaterede filer på filsystemet, rekompilerer boardet disse. Vælg <guilabel>Ja</guilabel> hvis du ønsker denne kontrol.</para></listitem>
+						<listitem><para><guilabel>Rekompiler fastfrosne typografikomponenter</guilabel>: Kontrollerer rekompilering af forældede skabelonfiler. Finder kontrollen opdaterede filer på filsystemet, rekompilerer boardet disse. Vælg <guilabel>Ja</guilabel> hvis du ønsker denne kontrol.</para></listitem>
 					</itemizedlist>
 				</para>
 				
@@ -536,9 +532,9 @@
 				<para>Den første kategori indstillinger er generelle og rettet mod brugeres anvendelse af søgefunktionerne.
 					<itemizedlist>
 						<title>Generelle søgeindstillinger</title>
-						<listitem><para><guilabel>Aktivér søgefaciliteter</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere brugerfladen som giver søgemulighederne, inklusiv søgning i tilmeldte brugere.</para></listitem>
+						<listitem><para><guilabel>Aktiver søgefaciliteter</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere brugerfladen som giver søgemulighederne, inklusiv søgning i tilmeldte brugere.</para></listitem>
 						<listitem><para><guilabel>Brugeres søgeinterval</guilabel>:  Det antal sekunder brugere skal vente mellem søgninger. Intervallet kontrolleres individuelt pr. bruger. Alle positive værdier er gyldige. Angiv &quot;0&quot; for at deaktivere kontrollen.</para></listitem>
-						<listitem><para><guilabel>Gæsters søgeinterval</guilabel>: Det antal sekunder gæster skal vente mellem søgninger. Hvis én gæst søger, må alle andre gæster vente indtil dette tidsinterval er overskredet. Alle positive værdier er gyldige. Angiv &quot;0&quot; for at deaktivere kontrol af gæsters søgeinterval.</para></listitem>
+						<listitem><para><guilabel>Gæsters søgeinterval</guilabel>: Det antal sekunder gæster skal vente mellem søgninger. Hvis en gæst søger, må alle andre gæster vente indtil dette tidsinterval er overskredet. Alle positive værdier er gyldige. Angiv &quot;0&quot; for at deaktivere kontrol af gæsters søgeinterval.</para></listitem>
 						<listitem><para><guilabel>Grænse for søgningens belastning af systemet</guilabel>: Det er muligt at begrænse søgningers belastning af systemet. Hvis systemets belastning overskrider denne værdi i mere end 1 minut, vil søgesiden gå offline. Alle værdier mellem  0 og 1.0 (inklusive) er gyldige. &quot;1.0&quot; svarer til ~100% belastning af en processor. Denne funktion virker kun på UNIX-baserede servere.</para></listitem>
 						<listitem><para><guilabel>Mindste antal tegn for forfatternavn</guilabel>: Brugere skal angive mindst dette antal tegn i navnet, for at udføre en søgning efter forfatter ved anvendelse af (*) som ubekendt. Hvis forfatterens brugernavn er kortere end dette antal tegn, kan der søges efter dennes indlæg ved at angive forfatterens fulde brugernavn.</para></listitem>
 						<listitem><para><guilabel>Antal sekunder søgningens mellemlager opretholdes</guilabel>: Mellemlagrede søgeresultater slettes efter dette tidsinterval i sekunder. Alle positive værdier er gyldige. Angiv &quot;0&quot; for deaktivere mellemlagring af søgeresultater.</para></listitem>
@@ -551,7 +547,7 @@
 						<listitem><para><guilabel>Valg af søgemotor</guilabel>: Dette valg bestemmer hvilken søgemotor boardets søgefacilitet gør brug af, hvis søgninger er aktiveret. Søgemotoren er ganske enkelt det system eller den metode der anvendes for at udføre søgninger baseret på de givne forespørgsler. Der er to tilgængelige muligheder: <guimenuitem>Fulltext native</guimenuitem> og <guimenuitem>Fulltext mysql</guimenuitem>. <guimenuitem>Fulltext native</guimenuitem> er phpBB's indbyggede standardmetode til fuldtekstsøgning. Ved at vælge <guimenuitem>Fulltext mysql</guimenuitem> vil boardet brug af mySQL's fuldtekstsøgning.</para></listitem>
 					</itemizedlist>
 					<note>
-						<para>Vælger du en anden søgemotor til dit board, er det nødvendigt at danne nyt søgeindeks baseret på nye metode. Undlades dette vil det ikke være muligt at søge i det eksisterende indhold, kun nye indlæg vil blive indekseret. For at frigøre plads og resourser er det desuden en god idé at slette søgeindekset fra den søgemotor du går væk fra. Læs mere om vedligeholdelse af boardets søgeindekser i <xref linkend="acp_maintenance_search" />.</para>
+						<para>Vælger du en anden søgemotor til dit board, er det nødvendigt at danne nyt søgeindeks baseret på nye metode. Undlades dette vil det ikke være muligt at søge i det eksisterende indhold, kun nye indlæg vil blive indekseret. For at frigøre plads og resourser er det desuden en god ide at slette søgeindekset fra den søgemotor du går væk fra. Læs mere om vedligeholdelse af boardets søgeindekser i <xref linkend="acp_maintenance_search" />.</para>
 					</note>
 				</para>
 				
@@ -564,7 +560,7 @@
 					
 					<itemizedlist>
 						<title>Fulltext native</title>
-						<listitem><para><guilabel>Aktivér fuldtekstopdatering</guilabel>: Vælg <guilabel>Ja</guilabel> for opdatering af fuldtekstindekset når der skrives nye indlæg. Denne indstilling har ingen betydning hvis søgning på boardet er deaktiveret.</para></listitem>
+						<listitem><para><guilabel>Aktiver fuldtekstopdatering</guilabel>: Vælg <guilabel>Ja</guilabel> for opdatering af fuldtekstindekset når der skrives nye indlæg. Denne indstilling har ingen betydning hvis søgning på boardet er deaktiveret.</para></listitem>
 						<listitem><para><guilabel>Minimalt antal tegn for indeksering til søgninger</guilabel>: Du kan bestemme det mindste antal tegn et ord skal bestå for at det medtages i boardets søgeindeks. For at bevare et søgeindeks med relevant indhold anbefales det at antal tegn ikke sættes for lavt. Alle positive værdier er gyldige.</para></listitem>
 						<listitem><para><guilabel>Maksimalt antal tegn for indeksering til søgninger</guilabel>: Det er også muligt at bestemme det højeste antal tegn et ord må indeholde for at blive medtaget i søgeindekset. Ord indeholdende flere tegn end dette, bliver ikke indekseret. Alle positive værdier er gyldige.</para></listitem>
 						<listitem><para><guilabel>Grænse for definition af et alment ord</guilabel>: Det er unødvendigt at indeksere ord som anvendes meget ofte. Her bestemmer du definition af et alment ord. Er et ord indeholdt i en større procentdel af alle indlæg end det her angivne betragtes det som et alment ord og ignoreres i søgningen. Alle positive værdier er gyldige. Ønsker du ikke at sætte denne begrænsning og give mulighed for at søge alle ord angives &quot;0&quot;. Grænsen har først virkning når boardet indeholder mere end 100 indlæg. Ændres værdien, bør der foretages en fornyet indeksering, således ændringen får konsekvens for søgningen i allerede indsendte indlæg.</para></listitem>
@@ -640,7 +636,7 @@
 				</mediaobject>
 			</figure>
 			
-			<para>Teoretisk set kan phpBB3.0.x indeholde ubegrænsede niveauer af underfora. Og du kan derfor tilknytte nye underfora i allerede eksisterende underfora. På nye boards kan det være en god idé at starte med få fora, aktiviteten vil synes højere, fremfor på forhånd at have struktureret boardet så detaljeret at de første indlæg forsvinder i denne.  Efterfølgende er det enkelt at flytte emner i passende fora eller underfora.</para>
+			<para>Teoretisk set kan phpBB3.0.x indeholde ubegrænsede niveauer af underfora. Og du kan derfor tilknytte nye underfora i allerede eksisterende underfora. På nye boards kan det være en god ide at starte med få fora, aktiviteten vil synes højere, fremfor på forhånd at have struktureret boardet så detaljeret at de første indlæg forsvinder i denne.  Efterfølgende er det enkelt at flytte emner i passende fora eller underfora.</para>
 			<para>Læs <link linkend="acp_forums_manage">afsnittet om forumadministration</link>, hvor oprettelse af underfora er beskrevet.</para>
 		</section>
 		<section id="acp_forums_manage">
@@ -666,7 +662,7 @@
 				</mediaobject>
 			</figure>
 			
-			<para>Indgangsiden til <guilabel>Administrér fora</guilabel> lister alle topniveau fora og kategorier. Bemærk at underfora i disse ikke vises på denne side. Ønsker du at ændre i underfora indeholdt her, skal du først klikke på det forum eller den kategori det underforummet befinder sig i.</para>
+			<para>Indgangsiden til <guilabel>Forumadministration</guilabel> lister alle topniveau fora og kategorier. Bemærk at underfora i disse ikke vises på denne side. Ønsker du at ændre i underfora indeholdt her, skal du først klikke på det forum eller den kategori det underforummet befinder sig i.</para>
 		</section>
 	</section>
 	<section id="acp_posting">
@@ -680,7 +676,7 @@
 		<title>Meddelelser</title>
 		
 		<para>Fora er ingenting hvis ikke der er indhold heri. Indholdet skabes og indsendes af dine brugere, derfor er det vigtigt af indstillinger for hvordan meddelelser kan indsendes er korrekt for dit board. For at ændre disse indstillinger vælges fanebladet <guimenuitem>Meddelelser</guimenuitem>.</para>
-		<para>Den første side i sektionen <guimenuitem>Meddelelser</guimenuitem> er <guilabel>BBkoder</guilabel>. De øvrige sider er delt i to hovedgrupper: <guilabel>Beskeder</guilabel> og <guilabel>Vedhæftede filer</guilabel>. <guimenuitem>Private beskeder</guimenuitem>, <guimenuitem>Emneikoner</guimenuitem>, <guimenuitem>Smilies</guimenuitem> og <guimenuitem>Ordcensur</guimenuitem> er relaterede til meddelelser. <guimenuitem>Vedhæftede filer</guimenuitem>, <guimenuitem>Administrér filtyper</guimenuitem>, <guimenuitem>Administrér filtypegrupper</guimenuitem> og <guimenuitem>Vildfarne vedhæftede filer</guimenuitem> er alle relaterede til vedhæftede filer.</para>
+		<para>Den første side i sektionen <guimenuitem>Meddelelser</guimenuitem> er <guilabel>BBkoder</guilabel>. De øvrige sider er delt i to hovedgrupper: <guilabel>Beskeder</guilabel> og <guilabel>Vedhæftede filer</guilabel>. <guimenuitem>Private beskeder</guimenuitem>, <guimenuitem>Emneikoner</guimenuitem>, <guimenuitem>Smilies</guimenuitem> og <guimenuitem>Ordcensur</guimenuitem> er relaterede til meddelelser. <guimenuitem>Vedhæftede filer</guimenuitem>, <guimenuitem>Filtyper</guimenuitem>, <guimenuitem>Filtypegrupper</guimenuitem> og <guimenuitem>Vildfarne vedhæftede filer</guimenuitem> er alle relaterede til vedhæftede filer.</para>
 	
 		<section id="acp_posting_bbcodes">
 			<sectioninfo>
@@ -770,7 +766,7 @@
 			
 			<para>I phpBB3 er det muligt at tilknytte ikoner til emner. På denne side kan administreres hvilke emneikoner brugere kan anvende på boardet. Det er muligt at tilføje, ændre, slette emneikoner. Den første side <guilabel>Emneikoner</guilabel> viser de ikoner der er installeret på boardet. Du kan tilføje ikoner manuelt, installere færdige ikonpakker, eksportere elle downloade en ikonpakkefil. Desuden kan visningsrækkefølgen ændres.</para>
 		
-			<para>Den første mulighed er at installere en færdigpakket ikonpakke. Ikonpakker har filextension <filename>.pak</filename>. Upload ikonpakken til mappen <filename>/images/icons/</filename>. Klik på <guilabel>Installér ikonpakke</guilabel> øverst på siden. Er den uploade ikonpakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om ikonpakken indeholder filer der konflikter med de eksisterende ikoner. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende ikoner, overskrive de eksisterende med de nye, eller blot slette alle konfliktende ikoner. Når disse valg er foretaget klikkes igen på <guilabel>Installér ikonpakke</guilabel>.</para>
+			<para>Den første mulighed er at installere en færdigpakket ikonpakke. Ikonpakker har filextension <filename>.pak</filename>. Upload ikonpakken til mappen <filename>/images/icons/</filename>. Klik på <guilabel>Installer ikonpakke</guilabel> øverst på siden. Er den uploade ikonpakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om ikonpakken indeholder filer der konflikter med de eksisterende ikoner. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende ikoner, overskrive de eksisterende med de nye, eller blot slette alle konfliktende ikoner. Når disse valg er foretaget klikkes igen på <guilabel>Installer ikonpakke</guilabel>.</para>
 			
 			<para>Den anden mulighed er at tilføje emneikoner manuelt. Emneikoner uploades også til  mappen <filename>/images/icons/</filename>. Klik på <guilabel>Tilføj mange ikoner</guilabel> nederst på siden. Er de nye ikoner korrekt uploadet, ses en række indstillinger ud for hver at de nye ikoner, disse indstillinger gennemgås nedenfor. Når du har tilføjet de ønskede emneikoner klikkes på <guilabel>Udfør</guilabel>.</para>
 			
@@ -786,7 +782,7 @@
 			
 			<para>For at ændre indstillinger for allerede installerede emneikoner klikkes på <guilabel>Ret ikoner</guilabel> nederst på siden. Du bliver nu præsenteret for <guilabel>Ikonkonfiguration</guilabel> for alle emneikonerne. Felternes betydning er beskrevet ovenfor.</para>
 		
-			<para>På startsiden er det muligt direkte at ændre ikonernes rækkefølge ved at benytte symbolerne for "flyt op" og "flyt ned". Det enkelte ikons indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette et ikon benyttes den røde "Slet".</para>
+			<para>På startsiden er det muligt direkte at ændre ikonernes rækkefølge ved at benytte symbolerne for "flyt op" og "flyt ned". Det enkelte ikons indstillinger kan ændres ved at klikke på den grønne "Rediger". For at slette et ikon benyttes den røde "Slet".</para>
 		</section>
 		
 		<section id="acp_posting_smilies">
@@ -801,7 +797,7 @@
 			
 			<para>Smilies er typisk små, nogle gange animerede billeder der bruges til at give udtryk for en følelse eller mening. Du kan tilføje smilies manuelt eller ved at installerede en præfabrikeret smiliespakke. I oversigten <guilabel>Smilies</guilabel> vises de smilies der i øjeblikket er installeret på dit boardform.</para>
 		
-			<para>Den første mulighed er at installere en præfabrikeret smiliespakke. Smiliespakker har filextension <filename>.pak</filename>. Upload pakken til mappen <filename>/images/smilies/</filename>. Klik herefter på <guilabel>Installér smiliespakke</guilabel> øverst på siden. Er den uploade pakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om smiliespakken indeholder filer der konflikter med de eksisterende smilies. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende smilies, overskrive de eksisterende med de nye, eller blot slette alle konfliktende smilies. Når disse valg er foretaget klikkes igen på <guilabel>Installér smiliespakke</guilabel>.</para>
+			<para>Den første mulighed er at installere en præfabrikeret smiliespakke. Smiliespakker har filextension <filename>.pak</filename>. Upload pakken til mappen <filename>/images/smilies/</filename>. Klik herefter på <guilabel>Installer smiliespakke</guilabel> øverst på siden. Er den uploade pakke korrekt placeret for du nu mulighed for at vælge denne. Installationsprocessen undersøger om smiliespakken indeholder filer der konflikter med de eksisterende smilies. Konstateres konflikter bliver du bedt om at tage stilling til disse, du kan vælge at bibeholde de eksisterende smilies, overskrive de eksisterende med de nye, eller blot slette alle konfliktende smilies. Når disse valg er foretaget klikkes igen på <guilabel>Installer smiliespakke</guilabel>.</para>
 			
 			<para>Den anden mulighed er at tilføje smilies manuelt. Smilies uploades også til mappen <filename>/images/smilies/</filename>. Klik på <guilabel>Tilføj mange smilies</guilabel> nederst på siden. Er de nye smilies korrekt uploadet, kan du herefter tilføje smilies enkeltvis og bestemme dens indstillinger. I det følgende gennemgås indstillingsmulighederne. Når du har tilføjet en smiley afsluttes ved at klikke på <guilabel>Udfør</guilabel>.</para>
 		
@@ -819,7 +815,7 @@
 			
 			<para>For at ændre indstillinger for allerede installerede smilies klikkes på <guilabel>Ret smilies</guilabel> nederst på siden. Du får  nu vist oversigten <guilabel>Smileykonfiguration</guilabel>. Felternes betydning er beskrevet ovenfor.</para>
 			
-			<para>På startsiden er det muligt direkte at ændre smileyrækkefølgen ved at benytte pilikonerne for "flyt op" og "flyt ned". Den enkelte smileys indstillinger kan ændres ved at klikke på den grønne "Redigér". For at slette en smiley benyttes den røde "Slet".</para>
+			<para>På startsiden er det muligt direkte at ændre smileyrækkefølgen ved at benytte pilikonerne for "flyt op" og "flyt ned". Den enkelte smileys indstillinger kan ændres ved at klikke på den grønne "Rediger". For at slette en smiley benyttes den røde "Slet".</para>
 		</section>
 		
 		<section id="acp_posting_censors">
@@ -834,9 +830,9 @@
 			
 			<para>Ønskes en vis grad af korrekt sprogbrug på boardet kan ordcensur anvendes. Ord der matcher et mønster du har defineret i  <guilabel>Ordcensur</guilabel> erstattes automatisk med den tekst eller det ord du har specificeret.</para>
 			
-			<para>for at oprette en ordcensuring klikkes på <guilabel>Tilføj nyt ord</guilabel>. Der er to felter: <guilabel>Ord</guilabel> og <guilabel>Erstatning</guilabel>. Skriv det ord der ønskes censuret i feltet <guilabel>Ord</guilabel>. Bemærk at du kan anvende (*) som ubekendt. Herefter skrives i feltet <guilabel>Erstatning</guilabel>, det ord eller den tekst du ønsker det censurerede ord erstattet med. Klik på <guilabel>Udfør</guilabel> for at tilføje det nye ord der skal censureres.</para>
+			<para>for at oprette en ordcensurering klikkes på <guilabel>Tilføj nyt ord</guilabel>. Der er to felter: <guilabel>Ord</guilabel> og <guilabel>Erstatning</guilabel>. Skriv det ord der ønskes censuret i feltet <guilabel>Ord</guilabel>. Bemærk at du kan anvende (*) som ubekendt. Herefter skrives i feltet <guilabel>Erstatning</guilabel>, det ord eller den tekst du ønsker det censurerede ord erstattet med. Klik på <guilabel>Udfør</guilabel> for at tilføje det nye ord der skal censureres.</para>
 			
-			<para>For at ændre en eksisterende censurering, klikkes på "Redigér" ud for det ord der skal ændres.</para>
+			<para>For at ændre en eksisterende censurering, klikkes på "Rediger" ud for det ord der skal ændres.</para>
 		</section>
 		
 		<section id="acp_attach_settings">
@@ -862,7 +858,7 @@
 				<listitem><para><guilabel>Maksimal filstørrelse i private beskeder</guilabel>: Maksimal størrelse pr. fil vedhæftet i private beskeder, 0 betyder ubegrænset.</para></listitem>
 				<listitem><para><guilabel>Maksimalt antal vedhæftede filer pr. indlæg</guilabel>: Det højest tilladte antal filer pr. indlæg. Angives 0 deaktiveres begrænsningen.</para></listitem>
 				<listitem><para><guilabel>Maksimalt antal vedhæftede filer pr. privat besked</guilabel>: Det højest tilladte antal filer i en privat besked. Angives 0 deaktiveres begrænsningen.</para></listitem>
-				<listitem><para><guilabel>Aktivér sikker download</guilabel>: Hvis du ønsker at vedhæftede filer kun skal være tilgængelige for bestemte <glossterm>IP-adresse</glossterm>r eller værtsnavne, vælges  <guilabel>Ja</guilabel>. Herefter er det nederst på samme side, i <guilabel>Angiv hvidlistede/sortlistede IP-adresser eller værtsnavne</guilabel> og <guilabel>Fjern IP-adresser eller værtsnavne</guilabel>, muligt at angive disse.</para></listitem>
+				<listitem><para><guilabel>Aktiver sikker download</guilabel>: Hvis du ønsker at vedhæftede filer kun skal være tilgængelige for bestemte <glossterm>IP-adresse</glossterm>r eller værtsnavne, vælges  <guilabel>Ja</guilabel>. Herefter er det nederst på samme side, i <guilabel>Angiv hvidlistede/sortlistede IP-adresser eller værtsnavne</guilabel> og <guilabel>Fjern IP-adresser eller værtsnavne</guilabel>, muligt at angive disse.</para></listitem>
 				<listitem><para><guilabel>Tillad eller afvis</guilabel>: Her vælges hvordan sikker download skal håndteres. En hvidliste (<guilabel>Tillad</guilabel>) sikrer at kun angivne <glossterm>IP-adresse</glossterm>r eller værtsnavne kan downloade filer. En sortlist (<guilabel>Afvis</guilabel>) tillader at alle, undtagen angivne <glossterm>IP-adresse</glossterm>r eller værtsnavne kan dowloade vedhæftede filer. <emphasis>Valget har kun betydning hvis sikker download er aktiveret.</emphasis></para></listitem>
 				<listitem><para><guilabel>Tillad tomme henvisninger</guilabel>: Sikker download er baseret på henvisninger (hvor kommer brugeren fra). Vil du tillade download for brugere uden henvisninger? <emphasis>Valget har kun betydning hvis sikker download er aktiveret.</emphasis></para></listitem>
 				<listitem><para><guilabel>Kontrol af vedhæftede filer</guilabel>: Browsere kan snydes og kan medføre fejlfortolkning af uploadede filers mimetype. Denne kontrol sikrer afvisning af filer der er årsag hertil.</para></listitem>
@@ -882,7 +878,7 @@
 			<itemizedlist>
 				<title>Angiv hvid-/sortlistede IP-adresser eller værtsnavne</title>
 				<listitem><para><guilabel>IP-adresser eller værter</guilabel>: Har du valgt sikker download angives her de <glossterm>IP-adresse</glossterm>r eller værtsnavne som skal tillades eller afvises. Angiver du flere<glossterm>IP-adresse</glossterm>r eller værtsnavne, skrives de hver især på en ny linie. For at specificere et interval af <glossterm>IP-adresse</glossterm>r adskilles starten og slutningen med en bindestreg (eks: 202.123.228.100-202.123.228.125). Brug * som ubekendt for ukendte tegn.</para></listitem>
-				<listitem><para><guilabel>Ekskludér fra hvid-/sortliste:</guilabel>: Vælg <guilabel>Ja</guilabel> for at ekskludere angivne IP-adresse eller vært fra listen.</para></listitem>
+				<listitem><para><guilabel>Ekskluder fra hvid-/sortliste:</guilabel>: Vælg <guilabel>Ja</guilabel> for at ekskludere angivne IP-adresse eller vært fra listen.</para></listitem>
 			</itemizedlist>
 		</section>
 		
@@ -894,9 +890,9 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Administrér filtyper</title>
+			<title>Filtyper</title>
 			
-			<para>Du kan yderligere bestemme hvilke filtyper der kan vedhæftes. Af sikkerhedgrunde anbefales det at filtyper der kan indeholde scripts (som php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx...) ikke tillades. Denne side findes ved at klikke på <guimenuitem>Administrér filtyper</guimenuitem> i <glossterm>ACP</glossterm>.</para>
+			<para>Du kan yderligere bestemme hvilke filtyper der kan vedhæftes. Af sikkerhedgrunde anbefales det at filtyper der kan indeholde scripts (som php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx...) ikke tillades. Denne side findes ved at klikke på <guimenuitem>Filtyper</guimenuitem> i <glossterm>ACP</glossterm>.</para>
 			
 			<para>For at tilføje en ny filtype anvendes afsnittet <guilabel>Tilføj filtype</guilabel>. I feltet <guilabel>Filtype</guilabel> angives filendelse uden punktummet før endelsen. Vælg herefter i dropdownmenuen <guilabel>Filtypegruppe</guilabel>, hvilken gruppe den nye filtype skal tilknyttes. Klik herefter på <guilabel>Udfør</guilabel>.</para>
 		
@@ -911,16 +907,16 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Administrér filtypegrupper</title>
+			<title>Filtypegrupper</title>
 			
-			<para>Tilladte filtyper kan med fordel arrangeres i grupper, herved opnås et bedre overblik og en væsentlig nemmere administration. Klik på <guimenuitem>Administrér filtypegrupper</guimenuitem> under indstillingerne for <guilabel>Meddelelser</guilabel> i  <glossterm>ACP</glossterm>. Du kan vælge separate indstillinger for hver filtypegruppe.</para>
+			<para>Tilladte filtyper kan med fordel arrangeres i grupper, herved opnås et bedre overblik og en væsentlig nemmere administration. Klik på <guimenuitem>Filtypegrupper</guimenuitem> under indstillingerne for <guilabel>Meddelelser</guilabel> i  <glossterm>ACP</glossterm>. Du kan vælge separate indstillinger for hver filtypegruppe.</para>
 			
 			<para>For at oprette en ny filtypegruppe bruges tekstfeltet ved siden af <guilabel>Opret en ny gruppe</guilabel> nederst på siden. Indtast navnet på den nye filtypegruppe og klik på <guilabel>Udfør</guilabel>. Du bliver nu bedt om at konfigurere indstillinger for den nye filtypegruppe. I det følgende gennemgås alle indstillingsparametre for filtypegrupper.</para>
 		
 			<itemizedlist>
 				<title>Tilføj filtypegruppe</title>
 				<listitem><para><guilabel>Gruppenavn</guilabel>: Navnet på filtypegruppen.</para></listitem>
-				<listitem><para><guilabel>Specialkategori</guilabel>: Filer tilhørende én filtypegruppe kan vises forskelligt. Vælg en specialkategori i dropdownmenuen, for at vælge hvordan vedhæftede filer vises i indlæg.</para></listitem>
+				<listitem><para><guilabel>Specialkategori</guilabel>: Filer tilhørende en filtypegruppe kan vises forskelligt. Vælg en specialkategori i dropdownmenuen, for at vælge hvordan vedhæftede filer vises i indlæg.</para></listitem>
 				<listitem><para><guilabel>Tilladt</guilabel>: Afmærk denne for at tillade vedhæftede filer tilknyttet denne gruppe.</para></listitem>
 				<listitem><para><guilabel>Tillad i private beskeder</guilabel>: Vælg denne for at tillade at vedhæfte filer tilknyttet denne gruppe i private beskeder.</para></listitem>
 				<listitem><para><guilabel>Uploadikon</guilabel>: Det lille ikon som vises ved siden af alle vedhæftede filer tilknyttet denne gruppe.</para></listitem>
@@ -929,7 +925,7 @@
 				<listitem><para><guilabel>Tilladte fora</guilabel>: Her bestemmes i hvilke fora brugere kan vedhæfte filer tilknyttet denne filtypegruppe. For at tillade gruppen i samtlige fora på boardet vælges <guilabel>Tillad i alle fora</guilabel>. For at udvælge bestemte fora, vælges først <guilabel>Kun nedenstående valgte fora</guilabel>, hvorefter de ønskede fora vælges. Til sidst klikkes på <guilabel>Udfør</guilabel>.</para></listitem>
 			</itemizedlist>
 			
-			<para>For at ændre i en eksisterende filtypegruppe, klikkes i oversigten på det grønne ikon "Redigér". Indstillingsmulighederne er de samme som omtalt ovenstående.</para>
+			<para>For at ændre i en eksisterende filtypegruppe, klikkes i oversigten på det grønne ikon "Rediger". Indstillingsmulighederne er de samme som omtalt ovenstående.</para>
 		
 			<para>For at slette en filtypegruppe klikkes på det røde "Slet" ikon i oversigten.</para>
 		</section>
@@ -950,7 +946,7 @@
 			
 			<para>Herfra er det muligt at tilknyttet filen til et indlæg. Først skal du have fundet indlæggets ID, som kan ses i browserens adresselinie når indlægget læses - eksempelvis ..../viewtopic.php?f=43&amp;t=227#p1014, hvor 1014 er indlæggets ID. Angiv denne ID i kollonnen <guilabel>Indlæggets ID</guilabel> for den aktuelle fil. Afmærk herefter boksen <guilabel>Vedhæft fil til indlæg</guilabel> og afslut med at klikke på <guilabel>Udfør</guilabel> nederst.</para>
 		
-			<para>En vilfaren fil kan slettes ved at afmærke boksen <guilabel>Slet</guilabel> yderst til højre i oversigten og klikke på <guilabel>Udfør</guilabel>. Bemærk at sletningen er uigenkaldelig og kan ikke fortrydes.</para>
+			<para>En vildfaren fil kan slettes ved at afmærke boksen <guilabel>Slet</guilabel> yderst til højre i oversigten og klikke på <guilabel>Udfør</guilabel>. Bemærk at sletningen er uigenkaldelig og kan ikke fortrydes.</para>
 		</section>
 	</section>
 
@@ -965,14 +961,14 @@
 		<title>Brugere og grupper</title>
 
 		<section id="acp_users_manage">
-			<title>Administrér brugere</title>
+			<title>Brugere</title>
 			<para>Brugere er grundlaget for dit board. Som administrator er det derfor vigtigt at kunne administrere brugere fornuftigt. Denne administration foregår i <acronym>ACP</acronym>, hvor brugerinformation og deres personlige indstillinger ændres ganske enkelt.</para>
 				
-			<para>Find fanebladet <guimenuitem>Brugere og grupper</guimenuitem> i <acronym>ACP</acronym>. Brugeradministrationen kan også nås fra forsiden, via det øverste punkt i Hurtig Tilgang <guimenuitem>Administrér brugere</guimenuitem> i navigationmenuen til venstre.</para>
+			<para>Find fanebladet <guimenuitem>Brugere og grupper</guimenuitem> i <acronym>ACP</acronym>. Brugeradministrationen kan også nås fra forsiden, via det øverste punkt i Hurtig Tilgang <guimenuitem>Brugeradministration</guimenuitem> i navigationmenuen til venstre.</para>
 				
 			<para>For at kunne administrere en bruger skal du kende og angive brugernavn i tekstfeltet ud for <guilabel>Find en tilmeldt bruger:</guilabel>. Ønsker du at søge efter en tilmeldt bruger, klikkes på <guilabel>[ Find en tilmeldt bruger ]</guilabel>, umiddelbart under indtastningsfeltet. Ikke tilmeldte/anonyme besøgende (gæstebruger) kan administreres ved at afmærke feltet <guilabel>"Vælg gæstebruger"</guilabel>. Når den rette bruger er fundet og valgt klikkes på <guilabel>Udfør</guilabel>.</para>
 				
-			<para>Der er 10 forskellige formularer relateret til brugerindstillinger, den relevante vælges i dropdownmenuen øverst til højre. Hver formular giver mulighed for at ændre en række indstillinger samlet i denne. I det følgende gennemgås disse og deres indhold. Når der ændres i én af formularerne klikkes på <guilabel>Udfør</guilabel> placeret nederst på hver af formularerne.</para>
+			<para>Der er 10 forskellige formularer relateret til brugerindstillinger, den relevante vælges i dropdownmenuen øverst til højre. Hver formular giver mulighed for at ændre en række indstillinger samlet i denne. I det følgende gennemgås disse og deres indhold. Når der ændres i en af formularerne klikkes på <guilabel>Udfør</guilabel> placeret nederst på hver af formularerne.</para>
 			
 			<section id="acp_users_manage_overview">
 				<sectioninfo>
@@ -1086,7 +1082,7 @@
 				<title>Notater</title>
 				<para>Et andet aspekt i forbindelse med administration af brugere er muligheden for at kunne se en log over dennes handlinger og modtagne advarsler, sammen med evt. bemærkninger om denne, skrevet af administrator.</para>
 				
-				<para>For at tilpasse visning af brugers datalog, vælges efter eget ønske i dropdownmenuerne <guilabel>Vis datalog:</guilabel> og <guilabel>Sortér efter:</guilabel>. I <guilabel>Vis datalog:</guilabel> kan vælges hvilken periode der skal vises. I <guilabel>Sortér efter:</guilabel> vælges om data i perioden skal sorteres efter <guimenuitem>Brugernavn</guimenuitem>, <guimenuitem>Dato</guimenuitem>, <guimenuitem>IP-adresse</guimenuitem> eller <guimenuitem>Loghændelse</guimenuitem>. Desuden vælges om den valgte log skal sorteres i faldende eller stigende orden. Klik på <guilabel>Udfør</guilabel> for at opdatere visningen efter dit eget ønske.</para>
+				<para>For at tilpasse visning af brugers datalog, vælges efter eget ønske i dropdownmenuerne <guilabel>Vis datalog:</guilabel> og <guilabel>Sorter efter:</guilabel>. I <guilabel>Vis datalog:</guilabel> kan vælges hvilken periode der skal vises. I <guilabel>Sorter efter:</guilabel> vælges om data i perioden skal sorteres efter <guimenuitem>Brugernavn</guimenuitem>, <guimenuitem>Dato</guimenuitem>, <guimenuitem>IP-adresse</guimenuitem> eller <guimenuitem>Loghændelse</guimenuitem>. Desuden vælges om den valgte log skal sorteres i faldende eller stigende orden. Klik på <guilabel>Udfør</guilabel> for at opdatere visningen efter dit eget ønske.</para>
 			
 				<para>Det er også her du som administrator har mulighed for at tilføje et notat om pågældende bruger. I den nederste sektion <guilabel>Tilføj brugernotat</guilabel> skrives notatet i tekstfeltet <guilabel>Notater</guilabel>. Klik herefter på <guilabel>Udfør</guilabel>, notatet vil herefter kunne ses i brugers datalog.</para>
 			</section>
@@ -1221,10 +1217,10 @@
 				<title>Vedhæftede filer</title>
 				
 				<para>Afhængig af indstillinger for vedhæftede filer har bruger måske allerede <glossterm>vedhæftede filer</glossterm> i indlæg. Er det tilfældet, får du her listet alle i denne oversigt. Oversigten viser for hver vedhæftet fil: <guilabel>Filnavn</guilabel>, <guilabel>Emnetitel</guilabel>, <guilabel>Tidspunkt for indsendelse</guilabel>, <guilabel>Filstørrelse</guilabel> og antal <guilabel>Downloads</guilabel>.</para>
-				<para>Der kan vælges flere forskellige sorteringer af denne oversigt. Find nederst <guilabel>Sortér efter:</guilabel> og vælg i dropdownmenuen hvordan du ønsker listen sorteret. Der kan sorteres efter disse metoder: <guimenuitem>Filenavn</guimenuitem>, <guimenuitem>Filtype</guimenuitem>, <guimenuitem>Filstørrelse</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Indlægstid</guimenuitem> og <guimenuitem>Emnetitel</guimenuitem>. Sorteringsorden vælges i næste dropdownmenu, enten <guimenuitem>Faldende</guimenuitem> eller <guimenuitem>Stigende</guimenuitem>. Klik på <guilabel>Udfør</guilabel> når de to valg er foretaget.</para>
-				<para>Klik på filnavnet for at se filen. For at se det indlæg hvor filen er vedhæftet, klikkes på linket umiddelbart under <guilabel>Indlæg:</guilabel>. Brugers vedhæftede filer kan slettes ved at markere boksen i kolonnen <guimenuitem>Markér</guimenuitem>. Når de ønskede filer er markeret klikkes <guilabel>Slet markerede</guilabel> for at udføre den endelige sletning.</para>
+				<para>Der kan vælges flere forskellige sorteringer af denne oversigt. Find nederst <guilabel>Sorter efter:</guilabel> og vælg i dropdownmenuen hvordan du ønsker listen sorteret. Der kan sorteres efter disse metoder: <guimenuitem>Filenavn</guimenuitem>, <guimenuitem>Filtype</guimenuitem>, <guimenuitem>Filstørrelse</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Indlægstid</guimenuitem> og <guimenuitem>Emnetitel</guimenuitem>. Sorteringsorden vælges i næste dropdownmenu, enten <guimenuitem>Faldende</guimenuitem> eller <guimenuitem>Stigende</guimenuitem>. Klik på <guilabel>Udfør</guilabel> når de to valg er foretaget.</para>
+				<para>Klik på filnavnet for at se filen. For at se det indlæg hvor filen er vedhæftet, klikkes på linket umiddelbart under <guilabel>Indlæg:</guilabel>. Brugers vedhæftede filer kan slettes ved at markere boksen i kolonnen <guimenuitem>Marker</guimenuitem>. Når de ønskede filer er markeret klikkes <guilabel>Slet markerede</guilabel> for at udføre den endelige sletning.</para>
 				<tip>
-					<para>Alle vedhæftede filer vist på siden kan markeres i en arbejdsgang ved at benytte <guilabel>Markér alle</guilabel> linket nederst.</para>
+					<para>Alle vedhæftede filer vist på siden kan markeres i en arbejdsgang ved at benytte <guilabel>Marker alle</guilabel> linket nederst.</para>
 				</tip>
 			</section>
 		</section>
@@ -1244,7 +1240,7 @@
 				<varlistentry>
 					<term>Konto deaktiveret af administrator</term>
 					<listitem>
-						<para>En administrator har manuelt deaktiveret kontoen i værktøjet <link linkend="acp_users_manage">Administrér brugere</link>. I brugernoter findes informationer om hvilken administrator der deaktiverede kontoen, vedkommende har måske også efterladt en note om baggrunden.</para>
+						<para>En administrator har manuelt deaktiveret kontoen i <link linkend="acp_users_manage">Brugeradministration</link>. I brugernoter findes informationer om hvilken administrator der deaktiverede kontoen, vedkommende har måske også efterladt en note om baggrunden.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -1262,7 +1258,7 @@
 				<varlistentry>
 					<term>Tvungen genaktivering af brugerkonto</term>
 					<listitem>
-						<para>En administrator har bedt bruger om at genaktivering af kontoen i værktøjet  <link linkend="acp_users_manage">Administrér brugere</link>. I brugernoter findes oplysning hvilken administrator der bad om genaktivering, og måske en note om årsagen til denne handling.</para>
+						<para>En administrator har bedt bruger om at genaktivering af kontoen i <link linkend="acp_users_manage">Brugeradministration</link>. I brugernoter findes oplysning hvilken administrator der bad om genaktivering, og måske en note om årsagen til denne handling.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -1310,7 +1306,7 @@
 			</sectioninfo>
 			<title>Brugeres forumtilladelser</title>
 			
-			<para>Sammen med muligheden for at ændre brugeres kontorelaterede tilladelser, er det også muligt at ændre disses forumtilladelser. Forumtilladelser er forskellige fra brugertilladelser, på den måde at de er direkte relateret og bundet til fora. I <guimenuitem>Brugeres forumtilladelser</guimenuitem> kan du ændre indstillinger for én bruger ad gangen.</para>
+			<para>Sammen med muligheden for at ændre brugeres kontorelaterede tilladelser, er det også muligt at ændre disses forumtilladelser. Forumtilladelser er forskellige fra brugertilladelser, på den måde at de er direkte relateret og bundet til fora. I <guimenuitem>Brugeres forumtilladelser</guimenuitem> kan du ændre indstillinger for en bruger ad gangen.</para>
 		
 			<para>Start med at angive brugers brugernavn i feltet <guilabel>Find en tilmeldt bruger</guilabel>. Vil du ændre gæstebrugers forumtilladelser mærkes boksen <guilabel>Vælg gæstebruger</guilabel> af. Klik på <guilabel>Udfør</guilabel> for at fortsætte.</para>
 			
@@ -1364,7 +1360,7 @@
 				</itemizedlist>
 			</para>
 			
-			<para>Når disse indstillinger er foretaget klikkes på knappen <guilabel>Indstillinger for felttype</guilabel> nederst. Angiv her de ønskede parametre og klik herefter på <guilabel>Gem</guilabel>. Har du mere end ét sprog installeret på boardet vil du i stedet for knappen <guilabel>Gem</guilabel>, se knappen <guilabel>Sproglige definitioner</guilabel>, hvor du kan oversætte feltnavn og beskrivelse til disse sprog, herefter kan du gemme. Oprettes feltet uden problemer ser du herefter en bekræftelse herpå. Tillykke!</para>
+			<para>Når disse indstillinger er foretaget klikkes på knappen <guilabel>Indstillinger for felttype</guilabel> nederst. Angiv her de ønskede parametre og klik herefter på <guilabel>Gem</guilabel>. Har du mere end et sprog installeret på boardet vil du i stedet for knappen <guilabel>Gem</guilabel>, se knappen <guilabel>Sproglige definitioner</guilabel>, hvor du kan oversætte feltnavn og beskrivelse til disse sprog, herefter kan du gemme. Oprettes feltet uden problemer ser du herefter en bekræftelse herpå. Tillykke!</para>
 		</section>
 		
 		<section id="acp_user_ranks">
@@ -1375,19 +1371,19 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Administrér brugerrang</title>
+			<title>Rangadministration</title>
 			
-			<para>Brugere kan tildeles en rang eller specielle titler. Som administrator er det op til dig at oprette og administrere disse. Rangnavne bestemmes alene af administrator, det naturligvis er en god idé at rangordner følger boardets overordnede formål.</para>
+			<para>Brugere kan tildeles en rang eller specielle titler. Som administrator er det op til dig at oprette og administrere disse. Rangnavne bestemmes alene af administrator, det naturligvis er en god ide at rangordner følger boardets overordnede formål.</para>
 			
 			<note>
 				<para>Når en bruger tildeles en rang, er det vigtigt at huske at der ikke tilknyttes eller ændres på brugers tilladelser i den forbindelse. Hvis du for eksempel opretter en rang med navnet &quot;Superredaktør&quot; og tildeler den til en bruger, får bruger ikke automatisk redaktørtilladelser. Tilladelser tilknyttes særskilt pr. bruger eller gruppe.</para>
 			</note>
 			
-			<para>Rangadministration foretages i <acronym>ACP</acronym>, ved at klikke på fanen <guimenuitem>Brugere og Grupper</guimenuitem> og herefter på linket <guimenuitem>Administrér brugerrang</guimenuitem> i venstre side. Alle eksisterende rangordner vises.</para>
+			<para>Rangadministration foretages i <acronym>ACP</acronym>, ved at klikke på fanen <guimenuitem>Brugere og Grupper</guimenuitem> og herefter på linket <guimenuitem>Rangadministration</guimenuitem> i venstre side. Alle eksisterende rangordner vises.</para>
 			
 			<para>Klik på knappen <guilabel>Tilføj ny rang</guilabel> under ranglisten, for at oprette en ny. Angiv først rangens navn i <guilabel>Rangtitel</guilabel>. Hvis du har uploadet et billede, som skal tilknyttes denne rang, i mappen <filename>/images/ranks/</filename>, vælges dette i dropdownmenuen. Til sidst vælges om rangen skal være en &quot;speciel rang&quot;. En speciel rang kan tildeles brugere af administrator, og tildeles ikke med baggrund i antal indsendte indlæg. Vælges <guilabel>Nej</guilabel> skal <guilabel>Minimum antal indlæg</guilabel> udfyldes med det antal indlæg bruger skal have indsendt før rangen tildeles. Klik på <guilabel>Udfør</guilabel> for at tilføje den nye rang.</para>
 			
-			<para>For at ændre en eksisterende rangs indstillinger, klikkes på den grønne &quot;Redigér&quot; ud for rangen i oversigtens kolonne <guilabel>Handling</guilabel>.</para>
+			<para>For at ændre indstillinger for en eksisterende rang, klikkes på den grønne &quot;Rediger&quot; ud for rangen i oversigtens kolonne <guilabel>Handling</guilabel>.</para>
 			
 			<para>En en rang slettes samme sted, her benyttes  den røde knap &quot;Slet&quot; i kolonnen <guilabel>Handling</guilabel>. Bekræft sletningen ved at klikke på <guilabel>Ja</guilabel> i det efterfølgende skærmbillede.</para>
 		</section>
@@ -1403,7 +1399,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Brugersikkerhed</title>
-			<para>Som supplement til brugeradministrationen, er det desuden vigtigt at beskytte boardet mod uønskede tilmeldinger og brugere. I sektionen <guilabel>Brugersikkerhed</guilabel> kan administreres udelukkelse og blokering af brugernavne, email- og IP-adresser, og brugere kan beskæres. Brugere, hvis data matcher blot én af udelukkelsedefinitionerne, vil ikke være i stand til at tilgå boardet.</para>
+			<para>Som supplement til brugeradministrationen, er det desuden vigtigt at beskytte boardet mod uønskede tilmeldinger og brugere. I sektionen <guilabel>Brugersikkerhed</guilabel> kan administreres udelukkelse og blokering af brugernavne, email- og IP-adresser, og brugere kan beskæres. Brugere, hvis data matcher blot en af udelukkelsedefinitionerne, vil ikke være i stand til at tilgå boardet.</para>
 			
 			<section id="acp_ban_emails">
 				<sectioninfo>
@@ -1421,7 +1417,7 @@
 					<title>Udeluk emailadresser</title>
 					<listitem><para><guilabel>Emailadresse</guilabel>: I tekstboksen skrives de adresser der skal udelukkes. Flere adresser angives på hver sin linie, og * bruges som ubekendt, ved angivelse af delvise adresser.</para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her bestemmes hvor længe emailadressens udelukkelse skal være aktiv. I dropdownmenuen kan vælges nogle almene værdier, baseret på eksempelvis timer eller dage. Udelukkelsens varighed kan også indstilles til en bestemt dato ved at vælge <guilabel>Indtil -></guilabel>, og herefter angive datoen i formatet &quot;ÅÅÅÅ-MM-DD&quot; under dropdownmenuen.</para></listitem>
-					<listitem><para><guilabel>Ekskludér fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at ekskludere den eller de angivne emailadresser fra en bredere udelukkelse.</para></listitem>
+					<listitem><para><guilabel>Ekskluder fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at ekskludere den eller de angivne emailadresser fra en bredere udelukkelse.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Angiv eventuelt en kort begrundelse for udelukkelsen som en note til dig selv.</para></listitem>
 					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Denne begrundelse vises for brugere som forsøger at tilmelde sig med den blokerede emailadresse og kan være forskellig for ovennævnte interne <guilabel>Udelukkelsesgrund</guilabel>.</para></listitem>
 				</itemizedlist>
@@ -1430,9 +1426,9 @@
 				<itemizedlist>
 					<title>Ophæv udelukkelse eller ekskludering</title>
 					<listitem><para><guilabel>Emailadresse</guilabel>: I oversigten vises alle emailadresser som i øjeblikket er udelukket. Vælg den eller de emailadresser hvis udelukkelse skal ophæves. <tip><para>Brug den rette kombination af mus og tastatur for at vælge flere emailadresser. Den mest almindelige metode er at holde tasten CTRL nede, og herefter med musen klikke på de adresser som skal vælges, slip CTRL-tasten når alle ønskede er valgt.</para></tip></para></listitem>
-					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af den valgte adresses udelukkelse, den kan ikke ændres. Vælges mere end én emailadresse, vises kun én udelukkelsesperiode.</para></listitem>
-					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end én emailadresse, vises kun én udelukkelsegrund.</para></listitem>
-					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede emailadresse får vist, den kan ikke ændres. Vælges mere end én emailadresse, vises kun én udelukkelsebegrundelse.</para></listitem>
+					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af den valgte adresses udelukkelse, den kan ikke ændres. Vælges mere end en emailadresse, vises kun en udelukkelsesperiode.</para></listitem>
+					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end en emailadresse, vises kun en udelukkelsegrund.</para></listitem>
+					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede emailadresse får vist, den kan ikke ændres. Vælges mere end en emailadresse, vises kun en udelukkelsebegrundelse.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -1452,7 +1448,7 @@
 					<title>Udeluk IP-adresser</title>
 					<listitem><para><guilabel>IP-adresser eller værtsnavne</guilabel>: I tekstboksen skrives de adresser eller værtsnavne der skal udelukkes. Flere adresser angives på hver sin linie, og * bruges som ubekendt, ved angivelse af delvise adresser.</para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her bestemmes hvor længe IP-adressens eller hostnavnet skal udelukkes. I dropdownmenuen kan vælges nogle almene værdier, baseret på eksempelvis timer eller dage. Udelukkelsens varighed kan også indstilles til en bestemt dato ved at vælge <guilabel>Indtil -></guilabel>, og herefter angive datoen i formatet &quot;ÅÅÅÅ-MM-DD&quot; under dropdownmenuen.</para></listitem>
-					<listitem><para><guilabel>Ekskludér fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at ekskludere angivne IP-adresser eller værtsnavne fra en bredere udelukkelse.</para></listitem>
+					<listitem><para><guilabel>Ekskluder fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at ekskludere angivne IP-adresser eller værtsnavne fra en bredere udelukkelse.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Angiv eventuelt en kort begrundelse for udelukkelsen som en note til dig selv.</para></listitem>
 					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Denne begrundelse vises for brugere som forsøger at tilmelde sig fra den blokerede IP-adresse og kan være forskellig for ovennævnte interne <guilabel>Udelukkelsesgrund</guilabel>.</para></listitem>
 				</itemizedlist>
@@ -1461,9 +1457,9 @@
 				<itemizedlist>
 					<title>Ophæv udelukkelse eller ekskludering</title>
 					<listitem><para><guilabel>IP-adresser eller værtsnavne</guilabel>: I oversigten vises alle IP-adresser og værtsnavne som i øjeblikket er udelukket eller ekskluderet. Vælg den eller de adresser eller navne hvis udelukkelse skal ophæves. <tip><para>Brug den rette kombination af mus og tastatur for at vælge flere IP-adresser eller værtsnavne. Den mest almindelige metode er at holde tasten CTRL nede, og herefter med musen klikke på de adresser og navne som skal vælges, slip CTRL-tasten når alle ønskede er valgt.</para></tip></para></listitem>
-					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af den valgte adresses udelukkelse, den kan ikke ændres. Vælges mere end én IP-adresse eller et værtsnavn, vises kun én udelukkelsesperiode.</para></listitem>
-					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end én adresse, vises kun én udelukkelsegrund.</para></listitem>
-					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede IP-adresse får vist, den kan ikke ændres. Vælges mere end én adresse, vises kun én udelukkelsebegrundelse.</para></listitem>
+					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af den valgte adresses udelukkelse, den kan ikke ændres. Vælges mere end en IP-adresse eller et værtsnavn, vises kun en udelukkelsesperiode.</para></listitem>
+					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end en adresse, vises kun en udelukkelsegrund.</para></listitem>
+					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede IP-adresse får vist, den kan ikke ændres. Vælges mere end en adresse, vises kun en udelukkelsebegrundelse.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -1483,7 +1479,7 @@
 					<title>Udeluk et eller flere brugernavne</title>
 					<listitem><para><guilabel>Brugernavn</guilabel>: I tekstboksen skrives de brugernavne der skal udelukkes. Flere navne angives på hver sin linie, og * bruges som ubekendt, ved angivelse af delvise brugernavne.</para></listitem>
 					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her bestemmes hvor længe brugernavnet skal udelukkes. I dropdownmenuen kan vælges nogle almene værdier, baseret på eksempelvis timer eller dage. Udelukkelsens varighed kan også indstilles til en bestemt dato ved at vælge <guilabel>Indtil -></guilabel>, og herefter angive datoen i formatet &quot;ÅÅÅÅ-MM-DD&quot; under dropdownmenuen.</para></listitem>
-					<listitem><para><guilabel>Ekskludér fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at eksludere anførte brugere fra en bredere udelukkelse.</para></listitem>
+					<listitem><para><guilabel>Ekskluder fra udelukkelse</guilabel>: Vælg &quot;Ja&quot; for at eksludere anførte brugere fra en bredere udelukkelse.</para></listitem>
 					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Angiv eventuelt en kort begrundelse for udelukkelsen som en note til dig selv.</para></listitem>
 					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Denne begrundelse vises når den udelukkede bruger forsøger at logge ind og kan være forskellig for ovennævnte interne <guilabel>Udelukkelsesgrund</guilabel>.</para></listitem>
 				</itemizedlist>
@@ -1492,9 +1488,9 @@
 				<itemizedlist>
 					<title>Ophæv udelukkelse eller eksludering</title>
 					<listitem><para><guilabel>Brugernavn</guilabel>: I oversigten vises alle brugere som i øjeblikket er udelukket. Vælg det eller de brugernavne hvis udelukkelse skal ophæves. <tip><para>Brug den rette kombination af mus og tastatur for at vælge flere brugernavne. Den mest almindelige metode er at holde tasten CTRL nede, og herefter med musen klikke på de navne som skal vælges, slip CTRL-tasten når alle ønskede er valgt.</para></tip></para></listitem>
-					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af det valgte brugernavns udelukkelse, den kan ikke ændres. Vælges mere end ét brugernavn vises kun én udelukkelsesperiode.</para></listitem>
-					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end én bruger, vises kun én udelukkelsegrund.</para></listitem>
-					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede bruger får vist, den kan ikke ændres. Vælges mere end én bruger, vises kun én udelukkelsebegrundelse.</para></listitem>
+					<listitem><para><guilabel>Varighed af udelukkelse</guilabel>: Her vises længden af det valgte brugernavns udelukkelse, den kan ikke ændres. Vælges mere end et brugernavn vises kun en udelukkelsesperiode.</para></listitem>
+					<listitem><para><guilabel>Udelukkelsesgrund</guilabel>: Her vises årsagen til udelukkelsen, den kan ikke ændres. Vælges mere end en bruger, vises kun en udelukkelsegrund.</para></listitem>
+					<listitem><para><guilabel>Vist udelukkelsesgrund</guilabel>: Her vises den begrundelse som den udelukkede bruger får vist, den kan ikke ændres. Vælges mere end en bruger, vises kun en udelukkelsebegrundelse.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -1538,7 +1534,7 @@
 					<listitem><para><guilabel>Indlæg</guilabel>: Beskæring af brugere baseret på antal indlæg. Kriteriet kan være mere end, mindre end eller svarer til - et specifikt antal indlæg. Den angivne værdi skal være et postivt heltal.</para></listitem>
 					<listitem><para><guilabel>Beskær brugere</guilabel>: De specifikke brugere der ønskes beskåret. Angiv hvert brugernavn på en ny linie. (*) kan anvendes i brugernavne som ubekendt.</para></listitem>
 					<listitem><para><guilabel>Slet beskårede brugeres indlæg</guilabel>: Når brugere slettes helt (gælder ikke for deaktivering), skal der træffes beslutning om disse brugeres indlæg skal slettes eller biholdes. Vælg <guilabel>Ja</guilabel> for at slette indlæg og <guilabel>Nej</guilabel> for at bevare indlæggene på boardet.</para></listitem>
-					<listitem><para><guilabel>Deaktivér eller slet</guilabel>: Vælg om beskårede brugere skal slettes helt fra boardet, eller blot deaktiveres.</para></listitem>
+					<listitem><para><guilabel>Deaktiver eller slet</guilabel>: Vælg om beskårede brugere skal slettes helt fra boardet, eller blot deaktiveres.</para></listitem>
 				</itemizedlist>
 				
 				<warning>
@@ -1558,7 +1554,7 @@
 		
 		<title>Grupper</title>
 		
-		<para>Når brugere tilknyttes forskellige <glossterm>Brugergrupper</glossterm>, er det langt lettere at tildele tilladelser til mange brugere på én gang. phpBB 3.0 indholder seks prædefinerede grupper: Administratorer, Bottter, Globale redaktører, Gæster, Tilmeldte brugere, and Tilmeldte COPPA-brugere.</para>
+		<para>Når brugere tilknyttes forskellige <glossterm>Brugergrupper</glossterm>, er det langt lettere at tildele tilladelser til mange brugere på en gang. phpBB 3.0 indholder seks prædefinerede grupper: Administratorer, Bottter, Globale redaktører, Gæster, Tilmeldte brugere, and Tilmeldte COPPA-brugere.</para>
 		
 		<section id="acp_groups_types">
 			<sectioninfo>
@@ -1587,7 +1583,7 @@
 								
 								<varlistentry>
 									<term>Botter</term>
-									<listitem><para>Denne brugergruppe er beregnet til &quot;botter&quot;, &quot;spiders&quot; og &quot;crawlers&quot;, som er automatiserede agenter, der normalt anvendes af søgemaskiner til at opdatere deres databaser. phpBB 3.0 har egenskaberne til at imødegå de almene problemer søgemaskiner møder når boardet gennemsøges. Læs mere information i afsnittet Administrér botter.</para></listitem>
+									<listitem><para>Denne brugergruppe er beregnet til &quot;botter&quot;, &quot;spiders&quot; og &quot;crawlers&quot;, som er automatiserede agenter, der normalt anvendes af søgemaskiner til at opdatere deres databaser. phpBB 3.0 har egenskaberne til at imødegå de almene problemer søgemaskiner møder når boardet gennemsøges. Læs mere information i afsnittet Bot-administration.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
@@ -1602,7 +1598,7 @@
 								
 								<varlistentry>
 									<term>Tilmeldte brugere</term>
-									<listitem><para>Tilmeldte brugere udgør en stor del af boardets brugere. Administrér denne brugergruppe for at bestemme hvad tilmeldte brugere har tilladelse til.</para></listitem>
+									<listitem><para>Tilmeldte brugere udgør en stor del af boardets brugere. Administrer denne brugergruppe for at bestemme hvad tilmeldte brugere har tilladelse til.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
@@ -1621,7 +1617,7 @@
 					</listitem>
 				</varlistentry>
 			</variablelist>
-			<para>I afsnittet <guimenuitem>Administrér grupper</guimenuitem> i <acronym>ACP</acronym> vises &quot;Prædefinerede grupper&quot; og &quot;Brugerdefinerede grupper&quot; i to oversigter.</para>
+			<para>I afsnittet <guimenuitem>Gruppeadministration</guimenuitem> i <acronym>ACP</acronym> vises &quot;Prædefinerede grupper&quot; og &quot;Brugerdefinerede grupper&quot; i to oversigter.</para>
 			
 		</section>
 		<section id="acp_groups_edit">
@@ -1666,11 +1662,11 @@
 		<section id="acp_groups_default">
 			<title>Standardgruppe</title>
 			<para>Da der kan tilknyttets forskellige egenskaber som farver og avatars til brugergrupper (se <xref linkend="acp_groups_edit"/>, og brugere kan være medlem af to eller flere grupper som har forskellige egenskaber, for eksempler avatars. Hvilken af disse avatars vil bruger få tilknyttet? </para>
-			<para>Bruger og administratorer kan vælge én af disse grupper som &quot;Standardgruppe&quot;. Herved tilknyttes denne gruppes egenskaber til bruger. Bemærk at det ikke er muligt at kombinere egenskaber fra to grupper: Har den ene gruppe en rang og ingen avatar og en anden gruppe kun en avatar, er det altså ikke muligt at vise rang fra den første gruppe og avataren fra en anden. Der må træffes beslutning om hvilken gruppe der skal være &quot;Standardgruppe&quot;.</para>
+			<para>Bruger og administratorer kan vælge en af disse grupper som &quot;Standardgruppe&quot;. Herved tilknyttes denne gruppes egenskaber til bruger. Bemærk at det ikke er muligt at kombinere egenskaber fra to grupper: Har den ene gruppe en rang og ingen avatar og en anden gruppe kun en avatar, er det altså ikke muligt at vise rang fra den første gruppe og avataren fra en anden. Der må træffes beslutning om hvilken gruppe der skal være &quot;Standardgruppe&quot;.</para>
 			<important>
 				<para>Valg af standardgruppe har ingen indflydelse på tilladelser. Der er ingen gevinst på det område ved at vælge en anden standardgruppe. Brugers tilladelser vil være de samme uanset hvilken brugergruppe der vælges som standard.</para>
 			</important>
-			<para>Der er to metoder hvorpå valg af standardgruppe kan ændres. Det kan gøres enten gennem brugeradministration (se <xref linkend="acp_users"/>) eller direkte i gruppeadministrationen - <guilabel>Administrér grupper</guilabel>. Anvendes gruppeadministrationen er det vigtigt at være opmærksom på at når standardgruppen ændres her, ændres standardgruppe for <emphasis>alle</emphasis> medlemmer af gruppen og ændrer også deres standardgruppe. Som eksempel, hvis du ændrer standardgruppe for &quot;Tilmeldte brugere&quot; ved at bruge linket <guilabel>Gør til standardgruppe for samtlige medlemmer</guilabel> øverst, får alle brugere i denne gruppe ændret standardgruppe, også medlemmer af administrator- og redaktørgrupperne, i og med de også er medlemmer af gruppen &quot;Tilmeldte brugere&quot;.</para>
+			<para>Der er to metoder hvormed valg af standardgruppe kan ændres. Det kan gøres enten gennem brugeradministration (se <xref linkend="acp_users"/>) eller direkte i <guilabel>Gruppeadministration</guilabel>. Anvendes gruppeadministrationen er det vigtigt at være opmærksom på at når standardgruppen ændres her, ændres standardgruppe for <emphasis>alle</emphasis> medlemmer af gruppen og ændrer også deres standardgruppe. Som eksempel, hvis du ændrer standardgruppe for &quot;Tilmeldte brugere&quot; ved at bruge linket <guilabel>Sæt gruppe som alle medlemmers standardgruppe</guilabel> øverst, får alle brugere i denne gruppe ændret standardgruppe, også medlemmer af administrator- og redaktørgrupperne, i og med de også er medlemmer af gruppen &quot;Tilmeldte brugere&quot;.</para>
 			<important>
 				<para>Vælges en standardgruppe med rang og avatar tilknyttet, overskrives brugeres eksisterende avatars og rang med gruppens.</para>
 			</important>
@@ -1779,7 +1775,7 @@
 					<imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
 				</imageobject>
 				<caption>
-					<para>Dette skærmbillede vises når du har har valgt en bruger eller gruppe i én af de to første sektioner af de globale tilladelser. Her ændrer du globale tilladelser som f.eks kontrol over profilindstillinger, søgning, private beskeder etc. Ved at vælge <guilabel>Globale redaktørtilladelser</guilabel> eller <guilabel>Administratortilladelser</guilabel> i dropdownmenuen kan yderligere indstillinger ændres for bruger eller gruppe.</para>
+					<para>Dette skærmbillede vises når du har har valgt en bruger eller gruppe i en af de to første sektioner af de globale tilladelser. Her ændrer du globale tilladelser som f.eks kontrol over profilindstillinger, søgning, private beskeder etc. Ved at vælge <guilabel>Globale redaktørtilladelser</guilabel> eller <guilabel>Administratortilladelser</guilabel> i dropdownmenuen kan yderligere indstillinger ændres for bruger eller gruppe.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -1808,7 +1804,7 @@
 		<title>Typografier</title>
 		<para>Boardets fremtræden bestemmes af den valgte typografi, og det er ganske enkelt at vælge en anden og dermed ændre boardets udseende radikalt. Netop muligheden for at give boardet sit helt eget og unikke præg er vigtigt når man ønsker et interessant board. Valg af typografi kan eventuelt også anvendes til at signalere formålet med boardet. I <guimenuitem>Typografier</guimenuitem> kan alle tilgængelige typografier på boardet administreres.</para>
 		
-		<para>En typografi i phpBB 3.0 består af tre hovedelementer: skabeloner, temaer og billedpakker.
+		<para>En typografi i phpBB 3.0 består af tre hovedelementer: skabeloner, temaer og grafikpakker.
 			<variablelist>
 				<varlistentry>
 					<term>Skabeloner</term>
@@ -1821,8 +1817,8 @@
 				</varlistentry>
 				
 				<varlistentry>
-					<term>Billedpakker</term>
-					<listitem><para>Billedpakker indeholder de billeder og den grafik boardet benytter sig af. Billedpakkerne er uafhængig af den valgte typografi, og kan derfor i princippet anvendes på tværs i alle typografier.</para></listitem>
+					<term>Grafikpakker</term>
+					<listitem><para>Grafikpakker indeholder de billeder og den grafik boardet benytter sig af. Grafikpakkerne er uafhængig af den valgte typografi, og kan derfor i princippet anvendes på tværs i alle typografier.</para></listitem>
 				</varlistentry>
 			</variablelist>
 		</para>
@@ -1843,7 +1839,7 @@
 		<variablelist>
 				<varlistentry>
 					<term><ulink url="http://www.phpbb.com/styles/demo/3.0/">Typografidemoer</ulink></term>
-					<listitem><para>Her er der mulighed for at afprøve og se de tilgængelige typografier i funktion på et kørende board, og afprøve hvordan alle elementer på boardet ser ud. Du kan browse alle typografier indtil du finder én der falder i din smag. Demoen giver samtidig links til download af de enkelte typografier og til typografidatabasen.</para></listitem>
+					<listitem><para>Her er der mulighed for at afprøve og se de tilgængelige typografier i funktion på et kørende board, og afprøve hvordan alle elementer på boardet ser ud. Du kan browse alle typografier indtil du finder en der falder i din smag. Demoen giver samtidig links til download af de enkelte typografier og til typografidatabasen.</para></listitem>
 				</varlistentry>
 				
 				<varlistentry>
@@ -1863,11 +1859,11 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Installation og administration af typografier</title>
-			<para>Når du har valgt og downloadet en ny typografi udpakkes filen lokalt på din PC, herefter uploades hele det udpakkede indhold til boardets server. Vær omhyggelig med at uploade hele typografimappen indeholde undermapperne <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> og <filename class='directory'>imageset</filename> til serverens <filename class='directory'>styles</filename>-mappe. Eneste undtagelse er når en typografi baserer sine skabeloner, tema eller billedpakke på en andens. Du bliver ved download informeret, hvis dette er tilfældet og hvilken typografi der arves elementer fra. Den typografi, der genbruges elementer fra, skal også være installeret.</para>
+			<para>Når du har valgt og downloadet en ny typografi udpakkes filen lokalt på din PC, herefter uploades hele det udpakkede indhold til boardets server. Vær omhyggelig med at uploade hele typografimappen indeholde undermapperne <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> og <filename class='directory'>imageset</filename> til serverens <filename class='directory'>styles</filename>-mappe. Eneste undtagelse er når en typografi baserer sine skabeloner, tema eller grafikpakke på en andens. Du bliver ved download informeret, hvis dette er tilfældet og hvilken typografi der arves elementer fra. Den typografi, der genbruges elementer fra, skal også være installeret.</para>
 		
-			<para>Når alle nødvendige filer er uploadet, kan den nye typografi installeres. Installation foretages i fanen <guilabel>Typografier</guilabel> i ACP. Her vises en oversigt med flere typografier, den forudinstallerede prosilver, subsilver2, og også de typografier du netop har uploadet. Oversigtet er delt i to, den første indeholdende allerede installerede typografier og den anden uploadede, men ikke installerede typografier. Sidstnævnte installeres ved at klikke på linket <guilabel>Installér</guilabel> udfor typografiens navn.</para>
+			<para>Når alle nødvendige filer er uploadet, kan den nye typografi installeres. Installation foretages i fanen <guilabel>Typografier</guilabel> i ACP. Her vises en oversigt med flere typografier, den forudinstallerede prosilver, subsilver2, og også de typografier du netop har uploadet. Oversigtet er delt i to, den første indeholdende allerede installerede typografier og den anden uploadede, men ikke installerede typografier. Sidstnævnte installeres ved at klikke på linket <guilabel>Installer</guilabel> udfor typografiens navn.</para>
 		
-			<para>Når du klikker på <guilabel>Installér</guilabel> bliver du bedt om at tage stilling til to spørgsmål:</para>
+			<para>Når du klikker på <guilabel>Installer</guilabel> bliver du bedt om at tage stilling til to spørgsmål:</para>
 			<itemizedlist>
 						<listitem><para><guilabel>Aktiv</guilabel>: Vælges Nej, vil typografien ikke være tilgængelig for brugere, kun administratorer kan afprøve den fra ACP.</para></listitem>
 						<listitem><para><guilabel>Standardtypografi for boardet</guilabel>: Her vælges om typografien skal være boardets fremtidige standard, den som nye brugere og gæster ser. Læs mere om indstilling og ændring af boardets standardtypografi i <xref linkend="acp_general_settings"/>.</para></listitem>
@@ -1877,8 +1873,8 @@
 			<para>Nu har vi gennemgået installationen af en typografi. Imidlertid sprang vi over de resterende muligheder på oversigtsiden, de er:</para>
 			<itemizedlist>
 				<listitem><para><guilabel>Oplysninger</guilabel>: Linket leder til typografiens detaljer, med mulighed for at ændre dens navn, copyrights og de elementer den anvender. Desuden er der mulighed for at bestemme om den skal være aktiv eller ej.</para></listitem>
-				<listitem><para><guilabel>Aktivér/Deaktivér</guilabel>: Linket giver mulighed for, let og hurtigt, at sætte typografien inaktiv eller aktiv.</para></listitem>
-				<listitem><para><guilabel>Eksportér</guilabel>: Giver mulighed for at eksportere typografien inklusive ønskede elementer. Der kan vælges mellem at downloade filen eller at gemme den i serverens store-mappe. Det er nyttigt at pakke hele typografien, så den kan anvendes et andet sted eller af andre.</para></listitem>
+				<listitem><para><guilabel>Aktiver/Deaktiver</guilabel>: Linket giver mulighed for, let og hurtigt, at sætte typografien inaktiv eller aktiv.</para></listitem>
+				<listitem><para><guilabel>Eksporter</guilabel>: Giver mulighed for at eksportere typografien inklusive ønskede elementer. Der kan vælges mellem at downloade filen eller at gemme den i serverens store-mappe. Det er nyttigt at pakke hele typografien, så den kan anvendes et andet sted eller af andre.</para></listitem>
 				<listitem><para><guilabel>Slet</guilabel>: Brug dette link til at slette typografier. I forbindelse med sletning af en typografi, bliver du bedt om at vælge en anden til erstatning for de brugere som har valgt denne som standard. I dropdownmenuen ud for <guilabel>Erstat typografi med</guilabel> vælges den erstattende, klik på <guilabel>Slet</guilabel> for at afslutte handlingent. Selvom en typografi slettes bevares alle filer, og den vil stadig kunne ses i oversigten <guilabel>Ikke installerede typografier</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Vis prøve</guilabel>: En nyttig mulighed for administratorer. Klikkes på linket vil du se dit board med denne typografi, det er god mulighed for at sikre om udseendet er tilfredstillende, inden typografien aktiveres og gøres tilgængelige for brugere. Typografiens ID kaldes automatisk i URL'en, og derfor kan alle boardets sider vises med denne typografi.</para></listitem>
 			</itemizedlist>
@@ -1893,7 +1889,7 @@
 				</authorgroup> 
 			</sectioninfo>
 			<title>Skabeloner</title>
-			<para>Skabelonerne danner boardets basale opbygning, de indeholder al HTML opmærkning og bestemmer strukturen på indholdet. Skabelonfilerne gør brug af tema og billedpakkens indhold af knapper og danner hermed hver enkelt sides udseende. Ved installation af et <glossterm>MOD</glossterm> bliver du ofte bedt om at ændre i én eller flere skabelonfiler. Da hver typografi indeholder sit eget sæt skabelonfiler (eneste undtagelser er hvis den arver skabeloner fra en anden typografi), skal denne ændring foretages for samtlige installerede typografier. Skabelonfilerne findes normalt i mappen <filename class="directory">styles/[din_typografi]/template/</filename>.</para>
+			<para>Skabelonerne danner boardets basale opbygning, de indeholder al HTML opmærkning og bestemmer strukturen på indholdet. Skabelonfilerne gør brug af tema- og grafikpakkens indhold af knapper og danner hermed hver enkelt sides udseende. Ved installation af et <glossterm>MOD</glossterm> bliver du ofte bedt om at ændre i en eller flere skabelonfiler. Da hver typografi indeholder sit eget sæt skabelonfiler (eneste undtagelser er hvis den arver skabeloner fra en anden typografi), skal denne ændring foretages for samtlige installerede typografier. Skabelonfilerne findes normalt i mappen <filename class="directory">styles/[din_typografi]/template/</filename>.</para>
 			<note>
 				<para>Ved enhver ændring i filerne tilhørende en typografi, er det vigtigt at få tømt cachen. Cachen kan tømmes direkte fra administratorindekset.</para>
 			</note>
@@ -1903,11 +1899,11 @@
 			<para>På siden <guimenuitem>Skabeloner</guimenuitem> findes adskillige links til sider hvor der kan ændres og arbejdes med skabelonerne. I det efterfølgende gennemgår vi disse og ser på hvad de kan anvendes til.</para>
 			<itemizedlist>
 				<title>Muligheder på siden <guimenuitem>Skabeloner</guimenuitem></title>
-					<listitem><para><guilabel>Redigér</guilabel>: Fra denne side kan alle de enkelte skabelonfiler ændres via ACP. Ved et klik på linket præsenteres en dropdownmenu, hvor alle skabelonfiler kan vælges. Ved valg af én af filerne dirigeres du til en editor som giver mulighed for at ændre direkte i filen. Hvis filen du ændrer i, ikke er <glossterm>skrivbar</glossterm>, gemmes alle skabelonerne i databasen. Det kan medføre fremadrettede problemer, for eksempel vil du ikke kunne ændre skabelonfilerne direkte i filsystemet. Alle skabelonfilerne bør derfor være skrivbare, inklusiv mappen <filename class="directory">template/</filename>, for at sikre at de ændringer scriptet forsøger at ændre i filen også bliver udført</para></listitem>
-					<listitem><para><guilabel>Mellemlager</guilabel>: phpBB mellemlagrer eller cacher alle templatefiler, og øger dermed boardets ydelse. Filerne kompileres og gøres klar til brug, for efterfølgende, med mellemrum at rekompilere dem, for at afspejle de ændringer der måtte være foretaget. På denne side vises alle mellemlagrede skabelonfiler. Foretager du ændringer i én af disse, markeres den pågældende fil og klik på <guilabel>Slet markerede</guilabel> nederst. phpBB regenererer filen med de foretagne ændringer. Der er ingen fare ved at slette mellemlagrede filer, de er kun midlertidige og du kan ikke ødelægge noget.</para></listitem>
+					<listitem><para><guilabel>Rediger</guilabel>: Fra denne side kan alle de enkelte skabelonfiler ændres via ACP. Ved et klik på linket præsenteres en dropdownmenu, hvor alle skabelonfiler kan vælges. Ved valg af en af filerne dirigeres du til en editor som giver mulighed for at ændre direkte i filen. Hvis filen du ændrer i, ikke er <glossterm>skrivbar</glossterm>, gemmes alle skabelonerne i databasen. Det kan medføre fremadrettede problemer, for eksempel vil du ikke kunne ændre skabelonfilerne direkte i filsystemet. Alle skabelonfilerne bør derfor være skrivbare, inklusiv mappen <filename class="directory">template/</filename>, for at sikre at de ændringer scriptet forsøger at ændre i filen også bliver udført</para></listitem>
+					<listitem><para><guilabel>Mellemlager</guilabel>: phpBB mellemlagrer eller cacher alle templatefiler, og øger dermed boardets ydelse. Filerne kompileres og gøres klar til brug, for efterfølgende, med mellemrum at rekompilere dem, for at afspejle de ændringer der måtte være foretaget. På denne side vises alle mellemlagrede skabelonfiler. Foretager du ændringer i en af disse, markeres den pågældende fil og klik på <guilabel>Slet markerede</guilabel> nederst. phpBB regenererer filen med de foretagne ændringer. Der er ingen fare ved at slette mellemlagrede filer, de er kun midlertidige og du kan ikke ødelægge noget.</para></listitem>
 					<listitem><para><guilabel>Oplysninger</guilabel>: Her kan skabelonens navn og dens copyrights ses, og sidst men ikke mindst, hvor skabelonen gemmes. Gemmes den i filsystemet, kan filerne ændres i en teksteditor efter download fra serveren. Ved genupload skal cachen tømmes. Gemmes skabelonen i databasen, skal filerne ændres via editoren i <glossterm>ACP</glossterm>. Her er tømning af cachen unødvendig. Databaselagring af skabeloner er mere resourcekrævende af serveren, end lagring i filsystem.</para></listitem>
 					<listitem><para><guilabel>Genopfrisk</guilabel>: Meget lig mellemlager funktionen, ved at klikke <guilabel>Genopfrisk</guilabel> slettes samtlige denne skabelons mellemlagrede filer. En nyttig funktion efter ændring af filer i filsystemet, og du ønsker disse ændringer synlige. Alle gemte data i databasen overskrives med indholdet af filerne på serveren.</para></listitem>
-					<listitem><para><guilabel>Eksportér</guilabel>: Brug denne mulighed hvis du har behov for at downloade samtlige skabelonens filer for at anvende dem andre steder. Du bliver spurgt om du vil downloade til din PC eller gemme i boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
+					<listitem><para><guilabel>Eksporter</guilabel>: Brug denne mulighed hvis du har behov for at downloade samtlige skabelonens filer for at anvende dem andre steder. Du bliver spurgt om du vil downloade til din PC eller gemme i boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
 					<listitem><para><guilabel>Slet</guilabel>: Sletter alle skabelonens referencer i databasen. Imidlertid efterlades skabelonfilerne intakte på serverens filsystem. Når en skabelon slettes, bliver du bedt om at vælge en anden skabelon til erstatning for den der slettes.</para></listitem>
 			</itemizedlist>
 		</section>
@@ -1921,9 +1917,9 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Temaer</title>
-			<para>Nu, da vi har gennemgået skabelonerne som bestemmer boardets struktur, fortsætter vi med temaet. Typografitemaet sørger for at tilføje farver, dimensioner, formatering og skrifttyper. Temaet består af én eller flere CSS-filer som samlet set bestemmer boardets endelige udseende. Temafilerne kan normalt findes i mappen <filename class="directory">styles/[din_typografi]/theme/</filename>.</para>
+			<para>Nu, da vi har gennemgået skabelonerne som bestemmer boardets struktur, fortsætter vi med temaet. Typografitemaet sørger for at tilføje farver, dimensioner, formatering og skrifttyper. Temaet består af en eller flere CSS-filer som samlet set bestemmer boardets endelige udseende. Temafilerne kan normalt findes i mappen <filename class="directory">styles/[din_typografi]/theme/</filename>.</para>
 			
-			<para>Der er to mulige modeller for opsætning af temaer. Det første model anvendes i subsilver2, som anvender én stylesheet-fil, som hentes direkte ved at specificere dens URL i skabelonerne. Ændres i denne en fil, er genopfriskning af temaet unødvendig, det er nok at genfriske siden i browseren. Den anden model afvendes i prosilver, her er én fil som inkluderer alle de andre og herved kompilerer det komplette typografiark som gemmes i databasen. Når der foretages ændringer i én af disse temafiler, er det derfor nødvendigt at <guilabel>genopfriske</guilabel> temaet.</para>
+			<para>Der er to mulige modeller for opsætning af temaer. Det første model anvendes i subsilver2, som anvender en stylesheet-fil, som hentes direkte ved at specificere dens URL i skabelonerne. Ændres i denne en fil, er genopfriskning af temaet unødvendig, det er nok at genfriske siden i browseren. Den anden model afvendes i prosilver, her er en fil som inkluderer alle de andre og herved kompilerer det komplette typografiark som gemmes i databasen. Når der foretages ændringer i en af disse temafiler, er det derfor nødvendigt at <guilabel>genopfriske</guilabel> temaet.</para>
 			
 			<warning>
 				<para>Ændringer i typografiarket foretaget via ACP, vil ved genopfriskning af temaet bliver overskrevet med indholdet af filerne placeret på serveren.</para>
@@ -1933,10 +1929,10 @@
 			
 			<itemizedlist>
 				<title>Muligheder på siden <guimenuitem>Temaer</guimenuitem></title>
-					<listitem><para><guilabel>Redigér</guilabel>: Herfra kan ændres i boardets typografiark. Består temaet af flere filer gemt i databasen, bliver alle samlet i et typografiark som kan ændres. Gem ændringer ved at klikke på <guilabel>Udfør</guilabel>. Ønsker du at ændre i den enkelte fil direkte, findes den i typografiens mappe <filename class="directory">theme/</filename>.</para></listitem>
-					<listitem><para><guilabel>Oplysninger</guilabel>: Her kan temaets navn og dets copyrights ses, og sidst men ikke mindst, hvor det gemmes. Gemmes det i filsystemet, kan filerne ændres i en teksteditor efter download fra serveren. Ved genupload skal temaet genopfriskes, som beskrevet umiddelbart herunder. Gemmes temaet i databasen, kan typografiarket ændres via editoren i <glossterm>ACP</glossterm>. Her er genopfriskning unødvendig.</para></listitem>
-					<listitem><para><guilabel>Genopfrisk</guilabel>: Vær forsigtig med denne mulighed, den indlæser data fra filerne og overskriver typografiark gemt i databasenas. Ændringer foretaget via ACP mistes herved. Hvis du ønsker at gemme ændringerne, kan temaet <guilabel>Eksporteres</guilabel> til din PC, herved kan de tilføjes igen.</para></listitem>
-					<listitem><para><guilabel>Eksportér</guilabel>: Brug denne mulighed hvis du har behov for at downloade samtlige temaets filer for at anvende dem andre steder. Du bliver bedt om at tage stilling til om download skal ske til din PC eller til boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
+					<listitem><para><guilabel>Rediger</guilabel>: Herfra kan ændres i boardets typografiark. Består temaet af flere filer gemt i databasen, bliver alle samlet i et typografiark som kan ændres. Gem ændringer ved at klikke på <guilabel>Udfør</guilabel>. Ønsker du at ændre i den enkelte fil direkte, findes den i typografiens mappe <filename class="directory">theme/</filename>.</para></listitem>
+					<listitem><para><guilabel>Oplysninger</guilabel>: Her kan temaets navn og dets copyrights ses, og sidst men ikke mindst, hvor det gemmes. Gemmes det i filsystemet, kan filerne ændres i en teksteditor efter download fra serveren. Ved genupload skal temaet genindlæses, som beskrevet umiddelbart herunder. Gemmes temaet i databasen, kan typografiarket ændres via editoren i <glossterm>ACP</glossterm>. Her er genopfriskning unødvendig.</para></listitem>
+					<listitem><para><guilabel>Genindlæs</guilabel>: Vær forsigtig med denne mulighed, den indlæser data fra filerne og overskriver typografiark gemt i databasenas. Ændringer foretaget via ACP mistes herved. Hvis du ønsker at gemme ændringerne, kan temaet <guilabel>Eksporteres</guilabel> til din PC, herved kan de tilføjes igen.</para></listitem>
+					<listitem><para><guilabel>Eksporter</guilabel>: Brug denne mulighed hvis du har behov for at downloade samtlige temaets filer for at anvende dem andre steder. Du bliver bedt om at tage stilling til om download skal ske til din PC eller til boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
 					<listitem><para><guilabel>Slet</guilabel>: Sletter alle temaets referencer i databasen. Imidlertid efterlades temafilerne intakte på serverens filsystem. Når et tema slettes, bliver du bedt om at vælge et andet til erstatning for det der slettes.</para></listitem>
 			</itemizedlist>
 		</section>
@@ -1956,21 +1952,21 @@
 			<itemizedlist>
 				<title>Muligheder på siden <guimenuitem>Ændre grafikpakke</guimenuitem></title>
 					<listitem>
-						<para><guilabel>Redigér</guilabel>: Her ændres de individuelle elementer i pakken. Grafikpakken består af en række grafikelementer med specifikke egenskaber. &quot;Sticky topic icon&quot; er for eksempel et element med egenskaberne grafikfil, højde og bredde tilknyttet. Herunder gennemgås hvilke muligheder der er tilgængelige på denne side:</para>
+						<para><guilabel>Rediger</guilabel>: Her ændres de individuelle elementer i pakken. Grafikpakken består af en række grafikelementer med specifikke egenskaber. &quot;Sticky topic icon&quot; er for eksempel et element med egenskaberne grafikfil, højde og bredde tilknyttet. Herunder gennemgås hvilke muligheder der er tilgængelige på denne side:</para>
 						<itemizedlist>
 							<listitem><para><guilabel>Vælg grafikelement</guilabel>: I dropdownmenuen vælges det element der ønskes ændret.</para></listitem>
 							<listitem><para><guilabel>Nuværende grafik</guilabel>: Viser den grafikfil der er i øjeblikket er tilknyttet elementet.</para></listitem>
 							<listitem><para><guilabel>Valgte grafikfil</guilabel>: Viser den fil du har valgt i dropdownmenuen <guilabel>Grafikfil</guilabel> umiddelbart herunder.</para></listitem>
 							<listitem><para><guilabel>Grafikfil</guilabel>: <acronym>ACP</acronym> henter alle grafikfiler placeret i mappen <filename class="directory">imageset/</filename> og lister dem i dropdownmenuen. Her kan enhver grafikfil tilknyttes et grafikelement på boardet.</para></listitem>
-							<listitem><para><guilabel>Inkludér dimensioner</guilabel>: Vælges <guilabel>Ja</guilabel> vil dimensionerne herunder blive anvendt, ellers bliver størrelsen automatisk detekteret.</para></listitem>
+							<listitem><para><guilabel>Inkluder dimensioner</guilabel>: Vælges <guilabel>Ja</guilabel> vil dimensionerne herunder blive anvendt, ellers bliver størrelsen automatisk detekteret.</para></listitem>
 							<listitem><para><guilabel>Grafikbredde</guilabel>: Bestemmer grafikkens bredde.</para></listitem>
 							<listitem><para><guilabel>Grafikhøjde</guilabel>: Bestemmer grafikkens højde.</para></listitem>				
 						</itemizedlist>				
 					</listitem>
 					<listitem><para><guilabel>Oplysninger</guilabel>: Her har du mulighed for at ændre grafikpakkens navn og dens copyright. Husk at respektere den oprindelige skaber af pakken.</para></listitem>
-					<listitem><para><guilabel>Genopfrisk</guilabel>: Ved at klikke her bliver alle grafikelementers specifikationer genindlæst fra filen <filename>imageset.cfg</filename> og gemt i databasen. Handlingen vil derfor <emphasis>overskrive</emphasis> enhver ændring du har foretaget via ACP-editoren og som ikke er gemt på filesystemet.</para></listitem>
-					<listitem><para><guilabel>Eksportér</guilabel>: Brug denne mulighed hvis du har behov for at downloade hele grafikpakken for eventuelt at anvende den andre steder. Du bliver bedt om at tage stilling til om download skal ske til din PC eller til boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
-					<listitem><para><guilabel>Slet</guilabel>: Sletter alle grafikpakkens referencer i databasen. Imidlertid efterlades alle pakkens filer intakte på serverens filsystem. Når en grafikpakke slettes, bliver du bedt om at vælge en anden til erstatning for den der slettes. Der skal altid være mindst én grafikpakke installeret.</para></listitem>
+					<listitem><para><guilabel>Genindlæs</guilabel>: Ved at klikke her bliver alle grafikelementers specifikationer genindlæst fra filen <filename>imageset.cfg</filename> og gemt i databasen. Handlingen vil derfor <emphasis>overskrive</emphasis> enhver ændring du har foretaget via ACP-editoren og som ikke er gemt på filesystemet.</para></listitem>
+					<listitem><para><guilabel>Eksporter</guilabel>: Brug denne mulighed hvis du har behov for at downloade hele grafikpakken for eventuelt at anvende den andre steder. Du bliver bedt om at tage stilling til om download skal ske til din PC eller til boardets store-mappe. Du kan også vælge metode til komprimering, valgmulighederne afhænger af din serverkonfiguration.</para></listitem>
+					<listitem><para><guilabel>Slet</guilabel>: Sletter alle grafikpakkens referencer i databasen. Imidlertid efterlades alle pakkens filer intakte på serverens filsystem. Når en grafikpakke slettes, bliver du bedt om at vælge en anden til erstatning for den der slettes. Der skal altid være mindst en grafikpakke installeret.</para></listitem>
 			</itemizedlist>
 			<figure id="img_acp_imageset_edit">
 				<title>Skærmbilledet ved ændring af grafikpakke</title>
@@ -2106,7 +2102,7 @@
 				<varlistentry>
 					<term><guilabel>Antal relationer mellem ord og indlæg</guilabel></term>
 					<listitem>
-						<para>Som beskrevet ovenfor indeholder den anden tabel en liste af relationer mellem ord og indlæg. Hvis for eksempel ordet "flyvemaskine" skrives i to forskellige indlæg, tilføjes ordet én gang og to relationer, én til hvert indlæg.</para>
+						<para>Som beskrevet ovenfor indeholder den anden tabel en liste af relationer mellem ord og indlæg. Hvis for eksempel ordet "flyvemaskine" skrives i to forskellige indlæg, tilføjes ordet en gang og to relationer, en til hvert indlæg.</para>
 					</listitem>
 				</varlistentry>
 				<varlistentry>
@@ -2138,9 +2134,9 @@
 						</authorgroup>
 					</sectioninfo>
 					<title>Versionskontrol</title>
-					<para>phpBB 3.0.x-linien opdateres normalt med få måneders mellemrum. Fejlrettelser, nye features og andre ændringer er indeholdt i disse opdateringer. Versionnummeret (x'et) øges ved hver opdatering. Det anbefales kraftigt at du holder dit board opdateret. Opdatering fra ældre versioner, eller over flere versioner er vanskeligere og kan medføre problemer med løse mulige konflikter. Du kan anvende den automatiske opdateringspakke ved opdatering fra versionen før. Pakken kan flette ændringer udført i forbindelse med installation af MODs med opdateringer i standardfilerne. Du kan naturligvis også vælge at anvende én af de øvrige tilgængelige pakker.</para>
+					<para>phpBB 3.0.x-linien opdateres normalt med få måneders mellemrum. Fejlrettelser, nye features og andre ændringer er indeholdt i disse opdateringer. Versionnummeret (x'et) øges ved hver opdatering. Det anbefales kraftigt at du holder dit board opdateret. Opdatering fra ældre versioner, eller over flere versioner er vanskeligere og kan medføre problemer med løse mulige konflikter. Du kan anvende den automatiske opdateringspakke ved opdatering fra versionen før. Pakken kan flette ændringer udført i forbindelse med installation af MODs med opdateringer i standardfilerne. Du kan naturligvis også vælge at anvende en af de øvrige tilgængelige pakker.</para>
 					<para>Du adviseres automatisk i ACP når en ny version frigives. Her vises også et link til den nyeste bekendtgørelse af frigivelsen, hvor ændringer og tilføjelser i denne omtales.</para>
-					<para>Opdatering med den automatiske opdateringspakke er uhyre simpel. Først følges linket til downloadsiden på phpBB.com og opdateringspakken hentes herfra. Udpak indholdet lokalt på din PC og upload filerne til boardets root-mappe. Boardet vil herefter være offline for almindelige brugere. Brows til boardets <filename class='directory'>install/</filename>-mappe og vælg fanen <guilabel>Opdatér</guilabel>, opdateringsprocessen giver yderligere instrukser undervejs.</para>
+					<para>Opdatering med den automatiske opdateringspakke er uhyre simpel. Først følges linket til downloadsiden på phpBB.com og opdateringspakken hentes herfra. Udpak indholdet lokalt på din PC og upload filerne til boardets root-mappe. Boardet vil herefter være offline for almindelige brugere. Brows til boardets <filename class='directory'>install/</filename>-mappe og vælg fanen <guilabel>Opdater</guilabel>, opdateringsprocessen giver yderligere instrukser undervejs.</para>
 		</section>
 		<section id="acp_system_spiders">
 			<sectioninfo>
@@ -2150,7 +2146,7 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Administrér botter</title>
+			<title>Bot-administration</title>
 			<para>phpBB 3 introducerer et nyt system til at administrere søgemaskine- og bot-konti. Systemet giver mulighed for at identificere disse automatiserede agenter via deres IP-adresse eller agentstreng. Når du har tilføjet en bot og den er genkendt, behander phpBB ikke sessionen som en gæstebruger, men anvender den oprettede botkonto. Botter gør brug af de tilladelser som er tildelt den prædefinerede botgruppe. Det er vigtigt at få identificeret botter, i det boardet så vil være istand til præsentere boardets indhold på den korrekte måde for søgemaskiner - herunder at udelade links til sider uden indhold. Botter modtager ikke en session-ID i URL'en, og den vises derfor ikke i søgeresultater. Du kan knytte en speciel typografi og et bestemt sprog til botter.</para>
 			<para>Det er nemt at konstatere om en bestemt bot fornylig har aflagt besøg på dit board. Se kolonnen <guilabel>Seneste besøg</guilabel> i botoversigten.</para>
 			<note>
@@ -2203,7 +2199,7 @@
 			</sectioninfo>
 			<title>Sprogpakker</title>
 			<para>I phpBB kan installeres flere sprog som dine brugere kan vælge imellem. Enhver af boardets tekststrenge skulle blive oversat når en ny pakke installeres og vælges som sprog af brugere. Valg af et andet standardsprog ændrer ikke sprogbrug i boardets indsendte indlæg.</para>
-			<para>Sprogpakker kan hentes på phpBB.com's downloadside. For at tilføje installere en sprogpakke udpakkes dens indhold, det fulde indhold uploades til mappen <filename>language/</filename>. Alle sprogpakkens filer skulle være indholdt i en mappe navngivet med sprogets ISO-kode, for eksempel er standardsproget British English indeholdt i mappen <filename>en/</filename>. Når filerne er uploadet, vil sprogpakken være synlig i listen <guilabel>Ikke installerede sprogpakker</guilabel>. Klik på <guilabel>Installér</guilabel> for at tilføje den til boardet og herved gøre sproget tilgængelig for brugere.</para>
+			<para>Sprogpakker kan hentes på phpBB.com's downloadside. For at tilføje installere en sprogpakke udpakkes dens indhold, det fulde indhold uploades til mappen <filename>language/</filename>. Alle sprogpakkens filer skulle være indholdt i en mappe navngivet med sprogets ISO-kode, for eksempel er standardsproget British English indeholdt i mappen <filename>en/</filename>. Når filerne er uploadet, vil sprogpakken være synlig i listen <guilabel>Ikke installerede sprogpakker</guilabel>. Klik på <guilabel>Installer</guilabel> for at tilføje den til boardet og herved gøre sproget tilgængelig for brugere.</para>
 			<note>
 					<para>I <link linkend="acp_general_config">Board grundlæggende</link> er det muligt at vælge en sprogpakke som boardets standardsprog.</para>
 			</note>
