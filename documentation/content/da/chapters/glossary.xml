@@ -7,7 +7,7 @@
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2009</year>
-			<holder>phpBB4.dk</holder>
+			<holder>Olympus DK Team</holder>
 		</copyright>
 	</chapterinfo>
 	<title>Ordliste</title>
@@ -69,14 +69,14 @@
 			<varlistentry>
 				<term>Brugergruppe</term>
 				<listitem>
-					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (f.eks. oprette en redaktørgruppe og tildele denne gruppe redaktørtilladelser i et bestemt forum, fremfor at tildele en hel række brugere separate redaktørtilladelser i dette forum). En brugergruppe kan have gruppeledere som kan tilføje og slette brugere i gruppen. Brugergrupper kan være skjulte, lukkede eller åbne. Hvis en brugergruppe er åben, kan brugere anmode om medlemskab i denne i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0 er født med seks forudefinerede brugergrupper.</para>
+					<para>Brugergrupper er en måde at gruppere brugere på. Det gør det enkelt at indstille og ændre tilladelser for mange brugere samtidig (f.eks. oprette en redaktørgruppe og tildele denne gruppe redaktørtilladelser i et bestemt forum, fremfor at tildele en hel række brugere separate redaktørtilladelser i dette forum). En brugergruppe kan have gruppeledere som kan tilføje og fjerne fra gruppen. Brugergrupper kan være skjulte, lukkede eller åbne. Hvis en brugergruppe er åben, kan brugere anmode om medlemskab i denne i <link linkend="user_control_panel">brugerkontrolpanelet</link>. phpBB 3.0.x indeholder seks faste brugergrupper.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Chmod</term>
 				<listitem>
-					<para><abbrev>chmod</abbrev> er en måde at ændre en fils tilladelser på en *nix-server (UNIX, Linux, etc.). Filerne i phpBB skal være chmodded til 644, mapper til 755. Avatar uploadmapper and cachemappen til 777. Du kan finde mere information om chmod i dokumentationen til din <acronym>FTP</acronym>-klient.</para>
+					<para><abbrev>chmod</abbrev> er en måde at ændre en fils tilladelser på en *nix-server (UNIX, Linux, etc.). Filerne i phpBB skal være chmodded til 644, mapper til 755. Avatar uploadmappen og cachemappen til 777. Du kan finde mere information om chmod i dokumentationen til din <acronym>FTP</acronym>-klient.</para>
 				</listitem>
 			</varlistentry>
 			

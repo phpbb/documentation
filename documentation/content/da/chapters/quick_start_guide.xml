@@ -7,7 +7,7 @@
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2009</year>
-			<holder>phpBB4.dk</holder>
+			<holder>Olympus Team DK</holder>
 		</copyright>
 	</chapterinfo>
 	<title>Quick Start Guide</title>
@@ -99,14 +99,14 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introduktion</title>
-			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installér</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
+			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installer</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Krav</title>
 			<important>
 				<para>Læs venligst <link linkend="quick_requirements">kapitlet om phpBB3's krav</link>, hvor minimumskravene er specificeret.</para>
 			</important>
-			<para>Den første side du møder efter installationen er startet er listen over systemkrav. phpBB3 kontrollerer automatisk om alt nødvendigt er installeret på serveren for at phpBB3 kan afvikles korrekt. Du skal have minimumversionen af <acronym>PHP</acronym> installeret og mindst én tilgængelig database for at fortsætte installationen. Det er også vigtigt at alle viste mapper er tilgængelige og sat med rette tilladelser. Læs venligst beskrivelsen i hver sektion for at finde ud af om de enkelte komponenter og tilladelser er valgfrie eller krævede for at køre phpBB3. Hvis alt er i orden, kan du fortsætte ved at klikke på <guilabel>Start installation</guilabel>.</para>
+			<para>Den første side du møder efter installationen er startet er listen over systemkrav. phpBB3 kontrollerer automatisk om alt nødvendigt er installeret på serveren for at phpBB3 kan afvikles korrekt. Du skal have minimumversionen af <acronym>PHP</acronym> installeret og mindst en tilgængelig database for at fortsætte installationen. Det er også vigtigt at alle viste mapper er tilgængelige og sat med rette tilladelser. Læs venligst beskrivelsen i hver sektion for at finde ud af om de enkelte komponenter og tilladelser er valgfrie eller krævede for at køre phpBB3. Hvis alt er i orden, kan du fortsætte ved at klikke på <guilabel>Start installation</guilabel>.</para>
 		</section>
 		<section id="quick_installation_database">
 			<title>Databaseindstillinger</title>
@@ -144,7 +144,7 @@
 			</figure>
 			<para>Du behøver ikke at ændre <guilabel>tabelpræfiks for tabellerne</guilabel> i databaseindstillingerne, med mindre du har planer om at flere phpBB-installationer skal benytte samme database. Hvis det er tilfældet, skal du anvende forskelligt præfiks for hver installation for at få det til at virke.</para>
 			<para>Når du har angivet denne information, fortsætter du installationen ved at klikke på knappen <guilabel>Fortsæt til næste trin</guilabel>. phpBB3 kontrollerer nu om der med de angivne data kan etableres korrekt forbindelse til databasen, og om der allerede eksisterer tabeller med det angivne præfiks.</para>
-			<para>En <guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. Kontrollér at de angivne databaseindstillinger er korrekte og prøv igen. Kontakt venligst din vært, hvis du er usikker på de korrekte indstillinger.</para>
+			<para>En <guilabel>Kunne ikke forbinde til databasen</guilabel>-meddelelse betyder at du ikke har angivet korrekte databasedata og phpBB3 derfor ikke kunne etablere forbindelse til denne. Kontroller at de angivne databaseindstillinger er korrekte og prøv igen. Kontakt venligst din vært, hvis du er usikker på de korrekte indstillinger.</para>
 			<tip>
 				<para>Husk at anvendelse af store og små bogstaver i brugernavn og kodeord til databasen skal følges stringent. Der skal altså angives nøjagtig de data du angav ved oprettelse af databasen eller dem du har fået udleveret af din vært.</para>
 			</tip>
@@ -314,7 +314,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Siden med <guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst ét af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel>, hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst ét af de valgte fora.</para>
+			<para>Siden med <guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst et af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel>, hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst et af de valgte fora.</para>
 			<para>For at tilføje tilladelser til grupper vælges en eller flere, i feltet <guilabel>Tilføj grupper</guilabel>. For at tilføje tilladelser til en bruger, indtastes denne i tekstboksen <guilabel>Tilføj brugere</guilabel>, eller brug funktionen <guilabel>Find en tilmeldt bruger</guilabel>. Klik herefter på <guilabel>Tilføj tilladelser</guilabel>, som dirigerer dig videre til tilladelseskærmbilledet. Her listes alle de fora du tidligere valgte, med de grupper eller brugere der ændres tilladelser for nedenfor hvert forum. </para>
 			<para>Der er to metoder til at tildele tilladelser: Du kan enten tildele dem manuelt eller bruge de foruddefinerede <guilabel>Tilladelseroller</guilabel>, som er noget simplere, men ikke så fintmaskede. Du kan skifte mellem begge metoder når som helst i processen. Du kan vælge at ignorere introduktionen til manuelle tilladelser og hoppe direkte til afsnittet <link linkend="quick_permissions_roles">&quot;Tilladelseroller&quot;</link>, hvis du er ivrig efter at få alt til at virke hurtigst muligt. Men vær som nævnt opmærksom på at disse roller kun tilbyder et ganske lille udsnit af de muligheder man har i tilladelsesystemet. Efter vores opfattelse forstår en god Olympusadministrator at udnytte tilladelsesystemet fuldt ud.</para>
 			<para>De to metoder adskiller sig kun ved den måde indstillingen foretages på, de deler samme interface.</para>

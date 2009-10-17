@@ -7,7 +7,7 @@
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2009</year>
-			<holder>phpBB3.dk</holder>
+			<holder>Olympus DK Team</holder>
 		</copyright>
 	</chapterinfo>
 	<title>Administratorguide</title>
@@ -1521,7 +1521,7 @@
 				</sectioninfo>
 				<title>Beskær brugere</title>
 				
-				<para>I phpBB3 er det muligt at slette eller deaktivere brugere med det formål at fjerne inaktive brugere. <guimenuitem>Beskær brugere</guimenuitem> giver mulighed for at beskære brugere blandt andet med baggrund i antal indlæg, sidst aktiv. En brugerkonto kan også slettes sammen med alt tilknyttet denne.</para>
+				<para>I phpBB3 er det muligt at slette eller deaktivere brugere med det formål at fjerne inaktive brugere. <guimenuitem>Beskær brugere</guimenuitem> giver mulighed for at slette brugere blandt andet med baggrund i bl. a. antal indlæg, senest aktiv. Samtidig med sletning af en brugerkonto kan også vælges at brugers indlæg skal slettes.</para>
 				
 				<para>I sektionen <guilabel>Beskær brugere</guilabel> kan enhver kombination af de tilgængelige kriterier anvendes. Udfyld derfor alle de felter som dækker de brugere du vil beskære. Klik på <guilabel>Udfør</guilabel> når du er klar til at beskære brugere efter de valgte kriterier.</para>
 				

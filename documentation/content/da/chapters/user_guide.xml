@@ -7,7 +7,7 @@
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2009</year>
-			<holder>phpBB4.dk</holder>
+			<holder>Olympus DK Team</holder>
 		</copyright>
 	</chapterinfo>
 	<title>Brugerguide</title>
@@ -163,7 +163,7 @@
 						<listitem><para><guilabel>Administratorer kan kontakte mig pr. email</guilabel>: Vælges <guilabel>Ja</guilabel> modtager du masse-email afsendt af boardadministrator.</para></listitem>
 						<listitem><para><guilabel>Brugere må sende mig private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> kan andre brugere sende dig private beskeder via boardet.</para></listitem>
 						<listitem><para><guilabel>Skjul min onlinestatus</guilabel>: Vælges <guilabel>Ja</guilabel> skjules din onlinestatus for andre brugere. Administratorer og redaktører vil stadig kunne se din onlinestatus.</para></listitem>
-						<listitem><para><guilabel>Advisér mig ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> afsendes en email fra boardet med besked om at du har modtaget en ny privat besked.</para></listitem>
+						<listitem><para><guilabel>Adviser mig ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> afsendes en email fra boardet med besked om at du har modtaget en ny privat besked.</para></listitem>
 						<listitem><para><guilabel>Popupvindue ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> adviseres du med et popupvindue om nye private beskeder.</para></listitem>
 						<listitem><para><guilabel>Mit sprog</guilabel>: I dropdownmenuen vises de sprog der er installeret på boardet, du kan vælge hvilket af disse du ønsker at anvende på boardet. Bemærk at indlæg skrevet på et andet sprog stadig bliver vist på dette.</para></listitem>
 						<listitem><para><guilabel>Min tidszone</guilabel>: Du indstiller her den tidszone du befinder dig i.</para></listitem>
@@ -180,7 +180,7 @@
 						<listitem><para><guilabel>Slå BBkode til som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere BBkode ved skrivning af indlæg.</para></listitem>
 						<listitem><para><guilabel>Slå smilies til som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere smilies ved skrivning af indlæg.</para></listitem>
 						<listitem><para><guilabel>Tilføj min signatur som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få tilføjet signatur i indlæg.</para></listitem>
-						<listitem><para><guilabel>Advisér mig ved svar som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få advisering når indlæg besvares.</para></listitem>
+						<listitem><para><guilabel>Adviser mig ved svar som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få advisering når indlæg besvares.</para></listitem>
 					</itemizedlist>
 					
 				</para>
@@ -282,7 +282,7 @@
 			<para>Muligheden for at uploade filer og vedhæfte disse i indlæg bestemmes af tilladelsen &quot;Kan vedhæfte filer&quot;. Muligheden for at downloade vedhæfte filer bestemmes af tilladelsen &quot;Kan downloade filer&quot;. Begge indstillinger bestemmes af boardadministrator.</para>
 			<para>For at vedhæfte en fil benyttes fanen <guilabel>Upload af vedhæftede filer</guilabel> umiddelbart under feltet hvor indlæg skrives, herefter klikkes på <guilabel>Gennemse</guilabel> for at finde filen på din PC. Der kan yderligere tilføjes en kommentar til filen i feltet <guilabel>Filkommentar</guilabel>. Klik på <guilabel>Tilføj filen</guilabel> for at uploade og vedhæfte filen til indlægget. Gentag processen for at tilføje flere filer.</para>
 			<para>For at slette en vedhæftet fil, vælger du først at redigere dit indlæg, umiddelbart under feltet med indlægsteksten se nu sektionen <guilabel>Vedhæftede filer</guilabel>, klik på <guilabel>Slet fil</guilabel> under den fil der skal slettes.</para>
-			<para>Hvis intet vælges vises vedhæftede filer altid efter indlægsteksten, men ved at benytte <guilabel>Placér inline</guilabel> knappen, kan filen vises i selve indlægsteksten. Filen placeres nu på rette sted med en kode [attachment=0]filnavn[/attachment], og hele den kode kan flyttes rundt i indlægsteksten, til den ønskede placering er fundet.</para>
+			<para>Hvis intet vælges vises vedhæftede filer altid efter indlægsteksten, men ved at benytte <guilabel>Placer inline</guilabel> knappen, kan filen vises i selve indlægsteksten. Filen placeres nu på rette sted med en kode [attachment=0]filnavn[/attachment], og hele den kode kan flyttes rundt i indlægsteksten, til den ønskede placering er fundet.</para>
 			<para>Vedhæftede filer er underlagt nogle begrænsninger hvad angår antal vedhæftede pr. indlæg, filstørrelse og type.</para>
  			<itemizedlist>
 				<listitem><para>Filstørrelse: Den maksimale størrelse for uploadede filer bestemmes af administrator. Standard er 256 KiB.</para></listitem>
@@ -292,7 +292,7 @@
 		</section>
 		<section id="posting_polls">
 			<title>Afstemning</title>
-			<para>Oprettelse af afstemninger giver brugere mulighed for at anvende et emne til at få andre brugere til at give deres holdning til kende om en idé eller lignende. Afstemninger kan kun oprettes i det første indlæg i et emne. Brugeres mulighed for at oprette afstemninger og afgive stemme er bestemt af administrator.</para>
+			<para>Oprettelse af afstemninger giver brugere mulighed for at anvende et emne til at få andre brugere til at give deres holdning til kende om en ide eller lignende. Afstemninger kan kun oprettes i det første indlæg i et emne. Brugeres mulighed for at oprette afstemninger og afgive stemme er bestemt af administrator.</para>
 			<para>For at oprette en afstemning benyttes fanen <guilabel>Oprettelse af afstemning</guilabel> umiddelbart under feltet hvor indlæg skrives.</para>
 			<itemizedlist>
  				<listitem><para><guilabel>Afstemningsspørgsmål</guilabel>: Det overordnede spørgsmål for afstemningen angives her.</para></listitem>
@@ -402,7 +402,7 @@
 					<varlistentry>
 						<term>Vigtig</term>
 						<listitem>
-							<para>Du kan vælge at markere en besked som &quot;Vigtig&quot; med <guilabel>Markér/afmarkér som vigtig</guilabel> muligheden i dropdownmenuen.</para>
+							<para>Du kan vælge at markere en besked som &quot;Vigtig&quot; med <guilabel>Marker/afmarker som vigtig</guilabel> muligheden i dropdownmenuen.</para>
 						</listitem>
 					</varlistentry>
 					
@@ -429,7 +429,7 @@
 				</variablelist>
 				
 				<note>
-					<para>Bemærk venligst at en besked kun kan have én farvemarkering, og det er altid den sidst valgte. Markerer du en besked som <guilabel>Vigtig</guilabel> og efterfølgende besvarer denne, vil markeringen <guilabel>Besvaret</guilabel> overskrive din <guilabel>Vigtig</guilabel> markering.</para>
+					<para>Bemærk venligst at en besked kun kan have en farvemarkering, og det er altid den sidst valgte. Markerer du en besked som <guilabel>Vigtig</guilabel> og efterfølgende besvarer denne, vil markeringen <guilabel>Besvaret</guilabel> overskrive din <guilabel>Vigtig</guilabel> markering.</para>
 				</note>
 			</section>
 		</section>
@@ -477,7 +477,7 @@
 			<varlistentry>
 				<term>Sortering efter kollonneoverskrifter</term>
 				<listitem>
-					<para>For at sortere listen stigende, klikkes på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Senest aktiv</guilabel>, etc. Klikker du én gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
+					<para>For at sortere listen stigende, klikkes på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Senest aktiv</guilabel>, etc. Klikker du en gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
 				</listitem>
 			</varlistentry>
 			

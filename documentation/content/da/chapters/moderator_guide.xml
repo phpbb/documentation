@@ -7,7 +7,7 @@
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
 			<year>2009</year>
-			<holder>phpBB4.dk</holder>
+			<holder>Olympus DK Team</holder>
 		</copyright>
 	</chapterinfo>
 	<title>Redaktørguide</title>
@@ -23,7 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Redigering af indlæg</title>
-		<para>Redaktører med tilladelser i relevante fora kan redigere i emner og indlæg. Normalt kan man se redaktører i forumbeskrivelserne på boardindekset. En bruger med redaktørstatus har adgang til knappen <guilabel>Redigér</guilabel> i alle indlæg. Herudover kan redaktører:</para>
+		<para>Redaktører med tilladelser i relevante fora kan redigere i emner og indlæg. Normalt kan man se redaktører i forumbeskrivelserne på boardindekset. En bruger med redaktørstatus har adgang til knappen <guilabel>Rediger</guilabel> i alle indlæg. Herudover kan redaktører:</para>
 	
 		<variablelist>
 			<varlistentry>
@@ -89,7 +89,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Redaktørværktøjer</title>
-		<para>I alle emner har redaktører en række værktøjer til rådighed nederst i emnet. Det ønskede vælges fra dropdownmenuen. De tilgængelige værktøjer herfra er: låse, låse op, slette, flytte, dele, sammenlæg og kopiér emne. Desuden kan emnetype ændres herfra (opslag, bekendtgørelse og global) og emnets log hentes. Herunder beskrives redaktørmulighederne mere detaljeret.</para>
+		<para>I alle emner har redaktører en række værktøjer til rådighed nederst i emnet. Det ønskede vælges fra dropdownmenuen. De tilgængelige værktøjer herfra er: låse, låse op, slette, flytte, dele, sammenlæg og kopier emne. Desuden kan emnetype ændres herfra (opslag, bekendtgørelse og global) og emnets log hentes. Herunder beskrives redaktørmulighederne mere detaljeret.</para>
 		
 		<figure id="quick_mod_tools">
 			<title>Redigeringsværktøjer</title>
@@ -165,7 +165,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Kopiering af et emne</title>
-			<para>Redaktører kan kopiere emner og hermed oprette en kopi af et emne i et andet forum. I det emne der skal kopieres, vælges nederst i <guilabel>Kopiér emne</guilabel> i redaktørværktøjerne. Fra forumindekset kan vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link>, her markeres det emne der skal kopieres og herefter destinationsforummet kopien skal placeres i. Klik på  <guilabel>Ja</guilabel> for at oprette kopien.</para>
+			<para>Redaktører kan kopiere emner og hermed oprette en kopi af et emne i et andet forum. I det emne der skal kopieres, vælges nederst i <guilabel>Kopier emne</guilabel> i redaktørværktøjerne. Fra forumindekset kan vælges <link linkend="moderator_mcp">Redaktørkontrolpanel</link>, her markeres det emne der skal kopieres og herefter destinationsforummet kopien skal placeres i. Klik på  <guilabel>Ja</guilabel> for at oprette kopien.</para>
 		</section>
 		
 		<section id="modtools_type">
@@ -189,7 +189,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Dele indlæg fra et emne</title>
-			<para>Redaktørerne har mulighed for at dele indlæg fra et emne. Det kan være nyttigt hvis for eksempel en diskussion fostrer en ny idé som fortjener sit eget emne og et antal indlæg derfor bør flyttes fra det oprindelige emne. Deling af indlæg medfører flytning af individuelle indlæg fra et eksisterende emne til et nyt. Det kan gøres ved at benytte <guilabel>Redaktørværktøjer</guilabel> under det emne du ønsker at dele indlæg fra eller fra <link linkend="moderator_mcp">Redaktørkontrolpanel</link>.</para>
+			<para>Redaktørerne har mulighed for at dele indlæg fra et emne. Det kan være nyttigt hvis for eksempel en diskussion fostrer en ny ide som fortjener sit eget emne og et antal indlæg derfor bør flyttes fra det oprindelige emne. Deling af indlæg medfører flytning af individuelle indlæg fra et eksisterende emne til et nyt. Det kan gøres ved at benytte <guilabel>Redaktørværktøjer</guilabel> under det emne du ønsker at dele indlæg fra eller fra <link linkend="moderator_mcp">Redaktørkontrolpanel</link>.</para>
 			<para>Når deling udføres kan du vælge titlen for det nye emne, et andet forum til emnet og også et emneikon. Opdeling kan foretages på to måder. Du kan markere et indlæg og foretage opdelingen herfra og til sidste indlæg i emnet, vælg nederst muligheden <guilabel>Del fra valgte indlæg</guilabel>. Du kan også udvælge enkelte indlæg til opdeling, ved at markere disse og herefter vælge <guilabel>Del valgte indlæg</guilabel> nederst.</para>
 		</section>
 		
@@ -203,7 +203,7 @@
 			</sectioninfo>
 			<title>Sammenlæg emner</title>
 			<para>I phpBB3 er det også muligt at sammenlægge emner. Hvilket er nyttigt hvis der for eksempel drøftes relaterede problemstillinger i to separate emner på boardet.</para>
-			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. Vælges <guilabel>Markér alle</guilabel> bliver alle indlæg i emnet udvalgt til sammenlægning og kan flyttes til det modtagende emne. Flyttede emner bevarer eksisterende tidstempel, og vil derfor blive sorteret efter alder sammen med de eksisterende indlæg i emnet.</para>
+			<para>For at sammenlægge emner vælges nederst i redigeringsværktøjerne, under det emne der skal lægges sammen med et andet, sammenlæg emne. Du bliver nu ledt til <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>, herfra kan du vælge det emne du vil sammenlægge med. Klik på linket <guilabel>Vælg til sammenlægning</guilabel> i det modtagende emne. Vælges <guilabel>Marker alle</guilabel> bliver alle indlæg i emnet udvalgt til sammenlægning og kan flyttes til det modtagende emne. Flyttede emner bevarer eksisterende tidstempel, og vil derfor blive sorteret efter alder sammen med de eksisterende indlæg i emnet.</para>
 		</section>
 		
 		<section id="modtools_mergeposts">
@@ -244,7 +244,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Hvad er rapporterede indlæg?</title>
-		<para>Brugere kan rapportere indlæg som findes upassende og begrunde rapporteringen. Et indlæg rapporteres ved at klikke på ikonet for at <guilabel>Rapportér dette indlæg</guilabel>, i standardtypografien prosilver er ikonet en trekant på spidsen med et udråbstegn i. I  <link linkend="admin_control_panel">Administratorkontrolpanelet</link> er udfærdiget et antal standardbegrundelser som kan bruges, med mulighed for at uddybe rapporten. Alle rapporter kan ses i redaktørkontrolpanelet under fanen rapporterede indlæg, hvor administrator eller redaktør kan se, lukke eller slette rapporten.</para>
+		<para>Brugere kan rapportere indlæg som findes upassende og begrunde rapporteringen. Et indlæg rapporteres ved at klikke på ikonet for at <guilabel>Rapporter dette indlæg</guilabel>, i standardtypografien prosilver er ikonet en trekant på spidsen med et udråbstegn i. I  <link linkend="admin_control_panel">Administratorkontrolpanelet</link> er udfærdiget et antal standardbegrundelser som kan bruges, med mulighed for at uddybe rapporten. Alle rapporter kan ses i redaktørkontrolpanelet under fanen rapporterede indlæg, hvor administrator eller redaktør kan se, lukke eller slette rapporten.</para>
 		<para>På forumindekset vises emner indeholdende rapporteringer med en anden baggrundsfarve og med rapporteringikonet efter emnetitlen. Herved ser administrator og redaktør at indlæg er rapporteret. I emnet vises det rapporterede indlæg også med en anden baggrundsfarve, og med et link til rapporten i redaktørkontrolpanelet.</para>
 		<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" />.</para>
 	</section>
@@ -342,10 +342,10 @@
 				<itemizedlist>
 					<listitem><para><guilabel>Slet</guilabel>: Sletter de valgte emner.</para></listitem>
 					<listitem><para><guilabel>Flyt</guilabel>: Flytter de valgte emner til at andet forum, som efterfølgende vælges.</para></listitem>
-					<listitem><para><guilabel>Kopiér</guilabel>: Opretter kopier af de valgte emner i et andet forum.</para></listitem>
+					<listitem><para><guilabel>Kopier</guilabel>: Opretter kopier af de valgte emner i et andet forum.</para></listitem>
 					<listitem><para><guilabel>Lås</guilabel>: Låser de valgte emner.</para></listitem>
 					<listitem><para><guilabel>Lås op</guilabel>: Låser de valgte emner op.</para></listitem>
-					<listitem><para><guilabel>Resynkronisér</guilabel>: Resynkroniserer de valgte emner.</para></listitem>
+					<listitem><para><guilabel>Resynkroniser</guilabel>: Resynkroniserer de valgte emner.</para></listitem>
 					<listitem><para><guilabel>Ændre emnetype</guilabel>: De valgte emner kan ændres til: <guilabel>Global bekendtgørelse</guilabel>, <guilabel>bekendtgørelse</guilabel>, <guilabel>opslag</guilabel> eller <guilabel>standardemne</guilabel>.</para></listitem>
 				</itemizedlist>
 			</para>
