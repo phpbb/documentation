@@ -170,6 +170,53 @@
 					</itemizedlist>
 				</para>
 			</section>
+			<section id="acp_captcha">
+        <sectioninfo>
+           <authorgroup>
+              <author>
+                 <othername>Kellanved</othername>
+              </author>
+           </authorgroup>
+        </sectioninfo>
+        <title>CAPTCHA Module Settings</title>
+        <para><glossterm>Captcha</glossterm> or &quot;Completely Automated Public Turing Test To Tell Computers and Humans Apart&quot; is a term for riddles that are supposedly easy for humans but hard for computers. </para>
+        <para>phpBB 3.0 uses a plugin system to allow easy switching between different CAPTCHA implementations. Available plugins are automatically loaded from the includes/captcha/plugins directory in your installation. </para>
+        <itemizedlist>
+           <title>phpBB ships with these plugins installed:</title>
+           <listitem><para>GD3D CAPTCHA: a graphical CAPTCHA using 3D characters on a wave.</para></listitem>
+           <listitem><para>GD CAPTCHA: a graphical CAPTCHA, using floating 3D characters.</para></listitem>
+           <listitem><para>CAPTCHA without GD: a simple 2D CAPTCHA that should work in any configuration.</para></listitem>
+           <listitem><para>reCaptcha: The reCaptcha service. You have to sign up for reCaptcha before being able to use this plugin.</para></listitem>
+           <listitem><para>Q&amp;A Captcha: configurable questions and answers.</para></listitem>
+        </itemizedlist>
+        <para>The page is split into two  areas, the top area, &quot;General Options&quot;, contains settings concerning where to use a CAPTCHA. The  other area concerns itself with the selection, configuration and demonstration of the captcha plugins.</para>
+        <figure id="img_acp_captcha">
+           <title>CAPTCHA Module Settings</title>
+           <mediaobject>
+              <imageobject>
+                 <imagedata format="PNG" fileref="../images/admin_guide/captcha.png"/>
+              </imageobject>
+           <caption>
+           <para>The CAPTCHA module selection ACP page.</para>
+           </caption>
+           </mediaobject>
+        </figure>
+        <tip>
+           <para>Check the MOD database for new existing CAPTCHA plugins.</para>
+        </tip>
+        <itemizedlist>
+           <title>How to select a CAPTCHA plugin</title>
+           <listitem><para>Click the &quot;Installed CAPTCHA plugins&quot; dropdown and select the module you want to use. Do not let grayed out entries stop you, they only mean that you have to perform another step. If your intended module is not in the list, check whether the files are present in the plugin directory.</para></listitem>
+           <listitem><para>Click the &quot;Configure&quot; button to see the CAPTCHA module's ACP page. Many plugins need configuration prior to use. Note that plugins without configuration options will not show the button.</para></listitem>
+           <listitem><para>Configure the plugin to meet your needs.</para></listitem>
+           <listitem><para>After configuring the plugin, re-select your intended plugin from the dropdown. It shold not be grayed out any more.</para></listitem>
+           <listitem><para>Click &quot;Submit&quot;.</para></listitem>
+           <listitem><para>Congratulations, youre done.</para></listitem>
+        </itemizedlist>
+        <tip>
+           <para>Plugins were introduced with phpBB 3.0.6. If your ACP is missing the option, consider updating to the latest version.</para>
+        </tip>
+     </section>
 		</section>
 		
 		<section id="acp_general_client">
