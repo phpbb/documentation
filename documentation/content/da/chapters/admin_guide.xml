@@ -18,12 +18,12 @@
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>dhn</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Administratorkontrolpanelet</title>
-		<para>phpBB 3.0 &quot;Olympus&quot; er meget konfigurerbar og kan tilpasses næsten ethvert behov. Næsten alle funktioner og muligheder kan aktiveres, deaktiveres, fintunes og tilpasses. For at lette tilgangen til disse mange muligheder, er administratorkontrolpanelet (ACP) fuldstændig redesignet i forhold til phpBB 2.0. </para>
+		<para>phpBB 3.0 &quot;Olympus&quot; er meget konfigurerbar og kan tilpasses næsten ethvert behov. Næsten alle funktioner og muligheder kan aktiveres, deaktiveres, fintunes og tilpasses.</para>
 		<para>Klik på linket <guilabel>Administratorkontrolpanel</guilabel> nederst på siden for at få adgang til <acronym>ACP</acronym>.</para>
 		<para>Som standard er <acronym>ACP</acronym> opdelt i otte sektioner eller faner, som hver indholder et antal under sektioner. Vi gennemgår hver sektion i denne administratorguide. </para>
 	</section>	
@@ -37,7 +37,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Generel konfiguration og forside</title>
-		<para>Det første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her er link til mest anvendte administrationssider, blandt andet <link linkend="acp_users">Brugeradministration</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
+		<para>Den første side du møder når du logger ind i <acronym>ACP</acronym> er sektionen <guimenuitem>Generel</guimenuitem>. Den indeholder nogle generelle informationer og statistikker om dit board. Desuden er der en undersektion kaldet <guimenuitem>Hurtig tilgang</guimenuitem>. Her er link til mest anvendte administrationssider, blandt andet <link linkend="acp_users">Brugeradministration</link> og <link linkend="acp_maintenance">Redaktørlog</link>. Dem gennemgår vi under deres specifikke sektioner.</para>
 		<figure id="img_acp_index">
 			<title>Administratorindeks</title>
 				<mediaobject>
@@ -50,7 +50,7 @@
 			</mediaobject>
 		</figure>
 
-		<para>Her vil vi fokusere på undersektionerne: <link linkend="acp_general_config">Boardkonfiguration</link>, <link linkend="acp_general_client">Trafikkonfiguration</link> og <link linkend="acp_general_server">Serverkonfiguration</link>.</para>
+		<para>Her fokuseres på undersektionerne: <link linkend="acp_general_config">Boardkonfiguration</link>, <link linkend="acp_general_client">Trafikkonfiguration</link> og <link linkend="acp_general_server">Serverkonfiguration</link>.</para>
 		<section id="acp_general_config">
 			<sectioninfo>
 				<authorgroup>
@@ -66,12 +66,12 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
 				<title>Vedhæftede filer</title>
-				<para> En af de mange nye funktioner i phpBB 3.0 er muligheden for at <glossterm>vedhæfte filer</glossterm>. Filer kan vedhæftes til indlæg, på samme måde som når man sender en email. Boardadministratoren kan sætte restriktioner for hvad brugere kan vedhæfte via <guimenuitem>Vedhæftede filer</guimenuitem>.</para>
+				<para>Filer kan vedhæftes til indlæg, på samme måde som når man sender en email. Boardadministratoren kan sætte restriktioner for hvad brugere kan vedhæfte via <guimenuitem>Vedhæftede filer</guimenuitem>.</para>
 				<para>Læs mere i <link linkend="acp_attach_settings">boardets indstillinger for vedhæftede filer</link>.</para>
 			</section>
 			
@@ -84,11 +84,11 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Board grundlæggende</title>
-				<para>I <guimenuitem>Board grundlæggende </guimenuitem> kan du ændre mange indstillinger som er bestemmede for hvordan dit board fungerer. Herunder noget så vigtigt som boardets navn! Skærmbilledet består af to grupper af indstillinger: de generelle <guilabel>Board grundlæggende</guilabel> og indstillinger for <guilabel>Advarsler</guilabel>.</para>
+				<para>I <guimenuitem>Board grundlæggende </guimenuitem> kan du ændre mange indstillinger som er bestemmende for hvordan dit board fungerer. Herunder noget så vigtigt som boardets navn! Skærmbilledet består af to grupper af indstillinger: de generelle <guilabel>Board grundlæggende</guilabel> og indstillinger for <guilabel>Advarsler</guilabel>.</para>
 				
 				<itemizedlist>
 					<title>Board grundlæggende</title>
-					<listitem><para>Den første indstilling du kan ændre er måske den vigtigste af dem alle, nemlig navnet på boardet. Brugerne identificerer dit board med dette navn. Skriv boardets navn i tekstfeltet <guilabel>Boardnavn</guilabel>, og det vises øverst i boardets hovede. Samtidig vises navnet som præfiks i de besøgendes browsertitel.</para></listitem>
+					<listitem><para>Den første indstilling du kan ændre er måske den vigtigste af dem alle, nemlig navnet på boardet. Besøgende identificerer dit board med dette navn. Skriv boardets navn i tekstfeltet <guilabel>Boardnavn</guilabel>, og det vises øverst i boardets hovede. Samtidig vises navnet som præfiks i de besøgendes browsertitel.</para></listitem>
 					<listitem><para><guilabel>Boardbeskrivelse</guilabel> er dit boards slogan eller formål, og vises under <guilabel>Boardnavn</guilabel>et i boardets hoved.</para></listitem>
 					<listitem><para>Har du i forbindelse med vedligeholdelse, for eksempel ved opdateringer, brug for at lukke boardet, kan det gøres ved at bruge switchen <guilabel>Deaktiver boardet</guilabel> . Vælg <guilabel>Ja</guilabel> for midlertidigt at lukke boardet. Det forhindrer alle, undtagen administratorer og redaktører, i at få adgang til boardet. Når boardet er slået fra, møder man nu enten en standardmeddelelse, eller en du selv komponerer. Du tilføjer din egen meddelelse i teksfeltet umiddelbart under radioknapperne ja/nej i <guilabel>Deaktiver boardet</guilabel>. Administratorer og redaktører vil stadig have adgang til deres kontrolpaneler mens boardet er slået fra.</para></listitem>
 					<listitem><para>Du skal også vælge boardets <guilabel>Standardsprog</guilabel>. Det er det sprog gæster vil se når de besøger boardet. Du kan tillade at tilmeldte brugere kan vælge andre sprog. Som standard er kun <guilabel>British English</guilabel> installeret, men du kan <ulink url="http://www.phpbb.com/languages">downloade flere sprog på phpBB websitet</ulink> og installere disse på boardet. Læs mere om sprog i <link linkend="acp_system_language">sektionen for konfiguration af sprogpakker</link>.</para></listitem>
@@ -99,7 +99,7 @@
 				
 				<itemizedlist>
 					<title>Advarsler</title>
-					<listitem><para>Redaktører kan udstede advarsler til bruger som ikke overholder boardets regler. Værdien i <guilabel>Varighed for advarsler</guilabel> bestemmer hvor længe en advarsel er gældende. Alle positive værdier kan anvendes. Læs mere om advarsler i <xref linkend="moderator_mcp" />.</para></listitem>
+					<listitem><para>Redaktører kan udstede advarsler til brugere som ikke overholder boardets regler. Værdien i <guilabel>Varighed for advarsler</guilabel> bestemmer hvor længe en advarsel er gældende. Alle positive værdier kan anvendes. Læs mere om advarsler i <xref linkend="moderator_mcp" />.</para></listitem>
 				</itemizedlist>
 			</section>
 			
@@ -119,7 +119,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -166,6 +166,53 @@
 					</itemizedlist>
 				</para>
 			</section>
+		<section id="acp_captcha">
+        <sectioninfo>
+           <authorgroup>
+              <author>
+                 <othername>jask</othername>
+              </author>
+           </authorgroup>
+        </sectioninfo>
+        <title>CAPTCHA modulindstillinger</title>
+        <para><glossterm>Captcha</glossterm> eller &quot;Completely Automated Public Turing Test To Tell Computers and Humans Apart&quot; er et begreb for gåder som anses for nemme at gætte for mennesker og svære for computere. </para>
+        <para>phpBB 3.0 anvender et udvidelsesystem som gør det nemt at skifte mellem forskellige implementationer af CAPTCHA. Som standard er følgende tilgængelige i mappen includes/captcha/plugins.</para>
+        <itemizedlist>
+           <title>phpBB leveres med disse udvidelsesmoduler installeret:</title>
+           <listitem><para>GD3D CAPTCHA: En grafisk CAPTCHA med tegn i 3D og i en bølgeform.</para></listitem>
+           <listitem><para>GD CAPTCHA: En grafisk CAPTCHA med flydende tegn i 3D.</para></listitem>
+           <listitem><para>CAPTCHA uden GD: En simpel 2D CAPTCHA, som skulle fungere på enhver serverkonfiguration.</para></listitem>
+           <listitem><para>reCaptcha: reCaptcha-servicen. Du skal tilmeldes hos reCaptcha før denne kan tages i brug.</para></listitem>
+           <listitem><para>Q&amp;A Captcha: Definer selv spørgsmål og svar.</para></listitem>
+        </itemizedlist>
+        <para>Siden er delt i to områder. Toppen - &quot;Generelle valg&quot;, indeholder indstillinger om hvor og hvornår CAPTCHA skal anvendes. Det andet område indeholder valg af udvidelsesmodul, samt konfiguation og demonstration af dette.</para>
+        <figure id="img_acp_captcha">
+           <title>CAPTCHA modulindstillinger</title>
+           <mediaobject>
+              <imageobject>
+                 <imagedata format="PNG" fileref="../images/admin_guide/captcha.png"/>
+              </imageobject>
+           <caption>
+           <para>CAPTCHA-siden i ACP.</para>
+           </caption>
+           </mediaobject>
+        </figure>
+        <tip>
+           <para>Kontroller MOD-databasen for nye CAPTCHA-udvidelsesmoduler.</para>
+        </tip>
+        <itemizedlist>
+           <title>Hvordan et CAPTCHA-modul vælges</title>
+           <listitem><para>Klik på dropdownmenuen &quot;Installerede CAPTCHA-udvidelsesmoduler&quot; og vælg det modul du ønsker at tage i brug. Lad ikke moduler anført med gråt stoppe dig, det betyder blot at du behøver at foretage endnu et trin. Er det ønskede modul ikke på listen, undersøges om filerne er tilsted i plugin-mappen.</para></listitem>
+           <listitem><para>Klik på knappen &quot;Konfigurer&quot; for at se det pågældende CAPTCHA-moduls indstillinger. Mange udvidelsesmoduler skal konfigureres før de kan tages i brug. Bemærk at for moduler uden konfigurationsmuligheder vises knappen ikke.</para></listitem>
+           <listitem><para>Konfigurer modulet efter dine ønsker.</para></listitem>
+           <listitem><para>Efter konfiguration, vælges modulet igen i dropdownfeltet. Det er nu ikke længere anført med gråt.</para></listitem>
+           <listitem><para>I afsnittet udfør ændringer, klikkes nu på &quot;Udfør&quot;.</para></listitem>
+           <listitem><para>Tillykke, CAPTCHA-udvidelsen er nu aktiv.</para></listitem>
+        </itemizedlist>
+        <tip>
+           <para>Udvidelser blev introduceret i phpBB 3.0.6. Mangler denne funktion i administratorkontrolpanelet bør du overveje at opdaterer til seneste version.</para>
+        </tip>
+     </section>	
 		</section>
 		
 		<section id="acp_general_client">
@@ -215,7 +262,7 @@
 				</sectioninfo>
 				<title>Email</title>
 				
-				<para>phpBB3 kan sende emails til dine brugere. Her konfigurerer du de indstillinger boardet bruger når emails afsendes. phpBB3 kan sende emails med enten den indbyggede PHP-baserede emailservice, eller en specificeret <glossterm>SMTP</glossterm>-server. Er du i tvivl om du har mulighed for at anvende en SMTP-server, anbefales det at bruge den indbyggede email-service. Du henter yderligere detaljer herom hos din vært. Klik på <guilabel>Udfør</guilabel> når alle indstillinger er klar.</para>
+				<para>phpBB3 kan sende emails til dine brugere. Her konfigureres de indstillinger boardet bruger når emails afsendes. phpBB3 kan sende emails med enten den indbyggede PHP-baserede emailservice, eller en specificeret <glossterm>SMTP</glossterm>-server. Er du i tvivl om du har mulighed for at anvende en SMTP-server, anbefales det at bruge den indbyggede email-service. Du henter yderligere detaljer herom hos din vært. Klik på <guilabel>Udfør</guilabel> når alle indstillinger er klar.</para>
 				
 				<note>
 					<para>Bemærk venligst at den angivne emailadresse skal være gyldig, da enhver tilbagesendt eller vildfaren email sandsynligvis vil blive returneret til denne emailaddresse.</para>
