@@ -523,14 +523,13 @@ page_footer(false);
 	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">,
-	'toc'  =&gt; array(</xsl:text>
+	'toc'  =&gt; </xsl:text>
 
 	<xsl:call-template name="header.recursive.toc">
 		<xsl:with-param name="titleclean" select="$titleclean"/>
 	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">
-	),
 );
 
 docbook_navigation($navigation);
