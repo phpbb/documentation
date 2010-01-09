@@ -1,8 +1,8 @@
 <?xml version='1.0'?>
-<xsl:stylesheet  
+<xsl:stylesheet
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<!-- 
+<!--
 	$Id$
 	Copyright 2006, 2008 phpBB Group
 	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
@@ -513,7 +513,7 @@ page_footer(false);
 		<xsl:with-param name="node" select="$next"/>
 		<xsl:with-param name="currenttitle" select="$titleclean"/>
 	</xsl:call-template>
- 
+
 	<xsl:text disable-output-escaping="yes">,
 	'up'   =&gt; </xsl:text>
 
@@ -524,20 +524,10 @@ page_footer(false);
 
 	<xsl:text disable-output-escaping="yes">,
 	'toc'  =&gt; array(</xsl:text>
- 
-	<xsl:for-each select="../*">
-		<xsl:variable name="ischunk"><xsl:call-template name="chunk"/></xsl:variable>
-		<xsl:if test="$ischunk='1'">
-			<xsl:text>
-</xsl:text>
-			<xsl:call-template name="phpdoc.nav.array">
-				<xsl:with-param name="node" select="."/>
-				<xsl:with-param name="useabbrev" select="'1'"/>
-				<xsl:with-param name="currenttitle" select="$titleclean"/>
-			</xsl:call-template>
-			<xsl:text>,</xsl:text>
-		</xsl:if>
-	</xsl:for-each>
+
+	<xsl:call-template name="header.recursive.toc">
+		<xsl:with-param name="titleclean" select="$titleclean"/>
+	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">
 	),
@@ -551,11 +541,42 @@ ob_start();
 </xsl:text>
 </xsl:template>
 
+<xsl:template name="header.recursive.toc">
+	<xsl:param name="node" select="/"/>
+	<xsl:param name="titleclean" select="''"/>
+
+	<xsl:for-each select="$node/*">
+		<xsl:variable name="ischunk"><xsl:call-template name="chunk"/></xsl:variable>
+		<xsl:if test="$ischunk='1'">
+			<xsl:text>array(</xsl:text>
+
+			<xsl:call-template name="phpdoc.nav.array">
+				<xsl:with-param name="node" select="."/>
+				<xsl:with-param name="useabbrev" select="'1'"/>
+				<xsl:with-param name="currenttitle" select="$titleclean"/>
+				<xsl:with-param name="arraycode" select="'0'"/>
+			</xsl:call-template>
+			<xsl:text>,</xsl:text>
+
+			<!-- recurse -->
+			<xsl:text>array(</xsl:text>
+			<xsl:call-template name="header.recursive.toc">
+				<xsl:with-param name="node" select="."/>
+				<xsl:with-param name="titleclean" select="$titleclean"/>
+			</xsl:call-template>
+
+			<xsl:text>)),
+			</xsl:text>
+		</xsl:if>
+	</xsl:for-each>
+</xsl:template>
+
 <!-- Prints out one PHP array with page name and title -->
 <xsl:template name="phpdoc.nav.array">
 	<xsl:param name="node" select="/foo"/>
 	<xsl:param name="useabbrev" select="'0'"/>
 	<xsl:param name="currenttitle" select="''"/>
+	<xsl:param name="arraycode" select="'1'"/>
 
 	<!-- Get usual title -->
 	<xsl:variable name="title">
@@ -570,7 +591,10 @@ ob_start();
 	</xsl:variable>
 
 	<!-- Print out PHP array -->
-	<xsl:text>array('</xsl:text>
+	<xsl:if test="$arraycode='1'">
+		<xsl:text>array(</xsl:text>
+	</xsl:if>
+	<xsl:text>'</xsl:text>
 	<xsl:if test="$currenttitle != $main.title.text">
 		<xsl:text>../</xsl:text>
 	</xsl:if>
@@ -593,7 +617,10 @@ ob_start();
 		<xsl:with-param name="target" select='"&apos;"'/>
 		<xsl:with-param name="replacement" select='"\&apos;"'/>
 	</xsl:call-template>
-	<xsl:text>')</xsl:text>
+	<xsl:text>'</xsl:text>
+	<xsl:if test="$arraycode='1'">
+		<xsl:text>)</xsl:text>
+	</xsl:if>
 </xsl:template>
 
 <!-- Custom mode for titles for navigation without
