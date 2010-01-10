@@ -95,8 +95,8 @@
 					<section id="pack_auto">
 					<title>Automatisk opdateringspakke</title>
 					<para>Anvendelse af denne pakke er den anbefalede metode til opdatering. Under opdateringen opdages ændrede filer og tilbyder automatisk sammenlægning af ændringerne fra disse til nye opdaterede filer.</para>
-					<para>Den automatiske opdateringspakke indeholder normalt kun opdateringsinformation til at opdatere <emphasis>fra forrige til senest tilgængelige version</emphasis>. Denne pakke er udelukkende til brug for det automatiske opdateringsværktøj indbygget i phpBB3.</para>
-					<para>Følg enten instruktionerne fra fanebladet Administratorkontrolpanel -&gt; System for at foretage opdateringen. Versionskontrollen fortæller at der er en nyere version tilgængelig og leder dig gennem både download og opdatering - eller du kan følge instruktionerne nedenfor.</para>
+					<para>Den automatiske opdateringspakke indeholder normalt kun opdateringsinformation til at opdatere <emphasis>fra forrige til senest tilgængelige version</emphasis>. På downloadsiden tilbydes et antal ekstra opdateringspakker, som gør det muligt at opdatere fra et antal tidligere versioner. I dropdownmenuen vælges den opdateringspakker der matcher din nuværende version.</para>
+					<para>Følg instruktionerne fra fanebladet Administratorkontrolpanel -&gt; System for at foretage opdateringen. Versionskontrollen fortæller at der er en nyere version tilgængelig og leder dig gennem både download og opdatering - eller du kan følge instruktionerne nedenfor.</para>
 					<itemizedlist>
 					<listitem><para>Gå til downloadsiden og hent den senest frigivne opdateringspakke, og som matcher din øjeblikkelige version.</para></listitem>
 					<listitem><para>Upload mappeindholdet til din phpBB-installation - kun install-mappen er nødvendig. Upload hele install-mappen og bevar filstrukturen.</para></listitem>
@@ -160,7 +160,7 @@ Anvendelse af patch file-pakken er en af mulighederne for at opdatere et board m
 				<listitem><para>phpBB3 skal installeres på samme server som boardsystemet der skal konverteres.</para></listitem>
 				<listitem><para>Konverterer du fra andet end phpBB2, uploades de filer til konverteringen, som du hentede fra emnet i <ulink url="http://www.phpbb.com/community/viewforum.php?f=65">forummet</ulink> på www.phpbb.com.</para></listitem>
 				<listitem><para>Downloadet udpakkes og uploades til phpBB3-rodmappen, og mappestrukturen bibeholdes. Herved vil auth_xxx.php være at finde i mappen /includes/auth, functions_xxx.php &amp; convert_xxx.php i mappen /install/convertors. Filen auth_xxx.php tillader at du foretage log in efter konverteringen.</para></listitem>
-				<listitem><para>Den downloade zip-fil skulle have filerne pakket korrekt i forhold til phpBB rod-mappen, hvorfor det kun er nødvendigt at uploade mapperne indeholdende disse filer. Mappestrukturen vil være således:<uri>{phpBB3_root}/install/convertors/convert_xxx.php</uri>, <uri>{phpBB3_root}/install/convertors/functions_xxx.php</uri> &amp; <uri>{phpBB3_root}/includes/auth/auth_xxx.php</uri>.</para></listitem>
+				<listitem><para>Den downloadede zip-fil skulle have filerne pakket korrekt i forhold til phpBB rod-mappen, hvorfor det kun er nødvendigt at uploade mapperne indeholdende disse filer. Mappestrukturen vil være således:<uri>{phpBB3_root}/install/convertors/convert_xxx.php</uri>, <uri>{phpBB3_root}/install/convertors/functions_xxx.php</uri> &amp; <uri>{phpBB3_root}/includes/auth/auth_xxx.php</uri>.</para></listitem>
 				<listitem><para>Kald <uri>{phpbb_root_directory}/install/index.php</uri> i din browsers adressefelt, klik på fanen konverter. Nedenstående skærmbillede viser alle tilgængelige konvertorer.</para></listitem>
 				</itemizedlist>
 				<figure id="convert_select_intropage">
@@ -198,15 +198,8 @@ Anvendelse af patch file-pakken er en af mulighederne for at opdatere et board m
 			<para>Støder du ind i problemer eller har spørgsmål, anbefales det først at læse afsnittet om konvertering <ulink url="http://www.phpbb.com/community/docs/INSTALL.html#convert">her</ulink>, hvor almene problemstillinger behandles. Konverterer du fra andet end phpBB2, bør spørgsmål stilles i det emne hvor du hentede filerne til konvertering.</para>
 			</section>
 			<section id="convert_converters">
-			<title>Tilgængelige konvertorer til phpBB3 (pr. 30/09/2008)</title>
-			<itemizedlist>
-				<listitem><para><ulink url="http://www.phpbb.com/community/viewtopic.php?p=3207210#p3207210">IPB 2.3.x</ulink></para></listitem>
-				<listitem><para>PHP-Nuke</para><!--The link:<ulink url="http://www.phpbb.com/community/viewtopic.php?f=65&t=642955#p3568405">PHP-Nuke</ulink> will not parse correct? /--></listitem>
-				<listitem><para>phpBB2 med Simple Subforums</para><!--The link:<ulink url="http://www.phpbb.com/community/viewtopic.php?f=65&t=575697#p3167740">phpBB2 with Simple Subforums</ulink> will not parse correct? /--></listitem>
-				<listitem><para>SMF 1.1.x</para><!--The link:<ulink url="http://www.phpbb.com/community/viewtopic.php?f=65&t=589439#p3248385">SMF 1.1.x</ulink> will not parse correct? /--></listitem>
-				<listitem><para><ulink url="http://www.phpbb.com/community/viewtopic.php?p=5833105#p5833105">SMF 2.0 Beta</ulink></para></listitem>
-				<listitem><para><ulink url="http://www.phpbb.com/community/viewtopic.php?p=5862045#p5862045">vB 3.x</ulink></para></listitem>
-			</itemizedlist>			
+			<title>Tilgængelige konverterer til phpBB3</title>
+			<para>Der udvikles konstant scripts som giver mulighed for at konvertere en anden boardsoftware til phpBB3. Der findes en opdateret liste over tilgængelige konverterer i  <ulink url="http://www.phpbb.com/community/viewforum.php?f=65">forummets</ulink> øverste emne - Available Convertors.</para>			
 			</section>
 	</section>
 </chapter>

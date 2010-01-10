@@ -202,7 +202,7 @@
         </tip>
         <itemizedlist>
            <title>Hvordan et CAPTCHA-modul vælges</title>
-           <listitem><para>Klik på dropdownmenuen &quot;Installerede CAPTCHA-udvidelsesmoduler&quot; og vælg det modul du ønsker at tage i brug. Lad ikke moduler anført med gråt stoppe dig, det betyder blot at du behøver at foretage endnu et trin. Er det ønskede modul ikke på listen, undersøges om filerne er tilsted i plugin-mappen.</para></listitem>
+           <listitem><para>Klik på dropdownmenuen &quot;Installerede CAPTCHA-udvidelsesmoduler&quot; og vælg det modul du ønsker at tage i brug. Lad ikke moduler anført med gråt stoppe dig, det betyder blot at du behøver at foretage endnu et trin. Er det ønskede modul ikke på listen, undersøges om filerne er tilstede i plugin-mappen.</para></listitem>
            <listitem><para>Klik på knappen &quot;Konfigurer&quot; for at se det pågældende CAPTCHA-moduls indstillinger. Mange udvidelsesmoduler skal konfigureres før de kan tages i brug. Bemærk at for moduler uden konfigurationsmuligheder vises knappen ikke.</para></listitem>
            <listitem><para>Konfigurer modulet efter dine ønsker.</para></listitem>
            <listitem><para>Efter konfiguration, vælges modulet igen i dropdownfeltet. Det er nu ikke længere anført med gråt.</para></listitem>
@@ -210,11 +210,10 @@
            <listitem><para>Tillykke, CAPTCHA-udvidelsen er nu aktiv.</para></listitem>
         </itemizedlist>
         <tip>
-           <para>Udvidelser blev introduceret i phpBB 3.0.6. Mangler denne funktion i administratorkontrolpanelet bør du overveje at opdaterer til seneste version.</para>
+           <para>Udvidelser blev introduceret i phpBB 3.0.6. Mangler denne funktion i administratorkontrolpanelet er din phpBB-version sansynligvis tidligere end denne, og du bør overveje at opdatere til seneste version.</para>
         </tip>
-     </section>	
 		</section>
-		
+		</section>
 		<section id="acp_general_client">
 			<sectioninfo>
 				<authorgroup>
@@ -1395,7 +1394,7 @@
 				<itemizedlist>
 					<title>Synlighedsindstillinger</title>
 					<listitem><para><guilabel>Vis i brugerkontrolpanel</guilabel>: Afmærkes boksen kan brugere ændre i profilfeltet via brugerkontrolpanelet.</para></listitem>
-					<listitem><para><guilabel>Vis på tilmeldingsskærmbilledet</guilabel>: Afmærk boksen for at vise feltet på skærmbilledet for tildmelding.</para></listitem>
+					<listitem><para><guilabel>Vis på tilmeldingsskærmbilledet</guilabel>: Afmærk boksen for at vise feltet på skærmbilledet for tilmelding.</para></listitem>
 					<listitem><para><guilabel>Krævet felt</guilabel>: Profilfeltet forlanges udfyldt eller at der foretages valg af bruger eller administrator. Er <guilabel>Vis på tilmeldingsskærmbilledet</guilabel> fravalgt forlanges feltet udfyldt når brugere ændrer i profilinformationer.</para></listitem>
 					<listitem><para><guilabel>Skjul profilfelt</guilabel>: Feltet kan kun ses af brugeren, administratorer og redaktører. Er <guilabel>Vis på tilmeldingsskærmbilledet</guilabel> fravalgt, kan brugeren ikke se eller ændre i feltet. Feltet vil kun kunne ændres af administratorer.</para></listitem>
 				</itemizedlist>
@@ -1432,7 +1431,7 @@
 			
 			<para>For at ændre indstillinger for en eksisterende rang, klikkes på den grønne &quot;Rediger&quot; ud for rangen i oversigtens kolonne <guilabel>Handling</guilabel>.</para>
 			
-			<para>En en rang slettes samme sted, her benyttes  den røde knap &quot;Slet&quot; i kolonnen <guilabel>Handling</guilabel>. Bekræft sletningen ved at klikke på <guilabel>Ja</guilabel> i det efterfølgende skærmbillede.</para>
+			<para>En rang slettes samme sted, her benyttes  den røde knap &quot;Slet&quot; i kolonnen <guilabel>Handling</guilabel>. Bekræft sletningen ved at klikke på <guilabel>Ja</guilabel> i det efterfølgende skærmbillede.</para>
 		</section>
 				
 		</section>
@@ -1816,7 +1815,7 @@
 		<para>Når du har valgt bruger eller gruppe, vises en side hvor du kan vælge specifikke tilladelser. Bemærk nogle få punkter på dene side - dropdownmenuen, hvor der vælges hvilken typ tilladelser der skal ændres, linket til <guilabel>Avancerede tilladelser</guilabel>, hvor der er mulighed for meget fintmasket tildeling af tilladelser, og dropdownmenuen <guilabel>Rolle</guilabel>, som giver mulighed for at tildele et helt foruddefineret tilladelsesæt som passer til den givne opgave.</para>
 		
 		<figure id="img_setting_global_group_permissions">
-			<title>Indstilling af globale tilladelser for brugerer og grupper</title>
+			<title>Indstilling af globale tilladelser for brugere og grupper</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
@@ -2201,10 +2200,10 @@
 			</note>
 			<itemizedlist>
 				<title>Tilføj bot</title>
-				<listitem><para><guilabel>Botnavn</guilabel>: Bottens brugernavn på boardet. Navnet vises på botlisten i <acronym>ACP</acronym> og i Hvem er online når boardet har besøg af denne.</para></listitem>
+				<listitem><para><guilabel>Bot</guilabel>: Bottens brugernavn på boardet. Navnet vises på botlisten i <acronym>ACP</acronym> og i Hvem er online når boardet har besøg af denne.</para></listitem>
 				<listitem><para><guilabel>Bottens typografi</guilabel>: Her vælges den typografi botten præsenteres for.</para></listitem>
 				<listitem><para><guilabel>Bottens sprog</guilabel>: Her vælges det sprog botten præsenteres for.</para></listitem>
-				<listitem><para><guilabel>Botten sætte aktiv</guilabel>: Bottens session oprettes kun hvis botten er aktiv. Angives botten som ikke aktiv anvendes botdata angivet her ikke.</para></listitem>
+				<listitem><para><guilabel>Botten sættes aktiv</guilabel>: Bottens session oprettes kun hvis botten er aktiv. Angives botten som ikke aktiv anvendes botdata angivet her ikke.</para></listitem>
 				<listitem><para><guilabel>Agentmatch</guilabel>: En bot kan matches enten på browseragent eller IP-adresse. Du kan nøjes med at angive en del af den browseragent der skal matches. For eksempel har alle Google's søgeagenter inkluderet &quot;Googlebot&quot; i browseragenten, så det er nok at angive det her for at identificere besøg af Google.</para></listitem>
 				<listitem><para><guilabel>Bottens IP-adresse</guilabel>: Dette felt anvendes også til at identificere botten. Kan en bot ikke genkendes på en browseragent, kan her specificeres hvilken <glossterm>IP-adresse</glossterm> botten kan identificeres på. Delvise matches kan anvendes, du kan nøjes med at angive de to eller tre oktetter af IP-adressen, hvis resten skifter dynamisk. Du kan også angive flere adresser adskilt af et komma.</para></listitem>
 			</itemizedlist>
@@ -2222,10 +2221,10 @@
 			</sectioninfo>
 			<title>Masse-email</title>
 			<para>phpBB giver mulighed for at sende emails til alle brugere som har valgt at modtage den type emails i <link linkend="ucp_preferences">boardindstillinger</link>. Denne meddelelsesform kan anvendes som nyhedsbred, advisering om ændringer på boardet etc. Du kan vælge at sende emailen til alle bruger, en udvalgt brugergruppe eller en liste af specifikke brugere. Emailen afsendes med administrator som afsender og alle modtagere er inkluderet som BCC - Blind Carbon Copy. Modtagere kan altså ikke se andres emailadresser og hvem der i øvrigt har modtaget emailen.</para>
-			<para>Det kan være et problem at afsende masse-emails, da nogle hostingudbydere defineret grænser for hvor mange emails der kan afsendes ad gangen. For at imødegå dette afsendes emailen som standard til 50 brugere ad gangen, er der 1.000 brugere som skal modtage emailen, afsendes den altså 20 gange. Giver afsendelsen alligevel problemer bør du konsultere din hostingudbyder.</para>
+			<para>Det kan være et problem at afsende masse-emails, da nogle hostingudbydere defineret grænser for hvor mange emails der kan afsendes ad gangen. For at imødegå dette afsendes emailen som standard til 50 brugere ad gangen. Er der 1.000 brugere som skal modtage emailen, afsendes den altså 20 gange. Giver afsendelsen alligevel problemer bør du konsultere din hostingudbyder.</para>
 			<itemizedlist>
 				<title>Skriv email</title>
-				<listitem><para><guilabel>Send ti gruppe</guilabel>: I dropdownmenuen vælges den gruppe du ønsker at sende emailen til. Gruppen tilmeldte brugere omfatter samtlige boardets brugere.</para></listitem>
+				<listitem><para><guilabel>Send til gruppe</guilabel>: I dropdownmenuen vælges den gruppe du ønsker at sende emailen til. Gruppen tilmeldte brugere omfatter samtlige boardets brugere.</para></listitem>
 				<listitem><para><guilabel>Send til brugere</guilabel>: Emailen kan også fremsendes til en liste af specifikke brugere. Angivelse af brugernavne i dette felt sætter eventuel valg af brugergruppe ovenfor ud af kraft. Hvert brugernavn anføres på en linie for sig.</para></listitem>
 				<listitem><para><guilabel>Emne</guilabel>: Emailens emne eller overskrift, som også angives ved afsendelse af helt almindelig emails.</para></listitem>
 				<listitem><para><guilabel>Emailens tekst</guilabel>: I dette felt skrives selv emailens tekst, der kan kun anvendes ren tekst. Anvendelse af <glossterm>BBkode</glossterm> og HTML vises uden formatering i teksten når brugere modtager emailen.</para></listitem>
