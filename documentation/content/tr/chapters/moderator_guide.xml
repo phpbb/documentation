@@ -26,13 +26,13 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Mesajları düzenleme</title>
-		<para>Moderators with privileges in the relevant forums are able to edit topics and posts. You can usually view who the moderators are beneath the forum description on the index page. A user with moderator privileges is able to select the edit button beside each post. Beyond this point, they are able to:</para>
+		<para>Moderatörler ayrıcalıklı olarak ilgili forumlardaki mesajları ve başlıkları düzenleyebilirler. Genellikle ana sayfadaki forum açıklamasının alt tarafında kimlerin moderatör olduğunu görebilirsiniz. Bir kullanıcı moderatör ayrıcalıkları ile her mesajın yanındaki düzenle butonunu seçebilir. Bundan ziyade, şunları yapabilirler:</para>
 	
 		<variablelist>
 			<varlistentry>
 				<term>Mesajları silme</term>
 				<listitem>
-					<para>This option removes the post from the topic. Remember that it cannot be recovered once deleted.</para>
+					<para>Bu özellik başlıktan mesajı siler. Unutmayınız ki mesaj silindikten sonra tekrar geri getirilemez.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -46,7 +46,7 @@
 			<varlistentry>
 				<term>Başlık ve mesaj gövdesini değiştirme</term>
 				<listitem>
-					<para>Allows the moderator to alter the contents of the post.</para>
+					<para>Moderatörün mesajın içeriğini değiştirme izni vardır.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -60,7 +60,7 @@
 			<varlistentry>
 				<term>Başlık ya da mesajı kilitleme</term>
 				<listitem>
-					<para>Allows the moderator to lock the current post, or the full topic.</para>
+					<para>Moderatörün geçerli mesajı ya da tüm başlığı kilitleme izni vardır.</para>
 				</listitem>
 			</varlistentry>
 			
