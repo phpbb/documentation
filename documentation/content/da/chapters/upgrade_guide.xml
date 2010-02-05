@@ -73,7 +73,7 @@
 					<title>Opdatering af ældre versioner</title>
 					<para>Er dit board mange versioner bagud, kan det virke meget uoverskueligt at få det fuldt opdateret. De officielle pakker giver almindeligvis mulighed for at opdatere fra fem versioner tilbage. Opdateringspakkerne til 3.0.5 kan altså opdatere et 3.0.0 board. Imidlertid er scriptet <uri>install/database_update.php</uri> indeholdt i phpBB3.0.4 en undtagelse herfra, det er i stand til at opdatere en RC1 database med alle ændringer helt frem til 3.0.4.</para>
 					<para>Det er altså muligt at opdatere alle boards fra RC1 med afvikling af et antal databaseopdateringscripts, afhængig af hvilken version du er på. Kun <uri>install/database_update.php</uri> er vigtig her, da du blot uploader den fulde opdateringspakke eksklusiv filen <uri>config.php</uri> og install-mappen til sidst.</para>
-					<para>Indeholder det uddaterede board samtidig en masse MODs, der er meget vigtige at bibeholde, mister du disse ved at anvende ovennævnte, men nemme og hurtige metode. Du må i så fald installere disse efterfølgende endnu engang. Ønsker du for enhver pris at undgå dette, er der kun den omstændelige process tilbage. Der må opdateres en version ad gangen, med den automatiske opdateringspakke. Og håbe at alle MODs overlever.</para>
+					<para>Indeholder det uddaterede board samtidig en masse MODs, der er meget vigtige at bibeholde, mister du disse ved at anvende ovennævnte, men nemme og hurtige metode. Du må i så fald installere disse efterfølgende endnu engang. Ønsker du at undgå dette, skal den automatiske opdateringspakke benyttes.</para>
 					<para>Ældre versioner af phpBB3's opdateringscripts kan hentes ud af tidligere opdateringspakker, som kan downloades <ulink url="http://www.phpbb.com/downloads/olympus.php">her</ulink>, under <guilabel>Previous phpBB3 Releases</guilabel>. Samme sted findes også de automatiske opdateringspakker for tidligere versioner.</para>
 					</section>
 				</section>
@@ -95,14 +95,14 @@
 					<section id="pack_auto">
 					<title>Automatisk opdateringspakke</title>
 					<para>Anvendelse af denne pakke er den anbefalede metode til opdatering. Under opdateringen opdages ændrede filer og tilbyder automatisk sammenlægning af ændringerne fra disse til nye opdaterede filer.</para>
-					<para>Den automatiske opdateringspakke indeholder normalt kun opdateringsinformation til at opdatere <emphasis>fra forrige til senest tilgængelige version</emphasis>. På downloadsiden tilbydes et antal ekstra opdateringspakker, som gør det muligt at opdatere fra et antal tidligere versioner. I dropdownmenuen vælges den opdateringspakker der matcher din nuværende version.</para>
+					<para>Den automatiske opdateringspakke indeholder normalt kun opdateringsinformation til at opdatere <emphasis>fra forrige til senest tilgængelige version</emphasis>. På downloadsiden tilbydes et antal ekstra opdateringspakker, som gør det muligt at opdatere fra et antal tidligere versioner. I dropdownmenuen vælges den opdateringspakke der matcher din nuværende version.</para>
 					<para>Følg instruktionerne fra fanebladet Administratorkontrolpanel -&gt; System for at foretage opdateringen. Versionskontrollen fortæller at der er en nyere version tilgængelig og leder dig gennem både download og opdatering - eller du kan følge instruktionerne nedenfor.</para>
 					<itemizedlist>
 					<listitem><para>Gå til downloadsiden og hent den senest frigivne opdateringspakke, og som matcher din øjeblikkelige version.</para></listitem>
 					<listitem><para>Upload mappeindholdet til din phpBB-installation - kun install-mappen er nødvendig. Upload hele install-mappen og bevar filstrukturen.</para></listitem>
 					<listitem><para>Når install-mappen er tilstede går phpBB3 automatisk offline.</para></listitem>
 					<listitem><para>Kald install-mappen med din browser, f.eks. http://www.ditdomæne.dk/phpBB3/install/.</para></listitem>
-					<listitem><para>Vælg fanebladet <guilabel>Opdater</guilabel> og følg instruktionerne.</para></listitem>
+					<listitem><para>Vælg fanebladet <guilabel>Opdatering</guilabel> og følg instrukserne.</para></listitem>
 					</itemizedlist>
 					</section>
 					<section id="pack_changedfiles">
@@ -161,7 +161,7 @@ Anvendelse af patch file-pakken er en af mulighederne for at opdatere et board m
 				<listitem><para>Konverterer du fra andet end phpBB2, uploades de filer til konverteringen, som du hentede fra emnet i <ulink url="http://www.phpbb.com/community/viewforum.php?f=65">forummet</ulink> på www.phpbb.com.</para></listitem>
 				<listitem><para>Downloadet udpakkes og uploades til phpBB3-rodmappen, og mappestrukturen bibeholdes. Herved vil auth_xxx.php være at finde i mappen /includes/auth, functions_xxx.php &amp; convert_xxx.php i mappen /install/convertors. Filen auth_xxx.php tillader at du foretage log in efter konverteringen.</para></listitem>
 				<listitem><para>Den downloadede zip-fil skulle have filerne pakket korrekt i forhold til phpBB rod-mappen, hvorfor det kun er nødvendigt at uploade mapperne indeholdende disse filer. Mappestrukturen vil være således:<uri>{phpBB3_root}/install/convertors/convert_xxx.php</uri>, <uri>{phpBB3_root}/install/convertors/functions_xxx.php</uri> &amp; <uri>{phpBB3_root}/includes/auth/auth_xxx.php</uri>.</para></listitem>
-				<listitem><para>Kald <uri>{phpbb_root_directory}/install/index.php</uri> i din browsers adressefelt, klik på fanen konverter. Nedenstående skærmbillede viser alle tilgængelige konvertorer.</para></listitem>
+				<listitem><para>Kald <uri>{phpbb_root_directory}/install/index.php</uri> i din browsers adressefelt, klik på fanen Konvertering. Nedenstående skærmbillede viser alle tilgængelige konvertorer.</para></listitem>
 				</itemizedlist>
 				<figure id="convert_select_intropage">
 				<title>Tilgængelige konverterer</title>
@@ -170,7 +170,7 @@ Anvendelse af patch file-pakken er en af mulighederne for at opdatere et board m
 						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_select.png"/>
 						</imageobject>
 						<caption>
-						<para>I oversigten vælges nu den boardsoftware der ønskes konverteret ved at klikke på konverter ud for den rette</para>
+						<para>I oversigten vælges nu den boardsoftware der ønskes konverteret ved at klikke på konverter ud for den rette.</para>
 						</caption>
 					</mediaobject>
 				</figure>
@@ -186,7 +186,7 @@ Anvendelse af patch file-pakken er en af mulighederne for at opdatere et board m
 						<imagedata format="PNG" fileref="../images/upgrade_guide/convert_status.png"/>
 						</imageobject>
 						<caption>
-						<para>Databasekonverteringens status vises i hvert trin</para>
+						<para>Databasekonverteringens status vises i hvert trin.</para>
 						</caption>
 					</mediaobject>
 				</figure>

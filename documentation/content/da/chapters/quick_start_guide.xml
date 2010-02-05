@@ -99,7 +99,7 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introduktion</title>
-			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installer</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
+			<para>Installationsskærmbilledet giver dig en kort introduktion til phpBB. Det giver dig mulighed for at læse den licens, hvorunder phpBB er frigivet (<ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) og giver information om hvordan du kan opnå support. Klik på fanen <guilabel>Installation</guilabel> for at starte installationen (se <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Krav</title>
@@ -138,7 +138,7 @@
 						<imagedata fileref="../images/quick_start_guide/installation_database.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Skærmbilledet hvor databaseindstillinger angives, hav venligst alle krævede data ved hånden</para>
+						<para>Skærmbilledet hvor databaseindstillinger angives, hav venligst alle krævede data parate.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -158,7 +158,7 @@
 		<section id="quick_installation_config">
 			<title>Konfigurationsfilen - config.php</title>
 			<para>På dette trin vil phpBB prøve at skrive konfigurationsfilen automatisk. Den indeholder alle databaseindstillingerne, og uden den er phpBB ikke i stand til at forbinde til databasen.</para>
-			<para>Normalt fungerer den automatiske skrivning af konfigurationsfilen fint. Men i visse tilfælde kan denne operation fejle, f.eks. på grund af forkerte filtilladelser. I såfald er du nødt til at uploade filen manuelt. phpBB beder dig om at <guilabel>downloade</guilabel> config.php-filen og fortæller dig hvad du skal gøre med den. Læs venligst instruktionerne omhyggeligt. Når du har uploadet filen, klik <guilabel>Udført</guilabel> for at komme videre til sidste trin. Hvis <guilabel>Udført</guilabel> returnerer dig til samme side som før, og ikke returnerer en meddelelse om at operationen blev gennemført med held, skyldes det sansynligvis at du ikke fik uploadet filen korrekt.</para>
+			<para>Normalt fungerer den automatiske skrivning af konfigurationsfilen fint. Men i visse tilfælde kan denne operation fejle, f.eks. på grund af forkerte filtilladelser. I så fald er du nødt til at uploade filen manuelt. phpBB beder dig om at <guilabel>downloade</guilabel> config.php-filen og fortæller dig hvad du skal gøre med den. Læs venligst instruktionerne omhyggeligt. Når du har uploadet filen, klik <guilabel>Udført</guilabel> for at komme videre til sidste trin. Hvis <guilabel>Udført</guilabel> returnerer dig til samme side som før, og ikke returnerer en meddelelse om at operationen blev gennemført med held, skyldes det sansynligvis at du ikke fik uploadet filen korrekt.</para>
 		</section>
 		<section id="quick_installation_advanced">
 			<title>Avancerede indstillinger</title>
@@ -189,7 +189,7 @@
 						<imagedata fileref="../images/quick_start_guide/settings_sitename.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Her bestemmer du boardets navn og beskrivelse</para>
+						<para>Her bestemmer du boardets navn og beskrivelse.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -209,7 +209,7 @@
 						<imagedata fileref="../images/quick_start_guide/settings_features.png" format="PNG" />
 					</imageobject>
 					<caption>
-						<para>Ændre basale funktioner med to klik</para>
+						<para>Ændre basale funktioner med to klik.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -243,7 +243,7 @@
 					<imagedata format="PNG" fileref="../images/quick_start_guide/creating_forums.png"/>
 				</imageobject>
 				<caption>
-					<para>Her angives navnet på og beskrivelsen for det nye forum</para>
+					<para>Her angives navnet på og beskrivelsen for det nye forum.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -292,7 +292,7 @@
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
 					</imageobject>
 					<caption>
-						<para>Globale og lokale tilladelser</para>
+						<para>Globale og lokale tilladelser.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -310,7 +310,7 @@
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_select.png" />
 					</imageobject>
 					<caption>
-						<para>Vælg de brugere eller grupper der skal ændres</para>
+						<para>Vælg de brugere eller grupper der skal ændres.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -341,7 +341,7 @@
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_manual.png" />
 					</imageobject>
 					<caption>
-						<para>Manuel tildeling af tilladelser</para>
+						<para>Manuel tildeling af tilladelser.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -356,7 +356,7 @@
 						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_roles.png" />
 					</imageobject>
 					<caption>
-						<para>Tilladelseindstilling med brug af roller</para>
+						<para>Tilladelseindstilling med brug af roller.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -408,7 +408,7 @@
 			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
 					</imageobject>
 					<caption>
-						<para>Angiv redaktørens tilladelser</para>
+						<para>Angiv redaktørers tilladelser.</para>
 					</caption>
 				</mediaobject>
 			</figure>
@@ -431,7 +431,7 @@
 				<listitem><para>Administratorer</para></listitem>
 				<listitem><para>Globale redaktører</para></listitem>
 			</orderedlist>
-			<para>Under &quot;Brugertilladelser&quot; og &quot;Gruppetilladelser&quot; kan for eksempel muligheden for bruge vedhæftede filer, signaturer og avatars, for udvalgte brugere eller grupper, tillades eller forbydes. Bemærk at ændringer i disse indstillinger kun for effekt hvis den pågældende mulighed er aktiveret under &quot;Boardfinesser&quot;. Se flere detaljer i <xref linkend="quick_settings_boardfeatures"/>).</para>
+			<para>Under &quot;Brugertilladelser&quot; og &quot;Gruppetilladelser&quot; kan for eksempel muligheden for bruge vedhæftede filer, signaturer og avatars, for udvalgte brugere eller grupper, tillades eller forbydes. Bemærk at ændringer i disse indstillinger kun får effekt hvis den pågældende mulighed er aktiveret under &quot;Boardfinesser&quot;. Se flere detaljer i <xref linkend="quick_settings_boardfeatures"/>.</para>
 			<para>Under &quot;Administratorer&quot; har du mulighed for at give brugere eller gruppeledere tilladelse til at ændre i forumopsætningen eller ændre andre brugeres tilladelse. Se flere detaljer i <xref linkend="acp_permissions"/>.</para>
 			<para>Globale redaktører har samme tilladelser som redaktører i de enkelte fora (beskrevet i <xref linkend="quick_permissions_moderators"/>), men kan redigere alle fora på boardet.</para>
 		</section>

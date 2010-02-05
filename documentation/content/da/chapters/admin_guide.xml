@@ -1431,7 +1431,7 @@
 			
 			<para>For at ændre indstillinger for en eksisterende rang, klikkes på den grønne &quot;Rediger&quot; ud for rangen i oversigtens kolonne <guilabel>Handling</guilabel>.</para>
 			
-			<para>En rang slettes samme sted, her benyttes  den røde knap &quot;Slet&quot; i kolonnen <guilabel>Handling</guilabel>. Bekræft sletningen ved at klikke på <guilabel>Ja</guilabel> i det efterfølgende skærmbillede.</para>
+			<para>En rang slettes samme sted, her benyttes den røde knap &quot;Slet&quot; i kolonnen <guilabel>Handling</guilabel>. Bekræft sletningen ved at klikke på <guilabel>Ja</guilabel> i det efterfølgende skærmbillede.</para>
 		</section>
 				
 		</section>
@@ -2221,7 +2221,7 @@
 			</sectioninfo>
 			<title>Masse-email</title>
 			<para>phpBB giver mulighed for at sende emails til alle brugere som har valgt at modtage den type emails i <link linkend="ucp_preferences">boardindstillinger</link>. Denne meddelelsesform kan anvendes som nyhedsbred, advisering om ændringer på boardet etc. Du kan vælge at sende emailen til alle bruger, en udvalgt brugergruppe eller en liste af specifikke brugere. Emailen afsendes med administrator som afsender og alle modtagere er inkluderet som BCC - Blind Carbon Copy. Modtagere kan altså ikke se andres emailadresser og hvem der i øvrigt har modtaget emailen.</para>
-			<para>Det kan være et problem at afsende masse-emails, da nogle hostingudbydere defineret grænser for hvor mange emails der kan afsendes ad gangen. For at imødegå dette afsendes emailen som standard til 50 brugere ad gangen. Er der 1.000 brugere som skal modtage emailen, afsendes den altså 20 gange. Giver afsendelsen alligevel problemer bør du konsultere din hostingudbyder.</para>
+			<para>Det kan være et problem at afsende masse-emails, da nogle hostingudbydere har defineret grænser for hvor mange emails der kan afsendes ad gangen. For at imødegå dette afsendes emailen som standard til 50 brugere ad gangen. Er der 1.000 brugere som skal modtage emailen, afsendes den altså 20 gange. Giver afsendelsen alligevel problemer bør du konsultere din hostingudbyder.</para>
 			<itemizedlist>
 				<title>Skriv email</title>
 				<listitem><para><guilabel>Send til gruppe</guilabel>: I dropdownmenuen vælges den gruppe du ønsker at sende emailen til. Gruppen tilmeldte brugere omfatter samtlige boardets brugere.</para></listitem>

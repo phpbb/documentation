@@ -12,13 +12,13 @@
 	</chapterinfo>
 	<title>Brugerguide</title>
 	<abstract>
-		<para>Dette kapitel er rettet mod boardets brugere. Det forklarer alle funktioner i brugergrænsefladen af phpBB 3.0.</para>
+		<para>Dette kapitel er rettet mod boardets brugere, og forklarer alle funktioner i brugergrænsefladen.</para>
 	</abstract>
 	<section id="user_permissions">
 		<sectioninfo>
 			<authorgroup>
 				<author>
-					<othername>AdamR</othername>
+					<othername>jask</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
@@ -97,18 +97,18 @@
 			<section id="ucp_subscriptions">
 				<title>Overvågning</title>
 				<para>Du kan vælge at overvåge udvalgte fora og emner, og hermed modtage advisering når der indsendes nye emner eller indlæg i disse. En overvågning oprettes via forummet eller emnet ved at klikke på linket &quot;Overvåg forum/emne&quot; nederst på siden.</para>
-				<para>Man kan fjerne en overvågning fra UCP ved at markere overvågningen og herefter klikke på knappen <guilabel>Stop overvågning af markeret</guilabel> nederst.</para>
+				<para>Man kan fjerne en overvågning fra UCP ved at vælge overvågningen og herefter klikke på knappen <guilabel>Stop overvågning af valgte</guilabel> nederst.</para>
 			</section>
 			<section id="ucp_bookmarks">
 				<title>Bogmærker</title>
 				<para>Et bogmærke er næsten identisk med overvågning, med to undtagelser: 1) kun emner kan bogmærkes, 2) man modtager ikke advisering når der indsendes indlæg i emnet.</para>
 				<para>Man bogmærker et emne ved at klikke på linket &quot;Bogmærk emne&quot; nederst på siden hvor man læser emnet.</para>
-				<para>Man kan fjerne et bogmærke fra UCP ved at markere bogmærket og herefter klikke på knappen <guilabel>Fjern markerede bogmærker</guilabel>.</para>
+				<para>Man kan fjerne et bogmærke fra UCP ved at vælge bogmærket og herefter klikke på knappen <guilabel>Fjern valgte bogmærker</guilabel>.</para>
 			</section>
 			<section id="ucp_drafts">
 				<title>Kladder</title>
 				<para>Du kan gemme en kladde når du skriver nye emner eller indlæg ved at klikke på knappen <guilabel>Gem</guilabel>. I oversigten over gemte kladder vises titlen på dit indlæg, det forum eller emne du skrev kladden til og datoen du gemte den.</para>
-				<para>For at fortsætte redigeringen af kladden klikkes på linket &quot;Indlæs kladde&quot;. Når du har færdiggjort redigeringen og vil indsende indlægget, klikker du på <guilabel>Udfør</guilabel>. For at slette en kladde vinges boksen til højre for kladden af og der klikkes på <guilabel>Slet markerede</guilabel>.</para>
+				<para>For at fortsætte redigeringen af kladden klikkes på linket &quot;Indlæs kladde&quot;. Når du har færdiggjort redigeringen og vil indsende indlægget, klikker du på <guilabel>Udfør</guilabel>. For at slette en kladde vinges boksen til højre for kladden af og der klikkes på <guilabel>Slet valgte</guilabel>.</para>
 			</section>
 			<section id="ucp_attachments">
 			<title>Private beskeder</title>
@@ -361,7 +361,7 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
@@ -375,13 +375,13 @@
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>dhn</othername>
+							<othername>jask</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
 				<title>Flytning af beskeder</title>
 				
-				<para>Det ville ikke give mening at oprette sine egne mapper, hvis man ikke kunne flytte beskeder imellem disse. For at flytte beskeder fra en mappe til en anden skal den eller de beskeder der ønskes flyttes først markeres og i dropdownmenuen forneden vælges den mappe hvortil beskeden skal flyttes med <guilabel>Flyt markerede til xxx</guilabel>.</para>
+				<para>Det ville ikke give mening at oprette sine egne mapper, hvis man ikke kunne flytte beskeder imellem disse. For at flytte beskeder fra en mappe til en anden skal den eller de beskeder der ønskes flyttes først markeres og i dropdownmenuen forneden vælges den mappe hvortil beskeden skal flyttes med <guilabel>Flyt valgte til xxx</guilabel>.</para>
 				<note>
 					<para>Bemærk venligst at er modtagemappen herefter fyldt over det tilladte antal beskeder, modtager du en fejlmeddelelse og flytningen annulleres.</para>
 				</note>
