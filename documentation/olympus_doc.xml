@@ -27,10 +27,10 @@
 		</copyright>
 		<orgname>phpBB Group</orgname>
 	</bookinfo>
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/quick_start_guide.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/upgrade_guide.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/admin_guide.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/moderator_guide.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/user_guide.xml" />
-	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="chapters/glossary.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/en/chapters/quick_start_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/en/chapters/upgrade_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/en/chapters/admin_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/en/chapters/moderator_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/en/chapters/user_guide.xml" />
+	<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="content/en/chapters/glossary.xml" />
 </book>
