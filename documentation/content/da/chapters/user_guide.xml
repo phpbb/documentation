@@ -475,9 +475,9 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Sortering efter kollonneoverskrifter</term>
+				<term>Sortering efter kolonneoverskrifter</term>
 				<listitem>
-					<para>For at sortere listen stigende, klikkes på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Senest aktiv</guilabel>, etc. Klikker du en gang mere på samme kollonneoverskrift sorteres listen faldende.</para>
+					<para>For at sortere listen stigende, klikkes på den kolonneoverskrift du vil sortere efter: <guilabel>Brugernavn</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Indlæg</guilabel>, <guilabel>Tilmeldt</guilabel>, <guilabel>Senest aktiv</guilabel>, etc. Klikker du en gang mere på samme kolonneoverskrift sorteres listen faldende.</para>
 				</listitem>
 			</varlistentry>
 			

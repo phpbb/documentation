@@ -23,7 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Administratorkontrolpanelet</title>
-		<para>phpBB 3.0 &quot;Olympus&quot; er meget konfigurerbar og kan tilpasses næsten ethvert behov. Næsten alle funktioner og muligheder kan aktiveres, deaktiveres, fintunes og tilpasses.</para>
+		<para>phpBB 3.0.x er fleksibelt opbygget og kan tilpasses næsten ethvert behov. Næsten alle funktioner og muligheder kan aktiveres, deaktiveres, fintunes og tilpasses.</para>
 		<para>Klik på linket <guilabel>Administratorkontrolpanel</guilabel> nederst på siden for at få adgang til <acronym>ACP</acronym>.</para>
 		<para>Som standard er <acronym>ACP</acronym> opdelt i otte sektioner eller faner, som hver indholder et antal under sektioner. Vi gennemgår hver sektion i denne administratorguide. </para>
 	</section>	
@@ -269,7 +269,7 @@
 				
 				<itemizedlist>
 					<title>Generelle indstillinger</title>
-					<listitem><para><guilabel>Boardets emailsystem er</guilabel>: Hvis systemet er inkativt, vil boardet ikke sende nogen emails overhovedet.</para></listitem>
+					<listitem><para><guilabel>Boardets emailsystem er</guilabel>: Hvis systemet er inaktivt, vil boardet ikke sende nogen emails overhovedet.</para></listitem>
 					<listitem><para><guilabel>Brugere sender emails via boardet</guilabel>: I stedet for at vise brugeres emailadresse kan brugere sende emails via boardet.</para></listitem>
 					<listitem><para><guilabel>Navn på emailfunktion</guilabel>: Navnet på den anvendte emailfunktion ved forsendelse af emails gennem PHP. Normalt er dette &quot;mail&quot;.</para></listitem>
 					<listitem><para><guilabel>Pakkestørrelse for emails</guilabel>: Antallet af emails der afsendes i en pakke. Indstillingen er nyttig hvis du vil afsend masse-emails og har et stort antal brugere.</para></listitem>
@@ -303,13 +303,13 @@
 				<para>phpBB3 kan desuden sende beskeder og adviseringer til brugere via <glossterm>Jabber</glossterm>. Her kan du aktivere og bestemme hvordan boardet gør brug af Jabber.</para>
 				
 				<note>
-					<para>Nogle Jabber servere inkluderer gateways eller transporter, der tillader dig at kontakte brugere af andre netværk. Ikke alle servere tilbyder alle former for transporter, og ændringer i protokoller kan forhindre transporter i at fungere. Bemærk at det kan tage flere sekunder at opdatere detaljer for en Jabber-konto, stop ikke før scriptet er afsluttet!</para>
+					<para>Nogle Jabber-servere inkluderer gateways eller transporter, der tillader dig at kontakte brugere af andre netværk. Ikke alle servere tilbyder alle former for transporter, og ændringer i protokoller kan forhindre transporter i at fungere. Bemærk at det kan tage flere sekunder at opdatere detaljer for en Jabber-konto, stop ikke før scriptet er afsluttet!</para>
 				</note>
 				
 				<itemizedlist>
 					<title>Jabber-indstillinger</title>
 					<listitem><para><guilabel>Jabber er</guilabel>: Vælg <guilabel>Aktiv</guilabel>, hvis du vil benyttet Jabber til beskeder og adviseringer.</para></listitem>
-					<listitem><para><guilabel>Jabber server</guilabel>: Den server dit board skal benyttet. Se <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">liste over offentligt tilgængelige servere</ulink>.</para></listitem>
+					<listitem><para><guilabel>Jabber-server</guilabel>: Den server dit board skal benyttet. Se <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">liste over offentligt tilgængelige servere</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabberport</guilabel>: Den port ovennævnte Jabber-server benytter. Port 5222 er den mest anvendte. Er du usikker på dette, undlad at ændre værdien.</para></listitem>
 					<listitem><para><guilabel>Jabberbrugernavn eller JID:</guilabel>: Angiv en tilmeldt Jabberkonto eller et gyldigt JID. Brugernavnets gyldighed kontrolleres ikke. Anfører du alene brugernavn, sættes dit JID som dette og serveren som specificeret ovenfor. Ellers angives et gyldigt JID, eksempelvis user@jabber.org.</para></listitem>
 					<listitem><para><guilabel>Jabberkodeord</guilabel>: Det tilhørende kodeord til ovenfor angivne Jabberkonto.</para></listitem>
@@ -749,9 +749,9 @@
 				</mediaobject>
 			</figure>
 			
-			<para>I feltet <guilabel>Brug af BBkode</guilabel> specificeres hvordan brugere skal gøre brug af BBkoden. For at kunne vælge en fonttype skrives i feltet <code>[font={SIMPLETEXT1}]{TEXT2}[/font]</code>. BBkoden [font] er nu defineret sådan at brugeres skrevne tekst repræsenteres af tokenet <guilabel>TEXT2</guilabel> og selve skrifttypens <guilabel>fontnavn</guilabel> af <guilabel>SIMPLETEXT1</guilabel>. Brugere kan hermed selv definere fonttypen i et indlæg ved at skrive [font=verdana]indlægstekst[/font].
+			<para>I feltet <guilabel>Brug af BBkode</guilabel> specificeres hvordan brugere skal gøre brug af BBkoden. For at kunne vælge en fonttype skrives i feltet <code>[font={SIMPLETEXT1}]{INTTEXT2}[/font]</code>. BBkoden [font] er nu defineret sådan at brugeres skrevne tekst repræsenteres af tokenet <guilabel>INTTEXT2</guilabel> og selve skrifttypens <guilabel>fontnavn</guilabel> af <guilabel>SIMPLETEXT1</guilabel>. Brugere kan hermed selv definere fonttypen i et indlæg ved at skrive [font=verdana]indlægstekst[/font].
 			</para>
-			<para>Før BBkoden kan tages i anvendelse, mangler vi at definere den HTML-erstatning vores nye BBkode skal gøre brug af. I feltet <guilabel>HTML-erstatning</guilabel> skriver vi <code>&lt;span style="font-family: {SIMPLETEXT1}"&gt;{TEXT2}&lt;span&gt;</code>.	Bemærk at vi i eksemplet anvender tokenet {TEXT2} fremfor {SIMPLETEXT2}. Selvom det ikke anbefales at anvende {TEXT} i HTML-erstatninger, er vi nødsaget til det, for også at kunne formatere de danske specialtegn æ, ø og å med denne BBkode.
+			<para>Før BBkoden kan tages i anvendelse, mangler vi at definere den HTML-erstatning vores nye BBkode skal gøre brug af. I feltet <guilabel>HTML-erstatning</guilabel> skriver vi <code>&lt;span style="font-family: {SIMPLETEXT1}"&gt;{INTTEXT2}&lt;span&gt;</code>. Bemærk at vi i eksemplet anvender tokenet {INTTEXT} fremfor {SIMPLETEXT}. {INTTEXT} i HTML-erstatninger, giver os mulighed for også at kunne formatere de danske specialtegn æ, ø og å med denne BBkode. Hvilket ikke er muligt med {TEXT} og {SIMPLETEXT}. Bemærk at det frarådes at bruge tokenet {TEXT}, hvis det overhovedet kan undgås. Det åbner mulighed for at indsætte potentiel farlig kode i BBkoden. 
 			</para>
 			<para>I det næste felt <guilabel>Hjælpelinie</guilabel> kan forfattes en kort note eller et tip som vises under rækken med BBkoder når der skrives indlæg.</para>
 			<note>
@@ -1264,9 +1264,9 @@
 				
 				<para>Afhængig af indstillinger for vedhæftede filer har bruger måske allerede <glossterm>vedhæftede filer</glossterm> i indlæg. Er det tilfældet, får du her listet alle i denne oversigt. Oversigten viser for hver vedhæftet fil: <guilabel>Filnavn</guilabel>, <guilabel>Emnetitel</guilabel>, <guilabel>Tidspunkt for indsendelse</guilabel>, <guilabel>Filstørrelse</guilabel> og antal <guilabel>Downloads</guilabel>.</para>
 				<para>Der kan vælges flere forskellige sorteringer af denne oversigt. Find nederst <guilabel>Sorter efter:</guilabel> og vælg i dropdownmenuen hvordan du ønsker listen sorteret. Der kan sorteres efter disse metoder: <guimenuitem>Filenavn</guimenuitem>, <guimenuitem>Filtype</guimenuitem>, <guimenuitem>Filstørrelse</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Indlægstid</guimenuitem> og <guimenuitem>Emnetitel</guimenuitem>. Sorteringsorden vælges i næste dropdownmenu, enten <guimenuitem>Faldende</guimenuitem> eller <guimenuitem>Stigende</guimenuitem>. Klik på <guilabel>Udfør</guilabel> når de to valg er foretaget.</para>
-				<para>Klik på filnavnet for at se filen. For at se det indlæg hvor filen er vedhæftet, klikkes på linket umiddelbart under <guilabel>Indlæg:</guilabel>. Brugers vedhæftede filer kan slettes ved at markere boksen i kolonnen <guimenuitem>Marker</guimenuitem>. Når de ønskede filer er markeret klikkes <guilabel>Slet markerede</guilabel> for at udføre den endelige sletning.</para>
+				<para>Klik på filnavnet for at se filen. For at se det indlæg hvor filen er vedhæftet, klikkes på linket umiddelbart under <guilabel>Indlæg:</guilabel>. Brugers vedhæftede filer kan slettes ved at markere boksen i kolonnen <guimenuitem>Vælg</guimenuitem>. Når de ønskede filer er valgt, klikkes <guilabel>Slet valgte</guilabel> for at udføre den endelige sletning.</para>
 				<tip>
-					<para>Alle vedhæftede filer vist på siden kan markeres i en arbejdsgang ved at benytte <guilabel>Marker alle</guilabel> linket nederst.</para>
+					<para>Alle vedhæftede filer vist på siden kan markeres i en arbejdsgang ved at benytte linket <guilabel>Vælg alle</guilabel> nederst.</para>
 				</tip>
 			</section>
 		</section>
@@ -2082,7 +2082,7 @@
 			
 			<para>Klik på et af linkene til logs i oversigten under overskriften <guilabel>Forumlog</guilabel>.</para>
 			
-			<para>Med de rette tilladelser kan enkelte eller alle hændelser slettes fra loggen. Afmærk boksen udfor den hændelse der ønskes slettet, og klik herefter på <guilabel>Slet markerede</guilabel> nederst.</para>
+			<para>Med de rette tilladelser kan enkelte eller alle hændelser slettes fra loggen. Afmærk boksen udfor den hændelse der ønskes slettet, og klik herefter på <guilabel>Slet valgte</guilabel> nederst.</para>
 		
 		</section>
 		
