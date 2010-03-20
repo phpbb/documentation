@@ -55,6 +55,12 @@
 
 	<xsl:copy-of select="$title"/>
 
+	<xsl:text disable-output-escaping="yes">';
+
+</xsl:text>
+
+
+</xsl:text>
 </xsl:template>
 
 
