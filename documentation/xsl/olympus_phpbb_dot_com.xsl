@@ -59,8 +59,6 @@
 
 </xsl:text>
 
-
-</xsl:text>
 </xsl:template>
 
 
@@ -504,8 +502,6 @@ $content = str_replace(' xmlns="http://www.w3.org/1999/xhtml"', '', ob_get_clean
 
 	<xsl:text disable-output-escaping="yes">
 );
-
-docbook_navigation($navigation);
 
 ob_start();
 ?&gt;</xsl:text>
