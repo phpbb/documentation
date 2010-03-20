@@ -53,7 +53,14 @@
 		// The page title
 		$page_title = '</xsl:text>
 
-	<xsl:copy-of select="$title"/>
+	<!-- use the substring replace template defined in Docbook XSL's lib to escape apostrophes -->
+	<xsl:call-template name="string.subst">
+		<xsl:with-param name="string">
+			<xsl:value-of select="$title"/>
+		</xsl:with-param>
+		<xsl:with-param name="target" select='"&apos;"'/>
+		<xsl:with-param name="replacement" select='"\&apos;"'/>
+	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">';
 

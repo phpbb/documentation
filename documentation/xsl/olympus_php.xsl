@@ -1,8 +1,8 @@
 <?xml version='1.0'?>
-<xsl:stylesheet  
+<xsl:stylesheet
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
-<!-- 
+<!--
 	$Id$
 	Copyright 2006, 2008 phpBB Group
 	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
@@ -50,7 +50,14 @@
 		// The page title
 		$page_title = '</xsl:text>
 
-	<xsl:copy-of select="$title"/>
+	<!-- use the substring replace template defined in Docbook XSL's lib to escape apostrophes -->
+	<xsl:call-template name="string.subst">
+		<xsl:with-param name="string">
+			<xsl:value-of select="$title"/>
+		</xsl:with-param>
+		<xsl:with-param name="target" select='"&apos;"'/>
+		<xsl:with-param name="replacement" select='"\&apos;"'/>
+	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">';
 // Paths
@@ -510,7 +517,7 @@ page_footer(false);
 		<xsl:with-param name="node" select="$next"/>
 		<xsl:with-param name="currenttitle" select="$titleclean"/>
 	</xsl:call-template>
- 
+
 	<xsl:text disable-output-escaping="yes">,
 	'up'   =&gt; </xsl:text>
 
@@ -521,7 +528,7 @@ page_footer(false);
 
 	<xsl:text disable-output-escaping="yes">,
 	'toc'  =&gt; array(</xsl:text>
- 
+
 	<xsl:for-each select="../*">
 		<xsl:variable name="ischunk"><xsl:call-template name="chunk"/></xsl:variable>
 		<xsl:if test="$ischunk='1'">
