@@ -37,7 +37,7 @@
 		<title>Tilmelding på et phpBB3 board</title>
 		<para>Proceduren ved tilmelding er normalt helt enkel og meget simpel.</para>
 		<figure id="user_registering_typical_page">
-			<title>Den normale tilmeldingside</title>
+			<title>Tilmelding</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/user_guide/typical_registration_page.png"/>
@@ -51,7 +51,7 @@
 		<para>Næste trin er udfyldelse af personlig information hvor du selv vælger brugernavn, emailadresse, kodeord, sprog og tidzone.</para>
 		<para>Nederst på samme side vil du normalt se sektionen <emphasis>Bekræftelse på tilmelding</emphasis>, indeholdende et grafikfelt med nogle bogstaver og tal som udgør din kode. Indtast disse tegn i feltet umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Mange boards anvender denne metode, kaldet <acronym>CAPTCHA</acronym>, for bedst muligt at blokere for tilmeldinger fra spamrobotter. Er tegnene for svære at aflæse, kan du prøve at genopfriske siden, for at få vist en ny kode.</para>
 		<figure id="user_registering_captcha">
-			<title>Elementet visuel bekræftelse</title>
+			<title>Visuel bekræftelse</title>
 			<mediaobject>
 				<imageobject>
 					<imagedata format="PNG" fileref="../images/user_guide/visual_confirmation.png"/>
@@ -160,10 +160,10 @@
 				<para>
 					<itemizedlist>
 						<listitem><para><guilabel>Brugere kan kontakte mig pr. email</guilabel>: Vælges <guilabel>Ja</guilabel> kan andre brugere sende email til dig via &quot;email&quot; knappen i din profil.</para></listitem>
-						<listitem><para><guilabel>Administratorer kan kontakte mig pr. email</guilabel>: Vælges <guilabel>Ja</guilabel> modtager du masse-email afsendt af boardadministrator.</para></listitem>
+						<listitem><para><guilabel>Jeg ønsker at modtage masse-emails afsendt fra administratorer</guilabel>: Vælges <guilabel>Ja</guilabel> modtager du masse-email afsendt af boardadministrator.</para></listitem>
 						<listitem><para><guilabel>Brugere må sende mig private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> kan andre brugere sende dig private beskeder via boardet.</para></listitem>
 						<listitem><para><guilabel>Skjul min onlinestatus</guilabel>: Vælges <guilabel>Ja</guilabel> skjules din onlinestatus for andre brugere. Administratorer og redaktører vil stadig kunne se din onlinestatus.</para></listitem>
-						<listitem><para><guilabel>Adviser mig ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> afsendes en email fra boardet med besked om at du har modtaget en ny privat besked.</para></listitem>
+						<listitem><para><guilabel>Jeg ønsker at få information om nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> afsendes en email fra boardet med information om at du har modtaget en ny privat besked.</para></listitem>
 						<listitem><para><guilabel>Popupvindue ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> adviseres du med et popupvindue om nye private beskeder.</para></listitem>
 						<listitem><para><guilabel>Mit sprog</guilabel>: I dropdownmenuen vises de sprog der er installeret på boardet, du kan vælge hvilket af disse du ønsker at anvende på boardet. Bemærk at indlæg skrevet på et andet sprog stadig bliver vist på dette.</para></listitem>
 						<listitem><para><guilabel>Min tidszone</guilabel>: Du indstiller her den tidszone du befinder dig i.</para></listitem>
@@ -177,10 +177,10 @@
 				<para>Disse indstillinger bestemmer standardvalg når du skriver nye indlæg. Bemærk at hver af indstillingerne kan ændres individuel når et indlæg skrives.</para>
 				<para>
 					<itemizedlist>
-						<listitem><para><guilabel>Slå BBkode til som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere BBkode ved skrivning af indlæg.</para></listitem>
-						<listitem><para><guilabel>Slå smilies til som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere smilies ved skrivning af indlæg.</para></listitem>
+						<listitem><para><guilabel>BBkode aktiveret som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere BBkode ved skrivning af indlæg.</para></listitem>
+						<listitem><para><guilabel>Smilies aktiveret som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere smilies ved skrivning af indlæg.</para></listitem>
 						<listitem><para><guilabel>Tilføj min signatur som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få tilføjet signatur i indlæg.</para></listitem>
-						<listitem><para><guilabel>Adviser mig ved svar som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få advisering når indlæg besvares.</para></listitem>
+						<listitem><para><guilabel>Giv mig besked ved besvarelse</guilabel>: Vælg <guilabel>Ja</guilabel> for at få advisering når indlæg besvares.</para></listitem>
 					</itemizedlist>
 					
 				</para>
@@ -254,13 +254,13 @@
 		<section id="posting_options">
 			<title>Indlægsindstillinger</title>
 			<para><!-- TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc. --></para>
-			<para>Når du skriver et indlæg eller et svar, har du adskillige muligheder for at ændre i standardindstillingerne for dette specifikke indlæg. Umiddelbart under feltet hvor du skriver dit svar findes fanen <guilabel>Indstillinger</guilabel>, og afhængig af de tilladelser administratoren har tildelt dig har du forskellige muligheder. Valgmulighederne varierer også afhængig af om du skriver et nyt indlæg eller svarer i et eksisterende emne.</para>
+			<para>Når du skriver et indlæg eller et svar, har du adskillige muligheder for at ændre i standardindstillingerne for dette specifikke indlæg. Umiddelbart under feltet hvor du skriver dit svar findes fanen <guilabel>handling</guilabel>, og afhængig af de tilladelser administratoren har tildelt dig har du forskellige muligheder. Valgmulighederne varierer også afhængig af om du skriver et nyt indlæg eller svarer i et eksisterende emne.</para>
 			<itemizedlist>	
-				<listitem><para><guilabel>Slå BBkode fra</guilabel>: Hvis BBkode er slået til på boardet, og du har tilladelse til bruge den, er denne mulighed tilgængelig. Vinges boksen bliver ingen BBkoder fortolket som sådan. Som eksempel vil kombinationen [b]Fed tekst[/b] blive vist nøjagtig sådan [b]Fed tekst[/b] i indlægget.</para></listitem> 
-				<listitem><para><guilabel>Slå smilies fra</guilabel>: Hvis smilies er slået til på boardet, og du har tilladelser til at bruge disse, er denne mulighed tilgængelig. Vinges boksen af bliver smiliekode ikke konverteret. Som eksempel vil ;) blive vist i teksten nøjagtig som ;).</para></listitem> 
+				<listitem><para><guilabel>Anvend ikke BBkode</guilabel>: Er BBkode aktiveret på boardet, og du har tilladelse til bruge den, er denne mulighed tilgængelig. Vinges boksen bliver ingen BBkoder fortolket som sådan. Som eksempel vil kombinationen [b]Fed tekst[/b] blive vist nøjagtig sådan [b]Fed tekst[/b] i indlægget.</para></listitem> 
+				<listitem><para><guilabel>Anvend ikke smilies</guilabel>: Hvis smilies er aktiveret på boardet, og du har tilladelser til at bruge disse, er denne mulighed tilgængelig. Vinges boksen af bliver smiliekode ikke konverteret. Som eksempel vil ;) blive vist i teksten nøjagtig som ;).</para></listitem> 
 				<listitem><para><guilabel>Behandel ikke URL'er automatisk</guilabel>: Når du skriver en URL i din indlægstekst (i formatet http://....com eller www.etc.com), bliver den som standard konverteret til et link kan klikkes på. Hvis boksen vinges af bliver URL'er i dette indlæg vist som en helt almindelig tekststreng.</para></listitem> 
 				<listitem><para><guilabel>Tilføj signatur (signaturen kan rettes i brugerkontrolpanelet)</guilabel>: Er boksen vinget af tilføjes den signatur du oprettet under din profil. Det forudsætter at administratoren har tilladt brug af signaturer i indlæg. Læs mere om signaturer i <link linkend="ucp_signature">signaturer i UCP</link>.</para></listitem> 
-				<listitem><para><guilabel>Send mig en email når der skrives et svar</guilabel>: Er boksen vinget af modtager du en advisering (pr. email, Jabber, etc) hver gang der skrives et svar i emnet. Funktionen kaldes overvågning af emnet. Læs mere i kapitlet <link linkend="ucp_subscriptions">Boardindstillinger i UCP</link>.</para></listitem>
+				<listitem><para><guilabel>Giv mig besked ved besvarelse</guilabel>: Vinges boksen af modtager du automatisk besked (pr. email, Jabber, etc) hver gang der skrives et svar i emnet. Funktionen kaldes overvågning af emnet. Læs mere i kapitlet <link linkend="ucp_subscriptions">Boardindstillinger i UCP</link>.</para></listitem>
 				<listitem><para><guilabel>Lås emne</guilabel>: Har du redaktørtilladelser i forummet, vil afkrydsning i denne boks medføre at emnet låses når du indsender svar på indlægget. Herefter vil kun redaktører og administratorer kunne indsende indlæg i emnet. Læs mere information i <link linkend="modtools_lock">Lås emne eller indlæg</link>.</para></listitem>
 			</itemizedlist>
 			
@@ -270,7 +270,7 @@
 				<itemizedlist>				
 					<listitem><para><guilabel>Normal</guilabel>: Emnet indsendes som et standardemne i forummet.</para></listitem>
 					<listitem><para><guilabel>Opslag</guilabel>: Vises i øverst på forummets første side, før alle normale emner.</para></listitem>
-					<listitem><para><guilabel>Bekendtgørelser</guilabel>: Som opslag, i det de også er &quot;låst&quot; øverst i det forum de er indsendt. Der er imidlertid to forskelle: De vises over opslag, og vises øverst på <emphasis>alle</emphasis> sider i forummet, ikke kun på den første side.</para></listitem>
+					<listitem><para><guilabel>Bekendtgørelse</guilabel>: Som opslag, i det de også er &quot;låst&quot; øverst i det forum de er indsendt. Der er imidlertid to forskelle: De vises over opslag, og vises øverst på <emphasis>alle</emphasis> sider i forummet, ikke kun på den første side.</para></listitem>
 					<listitem><para><guilabel>Global</guilabel>: Eller globale bekendtgørelser, er helt særlige bekendtgørelser som vises øverst på alle sider og i alle fora på boardet. De vises over alle andre typer emner.</para></listitem>
 				</itemizedlist>
 				<para>Der er også mulighed for at bestemme hvor længe et emne skal vises som denne type (opslag, bekendtgørelse og global) emne. Hvis man definerer varigheden for eksempelvis et opslag til at vare fire dage, vil emnet efter udløb af perioden automatisk blive ændret til et normalt emne.</para>

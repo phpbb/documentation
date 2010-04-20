@@ -61,7 +61,7 @@
 						</caption>
 					</mediaobject>
 					</figure>
-					<para>Er sket en opdatering i lige præcis den kodelinie du har ændret i tidligere, eller medfører en sammenlægning andre problemer, kan du blive nødsaget til at vælge <guilabel>Sammenlæg ikke - brug ny fil</guilabel>. MOD'et må i så fald tilføjes manuelt efterfølgende.</para>
+					<para>Er der foretaget en opdatering i lige præcis den kodelinie du har ændret i tidligere, eller medfører en sammenlægning andre problemer, kan du blive nødsaget til at vælge <guilabel>Sammenlæg ikke - brug ny fil</guilabel>. MOD'et må i så fald tilføjes manuelt efterfølgende.</para>
 					</section>
 					<section id="update_lan_styles">
 					<title>Sprog og typografier</title>
