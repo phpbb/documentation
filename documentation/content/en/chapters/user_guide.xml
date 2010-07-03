@@ -502,5 +502,9 @@
 				</listitem>
 			</varlistentry>
 		</variablelist>
+
+		<note>
+			<para>The availability of the sort method selection boxes varies by style.</para>
+		</note>
 	</section>
 </chapter>

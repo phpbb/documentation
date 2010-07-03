@@ -26,7 +26,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Editing posts</title>
-		<para>Moderators with privileges in the relevant forums are able to edit topics and posts. You can usually view who the moderators are beneath the forum description on the index page. A user with moderator privileges is able to select the edit button beside each post. Beyond this point, they are able to:</para>
+		<para>Moderators with privileges in the relevant forums are able to edit topics and posts, even if the forum is locked. You can usually view who the moderators are beneath the forum description on the index page. A user with moderator privileges is able to select the edit button beside each post. Beyond this point, they are able to:</para>
 	
 		<variablelist>
 			<varlistentry>

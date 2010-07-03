@@ -52,7 +52,13 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 4.3.3 or above with support for the database you intend to use. The optional presence of the following modules within PHP will provide access to additional features, but they are not required.</para>
+				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) with support for the database you intend to use.</para>
+			</listitem>
+			<listitem>
+				<para>getimagesize() function enabled</para>
+			</listitem>
+			<listitem>
+				<para>The following PHP modules are optional, but will provide access to additional features.</para>
 				<itemizedlist>
 					<listitem>
 						<para>zlib Compression support</para>

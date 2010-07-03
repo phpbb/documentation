@@ -536,7 +536,7 @@
 					<itemizedlist>
 						<title>General settings</title>
 						<listitem><para><guilabel>Limit system load</guilabel>: This option enables you to control the maximum load that the server can undergo before the board will automatically go offline. Specifically, if the systemâ€™s one-minute load average exceeds this value, the board will automatically go offline. A value of &quot;1.0&quot; equals about 100% utilisation of one processor. Note that this option will only work with *nix-based servers that have this information accessible. If your board is unable to get the load limit, this value will reset itself to &quot;0&quot;. All positive numbers are valid values for this option. (For example, if your server has two processors, a setting of 2.0 would represent 100% server utilisation of both processors.) Set this to &quot;0&quot; if you do not want to enable this option.</para></listitem>
-						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. All positive integers are valid values. Set this to &quot;0&quot; if you want session lengths to last indefinitely.</para></listitem>
+						<listitem><para><guilabel>Session length</guilabel>: This is the amount of time, in seconds, before your users' sessions expire. Valid values are positive integers greater than or equal to 60.</para></listitem>
 						<listitem><para><guilabel>Limit sessions</guilabel>: It is also possible to control the maximum amount of sessions your board will handle before your board will go offline and be temporarily disabled. Specifically, if the number of sessions your board is serving exceeds this value within a one-minute period, the board will go offline and be temporarily disabled. All positive integers are valid values. Set this to &quot;0&quot; if you want to allow an unlimited amount of sessions.</para></listitem>
 						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
 					</itemizedlist>
@@ -1006,7 +1006,7 @@
 			
 			<para>To manage orphaned attachments, click on <guimenuitem>Orphaned attachments</guimenuitem> on the left-hand menu once you're in the <guimenuitem>Posting</guimenuitem> settings section of the <glossterm>ACP</glossterm>. You should see a list of all orphaned attachments in the table, along with all the important information regarding each orphaned attachment.</para>
 			
-			<para>You can assign an orphaned post to a specific post. To do so, you must first find the post's post ID. Enter this value into the <guilabel>Post ID</guilabel> column for the particular orphaned attachment. Enable <guilabel>Attach file to post</guilabel>, then click <guilabel>Submit</guilabel>.</para>
+			<para>You can assign an orphaned attachment to a specific post. To do so, you must first find the post's post ID. Enter this value into the <guilabel>Post ID</guilabel> column for the particular orphaned attachment. Enable <guilabel>Attach file to post</guilabel>, then click <guilabel>Submit</guilabel>.</para>
 		
 			<para>To delete an orphaned attachment, check the orphaned attachment's <guilabel>Delete</guilabel> checkbox, then click <guilabel>Submit</guilabel>. Note that this cannot be undone.</para>
 		</section>
