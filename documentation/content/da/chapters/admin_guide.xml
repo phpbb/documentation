@@ -10,7 +10,7 @@
 			<holder>Olympus DK Team</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Administratorguide</title>
+	<title>Administratorvejledning</title>
 	<abstract>
 		<para>Kapitlet beskriver administrators muligheder i phpBB 3.0.</para>
 	</abstract>
@@ -530,7 +530,7 @@
 					<itemizedlist>
 						<title>Generelle indstillinger</title>
 						<listitem><para><guilabel>Begræns systembelastning</guilabel>: Hvis systembelastningen i gennemsnit over 1 minut overskrider denne værdi, vil boardet gå offline, &quot;1.0&quot; er lig ~100% belastning af en processor. Dette virker kun på UNIX-baserede servere og hvor denne information er tilgængelig. Værdien nulstiller sig selv hvis phpBB ikke var i stand til at finde belastningsgrænsen. Alle positive værdier er gyldige. Hvis din server er udstyret med to CPU'er svarer værdien &quot;2.0&quot; til 100% belastning af begge CPU'er. &quot;0&quot; deaktiverer denne begrænsning.</para></listitem>
-						<listitem><para><guilabel>Sessioners varighed</guilabel>: Dine brugeres sessioner udløber efter det angivne antal sekunder. Alle positive heltal er gyldige. Angiv &quot;0&quot; hvis du ønsker at sessioner ikke skal udløbe.</para></listitem>
+						<listitem><para><guilabel>Sessioners varighed</guilabel>: Brugeres sessioner udløber efter det angivne antal sekunder. Alle positive værdier større end eller lig med 60 er gyldige.</para></listitem>
 						<listitem><para><guilabel>Begræns sessioner</guilabel>: Det er muligt at kontrollere hvor mange samtidige sessioner der tillades på boardet. Overskrides antallet inden for et minut, vil boardet midlertidigt gå offline. Alle positive heltal er gyldige. Angiv <guilabel>0</guilabel> hvis du ikke ønsker denne begrænsning.</para></listitem>
 						<listitem><para><guilabel>Varighed af onlineinformation</guilabel>: Tid i minutter hvorefter inaktive brugere bliver fjernet fra listen <guilabel>Hvem er online</guilabel>. Jo større tidsrum, desto længere behandlingstid for at generere listen. Alle positive heltal er gyldige.</para></listitem>
 					</itemizedlist>
@@ -848,7 +848,7 @@
 			<para>Den anden mulighed er at tilføje smilies manuelt. Smilies uploades også til mappen <filename>/images/smilies/</filename>. Klik på <guilabel>Tilføj mange smilies</guilabel> nederst på siden. Er de nye smilies korrekt uploadet, kan du herefter tilføje smilies enkeltvis og bestemme dens indstillinger. I det følgende gennemgås indstillingsmulighederne. Når du har tilføjet en smiley afsluttes ved at klikke på <guilabel>Udfør</guilabel>.</para>
 		
 			<itemizedlist>
-				<listitem><para><guilabel>Smilies</guilabel>: I denne kollonne vises selve smileyen.</para></listitem>
+				<listitem><para><guilabel>Smilies</guilabel>: I denne kolonne vises selve smileyen.</para></listitem>
 				<listitem><para><guilabel>Smileys placering</guilabel>: Her vises stien til smileyen, relativt i forhold til mappen <filename>/images/smilies/</filename>.</para></listitem>
 				<listitem><para><guilabel>Smileykode</guilabel>: Den tekst som erstattes af smileyen.</para></listitem>
 				<listitem><para><guilabel>Følelse</guilabel>: Smileyens titel.</para></listitem>
@@ -942,7 +942,7 @@
 			
 			<para>For at tilføje en ny filtype anvendes afsnittet <guilabel>Tilføj filtype</guilabel>. I feltet <guilabel>Filtype</guilabel> angives filendelse uden punktummet før endelsen. Vælg herefter i dropdownmenuen <guilabel>Filtypegruppe</guilabel>, hvilken gruppe den nye filtype skal tilknyttes. Klik herefter på <guilabel>Udfør</guilabel>.</para>
 		
-			<para>I oversigten umiddelbart under ses de filtyper som i øjeblikket er tilladte på boardet. For at ændre en filtypes gruppetilknytning vælges en anden filtypegruppe i dropdownmenuen ud for filtypen. En filtype slettes ved at mærke boksen i kollonnen <guilabel>Slet</guilabel> af og klikke på <guilabel>Udfør</guilabel> nederst på siden.</para>
+			<para>I oversigten umiddelbart under ses de filtyper som i øjeblikket er tilladte på boardet. For at ændre en filtypes gruppetilknytning vælges en anden filtypegruppe i dropdownmenuen ud for filtypen. En filtype slettes ved at mærke boksen i kolonnen <guilabel>Slet</guilabel> af og klikke på <guilabel>Udfør</guilabel> nederst på siden.</para>
 		</section>
 		
 		<section id="acp_attach_extension_groups">
@@ -988,9 +988,9 @@
 			
 			<para>Det sker at vedhæftede filer mister tilhørsforhold, hvilket betyder at de er tilstede i den modtagemappen for vedhæftede filer (se afsnittet <link linkend="acp_attach_settings">Vedhæftede filer</link>), men ikke tilknyttet indlæg. Det sker oftest, når brugere vedhæfter filer, men ikke får klikket <guilabel>Udfør</guilabel> på det endelige indlæg.</para>
 			
-			<para>I fanebladet <guimenuitem>Meddelelser</guimenuitem> klikkes på <guimenuitem>Vildfarne vedhæftede filer</guimenuitem> i menuen til venstre se en liste indeholdende alle vildfarne filer.</para>
+			<para>I fanebladet <guimenuitem>Meddelelser</guimenuitem>, klikkes på <guimenuitem>Vildfarne vedhæftede filer</guimenuitem> i menuen til venstre. Her vises en tabel indeholdende alle vildfarne filer og al vigtig information knyttet til hver fil.</para>
 			
-			<para>Herfra er det muligt at tilknyttet filen til et indlæg. Først skal du have fundet indlæggets ID, som kan ses i browserens adresselinie når indlægget læses - eksempelvis ..../viewtopic.php?f=43&amp;t=227#p1014, hvor 1014 er indlæggets ID. Angiv denne ID i kollonnen <guilabel>Indlæggets ID</guilabel> for den aktuelle fil. Afmærk herefter boksen <guilabel>Vedhæft fil til indlæg</guilabel> og afslut med at klikke på <guilabel>Udfør</guilabel> nederst.</para>
+			<para>Herfra er det muligt at tilknyttet filen til et bestemt indlæg. Først skal du have fundet indlæggets ID, som kan ses i browserens adresselinie når indlægget læses - eksempelvis ..../viewtopic.php?f=43&amp;t=227#p1014, hvor 1014 er indlæggets ID. Angiv denne ID i kolonnen <guilabel>Indlæggets ID</guilabel> for den aktuelle fil. Afmærk herefter boksen <guilabel>Vedhæft fil til indlæg</guilabel> og afslut med at klikke på <guilabel>Udfør</guilabel> nederst.</para>
 		
 			<para>En vildfaren fil kan slettes ved at afmærke boksen <guilabel>Slet</guilabel> yderst til højre i oversigten og klikke på <guilabel>Udfør</guilabel>. Bemærk at sletningen er uigenkaldelig og kan ikke fortrydes.</para>
 		</section>
@@ -2249,7 +2249,7 @@
 			<note>
 					<para>I <link linkend="acp_general_config">Board grundlæggende</link> er det muligt at vælge en sprogpakke som boardets standardsprog.</para>
 			</note>
-			<para>Hvis du ikke er fortrolig med at redigere i PHP-filer i en teksteditor og alligevel gerne vil ændre tekststrenge vist på boardet, kan den indbyggede funktion til at rette sproglinier med tages i anvendelse. I oversigten <guilabel>Installerede sprogpakker</guilabel> klikkes på sprogpakkens navn i kollonnen til venstre. Herefter kan sprogpakkeinformationer og indholdet i de inkluderede sprogpakkefiler redigeres. Er der flere sprogpakker installeret og du vælger en anden end standardpakken, vises øverst en oversigt over ikke oversatte sprognøgler hvis pakkerne ikke synkroniseret. Det er nyttigt når der installeres MODs på et sprog og du ikke kan finde de sproglinier der mangler for et andet sprog.</para>
+			<para>Hvis du ikke er fortrolig med at redigere i PHP-filer i en teksteditor og alligevel gerne vil ændre tekststrenge vist på boardet, kan den indbyggede funktion til at rette sproglinier med tages i anvendelse. I oversigten <guilabel>Installerede sprogpakker</guilabel> klikkes på sprogpakkens navn i kolonnen til venstre. Herefter kan sprogpakkeinformationer og indholdet i de inkluderede sprogpakkefiler redigeres. Er der flere sprogpakker installeret og du vælger en anden end standardpakken, vises øverst en oversigt over ikke oversatte sprognøgler hvis pakkerne ikke synkroniseret. Det er nyttigt når der installeres MODs på et sprog og du ikke kan finde de sproglinier der mangler for et andet sprog.</para>
 			<para>Vælger du at redigere en fil med det indbyggede værktøj, er der to metoder hvormed oversættelsen kan opdateres på boardet. Du kan vælge at <guilabel>Udfør</guilabel>e eller <guilabel>Indsend og download</guilabel>e filen, som lagre den ændrede fil i mappen <filename>store/</filename> og bliver desuden tilbudt som download hvis du vælger sidstnævnte. Herefter skal du manuelt med FTP flytte filen fra store-mappen til sprogpakken, og herved overskrive den tidligere udgave af filen. Den anden mulighed, som findes umiddelbart under de to førnævnte knapper, giver mulighed for at flytte filen til sprogpakken direkte med FTP. Du vil her blive afkrævet FTP-login informationer, og filen kan gemmes og opdateres direkte af scriptet.</para>
 		</section>
 		<section id="acp_system_phpinfo">

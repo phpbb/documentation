@@ -10,7 +10,7 @@
 			<holder>Olympus DK Team</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Redaktørguide</title>
+	<title>Redaktørvejledning</title>
 	<abstract>
 		<para>Dette kapitel beskriver redaktørfunktionerne i phpBB 3.0.x.</para>
 	</abstract>
@@ -23,7 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Redigering af indlæg</title>
-		<para>Redaktører med tilladelser i relevante fora kan redigere i emner og indlæg. Normalt kan man se redaktører i forumbeskrivelserne på boardindekset. En bruger med redaktørstatus har adgang til knappen <guilabel>Rediger</guilabel> i alle indlæg. Herudover kan redaktører:</para>
+		<para>Redaktører med tilladelser i relevante fora kan redigere i emner og indlæg, også selvom forummet er låst. Normalt kan man se redaktører i forumbeskrivelserne på boardindekset. En bruger med redaktørstatus har adgang til knappen <guilabel>Rediger</guilabel> i alle indlæg. Herudover kan redaktører:</para>
 	
 		<variablelist>
 			<varlistentry>

@@ -52,8 +52,13 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) med understøttelse af den databasetype du agter at anvende. Er følgende moduler tilgængelige på serveren, giver de adgang til yderligere funktioner via PHP, men de er ikke krævede.</para>
+				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) med understøttelse af den databasetype du agter at anvende.</para>
+			</listitem>
+			<listitem>
 				<para>Funktionen getimagesize() skal være aktiveret.</para>
+			</listitem>
+			<listitem>
+				<para>Er følgende moduler tilgængelige på serveren, giver de adgang til yderligere funktioner via PHP, men de er ikke krævede.</para>
 				<itemizedlist>
 					<listitem>
 						<para>zlib-komprimering</para>
@@ -314,7 +319,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Siden med <guilabel>Forumtilladelser</guilabel> viser to kollonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kollonner navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst et af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel>, hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kollonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst et af de valgte fora.</para>
+			<para>Siden med <guilabel>Forumtilladelser</guilabel> viser to kolonner, hvor henholdsvis brugere og grupper kan vælges (se <xref linkend="img_quick_permissions_select" />). De to kolonner navngivet <guilabel>Brugere</guilabel> og <guilabel> Grupper</guilabel> viser brugere og grupper som allerede har tilladelser til mindst et af de valgte fora. Du kan vælge disse og ændre tilladelserne med <guilabel>Ret tilladelser</guilabel>, eller med <guilabel>Fjern tilladelser</guilabel>, hvis du ønsker at de valgte brugere/grupper ikke skal have tilladelser til forummet, og som herefter ikke kan se det. Medmindre brugerne er medlem af endnu en gruppe som stadig har adgang. Felterne i bunden af hver kolonne giver mulighed for at tilføje nye brugere og grupper som i øjeblikket ikke har tilladelser til mindst et af de valgte fora.</para>
 			<para>For at tilføje tilladelser til grupper vælges en eller flere, i feltet <guilabel>Tilføj grupper</guilabel>. For at tilføje tilladelser til en bruger, indtastes denne i tekstboksen <guilabel>Tilføj brugere</guilabel>, eller brug funktionen <guilabel>Find en tilmeldt bruger</guilabel>. Klik herefter på <guilabel>Tilføj tilladelser</guilabel>, som dirigerer dig videre til tilladelseskærmbilledet. Her listes alle de fora du tidligere valgte, med de grupper eller brugere der ændres tilladelser for nedenfor hvert forum. </para>
 			<para>Der er to metoder til at tildele tilladelser: Du kan enten tildele dem manuelt eller bruge de foruddefinerede <guilabel>Tilladelseroller</guilabel>, som er noget simplere, men ikke så fintmaskede. Du kan skifte mellem begge metoder når som helst i processen. Du kan vælge at ignorere introduktionen til manuelle tilladelser og hoppe direkte til afsnittet <link linkend="quick_permissions_roles">&quot;Tilladelseroller&quot;</link>, hvis du er ivrig efter at få alt til at virke hurtigst muligt. Men vær som nævnt opmærksom på at disse roller kun tilbyder et ganske lille udsnit af de muligheder man har i tilladelsesystemet. Efter vores opfattelse forstår en god Olympusadministrator at udnytte tilladelsesystemet fuldt ud.</para>
 			<para>De to metoder adskiller sig kun ved den måde indstillingen foretages på, de deler samme interface.</para>

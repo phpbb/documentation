@@ -10,7 +10,7 @@
 			<holder>Olympus DK Team</holder>
 		</copyright>
 	</chapterinfo>
-	<title>Brugerguide</title>
+	<title>Brugervejledning</title>
 	<abstract>
 		<para>Dette kapitel er rettet mod boardets brugere, og forklarer alle funktioner i brugergrænsefladen.</para>
 	</abstract>
@@ -484,7 +484,7 @@
 			<varlistentry>
 				<term>Andre sorteringsmetoder</term>
 				<listitem>
-					<para>Du kan også sortere listen efter de muligheder der er synlige i dropdownmenuen.</para>
+					<para>Listen kan sorteres efter de muligheder der er tilgængelige i dropdownmenuen.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -495,5 +495,9 @@
 				</listitem>
 			</varlistentry>
 		</variablelist>
+		
+		<note>
+			<para>Ikke alle typografier tilbyder at vælge sorteringsmetode i en dropdownmenu.</para>
+		</note>
 	</section>
 </chapter>
