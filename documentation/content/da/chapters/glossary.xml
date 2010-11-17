@@ -34,7 +34,7 @@
 			<varlistentry>
 				<term>ACP</term>
 				<listitem>
-					<para><link linkend="admin_control_panel"><acronym>ACP</acronym></link> er en forkortelse af &quot;Administratorkontrolpanel&quot;.  Her kan du som administrator, kontrollere og indstille alle funktioner på dit board.</para>
+					<para><link linkend="admin_control_panel"><acronym>ACP</acronym></link> er en forkortelse af &quot;Administratorkontrolpanel&quot;. Her kan du som administrator, kontrollere og indstille alle funktioner på dit board.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -74,9 +74,16 @@
 			</varlistentry>
 			
 			<varlistentry>
+				<term>CAPTCHA</term>
+				<listitem>
+					<para>Forkortelsen af &quot;Completely Automated Public Turing-test to tell Computers and Humans Apart&quot;, en test eller en opgave som har til formål at til at skelne computere fra mennesker. I phpBB anvendes forskellige CAPTCHA-moduler til bekæmpelse af tilmeldinger og indlæg fra spambotter.</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
 				<term>Chmod</term>
 				<listitem>
-					<para><abbrev>chmod</abbrev> er en måde at ændre en fils tilladelser på en *nix-server (UNIX, Linux, etc.). Filerne i phpBB skal være chmodded til 644, mapper til 755. Avatar uploadmappen og cachemappen til 777. Du kan finde mere information om chmod i dokumentationen til din <acronym>FTP</acronym>-klient.</para>
+					<para><abbrev>Chmod</abbrev> er definitionen på mappe- og fil-tilladelser på en *nix-server (UNIX, Linux, etc.). Filerne i phpBB skal være chmodded til 644, mapper til 755. Avatar uploadmappen og cachemappen til 777. Du kan finde mere information om chmod i dokumentationen til din <acronym>FTP</acronym>-klient.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -90,7 +97,7 @@
 			<varlistentry>
 				<term>Database</term>
 				<listitem>
-					<para>En database er information gemt på en struktureret og organiseret måde (i tabeller, række og kollonner). Databaser giver en hurtig og fleksibel metode til at opbevare data, i modsætning til den anden også meget anvendte metode, hvor data gemmes i "flade" filer. phpBB 3.0 understøtter flere forskellige <acronym>DBMSs</acronym>  og gemmer information om brugere, indlæg, emner m.m. i databasesystemet. Det er nemt at foretage backup af databasen og gendanne denne.</para>
+					<para>En database er information gemt på en struktureret og organiseret måde (i tabeller, række og kolonner). Databaser giver en hurtig og fleksibel metode til at opbevare data, i modsætning til den anden også meget anvendte metode, hvor data gemmes i "flade" filer. phpBB 3.0 understøtter flere forskellige <acronym>DBMSs</acronym>  og gemmer information om brugere, indlæg, emner m.m. i databasesystemet. Det er nemt at foretage backup af databasen og gendanne denne.</para>
 				</listitem>
 			</varlistentry>
 			

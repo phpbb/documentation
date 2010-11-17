@@ -49,7 +49,7 @@
 		</figure>
 		<para>Linket <guilabel>Tilmeld</guilabel> øverst på siden leder dig til boardets regler. Hvis du accepterer disse fortsætter tilmeldingsproceduren. Hvis du ikke accepterer betingelserne er det ikke muligt at tilmelde sig. I nogle tilfælde kan du blive bedt om at vælge om du er over eller under en bestemt alder. Hvis det er tilfældet, er det fordi administratoren har valgt at følge den amerikanske lov <acronym>COPPA</acronym>. Personer under 13 år skal have en forældre eller værges godkendelse for at tilmelde sig offentlige boards. Der fremsendes en email med yderligere instrukser.</para>
 		<para>Næste trin er udfyldelse af personlig information hvor du selv vælger brugernavn, emailadresse, kodeord, sprog og tidzone.</para>
-		<para>Nederst på samme side vil du normalt se sektionen <emphasis>Bekræftelse på tilmelding</emphasis>, indeholdende et grafikfelt med nogle bogstaver og tal som udgør din kode. Indtast disse tegn i feltet umiddelbart under <guilabel>Bekræftelseskode</guilabel>. Mange boards anvender denne metode, kaldet <acronym>CAPTCHA</acronym>, for bedst muligt at blokere for tilmeldinger fra spamrobotter. Er tegnene for svære at aflæse, kan du prøve at genopfriske siden, for at få vist en ny kode.</para>
+		<para>Nederst på samme side vil du normalt se sektionen <emphasis>Bekræftelse på tilmelding</emphasis>. Mange boards anvender denne bekræftelse, kaldet <acronym>CAPTCHA</acronym>, for bedst muligt at blokere for tilmeldinger fra spambotter. Bekræftelsen vil oftest bestå i at svare på et spørgsmål eller aflæse en kode.</para>
 		<figure id="user_registering_captcha">
 			<title>Visuel bekræftelse</title>
 			<mediaobject>
@@ -57,7 +57,7 @@
 					<imagedata format="PNG" fileref="../images/user_guide/visual_confirmation.png"/>
 				</imageobject>
 				<caption>
-					<para>Et eksempel på koden der vises i den visuelle bekræftelse.</para>
+					<para>Et eksempel på visuel bekræftelse.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -96,18 +96,18 @@
 			
 			<section id="ucp_subscriptions">
 				<title>Overvågning</title>
-				<para>Du kan vælge at overvåge udvalgte fora og emner, og hermed modtage advisering når der indsendes nye emner eller indlæg i disse. En overvågning oprettes via forummet eller emnet ved at klikke på linket &quot;Overvåg forum/emne&quot; nederst på siden.</para>
-				<para>Man kan fjerne en overvågning fra UCP ved at vælge overvågningen og herefter klikke på knappen <guilabel>Stop overvågning af valgte</guilabel> nederst.</para>
+				<para>Du kan vælge at overvåge udvalgte fora og emner, og hvorved du modtager besked når der indsendes nye emner eller indlæg i disse. En overvågning oprettes via forummet eller emnet ved at klikke på linket &quot;Overvåg forum/emne&quot; nederst på siden.</para>
+				<para>Man kan fjerne en overvågning fra UCP, ved at vælge overvågningen og herefter klikke på knappen <guilabel>Stop overvågning af valgte</guilabel> nederst.</para>
 			</section>
 			<section id="ucp_bookmarks">
 				<title>Bogmærker</title>
-				<para>Et bogmærke er næsten identisk med overvågning, med to undtagelser: 1) kun emner kan bogmærkes, 2) man modtager ikke advisering når der indsendes indlæg i emnet.</para>
+				<para>Et bogmærke er næsten identisk med overvågning, med to undtagelser: 1) kun emner kan bogmærkes, 2) man modtager ikke besked når der indsendes indlæg i emnet.</para>
 				<para>Man bogmærker et emne ved at klikke på linket &quot;Bogmærk emne&quot; nederst på siden hvor man læser emnet.</para>
 				<para>Man kan fjerne et bogmærke fra UCP ved at vælge bogmærket og herefter klikke på knappen <guilabel>Fjern valgte bogmærker</guilabel>.</para>
 			</section>
 			<section id="ucp_drafts">
 				<title>Kladder</title>
-				<para>Du kan gemme en kladde når du skriver nye emner eller indlæg ved at klikke på knappen <guilabel>Gem</guilabel>. I oversigten over gemte kladder vises titlen på dit indlæg, det forum eller emne du skrev kladden til og datoen du gemte den.</para>
+				<para>Du kan gemme en kladde når du skriver nye emner eller indlæg ved at klikke på knappen <guilabel>Gem kladde</guilabel>. I oversigten over gemte kladder vises titlen på dit indlæg, det forum eller emne du skrev kladden til og datoen du gemte den.</para>
 				<para>For at fortsætte redigeringen af kladden klikkes på linket &quot;Indlæs kladde&quot;. Når du har færdiggjort redigeringen og vil indsende indlægget, klikker du på <guilabel>Udfør</guilabel>. For at slette en kladde vinges boksen til højre for kladden af og der klikkes på <guilabel>Slet valgte</guilabel>.</para>
 			</section>
 			<section id="ucp_attachments">
@@ -164,7 +164,7 @@
 						<listitem><para><guilabel>Brugere må sende mig private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> kan andre brugere sende dig private beskeder via boardet.</para></listitem>
 						<listitem><para><guilabel>Skjul min onlinestatus</guilabel>: Vælges <guilabel>Ja</guilabel> skjules din onlinestatus for andre brugere. Administratorer og redaktører vil stadig kunne se din onlinestatus.</para></listitem>
 						<listitem><para><guilabel>Jeg ønsker at få information om nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> afsendes en email fra boardet med information om at du har modtaget en ny privat besked.</para></listitem>
-						<listitem><para><guilabel>Popupvindue ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> adviseres du med et popupvindue om nye private beskeder.</para></listitem>
+						<listitem><para><guilabel>Popupvindue ved nye private beskeder</guilabel>: Vælges <guilabel>Ja</guilabel> mødes du af et popupvindue ved log ind.</para></listitem>
 						<listitem><para><guilabel>Mit sprog</guilabel>: I dropdownmenuen vises de sprog der er installeret på boardet, du kan vælge hvilket af disse du ønsker at anvende på boardet. Bemærk at indlæg skrevet på et andet sprog stadig bliver vist på dette.</para></listitem>
 						<listitem><para><guilabel>Min tidszone</guilabel>: Du indstiller her den tidszone du befinder dig i.</para></listitem>
 						<listitem><para><guilabel>Sommertid/DST er slået til</guilabel>: Vælges <guilabel>Ja</guilabel> vises tider en time tidligere end den valgte tidszone. Bemærk at denne indstilling skal ændres manuelt hved hvert skift fra sommer- til vintertid og omvendt.</para></listitem>
@@ -174,13 +174,13 @@
 			</section>
 			<section id="ucp_posting">
 				<title>Skriveindstillinger</title>
-				<para>Disse indstillinger bestemmer standardvalg når du skriver nye indlæg. Bemærk at hver af indstillingerne kan ændres individuel når et indlæg skrives.</para>
+				<para>Disse indstillinger bestemmer standardvalg når du skriver nye indlæg. Bemærk at disse kan ændres individuelt når et indlæg skrives.</para>
 				<para>
 					<itemizedlist>
 						<listitem><para><guilabel>BBkode aktiveret som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere BBkode ved skrivning af indlæg.</para></listitem>
 						<listitem><para><guilabel>Smilies aktiveret som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at aktivere smilies ved skrivning af indlæg.</para></listitem>
 						<listitem><para><guilabel>Tilføj min signatur som standard</guilabel>: Vælg <guilabel>Ja</guilabel> for at få tilføjet signatur i indlæg.</para></listitem>
-						<listitem><para><guilabel>Giv mig besked ved besvarelse</guilabel>: Vælg <guilabel>Ja</guilabel> for at få advisering når indlæg besvares.</para></listitem>
+						<listitem><para><guilabel>Giv mig besked ved besvarelse</guilabel>: Vælg <guilabel>Ja</guilabel> for at få besked når indlæg besvares.</para></listitem>
 					</itemizedlist>
 					
 				</para>
@@ -304,21 +304,21 @@
 		</section>
 		<section id="posting_drafts">
 			<title>Kladde</title>
-			<para>Når der oprettes et indlæg kan det gemmes og genindlæses senere. Hvis boardet tillader dette, er knappen <guilabel>Gem</guilabel> og <guilabel>Indlæs</guilabel> umiddelbart under feltet hvor indlægsteskt skrives.</para>
+			<para>Når der oprettes et indlæg kan det gemmes og genindlæses senere. Hvis boardet tillader dette, vises knapperne <guilabel>Gem kladde</guilabel> og <guilabel>Indlæs kladde</guilabel> umiddelbart under feltet hvor indlægstekst skrives.</para>
  			<itemizedlist>
- 				<listitem><para><guilabel>Gem</guilabel> - Indlægget gemmes som en kladde. Kun emnetitel og indlægstekst gemmes. Emneikoner og vedhæftede filer mistes.</para></listitem>
-				<listitem><para><guilabel>Indlæs</guilabel> - Genindlæser en gemt kladde. Når denne vælges, vises en liste af tilgængelige kladder, vælg den rette ved at klikke på dens titel. Allerede skrevet indlægstekst erstattes med kladdens fulde tekst..</para></listitem>
+ 				<listitem><para><guilabel>Gem kladde</guilabel> - Indlægget gemmes som en kladde. Kun emnetitel og indlægstekst gemmes. Emneikoner og vedhæftede filer mistes.</para></listitem>
+				<listitem><para><guilabel>Indlæs kladde</guilabel> - Genindlæser en gemt kladde. Når denne vælges, vises en liste af tilgængelige kladder, vælg den rette ved at klikke på dens titel. Allerede skrevet indlægstekst erstattes med kladdens fulde tekst.</para></listitem>
 			</itemizedlist>
 			<para>Når en kladde er anvendt slettes den. Læs mere om brug af kladder i <link linkend="ucp_drafts">UCP Kladder</link>.</para>
 			<note>
-				<para>Er ingen kladder gemt, vises knappen <guilabel>Indlæs</guilabel> ikke.</para>
+				<para>Er ingen kladder gemt, vises knappen <guilabel>Indlæs kladde</guilabel> ikke.</para>
  			</note>
 		</section>
 	</section>
 	<section id="user_pm">
 		<title>Kommunikation med private beskeder</title>
 		<para>phpBB 3.0 giver brugerne mulighed for at kommunikere privat med beskedsystemet. Man kan gå direkte til beskedsystemet ved at klikke på linket [X nye beskeder] på boardindekset i venstre side næsten øverst, eller direkte via <link linkend="user_control_panel">brugerkontrolpanelet</link>.</para>
-		<para>Der er tre måder hvormed du kan blive adviseret om at der er nye private beskeder til dig:</para>
+		<para>Der er tre metoder til at få besked om nye private beskeder:</para>
 		<orderedlist>
 			<listitem>
 				<para>Du modtager en e-mail, og/eller en Jabberbesked hvis administratoren sat boardet op til at kommunikere med en Jabberserver</para>
@@ -330,7 +330,7 @@
 				<para>Linket [X nye beskeder] viser altid antallet af ulæste beskeder i din indbakke</para>
 			</listitem>
 		</orderedlist>
-		<para>Du kan under fanen <link linkend="ucp_preferences">boardindstillinger</link> vælge hvilke metoder du foretrækker. Bemærk at du i nogle browsere skal tillade popupvinduer fra boardet, for at få glæde at denne advisering.</para>
+		<para>Du kan under fanen <link linkend="ucp_preferences">boardindstillinger</link> vælge hvilke metoder du foretrækker. Bemærk at du i nogle browsere skal tillade popupvinduer fra boardet, for at få glæde at denne metode.</para>
 		<para>Du kan fravælge at modtage private beskeder fra andre brugere i <link linkend="ucp_preferences">boardindstillinger</link>. Administratorer og redaktører vil stadig kunne sende dig private beskeder selvom du har fravalgt at modtage beskeder fra andre brugere.</para>
 		<para>Muligheden for at anvende private beskeder forudsætter at du er tilmeldt boardet og har de rette tilladelser.</para>
 		<section id="pm_display">

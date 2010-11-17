@@ -38,7 +38,10 @@
 						<para>MySQL 3.23 eller over</para>
 					</listitem>
 					<listitem>
-						<para>MS SQL Server 2000 eller over (direkte eller via ODBC)</para>
+						<para>MSSQL Server 2000 eller over (direkte eller via ODBC)</para>
+					</listitem>
+					<listitem>
+						<para>MSSQL Server 2005+ [ Native ]</para>
 					</listitem>
 					<listitem>
 						<para>Oracle</para>
@@ -353,7 +356,7 @@
 		</section>
 		<section id="quick_permissions_roles">
 			<title>Tilladelseroller</title>
-			<para>phpBB3 tilbyder som standard et antal foruddefinerede tilladelsekombinationer defineret som roller, som kan anvendes ved tildeling af tilladelser. Fremfor at skulle tillade hver enkelt funktion manuelt, kan du i stedet vælge en <guilabel>rolle</guilabel> i rullemenuen. Rollebeskrivelsen vises når musen holdes over rollens navn. Udfør dine ændringer med knapperne <guilabel>Angiv tilladelser</guilabel> eller <guilabel>Angiv alle tilladelser</guilabel>, når du er tilfreds med tilpasningerne.</para>
+			<para>phpBB3 tilbyder som standard et antal foruddefinerede tilladelsekombinationer defineret som roller, som kan anvendes ved tildeling af tilladelser. Fremfor at skulle tillade hver enkelt funktion manuelt, kan du i stedet vælge en <guilabel>rolle</guilabel> i rullemenuen. Rollebeskrivelsen vises når musen holdes over rollens navn. Udfør dine ændringer med knapperne <guilabel>Anvend tilladelser</guilabel> eller <guilabel>Anvend alle tilladelser</guilabel>, når du er tilfreds med tilpasningerne.</para>
 			<figure id="img_quick_permissions_roles">
 				<title>Tilladelseroller</title>
 				<mediaobject>
@@ -377,9 +380,9 @@
 			</sectioninfo>
 			<title>Udnævn forumredaktører</title>
 			<para>Det er oftest i forbindelse med redigering af fora at man får brug for at ændre i tilladelser og roller. phpBB3 tilbyder en særdeles simpel metode til at udnævne forumredaktører.</para>
-			<para>Som du sikkert allerede har gættet, er redigering af specifikke fora en lokal indstilling, og du finder <guilabel>Forumredaktører</guilabel> under sektionen <guilabel>Forumbaserede tilladelser</guilabel>. Først skal du vælge hvilket forum eller flere duk vil udnævne nye redaktører for. Skærmbilledet er delt i tre sektioner. I den første kan du vælge et forum eller flere (vælg flere ved at holde CTRL tasten nede , eller cmd under MacOS X), hvor de redaktørindstillinger du efterfølgende foreta'r vil gøre sig gældende. Den anden sektion giver dig mulighed for at vælge et forum hvor alle indstillingsændringer vil gælde for dette forum inklusive alle dets underfora. I den sidste sektion vælger du kun at ændre for dette specifikke forum.</para>
-			<para>Når forum er valgt og du har klikket på <guilabel>Udfør</guilabel> præsenteres du for et skærmbillede du sikkert er stødt på før tidligere i denne manual: <xref linkend="img_quick_permissions_select"/>. Her vælger du de brugere eller grupper der skal have tildelt redaktørtilladelser i de fora du valgte før. Vælg disse og klik på knappen <guilabel>Angiv tilladelser</guilabel>.</para>
-			<para>I det næste skærmbillede kan du vælge hvilke redaktørtilladelser de valgte brugere eller brugergrupper skal have tildelt. I phpBB3 er der foruddefineret fire redaktørroller med hver sit tilladelsessæt, som skulle være dækkende for langt de fleste boards:</para>
+			<para>Som du sikkert allerede har gættet, er redigering af specifikke fora en lokal indstilling, og du finder <guilabel>Forumredaktører</guilabel> under sektionen <guilabel>Forumbaserede tilladelser</guilabel>. Først skal du vælge hvilket forum eller flere du vil udnævne nye redaktører for. Skærmbilledet er delt i tre sektioner. I den første kan du vælge et forum eller flere (vælg flere ved at holde CTRL tasten nede , eller cmd under MacOS X), hvor de redaktørindstillinger du efterfølgende foreta'r vil gøre sig gældende. Den anden sektion giver dig mulighed for at vælge et forum hvor alle indstillingsændringer vil gælde for dette forum inklusive alle dets underfora. I den sidste sektion vælger du kun at ændre for dette specifikke forum.</para>
+			<para>Når forum er valgt og du har klikket på <guilabel>Udfør</guilabel> præsenteres du for et skærmbillede du sikkert er stødt på før tidligere i denne manual: <xref linkend="img_quick_permissions_select"/>. Her vælger du de brugere eller grupper der skal have tildelt redaktørtilladelser i de fora du valgte før. Vælg disse og klik på knappen <guilabel>Anvend tilladelser</guilabel>.</para>
+			<para>I det næste skærmbillede kan du vælge hvilke redaktørtilladelser de valgte brugere eller brugergrupper skal have tildelt. I phpBB3 er der foruddefineret fire redaktørroller med hver sit tilladelsesæt, som skulle være dækkende for langt de fleste boards:</para>
 			<variablelist>
 				<varlistentry>
 					<term>Standardredaktør</term>
@@ -417,7 +420,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Når du har valgt passende tilladelser klikker du ganske enkelt på <guilabel>Angiv tilladelser</guilabel>. De rollebaserede tilladelser kan ændres og justeres mere detaljeret i samme skærmbillede, hvis du ikke synes disse er helt passende.</para>
+			<para>Når du har valgt passende tilladelser klikker du ganske enkelt på <guilabel>Anvend tilladelser</guilabel>. De rollebaserede tilladelser kan ændres og justeres mere detaljeret i samme skærmbillede, hvis du ikke synes disse er helt passende.</para>
 		</section>
 
 		<section id="quick_permissions_global">
