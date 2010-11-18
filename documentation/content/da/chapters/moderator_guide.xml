@@ -228,7 +228,7 @@
 		<title>Hvad indeholder godkendelsekøen?</title>
 		<para>Hvis tilladelser for fora eller brugere er indstillet (i <link linkend="admin_control_panel">Administratorkontrolpanelet</link>) til at nye indlæg skal godkendes, skal denne godkendelse foretages af en administrator eller en redaktør før indlæggene kan ses af andre brugere. Emner og indlæg der afventer godkendelse kan ses i <guilabel>godkendelsekøen</guilabel> som findes i <link linkend="moderator_mcp">Redaktørkontrolpanelet</link>.</para>
 		<para>På forumindekset er endnu ikke godkendte emner mærket med et ikon. Klik på dette ikon og du kommer direkte til redaktørkontrolpanelet og får nu mulighed for at godkende eller afvise emnet. Individuelle indlæg der afventer godkendelse er ledsaget af en meddelelse herom, når emnet gennemses. Meddelelsen linker samtidig til skærmbilledet hvor det kan godkendes eller afvises.</para>
-		<para>Når du godkender et emne eller et indlæg får du mulighed for at vælge om brugeren skal adviseres om godkendelsen. På samme måde får du også mulighed for at advisere brugeren ved en afvisning, og samtidig begrunde afvisningen.</para>
+		<para>Når du godkender et emne eller et indlæg får du mulighed for at vælge om brugeren skal have besked om godkendelsen. På samme måde får du også mulighed for at informere brugeren ved en afvisning, og samtidig begrunde denne.</para>
 		<para>Mere information om redaktørkontrolpanelet findes her <xref linkend="moderator_mcp" />.</para>
 	</section>
 	

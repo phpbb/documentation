@@ -93,7 +93,7 @@
 					<listitem><para>Har du i forbindelse med vedligeholdelse, for eksempel ved opdateringer, brug for at lukke boardet, kan det gøres ved at bruge switchen <guilabel>Deaktiver boardet</guilabel> . Vælg <guilabel>Ja</guilabel> for midlertidigt at lukke boardet. Det forhindrer alle, undtagen administratorer og redaktører, i at få adgang til boardet. Når boardet er slået fra, møder man nu enten en standardmeddelelse, eller en du selv komponerer. Du tilføjer din egen meddelelse i teksfeltet umiddelbart under radioknapperne ja/nej i <guilabel>Deaktiver boardet</guilabel>. Administratorer og redaktører vil stadig have adgang til deres kontrolpaneler mens boardet er slået fra.</para></listitem>
 					<listitem><para>Du skal også vælge boardets <guilabel>Standardsprog</guilabel>. Det er det sprog gæster vil se når de besøger boardet. Du kan tillade at tilmeldte brugere kan vælge andre sprog. Som standard er kun <guilabel>British English</guilabel> installeret, men du kan <ulink url="http://www.phpbb.com/languages">downloade flere sprog på phpBB websitet</ulink> og installere disse på boardet. Læs mere om sprog i <link linkend="acp_system_language">sektionen for konfiguration af sprogpakker</link>.</para></listitem>
 					<listitem><para>Du kan indstille dit boards standarddatoformat. phpBB3 giver mulighed for at vælge mellem nogle meget almindelig måder at vise tid og dato på. Er ingen af disse tilfredsstillende, kan du tilpasse datoformatet ved at vælge <guimenuitem>Brugertilpasset</guimenuitem> i dropdownmenuen for <guilabel>Datoformat</guilabel>. Herefter skriver du det ønskede datoformat i teksfeltet ved siden af. Syntaks for datoformat er det samme som <ulink url="http://www.php.net/date">PHP's date() funktion</ulink>.</para></listitem>
-					<listitem><para>Sammen med indstilling af hvordan tiden skal vises, kan du også vælge boardets tidszone. De tilgængelige tidszoner kan vælges i dropdownmenuen <guilabel>Tidszone for board</guilabel>, som alle er relative i forhold til <acronym>UTC</acronym> (som næsten er identisk med det tidligere anvendte <acronym>GMT</acronym> eller Greenwich Mean Time) tider. Desuden kan du vælge om boardet skal køre med sommertid ved at vælge ja eller net ved punktet <guilabel>Vælg sommertid/DST</guilabel>.</para></listitem>
+					<listitem><para>Sammen med indstilling af hvordan tiden skal vises, kan du også vælge boardets tidszone. De tilgængelige tidszoner kan vælges i dropdownmenuen <guilabel>Tidszone for gæster</guilabel>, som alle er relative i forhold til <acronym>UTC</acronym> (som næsten er identisk med det tidligere anvendte <acronym>GMT</acronym> eller Greenwich Mean Time) tider. Desuden kan du vælge om boardet skal køre med sommertid ved at vælge ja eller net ved punktet <guilabel>Vælg sommertid/DST</guilabel>.</para></listitem>
 					<listitem><para>Den typografi der vises for gæster og som standardvalg for brugere vælges i <guilabel>Standardtypografi</guilabel>. Som standard er phpBB installeret med typografien prosilver med mulighed for også at installere subsilver2. Du kan give brugere mulighed for selv kan vælge mellem de installerede typografier ved at vælge <guilabel>Nej</guilabel> til <guilabel>Tilsidesæt brugeres valg af typografi</guilabel>. Læs i <link linkend="acp_styles">typografisektion</link> hvordan nye typografier tilføjes og hvor de kan findes.</para></listitem>
 				</itemizedlist>
 				
@@ -185,7 +185,7 @@
            <listitem><para>reCaptcha: reCaptcha-servicen. Du skal tilmeldes hos reCaptcha før denne kan tages i brug.</para></listitem>
            <listitem><para>Q&amp;A Captcha: Definer selv spørgsmål og svar.</para></listitem>
         </itemizedlist>
-        <para>Siden er delt i to områder. Toppen - &quot;Generelle valg&quot;, indeholder indstillinger om hvor og hvornår CAPTCHA skal anvendes. Det andet område indeholder valg af udvidelsesmodul, samt konfiguation og demonstration af dette.</para>
+        <para>Siden er delt i to områder. Toppen - &quot;Generelle valg&quot;, indeholder indstillinger om hvor og hvornår CAPTCHA skal anvendes. Det andet område indeholder valg af modul, samt konfiguration og demonstration af dette.</para>
         <figure id="img_acp_captcha">
            <title>CAPTCHA modulindstillinger</title>
            <mediaobject>
@@ -193,7 +193,7 @@
                  <imagedata format="PNG" fileref="../images/admin_guide/captcha.png"/>
               </imageobject>
            <caption>
-           <para>CAPTCHA-siden i ACP.</para>
+           <para>Valg af metode til spambot-beskyttelse i ACP.</para>
            </caption>
            </mediaobject>
         </figure>
@@ -202,7 +202,7 @@
         </tip>
         <itemizedlist>
            <title>Hvordan et CAPTCHA-modul vælges</title>
-           <listitem><para>Klik på dropdownmenuen &quot;Installerede CAPTCHA-udvidelsesmoduler&quot; og vælg det modul du ønsker at tage i brug. Lad ikke moduler anført med gråt stoppe dig, det betyder blot at du behøver at foretage endnu et trin. Er det ønskede modul ikke på listen, undersøges om filerne er tilstede i plugin-mappen.</para></listitem>
+           <listitem><para>Klik på dropdownmenuen &quot;Installerede moduler&quot; og vælg det modul du ønsker at tage i brug. Lad ikke moduler anført med gråt stoppe dig, det betyder blot at du behøver at foretage endnu et trin. Er det ønskede modul ikke på listen, undersøges om filerne er tilstede i plugin-mappen.</para></listitem>
            <listitem><para>Klik på knappen &quot;Konfigurer&quot; for at se det pågældende CAPTCHA-moduls indstillinger. Mange udvidelsesmoduler skal konfigureres før de kan tages i brug. Bemærk at for moduler uden konfigurationsmuligheder vises knappen ikke.</para></listitem>
            <listitem><para>Konfigurer modulet efter dine ønsker.</para></listitem>
            <listitem><para>Efter konfiguration, vælges modulet igen i dropdownfeltet. Det er nu ikke længere anført med gråt.</para></listitem>
@@ -300,7 +300,7 @@
 				</sectioninfo>
 				<title>Jabber</title>
 				
-				<para>phpBB3 kan desuden sende beskeder og adviseringer til brugere via <glossterm>Jabber</glossterm>. Her kan du aktivere og bestemme hvordan boardet gør brug af Jabber.</para>
+				<para>phpBB3 kan desuden sende beskeder til brugere via <glossterm>Jabber</glossterm>. Her kan du aktivere og bestemme hvordan boardet gør brug af Jabber.</para>
 				
 				<note>
 					<para>Nogle Jabber-servere inkluderer gateways eller transporter, der tillader dig at kontakte brugere af andre netværk. Ikke alle servere tilbyder alle former for transporter, og ændringer i protokoller kan forhindre transporter i at fungere. Bemærk at det kan tage flere sekunder at opdatere detaljer for en Jabber-konto, stop ikke før scriptet er afsluttet!</para>
@@ -308,8 +308,8 @@
 				
 				<itemizedlist>
 					<title>Jabber-indstillinger</title>
-					<listitem><para><guilabel>Jabber er</guilabel>: Vælg <guilabel>Aktiv</guilabel>, hvis du vil benyttet Jabber til beskeder og adviseringer.</para></listitem>
-					<listitem><para><guilabel>Jabber-server</guilabel>: Den server dit board skal benyttet. Se <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">liste over offentligt tilgængelige servere</ulink>.</para></listitem>
+					<listitem><para><guilabel>Jabber er</guilabel>: Vælg <guilabel>Aktiv</guilabel>, hvis du vil benytte Jabber til beskeder.</para></listitem>
+					<listitem><para><guilabel>Jabber-server</guilabel>: Den server dit board skal benytte. Se <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">liste over offentligt tilgængelige servere</ulink>.</para></listitem>
 					<listitem><para><guilabel>Jabberport</guilabel>: Den port ovennævnte Jabber-server benytter. Port 5222 er den mest anvendte. Er du usikker på dette, undlad at ændre værdien.</para></listitem>
 					<listitem><para><guilabel>Jabberbrugernavn eller JID:</guilabel>: Angiv en tilmeldt Jabberkonto eller et gyldigt JID. Brugernavnets gyldighed kontrolleres ikke. Anfører du alene brugernavn, sættes dit JID som dette og serveren som specificeret ovenfor. Ellers angives et gyldigt JID, eksempelvis user@jabber.org.</para></listitem>
 					<listitem><para><guilabel>Jabberkodeord</guilabel>: Det tilhørende kodeord til ovenfor angivne Jabberkonto.</para></listitem>
@@ -1368,7 +1368,7 @@
 				</mediaobject>
 			</figure>
 			
-			<para>Du kan nu tildele forumtilladelser til bruger. Der er to metoder at gøre det på: Du kan vælge et eller flere specifikke fora eller vælge en kategori eller et overforum sammen med alle tilknyttede underfora. Klik på <guilabel>Udfør</guilabel> for at fortsætte tildeling af tilladelser i de valgte fora. Siden <guilabel>Indstilling af tilladelser</guilabel> vises nu med samtlige valgte fora repræsenteret. Nu vælges hvilke forumtilladelser du ønsker at ændre. I dropdownmenuen øverst vælges enten <guimenuitem>Forumtilladelser</guimenuitem> eller <guimenuitem>Redaktørtilladelser</guimenuitem>. Klik på <guilabel>Udfør</guilabel> umiddelbart til højre for valgmenuen. Nu kan du vælge den rette rolle for bruger i hvert af foraen. Ønsker du en mere nuanceret tilladelsetildeling, klikkes på linket <guilabel>Avancerede tilladelser</guilabel> ved det pågældende forum (brug radioknapperne i denne nye menu). Når de ønskede ændringer er foretaget, klikkes på <guilabel>Tilføj alle tilladelser</guilabel> hvis du er i <guilabel>Avancerede tilladelser</guilabel>, eller på samme <guilabel>Tilføj alle tilladelser</guilabel> nederst på siden for at udføre alle ændringer foretaget på siden.</para>
+			<para>Du kan nu tildele forumtilladelser til bruger. Der er to metoder at gøre det på: Du kan vælge et eller flere specifikke fora eller vælge en kategori eller et overforum sammen med alle tilknyttede underfora. Klik på <guilabel>Udfør</guilabel> for at fortsætte tildeling af tilladelser i de valgte fora. Siden <guilabel>Indstilling af tilladelser</guilabel> vises nu med samtlige valgte fora repræsenteret. Nu vælges hvilke forumtilladelser du ønsker at ændre. I dropdownmenuen øverst vælges enten <guimenuitem>Forumtilladelser</guimenuitem> eller <guimenuitem>Redaktørtilladelser</guimenuitem>. Klik på <guilabel>Udfør</guilabel> umiddelbart til højre for valgmenuen. Nu kan du vælge den rette rolle for bruger i hvert af foraen. Ønsker du en mere nuanceret tilladelsetildeling, klikkes på linket <guilabel>Avancerede tilladelser</guilabel> ved det pågældende forum (brug radioknapperne i denne nye menu). Når de ønskede ændringer er foretaget, klikkes på <guilabel>Anvend alle tilladelser</guilabel> hvis du er i <guilabel>Avancerede tilladelser</guilabel>, eller på samme <guilabel>Anvend alle tilladelser</guilabel> nederst på siden for at udføre alle ændringer foretaget på siden.</para>
 		</section>
 		
 		<section id="acp_users_custom_profile_fields">
@@ -1388,13 +1388,14 @@
 					<title>Tilføj profilfelt</title>
 					<listitem><para><guilabel>Felttype</guilabel>: Beskrivelse af feltets indhold, jævnfør ovennævnte og bestemmes allerede ved oprettelsen, hvorfor det ikke kan ændres her.</para></listitem>
 					<listitem><para><guilabel>Feltidentifikation</guilabel>: Feltidentifikationen er et entydigt navn til at identificere profilfeltet i databasen og i skabeloner.</para></listitem>
-					<listitem><para><guilabel>Vis profilfelt</guilabel>: Profilfeltet vises på alle sider valgt under <guimenuitem>Belastning</guimenuitem>. Vælges <guilabel>Nej</guilabel>, vises feltet ikke på emnesider, profiler og liste over tilmeldte brugere.</para></listitem>
+					<listitem><para><guilabel>Vis profilfelt offentligt</guilabel>: Profilfeltet vises på alle sider valgt under <guimenuitem>Belastning</guimenuitem>. Vælges <guilabel>Nej</guilabel>, vises feltet ikke på emnesider, profiler og liste over tilmeldte brugere.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
 					<title>Synlighedsindstillinger</title>
 					<listitem><para><guilabel>Vis i brugerkontrolpanel</guilabel>: Afmærkes boksen kan brugere ændre i profilfeltet via brugerkontrolpanelet.</para></listitem>
 					<listitem><para><guilabel>Vis på tilmeldingsskærmbilledet</guilabel>: Afmærk boksen for at vise feltet på skærmbilledet for tilmelding.</para></listitem>
+					<listitem><para><guilabel>Vis når emne læses</guilabel>: Feltet vises i sammen med brugers profil.</para></listitem>
 					<listitem><para><guilabel>Krævet felt</guilabel>: Profilfeltet forlanges udfyldt eller at der foretages valg af bruger eller administrator. Er <guilabel>Vis på tilmeldingsskærmbilledet</guilabel> fravalgt forlanges feltet udfyldt når brugere ændrer i profilinformationer.</para></listitem>
 					<listitem><para><guilabel>Skjul profilfelt</guilabel>: Feltet kan kun ses af brugeren, administratorer og redaktører. Er <guilabel>Vis på tilmeldingsskærmbilledet</guilabel> fravalgt, kan brugeren ikke se eller ændre i feltet. Feltet vil kun kunne ændres af administratorer.</para></listitem>
 				</itemizedlist>
@@ -2220,7 +2221,7 @@
 			</authorgroup>
 			</sectioninfo>
 			<title>Masse-email</title>
-			<para>phpBB giver mulighed for at sende emails til alle brugere som har valgt at modtage den type emails i <link linkend="ucp_preferences">boardindstillinger</link>. Denne meddelelsesform kan anvendes som nyhedsbred, advisering om ændringer på boardet etc. Du kan vælge at sende emailen til alle bruger, en udvalgt brugergruppe eller en liste af specifikke brugere. Emailen afsendes med administrator som afsender og alle modtagere er inkluderet som BCC - Blind Carbon Copy. Modtagere kan altså ikke se andres emailadresser og hvem der i øvrigt har modtaget emailen.</para>
+			<para>phpBB giver mulighed for at sende emails til alle brugere som har valgt at modtage den type emails i <link linkend="ucp_preferences">boardindstillinger</link>. Denne meddelelseform kan anvendes som nyhedsbrev, advisering om ændringer på boardet etc. Du kan vælge at sende emailen til alle brugere, en udvalgt brugergruppe eller en liste af specifikke brugere. Emailen afsendes med administrator som afsender og alle modtagere er inkluderet som BCC - Blind Carbon Copy. Modtagere kan altså ikke se andres emailadresser og hvem der i øvrigt har modtaget emailen.</para>
 			<para>Det kan være et problem at afsende masse-emails, da nogle hostingudbydere har defineret grænser for hvor mange emails der kan afsendes ad gangen. For at imødegå dette afsendes emailen som standard til 50 brugere ad gangen. Er der 1.000 brugere som skal modtage emailen, afsendes den altså 20 gange. Giver afsendelsen alligevel problemer bør du konsultere din hostingudbyder.</para>
 			<itemizedlist>
 				<title>Skriv email</title>

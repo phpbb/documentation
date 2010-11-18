@@ -72,9 +72,9 @@
 					<section id="update_older">
 					<title>Opdatering af ældre versioner</title>
 					<para>Er dit board mange versioner bagud, kan det virke meget uoverskueligt at få det fuldt opdateret. De officielle pakker giver almindeligvis mulighed for at opdatere fra fem versioner tilbage. Opdateringspakkerne til 3.0.5 kan altså opdatere et 3.0.0 board. Imidlertid er scriptet <uri>install/database_update.php</uri> indeholdt i phpBB3.0.4 en undtagelse herfra, det er i stand til at opdatere en RC1 database med alle ændringer helt frem til 3.0.4.</para>
-					<para>Det er altså muligt at opdatere alle boards fra RC1 med afvikling af et antal databaseopdateringscripts, afhængig af hvilken version du er på. Kun <uri>install/database_update.php</uri> er vigtig her, da du blot uploader den fulde opdateringspakke eksklusiv filen <uri>config.php</uri> og install-mappen til sidst.</para>
+					<para>Det er altså muligt at opdatere alle boards fra RC1 med afvikling af et antal databaseopdateringscripts, afhængig af hvilken version du er på. Kun <uri>install/database_update.php</uri> er vigtig her. Du uploader blot den fulde installationspakke, eksklusiv filen <uri>config.php</uri>, mapperne <uri>/images</uri> og <uri>/files</uri>. Herefter kan databasen opdateres med scriptet indeholdt i install-mappen, se nedenfor.</para>
+					<para>Den komplette phpBB3.0.4 kan downloades <ulink url="https://github.com/phpbb/phpbb3/archives/release-3.0.4">her</ulink>. Efter en opdatering til 3.0.4, hentes nu den relevante Changes files pakke ved at vælge den på denne <ulink url="http://www.phpbb.com/downloads/olympus.php?from=submenu&update=1">side</ulink>. Samme sted findes også de automatiske opdateringspakker for tidligere versioner.</para>
 					<para>Indeholder det uddaterede board samtidig en masse MODs, der er meget vigtige at bibeholde, mister du disse ved at anvende ovennævnte, men nemme og hurtige metode. Du må i så fald installere disse efterfølgende endnu engang. Ønsker du at undgå dette, skal den automatiske opdateringspakke benyttes.</para>
-					<para>Ældre versioner af phpBB3's opdateringscripts kan hentes ud af tidligere opdateringspakker, som kan downloades <ulink url="http://www.phpbb.com/downloads/olympus.php">her</ulink>, under <guilabel>Previous phpBB3 Releases</guilabel>. Samme sted findes også de automatiske opdateringspakker for tidligere versioner.</para>
 					</section>
 				</section>
 				<section id="update_packages">
@@ -107,7 +107,7 @@
 					</section>
 					<section id="pack_changedfiles">
 					<title>Kun ændrede filer</title>
-					<para>Denne pakke giver mulighed for at erstatte filer som er ændret i forbindelse med opdateringen. Pakken indeholder normalt ændrede filer, så der er mulighed for at opdatere fra fem versioner tilbage. Denne pakke der stilles til rådighed i forbindelse med frigivelsen af phpBB3.0.5, giver altså mulighed for umiddelbart at opdatere et 3.0.0 board.</para>
+					<para>Change files-pakkerne erstatter de filer som er ændret fra en given version frem til seneste. Pakken indeholder normalt ændrede filer, så der er mulighed for at opdatere fra fem versioner tilbage. Denne pakke der stilledes til rådighed i forbindelse med frigivelsen af phpBB3.0.5, gav altså mulighed for umiddelbart at opdatere et 3.0.0 board.</para>
 					<para>Pakken indeholder et antal pakkede filer, som hver indeholder de filer der er ændret fra en given version til den seneste version. Du skal vælge den rette fil i forhold din nuværende version af phpBB3, hvis dit board eksempelvis er version 3.0.3, vælges <uri>phpBB-3.0.3_to_3.0.x.zip/tar.gz</uri>, hvor x'et er seneste version.</para>
 					<para>Mappestrukturen er organiseret så du har mulighed for at uploade hele indholdet af den pakkede fil til den rette placering på din server og derved overskrive alle eksisterende filer med den seneste versions filer, hvis du ønsker det.</para>
 					<note>Husk, hvis du har installeret MODs risikerer du med denne metode at overskrive og ødelægge dem. Du er da nødt til at genindsætte de berørte filmodifikationer før upload.</note>
