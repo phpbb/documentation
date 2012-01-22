@@ -1,6 +1,6 @@
 # phpBB Documentation
 
-Documentation for board visitors, moderators and administrators. Can be seen online [here](http://www.phpbb.com/support/documentation/3.0/?from=submenu) 
+Documentation for board visitors, moderators and administrators. Can be seen online [here](http://www.phpbb.com/support/documentation/3.0/) 
 
 ## Patches
 
