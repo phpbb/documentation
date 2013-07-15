@@ -1752,44 +1752,20 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Permission Overload</title>
-		<para>On your board, you will need to control what users can and cannot do. With the flexible and detailed system that Olympus provides, you have very extensive possibilities of specifying and managing user and group permissions. There are basically two type of permissions - <guilabel>Global permissions</guilabel>, which apply to the whole board or are not related to forums and posts, and <guilabel>Forum based permissions</guilabel>, which can be used to control specific permissions for each forum.</para>
-		<para>To understand how to set permissions and to know how to use the interface, it is important to recognize the different types of permissions and tools that the <guilabel>Permission</guilabel> tab in the <acronym>ACP</acronym> provides:</para>
-		<variablelist>
-			<varlistentry>
-				<term>Global Permissions</term>
-				<listitem><para>These affect the whole board and are not bound to specific forums. They include user permissions, which limit the use of the <acronym>UCP</acronym>, searching, private messaging, using of avatars/signatures etc. Administrator permissions are also set here, as they are Global.</para></listitem>
-			</varlistentry>
-
-			<varlistentry>
-				<term>Forum Based Permissions</term>
-				<listitem><para>These permissions are set for each forum/user or group combination individually. They can be divided into two types: User permissions and Moderator permissions. The first control if a user or group can see the forum, post in it, and so on, while the Moderator permissions control if the user or group can do moderator-related actions in it.</para></listitem>
-			</varlistentry>
-
-			<varlistentry>
-				<term>Permission Roles</term>
-				<listitem><para>In order to ease setting of permissions, you can create roles, that have a pre-defined set of permissions and which you can then assign to users or groups. phpBB already prepared some predefined roles for you to use - e.g., in forum based permissions, you can make each user a <guilabel>Standard Moderator</guilabel>, <guilabel>Full Moderator</guilabel> or <guilabel>Limited Moderator</guilabel>, etc. If you didn't have roles, you would have to set every single permission individually for each user.</para></listitem>
-			</varlistentry>
-			
-			<varlistentry>
-				<term>Permission Masks</term>
-				<listitem><para>In this section, you do not set or change anything, but you can view the final permissions a user or group has depending on your settings in the other sections. This feature is particularly useful when you need to debug your permissions and for example, you cannot find out why someone doesn't have the permission you want him to have.</para></listitem>
-			</varlistentry>
-		</variablelist>
-		<figure id="img_quick_permissions_types_admin">
-				<title>Global and local permissions</title>
-				<mediaobject>
-					<imageobject>
-						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_types.png" />
-					</imageobject>
-					<caption>
-						<para>Global and local permissions</para>
-					</caption>
-				</mediaobject>
-			</figure>
-		<note id="user_group_permission_note"><para>Each permission can be assigned to a group or a user. We recommend you to use group permissions when possible - a simple example why: When you want to add a moderator to a forum, instead of assigning individual moderator permissions for each forum to him, you will just add him to the group which already has those permissions.</para></note>
-		<!-- TODO add link when masks section is finished -->
-		<para>When setting permissions, you will encounter three possible values - NO, YES and NEVER, with NO as the default value for each permission. If you set a YES, it overrides the NO, however, if the permissions is set to NEVER, you cannot override it by setting it to YES in another place. If you still have problems understanding this system, see the Permissions Masks section.</para>
+		<title>Permissions</title>
+		<para>On your board, you will need to control what users can and cannot do, and what they can and cannot see. With the flexible and detailed system that Olympus provides, you have an extensive ability to manage permissions. There are five types of permissions in phpBB3:</para>
+		<itemizedlist>
+			<listitem><para>Global User permissions</para></listitem>
+			<listitem><para>Global Moderator permissions</para></listitem>
+			<listitem><para>Global Administrator permissions</para></listitem>
+			<listitem><para>User Forum permissions</para></listitem>
+			<listitem><para>Forum Moderator permissions</para></listitem>
+		</itemizedlist>
+		<para>The three <guilabel>Global permissions</guilabel> are ones which apply to every forum or are unrelated to forums altogether.</para>
+		<para>The two <guilabel>Forum permissions</guilabel> are ones which apply to only one forum at a time.</para>
+		<para>Any of these five permission types may be assigned to individual users or to usergroups.</para>
+		<para>When setting permissions, you will encounter three possible values - <guilabel>NO</guilabel>, <guilabel>YES</guilabel> and <guilabel>NEVER</guilabel>, with <guilabel>NO</guilabel> as the default value for each permission. If you set a <guilabel>YES</guilabel>, it overrides the <guilabel>NO</guilabel>, however, if the permission is set to <guilabel>NEVER</guilabel>, you cannot override it by setting it to <guilabel>YES</guilabel> in another place. If you still have problems understanding this system, see the <link linkend="acp_permissions_mask">Permissions Masks</link> section.</para>
+		<para>To understand how to set permissions and to know how to use the interface, it is important to recognize the different types of permissions and tools that the Permission tab in the ACP provides:</para>
 
 		<section id="acp_permissions_global">
 			<sectioninfo>
@@ -1797,69 +1773,261 @@
 					<author>
 						<othername>ameeck</othername>
 					</author>
+					<author>
+						<othername>stevemaury</othername>
+					</author>
 				</authorgroup>
 			</sectioninfo>
 			<title>Global Permissions</title>
-			<para>Global permissions are the first section you will find under the <guilabel>Permissions</guilabel> tab. They are used to assign user, global moderator and administrator permissions. This section has four subsections:</para>
-			<variablelist>
-			<varlistentry>
-				<term><guilabel>Users’ permissions</guilabel></term>
-				<listitem><para>These are used to assign any of the above mentioned permissions to a specific user. Generally, it is better to assign permissions to groups as <link linkend="user_group_permission_note">described here</link> to ease their later management.</para></listitem>
-			</varlistentry>
+			<para>These affect the whole board and are not bound to specific forums. They include user permissions, which limit the use of the UCP, searching, private messaging, using of avatars/signatures/etc. Administrator permissions are also set here, as they are Global.</para>
 
-			<varlistentry>
-				<term><guilabel>Groups’ permissions</guilabel></term>
-				<listitem><para>Exactly the same as the above with one difference, here you will be specifying a group whose permissions will be edited.</para></listitem>
-			</varlistentry>
+			<section id="acp_permissions_global_user">
+				<title>Global User Permissions</title>
+				<para>Global User permissions are those permissions which apply to all forums, such as permissions to attach or download files or use a signature, or permissions which are unrelated to a forum, such as permissions relating to profiles, private messages, and email.</para>
 
-			<varlistentry>
-				<term><guilabel>Administrators</guilabel></term>
-				<listitem><para>This page tells you what users or groups on your board have access to the <acronym>ACP</acronym>. It allows you to edit their current permissions and add new administrators or administrator groups.</para></listitem>
-			</varlistentry>
+				<para>Although Global User permissions can be assigned to users by click <guilabel>Users’ Permissions</guilabel> from your ACP Permissions tab, selecting a user, and then selecting <guilabel>User permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown, it is generally far preferable to avoid using User permissions and use Group permissions instead. This will make it easier to manage permissions in the future and to assign permissions to users in the future. The only practical difference between User permissions and Group permissions is that User permissions require you to set permissions for each user individually, where Group permission let you create a Group and assign its members a set of permissions. Then, if you wish other users to have the same permissions, you can just add them to the Group.</para>
 
-			<varlistentry>
-				<term><guilabel>Global moderators</guilabel></term>
-				<listitem><para>Similarly to the section mentioned above, this page allows you to see the board's Global moderators, they are users which can moderate every forum on the board. phpBB added a predefined Global Moderator group for you with preset permissions.</para></listitem>
-			</varlistentry>
-		</variablelist>
+				<para>Global user permissions can be assigned to user groups by clicking <guilabel>Groups’ permissions</guilabel> from your ACP Permissions tab, selecting a user group, and then selecting <guilabel>User permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
 
-		<para>In order to add or change permissions to a specific user or group, click the appropriate section. Then select the group name from the drop-down box or type the user's username. See <xref linkend="img_choose_group_permissions" /> for an image of the screen.</para>
+				<para>In either case, you will be allowed to select a stock User Role in the dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions. However, the better way to customise one of the stock Roles is to create a new User role based on the settings of an existing Role. You can alse create a new User role from scratch. Roles use fewer resource than if you make modifications by editing the Advanced permissions.</para>
+			</section>
+			<section id="acp_permissions_global_moderator">
+				<title>Global Moderator Permissions</title>
+				<para>Global Moderator permissions are those permissions which apply to editing, deleting, or otherwise affecting other users’ topics and posts, or to affect other users through reports, warnings, or bans. Permissions given here will apply to any forum the user or user group can see.</para>
 
-		<figure id="img_choose_group_permissions">
-			<title>Choosing a group when setting permissions</title>
-			<mediaobject>
-				<imageobject>
-					<imagedata format="PNG" fileref="../images/admin_guide/choose_group_permissions.png"/>
-				</imageobject>
-				<caption>
-					<para>The screen you will see after you click <guilabel>Groups' permissions</guilabel>. Here you select the group for which you will edit permissions.</para>
-				</caption>
-			</mediaobject>
-		</figure>
-		
-		<para>After you select a user or group, you will see a page where you can finally set specific permissions. Notice a few things on the page - the drop-down box, where you can select what type of permissions to change, the <guilabel>Advanced Permissions</guilabel> link, which will allow you to assign more granular permissions, and the <guilabel>Role</guilabel> drop-down box, which allows you to assign a predefined set of permissions for the current case.</para>
+				<para>Global Moderator permissions can be assigned to users by clicking <guilabel>Users’ permissions</guilabel> from your ACP Permissions tab, selecting a user, and then selecting <guilabel>Global moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
 
-		<figure id="img_setting_global_group_permissions">
-			<title>Setting global user/group permissions</title>
-			<mediaobject>
-				<imageobject>
-					<imagedata format="PNG" fileref="../images/admin_guide/setting_global_group_permissions.png" />
-				</imageobject>
-				<caption>
-					<para>The screen you will see after you select a user or group in the first two Global permissions sections. Here you edit global permissions such as profile control, search, private messaging etc. By selecting <guilabel>Global moderator permissions</guilabel> or <guilabel>Admin permissions</guilabel> from the drop-down box, you can change additional settings for the user.</para>
-				</caption>
-			</mediaobject>
-		</figure>
-		
+				<para>Global Moderator permissions can be assigned to user groups by clicking <guilabel>Groups’ permissions</guilabel> from your ACP Permissions tab, selecting a user group, and then selecting <guilabel>Global moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
+
+				<para>Global Moderator permissions can also be assigned to both users and user groups by clicking <guilabel>Global Moderators</guilabel> from your ACP Permissions tab. This option will display all of the users and user groups who are currently assigned Global Moderator permissions. You can add, edit, or delete users and user groups from this option.</para>
+
+				<para>In either case, you will be allowed to select a stock Moderator Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
+			</section>
+			<section id="acp_permissions_global_administrator">
+				<title>Global Administrator Permissions</title>
+				<para>Global Administrator permissions are those permissions which apply to maintaining your board through the Administration Control Panel. They include permissions for maintaining forums, users, and user groups, maintaining and assigning permissions, changing board configuration settings, and other such board maintenance tasks.</para>
+
+				<para>Global Administrator permissions can be assigned to users by clicking <guilabel>Users’ permissions</guilabel> from your ACP permissions tab, selecting a user, and then selecting <guilabel>Global admin permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
+
+				<para>Global Administrator permissions can be assigned to user groups by clicking <guilabel>Groups’ permissions</guilabel> from your ACP permissions tab, selecting a user group, and then selecting <guilabel>Global admin permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
+
+				<para>Global Administrator permissions can also be assigned to both users and user groups by clicking <guilabel>Administrators</guilabel> from your ACP Permissions tab. This option will display all of the users and user groups who are currently assigned Administrator permissions. You can add, edit, or delete users and user groups from this option.</para>
+
+				<para>In either case, you will be allowed to select a stock Admin Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
+			</section>
 		</section>
 		<section id="acp_permissions_forumbased">
-			<title>Forum Based Permissions</title>
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>stevemaury</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Forum Permissions</title>
+			<para>These permissions are set for each forum/user or group combination individually. They can be divided into two types: User permissions and Moderator permissions. The first control if a user or group can see the forum, post in it, and so on, while the Moderator permissions control if the user or group can do moderator-related actions in it.</para>
+
+			<section id="acp_permissions_forumbased_user">
+				<title>User Forum Permissions</title>
+				<para>User Forum permissions are those which apply to creating and editing ones own posts in a particular forum and printing and reporting topics. They also determine whether posts require approval or increment the post counter as well as some other user capabilities in a particular forum.</para>
+
+				<para>User Forum permissions can be assigned to users by clicking <guilabel>Users’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user, selecting one or more forums from the list, and then selecting <guilabel>Forum permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
+
+				<para>User Forum permissions can be assigned to user groups by clicking <guilabel>Groups’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user group, selecting one or more forums from the list, and then selecting <guilabel>Forum permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
+
+				<para>User Forum permissions can also be assigned to both users and user groups by clicking <guilabel>Forum permissions</guilabel> from your ACP Permissions tab, and then selecting one or more forums from the list. This option will display the all of the users and user groups who are currently assigned User Forum permissions for that forum. You can add, edit, or delete users and user groups from this option.</para>
+
+				<para>In either case, you will be allowed to select a stock Forum Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
+			</section>
+			<section id="acp_permissions_forumbased_moderator">
+				<title>Forum Moderator Permissions</title>
+				<para>Forum Moderator permissions are those which apply to editing, deleting, or otherwise affecting other users’ topics and posts in one particular forum, or to affect other users through reports, warnings, or bans.</para>
+
+				<para>Forum Moderator permissions can be assigned to users by clicking <guilabel>Users’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user, selecting one or more forums from the list, and then selecting <guilabel>Moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
+
+				<para>Forum Moderator permissions can be assigned to user groups by clicking <guilabel>Groups’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user group, selecting one or more forums from the list, and then selecting <guilabel>Moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
+
+				<para>Forum Moderator permissions can also be assigned to both users and user groups by clicking <guilabel>Forum Moderators</guilabel> from your ACP Permissions tab, and then selecting one or more forums from the list. This option will display all of the users and user groups who are currently assigned Forum Moderator permissions for that forum. You can add, edit, or delete users and user groups from this option.</para>
+
+				<para>In either case, you will be allowed to select a stock Moderator Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
+			</section>
 		</section>
 		<section id="acp_permissions_roles">
 			<title>Permission Roles</title>
+			<para>To ease setting of permissions, you can create roles that have a pre-defined set of permissions and which you can then assign to users or groups. phpBB already prepared some predefined roles for you to use - e.g., in forum based permissions, you can make each user a Standard Moderator, Full Moderator or Limited Moderator, etc.</para>
+
+			<para>There are four types of Permission Roles:
+				<itemizedlist>
+					<listitem><para>Admin Roles, used with <guilabel>Global Administrator permissions</guilabel></para></listitem>
+					<listitem><para>User Roles, used with <guilabel>Global User permissions</guilabel></para></listitem>
+					<listitem><para>Moderator Roles, used with <guilabel>Global Moderator permissions</guilabel> and <guilabel>Forum Moderator permissions</guilabel></para></listitem>
+					<listitem><para>Forum Roles, used with <guilabel>User Forum permissions</guilabel></para></listitem>
+				</itemizedlist>
+			</para>
+
+			<para>Permission Roles can be maintained by clicking the corresponding link on the ACP Permissions tab. Roles provide a convenient permissions template to use when assigning permissions to either users or user groups. A Role’s permissions settings can be viewed or edited by clicking the green-gear for that role.</para>
+
+			<para>Most standard Roles use combinations of <guilabel>Yes</guilabel> and <guilabel>No</guilabel>, meaning that if one user is assigned two different roles from being a member of two different groups, for instance Limited Access and Regular Access, the <guilabel>Yes</guilabel>es will override the <guilabel>No</guilabel>s and leave the user with Regular Access.</para>
+
+			<para>The Exceptions are the ones with <guilabel>Never</guilabel> settings, such as the User Roles <guilabel>No Avatar</guilabel> , <guilabel>No PMs</guilabel> and <guilabel>Newly Registered User Features</guilabel>, and the Forum Role <guilabel>On Moderation Queue</guilabel>. These  four Roles use <guilabel>Never</guilabel> settings, and therefore override the <guilabel>Yes</guilabel> settings that would have been granted by other roles.</para>
+
+			<para>You should never use one of these  four roles, or any other <guilabel>Never</guilabel> settings with your Registered Users group. Doing so will take those permissions away from everyone, including yourself.</para>
+
+			<para>If a Role’s permission settings are not quite right for your forum -- for instance, you don’t want anyone to be able to hide their online status -- you can add or subtract a permission to or from a standard Role. Then  wherever that role is used, that permission will be changed.</para>
+
+			<para>You can also create your own custom roles by typing a new name into the <guilabel>Create role</guilabel> box, selecting a role to copy from in the <guilabel>Use settings from</guilabel> dropdown, and click submit. Then you can customise your new role and use it for assigning those permissions.</para>
+
+			<para>Using such custom roles is simpler than editing the advanced permissions for multiple forums and should reduce the resources required by your forum when checking permissions.</para>
 		</section>
-		<section id="acp_permissions_masks">
+		<section id="acp_permissions_mask">
 			<title>Permission Masks</title>
+			<para>In this section, you do not set or change anything, but you can view the final permissions a user or group has based on the combined result of the permissions a user has from his user permissions or group memberships. This feature is particularly useful when you need to debug your permissions and for example, you cannot find out why someone doesn’t have the permission you want him to have. Permission masks is a tool for viewing the permission settings for all five permissions types for both users and user groups.</para>
+
+			<para>Each link on the Permissions Masks section of the ACP Permissions tab corresponds to one of the five permission types:
+				<itemizedlist>
+					<listitem><para>View administrative permissions for <guilabel>Global Administrator permissions</guilabel></para></listitem>
+					<listitem><para>View user-based permissions for <guilabel>Global User permissions</guilabel></para></listitem>
+					<listitem><para>View global moderation permissions for <guilabel>Global Moderator permissions</guilabel></para></listitem>
+					<listitem><para>View forum-based permissions for <guilabel>User Forum permissions</guilabel></para></listitem>
+				</itemizedlist>
+			Any of these five links will take you to a page listing the users and user groups that are assigned those Global or Forum permissions.</para>
+
+			<para>Selecting one or more user groups will display the permissions for those user groups, the same way they are shown in the permissions edit pages, so there is no added utility in running the masks on group names. Permissions masks are most useful when run on a username, and not a group name, since the latter will give you only the same information provided by viewing that group’s permissions.</para>
+
+			<para>Viewing a user’s permissions is much different. If you type a user’s name into the <guilabel>Find a member</guilabel> box for any of the five permission types and click <guilabel>View permissions</guilabel> it will display that user’s resulting permissions, taking into account all of the user's groups’ permissions. Also, the <guilabel>forum moderation</guilabel> mask will take into account global moderation permissions as well.</para>
+
+			<para>Each individual permission will have a circle-arrow which is a link to display all of that user’s groups and which groups grant or deny that permission.</para>
+			<figure id="img_choose_group_permissions">
+				<title>Permission Masks</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="GIF" fileref="../images/admin_guide/permission_masks.gif"/>
+					</imageobject>
+					<caption>
+						<para>The screens you will see when tracing permissions with the <guilabel>Permission Masks</guilabel> tool.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<note><para>In this example you see how a Global Moderation <guilabel>Yes</guilabel> overrides a Forum Moderation <guilabel>Never</guilabel>. This is one exception to the rule about <guilabel>Never</guilabel>s overriding <guilabel>Yes</guilabel>es.
+			The other exception is <guilabel>Founders</guilabel>. If a user is marked as a Founder on their User Administration Overview page, they will be granted All of the Global Administrator permissions, overriding any <guilabel>No</guilabel> or <guilabel>Never</guilabel> settings given to that user or his user groups.</para></note>
+		</section>
+		<section id="acp_permissions_shortcuts">
+			<title>Other Shortcuts</title>
+			<para>The shortcuts on the ACP Permissions tab are sprinkled around other spots in the ACP.
+				<itemizedlist>
+					<listitem><para>The Users’ permissions, Users’ forum permissions, Groups’ permissions, and Groups’ forum permissions links are duplicated on the ACP <guilabel>User and Groups</guilabel>tab</para></listitem>
+					<listitem><para>The Forum permissions, Forum moderators, Users’ forum permissions, and Groups’ forum permissions links are duplicated on the ACP <guilabel>Forums</guilabel> tab</para></listitem>
+					<listitem><para>On the <guilabel>Manage Users</guilabel> page, after selecting a User, you can select <guilabel>Permissions</guilabel> on the <guilabel>Select form</guilabel> dropdown:
+						<itemizedlist>
+							<listitem><para>The three Global permissions Masks are shown by default</para></listitem>
+							<listitem><para>The <guilabel>Select a forum</guilabel> dropdown will display the two Forum permissions masks</para></listitem>
+							<listitem><para>Set users permissions link leads to update the three Global Permissions</para></listitem>
+							<listitem><para>Set users forum permissions link leads to update the two Forum Permissions</para></listitem>
+						</itemizedlist>
+					</para></listitem>
+				</itemizedlist>
+			</para>
+		</section>
+		<section id="acp_permissions_quickstart">
+			<title>Permissions Quick Start</title>
+			<para>The following permissions can be set to help start a new forum.</para>
+			<section id="acp_permissions_quickstart_global_admin">
+				<title>Global Administrator Permissions</title>
+				<para>
+					<itemizedlist>
+						<listitem><para>By default the Administrators user group has the Standard Admin role. This will prevent anyone but the Founder from assigning any other Administrators, editing Roles, and installing any language packs, styles or modules into your forum.</para></listitem>
+						<listitem><para>By default the Standard Admin Role cannot use other’s permissions. This makes maintaining permissions more difficult, so I would recommend editing the <guilabel>Standard Admin</guilabel> Admin role and adding the permission <guilabel>Can use others permissions</guilabel>.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
+			<section id="acp_permissions_quickstart_global_mod">
+				<title>Global Moderator Permissions</title>
+				<para>
+					<itemizedlist>
+						<listitem><para>By default the Global Moderators user group has the Standard Moderator role. This allows them to moderate any forum they can see, but does not allow them to change a post's author or ban users.</para></listitem>
+						<listitem><para>Add the <guilabel>Standard Moderator</guilabel> or <guilabel>Full Moderator Role</guilabel> to the Administrators user group. This will allow your Administrators to moderate any forum, without having to add them to the Global Moderators user group.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
+			<section id="acp_permissions_quickstart_global_user">
+				<title>Global User Permissions</title>
+				<para>
+					<itemizedlist>
+						<listitem><para>Administrators and Global Moderators user groups start with All Features User role, which is fine.</para></listitem>
+						<listitem><para>Registered Users start with Standard Features User role, which gives them most normal user rights, but does not allow them to change their username or default user group and a few other things.</para></listitem>
+						<listitem><para>Standard Features User role allows users to hide their online status. You may want to edit this <guilabel>Standard Features</guilabel> role and set this permission to <guilabel>No</guilabel>.</para></listitem>
+						<listitem><para>Guests start with custom Global User permissions that only allow downloading and searching.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
+			<section id="acp_permissions_quickstart_forum_mod">
+				<title>Forum Moderator Permissions</title>
+				<para>
+					<itemizedlist>
+						<listitem><para>Administrators and Global Moderators would have Global Moderator permissions, so it is unnecessary to assign them as <guilabel>Forum Moderators</guilabel>.</para></listitem>
+						<listitem><para>If you will have junior moderators who will moderate individual forums, add those users to those forums’ moderator lists, or create moderator user groups for those moderators and add the user groups here. Assign the users or user groups appropriate Moderator Roles.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
+			<section id="acp_permissions_quickstart_user_forum">
+				<title>User Forum Permissions</title>
+				<para>
+					<itemizedlist>
+						<listitem><para>For most forums, give your Administrators and Global Moderators user groups the Full Access Forum Role. This will allow them to make Stickies and Announcements.</para></listitem>
+						<listitem><para>Give your Registered Users user group the <guilabel>Standard Access</guilabel> Forum Role for any forums except your admin/mods only forums or other hidden forums.</para></listitem>
+						<listitem><para>Give <guilabel>Read Only</guilabel> Access Forum Role to the Guests user group for forums you want un-registered guests to be able to read.</para></listitem>
+						<listitem><para>Add the <guilabel>Bot Access</guilabel> Forum Role for the Bots user group for the same forums you want guests to read, so webcrawler searchbots can index those forums.</para></listitem>
+						<listitem><para>The <guilabel>No Access</guilabel> Forum Role would be more useful with <guilabel>Never</guilabel> permissions than its current <guilabel>No</guilabel>s. Edit the <guilabel>No Access</guilabel> Forum Role and change <guilabel>Can see forum</guilabel> and <guilabel>Can read forum</guilabel> from <guilabel>No</guilabel> to <guilabel>Never</guilabel>. This will allow you to use this role to block access to a forum for a small group.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
+		</section>
+		<section id="acp_permissions_quick_answers">
+			<title>Quick Answers</title>
+			<variablelist>
+				<varlistentry>
+					<term>Nobody can see any of my new forums</term>
+					<listitem>
+						<para>By default, new forums have no permissions assigned. You have to assign forum permissions, or copy them from another forum before anyone can see them.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>I have Full Administrator permissions. Why can I not see my new forums?</term>
+					<listitem>
+						<para>Administrator Permissions have nothing to do with Forum Permissions. You have to assign Forum Permissions for yourself or your user group before you can see or post in a forum.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>I have added permissions to my new forums, but I still cannot see them.</term>
+					<listitem>
+						<para>You also have to add permissions to your forums’ parent categories.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>I have added a new category, with proper permissions, but I cannot see it.</term>
+					<listitem>
+						<para>Categories will not show unless there are viewable forums under them.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>How can I allow my moderators to create Sticky or Announcement Topics?</term>
+					<listitem>
+						<para>Sticky and Announcement permissions are in Forum Permissions. Assigning a <guilabel>Full Access</guilabel> forum role will allow them to make Stickies and Announcements.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>I set a sub-forum to copy permissions from its parent forum, but when I changed the permissions for the parent, the sub-forum did not change.</term>
+					<listitem>
+						<para><guilabel>Copy permissions</guilabel> is an action, not a setting. When you select to Copy permissions it copies the permissions when you click Submit. It will not copy any future changes unless you select to copy them again in Manage Forums, Edit.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>I created a private forum with a special group that has permissions to see the forum. Now, even members of that group cannot see that forum.</term>
+					<listitem>
+						<para>You probably set <guilabel>Never</guilabel> permissions for the Registered Users group. Since members of your special group are also members of Registered Users, that Never permission is overriding the Yes permission assigned by the new user group. You should be deleting the Registered Users group from that forum’s Forum Permissions list, rather than assigning Never permissions.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
 		</section>
 	</section>
 
