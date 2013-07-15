@@ -12,7 +12,7 @@
 	
 	<xsl:param name="use.extensions" select="1"></xsl:param>
 	<xsl:param name="graphicsize.extension" select="1"></xsl:param>
-	<xsl:param name="paper.type" select="A4"></xsl:param>
+	<xsl:param name="paper.type" select="'USletter'"></xsl:param>
 	<xsl:param name="section.autolabel" select="1"></xsl:param>
 	<xsl:param name="toc.section.depth" select="3"></xsl:param>
 	

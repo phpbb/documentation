@@ -189,20 +189,46 @@
 			</section>
 			<section id="ucp_display">
 				<title>Display</title>
-				<para>TODO: Explain the settings you can edit here. </para>
+				<para>Display settings control how posts and topics are rendered in the various board views.</para>
+				<para>
+					The following settings control how the contents of posts and private messages are rendered.
+					<itemizedlist>
+						<listitem><para><guilabel>Display images within posts</guilabel>: When <guilabel>Yes</guilabel> is selected, images will be displayed.</para></listitem>
+						<listitem><para><guilabel>Display Flash animations</guilabel>: When <guilabel>Yes</guilabel> is selected, Flash animations will be rendered.</para></listitem>
+						<listitem><para><guilabel>Display smilies as images</guilabel>: When <guilabel>Yes</guilabel> is selected, smilies will be rendered as images instead of as their text equivalent.</para></listitem>
+						<listitem><para><guilabel>Display signatures</guilabel>: When <guilabel>yes</guilabel> is selected, user signatures will be displayed.</para></listitem>
+						<listitem><para><guilabel>Display avatars</guilabel>: When <guilabel>yes</guilabel> is selected, user avatars will be shown.</para></listitem>
+						<listitem><para><guilabel>Enable word censoring</guilabel>: When <guilabel>yes</guilabel> is selected, the text of posts and private messages will be censored according to the <link linkend="acp_posting_censors">word cesnor list</link> defined by the administrator.</para></listitem>
+					</itemizedlist>
+				</para>
+				<para>The following settings control how topics are displayed in the forum view.
+					<itemizedlist>
+						<listitem><para><guilabel>Display topics from previous days</guilabel>: This setting limits the age of topics which should be displayed. By default, all topics are shown.</para></listitem>
+						<listitem><para><guilabel>Display topics ordering by</guilabel>: This setting changes the order of how topics are shown. Topics can be ordered by <guilabel>author</guilabel>, <guilabel>post time</guilabel>, <guilabel>number of replies</guilabel>, <guilabel>subject</guilabel>, or <guilabel>number of views</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Display topic order direction</guilabel>: Topics can be displayed in either <guilabel>ascending</guilabel> or <guilabel>descending</guilabel> order.</para></listitem>
+					</itemizedlist>
+				</para>
+				<para>The following settings control how posts are displayed in the topic view.
+					<itemizedlist>
+						<listitem><para><guilabel>Display posts from previous days</guilabel>: This setting limits the age of posts which should be displayed. By default, all posts are shown.</para></listitem>
+						<listitem><para><guilabel>Display posts ordering by</guilabel>: This setting changes the order of how posts are shown. Posts can be ordered by <guilabel>author</guilabel>, <guilabel>post time</guilabel>, <guilabel>number of replies</guilabel>, <guilabel>subject</guilabel>, or <guilabel>number of views</guilabel>.</para></listitem>
+						<listitem><para><guilabel>Display topic order direction</guilabel>: Posts can be displayed in either <guilabel>ascending</guilabel> or <guilabel>descending</guilabel> order.</para></listitem>
+					</itemizedlist>
+				</para>
 			</section>
 		</section>
 		<section id="ucp_friends_foes">
 			<title>Friends and Foes</title>
-			<para>TODO: (Not sure if this deserves its own section yet. For 3.0 this does not have much of an influence on the overall forum experience, this might change with 3.2, so leaving it here for now.) Write a detailed explanation about what Friends and Foes are and how they affect the forum like hiding posts of foes, adding users to the friends list for fast access / online checks, and so forth.</para>
+			<para>Users can be marked as a <guilabel>Friend</guilabel> or a <guilabel>Foe</guilabel> in order to allow for filtering of their messages. If a style supports it, posts made by users on your Foe list will be hidden from view and posts from users on your Friend list will be highlighted. Private Message rules can make use of the Friend and Foes list for filtering incoming PMs.</para>
 		</section>
 		<section id="ucp_attachments">
 			<title>Attachments</title>
-			<para>TODO: The attachment section of the UCP shows you a list of all attachments that you have uploaded to the board so far ... </para>
+			<para>The attachment section of the UCP shows a list of all attachments that you have uploaded to the board. Each entry contains a link to the message in which the attachment is contained, the size of the attachment, the number of times it has been downloaded, and the time at which it was uploaded. Through this page, you can delete attachments from the board. Inline references to a deleted attachment will still remain in the original post, but the attachment will not be rendered in any way other than the file name.</para>
 		</section>
 		<section id="ucp_usergroups">
 			<title>Usergroups</title>
-			<para>TODO: Work in progress, might change, so not sure how this is going to be structured.</para>
+			<para>Usergroup membership can be managed through the Usergroups section of the UCP. The page lists groups for which the user is a member of, a leader of, and all other usergroups. Groups which are open for membership have a radio button allowing the user to request membership. Users may also remove themselves from groups in which they hold membership. If a user has the <guilabel>Can change default usergroup</guilabel>, they change choose which group to be their default here. The default usergroup dictates the user's username color which is shown throughout the board.</para>
+			<para>Users who are designated as a group leader are able to manage the group's membership. Users can be added, removed, pending join requests can be approved or denied, and have their default usergroup changed here.</para>
 		</section>
 	</section>
 	<section id="user_posting">
@@ -217,15 +243,25 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Mastering the Posting Screen</title>
-		<para>TODO: How to write a new post and how to reply. Special items like attachments or polls are subsections. Don't forget to mention the "someone has replied before you replied" feature, the topic review, and so forth. Topic icons, smilies, post options, usage of HTML ... it would probably best to add a screenshot with arrows to the different sections.</para>
 		<para>Posting is the primary purpose of bulletin boards. There are two main types of posts you can make: a topic or a reply. Selecting the <guilabel>New Topic</guilabel> button in a forum button will take you to the posting screen. After submitting your post, a new topic will appear in that forum with your post as the first displayed. Other users (and you as well) are now able to reply to your topic by using the <guilabel>Post Reply</guilabel> button. This will once again bring you to the posting screen, allowying you to enter your post.</para>
 		<section id="posting_form">
 			<title>Posting Form</title>
 			<para>You will be taken to the posting form when you decide to post either a new topic or reply, where you can enter your post content.</para>
+			<figure id="user_posting_form">
+			<title>Posting Form</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/user_guide/posting_screen.png" />
+					</imageobject>
+					<caption>
+						<para>The screen presented while creating a new topic.</para>
+					</caption>
+				</mediaobject>
+			</figure>
 			<itemizedlist>	
 				<listitem><para><guilabel>Topic/Post Icon</guilabel>: The topic/post icon is a small icon that will display to the left of your post subject. This helps identify your post and make it stand out, though it is completely optional.</para></listitem>
 				<listitem><para><guilabel>Subject</guilabel>: If you are creating a new topic with your post, the subject is required and will become the title of the topic. If you are replying to an existing topic, this is optional, but it can be changed.</para></listitem>
-				<listitem><para>Post Content - While not being labled, the large text box is where your actual post content will be entered. Here, along with your text, you may use things like <emphasis role="strong">Smilies or BBCode</emphasis> if the board administrator has them enabled.</para></listitem>
+				<listitem><para>Post Content - While not being labeled, the large text box is where your actual post content will be entered. Here, along with your text, you may use things like <link linkend="posting_smilies">Smilies</link> or <link linkend="posting_bbcodes">BBCode</link> if the board administrator has them enabled. Content entered as HTML will be rendered as text, HTML input is not supported.</para></listitem>
 				<listitem><para>Smilies - Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. If Smilies are enabled, you will see the text "<guilabel>Smilies are ON</guilabel>" to the righthand of the Post Content box. Otherwise, you will see the text "<guilabel>Smilies are OFF</guilabel>." See <link linkend="posting_smilies">Posting Smilies</link> for further details.</para></listitem>
 				<listitem><para>BBCode - BBCode is a type of formatting that can be applied to your post content if BBCode has been enabled by the board administrator. If BBCode is enabled, you will see the text "<guilabel>BBCode is ON</guilabel>" to the righthand of the Post Content box. Otherwise, you will see the text "<guilabel>BBCode is OFF</guilabel>." See <link linkend="posting_bbcodes">Posting BBCode</link> for further details.</para></listitem>
 			</itemizedlist>
@@ -233,33 +269,42 @@
 		
 		<section id="posting_smilies">
 			<title>Smilies</title>
-			<para>Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. To use Smiles, certain characters are put together to get the desired output. For example, typing :) will insert [insert smilie here], ;) will insert [insert wink smilie here], etc. Other smilies require the format :texthere: to display. For example, :roll: will insert smilie whose eyes are rolling: [insert rolling smilie here], and :cry: will insert a smilie who is crying: [insert crying smilie here].</para>
+			<para>Smilies, or emoticons, are small images which can be inserted into your post to add expression emphasis. To use Smiles, certain characters are put together to get the desired output. For example, typing :) will insert <inlinemediaobject><imageobject><imagedata fileref="../images/user_guide/smilies/smile.gif"/></imageobject></inlinemediaobject>, ;) will insert <inlinemediaobject><imageobject><imagedata fileref="../images/user_guide/smilies/wink.gif"/></imageobject></inlinemediaobject>, etc. Other smilies require the format :texthere: to display. For example, :roll: will insert smilie whose eyes are rolling: <inlinemediaobject><imageobject><imagedata fileref="../images/user_guide/smilies/rolleyes.gif"/></imageobject></inlinemediaobject>, and :cry: will insert a smilie who is crying: <inlinemediaobject><imageobject><imagedata fileref="../images/user_guide/smilies/cry.gif"/></imageobject></inlinemediaobject>.</para>
 			<para>In many cases you can also select which smilie you'd like to insert by clicking its picture on the right side of the Post Content text box. When clicked, the smilie's characters will appear at the current location of the curser in the text box.</para>
 			<para>If you wish to be able to use these characters in your post, but not have them appear as smilies, please see <link linkend="posting_options">Posting Options</link>.</para>
 		</section>
 		
 		<section id="posting_bbcodes">
 			<title>BBCodes</title>
-			<para>TODO: What are BBcodes. Again, permission based which ones you can use. Explain syntax of the default ones (quote and URL for instance). How to disable BBcode by default, how to disable/enable it for one post.</para>
 			<para>BBCode is a type of formatting that can be applied to your post content, much like HTML. Unlike HTML, however, BBCode uses square brackets [ and ] instead of angled brackets &lt; and &gt;. Depending on the permissions the board administrator has set, you may be able to use only certain BBCodes or even none at all.</para>
-			<para>For detailed instructions on the useage of BBCode, you can click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text box. Please note that the administrator has the option to add new and custom BBCodes, so others may be availible to you which are not on this list.</para>
+			<para>For detailed instructions on the usage of BBCode, you can click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text box. Please note that the administrator has the option to add new and custom BBCodes, so others may be availible to you which are not on this list.</para>
 			<para>Basic BBCodes and their outputs are as follows:</para>
-			<para>TODO: How do we want to go about displaying the output?</para>
-			<para>[b]Boldface text[/b]:</para>
-			<para>[i]Italicised text[/i]:</para>
-			<para>[u]Underlined text[/u]:</para>
-			<para>[quote]Quoted text[/quote]:</para>
-			<para>[quote="Name to quote"]Quoted text[/quote]: <!-- [insert screenshot of cited quoted text] --></para>
+			<para>[b]Boldface text[/b]: <emphasis role="strong">Boldface text</emphasis></para>
+			<para>[i]Italicised text[/i]: <emphasis>Italicised text</emphasis></para>
+			<para>[u]Underlined text[/u]: <emphasis role="underline">Underlined text</emphasis></para>
+			<para>[quote]Quoted text[/quote]: </para> <inlinemediaobject><imageobject><imagedata fileref="../images/user_guide/quoted_text.png"/></imageobject></inlinemediaobject>
+			<para>[quote="Name to quote"]Quoted text[/quote]: </para> <inlinemediaobject><imageobject><imagedata fileref="../images/user_guide/quoted_text_author.png"/></imageobject></inlinemediaobject>
 			<para>[url]http://www.phpbb.com[/url]: <ulink url="http://www.phpbb.com">http://www.phpbb.com</ulink></para>
 			<para>[url=http://www.phpbb.com]Linked text[/url]: <ulink url="http://www.phpbb.com">Linked text</ulink></para>
 			<para>[flash=width,height]Path to flash[/flash] will play the flash animation with the specified dimensions.</para>
-			<para>Again, for more detailed instructions on the useage of BBCode and the many other available BBCodes, please click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text bos.</para>
+			<para>For more detailed instructions on the usage of BBCode and the many other available BBCodes, please click the <guilabel>BBCode</guilabel> link to the righthand of the Post Content text bos.</para>
 		</section>
 		
 		<section id="posting_options">
 			<title>Post Options</title>
-			<para>TODO: Gather various screenshots of the basic post options box. When posting a topic/reply and/or moderation functions, etc.</para>
 			<para>When posting either a new topic or reply, there are several post options that are available to you. You can view these options by selecting the <guilabel>Options</guilabel> tab from the section below the posting form. Depending on the permissions the board administrator has assigned to you or whether you are posting a topic or reply, these options will be different.</para>
+			<figure id="user_posting_options">
+			<title>Posting Options</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/user_guide/posting_options.png" />
+					</imageobject>
+					<caption>
+						<para>The options presented while creating a reply.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>The default status of these options will depend on your <link linkend="ucp_posting">Posting Defaults</link> settings on the User Control Panel's <guilabel>Board Preferences</guilabel> page.</para>
 			<itemizedlist>	
 				<listitem><para><guilabel>Disable BBCode</guilabel>: If BBCode is enabled on the board and you are allowed to use it, this option will be available. Checking this box will not convert any BBCode in your post content into its respected output. For example, [b]Bolded text[/b] will be seen in your post as exactly [b]Bolded text[/b].</para></listitem> 
 				<listitem><para><guilabel>Disable Smilies</guilabel>: If Smilies are enabled on the board and you are allowed to use them, this option will be available. Checking this box will not convert any of the smilie's characters to their respected image. For example, ;) will be seen in your post as exactly ;).</para></listitem> 
@@ -286,7 +331,7 @@
 			<title>Attachments</title>
 			<para>Attachments allow users to upload files and attach them to their post. The ability to attach and download attachments is determined by the &quot;Can attach files&quot; and &quot;Can download files&quot; permissions respectively.</para>
 			<para>To add an attachment, find the <guilabel>Upload attachment</guilabel> section of the posting page and click the <guilabel>Browse</guilabel> button. A comment may be placed in the <guilabel>File comment</guilabel> text box. Clicking <guilabel>Add the file</guilabel> will upload and attach the file to the post. To upload multiple files, repeat the process.</para>
-			<para>To delete an attachment, find the <guilabel>Posted attachments</guilabel> section of the posting page and click teh <guilabel>Delete file</guilabel> button for the desired attachment.</para>
+			<para>To delete an attachment, find the <guilabel>Posted attachments</guilabel> section of the posting page and click the <guilabel>Delete file</guilabel> button for the desired attachment.</para>
 			<para>Attachments can be displayed within the post text by clicking the <guilabel>Place inline</guilabel> button for the desired attachment. When an attachment is placed inline, text similar to a BBCode is inserted into the post text so that it may be moved. If an attachment is not placed inline, it will be displayed at the end of the post.</para>
 			<para>Attachments are controlled by a set of restrictions, namely file size and file type.</para>
 			<itemizedlist>
@@ -322,7 +367,7 @@
 	<section id="user_pm">
 		<title>Communicate with Private Messages</title>
 		<para>phpBB 3.0 allows its users to communicate privately by using Private Messages. To visit the Private Messages section, you either can click on the [X new messages] link on the left hand side below the forum header, or you can directly access it through the <link linkend="user_control_panel">User Control Panel.</link>.</para>
-		<para>Depending on your [settings], there are 3 ways of being notified that a new Private Message has arrived:</para>
+		<para>Depending on the communication methods allowed by the board administrator, there can be 3 ways of being notified of a new Private Message's arrival:</para>
 		<orderedlist>
 			<listitem>
 				<para>By receiving an e-mail or Jabber message</para>
@@ -335,15 +380,29 @@
 			</listitem>
 		</orderedlist>
 		<para>You can set the options to your liking in the <link linkend="ucp_preferences">Preferences section</link>. Note, that for the popup window notification to work, your will have to add the forum you are visiting to your browser’s popup blocker white list.</para>
-		<para>You can choose to not receive Private Messages by other users in your <link linkend="ucp_preferences"> Preferences</link>. Note, that moderators and administrators will still be able send you Private Messages, even if you have disabled them.</para>
-		<para>[To use this feature, you have to be a registered user and need the to have the correct permissions.]</para>
+		<para>You can choose to not receive Private Messages by other users in your <link linkend="ucp_preferences">Preferences</link>. Note, that moderators and administrators will still be able send you Private Messages, even if you have disabled them.</para>
+		<note>
+			<para>These features are only available to registered users who have the correct permissions.</para>
+		</note>
 		<section id="pm_display">
 			<title>Message display</title>
 			<para>The Inbox is the default incoming folder, which contains a list of your recently received Private Messages. </para>
 		</section>
 		<section id="pm_new">
 			<title>Composing a new message</title>
-			<para>TODO: Similar to the posting screen, so a reference for the basic functions should be enough. What needs to be explained are the To and Bcc fields, how they integrate with the friends list and how to find members (which could also be a link to the memberlist section).</para>
+			<para>The screen presented while composing a Private Message is nearly identical to the screen for creating a new post. The main difference is the addition of an address field for adding recipients.</para>
+			<figure id="user_private_message_fields">
+			<title>Private Message Fields</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/user_guide/private_messsage_fields.png" />
+					</imageobject>
+					<caption>
+						<para>Fields for adding recipients to a Private Message.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>Usernames should be entered into the text area and then either the <guilabel>Add</guilabel> or <guilabel>Add [BCC]</guilabel> used to add the user to the appropriate recipient list. If you are unsure of a user's name, you can use the <guilabel>Find a member</guilabel> link to search the memberlist for the user. Place a check next to the desired user(s) in the memberlist and press <guilabel>Select marked</guilabel> to add the user to the recipient field.</para>
 		</section>
 		<section id="pm_folders">
 			<sectioninfo>
@@ -372,7 +431,7 @@
 				<title>Custom Folders</title>
 				
 				<para>If the administrator allows it, you can create your own custom <glossterm>private message</glossterm> folders in phpBB 3.0. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
-				<para>To add a new folder, enter the folder's name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_filters">Private Message Filters</link> for more information about filters) to automatically do it for you.</para>
+				<para>To add a new folder, enter the folder's name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_rules">Private Message Rules</link> for more information about filters) to automatically do it for you.</para>
 			</section>
 			
 			<section id="pm_folders_moving">
@@ -437,14 +496,245 @@
 				</note>
 			</section>
 		</section>
-		<section id="pm_filters">
-			<title>Message filters</title>
-			<para>TODO: How to work with message filters. That is quite a complex system</para>
+		<section id="pm_rules">
+			<title>Message rules</title>
+			<para>Private Messages can be filtered by creating rules that perform actions on the message based on its metadata. When a Private Message arrives, it can be automatically sorted into specific folders, deleted, or highlighted.</para>
+			<note>
+				<para>Private Message rules cannot be edited. If a rule needs to be changed, you will need to delete the current rule and make it again.</para>
+			</note>
+			<section id="pm_rule_fields">
+				<title>Matchable fields</title>
+				<para>Messages can be filtered based on the following fields:</para>
+				<itemizedlist>
+					<listitem><para><guilabel>Subject</guilabel> - The subject of the message.</para></listitem>
+					<listitem><para><guilabel>Sender</guilabel> - The username of the message sender.</para></listitem>
+					<listitem><para><guilabel>Message</guilabel> - The content of the message.</para></listitem>
+					<listitem><para><guilabel>Message status</guilabel> - Whether a message has been replied to or forwarded.</para></listitem>
+					<listitem><para><guilabel>Sent to</guilabel> - Whether the message was sent directly to you or to a usergroup you are a member of.</para></listitem>
+				</itemizedlist>
+			</section>
+
+			<section id="pm_rule_conditions">
+				<title>Matching conditions</title>
+				<para>Several conditions are available for filtering the fields. Not all of the conditions listed below are avaialbe for every field. The following is the full list of conditions available:</para>
+				<itemizedlist>
+					<listitem><para><guilabel>Is like</guilabel> - The field contains the supplied string.</para></listitem>
+					<listitem><para><guilabel>Is not like</guilabel> - The field does <emphasis role="strong">not</emphasis> contain the supplied string.</para></listitem>
+					<listitem><para><guilabel>Is</guilabel> - The field matches the supplied string exactly.</para></listitem>
+					<listitem><para><guilabel>Is not</guilabel> - The field's content is <emphasis role="strong">not</emphasis> the same as the supplied string.</para></listitem>
+					<listitem><para><guilabel>Begins with</guilabel> - The field begins with the supplied string.</para></listitem>
+					<listitem><para><guilabel>Ends with</guilabel> - The field ends with the supplied string.</para></listitem>
+					<listitem><para><guilabel>Is friend</guilabel> - If the sender is on your Friend list.</para></listitem>
+					<listitem><para><guilabel>Is foe</guilabel> - If the sender is on your Foe list.</para></listitem>
+					<listitem><para><guilabel>Is user</guilabel> - The sender's name matches the supplied string.</para></listitem>
+					<listitem><para><guilabel>Is in usergroup</guilabel> - The sender belongs to the specified usergroup.</para></listitem>
+					<listitem><para><guilabel>Answered</guilabel> - Whether the message has been replied to.</para></listitem>
+					<listitem><para><guilabel>Forwarded</guilabel> - Whether the message has been forwarded.</para></listitem>
+					<listitem><para><guilabel>To my default usergroup</guilabel> - Whether the message has been sent to your usergroup.</para></listitem>
+					<listitem><para><guilabel>To me</guilabel> - Whether a message has been sent directly to you.</para></listitem>
+				</itemizedlist>
+				<para>The following list shows which conditions are available for each field:</para>
+				<variablelist>
+					<varlistentry>
+						<term>Subject</term>
+						<listitem>
+							<para><guilabel>Is like</guilabel>, <guilabel>Is not like</guilabel>, <guilabel>Is</guilabel>, <guilabel>Is not</guilabel>, <guilabel>Begins with</guilabel>, <guilabel>Ends with</guilabel></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>Sender</term>
+						<listitem>
+							<para><guilabel>Is like</guilabel>, <guilabel>Is not like</guilabel>, <guilabel>Is</guilabel>, <guilabel>Is not</guilabel>, <guilabel>Begins with</guilabel>, <guilabel>Ends with</guilabel>, <guilabel>Is friend</guilabel>, <guilabel>Is foe</guilabel>, <guilabel>Is user</guilabel>, <guilabel>Is in usergroup</guilabel></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>Message</term>
+						<listitem>
+							<para><guilabel>Is like</guilabel>, <guilabel>Is not like</guilabel>, <guilabel>Is</guilabel>, <guilabel>Is not</guilabel></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>Message status</term>
+						<listitem>
+							<para><guilabel>Answered</guilabel>, <guilabel>Forwarded</guilabel></para>
+						</listitem>
+					</varlistentry>
+
+					<varlistentry>
+						<term>Sent To</term>
+						<listitem>
+							<para><guilabel>To my default usergroup</guilabel>, <guilabel>To me</guilabel></para>
+						</listitem>
+					</varlistentry>
+				</variablelist>
+			</section>
+
+			<section id="pm_rule_actions">
+				<title>Rule action</title>
+				<para>Once a message has been matched, an action can be perfromed on the message. The available actions are:</para>
+				<itemizedlist>
+					<listitem><para><guilabel>Place into folder -&gt; X</guilabel> - Places the message into the specified folder.</para></listitem>
+					<listitem><para><guilabel>Mark as read</guilabel> - The message is immediately marked as read. Notifications still inform you of a new message, but the message will already be marked as read when you view your Private Message list.</para></listitem>
+					<listitem><para><guilabel>Mark message</guilabel> - The message is marked as important and highlighted in your Private Message list.</para></listitem>
+					<listitem><para><guilabel>Delete message</guilabel> - The message is deleted instead of being shown. A message will be shown informing you that messages were received and deleted according to your message rules. Messages sent from board administrators and moderators will <emphasis role="strong">not</emphasis> be deleted.</para></listitem>
+				</itemizedlist>
+			</section>
 		</section>
 	</section>
 	<section id="user_search">
 		<title>Search - How to Find What You are Looking For</title>
-		<para>TODO: Explain how to use the search system. This should also include the results page, and the refine function. Also note, that the title (Search: search term) is a link that one can copy and paste into a post to directly link to the results. Egosearch and the global search field should also be included here.</para>
+		<para>As the board grows and accumulates posts, it becomes difficult to find specific content quickly. To aid in finding posts, phpBB contains a search utility. Common searches are offered in the form of links on the index (new posts, unanswered posts, etc.), keyword searches can be performed from the header, forum view, and topic view (in supported styles), and custom search queries can be created using the Advanced Search feature.</para>
+
+		<section id="user_search_predefined">
+			<title>Predefined searches</title>
+			<para>phpBB comes with several predefined searches to easily perform certain types of queries.</para>
+			<itemizedlist>
+				<listitem><para><guilabel>View your posts</guilabel> - Returns a list of topics that you have posted in, sorted by the time of the last post in the topic.</para></listitem>
+				<listitem><para><guilabel>View unanswered posts</guilabel> - Returns all posts which contain no replies.</para></listitem>
+				<listitem><para><guilabel>View unread posts</guilabel> - Returns a list of topics containing posts which you have yet to read.</para></listitem>
+				<listitem><para><guilabel>View new posts</guilabel> - Returns a list of topics containing posts which have been made since the last time you logged in.</para></listitem>
+				<listitem><para><guilabel>View active topics</guilabel> - Returns a list of topics which have been posted in during the last few days. The number of days can be changed after loading the search page.</para></listitem>
+			</itemizedlist>
+		</section>
+
+		<section id="user_search_forums_topics">
+			<title>Forum and topic search</title>
+			<para>Some styles provide search fields on the forum view and the topic view. These fields allow you to perform a keyword search within the forum or within the current topic.</para>
+
+			<figure id="user_search_topic">
+				<title>Search within topics</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/user_guide/search_topic.png" />
+					</imageobject>
+					<caption>
+						<para>Search field within a topic.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+		</section>
+
+		<section id="user_search_advanced">
+			<title>Advanced search</title>
+			<para>In addition to the predefined searches provided by phpBB, it is possible to create your own search queries. Searches can based on keywords, author, and forum selections.</para>
+			<section id="user_search_query">
+				<title>The search query</title>
+				<para>In order to perform a search of the board, you must specify what it is that you would like to search for. You can specify keywords to search for as well as a post author. Two query options are provided for performing the search:</para>
+				<itemizedlist>
+					<listitem><para><guilabel>Search for all terms or use query as entered</guilabel> - If multiple keywords are provided, <emphasis role="strong">all</emphasis> keywords must be found in the result. Alternatively, you can provide a query using special identifiers.</para></listitem>
+					<listitem><para><guilabel>Search for any terms</guilabel> - If multiple keywords are provided, then results containing <emphasis role="strong">any</emphasis> of the provided keywords will be returned.</para></listitem>
+				</itemizedlist>
+				<section id="user_search_query_keywords">
+					<title>Keywords</title>
+					<para>In addition to supplying keywords, special identifiers can be used to add or detract from the importance of certain words.</para>
+					<variablelist>
+						<title>Identifiers</title>
+						<varlistentry>
+							<term>+</term>
+							<listitem>
+								<para>When placed before a keyword, that keyword must be found in the result text.</para>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>-</term>
+							<listitem>
+								<para>When placed before a keyword, that keyword must not be present in the result text.</para>
+								<variablelist>
+									<title>Examples</title>
+									<varlistentry>
+										<term>+dog -cat</term>
+										<listitem>
+											<para>Returns results which contain the word "dog", but not "cat".</para>
+										</listitem>
+									</varlistentry>
+								</variablelist>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>|</term>
+							<listitem>
+								<para>This token can be used to separate a list of keywords, of which at least one of the keywords should be found in the text. Words may be placed inside of parentheses and combined with a + or - to indicated that at least one of the words must or must not appear in each result.</para>
+								<variablelist>
+									<title>Examples</title>
+									<varlistentry>
+										<term>dog|cat</term>
+										<listitem>
+											<para>Returns results which contain either the word "dog" or the word "cat".</para>
+										</listitem>
+									</varlistentry>
+									<varlistentry>
+										<term>-(dog|cat)</term>
+										<listitem>
+											<para>Returns results which contain neither the word "dog" nor the word "cat".</para>
+										</listitem>
+									</varlistentry>
+								</variablelist>
+							</listitem>
+						</varlistentry>
+						<varlistentry>
+							<term>*</term>
+							<listitem>
+								<para>An asterisk in a keyword allows for partial keyword matches.</para>
+								<variablelist>
+									<title>Examples</title>
+									<varlistentry>
+										<term>cat*</term>
+										<listitem>
+											<para>Returns results which begin with the word "cat", such as "cats" and "catastrophe".</para>
+										</listitem>
+									</varlistentry>
+								</variablelist>
+							</listitem>
+						</varlistentry>
+					</variablelist>
+				</section>
+
+				<section id="user_search_query_author">
+					<title>Author</title>
+					<para>The search query can be further refined by providing the author of the post. If an author is specified, then only posts made by that author which meets the query requirements will be returned. The author field allows for the use of wildcards (*) to perform partial matches on the author name.</para>
+				</section>
+			</section>
+
+			<section id="user_search_options">
+				<title>The search options</title>
+				<para>Searches can be further restricted to specific forums or specific parts of the topics.</para>
+				<itemizedlist>
+					<listitem><para><guilabel>Search in forums</guilabel> - Here you can select specific forums in which the search should be performed. Multiple forums can be selected by holding down the "control" or "command" key.</para></listitem>
+					<listitem><para><guilabel>Search in subforums</guilabel> - If this option is selected, then any subforums of the selected forums will be searched as well.</para></listitem>
+					<listitem>
+						<para><guilabel>Search within</guilabel> - This allows you to specify which part of the posts should be searched.</para>
+						<itemizedlist>
+							<listitem><para><guilabel>Post subjects and message text</guilabel> - Both the post subject and the post body will be searched.</para></listitem>
+							<listitem><para><guilabel>Message text only</guilabel> - Only the body of the posts will be searched and not its title.</para></listitem>
+							<listitem><para><guilabel>Topic titles only</guilabel> - Only the topic titles will be searched.</para></listitem>
+							<listitem><para><guilabel>First post of topics only</guilabel> - The first post of each topic will be searched and no other posts in the topic.</para></listitem>
+						</itemizedlist>
+					</listitem>
+					<listitem><para><guilabel>Display results as</guilabel> - This option formats the search results to only show either the post contents or just topic titles.</para></listitem>
+					<listitem><para><guilabel>Sort results by</guilabel> - Orders the results based on either <guilabel>author</guilabel>, <guilabel>post time</guilabel>, <guilabel>forum</guilabel>, <guilabel>topic title</guilabel> or <guilabel>post subject</guilabel>. The results can be displayed in <guilabel>ascending</guilabel> or <guilabel>descending</guilabel> order.</para></listitem>
+					<listitem><para><guilabel>Limit results to previous</guilabel> - Limits the results to posts made in specific time frame.</para></listitem>
+					<listitem><para><guilabel>Return first</guilabel> - Formats the results to only contain a specific number of characters of the matching posts.</para></listitem>
+				</itemizedlist>
+			</section>
+			<section id="user_search_refinement">
+				<title>Further refinement</title>
+				<para>On the result page, it is possible to further refine your search by providing more search terms.</para>
+				<figure id="user_search_refinement_image">
+					<title>Search refinement</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata format="PNG" fileref="../images/user_guide/search_refinement.png" />
+						</imageobject>
+						<caption>
+							<para>Refining the search results to include the word "cat".</para>
+						</caption>
+					</mediaobject>
+				</figure>
+			</section>
+		</section>
 	</section>
 	
 	<section id="user_memberlist">
