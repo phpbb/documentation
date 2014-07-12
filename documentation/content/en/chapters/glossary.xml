@@ -140,21 +140,19 @@
 				</listitem>
 			</varlistentry>
 
-<<<<<<< HEAD
 			<varlistentry>
 				<term>Extension (phpBB)</term>
 				<listitem>
 					<para>Extensions are the successor to MODs in phpBB 3.1. Extensions are different from MODs in that they do not make any file modifications to the core phpBB files. </para>
 				</listitem>
 			</varlistentry>
-=======
-            <varlistentry>
-                <term>Extension (phpBB)</term>
-                <listitem>
-                    <para>Extensions are the successor to MODs in phpBB 3.1. Extensions are different from MODs in that they do not make any file modifications to the core phpBB files. </para>
-                </listitem>
-            </varlistentry>
->>>>>>> d7ab907f206a35e2c7ba7fff5d3d02ce5952244c
+
+			<varlistentry>
+				<term>Extension (phpBB)</term>
+				<listitem>
+					<para>Extensions are the successor to MODs in phpBB 3.1. Extensions are different from MODs in that they do not make any file modifications to the core phpBB files. </para>
+				</listitem>
+			</varlistentry>
 
 			<varlistentry>
 				<term>FTP</term>
