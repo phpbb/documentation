@@ -139,7 +139,14 @@
 					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
 				</listitem>
 			</varlistentry>
-			
+
+            <varlistentry>
+                <term>Extension (phpBB)</term>
+                <listitem>
+                    <para>Extensions are the successor to MODs in phpBB 3.1. Extensions are different from MODs in that they do not make any file modifications to the core phpBB files. </para>
+                </listitem>
+            </varlistentry>
+
 			<varlistentry>
 				<term>FTP</term>
 				<listitem>
