@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Upgrade Guide</title>
 	<abstract>
-		<para>Do you want to upgrade your phpBB2 forum to version 3.0? This chapter will tell and show you how it is done.</para>
+		<para>Do you want to upgrade your phpBB2 forum to version 3.1? This chapter will tell and show you how it is done.</para>
 	</abstract>
 	<section id="upgrade">
 		<sectioninfo>
@@ -22,10 +22,10 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Upgrading from 2.0 to 3.0</title>
+		<title>Upgrading from 2.0 to 3.1</title>
 		<para>In order to allow administrators of phpBB2 boards to use phpBB3 and all of its features. There is a convertor packed with the default installation. The conversion framework is flexible and allows you to convert other bulletin board systems as well. Read more if you need help with converting your board to phpBB3</para>
 		
-		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.0.x. Basic instructions and troubleshooting for doing this conversion are <ulink url="http://www.phpbb.com/community/docs/INSTALL.html#convert">here</ulink>.</para>
+		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.1.x. Basic instructions and troubleshooting for doing this conversion are <ulink url="https://www.phpbb.com/community/docs/INSTALL.html#convert">here</ulink>.</para>
 		
 		<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>
 	</section>
@@ -78,7 +78,7 @@
 				<title>Preliminary steps</title>
 				<para>phpBB3 needs to be installed. Once phpBB3 is installed, do <emphasis>not</emphasis> delete the <filename class="directory">install</filename> directory if you will be converting immediately. If you will be testing and setting up your phpBB3 board prior to the conversion and converting at a later time, rename the <filename class="directory">install</filename> directory to something like _install. This will allow you to use your phpBB3 board. You will be needing the install directory later for the conversion.</para>
 
-				<para>You will need specific convertor files for the board software you are converting from. The phpBB2 specific convertor files are included with the phpBB3 installation files. For other board softwares, you will need to get the convertor files from the appropriate phpBB3 convertor topic. These topics can be found in the <ulink url="http://www.phpbb.com/community/viewforum.php?f=65">[3.0.x] Convertors forum</ulink> on phpBB.com</para>
+				<para>You will need specific convertor files for the board software you are converting from. The phpBB2 specific convertor files are included with the phpBB3 installation files. For other board softwares, you will need to get the convertor files from the appropriate phpBB3 convertor topic. These topics can be found in the <ulink url="https://www.phpbb.com/community/viewforum.php?f=486">[3.1.x] Convertors forum</ulink> on phpBB.com</para>
 
 				<para>For converting from phpBB2, you only need to point your browser to {phpBB3_root_directory}/install/index.php, click the <guilabel>Convert</guilabel> tab and follow the instructions. For other board softwares, you will need to upload the convertor files to the appropriate directories. The convertor files you get will consist of two or three files, convert_xxx.php, functions_xxx.php and, optionally, auth_xxx.php. The xxx will generally be the name of the software you are converting from.</para>
 				
@@ -98,7 +98,7 @@
 				<title>Conversion steps</title>
 				<orderedlist>
 					<listitem><para>Install phpBB3. The old message board and the phpBB3 board need to be installed on the same server.</para></listitem>
-					<listitem><para>f you are converting from a board other than phpBB2, upload the convertor files which you downloaded from the appropriate topic in the <ulink url="http://www.phpbb.com/community/viewforum.php?f=65">[3.0.x] Convertors forum</ulink>.</para></listitem>
+					<listitem><para>f you are converting from a board other than phpBB2, upload the convertor files which you downloaded from the appropriate topic in the <ulink url="https://www.phpbb.com/community/viewforum.php?f=486">[3.1.x] Convertors forum</ulink>.</para></listitem>
 					<listitem><para>Point your browser to {phpbb_root_directory}/install/index.php, click the <guilabel>Convert</guilabel> tab and select the appropriate convertor from the list of available convertors.</para></listitem>
 					<listitem><para>Next you will be asked for database information. The database information you are being asked for, is for the database that holds the tables for the board software you are converting from. You will be presented with an option for <guilabel>Refresh page to continue conversion</guilabel> The default is set to <guilabel>Yes</guilabel>. Normally, you will want to leave it at <guilabel>Yes</guilabel>. The <guilabel>No</guilabel> option is mainly for test purposes.</para></listitem>
 					<listitem><para>After entering the database information and pressing the <guilabel>Begin conversion</guilabel> button, the convertor will verify that you have entered the correct information. If the information is confirmed, you will have another <guilabel>Begin Conversion</guilabel> button.</para></listitem>

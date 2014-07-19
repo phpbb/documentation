@@ -122,21 +122,21 @@
 			<varlistentry>
 				<term>Database</term>
 				<listitem>
-					<para>A database is a collection stored in a structured, organized manner (with different tables, rows, and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.0 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, and categories. Data stored in a database can usually be backed up and restored easily.</para>
+					<para>A database is a collection stored in a structured, organized manner (with different tables, rows, and columns, etc.). Databases provide a fast and flexible way of storing data, instead of the other commonly used data storage system of flat files where data is stored in a file. phpBB 3.1 supports a number of different <acronym>DBMSs</acronym>  and uses the database to store information such as user details, posts, and categories. Data stored in a database can usually be backed up and restored easily.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>DBAL</term>
 				<listitem>
-					<para><acronym>DBAL</acronym>, or &quot;Database Abstraction Layer&quot;, is a system that allows phpBB 3.0 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
+					<para><acronym>DBAL</acronym>, or &quot;Database Abstraction Layer&quot;, is a system that allows phpBB 3.1 to access many different <acronym>DBMSs</acronym> with little overhead. All code made for phpBB (including MODs) need to use the phpBB <acronym>DBAL</acronym> for compatibility and performance purposes.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>DBMS</term>
 				<listitem>
-					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.0 supports the following DBMSs: Firebird, MS SQL Server, mySQL, Oracle, postgreSQL, and SQLite.</para>
+					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.1 supports the following DBMSs: Microsoft SQL Server, MySQL, Oracle, postgreSQL, and SQLite.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -150,7 +150,7 @@
 			<varlistentry>
 				<term>Founder</term>
 				<listitem>
-					<para>A founder is a special board administrator that cannot be edited or deleted. This is a new user level introduced in phpBB 3.0.</para>
+					<para>A founder is a special board administrator that cannot be edited or deleted.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -213,7 +213,7 @@
 			<varlistentry>
 				<term>Private Messages</term>
 				<listitem>
-					<para>Private messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent, in phpBB 3.0) that cannot be viewed by anyone other than the intended recipient. The user guide contains more information on <link linkend="user_pm">using phpBB3's private messaging system</link>.</para>
+					<para>Private messages are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. They can be sent between users (they can also be forwarded and have copies sent) that cannot be viewed by anyone other than the intended recipient. The user guide contains more information on <link linkend="user_pm">using phpBB3's private messaging system</link>.</para>
 				</listitem>
 			</varlistentry>
 			
@@ -266,14 +266,14 @@
 			<varlistentry>
 				<term>Sub-forum</term>
 				<listitem>
-					<para>Sub-forums are a new feature introduced in phpBB 3.0. Sub-forums are forums that are nested in, or located in, other forums.</para>
+					<para>Sub-forums are forums that are nested in, or located in, other forums.</para>
 				</listitem>
 			</varlistentry>
 			
 			<varlistentry>
 				<term>Template</term>
 				<listitem>
-					<para>A template is what controls the layout of a style. phpBB 3.0 template files have the .html file extension. These template files contain mostly <acronym>HTML</acronym> (no <acronym>PHP</acronym>, however), with some variables that phpBB uses (contained in braces: { and }).</para>
+					<para>A template is what controls the layout of a style. phpBB 3.1 template files have the .html file extension. These template files contain mostly <acronym>HTML</acronym> (no <acronym>PHP</acronym>, however), with some variables that phpBB uses (contained in braces: { and }).</para>
 				</listitem>
 			</varlistentry>
 			
@@ -294,7 +294,7 @@
 			<varlistentry>
 				<term>Usergroup</term>
 				<listitem>
-					<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page within the <link linkend="user_control_panel">group control panel</link>. phpBB 3.0 has six pre-defined usergroups.</para>
+					<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page within the <link linkend="user_control_panel">group control panel</link>. phpBB 3.1 has six pre-defined usergroups.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
