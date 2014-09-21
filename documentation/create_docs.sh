@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # set this to the correct path
-path="/var/www/phpbb.com/htdocs/support/documentation/3.0"
+path="/var/www/phpbb.com/htdocs/support/documentation/3.1"
 
 echo "Removing build directory"
 rm -rf build
 
 echo "Creating docs"
-xsltproc --xinclude xsl/olympus_php.xsl olympus_doc.xml
+xsltproc --xinclude xsl/ascraeus_php.xsl ascraeus_doc.xml
 
 if [ "$?" == "0" ]; then
 	echo "Successfully created documentation"

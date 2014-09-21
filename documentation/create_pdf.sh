@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Removing previous PDF"
-rm olympus_doc.pdf
+rm ascraeus_doc.pdf
 
 echo "Creating new PDF"
-fop -xml olympus_doc.xml -xsl xsl/olympus_pdf.xsl -pdf olympus_doc.pdf
+fop -xml ascraeus_doc.xml -xsl xsl/ascraeus_pdf.xsl -pdf ascraeus_doc.pdf
 
 echo "Done"
