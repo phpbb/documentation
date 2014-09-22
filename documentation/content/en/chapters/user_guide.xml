@@ -116,6 +116,30 @@
 				<para>Drafts are created when you click the 'Save' button on the New Post or Post Reply page. Displayed are the title of your post, the forum or topic that the draft was made in, and the date you saved it.</para>
 				<para>To continue editing a draft for future submission, click the 'View/Edit' link. If you plan to finish and post the message, click 'Load Draft'. To delete a draft, check the box next to the draft you wish to remove and click 'Delete Marked'.</para>
 			</section>
+			<section id="ucp_notifications">
+				<title>Notifications</title>
+				<para>Notifications alert you to events that have taken place on the board. They will appear in the Notifications menu at the top of your screen. Events include:</para>
+				<itemizedlist>
+					<listitem><para>New Private Message has arrived</para></listitem>
+					<listitem><para>New topic was created in a subscribed forum</para></listitem>
+					<listitem><para>New post was created in a subscribed topic</para></listitem>
+					<listitem><para>A new post is awaiting moderation</para></listitem>
+					<listitem><para>A post has been reported</para></listitem>
+					<listitem><para>Your topic/post has been approved/disapproved</para></listitem>
+					<listitem><para>You have been quoted in a post</para></listitem>
+				</itemizedlist>
+				<figure id="notifications_menu">
+					<title>Notifications Menu</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata format="PNG" fileref="../images/user_guide/notifications_menu.png" />
+						</imageobject>
+						<caption>
+							<para>The <glossterm>Notification</glossterm>s menu</para>
+						</caption>
+					</mediaobject>
+				</figure>
+			</section>
 		</section>
 		<section id="ucp_profile">
 			<title>Profile</title>
@@ -126,9 +150,12 @@
 				<itemizedlist>
 					<listitem><para><guilabel>ICQ Number</guilabel>: Your account number associated with <ulink url="http://www.icq.com/">ICQ</ulink> system.</para></listitem>
 					<listitem><para><guilabel>AOL Instant Messenger</guilabel>: Your screen name associated with <ulink url="http://aim.com">AOL Instant Messenger</ulink> system.</para></listitem>
-					<listitem><para><guilabel>MSN Messenger</guilabel>: Your email address associated with the <ulink url="http://home.live.com/">MSN Messenger (Windows Live)</ulink> service.</para></listitem>
+					<listitem><para><guilabel>Windows Live Messenger</guilabel>: Your email address associated with the <ulink url="http://home.live.com/">Windows Live</ulink> service.</para></listitem>
 					<listitem><para><guilabel>Yahoo Messenger</guilabel>: Your username associated with the <ulink url="http://messenger.yahoo.com/">Yahoo Messenger</ulink> service.</para></listitem>
 					<listitem><para><guilabel>Jabber Address</guilabel>: Your username associated with the <ulink url="http://www.jabber.org/">Jabber</ulink> service.</para></listitem>
+					<listitem><para><guilabel>Facebook</guilabel>: Your unique username/page name associated with the <ulink url="https://www.facebook.com/">Facebook</ulink> service.</para></listitem>
+					<listitem><para><guilabel>Twitter</guilabel>: Your username associated with the <ulink url="https://twitter.com/">Twitter</ulink> service.</para></listitem>
+					<listitem><para><guilabel>Skype</guilabel>: Your username associated with the <ulink url="http://www.skype.com/">Skype</ulink> service.</para></listitem>
 					<listitem><para><guilabel>Website</guilabel>: Your website's address. Must be prepended with the appropriate protocol reference (i.e. http://)</para></listitem>
 					<listitem><para><guilabel>Location</guilabel>: Your physical location. Note that this is generally displayed along with your user information with every post, so standard caution regarding releasing personal information on the Internet should apply.</para></listitem>
 					<listitem><para><guilabel>Occupation</guilabel>: Your occupation. The information entered will appear only on the viewprofile page.</para></listitem>
@@ -162,14 +189,12 @@
 				<para>
 					<itemizedlist>
 						<listitem><para><guilabel>Users can contact by e-mail</guilabel>: If <guilabel>Yes</guilabel> is selected, users can e-mail you via the "e-mail" button in your profile.</para></listitem>
-						<listitem><para><guilabel>Administratos can e-mail me information</guilabel>: If <guilabel>Yes</guilabel> is selected, you will receive mass-emails sent out by the board administrator.</para></listitem>
+						<listitem><para><guilabel>Administratos can email me information</guilabel>: If <guilabel>Yes</guilabel> is selected, you will receive mass-emails sent out by the board administrator.</para></listitem>
 						<listitem><para><guilabel>Allow users to send you private messages</guilabel>:  If <guilabel>Yes</guilabel> is selected, users can send you private messages via the board.</para></listitem>
 						<listitem><para><guilabel>Hide my online status</guilabel>: If <guilabel>Yes</guilabel> is selected, your online status will be hidden to users. Note that administrators and moderators will still be able to view your online status.</para></listitem>
-						<listitem><para><guilabel>Notify me on new privates messages</guilabel>: If <guilabel>Yes</guilabel> is selected, you will receive an email when you receive a new private messages.</para></listitem>
-						<listitem><para><guilabel>Pop up window on new private messages</guilabel>: If <guilabel>Yes</guilabel> is selected, a pop-up window will appear on the board to alert you of new private messages.</para></listitem>
+						<listitem><para><guilabel>My board style</guilabel>: Allows you to specify what style the board utilizes. This setting may not be available if the board administrator has selected to override users' styles.</para></listitem>
 						<listitem><para><guilabel>My language</guilabel>: Allows you to specify what language pack the board utilizes. Note that this setting applies only to board language strings; posts will be rendered in the language they were written.</para></listitem>
 						<listitem><para><guilabel>My timezone</guilabel>: Allows you to specify what timezone board times should appear in.</para></listitem>
-						<listitem><para><guilabel>Summer Time / DST is in effect</guilabel>: If  <guilabel>Yes</guilabel> is selected, board times will appear one hour earlier than the selected setting. Note that this setting is not updated automatically; you will have to change it manually when needed.</para></listitem>
 						<listitem><para><guilabel>My date format</guilabel>: Controls what format times are rendered in. You may select one of the options in the dropdown box -- advanced users may select  "<guilabel>Custom</guilabel>" and input a custom format (in the format of the <ulink url="http://www.php.net/date">php.net date function</ulink>).</para></listitem>
 					</itemizedlist>
 				</para>
@@ -213,6 +238,33 @@
 						<listitem><para><guilabel>Display posts from previous days</guilabel>: This setting limits the age of posts which should be displayed. By default, all posts are shown.</para></listitem>
 						<listitem><para><guilabel>Display posts ordering by</guilabel>: This setting changes the order of how posts are shown. Posts can be ordered by <guilabel>author</guilabel>, <guilabel>post time</guilabel>, <guilabel>number of replies</guilabel>, <guilabel>subject</guilabel>, or <guilabel>number of views</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Display topic order direction</guilabel>: Posts can be displayed in either <guilabel>ascending</guilabel> or <guilabel>descending</guilabel> order.</para></listitem>
+					</itemizedlist>
+				</para>
+			</section>
+			<section id="ucp_notifications">
+				<title>Notifications</title>
+				<para>Notification settings control which events will trigger a notification and how you will receive the notification.</para>
+				<para>
+					The following settings control events related to posting.
+					<itemizedlist>
+						<listitem><para><guilabel>Someone replies to a topic you have bookmarked</guilabel>: A user has posted a reply to a topic which you have bookmarked.</para></listitem>
+						<listitem><para><guilabel>Someone replies to a topic to which you are subscribed</guilabel>: A user has posted a reply to a topich which you have subscribed to.</para></listitem>
+						<listitem><para><guilabel>Someone quotes you in a post</guilabel>: A post you made has been quoted by another user.</para></listitem>
+						<listitem><para><guilabel>Someone creates a topic in a forum to which you are subscribed</guilabel>: A user has posted a new topic in a forum which you have subscribed to.</para></listitem>
+					</itemizedlist>
+				</para>
+				<para>
+					The following settings control events related to moderation.
+					<itemizedlist>
+						<listitem><para><guilabel>A post or topic needs approval</guilabel>: A user has made a new post or topic which requires approval.</para></listitem>
+						<listitem><para><guilabel>Someone reports a post</guilabel>: A user has reported a post.</para></listitem>
+					</itemizedlist>
+				</para>
+				<para>
+					The following settings control various other events.
+					<itemizedlist>
+						<listitem><para><guilabel>Someone requests to join a group you lead</guilabel>: A user has requested to join a usergroup which you are a leader of.</para></listitem>
+						<listitem><para><guilabel>Someone sends you a private message</guilabel>: You have received a private message.</para></listitem>
 					</itemizedlist>
 				</para>
 			</section>
@@ -330,8 +382,8 @@
 		<section id="posting_attachments">
 			<title>Attachments</title>
 			<para>Attachments allow users to upload files and attach them to their post. The ability to attach and download attachments is determined by the &quot;Can attach files&quot; and &quot;Can download files&quot; permissions respectively.</para>
-			<para>To add an attachment, find the <guilabel>Upload attachment</guilabel> section of the posting page and click the <guilabel>Browse</guilabel> button. A comment may be placed in the <guilabel>File comment</guilabel> text box. Clicking <guilabel>Add the file</guilabel> will upload and attach the file to the post. To upload multiple files, repeat the process.</para>
-			<para>To delete an attachment, find the <guilabel>Posted attachments</guilabel> section of the posting page and click the <guilabel>Delete file</guilabel> button for the desired attachment.</para>
+			<para>To add an attachment, find the <guilabel>Attachments</guilabel> section of the posting page and click the <guilabel>Add files</guilabel> button. A comment may be placed in the <guilabel>File comment</guilabel> text box. Clicking <guilabel>Add the file</guilabel> will upload and attach the file to the post. To upload multiple files, repeat the process. Attachments may also be uploaded by dragging and dropping a file onto the message area of the posting screen.</para>
+			<para>To delete an attachment, find the attachments list at the bottom of the <guilabel>Attachments</guilabel> section of the posting page and click the <guilabel>Delete file</guilabel> button for the desired attachment.</para>
 			<para>Attachments can be displayed within the post text by clicking the <guilabel>Place inline</guilabel> button for the desired attachment. When an attachment is placed inline, text similar to a BBCode is inserted into the post text so that it may be moved. If an attachment is not placed inline, it will be displayed at the end of the post.</para>
 			<para>Attachments are controlled by a set of restrictions, namely file size and file type.</para>
 			<itemizedlist>
@@ -373,13 +425,13 @@
 				<para>By receiving an e-mail or Jabber message</para>
 			</listitem>
 			<listitem>
-				<para>While browsing the forum a notification window will pop up</para>
+				<para>An entry will appear in the notifications menu</para>
 			</listitem>
 			<listitem>
-				<para>The [X new messages] link will show the number of currently unread messages</para>
+				<para>The <guilabel>Private Messages [X]</guilabel> link will show the number of currently unread messages</para>
 			</listitem>
 		</orderedlist>
-		<para>You can set the options to your liking in the <link linkend="ucp_preferences">Preferences section</link>. Note, that for the popup window notification to work, your will have to add the forum you are visiting to your browser’s popup blocker white list.</para>
+		<para>You can set the options to your liking in the <link linkend="ucp_preferences">Preferences section</link>.</para>
 		<para>You can choose to not receive Private Messages by other users in your <link linkend="ucp_preferences">Preferences</link>. Note, that moderators and administrators will still be able send you Private Messages, even if you have disabled them.</para>
 		<note>
 			<para>These features are only available to registered users who have the correct permissions.</para>
