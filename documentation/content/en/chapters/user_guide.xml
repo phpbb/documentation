@@ -116,7 +116,7 @@
 				<para>Drafts are created when you click the 'Save' button on the New Post or Post Reply page. Displayed are the title of your post, the forum or topic that the draft was made in, and the date you saved it.</para>
 				<para>To continue editing a draft for future submission, click the 'View/Edit' link. If you plan to finish and post the message, click 'Load Draft'. To delete a draft, check the box next to the draft you wish to remove and click 'Delete Marked'.</para>
 			</section>
-			<section id="ucp_notifications">
+			<section id="ucp_notifications_overview">
 				<title>Notifications</title>
 				<para>Notifications alert you to events that have taken place on the board. They will appear in the Notifications menu at the top of your screen. Events include:</para>
 				<itemizedlist>
