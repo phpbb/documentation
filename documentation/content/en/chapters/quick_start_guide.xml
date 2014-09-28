@@ -32,30 +32,44 @@
 				<para>A SQL database system, one of:</para>
 				<itemizedlist>
 					<listitem>
-						<para>FireBird 2.1 or above</para>
+						<para>MySQL 3.23 or above (MySQLi supported)</para>
 					</listitem>
 					<listitem>
-						<para>MySQL 3.23 or above</para>
+						<para>MariaDB 5.1 or above</para>
 					</listitem>
 					<listitem>
-						<para>MS SQL Server 2000 or above (directly or via ODBC)</para>
+						<para>MS SQL Server 2000 or above (via ODBC)</para>
+					</listitem>
+					<listitem>
+						<para>MS SQL Server 2005 or above (via the native adapter, SQLSRV)</para>
 					</listitem>
 					<listitem>
 						<para>Oracle</para>
 					</listitem>
 					<listitem>
-						<para>PostgreSQL 7.x or above</para>
+						<para>PostgreSQL 8.3+</para>
 					</listitem>
 					<listitem>
 						<para>SQLite 2</para>
 					</listitem>
+					<listitem>
+						<para>SQLite 3</para>
+					</listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 4.3.3+ (>=4.3.3, >4.4.x, >5.x.x, >6.0-dev (compatible)) with support for the database you intend to use.</para>
+				<para>PHP 5.3.3+ (>=5.3.3, >6.0-dev (compatible)) with support for the database you intend to use.</para>
 			</listitem>
 			<listitem>
 				<para>getimagesize() function enabled</para>
+			</listitem>
+			<listitem>
+				<para>The following PHP modules are required.</para>
+				<itemizedlist>
+					<listitem>
+						<para>json</para>
+					</listitem>
+				</itemizedlist>
 			</listitem>
 			<listitem>
 				<para>The following PHP modules are optional, but will provide access to additional features.</para>
@@ -199,7 +213,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>This form also holds the options for changing things like the timezone (<guilabel>System timezone</guilabel>) as well as the date format used to render dates/times (<guilabel>Date format</guilabel>).</para>
+			<para>This form also holds the options for changing things like the main site URL as well as the date format used to render dates/times (<guilabel>Date format</guilabel>).</para>
 			<para>There you can also select a new style (after having installed it) for your board and enforce it on all members ignoring whatever style they've selected in their "User Control Panel". The style will also be used for all forums where you haven't specified a different one. For details on where to get new styles and how to install them, please visit the <ulink url="http://www.phpbb.com/styles/">styles home page</ulink> at <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
 			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default, phpBB3 only ships with the English language pack. So, before using this field, you will have to download the language pack for the language you want to use and install it. For details, please read <link linkend="acp_system_language">Language packs</link> .</para>
 		</section>
