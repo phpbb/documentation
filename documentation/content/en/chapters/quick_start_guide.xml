@@ -104,7 +104,7 @@
 		</figure>
 		<section id="quick_installation_intro">
 			<title>Introduction</title>
-			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.1 is released under (the <ulink url="http://opensource.org/licenses/gpl-license.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> tab (see <xref linkend="img_quick_installation_intro" />).</para>
+			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.1 is released under (the <ulink url="http://opensource.org/licenses/gpl-2.0.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> tab (see <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Requirements</title>
@@ -118,7 +118,7 @@
 			<para>You now have to decide which database to use. See the <link linkend="quick_requirements">Requirements section</link> for information on which databases are supported. If you do not know your database settings, please contact your hosting company and ask for them. You will not be able to continue without them. You need:</para>
 			<itemizedlist>
 				<listitem>
-					<para>The <guilabel>Database Type</guilabel> - the database you will be using (e.g. mySQL, SQL server, Oracle)</para>
+					<para>The <guilabel>Database Type</guilabel> - the database you will be using (e.g. MySQL, SQL server, Oracle)</para>
 				</listitem>
 				<listitem>
 					<para>The <guilabel>Database server hostname or DSN</guilabel> - the address of the database server.</para>
@@ -134,7 +134,8 @@
 				</listitem>
 			</itemizedlist>
 			<tip>
-				<para>If you are installing using SQLite, you should enter the full path to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
+				<para>PostgreSQL Users: Use localhost to connect to the local server via UNIX domain socket and 127.0.0.1 to connect via TCP.</para>
+				<para>SQLite Users: Enter the full path (absolute) to your database file in the DSN field and leave the username and password fields blank. For security reasons, you should make sure that the database file is not stored in a location accessible from the web.</para>
 			</tip>
 			<figure id="img_quick_installation_database">
 				<title>Database settings</title>
@@ -217,7 +218,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			<para>Disabling BBCode completely is a little bit to harsh for your taste but you don't want your users to abuse the signature field for tons of images? Simply set <guilabel>Allow use of IMG BBCode Tag in user signatures</guilabel> to "No". If you want to be a little bit more specific on what you want to allow and disallow in users' signatures, have a look at the "Signature Settings" form.</para>
+			<para>If disabling BBCode completely is a bit too harsh for your taste, but you don't want your users to abuse the signature field for tons of images? Simply set <guilabel>Allow use of IMG BBCode Tag in user signatures</guilabel> to "No". If you want to be a little bit more specific on what you want to allow and disallow in users' signatures, have a look at the "Signature Settings" form.</para>
 			<para>The "Board Features" form offers you a great way to control the features in an all-or-nothing way. If you want to get into the details on each feature, there is for everything also a separated form which let's you specify everything from the maximum number of characters allowed in a post (<guilabel>Max characters per post</guilabel> in "Post Settings") to how large a user's avatar can be (<guilabel>Maximum Avatar Dimensions</guilabel> in "Avatar Settings").</para>
 			<important>
 				<para>If you disable features, these will also be unavailable to users who would normally have them according to their respective permissions. For details on the permissions system, please read <xref linkend="quick_permissions" /> or the <link linkend="acp_permissions">in-depth guide in the Administrator Guide.</link></para>
