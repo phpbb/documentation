@@ -14,7 +14,7 @@
 	<abstract>
 		<para>Do you want to upgrade your phpBB2 forum to version 3.1? This chapter will tell and show you how it is done.</para>
 	</abstract>
-	<section id="upgrade">
+	<section id="upgrade2">
 		<sectioninfo>
 			<authorgroup>
 				<author>
@@ -28,6 +28,34 @@
 		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.1.x. Basic instructions and troubleshooting for doing this conversion are <ulink url="https://www.phpbb.com/community/docs/INSTALL.html#convert">here</ulink>.</para>
 		
 		<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>
+	</section>
+
+	<section id="upgrade3">
+		<sectioninfo>
+			<authorgroup>
+				<author>
+					<othername>Noxwizard</othername>
+				</author>
+			</authorgroup>
+		</sectioninfo>
+		<title>Upgrading from 3.0 to 3.1</title>
+		<para>phpBB 3.1 is not compatible with 3.0 and most of the previous files will need to be removed prior to upgrading to 3.1.</para>
+		<para>To upgrade, perform the following steps:</para>
+		<orderedlist>
+			<listitem><para><emphasis role="bold">Make a backup of the original files</emphasis></para></listitem>
+			<listitem><para><emphasis role="bold">Make a backup of the database</emphasis></para></listitem>
+			<listitem><para>Delete all files <emphasis role="bold">EXCEPT</emphasis> for:</para>
+				<itemizedlist>
+					<listitem><para>The config.php file</para></listitem>
+					<listitem><para>The images/ directory</para></listitem>
+					<listitem><para>The files/ directory</para></listitem>
+					<listitem><para>The store/ directory</para></listitem>
+				</itemizedlist>
+			</listitem>
+			<listitem><para>Upload the contents of the 3.1.x <emphasis>Full Package</emphasis> into your forum's directory.</para></listitem>
+			<listitem><para>Browse to install/database_update.php</para></listitem>
+			<listitem><para>Delete the install/ directory</para></listitem>
+		</orderedlist>
 	</section>
 	
 	<section id="upgrade_general">
