@@ -764,11 +764,11 @@
 			</figure>
 			
 			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
-				<code>[font={TEXT1}]{TEXT2}[/font]</code>
-				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT1</guilabel>, while <guilabel>TEXT2</guilabel> represents whatever font name the user types in.
+				<code>[font={SIMPLETEXT}]{TEXT}[/font]</code>
+				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>, while <guilabel>SIMPLETEXT</guilabel> represents whatever font name the user types in.
 			</para>
 			<para>In the <guilabel>HTML Replacement</guilabel> form, you can define what HTML code your new BBCode will use to actually format the text. In the case of making a new [font] BBCode, try
-				<code>&lt;span style="font-family: {TEXT1}"&gt;{TEXT2}&lt;span&gt;</code>
+				<code>&lt;span style="font-family: {SIMPLETEXT}"&gt;{TEXT}&lt;span&gt;</code>
 				This HTML code will be used to actually format the user's text.
 			</para>
 			<para>The third option to consider when adding a custom BBCode is what sort of help message you want to display to your users if they choose to use the new BBCode. Ideally, the helpline message is a short note or tip for the user using the BBCode. This message will be displayed below the BBCode row on the posting screens.</para>
@@ -776,6 +776,72 @@
 				<para>If the next option described, <guilabel>Display on posting</guilabel>, isn't enabled, the helpline message will not be displayed.</para>
 			</note>
 			<para>Lastly, when adding a new BBCode, you can decide whether or not you want an actual BBCode button for your new BBCode to be displayed on the posting screens. If you want this, then check the <guilabel>Display on posting</guilabel> checkbox.</para>
+			<para>It is important to choose appropriate tokens when creating your custom BBCodes. The tokens limit the type of input that they will accept. If you want to only allow URLs, use the <guilabel>URL</guilabel> token. If you only want to allow numbers, use the <guilabel>NUMBER</guilabel> token.</para>
+			
+			<variablelist>
+				<title>BBCode Tokens</title>
+				<varlistentry>
+					<term>{TEXT}</term>
+					<listitem>
+						<para>Any text, including foreign characters, numbers, etc. You should <emphasis role="strong">NOT</emphasis> use this token in HTML element attributes (e.g. <code>&lt;a href="{TEXT}"&gt;</code>). Always use the most restrictive token possible.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{SIMPLETEXT}</term>
+					<listitem>
+						<para>Characters from the latin alphabet (A-Z), numbers, spaces, commas, dots, minus, plus, hyphen, and underscore. Does not include apostrophes or quotation marks.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{INTTEXT}</term>
+					<listitem>
+						<para>Unicode letter characters, numbers, spaces, commas, dots, minus, plus, hyphen, underscore, and whitespaces. Does not include apostrophes or quotation marks.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{IDENTIFIER}</term>
+					<listitem>
+						<para>Characters from the latin alphabet (A-Z), numbers, hyphen, and underscore. Does not include most punctuation marks.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{NUMBER}</term>
+					<listitem>
+						<para>Any series of digits.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{EMAIL}</term>
+					<listitem>
+						<para>A valid email address.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{URL}</term>
+					<listitem>
+						<para>A valid URL using any protocol (http, ftp, etc. cannot be used for javascript exploits). If none is given, "http://" is prefixed to the string.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{LOCAL_URL}</term>
+					<listitem>
+						<para>A local URL. The URL must be relative to the topic page and cannot contain a server name or protocol, as links are prefixed with "http://yourdomain/forum/".</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{RELATIVE_URL}</term>
+					<listitem>
+						<para>A relative URL. You can use this to match parts of a URL, but be careful: a full URL is a valid relative URL. When you want to use relative URLs of your board, use the LOCAL_URL token.</para>
+					</listitem>
+				</varlistentry>
+				<varlistentry>
+					<term>{COLOR}</term>
+					<listitem>
+						<para>A HTML colour, can be either in the numeric form #FF1234 or a <ulink url="http://www.w3.org/TR/CSS21/syndata.html#value-def-color">CSS colour keyword</ulink> such as fuchsia or InactiveBorder.</para>
+					</listitem>
+				</varlistentry>
+			</variablelist>
+			If you need to use the same type of token more than once, you can differentiate between them by adding a number as the last character between the braces, e.g. {TEXT1}, {TEXT2}.
 		</section>
 		
 		<section id="acp_posting_pm_settings">
