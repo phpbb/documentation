@@ -2565,6 +2565,7 @@
 				<listitem><para><guilabel>Subject</guilabel>: This is the subject of the message, which you are used to enter when sending an e-mail.</para></listitem>
 				<listitem><para><guilabel>Your message</guilabel>: This field contains the message, you can only enter plaintext. <glossterm>BBCode</glossterm> or HTML will be encoded in HTML entities and shown as is without formatting the text when the user receives the e-mail.</para></listitem>
 				<listitem><para><guilabel>Mail priority</guilabel>: This is the priority of the e-mail sent with the e-mail headers.</para></listitem>
+				<listitem><para><guilabel>Mail banned users</guilabel>: By default, banned users will not receive mass e-mails. Check this box if you would like to include those users in the mail mailing.</para></listitem>
 				<listitem><para><guilabel>Send immediately</guilabel>: You can choose whether to send the e-mail immediately or pass the messages to the cache system and let them be sent gradually.</para></listitem>
 			</itemizedlist>
 			<note>
