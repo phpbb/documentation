@@ -215,7 +215,7 @@
 			</figure>
 			<para>This form also holds the options for changing things like the main site URL as well as the date format used to render dates/times (<guilabel>Date format</guilabel>).</para>
 			<para>There you can also select a new style (after having installed it) for your board and enforce it on all members ignoring whatever style they've selected in their "User Control Panel". The style will also be used for all forums where you haven't specified a different one. For details on where to get new styles and how to install them, please visit the <ulink url="http://www.phpbb.com/styles/">styles home page</ulink> at <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
-			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default, phpBB3 only ships with the English language pack. So, before using this field, you will have to download the language pack for the language you want to use and install it. For details, please read <link linkend="acp_system_language">Language packs</link> .</para>
+			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default, phpBB3 only ships with the English language pack. So, before using this field, you will have to download the language pack for the language you want to use and install it. For details, please read <link linkend="acp_customise_language">Language packs</link> .</para>
 		</section>
 		<!--/board_settings-->
 		<section id="quick_settings_boardfeatures">

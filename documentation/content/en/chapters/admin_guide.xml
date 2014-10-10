@@ -96,10 +96,10 @@
 					<listitem><para>The <guilabel>Site Description</guilabel> is the slogan or tagline of your forum. It will appear below the <guilabel>Site Name</guilabel> on the default style's header.</para></listitem>
 					<listitem><para>You can also use the <guilabel>Main website URL</guilabel> and <guilabel>Main website text</guilabel> fields to add a link to your home page in the breadcrumbs. The board's logo will also use this link.</para></listitem>
 					<listitem><para>If you need to close your whole forum to do maintenance work, for instance, you can do it by using the <guilabel>Disable Board</guilabel> switch. To temporarily disable your board, select<guilabel>Yes</guilabel>. This will keep any members of your forum who are not administrators or moderators from accessing your board. They will either see a default message instead of the forum, or a message that you create. You can add your own custom message that will be displayed when your board is disabled in the text box below the <guilabel>Disable board</guilabel> radio buttons. Administrators and moderators will still be able to browse forums and use their specific control panels when the board is disabled.</para></listitem>
-					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="https://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_system_language">section on Language Pack configuration</link>.</para></listitem>
+					<listitem><para>You also need to set the <guilabel>Default Language</guilabel> of your board. This is the language that guests will see when they visit your board. You can allow registered users to choose other languages. By default, the only language installed is <guilabel>English [GB]</guilabel>, but you can <ulink url="https://www.phpbb.com/languages">download more languages on the phpBB website</ulink> and install them on your board. Find out more about working with languages in the <link linkend="acp_customise_language">section on Language Pack configuration</link>.</para></listitem>
 					<listitem><para>You can also configure your board's default date format. phpBB3 has a few basic date formats that you can set your board to use; if these are not sufficient and you would like to customise your board's date format, choose <guimenuitem>Custom</guimenuitem> from the <guilabel>Date format</guilabel> selection menu. Then, in the text box besides it, type in the format you would like to use. This is the same as the <ulink url="http://www.php.net/date">PHP date() function</ulink>.</para></listitem>
 					<listitem><para>Along with setting your board's default date format, you can also set your board's preferred timezone. The timezones available in the <guilabel>System timezone</guilabel> selection menu are all based on relative <acronym>UTC</acronym> (for most intents and purposes, it is <acronym>GMT</acronym>, or Greenwich Mean Time) times.</para></listitem>
-					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
+					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_customise_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
 				</itemizedlist>
 				
 				<itemizedlist>
@@ -2160,197 +2160,143 @@
 		</section>
 	</section>
 
-	<section id="acp_styles">
-		<sectioninfo>
-			<authorgroup>
-				<author>
-					<othername>ameeck</othername>
-				</author>
-				<author>
-					<othername>MennoniteHobbit</othername>
-				</author>
-			</authorgroup>
-		</sectioninfo>
-		<title>Styles</title>
-		<para>phpBB 3.1 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
-		
-		<para>phpBB 3.1 styles have three main parts: templates, themes, and imagesets.
-			<variablelist>
+	<section id="acp_customise">
+		<title>Customise</title>
+		<para>phpBB 3.1 allows you to customise its appearance and interactions in several ways:</para>
+		<variablelist>
 				<varlistentry>
-					<term>Templates</term>
-					<listitem><para>Templates are the HTML files responsible for the layout of the style.</para></listitem>
+					<term>Styles</term>
+					<listitem>
+						<para>The appearance of your board can be changed by installing new styles or modifying the default style.</para>
+					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
-					<term>Themes</term>
-					<listitem><para>Themes are a combination of colour schemes and images that define the basic look of your forum.</para></listitem>
+					<term>Extensions</term>
+					<listitem>
+						<para>Extensions allow you to easily add new functionality to your board.</para>
+					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
-					<term>Imagesets</term>
-					<listitem><para>Imagesets are groups of images that are used throughout your board. Imagesets are comprised of all of the non-style specific images used by your board.</para></listitem>
+					<term>Language Packs</term>
+					<listitem>
+						<para>If your board users speak a language other than English, you can install a language pack to translate the system text (not the board's content) to another language.</para>
+					</listitem>
 				</varlistentry>
-			</variablelist>
-		</para>
-		
-		<figure id="img_styles_overview">
+		</variablelist>
+
+		<section id="acp_customise_styles">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+					<author>
+						<othername>MennoniteHobbit</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Styles</title>
+			<para>Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
+			
+			<figure id="img_styles_overview">
 				<title>Styles overview</title>
 				<mediaobject>
 					<imageobject>
 						<imagedata format="PNG" fileref="../images/admin_guide/styles_overview.png"/>
 					</imageobject>
 					<caption>
-						<para>This is a list of the styles that are installed on the board and the styles that can be installed on the board. You can see the number of users using the style and you can follow the links to change the style's details.</para>
-					</caption>
-				</mediaobject>
-		</figure>
-			
-		<para>Creating a style is not an easy task and it takes quite a lot of time. Skilled designers from the phpBB community create styles that are available publicly and anyone can download them. This is a good place to start if you want to download and install a new style and you cannot afford to create your own, for any possible reason. The first place where you should stop is the <ulink url="https://www.phpbb.com/styles/">Styles section on phpBB.com</ulink>, you will find a list of useful links for places like the:
-		<variablelist>
-				<varlistentry>
-					<term><ulink url="https://www.phpbb.com/styles/demo/3.1/">Styles Demo</ulink></term>
-					<listitem><para>The styles demo allows you to display each style on a live forum and see how each part of the board looks like using the specified style. You can browse through the styles until you find one that suits you and/or your board. The styles demo provides links to download the style and see its entry in the styles database.</para></listitem>
-				</varlistentry>
-				
-				<varlistentry>
-					<term><ulink url="https://www.phpbb.com/styles/db/">Styles Database</ulink></term>
-					<listitem><para>The Style Database contains all the styles that were validated by the phpBB.com Styles Team. All styles are validated to ensure they are safe to use, work correctly and do not have any other caveats. You can filter styles by parameters like version, color or category to easily find a style that you would like. Each style entry in the database contains a link to the Style Demo, to show a live example of the style in use.</para></listitem>
-				</varlistentry>
-
-			</variablelist>
-		</para>
-		
-		
-		<section id="acp_styles_manage">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>ameeck</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Installing and managing styles</title>
-			<para>After you choose a style and you are ready to install it, unpack it on your PC and upload the directory with the style to your board's server. Make sure that the directory you upload to the server's <filename class='directory'>styles</filename> contains the <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> and <filename class='directory'>imageset</filename> directories. The only exception is when a style has its template, theme or imageset based on another one, you will however be informed of that when you download the style. Having the dependent style component installed is required to install such a style.</para>
-		
-			<para>Since you have uploaded all the necessary files, you can continue to install your style. Go to the <guilabel>Styles</guilabel> tab in the ACP. You should see a table containing several items - the preinstalled prosilver style, subsilver2, and any of your uploaded styles. The list is divided into two parts, the first one contains styles that are installed on the board and the second one contains styles that were uploaded, but not installed. If you want to install your downloaded style, click the <guilabel>Install</guilabel> link next to its title.</para>
-		
-			<para>After you click <guilabel>Install</guilabel>, you will be asked about two options:</para>
-			<itemizedlist>
-						<listitem><para><guilabel>Active</guilabel>: If set to No, the style will not be available for users and only the admin will be able to preview it through the ACP.</para></listitem>
-						<listitem><para><guilabel>Make default style</guilabel>: This will set the style as the default one for the board, making it the style that new users and guests see. For more about setting the default style, read <xref linkend="acp_general_settings"/>.</para></listitem>
-			</itemizedlist>
-			<para>When you are finished, just click <guilabel>Submit</guilabel>.</para>
-		
-			<para>At this moment, you should know how to install a new style. However, there are some links and features on the Styles overview page that we have missed. They are:</para>
-			<itemizedlist>
-				<listitem><para><guilabel>Details</guilabel>: This link will take you to the details of style, where you can change its name, author, the style components it uses and determine if the style is active or not.</para></listitem>
-				<listitem><para><guilabel>Activate/Deactivate</guilabel>: Pretty clear without an explanation, this link allows you to switch the style on and off very quickly and easily.</para></listitem>
-				<listitem><para><guilabel>Export</guilabel>: This will offer the style for download with any of its components. You will be able to choose between downloading the file to your PC or storing in in the store folder on your server. This feature is useful when you want to move your board and want to have the whole style packed up so you can use it in another place.</para></listitem>
-				<listitem><para><guilabel>Delete</guilabel>: If you or your users do not like the style anymore, use this link. When you delete a style, you will be requested to choose another style which will be set for users using the deleted one. Choose that style in <guilabel>Replace style with</guilabel> and click <guilabel>Delete</guilabel> to complete the process. If you delete a style, no files will be touched, the style will appear in the <guilabel>Uninstalled styles</guilabel> section.</para></listitem>
-				<listitem><para><guilabel>Preview</guilabel>: This is a very useful and powerful feature for administrators. If you click this link, you will be taken to the board and the style you have selected will be applied - this is great when you want to see if the style looks good on your board and you want to make sure you should activate it. This feature can be used even with deactivated styles. The style ID is passed through the URL, so you can browse through the board and see any page you need.</para></listitem>
-			</itemizedlist>
-		</section>
-		
-		<section id="acp_styles_templates">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>ameeck</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Templates</title>
-			<para>Templates create the basic skeleton of your board, they define the structure of the content and contain all the HTML markup. Templates are then style using the theme and any buttons and images are taken from the imageset. Often you will be asked to edit a template when installing a <glossterm>MOD</glossterm>. Each style has its own template (an exception is when it inherits the template from another style) and you will need to make the change for each style individually. The template files can usually be found in the <filename class="directory">styles/[your_style]/template/</filename> directory.</para>
-			<note>
-				<para>After you change a style through the filesystem, remember to Purge the cache. To do this, press the appropriate button on the ACP index page.</para>
-			</note>
-			<warning>
-				<para>If you make changed to the template files through the ACP and then refresh the template, the changes made through the ACP will be overwritten with the contents of the files on the server.</para>
-			</warning>
-			<para>On the <guimenuitem>Templates</guimenuitem> page, there are several links to pages where you can manage and work with templates. Let's take a closer look at them and see what you can do on each of them.</para>
-			<itemizedlist>
-				<title>Features on the <guimenuitem>Templates</guimenuitem> page</title>
-					<listitem><para><guilabel>Edit</guilabel>: On this page, you can edit the individual template files through the ACP. Click the link and you will see a list of all the template files. You can select one and a editor for editing it will show up. If the file you are editing is not <glossterm>server-writable</glossterm>, the whole template will be stored in the database. This can cause some problems in the future, for example you won't be able to edit the templates through the filesystem. All the template files have to be writable, including the <filename class="directory">template/</filename> directory in order for the script to write directly into the files.</para></listitem>
-					<listitem><para><guilabel>Cache</guilabel>: phpBB caches all of the template files to increase the performance of your board. It compiles them and makes them ready to use, then, once every while, it refreshes the template set to reflect changes you made to it manually. On this page, you will see a list of all the template files cached for the template set. If you made changes to a template file and you want to apply them, select the template file and clicked <guilabel>Delete marked</guilabel> at the bottom of the page. phpBB will then regnerate the file for you. Do not worry about deleting files here, they are only temporary files and you cannot break anything.</para></listitem>
-					<listitem><para><guilabel>Details</guilabel>: When you click this item, you will see three things: the name of the template, shown in the lists; the template copyright and last, but not least the place where the template is stored. If the template is stored in the filesystem, you can edit the files through a text editor after you download them from your server. After you re-upload them, you must purge the cache. If the templates are stored in the database, you must edit them through the ACP editor. No cache purge is needed afterwards. Storing the template in the database however takes more resources than having it in the filesystem.</para></listitem>
-					<listitem><para><guilabel>Refresh</guilabel>: Very similar to the cache menu item, clicking <guilabel>Refresh</guilabel> will clear all the cached files for the template set. This is useful after editing the files on the filesystem, when you want to apply changes. It will overwrite any stored data in the database with the contents of the files on the server.</para></listitem>
-					<listitem><para><guilabel>Export</guilabel>: If you need to download the files of the template to your PC and transfer them elsewhere, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
-					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the template from the database. It will, however, leave the files of the template set on the server. When deleting the template you will be asked for another template that will replace the deleted one.</para></listitem>
-			</itemizedlist>
-		</section>
-		
-		<section id="acp_styles_themes">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>ameeck</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Themes</title>
-			<para>Now that we have described the style component that defines the structure of the site, the templates, we will continue to the themes. This style components takes care of all the styling. It adds colors, dimensions, formatting, fonts, and whatever else you can think of concerning styles. Basically it is a set of one or more CSS files that put together the final look of the board. The theme files can usually be found in the <filename class="directory">styles/[your_style]/theme/</filename> directory.</para>
-			
-			<para>There are two possible theme setups. The first one is used by subsilver2, where it has one stylesheet file which is loaded directly by specifying the URL of it in the templates. If you are editing such a file, the only thing you need to do after a change is to refresh the page in your browser. The second option is used by prosilver, there is one file that includes the others and the compiled and complete stylesheet is stored in the database. After you change on of the theme files, you will have to <guilabel>refresh</guilabel> the themes.</para>
-			
-			<warning>
-				<para>If you make changed to the stylesheet through the ACP and then refresh the theme, the changes made through the ACP will be overwritten with the contents of the stylesheet files on the server.</para>
-			</warning>
-			
-			<para>The themes page is very similar to the templates page, a lot of features are common, the main difference is that the theme contains a different type of files</para>
-			
-			<itemizedlist>
-				<title>Features on the <guimenuitem>Themes</guimenuitem> page</title>
-					<listitem><para><guilabel>Edit</guilabel>: On this page, you can edit the stylesheet for the board. If the theme is stored in the database in various files, they will be all joined in one stylesheet file for you to edit. Save your changes with the <guilabel>Submit</guilabel> button. If you want to edit the file manually on the filesystem, you will find it in the <filename class="directory">theme/</filename> directory of your style.</para></listitem>
-					<listitem><para><guilabel>Details</guilabel>: When you click this item, you will see three things: the name of the theme, shown in the lists; the theme copyright and last, but not least the place where the theme is stored. If the theme is stored in the filesystem, you can edit the files through a text editor after you download them from your server. After you re-upload them, you must refresh the theme (this option is described just below). If the theme is stored in the database, you can edit it through the ACP editor. No theme refresh is needed afterwards.</para></listitem>
-					<listitem><para><guilabel>Refresh</guilabel>: Be careful when using this option, as it will load the data from the files and overwrite any stylesheets in the database. If you edited your theme through the ACP, these changes will be lost. You can <guilabel>Export</guilabel> the theme to your PC if you need to save the changes. You will use this option when you make changes to the theme through the filesystem and you need to apply them to your board.</para></listitem>
-					<listitem><para><guilabel>Export</guilabel>: If you need to download the theme to your PC and transfer it elsewhere or save any changes it, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
-					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the theme from the database. It will, however, leave the files of the theme on the server. When deleting the theme you will be asked to choose a theme that will replace the deleted one.</para></listitem>
-			</itemizedlist>
-		</section>
-		
-		<section id="acp_styles_imagesets">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>ameeck</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Imagesets</title>
-			<para>The first and last component of a style is the imageset. It contains all the images that are not included in the theme. For example they are the posting buttons, online banners, or topic and forum markers. The files which make up the imageset of your style can usually be found in the <filename class="directory">styles/[your_style]/imageset/</filename> directory.</para>
-			<para>The imageset is always stored in the database. The details about each image (its location and dimensions) are taken from a <filename>imageset.cfg</filename> file located in the imageset directory and stored in the database from which they are loaded.</para>
-			<para>Before we describe the interface in the <acronym>ACP</acronym>, which allows you to edit the imageset through a graphical interface, let's take a look at how the imageset.cfg file is created in case you would like to edit the file manually by yourself. A typical row in the files looks like this: <code>img_sticky_read = sticky_read.gif*27*27</code>. The text before the equals sign is the image on the board. The location follows next. At the end, the height and width (in this order) of the file is defined. The last three items are separated by an asterisk without spaces.</para>			
-			<itemizedlist>
-				<title>Features on the <guimenuitem>Imagesets</guimenuitem> page</title>
-					<listitem>
-						<para><guilabel>Edit</guilabel>: Here you can edit the individual images of the set. The imageset consists of a list of image entities with defined attributes, e.g. an entity is &quot;Sticky topic icon&quot;, which has the attributes height, width and location. In order to explain what you can do on this page, let's go through all the controls present on it:</para>
-						<itemizedlist>
-							<listitem><para><guilabel>Current image</guilabel>: This shows the image that is currently assigned to the image.</para></listitem>
-							<listitem><para><guilabel>Selected image</guilabel>: This gives you a preview of the image you select in the <guilabel>Image</guilabel> field.</para></listitem>
-							<listitem><para><guilabel>Image</guilabel>: The <acronym>ACP</acronym> pulls all the images located in the <filename class="directory">imageset/</filename> directory and lists them here. You can then assign any image file uploaded to that directory to an image on the board.</para></listitem>
-							<listitem><para><guilabel>Include dimensions</guilabel>: If set to <guilabel>Yes</guilabel>, the dimensions from the fields below will be taken in account, otherwise they will be detected automatically.</para></listitem>
-							<listitem><para><guilabel>Image width</guilabel>: Sets the width of the image file.</para></listitem>
-							<listitem><para><guilabel>Image height</guilabel>: Sets the height of the image file.</para></listitem>				
-						</itemizedlist>				
-					</listitem>
-					<listitem><para><guilabel>Details</guilabel>: On this page, you can edit the name and copyright of the imageset (of course leave copyrights of the respectful authors).</para></listitem>
-					<listitem><para><guilabel>Refresh</guilabel>: This option will take the details about each image from the <filename>imageset.cfg</filename> file and save them in the database. This will <emphasis>overwrite</emphasis> any changes you have made through the ACP editor and weren't saved on the filesystem.</para></listitem>
-					<listitem><para><guilabel>Export</guilabel>: If you need to download the imageset to your PC and transfer it elsewhere or save any changes it, choose this option. You will be asked wheter to download the file to your PC or to save it in the board's store folder. You can also choose the archive format depending on your server setup.</para></listitem>
-					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the imageset from the database. It will, however, leave the files of the imageset on the server. When deleting the imageset you will be asked to choose another set that will replace the deleted one. You always must have at least one imageset installed.</para></listitem>
-			</itemizedlist>
-			<figure id="img_acp_imageset_edit">
-				<title>Interface for editing imagesets</title>
-				<mediaobject>
-					<imageobject>
-						<imagedata format="PNG" fileref="../images/admin_guide/imageset_edit.png"/>
-					</imageobject>
-					<caption>
-						<para>On this page, you can edit the details of individual images that make up the imageset.</para>
+						<para>This is a list of the styles that are installed on the board. You can see the number of users using the style and you can follow the links to change the style's details.</para>
 					</caption>
 				</mediaobject>
 			</figure>
-		</section>
+				
+			<para>Creating a style is not an easy task and it takes quite a lot of time. Skilled designers from the phpBB community create styles that are available publicly and anyone can download them. This is a good place to start if you want to download and install a new style and you cannot afford to create your own, for any possible reason. The first place where you should stop is the <ulink url="https://www.phpbb.com/styles/">Styles section on phpBB.com</ulink>, you will find a list of useful links for places like the:
+				<variablelist>
+					<varlistentry>
+						<term><ulink url="https://www.phpbb.com/styles/demo/3.1/">Styles Demo</ulink></term>
+						<listitem><para>The styles demo allows you to display each style on a live forum and see how each part of the board looks like using the specified style. You can browse through the styles until you find one that suits you and/or your board. The styles demo provides links to download the style and see its entry in the styles database.</para></listitem>
+					</varlistentry>
+					
+					<varlistentry>
+						<term><ulink url="https://www.phpbb.com/styles/db/">Styles Database</ulink></term>
+						<listitem><para>The Style Database contains all the styles that were validated by the phpBB.com Styles Team. All styles are validated to ensure they are safe to use, work correctly and do not have any other caveats. You can filter styles by parameters like version, color or category to easily find a style that you would like. Each style entry in the database contains a link to the Style Demo, to show a live example of the style in use.</para></listitem>
+					</varlistentry>
 
+				</variablelist>
+			</para>
+			
+			
+			<section id="acp_styles_manage">
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>ameeck</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Installing and managing styles</title>
+				<para>After you choose a style and you are ready to install it, unpack it on your PC and upload the directory with the style to your board's server. Make sure that the directory you upload to the server's <filename class='directory'>styles</filename> contains the <filename class='directory'>template</filename> and <filename class='directory'>theme</filename> directories, as well as a <filename class='file'>style.cfg</filename> file. The only exception is when a style has its template or theme based on another one, you will however be informed of that when you download the style. Having the dependent style component installed is required to install such a style.</para>
+			
+				<para>Since you have uploaded all the necessary files, you can continue to install your style. Go to the <guilabel>Customise</guilabel> tab in the ACP and click the <guilabel>Install Styles</guilabel> link. You should see a table containing a list of your uploaded styles. If you want to install your downloaded style, click the <guilabel>Install style</guilabel> link next to its title.</para>
+			
+				<para>At this moment, you should know how to install a new style. However, there are some links and features on the Styles overview page that we have missed. They are:</para>
+				<itemizedlist>
+					<listitem><para><guilabel>Details</guilabel>: This link will take you to the details of style, where you can change its name, set if the style is active or not, as well as if it should be the board's default style.</para></listitem>
+					<listitem><para><guilabel>Activate/Deactivate</guilabel>: Pretty clear without an explanation, this link allows you to switch the style on and off very quickly and easily.</para></listitem>
+					<listitem><para><guilabel>Uninstall</guilabel>: If you or your users do not like the style anymore, use this link. When you uninstall a style, the users of that style will be switched to the board's default style. You also have the option of completely deleting the style as well if you check the <guilabel>Delete from filesystem</guilabel> box. This will uninstall the style and delete its files, this cannot be undone.</para></listitem>
+					<listitem><para><guilabel>Preview</guilabel>: This is a very useful and powerful feature for administrators. If you click this link, you will be taken to the board and the style you have selected will be applied - this is great when you want to see if the style looks good on your board and you want to make sure you should activate it. This feature can be used even with deactivated styles. The style ID is passed through the URL, so you can browse through the board and see any page you need.</para></listitem>
+				</itemizedlist>
+			</section>
+
+		</section>
+		<section id="acp_customise_extensions">
+			<title>Extensions</title>
+			<para>Extensions are self-contained packages which are uploaded to your board's <filename class='directory'>ext</filename> directory. Using the <guilabel>Extensions Manager</guilabel>, you can install and manage the extensions running on your board.</para>
+			<figure id="img_extensions_overview">
+				<title>Extensions overview</title>
+				<mediaobject>
+					<imageobject>
+						<imagedata format="PNG" fileref="../images/admin_guide/extensions_overview.png"/>
+					</imageobject>
+					<caption>
+						<para>This is a list of the extensions that are activated or are ready for use on your board.</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			<para>After uploading the extension, it will appear in the <guilabel>Extension Manager</guilabel>, where you simply need to click the <guilabel>Enable</guilabel> link to activate the extension. Once an extension is activated, an <guilabel>Extensions</guilabel> tab will appear in the Administration Control Panel if the extension has any configuration settings. The <guilabel>Details</guilabel> link shows you information about the extension, such as its authors, home page, description, and version requirements. The <guilabel>Current Version</guilabel> column indicates if you have the latest version of the extension. The <guilabel>Settings</guilabel> link at the top of the screen allows you to check for updates on pre-release extensions that are not yet considered to be stable. Your board will periodically check to see if you are running the latest extensions, but you can click the <guilabel>Re-Check all versions</guilabel> link to force a re-check of your extensions' versions.</para>
+			
+			<para>If a newer version of your extension is available, you can update it by following these steps:</para>
+			<orderedlist>
+				<listitem><para>Disable the extension by clicking the <guilabel>Disable</guilabel> link in the <guilabel>Actions</guilabel> column.</para></listitem>
+				<listitem><para>Delete the extension's files from the board's <filename class='directory'>ext</filename> directory. Only delete the folder that corresponds to the extension you wish to update.</para></listitem>
+				<listitem><para>Upload the latest version of the files to the <filename class='directory'>ext</filename> directory.</para></listitem>
+				<listitem><para>Enable the extension by clicking the <guilabel>Enable</guilabel> link in the <guilabel>Actions</guilabel> column.</para></listitem>
+			</orderedlist>
+
+			<para>If you wish to completely remove an extension from your board, follow these steps:</para>
+			<orderedlist>
+				<listitem><para>Disable the extension by clicking the <guilabel>Disable</guilabel> link in the <guilabel>Actions</guilabel> column.</para></listitem>
+				<listitem><para>Delete any data added by the extension by clicking the <guilabel>Delete data</guilabel> link in the <guilabel>Actions</guilabel> column.</para></listitem>
+				<listitem><para>Delete the extension's files from the board's <filename class='directory'>ext</filename> directory. Only delete the folder that corresponds to the extension you wish to update.</para></listitem>
+			</orderedlist>
+
+		</section>
+		<section id="acp_customise_language">
+			<sectioninfo>
+				<authorgroup>
+					<author>
+						<othername>ameeck</othername>
+					</author>
+				</authorgroup>
+			</sectioninfo>
+			<title>Language Packs</title>
+			<para>In phpBB, you can upload several language packs for your users to use. Every text string displayed by the system should be translated after you upload a new language pack. Using a different language pack does not change the contents of posts, as translating them is not possible due to the various content they can have and the limits of computer translation.</para>
+			<para>Language packs can be downloaded from the Downloads page on phpBB.com. To add a language pack, unzip the downloaded file and upload the contents to the <filename>language/</filename> directory. The files should be contained in a directory named with the language's ISO code, the default British English pack is in the <filename>en/</filename> directory for example. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
+			<note>
+				<para>To make a language pack the default language of the board, you need to change the <link linkend="acp_general_config">Board Configuration</link>.</para>
+			</note>
+			<para>In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
+		</section>
 	</section>
 
 	<section id="acp_maintenance">
@@ -2485,7 +2431,7 @@
 					</listitem>
 				</varlistentry>
 				<varlistentry>
-					<term><guilabel>Total number of indexed posts</guilabel> (fulltext mysql)</term>
+					<term><guilabel>Total number of indexed posts</guilabel></term>
 					<listitem>
 						<para>This statistic is shown for the mysql fulltext backend, where the search is done by a internal mechanism of the Database system. It tells you how many posts on the board were indexed.</para>
 					</listitem>
@@ -2572,23 +2518,6 @@
 				<para>Sending e-mails to all users on the board or a large group can be a lengthy process. Wait until the script confirms that the e-mails have been sent.</para>
 			</note>
 		</section>
-		<section id="acp_system_language">
-			<sectioninfo>
-				<authorgroup>
-					<author>
-						<othername>ameeck</othername>
-					</author>
-				</authorgroup>
-			</sectioninfo>
-			<title>Language Packs</title>
-			<para>In phpBB, you can upload several language packs for your users to use. Every text string displayed by the system should be translated after you upload a new language pack. Using a different language pack does not change the contents of posts, as translating them is not possible due to the various content they can have and the limits of computer translation.</para>
-			<para>Language packs can be downloaded from the Downloads page on phpBB.com. To add a language pack, unzip the downloaded file and upload the contents to the <filename>language/</filename> directory. The files should be contained in a directory named with the language's ISO code, the default British English pack is in the <filename>en/</filename> directory for example. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
-			<note>
-					<para>To make a language pack the default language of the board, you need to change the <link linkend="acp_general_config">Board Configuration</link>.</para>
-			</note>
-			<para>If you are not comfortable with editing PHP files manually and you would like to change some text phpBB is displaying, you can use the in-built language pack editor which is accessible once you click the language pack title in the <guilabel>Installed language packs</guilabel> list. You can change the language pack details and the contents of individual language files on this page. In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
-			<para>If you choose to edit a file using the ACP you have two options on how to update the translation on the board. First you can choose to <guilabel>Submit</guilabel> or <guilabel>Submit and download</guilabel> the file, which will store the file you are editing in the <filename>store/</filename> directory and the file will be offered for download if you choose the second button. If you choose to save the file in the store directory, you will have to manually move it to the language pack directory. The second possibility, which is right under these two buttons is to move the file to the language pack directory by using FTP. You will be prompted for FTP login credentials and if possible the file be saved and updated immediately by the script.</para>
-		</section>
 		<section id="acp_system_phpinfo">
 			<sectioninfo>
 				<authorgroup>
@@ -2634,7 +2563,7 @@
 			</sectioninfo>
 			<title>Module Management</title>
 			<para>Modules are used the form the structure and content of the <acronym>UCP</acronym>, <acronym>MCP</acronym> and <acronym>ACP</acronym>. Individual modules can be optionally disabled and it is possible to reorganize them into a different structure. Modules for the User Control Panel and the Moderator Control panel have a Category &#187; Module two-level structure, while the Administration modules have three levels: Category (tabs at the top) &#187; Category (headers on the left-hand side) &#187; Module (individual sections).</para>
-			<para>Very often, MODs that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
+			<para>Very often, extensions that have controllable features add modules to the ACP to allow comfortable editing of various settings.</para>
 			<para>To create a module category, use the text field next to the <guilabel>Create new module</guilabel> button. Enter the category title, click the button and on the next page ensure that the <guilabel>Module type</guilabel> is <guilabel>Category</guilabel>, the module is <guilabel>enabled</guilabel> and that the <guilabel>Module parent</guilabel> is set correctly. After you create a category, you can browse to it through the list of modules and add a specific module that is saved in a file. Modules are saved in the appropriate directory (acp/, mcp/ or /ucp) contained in the <filename>includes/</filename> directory.</para>
 			<warning><para>By disabling the Module Management module, it is possible to cut yourself off from the ACP and other control panels. Be careful when you are editing modules.</para></warning>
 			<itemizedlist>
