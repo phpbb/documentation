@@ -81,9 +81,9 @@
 		</sectioninfo>
 		<title>Orienting Yourself in the User Control Panel</title>
 		<para>The User Control Panel (<glossterm>UCP</glossterm>) allows you to alter personal preferences, manage posts you are watching, send and receive private messages, and change the way information about you appears to other users. To view the UCP, click the 'User Control Panel' link that appears after logging in.</para>
-		<para>The UCP is separated into seven tabs: Overview, Private Messages, Profile, Preferences, Friends and Foes, Attachments, and Groups. Within each tab are several sub pages, accessed by clicking the desired link on the left side of the UCP interface. Some of these areas may not be available depending on the permissions set for you by the administrator.</para>
+		<para>The UCP is separated into six tabs: Overview, Private Messages, Profile, Preferences, Friends and Foes, and Groups. Within each tab are several sub pages, accessed by clicking the desired link on the left side of the UCP interface. Some of these areas may not be available depending on the permissions set for you by the administrator.</para>
 		<para>Every page of the UCP displays your Friends List on the left side. To send a private message to a friend, click their user name.</para>
-		<para>TODO: Note that Private messaging will be discussed in its own section</para>
+		<para>Private Messaging is discussed more in depth in <xref linkend="user_pm" />.</para>
 		<section id="ucp_overview">
 			<title>Overview</title>
 			<para>The Overview displays a snapshot of information about your posting habits such as the date you joined the forum, your most active topic, and how many total posts you have submitted. Overview sub pages include Subscriptions, Bookmarks, and Drafts.</para>
