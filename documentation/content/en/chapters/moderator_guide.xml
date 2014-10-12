@@ -104,7 +104,7 @@
 					<imagedata format="PNG" fileref="../images/moderator_guide/quick_mod_tools.png"/>
 				</imageobject>
 				<caption>
-					<para>The quick moderator tools. As you can see, these tools are located at the end of each topic at the bottom of the page, before the last post on that page. Clicking on the selection menu will show you all of the actions you may perform.</para>
+					<para>The quick moderator tools. As you can see, these tools are located at the end of each topic at the bottom of the page, before the last post on that page. Clicking on the mallet icon will show you all of the actions you may perform.</para>
 				</caption>
 			</mediaobject>
 		</figure>
@@ -129,11 +129,18 @@
 			<title>Deleting a topic or post</title>
 			<para>If enabled within the <link linkend="admin_control_panel">Administration Control Panel</link> permissions, a user may delete their own posts when either viewing a topic or editing a previous post. The user may only delete a topic or post if it has not yet been replied to.</para>
 			<para>To delete other user's posts, one must have appropriate moderator forum-based permission - <guilabel>Can delete posts</guilabel>. Using the selection menu beneath topics allows quick removal. The <link linkend="moderator_mcp">Moderator Control Panel</link> allows multiple deletions of separate posts.</para>
+			<para>When deleting a topic or post, you will be prompted to provide a reason for its deletion. This message will appear in the moderator logs. Additionally, if you have the <guilabel>Soft Delete</guilabel> moderator permission, you will be asked if you would like to permanently delete the topic/post or not. If you choose not to, it will only be hidden from view with the option to restore it.</para>
 			<tip>
-				<para>Please note that any topics or posts cannot be retrieved once deleted. Consider using a hidden forum that topics can be moved to for future reference.</para>
+				<para>Please note that if you choose to permanently delete a topic or post, it cannot be undone.</para>
 			</tip>
 		</section>
-		
+
+		<section id="modtools_restore">
+			<title>Restoring a topic or post</title>
+			<para>If a topic or post has been deleted, it may be possible to restore it. If a user chose not to permanently delete the topic or post, it will be listed with an icon next to it indicating that it is eligible for restoration.</para>
+			<para>If a user has selected to permanently delete a post or topic, it cannot be recovered.</para>
+		</section>
+
 		<section id="modtools_move">
 			<sectioninfo>
 				<authorgroup>
@@ -307,7 +314,7 @@
 				<varlistentry>
 					<term>Moderation queue</term>
 					<listitem>
-						<para>This area lists any topics or posts waiting for approval.</para>
+						<para>This area lists any topics or posts waiting for approval. It also lists topics and posts that have been soft-deleted.</para>
 					</listitem>
 				</varlistentry>
 				
@@ -383,8 +390,9 @@
 			<para>When viewing any particular forum, clicking <guilabel>Moderator Control Panel</guilabel> will take you to the forum moderation area. Here, you are able to mass moderate topics within that forum via the dropdown box. The available actions are:
 				<itemizedlist>
 					<listitem><para><guilabel>Delete</guilabel>: Deletes the selected topic(s).</para></listitem>
+					<listitem><para><guilabel>Restore</guilabel>: Restores the selected soft-deleted topic(s).</para></listitem>
 					<listitem><para><guilabel>Move</guilabel>: Moves the selected topic(s) to another forum of your preference.</para></listitem>
-					<listitem><para><guilabel>Fork</guilabel>: Creates a duplicate of the selected topic(s) in another forum of your preference.</para></listitem>
+					<listitem><para><guilabel>Copy</guilabel>: Creates a duplicate of the selected topic(s) in another forum of your preference.</para></listitem>
 					<listitem><para><guilabel>Lock</guilabel>: Locks the selected topic(s).</para></listitem>
 					<listitem><para><guilabel>Unlock</guilabel>: Unlocks the selected topic(s).</para></listitem>
 					<listitem><para><guilabel>Resync</guilabel>: Resynchronise the selected topic(s).</para></listitem>

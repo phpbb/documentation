@@ -594,6 +594,8 @@
 						<listitem><para><guilabel>Enable display of jumpbox</guilabel>: The jumpbox can be a useful tool for navigating throughout your board. However, it is possible to control whether or not this is displayed. To display the jumpboxes, select <guilabel>Yes</guilabel>.</para></listitem>
 						<listitem><para><guilabel>Show user's activity</guilabel>: This option controls whether or not the active topic/forum information displayed in your users' profiles and <glossterm>UCP</glossterm>. If you want to show this user activity information, select <guilabel>Yes</guilabel>. However, if your board has more than one million posts, it is recommended that you disable this feature.</para></listitem>
 						<listitem><para><guilabel>Recompile stale templates</guilabel>: This option controls the recompilation of old templates. If this is enabled, your board will check to see if there are updated templates on your filesystem; if there are, your board will recompile the templates. Select <guilabel>Yes</guilabel> to enable this option.</para></listitem>
+						<listitem><para><guilabel>Allow usage of third party content delivery networks</guilabel>: If this setting is enabled, some files will be served from external third party servers (ajax.googleapis.com) instead of your server. This reduces the network bandwidth required by your server, but may present a privacy issue for some board administrators. In a default phpBB installation, this includes loading "jQuery" and the font "Open Sans" from Google's content delivery network.</para></listitem>
+						<listitem><para><guilabel>Allow live searches</guilabel>: When enabled, certain search fields (memberlist searches) will automatically prompt with search results as you type.</para></listitem>
 					</itemizedlist>
 				</para>
 				
@@ -1870,6 +1872,19 @@
 			<important>
 				<para>If you make a group the default one that has a rank and avatar set, the user's old avatar and rank will be overwritten by the group.</para>
 			</important>
+		</section>
+		<section id="acp_groups_position">
+			<title>Group positions</title>
+			<para>When groups are set to be shown in the legend, you can change their order on this page. They can be automatically sorted by name or manually by setting their order with the Up and Down arrows. If a group is not shown on the list, a dropdown menu is available to add it to the legend.</para>
+			<para>It is also possible to change which groups are shown on the <guilabel>Team</guilabel> page. There are three options available for choosing how members are listed on the <guilabel>Team</guilabel> page.</para>
+			<itemizedlist>
+				<listitem><para><guilabel>First membership only</guilabel>: Of the groups selected to be shown on the team page, members will only appear in their first group in the list.</para></listitem>
+				<listitem><para><guilabel>User’s default group only</guilabel>: Of the groups selected to be shown on the team page, members will only appear in their default group.</para></listitem>
+				<listitem><para><guilabel>All memberships</guilabel>: Users will be shown in each group that is selected to appear on the team page, if they are a member of that group.</para></listitem>
+			</itemizedlist>
+			<para>You may also choose to show which forums each team member is a moderator for.</para>
+			<para>Categories can be created to affiliate members of multiple user groups with a common title.</para>
+			<para>Finally, you are able to choose which groups are considered <guilabel>Team</guilabel> positions and should be shown on the Team page.</para>
 		</section>
 	</section>
 	
