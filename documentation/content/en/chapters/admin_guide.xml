@@ -1955,6 +1955,7 @@
 					<listitem><para>View administrative permissions for <guilabel>Global Administrator permissions</guilabel></para></listitem>
 					<listitem><para>View user-based permissions for <guilabel>Global User permissions</guilabel></para></listitem>
 					<listitem><para>View global moderation permissions for <guilabel>Global Moderator permissions</guilabel></para></listitem>
+					<listitem><para>View forum moderation permissions for <guilabel>Forum Moderators permissions</guilabel></para></listitem>
 					<listitem><para>View forum-based permissions for <guilabel>User Forum permissions</guilabel></para></listitem>
 				</itemizedlist>
 			Any of these five links will take you to a page listing the users and user groups that are assigned those Global or Forum permissions.</para>
