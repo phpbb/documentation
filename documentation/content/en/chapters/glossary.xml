@@ -139,6 +139,20 @@
 					<para>A <acronym>DBMS</acronym>, or &quot;Database Management System&quot;, is a system or software designed to manage a database. phpBB 3.1 supports the following DBMSs: Microsoft SQL Server, MySQL, Oracle, postgreSQL, and SQLite.</para>
 				</listitem>
 			</varlistentry>
+
+			<varlistentry>
+				<term>Event</term>
+				<listitem>
+					<para>Events are injection points in the core phpBB code, similar to an anchor. When the event is triggered a <glossterm>listener</glossterm> in an <glossterm>extension</glossterm> that is subscribed to the event will inject code at that point, but without editing the core file.</para>
+				</listitem>
+			</varlistentry>
+		
+			<varlistentry>
+				<term>Extension</term>
+				<listitem>
+					<para>Is the successor to a <glossterm>MOD</glossterm>. Like MODs they are to add or remove features or functionality, or in some other way modify behaviour of the standard software. They differ from MODs in that they are contained in their own directories and do not make changes to the core software. Instead they make use of <glossterm>Events</glossterm> and <glossterm>Listeners</glossterm>.</para>
+				</listitem>
+			</varlistentry>
 			
 			<varlistentry>
 				<term>FTP</term>
@@ -171,10 +185,17 @@
 			<varlistentry>
 				<term>Jabber</term>
 				<listitem>
-					<para>Jabber is an open-source protocol that can be used for instant messenging. For more information on Jabber's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
+					<para>Jabber is the former name of Extensible Messaging and Presence Protocol (XMPP) an open-source protocol that can be used for instant messenging. For more information on XMPP's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
 				</listitem>
 			</varlistentry>
 			
+			<varlistentry>
+				<term>Listener</term>
+				<listitem>
+					<para>A listeners are triggered by an <glossterm>event</glossterm>. They can be used by an <glossterm>extension</glossterm> to process incoming data and manipulate variables in the scope of the event. So they can change phpBB's behaviour, add or remove functionality or if used in the context of templates, modify the output. An alternative name for a listener is a &quot;hook&quot;.</para>
+				</listitem>
+			</varlistentry>
+
 			<varlistentry>
 				<term>MCP</term>
 				<listitem>
@@ -196,6 +217,13 @@
 				</listitem>
 			</varlistentry>
 			
+			<varlistentry>
+				<term>Notifications</term>
+				<listitem>
+					<para>When users perform certain actions on the board notifications will be generated to the affected users. For example, moderators can select to be notified when a post requires approval. Notification methods include board notification and email notification.</para>
+				</listitem>
+			</varlistentry>
+
 			<varlistentry>
 				<term>PHP</term>
 				<listitem>
@@ -274,6 +302,13 @@
 				<term>Template</term>
 				<listitem>
 					<para>A template is what controls the layout of a style. phpBB 3.1 template files have the .html file extension. These template files contain mostly <acronym>HTML</acronym> (no <acronym>PHP</acronym>, however), with some variables that phpBB uses (contained in braces: { and }).</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term>Twig</term>
+				<listitem>
+					<para>phpBB uses the <ulink url="http://twig.sensiolabs.org/">Twig</ulink> template engine to combine data and <glossterm>template</glossterm> files to generate dynamic web pages on demand.</para>
 				</listitem>
 			</varlistentry>
 			
