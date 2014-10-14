@@ -2321,7 +2321,7 @@
 			</note>
 			<para>In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
 			<important>
-				<para>Language packs, other than the default Britsih English, are not automatically updated when the board is updated. If you have installed other language packs you will need to update those as well.</para>
+				<para>Language packs, other than the default British English, are not automatically updated when the board is updated. If you have installed other language packs you will need to update those as well.</para>
 			</important>
 		</section>
 	</section>
