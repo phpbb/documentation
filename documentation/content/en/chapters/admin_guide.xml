@@ -2313,11 +2313,16 @@
 			</sectioninfo>
 			<title>Language Packs</title>
 			<para>In phpBB, you can upload several language packs for your users to use. Every text string displayed by the system should be translated after you upload a new language pack. Using a different language pack does not change the contents of posts, as translating them is not possible due to the various content they can have and the limits of computer translation.</para>
-			<para>Language packs can be downloaded from the Downloads page on phpBB.com. To add a language pack, unzip the downloaded file and upload the contents to the <filename>language/</filename> directory. The files should be contained in a directory named with the language's ISO code, the default British English pack is in the <filename>en/</filename> directory for example. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
+			<para>Language packs can be downloaded from the <ulink url="https://www.phpbb.com/downloads/">Downloads</ulink> page on phpbb.com.</para>
+			<para>To add a language pack, unzip the downloaded file and upload the contents, that is the <filename class='directory'>language</filename> and <filename class='directory'>styles</filename> directories, to the the root directory of your board. The board's <filename class='directory'>language/</filename> directory should then contain an addtional directory with the name of the ISO code of the added language, for example, if French is added in addition to the default British English pack, the <filename class='directory'>en/</filename> directory, there will also be a <filename class='directory'>fr/</filename> directory. After you upload the files to the system, the pack should show in the <guilabel>Uninstalled language packs</guilabel> list. Click <guilabel>Install</guilabel> to add it to the board and make it available for users.</para>
+			<para>Once the language pack is installed users can select it in User Control Panel &#187; Board preferences &#187; Edit global settings.</para>
 			<note>
 				<para>To make a language pack the default language of the board, you need to change the <link linkend="acp_general_config">Board Configuration</link>.</para>
 			</note>
 			<para>In case you have more language packs installed and you select another language pack than the default one, you will see a list of untranslated variables if the packs are not synchronised. This is useful when you install MODs for one language and you cannot find what language strings you are missing in the other ones for example.</para>
+			<important>
+				<para>Language packs, other than the default Britsih English, are not automatically updated when the board is updated. If you have installed other language packs you will need to update those as well.</para>
+			</important>
 		</section>
 	</section>
 
