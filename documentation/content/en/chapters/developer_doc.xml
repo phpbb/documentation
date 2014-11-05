@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                         "http://www.docbook.org/xml/4.4/docbookx.dtd">
+<chapter id="developer_doc">
+	<?dbhtml  dir="developer" filename="index.html" ?>
+	<chapterinfo>
+		<releaseinfo>$Id$</releaseinfo>
+		<copyright>
+			<year>2014</year>
+			<holder>phpBB Group</holder>
+		</copyright>
+	</chapterinfo>
+	<title>Developer Documentation</title>
+	<abstract>
+		<para>A developer documentation.</para>
+	</abstract>
+	<section id="dev_extensions">
+		<title>Extensions</title>
+		<para>
+			Extensions are the natural successor to modifications (sometimes known as MODs), the development and support of which have defined the community's involvement in the phpBB project for over a decade. Unlike modifications, which often required a developer to alter the phpBB codebase to achieve a desired functionality, extensions enable a developer to develop new functionality for phpBB that is self-contained and void of actual code changes. As such, administrators wishing to include new functionality on their boards simply have to upload a set of files (the “extension”) to their webspace and do not have to concern themselves with editing any files.
+		</para>
+		<section id="dev_extensions_composer_json">
+			<title>Composer.json</title>
+			<section>
+				<title>Description</title>
+				<para>Every extension requires a metadata file named <filename>composer.json</filename>. This file contains basic information about an extension as well its dependencies. It is written using the JSON format and must be stored in the root directory of the extension.</para>
+				<para>A complete explanation of all JSON schema fields available in a composer.json file can be found here: <uri>https://getcomposer.org/doc/04-schema.md</uri></para>
+			</section>
+			<section>
+				<title>Parameters</title>
+				<para>The following JSON schema are required in any extension's composer.json file, except where identified as optional: </para>
+				<table>
+					<thead>
+						<tr>
+							<th>Parameter</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><emphasis>name</emphasis></td>
+							<td>The vendor name and extension name, separated by / </td>
+						</tr>
+						<tr>
+							<td><emphasis>type</emphasis></td>
+							<td>The type of package. It should always be <constant>phpbb-extension</constant></td>
+						</tr>
+						<tr>
+							<td><emphasis>description</emphasis></td>
+							<td>A short description of your extension.</td>
+						</tr>
+						<tr>
+							<td>
+								<emphasis>homepage</emphasis>
+								(optional)
+							</td>
+							<td>A URL pointing to the website of the extension or extension author.</td>
+						</tr>
+						<tr>
+							<td><emphasis>version</emphasis></td>
+							<td>The version of your extension. This should follow the format of X.Y.Z with an optional suffix of -dev, -patch, -alpha, -beta or -RC.</td>
+						</tr>
+						<tr>
+							<td>
+								<emphasis>time</emphasis>
+								(optional)
+							</td>
+							<td>The release date of your extension. Must be in YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</td>
+						</tr>
+						<tr>
+							<td>
+								<emphasis>keywords</emphasis>
+								(optional)
+							</td>
+							<td>An array of keywords related to the extension.</td>
+						</tr>
+						<tr>
+							<td><emphasis>license</emphasis></td>
+							<td>The license of the package. This can be either a string or an array of strings. Typically extensions should be licensed under the same GPL-2.0 license as <application>phpBB</application>.</td>
+						</tr>
+						<tr>
+							<td><emphasis>require</emphasis></td>
+							<td>
+								Lists dependencies required by the extension.
+								<table>
+									<thead>
+										<tr>
+											<th>Parameter</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><emphasis>php</emphasis></td>
+											<td>The minimum-stability version of PHP required by the extension. <application>phpBB</application> requires PHP 5.3.3 or later and this should be the minimum <acronym>PHP</acronym> version requirement for any extension.</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td><emphasis>authors</emphasis></td>
+							<td>
+								(Optional, but highly recommended) The author(s) of the extension, as an array of JSON objects.
+								<table>
+									<thead>
+										<tr>
+											<th>Parameter</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><emphasis>name</emphasis> (optional)</td>
+											<td>The name of an author.</td>
+										</tr>
+										<tr>
+											<td><emphasis>homepage</emphasis> (optional)</td>
+											<td>A URL pointing to the website of the author.</td>
+										</tr>
+										<tr>
+											<td><emphasis>email</emphasis> (optional)</td>
+											<td>An email address of the author. </td>
+										</tr>
+										<tr>
+											<td><emphasis>role</emphasis> (optional)</td>
+											<td>The role of the author, ie: Developer, Co-Developer, Consultant. </td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td><emphasis>extra</emphasis></td>
+							<td>
+								Arbitrary extra data.
+								<table>
+									<thead>
+										<tr>
+											<th>Parameter</th>
+											<th>Description</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><emphasis>display-name</emphasis></td>
+											<td>The name of your extension.</td>
+										</tr>
+										<tr>
+											<td><emphasis>soft-require</emphasis></td>
+											<td>
+												The <application>phpBB</application> required version.
+												<table>
+													<thead>
+														<tr>
+															<th>Parameter</th>
+															<th>Description</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><emphasis>phpbb/phpbb</emphasis></td>
+															<td>The minimum-stability version of phpBB required by the extension. For example: 3.1.* (for any stable released version of phpBB 3.1), 3.1.*@dev (for any dev, beta, RC or stable version of phpBB). More information can be found here: <uri>https://getcomposer.org/doc/01-basic-usage.md#package-versions</uri></td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<emphasis>version-check</emphasis>
+												(optional)
+											</td>
+											<td>
+												The extension manager can check for the latest version of your extension using this feature.
+												<table>
+													<thead>
+														<tr>
+															<th>Parameter</th>
+															<th>Description</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><emphasis>host</emphasis></td>
+															<td>Full URL to the host server.</td>
+														</tr>
+														<tr>
+															<td><emphasis>directory</emphasis></td>
+															<td>/the directory containing the file.</td>
+														</tr>
+														<tr>
+															<td><emphasis>filename</emphasis></td>
+															<td>A JSON file containing the latest version information.</td>
+														</tr>
+													</tbody>
+												</table>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<section>
+				<title>Sample</title>
+				<para>
+					<code language="json">
+{
+	"name": "acme/foobar",
+	"type": "phpbb-extension",
+	"description": "An extension which makes your forum even better.",
+	"homepage": "http://acme.foobar.com",
+	"version": "1.0.0",
+	"time": "2013-09-30",
+	"keywords": ["phpbb", "extension", "acme", "foobar"],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "John Smith",
+			"homepage": "http://johnsmith.com",
+			"email": "john@smith.tld",
+			"role": "Developer"
+		},
+		{
+			"name": "Jane Doe",
+			"email": "jane@doe.tld",
+			"role": "Co-Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0"
+	},
+	"extra": {
+		"display-name": "Foo Bar by ACME",
+		"soft-require": {
+			"phpbb/phpbb": "3.1.*"
+		},
+		"version-check": {
+			"host": "acme.foobar.com",
+			"directory": "/version",
+			"filename": "foobar.json"
+		}
+	}
+}
+					</code>
+				</para>
+				<note>
+					<para>It is important to remember that the last item or object in any JSON array must not contain a trailing comma.</para>
+				</note>
+			</section>
+		</section>
+		<section id="dev_extensions_version_check">
+			<title>Version check</title>
+			<section>
+				<title>Description</title>
+				<para>
+					The extension Manager is able to check if an extension is up to date and to display the information to the board administrator. For that the extension has to fill the <link linkend="dev_extensions_composer_json">version-check part of its composer.json file</link>.
+				</para>
+				<para>
+					This optional version data file is hosted from your own server and is used by the Extension Manager's version check feature. The branches "stable" and "unstable" are optional, but at least one of them has to be defined. The Extension Manager has a setting that allows admins to check for unstable branches. For this reason, stable branches should only be used for stable release versions suitable for a live forum. The unstable branch can be used to provide links to versions in development.
+				</para>
+				<para>
+					The "announcement" is a link to the page where the version of the extension is announced (typically a page such as the extension's page in phpBB's Extensions in Development forum, or your own web page where the user can find some explanations about this specific version).
+				</para>
+				<para>
+					The "download" is a link to the page where the extension can be downloaded (typically an announcement page such as the extension's page in the Customisation Database, GitHub repository, or your own web page). The "eol" and "security" fields are not used at the moment, and can be left as null and false, respectively.
+				</para>
+			</section>
+			<section>
+				<title>Multiple branches and channels</title>
+				<para>
+					The extension Manager support two different channel per extension: <emphasis>stable</emphasis> and <emphasis>unstable</emphasis>. They are both optional, but at least one of them has to be defined. And for each of them multiple branches are supported (eg. for phpBB we have two different branches - 3.0 and 3.1 - and  a stable and an unstable version for each of them).
+				</para>
+				<tip>
+					<para>The Extension Manager has a setting that allows admins to always check for unstable branches, even if the current version is stable. For this reason, stable branches should only be used for stable release versions suitable for a live forum. The unstable branch can be used to provide links to versions in development.</para>
+				</tip>
+			</section>
+			<section>
+				<title>Remote file</title>
+				<para>
+					The remote file must contains one section per defined channel and then one section per branch. And for each branch we define 5 fields:
+					<table>
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><emphasis>current</emphasis></td>
+								<td>The last version number considering the branches and the channel.</td>
+							</tr>
+							<tr>
+								<td><emphasis>announcement</emphasis></td>
+								<td>Link to the page where the version of the extension is announced (typically a page such as the extension's page in phpBB's Extensions in Development forum, or your own web page where the user can find some explanations about this specific version)</td>
+							</tr>
+							<tr>
+								<td><emphasis>download</emphasis></td>
+								<td>Link to the page where the extension can be downloaded (typically an announcement page such as the extension's page in the Customisation Database, GitHub repository, or your own web page)</td>
+							</tr>
+							<tr>
+								<td><emphasis>eol</emphasis></td>
+								<td>Date of the End Of Life of the version if defined, null otherwise.</td>
+							</tr>
+							<tr>
+								<td><emphasis>security</emphasis></td>
+								<td>true if it's a security update, false otherwise.</td>
+							</tr>
+						</tbody>
+					</table>
+				</para>
+			</section>
+			<section>
+				<title>Sample</title>
+				<para>
+					<code language="json">
+{
+	"stable": {
+		"1.0": {
+			"current": "1.0.0",
+			"announcement": "https://www.phpbb.com/community/viewtopic.php#",
+			"download": "https://www.phpbb.com/download_id#",
+			"eol": null,
+			"security": false
+		}
+	},
+	"unstable": {
+		"1.0": {
+			"current": "1.0.1",
+			"announcement": "http://acme.foobar.com/version_1.0.1",
+			"eol": null,
+			"security": false
+		},
+		"1.1": {
+			"current": "1.1.0-b4",
+			"announcement": "http://acme.foobar.com/version_1.1.0",
+			"eol": null,
+			"security": false
+		}
+	}
+}
+					</code>
+				</para>
+			</section>
+		</section>
+	</section>
+	<section id="dev_db">
+		<title>Database</title>
+		<section id="dev_db_migrations">
+			<title>Migrations</title>
+			<para></para>
+		</section>
+	</section>
+</chapter>
