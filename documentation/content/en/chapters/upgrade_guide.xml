@@ -24,9 +24,9 @@
 		</sectioninfo>
 		<title>Upgrading from 2.0 to 3.1</title>
 		<para>In order to allow administrators of phpBB2 boards to use phpBB3 and all of its features. There is a convertor packed with the default installation. The conversion framework is flexible and allows you to convert other bulletin board systems as well. Read more if you need help with converting your board to phpBB3</para>
-		
+
 		<para>The process is in the form of a PHP file, similar to the update file found in phpBB 2.0.x. The file will take you through wizard-like screens until your phpBB is running 3.1.x. Basic instructions and troubleshooting for doing this conversion are <ulink url="https://www.phpbb.com/community/docs/INSTALL.html#convert">here</ulink>.</para>
-		
+
 		<para>Warning: Be sure to backup both the database and the files before attempting to upgrade.</para>
 	</section>
 
@@ -52,12 +52,16 @@
 					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
-			<listitem><para>Upload the contents of the 3.1.x <emphasis>Full Package</emphasis> into your forum's directory.</para></listitem>
+			<listitem><para>Upload the contents of the 3.1.x <emphasis>Full Package</emphasis> into your forum's directory.</para>
+				<itemizedlist>
+					<listitem><para>Make sure the root level <emphasis>.htaccess</emphasis> file is included in the upload.</para></listitem>
+				</itemizedlist>
+			</listitem>
 			<listitem><para>Browse to install/database_update.php</para></listitem>
 			<listitem><para>Delete the install/ directory</para></listitem>
 		</orderedlist>
 	</section>
-	
+
 	<section id="upgrade_general">
 		<sectioninfo>
 			<authorgroup>
@@ -109,9 +113,9 @@
 				<para>You will need specific convertor files for the board software you are converting from. The phpBB2 specific convertor files are included with the phpBB3 installation files. For other board softwares, you will need to get the convertor files from the appropriate phpBB3 convertor topic. These topics can be found in the <ulink url="https://www.phpbb.com/community/viewforum.php?f=486">[3.1.x] Convertors forum</ulink> on phpBB.com</para>
 
 				<para>For converting from phpBB2, you only need to point your browser to {phpBB3_root_directory}/install/index.php, click the <guilabel>Convert</guilabel> tab and follow the instructions. For other board softwares, you will need to upload the convertor files to the appropriate directories. The convertor files you get will consist of two or three files, convert_xxx.php, functions_xxx.php and, optionally, auth_xxx.php. The xxx will generally be the name of the software you are converting from.</para>
-				
+
 			</section>
-			
+
 			<section id="upgrade_general_conversion">
 				<sectioninfo>
 					<authorgroup>
@@ -135,7 +139,7 @@ If everything is okay, you will be presented with a <guilabel>Continue Conversio
 					<listitem><para>The convertor will now proceed to convert your old board. Pages will be displayed informing you about the progress of the conversion.</para></listitem>
 					<listitem><para>When the convertor is finished, you will see a message that the Search Index has not been converted. You must go into the Administration Control Panel and build the <guilabel>Search Index</guilabel>. In the <acronym>ACP</acronym>, click the <guilabel>Maintenance</guilabel> tab and select <guilabel>Search Index</guilabel> from the submenu. The default search backend index is <guilabel>Fulltext native</guilabel> and will be marked active. This is normally the index that you want to use to create your search index. For more information about search indexing, see <xref linkend="acp_maintenance_search" /></para></listitem>
 					<listitem><para>You should now check your phpBB3 board for proper operation, that permissions are set correctly and forums &amp; posts are displaying correctly. Also make sure files got copied from the old location, for example avatars and smilies and attachments (if you have them.)</para></listitem>
-				</orderedlist>				
+				</orderedlist>
 			</section>
 
 	</section>
