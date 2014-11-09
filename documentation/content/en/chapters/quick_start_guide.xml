@@ -2,7 +2,7 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="quick_start_guide">
-	<?dbhtml  dir="quickstart" filename="index.html" ?>
+	<?dbhtml dir="quickstart" filename="index.html"?>
 	<chapterinfo>
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
@@ -274,7 +274,6 @@
 		</sectioninfo>
 		<title>Setting permissions</title>
 		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB3 Olympus can be adjusted with permissions.</para>
-
 		<section id="quick_permissions_types">
 			<title>Permission types</title>
 			<para>There are four different types of permissions:</para>
@@ -413,7 +412,7 @@
 				<title>The Forum Moderator's Permissions</title>
 				<mediaobject>
 					<imageobject>
-			        	<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
+						<imagedata format="PNG" fileref="../images/quick_start_guide/permissions_moderator.png"/>
 					</imageobject>
 					<caption>
 						<para>Set the moderator's permissions</para>
@@ -422,7 +421,6 @@
 			</figure>
 			<para>When you're done simply hit <guilabel>Apply all Permissions</guilabel>. All the permissions mentioned here can also be selected from the right side of the form to give you more granular options.</para>
 		</section>
-
 		<section id="quick_permissions_global">
 			<sectioninfo>
 				<authorgroup>
@@ -443,16 +441,12 @@
 			<para>Under "Administrators" you can give users or groups administrator privileges like the ability to manage forums or change user permissions. For details on these settings please read the <xref linkend="acp_permissions"/>.</para>
 			<para>The "Global Moderators" form offers you the same settings as the forum specific form (described in <xref linkend="quick_permissions_moderators"/>) but applies to all forums on your board.</para>
 		</section>
-
 	</section>
 	<section id="quick_support">
 		<title>Obtaining support</title>
 		<para>The <ulink url="https://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="https://www.phpbb.com/community/viewforum.php?f=46">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="https://www.phpbb.com/community/viewtopic.php?f=46&amp;t=543515">Support Request Template</ulink> with the information it asks for.</para>
-
 		<para>In addition to the support forum on www.phpbb.com, we provide a <ulink url="https://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit articles on common answers to questions. Our community has taken a lot of time in writing these articles, so be sure to check them out.</para>
-
 		<para>We provide realtime support in <ulink url="irc://irc.phpbb.com/phpbb">#phpBB</ulink> on the popular Open Source IRC network, <ulink url="http://www.freenode.net/">Freenode</ulink>. You can typically find someone from each of the teams in here, as well as fellow users who are more than happy to help you out. Be sure to read the <ulink url="https://www.phpbb.com/support/irc/">IRC rules</ulink> before joining the channel, as we have a few basic netiquette rules that we ask users to follow. At any given time, there can be as many as 60 users, if not more in the channel, so you are almost certain to find someone there to help you. However, it is important that you read and follow the IRC rules as people may not answer you. An example of this is that oftentimes users come in to the channel and ask if anybody is around and then end up leaving 30 seconds later before someone has the chance to answer. Instead, be sure to ask your question and wait. As the saying goes, "don't ask to ask, just ask!"</para>
-
 		<para>English is not your native language? Not a problem! We also provide an <ulink url="https://www.phpbb.com/support/intl/">International Support page</ulink> with links to various websites that provide support in Espanol, Deutsch, Francais, and more.</para>
 	</section>
 </chapter>

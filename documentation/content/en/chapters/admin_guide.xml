@@ -2,7 +2,7 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="admin_guide">
-	<?dbhtml dir="adminguide" filename="index.html" ?>
+	<?dbhtml dir="adminguide" filename="index.html"?>
 	<chapterinfo>
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
@@ -26,7 +26,6 @@
 		<para>Even more so than its predecessor, phpBB 3.0 &quot;Olympus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
-		
 		<figure id="img_acp_index">
 			<title>Administration Control Panel Index</title>
 			<mediaobject>
@@ -39,7 +38,6 @@
 			</mediaobject>
 		</figure>
 	</section>
-	
 	<section id="acp_general">
 		<sectioninfo>
 			<authorgroup>
@@ -61,7 +59,6 @@
 			</sectioninfo>
 			<title>Board Configuration</title>
 			<para>This subsection contains items to adjust the overall features and settings of the forum. </para>
-			
 			<section id="acp_board_attachments">
 				<sectioninfo>
 					<authorgroup>
@@ -74,14 +71,12 @@
 				<para>One of the many new features in phpBB 3.0 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
 				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
-			
 			<section id="acp_general_settings">
 				<sectioninfo>
 					<authorgroup>
 						<author>
 							<othername>dhn</othername>
 						</author>
-						
 						<author>
 							<othername>MennoniteHobbit</othername>
 						</author>
@@ -89,7 +84,6 @@
 				</sectioninfo>
 				<title>Board Settings</title>
 				<para>The <guimenuitem>Board Settings</guimenuitem> allow you to change many settings that govern your board. These settings include important things such as the name of your forum! There are two main groups of board settings: the general <guilabel>Board Settings</guilabel>, and <guilabel>Warnings</guilabel> settings.</para>
-				
 				<itemizedlist>
 					<title>Board Settings</title>
 					<listitem><para>The very first board setting you can edit is perhaps the most important setting of them all: the name of your board. Your users identify your board with this name. Put the name of your site into the <guilabel>Site Name</guilabel> text field and it will be shown on the header of the default style; it will be the prefix to the window title of your browser.</para></listitem>
@@ -100,13 +94,11 @@
 					<listitem><para>Along with setting your board's default date format, you can also set your board's preferred timezone. The timezones available in the <guilabel>System timezone</guilabel> selection menu are all based on relative <acronym>UTC</acronym> (for most intents and purposes, it is <acronym>GMT</acronym>, or Greenwich Mean Time) times. You may also choose whether or not your board utilises Daylight Savings Time by selecting the appropriate radio button next to the <guilabel>Enable Daylight Savings time</guilabel> option.</para></listitem>
 					<listitem><para>You can also set your board's default style. The board will appear to your guests and members in the <guilabel>Default Style</guilabel>. In the standard phpBB installation, two styles are available: prosilver and subsilver2. You can either allow users to select another style than the default by selecting <guilabel>No</guilabel> in the <guilabel>Override User Style</guilabel> setting or disallow it. Please visit the <link linkend="acp_styles">styles section</link> to find out how to add new styles and where to find some.</para></listitem>
 				</itemizedlist>
-				
 				<itemizedlist>
 					<title>Warnings</title>
 					<listitem><para>Moderators can send warnings to users that break the forum rules. The value of <guilabel>Warning Duration</guilabel> defines the number of days a warning is valid until it expires. All positive integers are valid values. For more about warnings, please read <xref linkend="moderator_mcp" />.</para></listitem>
 				</itemizedlist>
 			</section>
-			
 			<section id="acp_board_features">
 				<sectioninfo>
 					<authorgroup>
@@ -118,7 +110,6 @@
 				<title>Board Features</title>
 				<para>Through the <guimenuitem>Board Features</guimenuitem> section, you can enable or disable several features board-wide. Note that any feature you disable here will not be available on your forum, even if you give your users permissions to use them.</para>
 			</section>
-			
 			<section id="acp_board_avatars">
 				<sectioninfo>
 					<authorgroup>
@@ -134,7 +125,6 @@
 				<para>The second approach to avatars is through <guilabel>Remote Avatars</guilabel>. This are simply images linked from another website. Your members can add a link to the image they want to use in their profile. To give you some control over the size of the avatars you can define the minimum and maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not able to control the file size.</para>
 				<para>The third approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image form their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is <glossterm>server-writable</glossterm>. The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
 			</section>
-			
 			<section id="acp_board_pms">
 				<sectioninfo>
 					<authorgroup>
@@ -171,54 +161,53 @@
 				</para>
 			</section>
 			<section id="acp_captcha">
-        <sectioninfo>
-           <authorgroup>
-              <author>
-                 <othername>Kellanved</othername>
-              </author>
-           </authorgroup>
-        </sectioninfo>
-        <title>Spambot Countermeasures</title>
-        <para><glossterm>CAPTCHA</glossterm> or &quot;Completely Automated Public Turing Test To Tell Computers and Humans Apart&quot; is a term for riddles that are supposedly easy for humans but hard for computers. </para>
-        <para>phpBB 3.0 uses a plugin system to allow easy switching between different spambot countermeasures that incorporate a CAPTCHA. Available plugins are automatically loaded from the includes/captcha/plugins directory in your installation. </para>
-        <itemizedlist>
-           <title>phpBB ships with these plugins installed:</title>
-           <listitem><para>GD 3D image: a graphical CAPTCHA using 3D characters on a wave.</para></listitem>
-           <listitem><para>GD image: a graphical CAPTCHA, using floating 3D characters.</para></listitem>
-           <listitem><para>Simple image: a simple 2D CAPTCHA that should work in any configuration.</para></listitem>
-           <listitem><para>reCaptcha: The reCaptcha service. You have to sign up for reCaptcha before being able to use this plugin.</para></listitem>
-           <listitem><para>Q&amp;A: configurable questions and answers.</para></listitem>
-        </itemizedlist>
-        <para>The page is split into two  areas, the top area, &quot;General Options&quot;, contains settings concerning where to use spambot countermeasures. The other area concerns itself with the selection, configuration and demonstration of the plugins.</para>
-        <figure id="img_acp_captcha">
-           <title>Spambot Countermeasures</title>
-           <mediaobject>
-              <imageobject>
-                 <imagedata format="PNG" fileref="../images/admin_guide/captcha.png"/>
-              </imageobject>
-           <caption>
-           <para>The spambot countermeasure plugin selection ACP page.</para>
-           </caption>
-           </mediaobject>
-        </figure>
-        <tip>
-           <para>Check the MOD database for new existing plugins.</para>
-        </tip>
-        <itemizedlist>
-           <title>How to select a plugin</title>
-           <listitem><para>Click the &quot;Installed plugins&quot; dropdown and select the module you want to use. Do not let grayed out entries stop you, they only mean that you have to perform another step. If your intended module is not in the list, check whether the files are present in the plugin directory.</para></listitem>
-           <listitem><para>Click the &quot;Configure&quot; button to see the module's ACP page. Many plugins need configuration prior to use. Note that plugins without configuration options will not show the button.</para></listitem>
-           <listitem><para>Configure the plugin to meet your needs.</para></listitem>
-           <listitem><para>After configuring the plugin, re-select your intended plugin from the dropdown. It shold not be grayed out any more.</para></listitem>
-           <listitem><para>Click &quot;Submit&quot;.</para></listitem>
-           <listitem><para>Congratulations, you’re done.</para></listitem>
-        </itemizedlist>
-        <tip>
-           <para>Plugins were introduced with phpBB 3.0.6. If your ACP is missing the option, consider updating to the latest version.</para>
-        </tip>
-     </section>
+				<sectioninfo>
+					<authorgroup>
+						<author>
+							<othername>Kellanved</othername>
+						</author>
+					</authorgroup>
+				</sectioninfo>
+				<title>Spambot Countermeasures</title>
+				<para><glossterm>CAPTCHA</glossterm> or &quot;Completely Automated Public Turing Test To Tell Computers and Humans Apart&quot; is a term for riddles that are supposedly easy for humans but hard for computers. </para>
+				<para>phpBB 3.0 uses a plugin system to allow easy switching between different spambot countermeasures that incorporate a CAPTCHA. Available plugins are automatically loaded from the includes/captcha/plugins directory in your installation. </para>
+				<itemizedlist>
+					<title>phpBB ships with these plugins installed:</title>
+					<listitem><para>GD 3D image: a graphical CAPTCHA using 3D characters on a wave.</para></listitem>
+					<listitem><para>GD image: a graphical CAPTCHA, using floating 3D characters.</para></listitem>
+					<listitem><para>Simple image: a simple 2D CAPTCHA that should work in any configuration.</para></listitem>
+					<listitem><para>reCaptcha: The reCaptcha service. You have to sign up for reCaptcha before being able to use this plugin.</para></listitem>
+					<listitem><para>Q&amp;A: configurable questions and answers.</para></listitem>
+				</itemizedlist>
+				<para>The page is split into two areas, the top area, &quot;General Options&quot;, contains settings concerning where to use spambot countermeasures. The other area concerns itself with the selection, configuration and demonstration of the plugins.</para>
+				<figure id="img_acp_captcha">
+					<title>Spambot Countermeasures</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata format="PNG" fileref="../images/admin_guide/captcha.png"/>
+						</imageobject>
+						<caption>
+							<para>The spambot countermeasure plugin selection ACP page.</para>
+						</caption>
+					</mediaobject>
+				</figure>
+				<tip>
+					<para>Check the MOD database for new existing plugins.</para>
+				</tip>
+				<itemizedlist>
+					<title>How to select a plugin</title>
+					<listitem><para>Click the &quot;Installed plugins&quot; dropdown and select the module you want to use. Do not let grayed out entries stop you, they only mean that you have to perform another step. If your intended module is not in the list, check whether the files are present in the plugin directory.</para></listitem>
+					<listitem><para>Click the &quot;Configure&quot; button to see the module's ACP page. Many plugins need configuration prior to use. Note that plugins without configuration options will not show the button.</para></listitem>
+					<listitem><para>Configure the plugin to meet your needs.</para></listitem>
+					<listitem><para>After configuring the plugin, re-select your intended plugin from the dropdown. It shold not be grayed out any more.</para></listitem>
+					<listitem><para>Click &quot;Submit&quot;.</para></listitem>
+					<listitem><para>Congratulations, you’re done.</para></listitem>
+				</itemizedlist>
+				<tip>
+					<para>Plugins were introduced with phpBB 3.0.6. If your ACP is missing the option, consider updating to the latest version.</para>
+				</tip>
+			</section>
 		</section>
-		
 		<section id="acp_general_client">
 			<sectioninfo>
 				<authorgroup>
@@ -229,10 +218,9 @@
 						<othername>MennoniteHobbit</othername>
 					</author>
 				</authorgroup>
-			</sectioninfo>			
+			</sectioninfo>
 			<title>Client communication</title>
 			<para>Other than its own authentication system, phpBB3 supports other <glossterm>client</glossterm> communications. phpBB3 supports authentication plugins (by default, the Apache, native DB, and LDAP plugins), email, and <glossterm>Jabber</glossterm>. Here, you can configure all of these communication methods. The following are subsections describing each client communication method.</para>
-		
 			<section id="acp_client_auth">
 				<sectioninfo>
 					<authorgroup>
@@ -242,9 +230,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Authentication</title>
-				
 				<para>Unlike phpBB2, phpBB3 offers support for authentication plugins. By default, the Apache, DB, and LDAP plugins are supported. Before switching from phpBB's native authentication system (the DB method) to one of these systems, you must make sure that your server supports it. <emphasis>When configuring the authentication settings, make sure that you only fill in the settings that apply to your chosen authentication method (Apache or LDAP).</emphasis></para>
-			
 				<itemizedlist>
 					<title>Authentication</title>
 					<listitem><para><guilabel>Select an authentication method</guilabel>: Choose your desired authentication method from the selection menu.</para></listitem>
@@ -256,7 +242,6 @@
 					<listitem><para><guilabel>LDAP email attribute</guilabel>: this to the name of your user entry email attribute (if one exists) in order to automatically set the email address for new users. If you leave this empty, users who login to your board for the first time will have an empty email address.</para></listitem>
 				</itemizedlist>
 			</section>
-			
 			<section id="acp_client_email">
 				<sectioninfo>
 					<authorgroup>
@@ -266,13 +251,10 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Email settings</title>
-				
 				<para>phpBB3 is capable of sending out emails to your users. Here, you can configure the information that is used when your board sends out these emails. phpBB3 can send out emails by using either the native, PHP-based email service, or a specified <glossterm>SMTP</glossterm> server. If you are not sure if you have an SMTP server available, use the native email service. You will have to ask your hoster for further details. Once you are done configuring the email settings, click <guilabel>Submit</guilabel>.</para>
-				
 				<note>
 					<para>Please ensure the email address you specify is valid, as any bounced or undeliverable messages will likely be sent to that address.</para>
 				</note>
-				
 				<itemizedlist>
 					<title>General Settings</title>
 					<listitem><para><guilabel>Enable board-wide emails</guilabel>: If this is set to disabled, no emails will be sent by the board at all.</para></listitem>
@@ -284,7 +266,6 @@
 					<listitem><para><guilabel>Email signature</guilabel>: This text will be attached at the end of all emails sent by your board.</para></listitem>
 					<listitem><para><guilabel>Hide email addresses</guilabel>: If you want to keep email addresses completely private, set this value to <guilabel>Yes</guilabel>.</para></listitem>
 				</itemizedlist>
-				
 				<itemizedlist>
 					<title>SMTP Settings</title>
 					<listitem><para><guilabel>Use SMTP server for email</guilabel>: Select <guilabel>Yes</guilabel> if you want your board to send emails via an SMTP server. If you are not sure that you have an SMTP server available for use, set this to <guilabel>No</guilabel>; this will make your board use the native, PHP-based email service, which in most cases is the safest available option.</para></listitem>
@@ -295,7 +276,6 @@
 					<listitem><para><guilabel>SMTP password</guilabel>: The password for the above specified username that phpBB will use when connecting to the specified SMTP server. You should only fill this in if the SMTP server requires it.</para></listitem>
 				</itemizedlist>
 			</section>
-			
 			<section id="acp_client_jabber">
 				<sectioninfo>
 					<authorgroup>
@@ -305,13 +285,10 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Jabber settings</title>
-				
 				<para>phpBB3 also has the ability to communicate messages to users via <glossterm>Jabber</glossterm>, your board can be configured to board notifications via Jabber. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
-			
 				<note>
 					<para>Some Jabber servers include gateways or transports which allow you to contact users on other networks. Not all servers offer all transports and changes in protocols can prevent transports from operating. Note that it may take several seconds to update Jabber account details, so do not stop the script until it has finished!</para>
 				</note>
-				
 				<itemizedlist>
 					<title>Jabber settings</title>
 					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
@@ -329,36 +306,30 @@
 					<author>
 						<othername>dhn</othername>
 					</author>
-					
 					<author>
 						<othername>MennoniteHobbit</othername>
 					</author>
 				</authorgroup>
-			</sectioninfo>			
+			</sectioninfo>
 			<title>Server configuration</title>
 			<para>As an administrator of a board, being able to fine-tune the settings that your phpBB board uses for the server is a must. Configuring your board's server settings is very easy. There are five main categories of server settings: <guimenuitem>Cookie settings</guimenuitem>, <guimenuitem>Server settings</guimenuitem>, <guimenuitem>Security settings</guimenuitem>, <guimenuitem>Load settings</guimenuitem>, and <guimenuitem>Search settings</guimenuitem>. Properly configuring these settings will help your board not only function, but also work efficiently and as intended. The following subsections will outline each server configuration category. Once you are done with updating settings in each setting, remember to click <guilabel>Submit</guilabel> to apply your changes.</para>
-		
 			<section id="acp_server_cookies">
 				<sectioninfo>
 					<authorgroup>
 						<author>
 							<othername>dhn</othername>
 						</author>
-						
 						<author>
 							<othername>MennoniteHobbit</othername>
 						</author>
 					</authorgroup>
-				</sectioninfo>			
+				</sectioninfo>
 				<title>Cookie settings</title>
 				<para>Your board uses cookies all the time. Cookies can store information and data; for example, cookies are what enable users to automatically login to the board when they visit it. The settings on this page define the data used to send cookies to your users' browsers.</para>
-				
 				<warning>
 					<para>When editing your board's cookie settings, do so with caution. Incorrect settings can cause such consequences as preventing your users from logging in.</para>
 				</warning>
-				
 				<para>To edit your board's cookie settings, locate the <guilabel>Cookie Settings</guilabel> form. The following are four settings you may edit:
-				
 					<itemizedlist>
 						<title>Cookie Settings</title>
 						<listitem><para><guilabel>Cookie domain</guilabel>: This is the domain that your board runs on. Do not include the path that phpBB is installed in; only the domain itself is important here.</para></listitem>
@@ -367,31 +338,25 @@
 						<listitem><para><guilabel>Cookie secure</guilabel>: If your board is accessible via <acronym>SSL</acronym>, set this to <guilabel>Enabled</guilabel>. If the board is not accessible via SSL, then leave this value set to <guilabel>Disabled</guilabel>, otherwise server errors will result during redirections.</para></listitem>
 					</itemizedlist>
 				</para>
-				
 				<para>When you are done editing your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 			</section>
-			
 			<section id="acp_server_settings">
 				<sectioninfo>
 					<authorgroup>
 						<author>
 							<othername>dhn</othername>
 						</author>
-						
 						<author>
 							<othername>MennoniteHobbit</othername>
 						</author>
 					</authorgroup>
-				</sectioninfo>			
+				</sectioninfo>
 				<title>Server settings</title>
 				<para>On this page, you can define server and domain-dependent settings. There are three main categories of server settings: <guilabel>Server Settings</guilabel>, <guilabel>Path Settings</guilabel>, and <guilabel>Server URL Settings</guilabel>. The following describes each server settings category and the corresponding settings in more detail. When you are done configuring your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
-				
 				<warning>
 					<para>When editing your board's server settings, do so with caution. Incorrect settings can cause such consequences as emails being sent out with incorrect links and/or information, or even the board being inaccessible.</para>
 				</warning>
-				
 				<para>The <guilabel>Server Settings</guilabel> form allows you to set some settings that phpBB will use on the server level. The only available option at this time is <guilabel>Enable GZip Compression</guilabel>. Setting this value will enable <glossterm>GZip</glossterm> compression on your server. This means that all content generated by the server will be compressed before it is sent to users' browsers, if the users' browsers support it. Though this can reduce network traffic/bandwidth used, this will also increase the server and CPU load, on both the user's and server's sides.</para>
-			
 				<para>Next, the <guilabel>Path Settings</guilabel> form allows you to set the various paths that phpBB uses for certain board content. For default installations, the default settings should be sufficient. The following are the four values that you can set:
 					<itemizedlist>
 						<title>Path Settings</title>
@@ -401,7 +366,6 @@
 						<listitem><para><guilabel>Rank image storage path</guilabel>: This is the path to the directory, relative to the directory that your board is installed in, that your <link linkend="acp_user_ranks">rank images</link> are located in.</para></listitem>
 					</itemizedlist>
 				</para>
-				
 				<para>The last category of server settings is <guilabel>Server URL Settings</guilabel>. The <guilabel>Server URL Settings</guilabel> category contains settings that allow you to configure the actual <acronym>URL</acronym> that your board is located at, as well as the server protocol and port number that the board will be accessed to. The following are the five settings you may edit:
 					<itemizedlist>
 						<title>Server URL Settings</title>
@@ -412,10 +376,8 @@
 						<listitem><para><guilabel>Script path</guilabel>: This is the directory where phpBB is installed, relative to the domain name. For example, if your board was located at www.example.com/phpBB3/, the value to set for your script path is &quot;/phpBB3&quot;. Again, this value is only used if the server URL settings are forced.</para></listitem>
 					</itemizedlist>
 				</para>
-				
 				<para>When you are done editing your board's server settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 			</section>
-			
 			<section id="acp_server_security">
 				<sectioninfo>
 					<authorgroup>
@@ -426,9 +388,7 @@
 				</sectioninfo>
 				<title>Security settings</title>
 				<para>Here, on the <guimenuitem>Security settings</guimenuitem> page, you are able to manage security-related settings; namely, you can define and edit session and login-related settings. The following describes the available security settings that you can manage. When you are done configuring your board's security settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
-				
 				<!-- Perhaps include more introduction information? :-/ -->
-				
 				<variablelist>
 					<varlistentry>
 						<term>Allow persistent logins</term>
@@ -437,7 +397,6 @@
 							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable automatic logins.</para>
 						</listitem>
 					</varlistentry>
-						
 					<varlistentry>
 						<term>Persistent login key expiration length (in days)</term>
 						<listitem>
@@ -445,7 +404,6 @@
 							<para>You may enter an integer in the text box located to the left of the word <guilabel>Days</guilabel>. This integer is the number of days for the persistent login key expiration. If you would like to disable this setting (and thereby allow use of login keys indefinitely), enter a &quot;0&quot; into the text box.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Session IP validation</term>
 						<listitem>
@@ -453,7 +411,6 @@
 							<para>There are four settings available: <guilabel>All</guilabel>, <guilabel>A.B.C</guilabel>, <guilabel>A.B</guilabel>, and <guilabel>None</guilabel>. The <guilabel>All</guilabel> setting will compare the complete IP address. The <guilabel>A.B.C</guilabel> setting will compare the first x.x.x of the IP address. The <guilabel>A.B</guilabel> setting will compare the first x.x of the IP address. Lastly, selecting <guilabel>None</guilabel> will disable IP address checking altogether.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Validate browser</term>
 						<listitem>
@@ -461,7 +418,6 @@
 							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable this browser validation.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Validate X_FORWARDED_FOR header</term>
 						<listitem>
@@ -469,14 +425,12 @@
 							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable the validation of the X_FORWARDED_FOR header.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Check IP against DNS Blackhole List:</term>
 						<listitem>
 							<para>You are also able to check the users' <glossterm>IP address</glossterm>es against <acronym>DNS</acronym> blackhole lists. These lists are blacklists that list bad IP addresses. Enabling this setting will allow your board to check your users' IP addresses and compare them against the DNS blackhole lists. Currently, the DNS blacklist services on the sites <ulink url="http://www.spamcop.net">spamcop.net</ulink>, <ulink url="http://www.dsbl.org">dsbl.org</ulink>, and <ulink url="http://www.spamhaus.org">spamhaus.org</ulink>.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Check email domain for valid MX record</term>
 						<listitem>
@@ -484,7 +438,6 @@
 							<para>The available options are <guilabel>Yes</guilabel> and <guilabel>No</guilabel>. Choosing <guilabel>Yes</guilabel> will enable the checking of MX records for emails.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Password complexity</term>
 						<listitem>
@@ -495,7 +448,6 @@
 							</note>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Force password change</term>
 						<listitem>
@@ -503,7 +455,6 @@
 							<para>Only integers can be entered in the text box, which is located next to the <guilabel>Days</guilabel> label. This integer is the number of days that, after which, your users will have to change their passwords. If you would like to disable this feature, enter a value of &quot;0&quot;.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Maximum number of login attempts</term>
 						<listitem>
@@ -511,7 +462,6 @@
 							<para>Only integers can be entered for this setting. The number entered it the maximum number of times a user can attempt to login to an account before having to confirm his login visually, with the visual confirmation.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Allow PHP in templates</term>
 						<listitem>
@@ -520,7 +470,6 @@
 					</varlistentry>
 				</variablelist>
 			</section>
-			
 			<section id="acp_server_load">
 				<sectioninfo>
 					<authorgroup>
@@ -531,7 +480,6 @@
 				</sectioninfo>
 				<title>Load settings</title>
 				<para>On particularly large boards, it may be necessary to manage certain load-related settings in order to allow your board to run as smoothly as possible. However, even if your board isn't excessively active, it is still important to be able to adjust your board's load settings. Adjusting these settings properly can help reduce the amount of processing required by your server. Once you are done editing any of the server load-related settings, remember to click <guilabel>Submit</guilabel> to actually submit and apply your changes.</para>
-				
 				<para>The first group of settings, <guilabel>General Settings</guilabel>, allows you to control the very basic load-related settings, such as the maximum system load and session lengths. The following describes each option in detail.
 					<itemizedlist>
 						<title>General settings</title>
@@ -541,7 +489,6 @@
 						<listitem><para><guilabel>View online time span</guilabel>: This is the number of minutes after which inactive users will not appear in the <guilabel>Who is Online</guilabel> listings. The higher the number given, the greater the processing power required to generate the listing. All positive integers are valid values, and indicate the number of minutes that the time span will be.</para></listitem>
 					</itemizedlist>
 				</para>
-				
 				<para>The second group of settings, <guilabel>General Options</guilabel>, allows you to control whether certain options are available for your users on your board. The following describes each option further.
 					<itemizedlist>
 						<title>General options</title>
@@ -558,7 +505,6 @@
 						<listitem><para><guilabel>Recompile stale templates</guilabel>: This option controls the recompilation of old templates. If this is enabled, your board will check to see if there are updated templates on your filesystem; if there are, your board will recompile the templates. Select <guilabel>Yes</guilabel> to enable this option.</para></listitem>
 					</itemizedlist>
 				</para>
-				
 				<para>Lastly, the last group of load settings relates to <guilabel>Custom Profile Fields</guilabel>, which are a new feature in phpBB3. The following describes these options in detail.
 					<itemizedlist>
 						<title>Custom Profile Fields</title>
@@ -568,7 +514,6 @@
 					</itemizedlist>
 				</para>
 			</section>
-			
 			<section id="acp_server_search">
 				<sectioninfo>
 					<authorgroup>
@@ -578,9 +523,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Search settings</title>
-				
 				<para>Your board can be a well of information. Being able to effectively search through this information is very important, especially if you want to reduce the amount of redundant topics are posted on your board. Here, on the <guimenuitem>Search settings</guimenuitem> page, you can control what search backend your board's search functionality will use for indexing posts and searching, and set various options related to it. There are four main categories of search settings: <guilabel>General Search Settings</guilabel>, <guilabel>Search Backend</guilabel>, <guilabel>Fulltext mysql</guilabel>, and <guilabel>Fulltext native</guilabel>. The following describes each set of search settings in detail.</para>
-			
 				<para>The first group of search settings are general and user-facing, meaning that they concern the users who use the search functionality directly.
 					<itemizedlist>
 						<title>General Search Settings</title>
@@ -592,7 +535,6 @@
 						<listitem><para><guilabel>Search result cache length</guilabel>: phpBB3 can also cache search results. These cached search results will expire after this number of seconds. All positive integers are valid values. Set this value to &quot;0&quot; if you want to disable search caching.</para></listitem>
 					</itemizedlist>
 				</para>
-				
 				<para>The next group of search settings actually only contains one setting: choosing what backend your board's search facilities, if enabled, will use. The following details this option.
 					<itemizedlist>
 						<title>Search Backend</title>
@@ -602,14 +544,12 @@
 						<para>If you choose to change your board's current search backend, you will have to create an index of your board's content for the new search backend. If you know for sure that you're not going to use the index that was used with your old, previously chosen search backend, you can also delete it in order to free up some of your system's resources. To learn more about maintaining your board's search indices, see <xref linkend="acp_maintenance_search" />.</para>
 					</note>
 				</para>
-				
 				<para>These next two groups of search settings concern each specific search backend individually. The <guilabel>Fulltext mysql</guilabel> group is only an information box, and displays information regarding your board and the mySQL fulltext option. The settings that are in the <guilabel>Fulltext Native</guilabel> group concern all of the settings related to phpBB3's built-in, native search backend.
 					<itemizedlist>
 						<title>Fulltext mysql</title>
 						<listitem><para><guilabel>Support for non-latin UTF-8 characters using PCRE</guilabel>: This tells you if your system supports searching for non-Latin <acronym>UTF</acronym>-8 characters. This is only available in <glossterm>PHP</glossterm> versions 4.4 and above, and 5.1 and above. This is only relevant if you actually want your users to have the ability to search for non-Latin characters.</para></listitem>
 						<listitem><para><guilabel>Support for non-latin UTF-8 characters using mbstring</guilabel>: If your system doesn't support UTF-8 characters using <acronym>PCRE</acronym> (as indicated in the setting above), the mySQL fulltext search backend will try to use mbstring's regular expression engine. Again, this is only relevant if you actually want your users to have the ability to seasrch for non-Latin characters.</para></listitem>
 					</itemizedlist>
-					
 					<itemizedlist>
 						<title>Fulltext native</title>
 						<listitem><para><guilabel>Enable fulltext updating</guilabel>: This option allows you to control whether or not your board's search index will update when posts are made. If you would like to enable this, choose <guilabel>Yes</guilabel>. Note that this setting is not relevant if your board's search functionality is disabled entirely.</para></listitem>
@@ -619,9 +559,8 @@
 					</itemizedlist>
 				</para>
 			</section>
-		</section>		
+		</section>
 	</section>
-	
 	<section id="acp_forums">
 		<sectioninfo>
 			<authorgroup>
@@ -660,7 +599,7 @@
 					<listitem>
 						<para>If you want to combine multiple forums or links for a specific topic, you can put them inside a category. The forums will appear below the category title, clearly separated from other categories. Users are not able to post inside categories.</para>
 					</listitem>
-				</varlistentry>				
+				</varlistentry>
 			</variablelist>
 		</section>
 		<section id="acp_forums_subforums">
@@ -675,7 +614,6 @@
 			<para>One of the many new features in phpBB 3.0 are <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Olympus you can now put as many forums, links, or categories as you like inside other forums.</para>
 			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
-				
 			<figure id="img_acp_subforums_list">
 				<title>Creating subforums</title>
 				<mediaobject>
@@ -687,7 +625,6 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			
 			<para>This system theoretically allows unlimited levels of subforums. You can put as many subforums inside subforums as you like. However, please do not go overboard with this feature. On boards with five to ten forums or less, it is not a good idea to use subforums. Remember, the less forums you have, the more active your forum will appear. You can always add more forums later.</para>
 			<para>Read the <link linkend="acp_forums_manage">section on forum management</link> to find out how to create subforums.</para>
 		</section>
@@ -701,7 +638,6 @@
 			</sectioninfo>
 			<title>Manage forums</title>
 			<para>Here you can add, edit, delete, and reorder the forums, categories, and links.</para>
-			
 			<figure id="img_acp_forums_manage_legend">
 				<title>Managing Forums Icon Legend</title>
 				<mediaobject>
@@ -713,7 +649,6 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			
 			<para>The initial <guilabel>Manage forums</guilabel> page shows you a list of your top level forums and categories. Note, that this is not analogue to the forum index, as categories are not expanded here. If you want to reorder the forums inside a category, you have to open the category first.</para>
 		</section>
 	</section>
@@ -723,34 +658,28 @@
 				<author>
 					<othername>dhn</othername>
 				</author>
-				
 				<author>
 					<othername>MennoniteHobbit</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Posting Settings</title>
-		
 		<para>Forums are nothing without content. Content is created and posted by your users; as such, it is very important to have the right posting settings that control how the content is posted. You can reach this section by clicking the <guimenuitem>Posting</guimenuitem> navigation tab.</para>
 		<para>The first page you are greeted with after getting to the <guimenuitem>Posting Settings</guimenuitem> section is <guilabel>BBCodes</guilabel>. The other available subsections are divided into two main groups: <guilabel>Messages</guilabel> and <guilabel>Attachments</guilabel>. <guimenuitem>Private message settings</guimenuitem>, <guimenuitem>Topic icons</guimenuitem>, <guimenuitem>Smilies</guimenuitem>, and <guimenuitem>Word censoring</guimenuitem> are message-related settings. <guimenuitem>Attachment settings</guimenuitem>, <guimenuitem>Manage extensions</guimenuitem>, <guimenuitem>Manage extension groups</guimenuitem>, and <guimenuitem>Orphaned attachments</guimenuitem> are attachment-related settings.</para>
-	
 		<section id="acp_posting_bbcodes">
 			<sectioninfo>
 				<authorgroup>
 					<author>
 						<othername>dhn</othername>
 					</author>
-					
 					<author>
 						<othername>MennoniteHobbit</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
 			<title>BBCodes</title>
-			
 			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.0 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
 			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
-			
 			<figure id="img_acp_creating_bbcodes">
 				<title>Creating BBCodes</title>
 				<mediaobject>
@@ -762,7 +691,6 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			
 			<para>In the <guilabel>BBCode Usage</guilabel> form, you can define how you want your users to use the BBCode. Let's say you want to create a new font BBCode that will let your users pick a font to use for their text. An example of what to put under <guilabel>BBCode Usage</guilabel> would be
 				<code>[font={SIMPLETEXT}]{TEXT}[/font]</code>
 				This would make a new [font] BBCode, and will allow the user to pick what font face they want for the text. The user's text is represented by <guilabel>TEXT</guilabel>, while <guilabel>SIMPLETEXT</guilabel> represents whatever font name the user types in.
@@ -777,7 +705,6 @@
 			</note>
 			<para>Lastly, when adding a new BBCode, you can decide whether or not you want an actual BBCode button for your new BBCode to be displayed on the posting screens. If you want this, then check the <guilabel>Display on posting</guilabel> checkbox.</para>
 			<para>It is important to choose appropriate tokens when creating your custom BBCodes. The tokens limit the type of input that they will accept. If you want to only allow URLs, use the <guilabel>URL</guilabel> token. If you only want to allow numbers, use the <guilabel>NUMBER</guilabel> token.</para>
-			
 			<variablelist>
 				<title>BBCode Tokens</title>
 				<varlistentry>
@@ -843,7 +770,6 @@
 			</variablelist>
 			If you need to use the same type of token more than once, you can differentiate between them by adding a number as the last character between the braces, e.g. {TEXT1}, {TEXT2}.
 		</section>
-		
 		<section id="acp_posting_pm_settings">
 			<sectioninfo>
 				<authorgroup>
@@ -853,7 +779,6 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Private message settings</title>
-			
 			<para>Many users use your board's private messaging system. Here you can manage all of the default <glossterm>private message</glossterm>-related settings. Listed below are the settings that you can change. Once you're done setting the posting settings, click <guilabel>Submit</guilabel> to submit your changes.</para>
 			<itemizedlist>
 				<title>General settings</title>
@@ -862,8 +787,7 @@
 				<listitem><para><guilabel>Max private messages per box</guilabel>: This is the maximum number of private messages your users can have in each of their folders.</para></listitem>
 				<listitem><para><guilabel>Full folder default action</guilabel>: Sometimes your users want to send each other a private message, but the intended recipient has a full folder. This setting will define exactly what will happen to the sent message. You can either set it so that an old message will be deleted to make room for the new message, or the new messages will be held back until the recipient makes room in his inbox. Note that the default action for the <guilabel>Sentbox</guilabel> is the deletion of old messages.</para></listitem>
 				<listitem><para><guilabel>Limit editing time</guilabel>: Users are usually allowed to edit their sent private messages before the recipient reads it, even if it's already in their outbox. You can control the amount of time your users have to edit sent private messages.</para></listitem>
-			</itemizedlist>	
-			
+			</itemizedlist>
 			<itemizedlist>
 				<title>General options</title>
 				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.0, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
@@ -877,12 +801,10 @@
 				<listitem><para><guilabel>Allow use of [flash] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline Macromedia Flash objects in their private messages.</para></listitem>
 				<listitem><para><guilabel>Enable use of topic icons in private messages</guilabel>: Select <guilabel>Yes</guilabel> if you want to enable your users to include topic icons with their private messages. (Topic icons are displayed next to the private messages' titles.).</para></listitem>
 			</itemizedlist>
-			
 			<tip>
 				<para>If you want to set any of the above numerical settings so that the setting will allow unlimited amounts of the item, set the numerical setting to 0.</para>
 			</tip>
 		</section>
-		
 		<section id="acp_posting_topic_icons">
 			<sectioninfo>
 				<authorgroup>
@@ -892,13 +814,9 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Topic icons</title>
-			
 			<para>A new feature in phpBB3 is the ability to assign icons to topics. On this page, you can manage what topic icons are available for use on your board. You can add, edit, delete, or move topic icons. The <guilabel>Topic Icons</guilabel> form displays the topic icons currently installed on your board. You can add topic icons manually, install a premade icons pack, export or download an icons pack file, or edit your currently installed topic icons.</para>
-		
 			<para>Your first option to add topic icons to your board is to use a premade icons pack. Icon packs have the file extension <filename>pak</filename>. To install an icons pack, you must first download an icons pack. Upload the icon files themselves and the pack file into the <filename>/images/icons/</filename> directory. Then, click <guilabel>Install icons pak</guilabel>. The <guilabel>Install icons pak</guilabel> form displays all of the options you have regarding topic icon installation. Select the icon pack you wish to add (you may only install one icon pack at a time). You then have the option of what to do with currently installed topic icons if the new icon pack has icons that may conflict with them. You can either keep the existing icon(s) (there may be duplicates), replace the matches (overwriting the icon(s) that already exist), or just delete all of the conflicting icons. Once you have selected the proper option, click <guilabel>Install icons pak</guilabel>.</para>
-			
 			<para>To add topic icon(s) manually, you must first upload the icons into the icons directory of your site. Navigate to the <guimenuitem>Topic icons</guimenuitem> page. Click <guilabel>Add multiple icons</guilabel>, which is located in the <guilabel>Topic Icons</guilabel> form. If you correctly uploaded your new desired topic icon(s) into the proper <filename>/images/icons/</filename> directory, you should see a row of settings for each new icon you uploaded. The following has a description on what each field is for. Once you are done with adding the topic icon(s), click, <guilabel>Submit</guilabel> to submit your additions.</para>
-			
 			<itemizedlist>
 				<listitem><para><guilabel>Icon image file</guilabel>: This column will display the actual icon itself.</para></listitem>
 				<listitem><para><guilabel>Icon location</guilabel>: This column will display the path that the icon is located in, relative to the <filename>/images/icons/</filename> directory.</para></listitem>
@@ -908,12 +826,9 @@
 				<listitem><para><guilabel>Icon order</guilabel>: You can also set what order that the topic icon will be displayed. You can either set the topic icon to be the first, or after any other topic icon currently installed.</para></listitem>
 				<listitem><para><guilabel>Add</guilabel>: If you are satisfied with the settings for adding your new topic icon, check this box.</para></listitem>
 			</itemizedlist>
-			
 			<para>You may also edit your currently installed topic icons' settings. To do so, click <guilabel>Edit icons</guilabel>. You will see the <guilabel>Icon configuration</guilabel> form. For more information regarding each field, see the above paragraph regarding adding topic icons.</para>
-		
 			<para>Lastly, you may also reorder the topic icons, edit a topic icon's settings, or remove a topic icon. To reorder a topic icon, click the appropriate "move up" or "move down" icon. To edit a topic icon's current settings, click the "settings" button. To delete a topic icon, click the red "delete" button.</para>
 		</section>
-		
 		<section id="acp_posting_smilies">
 			<sectioninfo>
 				<authorgroup>
@@ -923,13 +838,9 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Smilies</title>
-			
 			<para>Smilies or emoticons are typically small, sometimes animated images used to convey an emotion or feeling. You can manage the smilies on your board via this page. To add smilies, you have the option to either install a premade smilies pack, or add smilies manually. Locate the <guilabel>Smilies</guilabel> form, which lists the smilies currently installed on your board, on the page. </para>
-		
 			<para>Your first option to add smilies to your board is to use a premade smilies pack. Smilies packs have the file extension <filename>pak</filename>. To install a smilies pack, you must first download a smilies pack. Upload the smilies files themselves and the pack file into the <filename>/images/smilies/</filename> directory. Then, click <guilabel>Install smilies pak</guilabel>. The <guilabel>Install smilies pak</guilabel> form displays all of the options you have regarding smilies installation. Select the smilies pack you wish to add (you may only install one smilies pack at a time). You then have the option of what to do with currently installed smilies if the new smilies pack has icons that may conflict with them. You can either keep the existing smilies (there may be duplicates), replace the matches (overwriting the smilies that already exist), or just delete all of the conflicting smilies. Once you have selected the proper option, click <guilabel>Install smilies pak</guilabel>.</para>
-			
 			<para>To add a smiley to your board manually, you must first upload the smilies into the <filename>/images/smilies/</filename> directory. Then, click on <guilabel>Add multiple smilies</guilabel>. From here, you can add a smilie and configure it. The following are the settings you can set for the new smilies. Once you are done adding a smiley, click <guilabel>Submit</guilabel>.</para>
-		
 			<itemizedlist>
 				<listitem><para><guilabel>Smiley image file</guilabel>: This is what the smiley actually looks like.</para></listitem>
 				<listitem><para><guilabel>Smiley location</guilabel>: This is where the smiley is located, relative to the <filename>/images/smilies/</filename> directory.</para></listitem>
@@ -941,12 +852,9 @@
 				<listitem><para><guilabel>Smiley order</guilabel>: You can also set what order that the smiley will be displayed. You can either set the smiley to be the first, or after any other smiley currently installed.</para></listitem>
 				<listitem><para><guilabel>Add</guilabel>: If you are satisfied with the settings for adding your new smiley, check this box.</para></listitem>
 			</itemizedlist>
-			
 			<para>You may also edit your currently installed smilies' settings. To do so, click <guilabel>Edit smilies</guilabel>. You will see the <guilabel>Smiley configuration</guilabel> form. For more information regarding each field, see the above paragraph regarding adding smilies.</para>
-			
 			<para>Lastly, you may also reorder the smilies, edit a smiley's settings, or remove a smiley. To reorder a smiley, click the appropriate "move up" or "move down" icon. To edit a smiley's current settings, click the "settings" button. To delete a smiley, click the red "delete" button.</para>
 		</section>
-		
 		<section id="acp_posting_censors">
 			<sectioninfo>
 				<authorgroup>
@@ -956,14 +864,10 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Word censoring</title>
-			
 			<para>On some forums, a certain level of appropriate, profanity-free speech is required. Like phpBB2, phpBB3 continues to offer word censoring. Words that match the patterns set in the <guilabel>Word censoring</guilabel> panel will automatically be censored with text that you, the admin, specify. To manage your board's word censoring, click <guimenuitem>Word censoring</guimenuitem>.</para>
-			
 			<para>To add a new word censor, click <guilabel>Add new word</guilabel>. There are two fields: <guilabel>Word</guilabel> and <guilabel>Replacement</guilabel>. Type in the word that you want automatically censored in the <guilabel>Word</guilabel> text field. (Note that you can use wildcards (*).) Then, type in the text you want the censored word to be replaced with in the <guilabel>Replacement</guilabel> text field. Once you are done, click <guilabel>Submit</guilabel> to add the new censored word to your board.</para>
-			
 			<para>To edit an existing word censor, locate the censored word's row. Click the "edit" icon located in that row, and proceed with changing the censored word's settings.</para>
 		</section>
-		
 		<section id="acp_attach_settings">
 			<sectioninfo>
 				<authorgroup>
@@ -973,9 +877,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Attachment Settings</title>
-			
 			<para>If you allow your users to post attachments, it is important to be able to control your board's attachments settings. Here, you can configure the main settings for attachments and the associated special categories. When you are done configuring your board's attachments settings, click <guilabel>Submit</guilabel>.</para>
-			
 			<itemizedlist>
 				<title>Attachment Settings</title>
 				<listitem><para><guilabel>Allow attachments</guilabel>: If you want attachments to be enabled on your board, select <guilabel>Yes</guilabel>.</para></listitem>
@@ -992,7 +894,6 @@
 				<listitem><para><guilabel>Allow empty referrer</guilabel>: Secure downloads are based on referrers.This setting controls if downloads are allowed for those omitting the referrer information. <emphasis>This setting only applies if secure downloads are enabled.</emphasis></para></listitem>
 				<listitem><para><guilabel>Check attachment files</guilabel>: Some browsers can be tricked to assume an incorrect mimetype for uploaded files. This option ensures that such files likely to cause this are rejected. <emphasis>It is recommended that you leave this setting enabled.</emphasis></para></listitem>
 			</itemizedlist>
-			
 			<itemizedlist>
 				<title>Image Category Settings</title>
 				<listitem><para><guilabel>Display images inline</guilabel>: How image attachments are displayed. If this is set to <guilabel>No</guilabel>, a link to the attachment will be given instead, rather than the image itself (or a thumbnail) being displayed inline.</para></listitem>
@@ -1003,14 +904,12 @@
 				<listitem><para><guilabel>Maximum image dimensions</guilabel>: The maximum size of image attachments, in pixels. If you would like to disable dimension checking (and thereby allow image attachments of any dimensions), set each value to 0.</para></listitem>
 				<listitem><para><guilabel>Image link dimensions</guilabel>: If an image attachment is larger than these dimensions (in pixels), a link to the image will be displayed in the post instead. If you want images to be displayed inline regardless of dimensions, set each value to 0.</para></listitem>
 			</itemizedlist>
-			
 			<itemizedlist>
 				<title>Define Allowed/Disallowed IPs/Hostnames</title>
 				<listitem><para><guilabel>IP addresses or hostnames</guilabel>: If you have secure downloads enabled, you can specify the <glossterm>IP address</glossterm>es or hostnames allowed or disallowed. If you specify more than one <glossterm>IP address</glossterm> or hostname, each <glossterm>IP address</glossterm> or hostname should be on its own line. Entered values can have wildcards (*). To specify a range for an <glossterm>IP address</glossterm>, separate the start and end with a hyphen (-).</para></listitem>
 				<listitem><para><guilabel>Exclude IP from [dis]allowed IPs/hostnames</guilabel>: Enable this to exclude the entered IP(s)/hostname(s).</para></listitem>
 			</itemizedlist>
 		</section>
-		
 		<section id="acp_attach_extensions">
 			<sectioninfo>
 				<authorgroup>
@@ -1020,14 +919,10 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Manage extensions</title>
-			
 			<para>You can further configure your board's attachments settings by controlling what file extensions attached files can have to be uploaded. It is recommended that you do not allow scripting file extensions (such as php, php3, php4, phtml, pl, cgi, py, rb, asp, aspx, and so forth) for security reasons. You can find this page by clicking <guimenuitem>Manage extensions</guimenuitem> once you're in the <glossterm>ACP</glossterm>.</para>
-			
 			<para>To add an allowed file extension, find the <guilabel>Add Extension</guilabel> form on the page. In the field labeled <guilabel>Extension</guilabel>, type in the file extension. Do not include the period before the file extension. Then, select the extension group that this new file extension should be added to via the <guilabel>Extension group</guilabel> selection menu. Then, click <guilabel>Submit</guilabel>.</para>
-		
 			<para>You can also view your board's current allowed file extensions. On the page, you should see a table listing all of the allowed file extensions. To change the group that an extension belongs to, select a new extension group from the selection menu located in the extension's row. To delete an extension, check the checkbox in the <guilabel>Delete</guilabel> column. When you're done managing your board's current file extensions, click <guilabel>Submit</guilabel> at the bottom of the page.</para>
 		</section>
-		
 		<section id="acp_attach_extension_groups">
 			<sectioninfo>
 				<authorgroup>
@@ -1037,11 +932,8 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Manage extension groups</title>
-			
 			<para>Allowed file extensions can be placed into groups for easy management and viewing. To manage the extension groups, click <guimenuitem>Manage extension groups</guimenuitem> once you get into the <guilabel>Posting</guilabel> settings part of the <glossterm>ACP</glossterm>. You can configure specific settings regarding each extension group.</para>
-			
 			<para>To add a new file extension group, find the textbox that corresponds to the <guilabel>Create new group</guilabel> button. Type in the name of the extension group, then click <guilabel>Submit</guilabel>. You will be greeted with the extension group settings form. The following contains descriptions for each option available, and applies to extension groups that either already exist or are being added.</para>
-		
 			<itemizedlist>
 				<title>Add Extension Group</title>
 				<listitem><para><guilabel>Group name</guilabel>: The name of the extension group.</para></listitem>
@@ -1053,12 +945,9 @@
 				<listitem><para><guilabel>Assigned extensions</guilabel>: This is a list of all file extensions that belong in this extension group. Click <guilabel>Go to extension management screen</guilabel> to manage what extensions belong in this extension group.</para></listitem>
 				<listitem><para><guilabel>Allowed forums</guilabel>: This allows you to control what forums your users are allowed to post attachments that belong in this extension group. To enable this extension group in all forums, select the <guilabel>Allow all forums</guilabel> radio button. To set which specific forums this extension group is allowed in, select the <guilabel>Only forums selected below</guilabel> radio button, and then select the forums in the selection menu.</para></listitem>
 			</itemizedlist>
-			
 			<para>To edit a current file extension group's settings, click the "Settings" icon that is in the extension group's row. Then, go ahead and edit the extension group's settings. For more information about each setting, see the above.</para>
-		
 			<para>To delete an extension group, click the "Delete" icon that is in the extension group's row.</para>
 		</section>
-		
 		<section id="acp_attach_orphaned">
 			<sectioninfo>
 				<authorgroup>
@@ -1068,41 +957,30 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Orphaned attachments</title>
-			
 			<para>Sometimes, attachments may be orphaned, which means that they exist in the specified files directory (to configure this directory, see the section on <link linkend="acp_attach_settings">attachment settings</link>), but aren't assigned to any post(s). This can happen when posts are deleted or edited, or even when users attach a file, but don't submit their post.</para>
-			
 			<para>To manage orphaned attachments, click on <guimenuitem>Orphaned attachments</guimenuitem> on the left-hand menu once you're in the <guimenuitem>Posting</guimenuitem> settings section of the <glossterm>ACP</glossterm>. You should see a list of all orphaned attachments in the table, along with all the important information regarding each orphaned attachment.</para>
-			
 			<para>You can assign an orphaned attachment to a specific post. To do so, you must first find the post's post ID. Enter this value into the <guilabel>Post ID</guilabel> column for the particular orphaned attachment. Enable <guilabel>Attach file to post</guilabel>, then click <guilabel>Submit</guilabel>.</para>
-		
 			<para>To delete an orphaned attachment, check the orphaned attachment's <guilabel>Delete</guilabel> checkbox, then click <guilabel>Submit</guilabel>. Note that this cannot be undone.</para>
 		</section>
 	</section>
-
 	<section id="acp_users">
 		<sectioninfo>
 			<authorgroup>
 				<author>
 					<othername>dhn</othername>
 				</author>
-				
 				<author>
 					<othername>MennoniteHobbit</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
 		<title>Users Management</title>
-
 		<section id="acp_users_manage">
 			<title>Manage Users</title>
 			<para>Users are the basis of your forum. As a forum administrator, it is very important to be able to manage your users. Managing your users and their information and specific options is easy, and can be done via the <acronym>ACP</acronym>.</para>
-				
 			<para>To begin, log in and reach your <acronym>ACP</acronym>. Find and click on <guimenuitem>Users and Groups</guimenuitem> to reach the necessary page. If you do not see <guimenuitem>User Administration</guimenuitem> , simply find and click on <guimenuitem>Manage Users</guimenuitem> in the navigation menu on the left side of the page.</para>
-				
 			<para>To continue and manage a user, you must know the username(s) that you want to manage. In the textbox for the <guilabel>"Find a member:"</guilabel> field, type in the username of the user whose information and settings you wish to manage. On the other hand, if you want to find a member, click on <guilabel>[ Find a Member ]</guilabel> (which is below the textbox) and follow all the steps appropriate to find and select a user. If you wiant to manage the information and settings for the Anonymous user (any visitor who is not logged in is set as the Anonymous user), check the checkbox labeled <guilabel>"Select Anonymous User"</guilabel>. Once you have selected a user, click <guilabel>Submit</guilabel>.</para>
-				
 			<para>There are many sections relating to a user's settings. The following are subsections that have more information on each form. Each form allows you to manage specific settings for the user you have selected. When you are done with editing the data on each form, click <guilabel>Submit</guilabel> (located at the bottom of each form) to submit your changes.</para>
-			
 			<section id="acp_users_manage_overview">
 				<sectioninfo>
 					<authorgroup>
@@ -1113,7 +991,6 @@
 				</sectioninfo>
 				<title>User Overview</title>
 				<para>This is the first form that shows up when you first select a user to manage. Here, all of the general information and settings for each user is displayed.</para>
-				
 				<variablelist>
 					<varlistentry>
 						<term>Username</term>
@@ -1121,35 +998,30 @@
 							<para>This is the name of the user you're currently managing. If you want to change the user's username, type in a new username between three and twenty characters long into the textbox labeled <guilabel>Username:</guilabel></para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Registered</term>
 						<listitem>
 							<para>This is the complete date on which the user registered. You cannot edit this value.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Registered from IP</term>
 						<listitem>
 							<para>This is the <acronym>IP</acronym> address from which the user registered his or her account. If you want to determine the <acronym>IP</acronym> hostname, click on the <acronym>IP</acronym> address itself. The current page will reload and will display the appropriate information. If you want to perform a whois on the <acronym>IP</acronym> address, click on the <guilabel>Whois</guilabel> link. A new window will pop up with this data.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Last Active</term>
 						<listitem>
 							<para>This is the complete date on which the user was last active.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Posts</term>
 						<listitem>
 							<para>This number indicates how many posts the user has posted on the board.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Warnings</term>
 						<listitem>
@@ -1157,44 +1029,37 @@
 							<para>For more information about warnings, see <xref linkend="mcp_warnings"/>.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Founder</term>
 						<listitem>
 							<para>Founders are users who have all administrator permissions and can never be banned, deleted or altered by non-founder members. If you want to set this user as a founder, select the <guilabel>Yes</guilabel> radio button. To remove founder status from a user, select the <guilabel>No</guilabel> radio button.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Email</term>
 						<listitem>
 							<para>This is the user's currently set email address. To change the email address, fill in the <guilabel>Email:</guilabel> textbox with a valid email.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Confirm email address</term>
 						<listitem>
 							<para>This textbox should only be filled if you are changing the user's email address. If you are changing the email address, both the <guilabel>Email:</guilabel> textbox and this one should be filled with the same email address. If you do not fill this in, the user's email address will not be changed.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>New password</term>
 						<listitem>
 							<para>As an administrator, you cannot see any of your users' password. However, it is possible to change passwords. To change the user's password, type in a new password in the <guilabel>New password:</guilabel> textbox. The new password has to be between six and thirty characters long.</para>
-						
 							<important><para>Before submitting any changes to the user, make sure this field is blank, unless you really want to change the user's password. If you accidentally change the user's password, the original password cannot be recovered!</para></important>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Confirm new password</term>
 						<listitem>
 							<para>This textbox should only be filled if you are changing the user's password. If you are changing the user's password, the <guilabel>Confirm new password:</guilabel> textbox needs to be filled in with the same password you filled in in the above <guilabel>New password:</guilabel> textbox.</para>
 						</listitem>
 					</varlistentry>
-					
 					<varlistentry>
 						<term>Quick Tools</term>
 						<listitem>
@@ -1203,7 +1068,6 @@
 					</varlistentry>
 				</variablelist>
 			</section>
-			
 			<section id="acp_users_manage_feedback">
 				<sectioninfo>
 					<authorgroup>
@@ -1214,12 +1078,9 @@
 				</sectioninfo>
 				<title>User Feedback</title>
 				<para>Another aspect of managing a user is editing their feedback data. Feedback consists of any sort of user warning issued to the user by a forum administrator.</para>
-				
 				<para>To customise the display of the user's existing log entries, select any criteria for your customisation by selecting your options in the drop-down selection boxes entitled <guilabel>Display entries from previous:</guilabel> and <guilabel>Sort by:</guilabel>. <guilabel>Display entries from previous:</guilabel> allows you to set a specific time period in which the feedback was issued. <guilabel>Sort by:</guilabel> allows you to sort the existing log entries by <guimenuitem>Username</guimenuitem>, <guimenuitem>Date</guimenuitem>, <guimenuitem>IP address</guimenuitem>, and <guimenuitem>Log Action</guimenuitem>. The log entries can then be sorted in ascending or descending order. When you are done setting these options, click the <guilabel>Go</guilabel> button to update the page with your customisations.</para>
-			
 				<para>Another way of managing a user's feedback data is by adding feedback. Simply find the section entitled <guilabel>Add feedback</guilabel> and enter your message into the <guilabel>FEEDBACK</guilabel> text area. When you are done, click <guilabel>Submit</guilabel> to add the feedback.</para>
 			</section>
-			
 			<section id="acp_users_manage_profile">
 				<sectioninfo>
 					<authorgroup>
@@ -1229,7 +1090,6 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>User Profile</title>
-				
 				<para>Users may sometimes have content in their forum profile that requires that you either update it or delete it. If you don't want to change a field, leave it blank.The following are the profile fields that you can change:
 					<itemizedlist>
 						<listitem><para><guilabel>ICQ Number</guilabel> has to be a number at least three digits long.</para></listitem>
@@ -1245,7 +1105,6 @@
 					</itemizedlist>
 				</para>
 			</section>
-			
 			<section id="acp_users_manage_preferences">
 				<sectioninfo>
 					<authorgroup>
@@ -1255,10 +1114,8 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>User Preferences</title>
-				
 				<para>Users have many settings they can use for their account. As an administrator, you can change any of these settings. The user settings (also known as preferences) are grouped into three main categories: <guilabel>Global Settings</guilabel>, <guilabel>Posting Defaults</guilabel>, and <guilabel>Display Options</guilabel>.</para>
 			</section>
-			
 			<section id="acp_users_manage_avatar">
 				<sectioninfo>
 					<authorgroup>
@@ -1268,7 +1125,6 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>User Avatar</title>
-				
 				<para>Here you can manage the user's <glossterm>avatar</glossterm>. If the user has already set an avatar for himself/herself, then you are able to see the avatar image.</para>
 				<para>Depending on your avatar settings (for more information on avatar settings, see <link linkend="acp_board_avatars">Avatar Settings</link>), you can choose any option available to change the user's avatar: <guilabel>Upload from your machine</guilabel>, <guilabel>Upload from a URL</guilabel>, or <guilabel>Link off-site</guilabel>. You can also select an avatar from your board's avatar gallery by clicking the <guilabel>Display gallery</guilabel> button next to <guilabel>Local gallery:</guilabel>.</para>
 				<note>
@@ -1277,7 +1133,6 @@
 				<para>To delete the avatar image, simply check the <guilabel>Delete image</guilabel> checkbox underneath the avatar image.</para>
 				<para>When you are done choosing what avatar the user will have, click <guilabel>Submit</guilabel> to update the user's avatar.</para>
 			</section>
-			
 			<section id="acp_users_manage_rank">
 				<sectioninfo>
 					<authorgroup>
@@ -1287,11 +1142,9 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>User Rank</title>
-				
 				<para>Here you can set the user's <glossterm>rank</glossterm>. You can set the user's rank by selecting the rank from the <guilabel>User Rank:</guilabel> drop-down selection box. After you've picked the rank, click <guilabel>Submit</guilabel> to update the user's rank.</para>
 				<para>For more information about ranks, see <xref linkend="acp_user_ranks"/>.</para>
 			</section>
-			
 			<section id="acp_users_manage_signature">
 				<sectioninfo>
 					<authorgroup>
@@ -1301,14 +1154,12 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>User Signature</title>
-				
 				<para>Here you can add, edit, or delete the user's <glossterm>signature</glossterm>.</para>
 				<para>The user's current signature should be displayed in the <guilabel>Signature</guilabel> form. Just edit the signature by typing whatever you want into the text area. You can use <glossterm>BBCode</glossterm> and any other special formatting with what's provided. When you are done editing the user's signature, click <guilabel>Submit</guilabel> to update the user's signature.</para>
 				<note>
 					<para>The signature that you set has to obey the board's signature limitations that you currently have set.</para>
 				</note>
 			</section>
-			
 			<section id="acp_users_manage_groups">
 				<sectioninfo>
 					<authorgroup>
@@ -1318,12 +1169,10 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Groups</title>
-				
 				<para>Here you can see all of the <glossterm>usergroups</glossterm> that the user is in. From this page you can easily remove the user from any usergroup, or add the user to an existing group. The table entitled <guilabel>Special groups user is a member of</guilabel> lists out the usergroups the user is currently a member of.</para>
 				<para>Adding the user to a new usergroup is very easy. To do so, find the pull-down menu labeled <guilabel>Add user to group:</guilabel> and select a usergroup from that menu. Once the usergroup is selected, click <guilabel>Submit</guilabel>. Your addition will immediately take effect.</para>
 				<para>To delete the user from a group he/she is currently a member of, find the row that the usergroup is in, and click <guilabel>Delete</guilabel>. You will be greeted with a confirmation screen; if you want to go ahead and do so, click <guilabel>Yes</guilabel>.</para>
 			</section>
-			
 			<section id="acp_users_manage_permissions">
 				<sectioninfo>
 					<authorgroup>
@@ -1333,10 +1182,8 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Permissions</title>
-				
 				<para>Here you can see all of the permissions currently set for the user. For each group the user is in, there is a separate section on the page for the permissions that relates to that category. To actually set the user's permissions, see <xref linkend="acp_permissions"/>.</para>
 			</section>
-			
 			<section id="acp_users_manage_attachments">
 				<sectioninfo>
 					<authorgroup>
@@ -1346,7 +1193,6 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Attachments</title>
-				
 				<para>Depending on the current attachments settings, your users may already have <glossterm>attachments</glossterm> posted. If the user has already uploaded at least one attachment, you can see the listing of the attachment(s) in the table. The data available for each attachment consist of: <guilabel>Filename</guilabel>, <guilabel>Topic title</guilabel>, <guilabel>Post time</guilabel>, <guilabel>Filesize</guilabel>, and <guilabel>Downloads</guilabel>.</para>
 				<para>To help you in managing the user's attachment(s), you can choose the sorting order of the attachments list. Find the <guilabel>Sort by:</guilabel> pull-down menu and pick the category you want to use the sort the list (the possible options are <guimenuitem>Filename</guimenuitem>, <guimenuitem>Extension</guimenuitem>, <guimenuitem>Filesize</guimenuitem>, <guimenuitem>Downloads</guimenuitem>, <guimenuitem>Post time</guimenuitem>, and <guimenuitem>Topic title</guimenuitem>. To choose the sorting order, choose either <guimenuitem>Descending</guimenuitem> or <guimenuitem>Ascending</guimenuitem> from the pull-down menu besides the sorting category. Once you are done, click <guilabel>Go</guilabel>.</para>
 				<para>To view the attachment, click on the attachment's filename. The attachment will open in the same browser window. You can also view the topic in which the attachment was posted by clicking on the link besides the <guilabel>Topic:</guilabel> label, which is below the filename. Deleting the user's attachment(s) is very easy. In the attachments listing, check the checkboxes that are next to the attachment(s) you want to delete. When everything you want has been selected, click <guilabel>Delete marked</guilabel>, which is located below the attachments listing.</para>
@@ -1400,7 +1246,6 @@
 				</varlistentry>
 			</variablelist>
 		</section>
-		
 		<section id="acp_users_permissions">
 			<sectioninfo>
 				<authorgroup>
@@ -1411,22 +1256,15 @@
 			</sectioninfo>
 			<title>Users' permissions</title>
 			<para>Along with being able to manage users' information, it is also important to be able to regularly maintain and control permissions for the users on your board. User permissions include capabilities such as the use of avatars and sending private messages. Global moderator permissions includings abilities such as approving posts, managing topics, and managing bans. Lastly administrator permissions such as altering permissions, defining custom BBCodes, and managing forums.</para>
-
 			<para>To start managing a user's permissions, locate the <guimenuitem>Users and Groups</guimenuitem> tab and click on <guimenuitem>Users' Permissions</guimenuitem> in the left-side navigation menu. Here, you can assign global permissions to users. In the <guilabel>Look Up User</guilabel>. In the <guilabel>Find a user</guilabel> field, type in the username of the user whose permissions you want to edit. (If you want to edit the anonymous user, check the <guilabel>Select anonymous user</guilabel> checkbox.) Click <guilabel>Submit</guilabel>.</para>
-
 			<para>Permissions are grouped into three different categories: user, moderator, and admin. Each user can have specific settings in each permission category. To faciliate user permissions editing, it is possible to assign specific preset roles to the user.</para>
-
 			<important>
 				<para>For the following permissions editing actions that are described, there are three choices you have to choose from. You may either select <guilabel>Yes</guilabel>, <guilabel>No</guilabel>, or <guilabel>Never</guilabel>. Selecting <guilabel>Yes</guilabel> will enable the selected permission for the user, while selecting <guilabel>No</guilabel> will disallow the user from having permission for the selected setting, <emphasis>unless another permission setting from another area overrides the setting</emphasis>. If you want to completely disallow the user from having the selected permission <emphasis>ever</emphasis>, then select <guilabel>Never</guilabel>. The <guilabel>Never</guilabel> setting will override all other values assigned to the setting.</para>
 			</important>
-
 			<para>To edit the user's <guilabel>User permissions</guilabel>, select "<guimenuitem>User permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are four categories of permissions you may edit: <guilabel>Post</guilabel>, <guilabel>Profile</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Private messages</guilabel>. </para>
-
 			<para>To edit the user's <guilabel>Moderative permissions</guilabel>, select "<guimenuitem>Moderator permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are three categories of permissions you may edit: <guilabel>Post actions</guilabel>, <guilabel>Misc</guilabel>, and <guilabel>Topic actions</guilabel>.</para>
-
 			<para>To edit the user's <guilabel>Administrative permissions</guilabel>, select "<guimenuitem>Admin permissions</guimenuitem> from the <guilabel>Select type</guilabel> selection menu, then press <guilabel>Go</guilabel>. Select the role to apply to the user. If you would like to use the advanced form that will offer more detailed permission configuration, click the <guilabel>Advanced Permissions</guilabel> link. A new form will pop up below the <guilabel>Role</guilabel> selection menu. There are six categories of permissions you may edit: <guilabel>Permissions</guilabel>, <guilabel>Posting</guilabel>, <guilabel>Misc</guilabel>, <guilabel>Users &amp; Groups</guilabel>, <guilabel>Settings</guilabel>, and <guilabel>Forums</guilabel>.</para>
 		</section>
-
 		<section id="acp_users_forum_permissions">
 			<sectioninfo>
 				<authorgroup>
@@ -1436,11 +1274,8 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Users' forum permissions</title>
-			
 			<para>Along with editing your users' user account-related permissions, you can also edit their forum permissions, which relate to the forums in your board. Forum permissions are different from user permissions in that they are directly related and tied to the forums. <guimenuitem>Users' forum permissions</guimenuitem> allows you to edit your users' forum permissions. When doing so, you can only assign forum permissions to one user at a time.</para>
-		
 			<para>To start editing a user's forum permissions, start by typing in the user's username into the <guilabel>Find a member</guilabel> text box. If you would like to edit the forum permissions that pertain to the anonymous user, check the <guilabel>Select anonymous user</guilabel> text box. Click <guilabel>Submit</guilabel> to continue.</para>
-			
 			<figure id="img_acp_u_forum_permissions">
 				<title>Selecting forums for users' forum permissions</title>
 				<mediaobject>
@@ -1452,10 +1287,8 @@
 					</caption>
 				</mediaobject>
 			</figure>
-			
 			<para>You should now be able to assign forum permissions to the user. You now have two ways to assign forum permissions to the user: you may either select the forum(s) manually with a multiple selection menu, or select a specific forum or category, along with its associated subforums. Click <guilabel>Submit</guilabel> to continue with the forum(s) you have picked. Now, you should be greeted with the <guilabel>Setting permissions</guilabel> screen, where you can actually assign the forum permissions to the user. You should now select what kind of forum permissions you want to edit now; you may either edit the user's <guimenuitem>Forum permissions</guimenuitem> or <guimenuitem>Moderator permissions</guimenuitem>. Click <guilabel>Go</guilabel>. You should now be able to select the role to assign to the user for each forum you selected previously. If you would like to configure these permissions with more detail, click the <guilabel>Advanced permissions</guilabel> link located in the appropriate forum permissions box, and then update the permissions accordingly. When you are done, click <guilabel>Apply all permissions</guilabel> if you are in the <guilabel>Advanced permissions</guilabel> area, or click <guilabel>Apply all permissions</guilabel> at the bottom of the page to submit all of your changes on the page.</para>
 		</section>
-		
 		<section id="acp_users_custom_profile_fields">
 			<sectioninfo>
 				<authorgroup>
@@ -1465,9 +1298,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Custom profile fields</title>
-			
 			<para>One of the many new features in phpBB3 that enhance the user experience is <guilabel>Custom Profile Fields</guilabel>. In the past, users could only fill in information in the common profile fields that were displayed; administrators had to add MODifications to their board to accommodate their individual needs. In phpBB3, however, administrators can comfortably create custom profile fields through the <acronym>ACP</acronym>.</para>
-		
 			<para>To create your custom profile field, login to your ACP. Click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then locate the <guimenuitem>Custom profile fields</guimenuitem> link in the left-hand menu to click on. You should now be on the proper page. Locate the empty textbox below the custom profile fields headings, which is next to a selection menu and a <guilabel>Create new field</guilabel> button. Type in the empty textbox the name of the new profile field you want to create first. Then, select the field type in the selection menu. Available options are <guimenuitem>Numbers</guimenuitem>, <guimenuitem>Single text field</guimenuitem>, <guimenuitem>Textarea</guimenuitem>, <guimenuitem>Boolean (Yes/No)</guimenuitem>, <guimenuitem>Dropdown box</guimenuitem>, and <guimenuitem>Date</guimenuitem>. Click the <guilabel>Create new field</guilabel> button to continue. The following describes each of the three sets of settings that the new custom profile field will have.
 				<itemizedlist>
 					<title>Add profile field</title>
@@ -1475,7 +1306,6 @@
 					<listitem><para><guilabel>Field identification:</guilabel> This is the name of the profile field. This name will identify the profile field within phpBB3's database and templates.</para></listitem>
 					<listitem><para><guilabel>Display profile field:</guilabel> This setting determines if the new profile field will be displayed at all. The profile field will be shown on topic pages, profiles and the memberlist if this is enabled within the load settings. Only showing within the users profile is enabled by default.</para></listitem>
 				</itemizedlist>
-				
 				<itemizedlist>
 					<title>Visibility option</title>
 					<listitem><para><guilabel>Display in user control panel:</guilabel> This setting determines if your users will be able to change the profile field within the <acronym>UCP</acronym>.</para></listitem>
@@ -1483,17 +1313,14 @@
 					<listitem><para><guilabel>Required field:</guilabel> This setting determines if you want to force your users to fill in this profile field. This will display the profile field at registration and within the user control panel.</para></listitem>
 					<listitem><para><guilabel>Hide profile field:</guilabel> If this option is enabled, this profile field will only show up in users' profiles. Only administrators and moderators will be able to see or fill out this field in this case.</para></listitem>
 				</itemizedlist>
-				
 				<itemizedlist>
 					<title>Language specific options</title>
 					<listitem><para><guilabel>Field name/title presented to the user:</guilabel> This is the actual name of the profile field that will be displayed to your users.</para></listitem>
 					<listitem><para><guilabel>Field description:</guilabel> This is a simple description/explanation for your users filling out this field.</para></listitem>
 				</itemizedlist>
 			</para>
-			
 			<para>When you are done with the above settings, click the <guilabel>Profile type specific options</guilabel> button to continue. Fill out the appropriate settings with what you desire, then click the <guilabel>Next</guilabel> button. If your new custom profile field was created successfully, you should be greeted with a green success message. Congratulations!</para>
 		</section>
-		
 		<section id="acp_user_ranks">
 			<sectioninfo>
 				<authorgroup>
@@ -1503,22 +1330,15 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Managing ranks</title>
-			
 			<para>Ranks are special titles that can be applied to forum users. As an administrator, it is up to you to create and manage the ranks that exist on your board. The actual names for the ranks are completely up to you; it's usually best to tailor them to the main purpose of your board.</para>
-			
 			<note>
 				<para>When assigning a special rank name to a user, remember that no permissions are associated. For example, if you create a &quot;Support Moderator&quot; rank and assign it to a user, that user will not automatically get moderator permissions. You must assign the user the special permissions separately.</para>
 			</note>
-			
 			<para>To manage your board's ranks, login to your <acronym>ACP</acronym>, click on the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on the <guimenuitem>Manage ranks</guimenuitem> link located in the left-hand menu. You should now be on the rank management page. All current existing ranks are displayed.</para>
-			
 			<para>To create a new rank, click on the <guilabel>Add new rank</guilabel> button located below the existing ranks list. Fill in the first field <guilabel>Rank title</guilabel> with the name of the rank. If you uploaded an image you want to attribute to the rank into the <filename>/images/ranks/</filename> folder, you can select an image from the selection menu. The last setting you can set is if you want the rank to be a "special" rank. Special ranks are ranks that administrators assign to users; they are not automatically assigned to users based on their postcount. If you selected <guilabel>No</guilabel>, then you can fill in the <guilabel>Minimum posts</guilabel> field with the minimum number of posts your users must have before getting assigned this rank. When you are done, click the <guilabel>Submit</guilabel> button to add this new rank.</para>
-			
 			<para>To edit a rank's current settings, locate the rank's row, and then click on its "Edit" button located in the <guilabel>Action</guilabel> column.</para>
-			
 			<para>To delete a rank, locate the rank's row, and then click on its "Delete" button located in the <guilabel>Action</guilabel> column. Then, you must confirm the action by clicking on the <guilabel>Yes</guilabel> button when prompted.</para>
 		</section>
-				
 		<section id="acp_user_security">
 			<sectioninfo>
 				<authorgroup>
@@ -1529,7 +1349,6 @@
 			</sectioninfo>
 			<title>User Security</title>
 			<para>Other than being able to manage your users on your board, it is also important to be able to protect your board and prevent unwanted registrations and users. The <guilabel>User Security</guilabel> section allows you to manage banned emails, IPs, and usernames, as well as managing disallowed usernames and user pruning. Banned users that exhibit information that match any of these ban rules will not be able to reach any part of your board.</para>
-			
 			<section id="acp_ban_emails">
 				<sectioninfo>
 					<authorgroup>
@@ -1540,7 +1359,6 @@
 				</sectioninfo>
 				<title>Ban emails</title>
 				<para>Sometimes, it is necessary to ban emails in order to prevent unwanted registrations. There may be certain users or spam bots that use emails that you are aware of. Here, in the <guimenuitem>Ban emails</guimenuitem> section, you can do this. You can control which email addresses are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
-				
 				<para>To ban or exclude one or more email addresses, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
 					<title>Ban one or more email addresses</title>
@@ -1550,7 +1368,6 @@
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the email address(es). This is optional, and can help you remember in the future why you banned the email address(es).</para></listitem>
 					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned email address(es). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
 				</itemizedlist>
-				
 				<para>Other than adding emails to be banned, you can also un-ban or un-exclude email addresses from bans. To un-ban or exclude one or more email addresses from bans, fill in the <guilabel>Un-ban or un-exclude emails</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
 					<title>Un-ban or un-exclude emails</title>
@@ -1560,7 +1377,6 @@
 					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected email. If more than one email address is selected, only one of the shown ban reasons will be displayed.</para></listitem>
 				</itemizedlist>
 			</section>
-			
 			<section id="acp_ban_ips">
 				<sectioninfo>
 					<authorgroup>
@@ -1571,7 +1387,6 @@
 				</sectioninfo>
 				<title>Ban IPs</title>
 				<para>Sometimes, it is necessary to ban <glossterm>IP address</glossterm>es or hostnames in order to prevent unwanted users. There may be certain users or spam bots that use IPs or hostnames that you are aware of. Here, in the <guimenuitem>Ban IPs</guimenuitem> section, you can do this. You can control which IP addresses or hostnames are banned, how long a ban is in effect, and the given reason(s) for banning.</para>
-				
 				<para>To ban or exclude one or more IP addresses and/or hostnames, fill in the <guilabel>Ban one or more email addresses</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
 					<title>Ban one or more IPs</title>
@@ -1581,7 +1396,6 @@
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the IP address(es) and/or hostname(s). This is optional, and can help you remember in the future why you banned the IP address(es) and/or hostname(s).</para></listitem>
 					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the users with the banned IP address(es) and/or hostname(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
 				</itemizedlist>
-				
 				<para>Other than adding IP address(es) and/or hostname(s) to be banned, you can also un-ban or un-exclude IP address(es) and/or hostname(s) from bans. To un-ban or exclude one or more IP address(es) and/or hostname(s) from bans, fill in the <guilabel>Un-ban or un-exclude IPs</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
 					<title>Un-ban or un-exclude IPs</title>
@@ -1591,7 +1405,6 @@
 					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected IP address or hostname. If more than one IP address or hostname is selected, only one of the shown ban reasons will be displayed.</para></listitem>
 				</itemizedlist>
 			</section>
-			
 			<section id="acp_ban_users">
 				<sectioninfo>
 					<authorgroup>
@@ -1602,7 +1415,6 @@
 				</sectioninfo>
 				<title>Ban Users</title>
 				<para>Whenever you encounter troublesome users on your board, you may have to ban them. On the <guimenuitem>Ban usernames</guimenuitem> page, you can do exactly that. On this page, you can manage all banned usernames.</para>
-				
 				<para>To ban or exclude one or more users, fill in the <guilabel>Ban one or more users</guilabel> form. Once you are done with your changes, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
 					<title>Ban one or more usernames</title>
@@ -1612,7 +1424,6 @@
 					<listitem><para><guilabel>Reason for ban</guilabel>: This is a short reason for why you want to ban the username(s). This is optional, and can help you remember in the future why you banned the user(s).</para></listitem>
 					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is a short explanation that will actually be shown to the banned user(s). This can be different from the above <guilabel>Reason for ban</guilabel>.</para></listitem>
 				</itemizedlist>
-				
 				<para>Other than adding users to be banned, you can also un-ban or un-exclude usernames from bans. To un-ban or exclude one or more users from bans, fill in the <guilabel>Un-ban or un-exclude usernames</guilabel> form. Once you are done, click <guilabel>Submit</guilabel>.</para>
 				<itemizedlist>
 					<title>Un-ban or un-exclude usernames</title>
@@ -1622,7 +1433,6 @@
 					<listitem><para><guilabel>Reason shown to the banned</guilabel>: This is an uneditable information box that shows the reason shown to the banned for the currently selected username. If more than one username is selected, only one of the shown ban reasons will be displayed.</para></listitem>
 				</itemizedlist>
 			</section>
-			
 			<section id="acp_disallow_users">
 				<sectioninfo>
 					<authorgroup>
@@ -1632,14 +1442,10 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Disallow usernames</title>
-				
 				<para>In phpBB3, it is also possible to disallow the registration of certain usernames that match any usernames that you configure. (This is useful if you want to prevent users from registering with usernames that might confuse them with an important board member.) To manage disallowed usernames, go to the ACP, click the <guimenuitem>Users and Groups</guimenuitem> tab, and then click on <guimenuitem>Disallow usernames</guimenuitem>, which is located on the side navigation menu.</para>
-				
 				<para>To add a disallowed username, locate the <guilabel>Add a disallowed username</guilabel> form, and then type in the username in the textbox labeled <guilabel>Username</guilabel>. <tip><para>You can use wildcards (*) to match any character. For example, to disallow any username that matches "JoeBloggs", you could type in "Joe*". This would prevent all users from registering a username that starts with "Joe".</para></tip> Once you are done, click <guilabel>Submit</guilabel>.</para>
-				
 				<para>To remove a disallowed username, locate the <guilabel>Remove a disallowed username</guilabel> form. Select the disallowed username that you would like to remove from the <guilabel>Username</guilabel> selection menu. Click <guilabel>Submit</guilabel> to remove the selected disallowed username.</para>
 			</section>
-			
 			<section id="acp_prune_users">
 				<sectioninfo>
 					<authorgroup>
@@ -1649,11 +1455,8 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Prune users</title>
-				
 				<para>In phpBB3, it is possible to prune users from your board in order to keep only your active members. You can also delete a whole user account, along with everything associated with the user account. <guimenuitem>Prune users</guimenuitem> allows you to prune and deactivate user accounts on your board by post count, last visited date, and more.</para>
-				
 				<para>To start the pruning process, locate the <guilabel>Prune users</guilabel> form. You can prune users based on any combination of the available criteria. (In other words, fill out every field in the form that applies to the user(s) you're targeting for pruning.) When you are ready to prune users that match your specified settings, click <guilabel>Submit</guilabel>.</para>
-				
 				<itemizedlist>
 					<title>Prune users</title>
 					<listitem><para><guilabel>Username</guilabel>: Enter a username that you want to be pruned. You can use wildcards (*) to prune users that have a username that matches the given pattern.</para></listitem>
@@ -1665,86 +1468,70 @@
 					<listitem><para><guilabel>Delete pruned user posts</guilabel>: When users are removed (actually deleted and not just deactivated), you must choose what to do with their posts. To delete all of the posts that belong to the pruned user(s), select the radio button labeled <guilabel>Yes</guilabel>. Otherwise, select <guilabel>No</guilabel> and the pruned user(s)' posts will remain on the board, untouched.</para></listitem>
 					<listitem><para><guilabel>Deactivate or delete</guilabel>: You must choose whether you want to deactivate the pruned user(s)' accounts, or to completely delete and remove them from the board's database.</para></listitem>
 				</itemizedlist>
-				
 				<warning>
 					<para>Pruning users cannot be undone! Be careful with the criteria you choose when pruning users.</para>
 				</warning>
 			</section>
 		</section>
 	</section>
-	
 	<section id="acp_groups">
 		<sectioninfo>
 			<authorgroup>
 				<author>
 					<othername>dhn</othername>
 				</author>
-				
 				<author>
 					<othername>MennoniteHobbit</othername>
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		
 		<title>Group Management</title>
-		
 		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.0 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
-		
 		<section id="acp_groups_types">
 			<sectioninfo>
 				<authorgroup>
 					<author>
 						<othername>dhn</othername>
 					</author>
-					
 					<author>
 						<othername>MennoniteHobbit</othername>
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			
 			<title>Group types</title>
 			<para>There are two types of groups:</para>
-			
 			<!-- TODO: More info on each pre-defined group? -->
 			<variablelist>
 				<varlistentry>
 					<term>Pre-defined groups</term>
 					<listitem>
 						<para>These are groups that are available by default in phpBB 3.0. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar, and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users", for instance. Do not try to remove them manually through the database, or your board will no longer function properly.
-						
 							<variablelist>
 								<varlistentry>
 									<term>Administrators</term>
 									<listitem><para>This usergroup contains all of the administrators on your board. All founders are administrators, but not all administrators are founders. You can control what administrators can do by managing this group.</para></listitem>
 								</varlistentry>
-								
 								<varlistentry>
 									<term>Bots</term>
 									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.0 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
 								</varlistentry>
-								
 								<varlistentry>
 									<term>Global Moderators</term>
 									<listitem><para>Global moderators are moderators that have moderator permissions for every forum in your board. You can edit what permissions these moderators have by managing this group.</para></listitem>
 								</varlistentry>
-								
 								<varlistentry>
 									<term>Guests</term>
 									<listitem><para>Guests are visitors to your board who aren't logged in. You can limit what guests can do by managing this usergroup.</para></listitem>
 								</varlistentry>
-								
 								<varlistentry>
 									<term>Registered Users</term>
 									<listitem><para>Registered users are a big part of your board. Registered users have already registered on your board. To control what registered users can do, manage this usergroup.</para></listitem>
 								</varlistentry>
-								
 								<varlistentry>
 									<term>Registered COPPA Users</term>
 									<listitem><para>Registered COPPA users are basically the same as registered users, except that they fall under the <acronym>COPPA</acronym>, or Child Online Privacy Protection Act, law, meaning that they are under the age of 13 in the U.S.A. Managing the permissions this usergroup has is important in protecting these users. <acronym>COPPA</acronym> doesn't apply to users living outside of the U.S.A. and can be disabled altogether.</para></listitem>
 								</varlistentry>
 							</variablelist>
-							
 						</para>
 					</listitem>
 				</varlistentry>
@@ -1756,7 +1543,6 @@
 				</varlistentry>
 			</variablelist>
 			<para>The <guimenuitem>Manage Groups</guimenuitem> section in the <acronym>ACP</acronym> shows you separated lists of both your "User defined groups" and the "Pre-defined groups".</para>
-			
 		</section>
 		<section id="acp_groups_edit">
 			<title>Group attributes</title>
@@ -1793,9 +1579,8 @@
 				<varlistentry>
 					<term>Group avatar</term>
 					<listitem><para>A member that has this group as the default group (see <xref linkend="acp_groups_default" />) will use this avatar. Note that a member can change his avatar to a different one if he has the permission to do so. For more information on avatar settings, see the <link linkend="ucp_avatar">userguide section on avatars</link>.</para></listitem>
-				</varlistentry>				
+				</varlistentry>
 			</variablelist>
-			
 		</section>
 		<section id="acp_groups_default">
 			<title>Default groups</title>
@@ -1810,7 +1595,6 @@
 			</important>
 		</section>
 	</section>
-	
 	<section id="acp_permissions">
 		<sectioninfo>
 			<authorgroup>
@@ -1833,7 +1617,6 @@
 		<para>Any of these five permission types may be assigned to individual users or to usergroups.</para>
 		<para>When setting permissions, you will encounter three possible values - <guilabel>NO</guilabel>, <guilabel>YES</guilabel> and <guilabel>NEVER</guilabel>, with <guilabel>NO</guilabel> as the default value for each permission. If you set a <guilabel>YES</guilabel>, it overrides the <guilabel>NO</guilabel>, however, if the permission is set to <guilabel>NEVER</guilabel>, you cannot override it by setting it to <guilabel>YES</guilabel> in another place. If you still have problems understanding this system, see the <link linkend="acp_permissions_mask">Permissions Masks</link> section.</para>
 		<para>To understand how to set permissions and to know how to use the interface, it is important to recognize the different types of permissions and tools that the Permission tab in the ACP provides:</para>
-
 		<section id="acp_permissions_global">
 			<sectioninfo>
 				<authorgroup>
@@ -1847,39 +1630,27 @@
 			</sectioninfo>
 			<title>Global Permissions</title>
 			<para>These affect the whole board and are not bound to specific forums. They include user permissions, which limit the use of the UCP, searching, private messaging, using of avatars/signatures/etc. Administrator permissions are also set here, as they are Global.</para>
-
 			<section id="acp_permissions_global_user">
 				<title>Global User Permissions</title>
 				<para>Global User permissions are those permissions which apply to all forums, such as permissions to attach or download files or use a signature, or permissions which are unrelated to a forum, such as permissions relating to profiles, private messages, and email.</para>
-
 				<para>Although Global User permissions can be assigned to users by click <guilabel>Users’ Permissions</guilabel> from your ACP Permissions tab, selecting a user, and then selecting <guilabel>User permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown, it is generally far preferable to avoid using User permissions and use Group permissions instead. This will make it easier to manage permissions in the future and to assign permissions to users in the future. The only practical difference between User permissions and Group permissions is that User permissions require you to set permissions for each user individually, where Group permission let you create a Group and assign its members a set of permissions. Then, if you wish other users to have the same permissions, you can just add them to the Group.</para>
-
 				<para>Global user permissions can be assigned to user groups by clicking <guilabel>Groups’ permissions</guilabel> from your ACP Permissions tab, selecting a user group, and then selecting <guilabel>User permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>In either case, you will be allowed to select a stock User Role in the dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions. However, the better way to customise one of the stock Roles is to create a new User role based on the settings of an existing Role. You can alse create a new User role from scratch. Roles use fewer resource than if you make modifications by editing the Advanced permissions.</para>
 			</section>
 			<section id="acp_permissions_global_moderator">
 				<title>Global Moderator Permissions</title>
 				<para>Global Moderator permissions are those permissions which apply to editing, deleting, or otherwise affecting other users’ topics and posts, or to affect other users through reports, warnings, or bans. Permissions given here will apply to any forum the user or user group can see.</para>
-
 				<para>Global Moderator permissions can be assigned to users by clicking <guilabel>Users’ permissions</guilabel> from your ACP Permissions tab, selecting a user, and then selecting <guilabel>Global moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>Global Moderator permissions can be assigned to user groups by clicking <guilabel>Groups’ permissions</guilabel> from your ACP Permissions tab, selecting a user group, and then selecting <guilabel>Global moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>Global Moderator permissions can also be assigned to both users and user groups by clicking <guilabel>Global Moderators</guilabel> from your ACP Permissions tab. This option will display all of the users and user groups who are currently assigned Global Moderator permissions. You can add, edit, or delete users and user groups from this option.</para>
-
 				<para>In either case, you will be allowed to select a stock Moderator Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
 			</section>
 			<section id="acp_permissions_global_administrator">
 				<title>Global Administrator Permissions</title>
 				<para>Global Administrator permissions are those permissions which apply to maintaining your board through the Administration Control Panel. They include permissions for maintaining forums, users, and user groups, maintaining and assigning permissions, changing board configuration settings, and other such board maintenance tasks.</para>
-
 				<para>Global Administrator permissions can be assigned to users by clicking <guilabel>Users’ permissions</guilabel> from your ACP permissions tab, selecting a user, and then selecting <guilabel>Global admin permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>Global Administrator permissions can be assigned to user groups by clicking <guilabel>Groups’ permissions</guilabel> from your ACP permissions tab, selecting a user group, and then selecting <guilabel>Global admin permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>Global Administrator permissions can also be assigned to both users and user groups by clicking <guilabel>Administrators</guilabel> from your ACP Permissions tab. This option will display all of the users and user groups who are currently assigned Administrator permissions. You can add, edit, or delete users and user groups from this option.</para>
-
 				<para>In either case, you will be allowed to select a stock Admin Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
 			</section>
 		</section>
@@ -1893,36 +1664,26 @@
 			</sectioninfo>
 			<title>Forum Permissions</title>
 			<para>These permissions are set for each forum/user or group combination individually. They can be divided into two types: User permissions and Moderator permissions. The first control if a user or group can see the forum, post in it, and so on, while the Moderator permissions control if the user or group can do moderator-related actions in it.</para>
-
 			<section id="acp_permissions_forumbased_user">
 				<title>User Forum Permissions</title>
 				<para>User Forum permissions are those which apply to creating and editing ones own posts in a particular forum and printing and reporting topics. They also determine whether posts require approval or increment the post counter as well as some other user capabilities in a particular forum.</para>
-
 				<para>User Forum permissions can be assigned to users by clicking <guilabel>Users’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user, selecting one or more forums from the list, and then selecting <guilabel>Forum permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>User Forum permissions can be assigned to user groups by clicking <guilabel>Groups’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user group, selecting one or more forums from the list, and then selecting <guilabel>Forum permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>User Forum permissions can also be assigned to both users and user groups by clicking <guilabel>Forum permissions</guilabel> from your ACP Permissions tab, and then selecting one or more forums from the list. This option will display the all of the users and user groups who are currently assigned User Forum permissions for that forum. You can add, edit, or delete users and user groups from this option.</para>
-
 				<para>In either case, you will be allowed to select a stock Forum Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
 			</section>
 			<section id="acp_permissions_forumbased_moderator">
 				<title>Forum Moderator Permissions</title>
 				<para>Forum Moderator permissions are those which apply to editing, deleting, or otherwise affecting other users’ topics and posts in one particular forum, or to affect other users through reports, warnings, or bans.</para>
-
 				<para>Forum Moderator permissions can be assigned to users by clicking <guilabel>Users’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user, selecting one or more forums from the list, and then selecting <guilabel>Moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>Forum Moderator permissions can be assigned to user groups by clicking <guilabel>Groups’ forum permissions</guilabel> from your ACP Permissions tab, selecting a user group, selecting one or more forums from the list, and then selecting <guilabel>Moderator permissions</guilabel> from the <guilabel>Select type</guilabel> dropdown.</para>
-
 				<para>Forum Moderator permissions can also be assigned to both users and user groups by clicking <guilabel>Forum Moderators</guilabel> from your ACP Permissions tab, and then selecting one or more forums from the list. This option will display all of the users and user groups who are currently assigned Forum Moderator permissions for that forum. You can add, edit, or delete users and user groups from this option.</para>
-
 				<para>In either case, you will be allowed to select a stock Moderator Role in the role dropdown, or you can click <guilabel>Advanced Permissions</guilabel> to customise the permissions, or, preferably, create a new Role having the permissions set you desire.</para>
 			</section>
 		</section>
 		<section id="acp_permissions_roles">
 			<title>Permission Roles</title>
 			<para>To ease setting of permissions, you can create roles that have a pre-defined set of permissions and which you can then assign to users or groups. phpBB already prepared some predefined roles for you to use - e.g., in forum based permissions, you can make each user a Standard Moderator, Full Moderator or Limited Moderator, etc.</para>
-
 			<para>There are four types of Permission Roles:
 				<itemizedlist>
 					<listitem><para>Admin Roles, used with <guilabel>Global Administrator permissions</guilabel></para></listitem>
@@ -1931,25 +1692,17 @@
 					<listitem><para>Forum Roles, used with <guilabel>User Forum permissions</guilabel></para></listitem>
 				</itemizedlist>
 			</para>
-
 			<para>Permission Roles can be maintained by clicking the corresponding link on the ACP Permissions tab. Roles provide a convenient permissions template to use when assigning permissions to either users or user groups. A Role’s permissions settings can be viewed or edited by clicking the green-gear for that role.</para>
-
 			<para>Most standard Roles use combinations of <guilabel>Yes</guilabel> and <guilabel>No</guilabel>, meaning that if one user is assigned two different roles from being a member of two different groups, for instance Limited Access and Regular Access, the <guilabel>Yes</guilabel>es will override the <guilabel>No</guilabel>s and leave the user with Regular Access.</para>
-
-			<para>The Exceptions are the ones with <guilabel>Never</guilabel> settings, such as the User Roles <guilabel>No Avatar</guilabel> , <guilabel>No PMs</guilabel> and <guilabel>Newly Registered User Features</guilabel>, and the Forum Role <guilabel>On Moderation Queue</guilabel>. These  four Roles use <guilabel>Never</guilabel> settings, and therefore override the <guilabel>Yes</guilabel> settings that would have been granted by other roles.</para>
-
-			<para>You should never use one of these  four roles, or any other <guilabel>Never</guilabel> settings with your Registered Users group. Doing so will take those permissions away from everyone, including yourself.</para>
-
-			<para>If a Role’s permission settings are not quite right for your forum -- for instance, you don’t want anyone to be able to hide their online status -- you can add or subtract a permission to or from a standard Role. Then  wherever that role is used, that permission will be changed.</para>
-
+			<para>The Exceptions are the ones with <guilabel>Never</guilabel> settings, such as the User Roles <guilabel>No Avatar</guilabel> , <guilabel>No PMs</guilabel> and <guilabel>Newly Registered User Features</guilabel>, and the Forum Role <guilabel>On Moderation Queue</guilabel>. These four Roles use <guilabel>Never</guilabel> settings, and therefore override the <guilabel>Yes</guilabel> settings that would have been granted by other roles.</para>
+			<para>You should never use one of these four roles, or any other <guilabel>Never</guilabel> settings with your Registered Users group. Doing so will take those permissions away from everyone, including yourself.</para>
+			<para>If a Role’s permission settings are not quite right for your forum -- for instance, you don’t want anyone to be able to hide their online status -- you can add or subtract a permission to or from a standard Role. Then wherever that role is used, that permission will be changed.</para>
 			<para>You can also create your own custom roles by typing a new name into the <guilabel>Create role</guilabel> box, selecting a role to copy from in the <guilabel>Use settings from</guilabel> dropdown, and click submit. Then you can customise your new role and use it for assigning those permissions.</para>
-
 			<para>Using such custom roles is simpler than editing the advanced permissions for multiple forums and should reduce the resources required by your forum when checking permissions.</para>
 		</section>
 		<section id="acp_permissions_mask">
 			<title>Permission Masks</title>
 			<para>In this section, you do not set or change anything, but you can view the final permissions a user or group has based on the combined result of the permissions a user has from his user permissions or group memberships. This feature is particularly useful when you need to debug your permissions and for example, you cannot find out why someone doesn’t have the permission you want him to have. Permission masks is a tool for viewing the permission settings for all five permissions types for both users and user groups.</para>
-
 			<para>Each link on the Permissions Masks section of the ACP Permissions tab corresponds to one of the five permission types:
 				<itemizedlist>
 					<listitem><para>View administrative permissions for <guilabel>Global Administrator permissions</guilabel></para></listitem>
@@ -1959,11 +1712,8 @@
 					<listitem><para>View forum-based permissions for <guilabel>User Forum permissions</guilabel></para></listitem>
 				</itemizedlist>
 			Any of these five links will take you to a page listing the users and user groups that are assigned those Global or Forum permissions.</para>
-
 			<para>Selecting one or more user groups will display the permissions for those user groups, the same way they are shown in the permissions edit pages, so there is no added utility in running the masks on group names. Permissions masks are most useful when run on a username, and not a group name, since the latter will give you only the same information provided by viewing that group’s permissions.</para>
-
 			<para>Viewing a user’s permissions is much different. If you type a user’s name into the <guilabel>Find a member</guilabel> box for any of the five permission types and click <guilabel>View permissions</guilabel> it will display that user’s resulting permissions, taking into account all of the user's groups’ permissions. Also, the <guilabel>forum moderation</guilabel> mask will take into account global moderation permissions as well.</para>
-
 			<para>Each individual permission will have a circle-arrow which is a link to display all of that user’s groups and which groups grant or deny that permission.</para>
 			<figure id="img_choose_group_permissions">
 				<title>Permission Masks</title>
@@ -2098,7 +1848,6 @@
 			</variablelist>
 		</section>
 	</section>
-
 	<section id="acp_styles">
 		<sectioninfo>
 			<authorgroup>
@@ -2112,26 +1861,22 @@
 		</sectioninfo>
 		<title>Styles</title>
 		<para>phpBB 3.0 is very customisable. Styling is one aspect of this customisability. Being able to manage the styles your board uses is important in keeping an interesting board. Your board's style may even reflect the purpose of your board. <guimenuitem>Styles</guimenuitem> allows you to manage all the styles available on your board.</para>
-		
 		<para>phpBB 3.0 styles have three main parts: templates, themes, and imagesets.
 			<variablelist>
 				<varlistentry>
 					<term>Templates</term>
 					<listitem><para>Templates are the HTML files responsible for the layout of the style.</para></listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>Themes</term>
 					<listitem><para>Themes are a combination of colour schemes and images that define the basic look of your forum.</para></listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>Imagesets</term>
 					<listitem><para>Imagesets are groups of images that are used throughout your board. Imagesets are comprised of all of the non-style specific images used by your board.</para></listitem>
 				</varlistentry>
 			</variablelist>
 		</para>
-		
 		<figure id="img_styles_overview">
 				<title>Styles overview</title>
 				<mediaobject>
@@ -2143,23 +1888,19 @@
 					</caption>
 				</mediaobject>
 		</figure>
-			
 		<para>Creating a style is not an easy task and it takes quite a lot of time. Skilled designers from the phpBB community create styles that are available publicly and anyone can download them. This is a good place to start if you want to download and install a new style and you cannot afford to create your own, for any possible reason. The first place where you should stop is the <ulink url="http://www.phpbb.com/styles/">Styles section on phpBB.com</ulink>, you will find a list of useful links for places like the:
 		<variablelist>
 				<varlistentry>
 					<term><ulink url="http://www.phpbb.com/styles/demo/3.0/">Styles Demo</ulink></term>
 					<listitem><para>The styles demo allows you to display each style on a live forum and see how each part of the board looks like using the specified style. You can browse through the styles until you find one that suits you and/or your board. The styles demo provides links to download the style and see its entry in the styles database.</para></listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term><ulink url="http://www.phpbb.com/styles/db/">Styles Database</ulink></term>
 					<listitem><para>The Style Database contains all the styles that were validated by the phpBB.com Styles Team. All styles are validated to ensure they are safe to use, work correctly and do not have any other caveats. You can filter styles by parameters like version, color or category to easily find a style that you would like. Each style entry in the database contains a link to the Style Demo, to show a live example of the style in use.</para></listitem>
 				</varlistentry>
-
 			</variablelist>
 		</para>
-		
-		
+
 		<section id="acp_styles_manage">
 			<sectioninfo>
 				<authorgroup>
@@ -2170,16 +1911,13 @@
 			</sectioninfo>
 			<title>Installing and managing styles</title>
 			<para>After you choose a style and you are ready to install it, unpack it on your PC and upload the directory with the style to your board's server. Make sure that the directory you upload to the server's <filename class='directory'>styles</filename> contains the <filename class='directory'>template</filename>, <filename class='directory'>theme</filename> and <filename class='directory'>imageset</filename> directories. The only exception is when a style has its template, theme or imageset based on another one, you will however be informed of that when you download the style. Having the dependent style component installed is required to install such a style.</para>
-		
 			<para>Since you have uploaded all the necessary files, you can continue to install your style. Go to the <guilabel>Styles</guilabel> tab in the ACP. You should see a table containing several items - the preinstalled prosilver style, subsilver2, and any of your uploaded styles. The list is divided into two parts, the first one contains styles that are installed on the board and the second one contains styles that were uploaded, but not installed. If you want to install your downloaded style, click the <guilabel>Install</guilabel> link next to its title.</para>
-		
 			<para>After you click <guilabel>Install</guilabel>, you will be asked about two options:</para>
 			<itemizedlist>
 						<listitem><para><guilabel>Active</guilabel>: If set to No, the style will not be available for users and only the admin will be able to preview it through the ACP.</para></listitem>
 						<listitem><para><guilabel>Make default style</guilabel>: This will set the style as the default one for the board, making it the style that new users and guests see. For more about setting the default style, read <xref linkend="acp_general_settings"/>.</para></listitem>
 			</itemizedlist>
 			<para>When you are finished, just click <guilabel>Submit</guilabel>.</para>
-		
 			<para>At this moment, you should know how to install a new style. However, there are some links and features on the Styles overview page that we have missed. They are:</para>
 			<itemizedlist>
 				<listitem><para><guilabel>Details</guilabel>: This link will take you to the details of style, where you can change its name, author, the style components it uses and determine if the style is active or not.</para></listitem>
@@ -2189,7 +1927,6 @@
 				<listitem><para><guilabel>Preview</guilabel>: This is a very useful and powerful feature for administrators. If you click this link, you will be taken to the board and the style you have selected will be applied - this is great when you want to see if the style looks good on your board and you want to make sure you should activate it. This feature can be used even with deactivated styles. The style ID is passed through the URL, so you can browse through the board and see any page you need.</para></listitem>
 			</itemizedlist>
 		</section>
-		
 		<section id="acp_styles_templates">
 			<sectioninfo>
 				<authorgroup>
@@ -2217,7 +1954,6 @@
 					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the template from the database. It will, however, leave the files of the template set on the server. When deleting the template you will be asked for another template that will replace the deleted one.</para></listitem>
 			</itemizedlist>
 		</section>
-		
 		<section id="acp_styles_themes">
 			<sectioninfo>
 				<authorgroup>
@@ -2228,15 +1964,11 @@
 			</sectioninfo>
 			<title>Themes</title>
 			<para>Now that we have described the style component that defines the structure of the site, the templates, we will continue to the themes. This style components takes care of all the styling. It adds colors, dimensions, formatting, fonts, and whatever else you can think of concerning styles. Basically it is a set of one or more CSS files that put together the final look of the board. The theme files can usually be found in the <filename class="directory">styles/[your_style]/theme/</filename> directory.</para>
-			
 			<para>There are two possible theme setups. The first one is used by subsilver2, where it has one stylesheet file which is loaded directly by specifying the URL of it in the templates. If you are editing such a file, the only thing you need to do after a change is to refresh the page in your browser. The second option is used by prosilver, there is one file that includes the others and the compiled and complete stylesheet is stored in the database. After you change on of the theme files, you will have to <guilabel>refresh</guilabel> the themes.</para>
-			
 			<warning>
 				<para>If you make changed to the stylesheet through the ACP and then refresh the theme, the changes made through the ACP will be overwritten with the contents of the stylesheet files on the server.</para>
 			</warning>
-			
 			<para>The themes page is very similar to the templates page, a lot of features are common, the main difference is that the theme contains a different type of files</para>
-			
 			<itemizedlist>
 				<title>Features on the <guimenuitem>Themes</guimenuitem> page</title>
 					<listitem><para><guilabel>Edit</guilabel>: On this page, you can edit the stylesheet for the board. If the theme is stored in the database in various files, they will be all joined in one stylesheet file for you to edit. Save your changes with the <guilabel>Submit</guilabel> button. If you want to edit the file manually on the filesystem, you will find it in the <filename class="directory">theme/</filename> directory of your style.</para></listitem>
@@ -2246,7 +1978,6 @@
 					<listitem><para><guilabel>Delete</guilabel>: Clicking this option will remove all references to the theme from the database. It will, however, leave the files of the theme on the server. When deleting the theme you will be asked to choose a theme that will replace the deleted one.</para></listitem>
 			</itemizedlist>
 		</section>
-		
 		<section id="acp_styles_imagesets">
 			<sectioninfo>
 				<authorgroup>
@@ -2258,7 +1989,7 @@
 			<title>Imagesets</title>
 			<para>The first and last component of a style is the imageset. It contains all the images that are not included in the theme. For example they are the posting buttons, online banners, or topic and forum markers. The files which make up the imageset of your style can usually be found in the <filename class="directory">styles/[your_style]/imageset/</filename> directory.</para>
 			<para>The imageset is always stored in the database. The details about each image (its location and dimensions) are taken from a <filename>imageset.cfg</filename> file located in the imageset directory and stored in the database from which they are loaded.</para>
-			<para>Before we describe the interface in the <acronym>ACP</acronym>, which allows you to edit the imageset through a graphical interface, let's take a look at how the imageset.cfg file is created in case you would like to edit the file manually by yourself. A typical row in the files looks like this: <code>img_sticky_read = sticky_read.gif*27*27</code>. The text before the equals sign is the image on the board. The location follows next. At the end, the height and width (in this order) of the file is defined. The last three items are separated by an asterisk without spaces.</para>			
+			<para>Before we describe the interface in the <acronym>ACP</acronym>, which allows you to edit the imageset through a graphical interface, let's take a look at how the imageset.cfg file is created in case you would like to edit the file manually by yourself. A typical row in the files looks like this: <code>img_sticky_read = sticky_read.gif*27*27</code>. The text before the equals sign is the image on the board. The location follows next. At the end, the height and width (in this order) of the file is defined. The last three items are separated by an asterisk without spaces.</para>
 			<itemizedlist>
 				<title>Features on the <guimenuitem>Imagesets</guimenuitem> page</title>
 					<listitem>
@@ -2269,8 +2000,8 @@
 							<listitem><para><guilabel>Image</guilabel>: The <acronym>ACP</acronym> pulls all the images located in the <filename class="directory">imageset/</filename> directory and lists them here. You can then assign any image file uploaded to that directory to an image on the board.</para></listitem>
 							<listitem><para><guilabel>Include dimensions</guilabel>: If set to <guilabel>Yes</guilabel>, the dimensions from the fields below will be taken in account, otherwise they will be detected automatically.</para></listitem>
 							<listitem><para><guilabel>Image width</guilabel>: Sets the width of the image file.</para></listitem>
-							<listitem><para><guilabel>Image height</guilabel>: Sets the height of the image file.</para></listitem>				
-						</itemizedlist>				
+							<listitem><para><guilabel>Image height</guilabel>: Sets the height of the image file.</para></listitem>
+						</itemizedlist>
 					</listitem>
 					<listitem><para><guilabel>Details</guilabel>: On this page, you can edit the name and copyright of the imageset (of course leave copyrights of the respectful authors).</para></listitem>
 					<listitem><para><guilabel>Refresh</guilabel>: This option will take the details about each image from the <filename>imageset.cfg</filename> file and save them in the database. This will <emphasis>overwrite</emphasis> any changes you have made through the ACP editor and weren't saved on the filesystem.</para></listitem>
@@ -2289,9 +2020,7 @@
 				</mediaobject>
 			</figure>
 		</section>
-
 	</section>
-
 	<section id="acp_maintenance">
 		<sectioninfo>
 			<authorgroup>
@@ -2307,11 +2036,8 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Board Maintenance</title>
-		
 		<para>Running a phpBB 3.0 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
-		
 		<para><guimenuitem>Board Maintenance</guimenuitem> is a section in the <acronym>ACP</acronym> that allows you to keep track of internal phpBB information, such as logs, as well as maintaining your database (which holds your phpBB-related data), such as backing up and restoring data.</para>
-		
 		<section id="acp_maintenance_logs">
 			<sectioninfo>
 				<authorgroup>
@@ -2351,13 +2077,9 @@
 					</listitem>
 				</varlistentry>
 			</variablelist>
-			
 			<para>Click on one of the log links located in the left-hand <guilabel>Forum Logs</guilabel> section.</para>
-			
 			<para>If you have appropriate permissions, you are able to remove any or all log entries from the above sections. To remove log entries, go to the appropriate log entries section, check the log entries' checkboxes, and then click on the <guilabel>Delete marked</guilabel> checkbox to delete the log entries.</para>
-		
 		</section>
-		
 		<section id="acp_maintenance_database">
 			<sectioninfo>
 				<authorgroup>
@@ -2432,7 +2154,6 @@
 			</variablelist>
 		</section>
 	</section>
-
 	<section id="acp_system">
 		<sectioninfo>
 			<authorgroup>
