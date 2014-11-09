@@ -114,6 +114,9 @@
 				<caption>
 					<para>The introduction page of the installation system.</para>
 				</caption>
+				<important>
+					<para>Make sure the <emphasis>.htaccess</emphasis> file in the root level of the phpBB3 folder is included in the upload.</para>
+				</important>
 			</mediaobject>
 		</figure>
 		<section id="quick_installation_intro">
