@@ -114,11 +114,11 @@
 				<caption>
 					<para>The introduction page of the installation system.</para>
 				</caption>
-				<important>
-					<para>Make sure the <emphasis>.htaccess</emphasis> file in the root level of the phpBB3 folder is included in the upload.</para>
-				</important>
 			</mediaobject>
 		</figure>
+		<important>
+			<para>Make sure the <emphasis>.htaccess</emphasis> file in the root level of the phpBB3 folder is included in the upload.</para>
+		</important>
 		<section id="quick_installation_intro">
 			<title>Introduction</title>
 			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.1 is released under (the <ulink url="http://opensource.org/licenses/gpl-2.0.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> tab (see <xref linkend="img_quick_installation_intro" />).</para>
