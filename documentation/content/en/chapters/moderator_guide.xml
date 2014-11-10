@@ -2,7 +2,7 @@
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
                          "http://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="moderator_guide">
-	<?dbhtml dir="moderatorguide" filename="index.html" ?>
+	<?dbhtml dir="moderatorguide" filename="index.html"?>
 	<chapterinfo>
 		<releaseinfo>$Id$</releaseinfo>
 		<copyright>
@@ -27,7 +27,6 @@
 		</sectioninfo>
 		<title>Editing posts</title>
 		<para>Moderators with privileges in the relevant forums are able to edit topics and posts, even if the forum is locked. You can usually view who the moderators are beneath the forum description on the index page. A user with moderator privileges is able to select the edit button beside each post. Beyond this point, they are able to:</para>
-	
 		<variablelist>
 			<varlistentry>
 				<term>Delete posts</term>
@@ -35,42 +34,36 @@
 					<para>This option removes the post from the topic. Remember that it cannot be recovered once deleted.</para>
 				</listitem>
 			</varlistentry>
-			
 			<varlistentry>
 				<term>Change or remove the post icon</term>
 				<listitem>
 					<para>Decides whether or not an icon accompanies the post, and if so, which icon.</para>
 				</listitem>
 			</varlistentry>
-			
 			<varlistentry>
 				<term>Alter the subject and message body</term>
 				<listitem>
 					<para>Allows the moderator to alter the contents of the post.</para>
 				</listitem>
 			</varlistentry>
-			
 			<varlistentry>
 				<term>Alter the post options - disabling BBCode/Smilies parsing URLs etc.</term>
 				<listitem>
 					<para>Determines whether certain features are enabled in the post.</para>
 				</listitem>
 			</varlistentry>
-			
 			<varlistentry>
 				<term>Lock the topic or post</term>
 				<listitem>
 					<para>Allows the moderator to lock the current post, or the full topic.</para>
 				</listitem>
 			</varlistentry>
-			
 			<varlistentry>
 				<term>Add, alter or remove attachments</term>
 				<listitem>
 					<para>Select attachments to be removed or edited (if option is enabled and attachments are present).</para>
 				</listitem>
 			</varlistentry>
-			
 			<varlistentry>
 				<term>Modify poll settings</term>
 				<listitem>
@@ -78,9 +71,7 @@
 				</listitem>
 			</varlistentry>
 		</variablelist>
-		
 		<para>If, for any case the moderator decides that the post should not be edited, they may lock the post to prevent the user doing so. The user will be shown a notice when they attempt to edit the post in future. Should the moderator wish to state why the post was edited, they may enter a reason when editing the post.</para>
-		
 		<!--TODO: screenshot of post and edit reason?-->
 	</section>
 	<section id="moderator_modtools">
@@ -96,7 +87,6 @@
 		</sectioninfo>
 		<title>Moderation tools</title>
 		<para>Beneath topics, the moderator has various options in a dropdown box which modify the topic in different ways. These include the ability to lock, unlock, delete, move, split, merge and copy the topic. As well as these, they are also able to change the topic type (Sticky/Announcement/Global), and also view the topics logs. The following subsections detail each action on a topic that a moderator can perform.</para>
-		
 		<figure id="quick_mod_tools">
 			<title>Quick Mod Tools</title>
 			<mediaobject>
@@ -108,13 +98,11 @@
 				</caption>
 			</mediaobject>
 		</figure>
-		
 		<section id="modtools_lock">
 			<title>Locking a topic or post</title>
 			<para>This outlines how a moderator may lock whole topics or individual posts. There are various ways a moderator may do this, either by using the <link linkend="moderator_mcp">Moderator Control Panel</link> when viewing a forum, navigating to the selection menu beneath the topic in question, or editing any post within a topic and checking the relevant checkbox.</para>
 			<para>Locking a whole topic ensures that no user can reply to it, whereas locking individual posts denies the post author any editing permissions for that post.</para>
 		</section>
-		
 		<section id="modtools_delete">
 			<sectioninfo>
 				<authorgroup>
@@ -134,13 +122,11 @@
 				<para>Please note that if you choose to permanently delete a topic or post, it cannot be undone.</para>
 			</tip>
 		</section>
-
 		<section id="modtools_restore">
 			<title>Restoring a topic or post</title>
 			<para>If a topic or post has been deleted, it may be possible to restore it. If a user chose not to permanently delete the topic or post, it will be listed with an icon next to it indicating that it is eligible for restoration.</para>
 			<para>If a user has selected to permanently delete a post or topic, it cannot be recovered.</para>
 		</section>
-
 		<section id="modtools_move">
 			<sectioninfo>
 				<authorgroup>
@@ -154,7 +140,6 @@
 			</sectioninfo>
 			<title>Moving a topic into another forum</title>
 			<para>To move a topic to another forum, navigate to the <guilabel>Quick MOD Tools</guilabel> area beneath the topic and select <guilabel>Move Topic</guilabel> from the selection menu. You will then be met with another selection menu of a location (another forum) to move it to. If you would like to leave a <link linkend="modtools_move_shadow">Shadow Topic</link> behind, leave the box checked. Select the desired forum and click <guilabel>Yes</guilabel>.</para>
-		
 			<section id="modtools_move_shadow">
 				<sectioninfo>
 					<authorgroup>
@@ -174,7 +159,6 @@
 				</note>
 			</section>
 		</section>
-		
 		<section id="modtools_copy">
 			<sectioninfo>
 				<authorgroup>
@@ -187,9 +171,8 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Duplicating a topic</title>
-			<para>Moderators are also allowed to duplicate topics. Duplicating a topic simply creates a copy of the selected topic in another forum. This can be achieved by using the <guilabel>Quick MOD Tools</guilabel> area beneath the topic you want to duplicate, or through the <link linkend="moderator_mcp">Moderator Control Panel</link>  when viewing the forum. From this, you simply select the destination forum you wish to duplicate the topic to. Click <guilabel>Yes</guilabel> to duplicate the topic.</para>
+			<para>Moderators are also allowed to duplicate topics. Duplicating a topic simply creates a copy of the selected topic in another forum. This can be achieved by using the <guilabel>Quick MOD Tools</guilabel> area beneath the topic you want to duplicate, or through the <link linkend="moderator_mcp">Moderator Control Panel</link> when viewing the forum. From this, you simply select the destination forum you wish to duplicate the topic to. Click <guilabel>Yes</guilabel> to duplicate the topic.</para>
 		</section>
-		
 		<section id="modtools_type">
 			<sectioninfo>
 				<authorgroup>
@@ -204,7 +187,6 @@
 			<title>Announcements and stickies</title>
 			<para>There are various types of topics the forum administrators and moderators (if they have the appropriate permissions) can assign to specific topics. These special topic types are: <guilabel>Global Announcements</guilabel>, <guilabel>Announcements</guilabel>, and <guilabel>Stickies</guilabel>. The <link linkend="posting_special">Topic Type</link> can be chosen when posting a new topic or editing the first post of a previously posted topic. You may choose which type of topic you would prefer by selecting the relevant radio button. When viewing the forum, <guilabel>global announcements</guilabel> and basic <guilabel>announcements</guilabel> are displayed under a separate heading than that of <guilabel>stickies</guilabel> and normal topics.</para>
 		</section>
-		
 		<section id="modtools_split">
 			<sectioninfo>
 				<authorgroup>
@@ -220,7 +202,6 @@
 			<para>Moderators also have the ability to split posts from a topic. This can be useful if certain discussions have spawned a new idea worthy of its own thread, thus needing to be split from the original topic. Splitting posts involves moving individual posts from an existing topic to a new topic. You may do this by using the <guilabel>Quick MOD Tools</guilabel> area beneath the topic you want to split or from the <link linkend="moderator_mcp">Moderator Control Panel</link> within the topic.</para>
 			<para>While splitting, you may choose a title for the new topic, a different forum for the new topic, and also a different icon. You may also override the default board settings for the amount of posts to be displayed per page. The <guilabel>Splitting from the selected post</guilabel> option will split all posts from the checked post, to the last post. The <guilabel>Splitting selected posts</guilabel> option will only split the current selected posts. </para>
 		</section>
-		
 		<section id="modtools_mergetopics">
 			<sectioninfo>
 				<authorgroup>
@@ -236,7 +217,6 @@
 			<para>In phpBB3, it is now possible to merge topics together, in addition to splitting topics. This can be useful if, for example, two separate topics are related and involve the same discussion. The merging topics feature allows existing topics to be merged into one another.</para>
 			<para>To merge topics together, start by locating selection menu beneath the topic in question, which brings you to the <link linkend="moderator_mcp">Moderator Control Panel</link>. From here, you need to enter the topic ID of the topic you want to move the posts to. You can click <guilabel>Select topic</guilabel> to see a list of the topics available and specify which. Checking the <guilabel>Mark all</guilabel> section will select all the posts in the current topic and allow moving to the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
 		</section>
-		
 		<section id="modtools_mergeposts">
 			<sectioninfo>
 				<authorgroup>
@@ -253,7 +233,6 @@
 			<para>To merge specific posts into another topic, start by locating the selection menu beneath the topic, and get to the <link linkend="moderator_mcp">Moderator Control Panel</link>. From here, you need to enter the topic ID of the topic you want to move the posts to. You can click <guilabel>Select topic</guilabel> to see a list of the topics available and specify which. Select the posts which you wish to merge from the current topic, into the existing topic. The posts merged into the new topic will retain their existing timestamp (e.g. they will not appear at the end of the topic they are being merged to, but will be sorted based on their timestamp).</para>
 		</section>
 	</section>
-	
 	<section id="moderator_queue">
 		<sectioninfo>
 			<authorgroup>
@@ -271,7 +250,6 @@
 		<para>If you choose to approve a topic or post, you will be given the option to notify the user of its approval. If you choose to disapprove a topic or post, you will be given the option to notify the user of its disapproval and also specify why you have disapproved the post, and enter a description.</para>
 		<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
 	</section>
-	
 	<section id="moderator_reported">
 		<sectioninfo>
 			<authorgroup>
@@ -288,7 +266,6 @@
 		<para>When viewing a forum with post reports within topics, the topic title will be accompanied by a red exclamation icon. This alerts the administrator(s) or moderators that there a post has been reported. When viewing topics, reported posts are accompanied by a red exclamation and text. Clicking this icon or text will bring them to the Reported Posts section of the Moderator Control Panel.</para>
 		<para>For further information regarding the Moderator Control Panel, see <xref linkend="moderator_mcp" />.</para>
 	</section>
-	
 	<section id="moderator_mcp">
 		<sectioninfo>
 			<authorgroup>
@@ -310,42 +287,36 @@
 						<para>This contains pre-approved posts, reported posts and the five latest logged actions.</para>
 					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>Moderation queue</term>
 					<listitem>
 						<para>This area lists any topics or posts waiting for approval. It also lists topics and posts that have been soft-deleted.</para>
 					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>Reported posts</term>
 					<listitem>
 						<para>A list of all open or closed reported posts.</para>
 					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>User notes</term>
 					<listitem>
 						<para>This is an area for administrators or moderators to leave feedback on certain users.</para>
 					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>Warnings</term>
 					<listitem>
 						<para>The ability to warn a user, view current users with warnings and view the five latest warnings.</para>
 					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>Moderator logs</term>
 					<listitem>
 						<para>This is an in-depth list of the five latest actions performed by administrators, moderators or users, as shown on the main page of the MCP.</para>
 					</listitem>
 				</varlistentry>
-				
 				<varlistentry>
 					<term>Banning</term>
 					<listitem>
@@ -354,7 +325,6 @@
 				</varlistentry>
 			</variablelist>
 		</para>
-		
 		<section id="mcp_queue">
 			<sectioninfo>
 				<authorgroup>
@@ -369,7 +339,6 @@
 			<title>Moderation queue</title>
 			<para>The moderation queue lists topics or posts which require moderator action. The moderation queue is accessible from the <link linkend="moderator_mcp">Moderator Control Panel</link>. For more information regarding the moderation queue, see <xref linkend="moderator_queue" />.</para>
 		</section>
-		
 		<section id="mcp_reported">
 			<sectioninfo>
 				<authorgroup>
@@ -384,7 +353,6 @@
 			<title>Reported posts</title>
 			<para>Reported posts are reports submitted by users regarding problematic posts. Any current reported posts are accessible from the <link linkend="moderator_mcp">Moderator Control Panel</link>. For more information regarding reported posts, see <xref linkend="moderator_reported" />.</para>
 		</section>
-		
 		<section id="mcp_forum">
 			<title>Forum moderation</title>
 			<para>When viewing any particular forum, clicking <guilabel>Moderator Control Panel</guilabel> will take you to the forum moderation area. Here, you are able to mass moderate topics within that forum via the dropdown box. The available actions are:
@@ -399,12 +367,10 @@
 					<listitem><para><guilabel>Change topic type</guilabel>: Change the topic type to either <guilabel>Global Announcement</guilabel>, <guilabel>Announcement</guilabel>, <guilabel>Sticky</guilabel>, or <guilabel>Regular Topic</guilabel>.</para></listitem>
 				</itemizedlist>
 			</para>
-			
 			<para>You can also mass-moderate posts within topics. This can be done by navigating through the MCP when viewing the forum, and clicking on the topic itself. Another way to accomplish this is to click the MCP link whilst viewing the particular topic you wish to moderate.</para>
 			<para>When moderating inside a topic, you can: rename the topic title, move the topic to a different forum, alter the topic icon, merge the topic with another topic, or define how many posts per page will be displayed (this will override the board setting).</para>
 			<para>From the selection menu, you may also: lock and unlock individual posts, delete the selected post(s), merge the selected post(s), or split or split from the selected post(s).</para>
 			<para>The <guilabel>Post Details</guilabel> link next to posts also entitle you to alter other settings. As well as viewing the poster&#x2019;s <glossterm>IP address</glossterm>, profile and notes, and the ability to warn the poster, you also have the option to change the poster ID assigned to the post. You can also lock or delete the post from this page.</para>
-		
 			<note>
 				<para>Depending on the specific permissions set to your user account, some of the aforementioned options and abilities may not be available to you.</para>
 			</note>
