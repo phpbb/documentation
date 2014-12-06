@@ -88,7 +88,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Requirements</title>
-				<para>In order for the the conversion to be smooth as possible, check and prepare these items. You will need them to perform a succesful conversion.</para>
+				<para>In order for the conversion to be smooth as possible, check and prepare these items. You will need them to perform a succesful conversion.</para>
 				<itemizedlist>
 					<listitem><para>An installation of phpBB3 has to be present on your server. See <xref linkend="quick_requirements" /> for more information on how to install phpBB3.</para></listitem>
 					<listitem><para>Prepare the connection details to the database where the old board was stored. If you are unsure, you can find these details in the config file.</para></listitem>
