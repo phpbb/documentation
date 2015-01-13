@@ -52,7 +52,7 @@
 					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
-			<listitem><para>Upload the contents of the 3.1.x <emphasis>Full Package</emphasis> into your forum's directory.</para>
+			<listitem><para>Upload the contents of the 3.1.x <emphasis>Full Package</emphasis> into your forum's directory, <emphasis role="bold">EXCEPT</emphasis> for <emphasis>config.php</emphasis>.</para>
 				<itemizedlist>
 					<listitem><para>Make sure the root level <emphasis>.htaccess</emphasis> file is included in the upload.</para></listitem>
 				</itemizedlist>
