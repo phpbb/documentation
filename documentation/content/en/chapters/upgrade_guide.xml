@@ -39,12 +39,19 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Upgrading from 3.0 to 3.1</title>
+		<warning>
+			<para>Upgrading to phpBB 3.1 will render previously installed MODifications and styles unusable.</para>
+		</warning>
+
 		<para>phpBB 3.1 is not compatible with 3.0 and most of the previous files will need to be removed prior to upgrading to 3.1.</para>
 		<para>To upgrade, perform the following steps:</para>
 		<orderedlist>
+			<listitem><para>Ensure that your server meets the requirements for running phpBB 3.1: <xref linkend="quick_requirements" /></para></listitem>
 			<listitem><para><emphasis role="bold">Make a backup of the original files</emphasis></para></listitem>
 			<listitem><para><emphasis role="bold">Make a backup of the database</emphasis></para></listitem>
-			<listitem><para>Delete all files <emphasis role="bold">EXCEPT</emphasis> for:</para>
+			<listitem><para>Download the phpBB 3.1 <ulink url="https://www.phpbb.com/downloads/#install">Full Package</ulink> archive</para></listitem>
+			<listitem><para>Extract the contents of the archive to your computer and open the phpBB3 directory</para></listitem>
+			<listitem><para>Delete the following files from the package:</para>
 				<itemizedlist>
 					<listitem><para>The config.php file</para></listitem>
 					<listitem><para>The images/ directory</para></listitem>
@@ -52,14 +59,36 @@
 					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
-			<listitem><para>Upload the contents of the 3.1.x <emphasis>Full Package</emphasis> into your forum's directory, <emphasis role="bold">EXCEPT</emphasis> for <emphasis>config.php</emphasis>.</para>
+			<listitem><para>On your website, delete all files from your board <emphasis role="bold">EXCEPT</emphasis> for:</para>
 				<itemizedlist>
-					<listitem><para>Make sure the root level <emphasis>.htaccess</emphasis> file is included in the upload.</para></listitem>
+					<listitem><para>The config.php file</para></listitem>
+					<listitem><para>The images/ directory</para></listitem>
+					<listitem><para>The files/ directory</para></listitem>
+					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
-			<listitem><para>Browse to install/database_update.php</para></listitem>
+			<listitem><para>Upload the contents of the phpBB3 directory from your computer to your forum's directory. You may be prompted to overwrite the remaining <emphasis>files</emphasis>. If prompted to merge or overwrite <emphasis>directories</emphasis>, choose to merge them.</para>
+			</listitem>
+			<listitem><para>Using your web browser, visit install/database_update.php in your board's root. (e.g. http://www.example.com/yourforum/install/database_update.php)</para>
+				<itemizedlist>
+					<listitem><para>For large boards, you may wish to update via the command line. From your board's root, execute the following command: <code>php ./bin/phpbbcli.php db:migrate</code></para></listitem>
+				</itemizedlist>
+			</listitem>
 			<listitem><para>Delete the install/ directory</para></listitem>
 		</orderedlist>
+		<note>
+			<para>Ensure that the root level <emphasis>.htaccess</emphasis> file is included in the upload. Some FTP clients do not show files whose names start with a period and you may need to enable the display of hidden files.</para>
+		</note>
+		<note>
+			<para>If your board made use of language packs other than British English, you will need to download a version that is compatible with phpBB 3.1 from <ulink url="https://www.phpbb.com/languages/">https://www.phpbb.com/languages/</ulink></para>
+		</note>
+		<important>
+			<para>When uploading the 3.1 files to your server, do <emphasis role="bold">NOT</emphasis> overwrite your config.php.</para>
+		</important>
+		<important>
+			<para>When backing up your files, ensure that your FTP client is in binary mode or transfers files without extensions in binary mode.</para>
+			<para>For more information, see: <ulink url="https://www.phpbb.com/support/docs/en/3.0/kb/article/transferring-attachment-files-with-filezilla/">Knowledge Base: Transferring attachment files with Filezilla</ulink></para>
+		</important>
 	</section>
 
 	<section id="upgrade_general">
