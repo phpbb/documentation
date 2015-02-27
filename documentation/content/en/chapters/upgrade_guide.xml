@@ -71,7 +71,7 @@
 			</listitem>
 			<listitem><para>Using your web browser, visit install/database_update.php in your board's root. (e.g. http://www.example.com/yourforum/install/database_update.php)</para>
 				<itemizedlist>
-					<listitem><para>For large boards, you may wish to update via the command line. From your board's root, execute the following command: <code>php ./bin/phpbbcli.php db:migrate</code></para></listitem>
+					<listitem><para>For large boards, you may wish to update via the command line. From your board's root, execute the following command: <code>php ./bin/phpbbcli.php db:migrate --safe-mode</code></para></listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem><para>Delete the install/ directory</para></listitem>
