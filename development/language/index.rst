@@ -5,3 +5,4 @@ Languages and translations
    :maxdepth: 2
 
    plurals
+   usage
