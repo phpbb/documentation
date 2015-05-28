@@ -9,6 +9,7 @@ Contents:
    :maxdepth: 2
 
    development/coding_guidelines
+   language/index
    update/index
 
 
