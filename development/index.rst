@@ -9,7 +9,7 @@ Contents:
    :maxdepth: 2
 
    development/coding_guidelines
-   update/index
+   extensions/index
 
 
 Indices and tables
