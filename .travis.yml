@@ -9,4 +9,9 @@ script:
   - cd development
   - make html
 
+branches:
+  only:
+    - master
+    - /^\d+(\.\d+)?\.x$/
+
 sudo: false
