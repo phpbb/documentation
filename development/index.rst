@@ -11,6 +11,7 @@ Contents:
    development/coding_guidelines
    extensions/index
    language/index
+   testing/index
    update/index
 
 
