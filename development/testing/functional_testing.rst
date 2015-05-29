@@ -17,8 +17,8 @@ Writing Functional Tests
 ========================
 
 Your test case will have to inherit from the ``phpbb_functional_test_case``
-class. You will be able to make requests to a fresh phpBB installation. Also
-be sure, to put the file into the ``tests/functional/`` folder and to add the
+class. You will be able to make requests to a fresh phpBB installation. Also,
+be sure to put the file into the ``tests/functional/`` folder and to add the
 ``@group functional`` doc block above the class, so the tests are correctly
 executed.
 
@@ -43,10 +43,10 @@ executed.
     }
 
 
-There is a bootstrap function where you can put code that is run before the
-test. Here you can set up some initial state required for your test. Then you
-can define your tests, just as you would normally, by prefixing methods with
-``test_``. In this case we will be testing the index.
+There is a ``bootstrap()`` method where you can put code that is run before the
+test. Here you can set up some objects after the installation that are required
+for your test. Then you can define your tests, just as you would normally, by
+prefixing methods with ``test_``. In this case we will be testing the index.
 
 Goutte and Assertions
 ---------------------
@@ -92,9 +92,10 @@ use the ``login()`` method inherited from the ``phpbb_functional_test_case``
 class. This method will assign the user's SID to the inherited class property
 ``$this->sid``. You will need to append this to the URLs that the logged-in
 user will be navigating to in order to hold the session. For usage examples,
-view the logout test in ``tests/functional/auth_test.php``.
+view the logout test in
+`tests/functional/auth_test.php <https://github.com/phpbb/phpbb/blob/3.1.x/tests/functional/auth_test.php>`_.
 
-Localization
+Localisation
 ------------
 
 In tests, as in phpBB itself, do not use hard-coded language unless absolutely
@@ -120,4 +121,5 @@ framework.
         $this->assertEquals('Logout [ user ]', $this->lang('LOGOUT_USER', 'user'));
     }
 
-For more usage examples, please view ``tests/functional/lang_test.php``.
+For more usage examples, please view
+`tests/functional/lang_test.php <https://github.com/phpbb/phpbb/blob/3.1.x/tests/functional/lang_test.php>`_.
