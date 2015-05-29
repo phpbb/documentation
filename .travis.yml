@@ -1,3 +1,9 @@
+language: python
+
+install:
+  - pip install sphinx
+  - pip install sphinx_rtd_theme
+  - pip install git+https://github.com/fabpot/sphinx-php.git
 
 script:
   - cd development
