@@ -1,0 +1,6 @@
+
+script:
+  - cd development
+  - make html
+
+sudo: false
