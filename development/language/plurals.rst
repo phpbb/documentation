@@ -12,24 +12,27 @@ The english language is very simple when it comes to plurals:
 So basically you have 2 different forms: one singular and one plural.
 
 
-But for some other languages this is quite more difficult. Let's take the Bosnian language as another example:
+But for some other languages this is quite a bit more difficult. Let's take
+the Bosnian language as another example:
 
     *You have [1/21/31] slon, [2/3/4] slona, [0/5/6] slonova and [7/8/9/11] ...*
 
-and some more difficult rules.
+The problem with the old system of plurals was that you would have needed to
+specify them all, and get a loop in there.
 
-The problem with the old system of plurals was, that you would have needed to specify them all, and get a loop in there.
 
-
-As we are not the first developers facing this problem, it was not really hard to find a suitable solution.
-We decided, to use the system from `Mozilla <https://developer.mozilla.org/en/Localization_and_Plurals>`_.
+As we are not the first developers facing this problem, it was not really hard
+to find a suitable solution. We decided to use the system from
+`Mozilla <https://developer.mozilla.org/en/Localization_and_Plurals>`_.
 
 Plural Rules
 ============
-So we defined the following 16 rules for plurals. First point is the language family, afterwards there are a number of rows with the following format:
+So we defined the following 16 rules for plurals. First point is the language
+family, afterwards there are a number of rows with the following format:
 **<key> - <rule>: <example-numbers>**
 
-**PLEASE NOTE: 0 can be handled special case. If you add a key 0 to your array, that will be used in case of 0 independent of the plural rule.**
+**Note:** 0 is handled as a special case. If you add a key 0 to your
+array, that will be used in case of 0 independent of the plural rule.
 
 Rule #0
 -------
@@ -38,7 +41,9 @@ Rule #0
 
 Rule #1
 -------
-* Families: Germanic (Danish, Dutch, English, Faroese, Frisian, German, Norwegian, Swedish), Finno-Ugric (Estonian, Finnish, Hungarian), Language isolate (Basque), Latin/Greek (Greek), Semitic (Hebrew), Romanic (Italian, Portuguese, Spanish, Catalan)
+* Families: Germanic (Danish, Dutch, English, Faroese, Frisian, German, Norwegian, Swedish),
+  Finno-Ugric (Estonian, Finnish, Hungarian), Language isolate (Basque), Latin/Greek (Greek),
+  Semitic (Hebrew), Romanic (Italian, Portuguese, Spanish, Catalan)
 * 1 - 1
 * 2 - everything else: 0, 2, 3, ...
 
@@ -51,8 +56,8 @@ Rule #2
 Rule #3
 -------
 * Families: Baltic (Latvian)
-* 1 -0
-* 2 - ends in 1, not 11: 1, 21, ... 101, 121, ...
+* 1 - 0
+* 2 - ends in 1, excluding 11: 1, 21, ... 101, 121, ...
 * 3 - everything else: 2, 3, ... 10, 11, 12, ... 20, 22, ...
 
 Rule #4
@@ -67,21 +72,21 @@ Rule #5
 -------
 * Families: Romanic (Romanian)
 * 1 - 1
-* 2 - is 0 or ends in 01-19: 0, 2, 3, ... 19, 101, 102, ... 119, 201, ...
+* 2 - is 0 or ends in 01-19, excluding 1: 0, 2, 3, ... 19, 101, 102, ... 119, 201, ...
 * 3 - everything else: 20, 21, ...
 
 Rule #6
 -------
 * Families: Baltic (Lithuanian)
-* 1 - ends in 1, not 11: 1, 21, 31, ... 101, 121, ...
+* 1 - ends in 1, excluding 11: 1, 21, 31, ... 101, 121, ...
 * 2 - ends in 0 or ends in 10-20:  0, 10, 11, 12, ... 19, 20, 30, 40, ...
 * 3 - everything else: 2, 3, ... 8, 9, 22, 23, ... 29, 32, 33, ...
 
 Rule #7
 -------
 * Families: Slavic (Bosnian, Croatian, Serbian, Russian, Ukrainian)
-* 1 - ends in 1, not 11: 1, 21, 31, ... 101, 121, ...
-* 2 - ends in 2-4, not 12-14: 2, 3, 4, 22, 23, 24, 32, ...
+* 1 - ends in 1, excluding 11: 1, 21, 31, ... 101, 121, ...
+* 2 - ends in 2-4, excluding 12-14: 2, 3, 4, 22, 23, 24, 32, ...
 * 3 - everything else: 0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 26, ...
 
 Rule #8
@@ -95,7 +100,7 @@ Rule #9
 -------
 * Families: Slavic (Polish)
 * 1 - 1
-* 2 - ends in 2-4, not 12-14: 2, 3, 4, 22, 23, 24, 32, ... 104, 122, ...
+* 2 - ends in 2-4, excluding 12-14: 2, 3, 4, 22, 23, 24, 32, ... 104, 122, ...
 * 3 - everything else: 0, 5, 6, ... 11, 12, 13, 14, 15, ... 20, 21, 25, ...
 
 Rule #10
@@ -143,18 +148,21 @@ Rule #14
 Rule #15
 --------
 * Families: Icelandic
-* 1 - ends in 1, not 11: 1, 21, 31, ... 101, 121, 131, ...
+* 1 - ends in 1, excluding 11: 1, 21, 31, ... 101, 121, 131, ...
 * 2 - everything else: 0, 2, 3, ... 10, 11, 12, ... 20, 22, ...
 
 How to use the rules
 ====================
-The first thing your language package needs, is a definition, which rule to use for your package. This is done in the ``language/xy/common.php`` language file at the beginning of the array, (Rule #1 is the rule for the English language and will be used as default, if you don't specify one):
+The first thing your language package needs, is a definition, which rule to
+use for your package. This is done in the ``language/xy/common.php`` language
+file at the beginning of the array, (Rule #1 is the rule for the English
+language and will be used by default, if you don't specify one):
 
 .. code-block:: php
 
     'PLURAL_RULE' => 1,
 
-I'm now using rule **#13** as example:
+The following example is using rule **#13**:
 
 It has the following rows:
 
@@ -163,7 +171,7 @@ It has the following rows:
 * 3 - ends in 11-19: 11, 12, ... 18, 19, 111, 112, ...
 * 4 - everything else: 20, 21, ...
 
-While the English language only has 3 rows in its array:
+While the English language only has 2 rows in its array:
 
 .. code-block:: php
 
@@ -171,6 +179,7 @@ While the English language only has 3 rows in its array:
         1 => '1 example',
         2 => '2 or more examples',
     ),
+
 You need to specify the zero-row and 4 rows for the "plurals":
 
 .. code-block:: php
@@ -181,7 +190,8 @@ You need to specify the zero-row and 4 rows for the "plurals":
         3 => '[number ending with 11-19] example',
         4 => 'even more examples',
     ),
-If you want to get a separate handling for 0, you can simple add the 0-case:
+
+If you require separate handling for 0, you can simple add the 0-case:
 
 .. code-block:: php
 
@@ -193,11 +203,17 @@ If you want to get a separate handling for 0, you can simple add the 0-case:
         4 => 'even more examples',
     ),
 
-If you forget a line the system will automatically use the row before. So if you forget to add the *3*-row, it will use *2*-row for 11-19 as well. If there is no previous row, it uses the last row of the array.
+If you forget a line the system will automatically use the row before. So if
+you forget to add the *3*-row, it will use *2*-row for 11-19 as well. If there
+is no previous row, it uses the last row of the array.
 
 
-**Ensure that your cases are ordered ascending**, otherwise the system might act weird, if not all keys are present.
+**Ensure your cases are in ascending order**, otherwise the system may produce
+unexpected results if any keys are missing or out of order.
 
 Credits
 =======
-The system is based on `Mozilla <https://developer.mozilla.org/en/Localization_and_Plurals>`_, which uses the "Plural Rules and Families" from `GNU gettext documentation <http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms>`_.
+The system is based on
+`Mozilla <https://developer.mozilla.org/en/Localization_and_Plurals>`_, which
+uses the "Plural Rules and Families" from
+`GNU gettext documentation <http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms>`_.
