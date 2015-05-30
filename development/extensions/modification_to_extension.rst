@@ -173,7 +173,7 @@ some predefined string (like ``core.root_path`` here).
 
 .. note::
 
-    The classes from ``phpBB/ext/``` are automatically loaded by their namespace
+    The classes from ``phpBB/ext/`` are automatically loaded by their namespace
     and class names, whereby backslash ( ``\`` ) represent directories. In this
     case the class ``nickvergessen\newspage\controller\main`` would be located
     in ``phpBB/ext/nickvergessen/newspage/controller/main.php``
