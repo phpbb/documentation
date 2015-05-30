@@ -174,6 +174,9 @@ HTML Events
 Up to now, we have an extension that does not. So let's start with adding some
 code to the output, to verify that the extension really works.
 
+Listening to an event
+---------------------
+
 In order to add new HTML elements to the output, we need to create a listener,
 which is then included by phpBB when the event happens. You can find a full list
 of events in the `Event list <https://wiki.phpbb.com/Event_List>`_ on the Wiki.
@@ -220,8 +223,23 @@ the next section.
     settings" section, to avoid having to purge the cache each time you modify
     an existing template/style file.
 
+Triggering an event (advanced)
+------------------------------
+
 You can also include template events in your own template files, so other
 extensions can manipulate the output of your extension. You can do this by
 adding ``<!-- EVENT acme_demo_myevent -->`` in the desired location. Other
 extensions could then create a ``acme_demo_myevent.html`` file to listen to this
 event.
+
+.. warning::
+
+    You must always prefix your event names with your vendor and extension name.
+
+.. warning::
+
+    It is not recommended, to reuse existing event names in different locations.
+    This should only be done, if the code (nested HTML elements) around the
+    event is the same for both locations. Also think about other extensions: do
+    they always want to listen to both places, or just one? In case of doubt:
+    use a new event.
