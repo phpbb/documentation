@@ -9,7 +9,7 @@ This tutorial explains the basic functionality of extensions:
 
  * Basics: `Extension folder`_ and `composer.json`_
  * `HTML Events`_
- * php Events
+ * `php Events`_
  * Administration Module (ACP)
  * Migrations (Database management)
  * Controllers (Frontpage)
@@ -243,3 +243,55 @@ event.
     event is the same for both locations. Also think about other extensions: do
     they always want to listen to both places, or just one? In case of doubt:
     use a new event.
+
+php Events
+==========
+
+In order to fix the description of the link in the previous section, we are
+going to load a language file, that contains the ``DEMO_PAGE`` language variable
+we used.
+
+The language file should be placed in the ``language/`` folder of the extension.
+Since this tutorial is in english, we only add the english language file:
+``language/en/demo.php``
+
+.. code-block:: php
+
+    <?php
+    /**
+     *
+     * This file is part of the phpBB Forum Software package.
+     *
+     * @copyright (c) phpBB Limited <https://www.phpbb.com>
+     * @license GNU General Public License, version 2 (GPL-2.0)
+     *
+     * For full copyright and license information, please see
+     * the docs/CREDITS.txt file.
+     *
+     */
+
+    if (!defined('IN_PHPBB'))
+    {
+        exit;
+    }
+
+    if (empty($lang) || !is_array($lang))
+    {
+        $lang = array();
+    }
+
+    $lang = array_merge($lang, array(
+        'DEMO_PAGE'			=> 'Demo',
+    ));
+
+.. warning::
+
+    The check for ``IN_PHPBB`` is mandatory for all php files, which contain
+    code that is immediately executed:
+
+    .. code-block:: php
+
+        if (!defined('IN_PHPBB'))
+        {
+            exit;
+        }
