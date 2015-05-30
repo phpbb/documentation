@@ -31,8 +31,10 @@ So we defined the following 16 rules for plurals. First point is the language
 family, afterwards there are a number of rows with the following format:
 **<key> - <rule>: <example-numbers>**
 
-**Note:** 0 is handled as a special case. If you add a key 0 to your
-array, that will be used in case of 0 independent of the plural rule.
+.. note::
+
+    0 is handled as a special case. If you add a key 0 to your
+    array, that will be used in case of 0 independent of the plural rule.
 
 Rule #0
 -------

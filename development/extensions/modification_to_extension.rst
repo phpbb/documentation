@@ -141,7 +141,10 @@ The string we define for ``_controller`` defines a service (``nickvergessen.news
 
 Any service that is previously defined in your file, or in the file of the phpBB core ``phpBB/config/services.yml``, can also be used as an argument, aswell as some predefined string (like ``core.root_path`` here).
 
-**NOTE:** The classes from phpBB/ext/ are automatically loaded by their namespace and class names, whereby backslash ( ``\`` ) represent directories. In this case the class ``nickvergessen\newspage\controller\main`` would be located in ``phpBB/ext/nickvergessen/newspage/controller/main.php``
+
+.. note::
+
+    The classes from phpBB/ext/ are automatically loaded by their namespace and class names, whereby backslash ( ``\`` ) represent directories. In this case the class ``nickvergessen\newspage\controller\main`` would be located in ``phpBB/ext/nickvergessen/newspage/controller/main.php``
 
 For more explanations about `Routing <http://symfony.com/doc/2.3/book/routing.html>`_ and  `Services <http://symfony.com/doc/2.3/book/service_container.html>`_ see the Symfony 2.3 Documentation.
 
@@ -212,7 +215,9 @@ In this example my **controller/main.php** would look like the following:
         }
      }
 
-**Note:** The consecution of arguments in services.yml should match the consecution of arguments passed to the class constructor public function __construct(). Otherwise, error will be thrown and the board will be broken if you try to enable the extension.
+.. note::
+
+    The consecution of arguments in services.yml should match the consecution of arguments passed to the class constructor public function __construct(). Otherwise, error will be thrown and the board will be broken if you try to enable the extension.
 
 You can also have multiple different methods in one controller aswell as having multiple controllers, in order to organize your code a bit better.
 

@@ -121,7 +121,9 @@ Call a function within the migrations file named some_function
         array(&$this, 'some_function')
     )),
 
-**Note:** the function called, must be public accessible
+.. note::
+
+    The function called, must be public accessible
 
 Multi step processes
 --------------------
@@ -130,8 +132,10 @@ If you have a function that needs to be called multiple times to complete,
 returning anything except null or true will cause the function to be called
 until null or true is returned.
 
-**Note:** This should be used when something needs to be run that can take
-longer than the time limit (for example, resyncing topics).
+.. note::
+
+    This should be used when something needs to be run that can take
+    longer than the time limit (for example, resyncing topics).
 
 Example
 -------
