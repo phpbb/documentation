@@ -9,6 +9,7 @@ Contents:
    development/coding_guidelines
    extensions/index
    language/index
+   migrations/index
    testing/index
 
 Indices and tables
