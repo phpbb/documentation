@@ -59,11 +59,13 @@ it specifies the requirements of your extension aswell as some author
 information. The layout is a simple json array, the keys should really explain
 enough.
 
-**Note:** you must not change the ``type`` element.
+.. note::
+
+    You must not change the ``type`` element.
+
 In the ``require`` section you can also specify other extensions which are
 required in order to install this one. (*Validation for this is not yet
 implemented, but will be in 3.1.0*)
-
 
 .. code-block:: json
 
@@ -169,7 +171,6 @@ definition of the newspage controller service would be something similar to:
 Any service that is previously defined in your file, or in the file of the phpBB
 core ``phpBB/config/services.yml``, can also be used as an argument, aswell as
 some predefined string (like ``core.root_path`` here).
-
 
 .. note::
 
@@ -415,13 +416,11 @@ The newspage does not have any database schema changes, so I will use the
 Example from the `Wiki <https://wiki.phpbb.com/Migrations/Schema_Changes>`_.
 Basically you need to have two methods in your migration class file:
 
-
 .. code-block:: php
 
      public function update_schema()
 
 and
-
 
 .. code-block:: php
 
