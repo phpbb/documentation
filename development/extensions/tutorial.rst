@@ -219,3 +219,9 @@ the next section.
     "Recompile stale style components" is enabled in the "General" > "Load
     settings" section, to avoid having to purge the cache each time you modify
     an existing template/style file.
+
+You can also include template events in your own template files, so other
+extensions can manipulate the output of your extension. You can do this by
+adding ``<!-- EVENT acme_demo_myevent -->`` in the desired location. Other
+extensions could then create a ``acme_demo_myevent.html`` file to listen to this
+event.
