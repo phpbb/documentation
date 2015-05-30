@@ -1,8 +1,6 @@
 phpBB Development Documentation
 ===============================
 
-
-
 Contents:
 
 .. toctree::
@@ -12,12 +10,9 @@ Contents:
    extensions/index
    language/index
    testing/index
-   update/index
-
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
 * :ref:`search`
-
