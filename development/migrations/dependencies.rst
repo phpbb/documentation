@@ -7,7 +7,8 @@ Dependencies tell the Migrator what order Migrations must be installed in.
 Declaring Dependencies
 ======================
 
-In your Migration file, add a static public function named depends_on(), returning an array.
+In your Migration file, add a static public function named depends_on(),
+returning an array.
 
 .. code-block:: php
 
@@ -16,10 +17,12 @@ In your Migration file, add a static public function named depends_on(), returni
         return array();
     }
 
-All you must do is add the class name of the Migration that the current Migration depends on.
+All that is needed is to add the class name(s) of the Migration(s) that the
+current Migration depends on.
 
-For example, ``phpbb\db\migration\data\v310\dev`` that 3.0.11, extensions, style update,
-reported posts display, and timezone are installed.
+For example, the migration ``phpbb\db\migration\data\v310\dev`` depends on the
+extensions, style update, reported posts display, and timezone migrations to
+have already been installed.
 
 .. code-block:: php
 
@@ -34,9 +37,10 @@ reported posts display, and timezone are installed.
         );
     }
 
-**Note:** It is highly recommended to add a dependency for all migrations. If the migration
-is the first migration of your extension just depend on the release migration of the minimum
-phpBB requirement of your extension, e.g. 3.1.4:
+**Note:** It is highly recommended to add a dependency for all migrations. If
+the migration is the first migration of your extension just depend on the
+release migration of the minimum phpBB requirement of your extension, e.g.
+3.1.4:
 
 .. code-block:: php
 
@@ -66,8 +70,9 @@ Imagine the following situation:
 | migration_5 | migration_3, migration_4              | Release 1.0.1                                      |
 +-------------+---------------------------------------+----------------------------------------------------+
 
-This dependency setup would cause the following Migrations to be installed when an individual
-Migration was installed. *Assumes* ``phpbb\db\migration\data\v310\dev`` *is already installed.*
+This dependency setup would cause the following Migrations to be additionally
+installed when an individual Migration was installed manually. *Assumes*
+``phpbb\db\migration\data\v310\dev`` *is already installed.*
 
 +-------------+-----------------------------------------------------------------+
 | Install     | Migrations that are installed                                   |
@@ -86,12 +91,12 @@ Migration was installed. *Assumes* ``phpbb\db\migration\data\v310\dev`` *is alre
 What does this mean for me?
 ===========================
 
-You must specify all dependencies that the current Migration has, but not any that the
-dependencies list as dependencies for their own installation.
+You must specify all dependencies that the current Migration has, but not any
+that the dependencies list as dependencies for their own installation.
 
 This means that ``migration_5`` doesn't need to list ``migration_1`` through
 ``migration_4`` as a dependency, only ``migration_3`` and ``migration_4``
-because those Migrations require ``migration_1`` and ``migration_2``.
+because those Migrations already require ``migration_1`` and ``migration_2``.
 
 This also means that the desired order of operations is preserved. In the above
 example, ``migration_4`` modifies the feature in ``migration_2`` and must be

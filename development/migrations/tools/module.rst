@@ -28,10 +28,10 @@ Add a new module
 Manually specifying module info
 -------------------------------
 
-The "manual" way. For inserting a category or one at a time. It will be
-merged with the base array shown a bit below, but at the least requires
-'module_langname' to be sent, and, if you want to create a module (instead of
-just a category) you must send module_basename and module_mode.
+The "manual" way for inserting a category or one module at a time. It will be
+merged with the base array shown a bit below, but at the very least requires
+``module_langname`` to be sent, and, if you want to create a module (instead of
+just a category) you must send ``module_basename`` and ``module_mode``.
 
 .. code-block:: php
 
@@ -49,10 +49,11 @@ just a category) you must send module_basename and module_mode.
 Automatically determining module info
 -------------------------------------
 
-The "automatic" way. For inserting multiple at a time based on the specs in
-the info file for the module(s). For this to work the modules must be
-correctly setup in the info file. An example follows (this would insert the
-settings, log, and flag modes from the includes/acp/info/acp_asacp.php file):
+The "automatic" way. For inserting multiple modules at a time based on the specs
+in the ``_info`` file for the module(s). For this to work the modules must be
+correctly setup in the ``_info`` file. An example follows (this would insert the
+settings, log, and flag modes from the ``includes/acp/info/acp_asacp.php``
+file):
 
 .. code-block:: php
 
@@ -66,7 +67,6 @@ info file.
 
 Example
 -------
-
 
 .. code-block:: php
 
@@ -107,13 +107,13 @@ Example
 Remove Module
 =============
 
-
 .. code-block:: php
 
     array('module.remove', array( mixed $class [, mixed $parent [, array $data [, mixed $include_path ]]] ))
 
 Parameters
 ----------
+
 +--------------+------------------+--------------------------------------------------------------------------------------------------+
 | Parameter    | Required/Default | Usage                                                                                            |
 +==============+==================+==================================================================================================+
@@ -128,6 +128,7 @@ Parameters
 
 Manually specifying module info
 -------------------------------
+
 The "manual" way. When removing the module using the manual method you may
 specify a string (module_langname) or an integer (module_id)
 

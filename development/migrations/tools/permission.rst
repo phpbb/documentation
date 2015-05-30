@@ -2,7 +2,7 @@
 Permission Tool
 ===============
 
-The permission tool helps adding and removing permissions, setting and
+The permission tool helps with adding and removing permissions, setting and
 unsetting permissions, and adding and removing permission roles.
 
 Add Permission

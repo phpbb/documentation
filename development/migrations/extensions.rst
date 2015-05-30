@@ -18,7 +18,7 @@ Check if latest Migration is installed
 ======================================
 
 To check if the latest Migration is installed that is included with your
-extension (to, for example, make sure all updates have been applied) call the
+extension (for example, to make sure all updates have been applied) call the
 following function:
 
 .. code-block:: php

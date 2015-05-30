@@ -2,19 +2,22 @@
 Data changes
 ============
 
-Data changes are done in Migrations by creating an array that will be parsed by ``\phpbb\db\migrator::run_step()``
+Data changes are done in Migrations by creating an array that will be parsed by
+``\phpbb\db\migrator::run_step()``
 
 Basics
 ======
 
-When performing data changes, your Migrations class should contain at least one function, update_data(). You may
-optionally provide a function revert_data(), which will be run when the migration is removed.
+When performing data changes, your Migrations class should contain at least one
+function, update_data(). You may optionally provide a function revert_data(),
+which will be run when the migration is removed.
 
 update_data
 ===========
 
-``update_data()`` will be called as the **second** step, after ``update_schema()`` when installing a migration, this
-makes any database data changes you need when installing the migration.
+``update_data()`` will be called as the **second** step, after
+``update_schema()`` when installing a migration. This makes any database data
+changes you need when installing the migration.
 
 .. code-block:: php
 
@@ -26,11 +29,14 @@ makes any database data changes you need when installing the migration.
 revert_data
 ===========
 
-``revert_data()`` will be called when a Migration must be uninstalled (this could happen if the user wants/needs to revert
-changes by the Migration, a dependency is reverted, or the installation fails and the entire Migration is removed).
+``revert_data()`` will be called when a Migration must be uninstalled (this
+could happen if the user wants/needs to revert changes by the Migration, a
+dependency is reverted, or the installation fails and the entire Migration is
+removed).
 
-This function is entirely optional, **most data is automatically reverted.** All calls to the Migration Tools are
-automatically reverted, the only thing this should do is handle reverting any custom functions that were run if it is
+This function is entirely optional, **most data is automatically reverted.** All
+calls to the Migration Tools are automatically reverted. The only thing this
+should do is handle reverting any custom functions that were run if it is
 absolutely needed.
 
 .. code-block:: php
@@ -46,17 +52,16 @@ What to return
 
 An array of arrays containing instructions.
 
-These instructions can include calls to Tools.
-For any config settings, permission related commands, and modules, please see the related documentation under :doc:`tools/index`.
+These instructions can include calls to Tools. For any config settings,
+permission related commands, and modules, please see the related documentation
+under :doc:`tools/index`.
 
 
 If (Conditional)
 ================
 
-If call allows you to create a basic if statement which will be checked and, if true, the attached statement will be parsed.
-
-The if statement helper allows you to create a basic if statement which will be checked and, if true, the attached statement
-will be parsed.
+If call allows you to create a basic if statement which will be checked and,
+if true, the attached statement will be parsed.
 
 How it works
 ------------
@@ -71,7 +76,7 @@ How it works
 Examples
 --------
 
-if ($this->config['captcha_gd']) { run array('config.update', array('captcha_plugin', 'phpbb_captcha_gd')), }
+if config "captcha_gd" is true, update "captcha_plugin" with "phpbb_captcha_gd"
 
 .. code-block:: php
 
@@ -80,14 +85,14 @@ if ($this->config['captcha_gd']) { run array('config.update', array('captcha_plu
         array('config.update', array('captcha_plugin', 'phpbb_captcha_gd')),
     )),
 
-if ($this->config['allow_avatar_upload'] || $this->config['allow_avatar_local'] || $this->config['allow_avatar_remote'])
-{ run array('config.update', array('allow_avatar', 1)), }
+if config "allow_avatar_upload" or "allow_avatar_local" is true, update
+"allow_avatar" with value "1"
 
 
 .. code-block:: php
 
     array('if', array(
-        ($this->config['allow_avatar_upload'] || $this->config['allow_avatar_local'] || $this->config['allow_avatar_remote']),
+        ($this->config['allow_avatar_upload'] || $this->config['allow_avatar_local']),
         array('config.update', array('allow_avatar', 1)),
     )),
 
@@ -121,11 +126,12 @@ Call a function within the migrations file named some_function
 Multi step processes
 --------------------
 
-If you have a function that needs to be called multiple times to complete, returning anything except null or true will
-cause the function to be called until null or true is returned.
+If you have a function that needs to be called multiple times to complete,
+returning anything except null or true will cause the function to be called
+until null or true is returned.
 
-**Note:** This should be used when something needs to be run that can take longer than the time limit (for example,
-resyncing topics).
+**Note:** This should be used when something needs to be run that can take
+longer than the time limit (for example, resyncing topics).
 
 Example
 -------

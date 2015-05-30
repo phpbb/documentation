@@ -2,27 +2,35 @@
 Getting started
 ===============
 
-To get started with Migrations, we need to first create a Migration file that will hold the list of database changes.
+To get started with Migrations, we need to first create a Migration file that
+will hold the list of database changes.
 
-Before we get started, first you should remember that with Migrations there is no limit to the number of Migration files. This means that you're free to create migration files as you need, whether you want to create a single file per version, per feature, or even for every change you make to the database -- it is entirely up to you!
+Before we get started, first you should remember that with Migrations there is
+no limit to the number of Migration files. This means that you're free to create
+migration files as you need, whether you want to create a single file per
+version, per feature, or even for every change you make to the database -- it is
+entirely up to you!
 
 Where do I create the Migration file?
 =====================================
 
 Extension Author
 ----------------
-Create a directory in ``ext/vendor/extension/`` called migrations. All of your Migration files should be in this directory.
+Create a directory in ``ext/vendor/extension/`` called migrations. All of your
+Migration files should be in this directory.
 
 Developer
 ---------
 
-phpBB Migration files are in ``phpbb/db/migration/data/``
-You may make a file in this directory OR make a subdirectory if you plan on creating multiple Migration files for a single feature.
+phpBB Migration files are in ``phpbb/db/migration/data/``. You may make a file
+in this directory OR make a subdirectory if you plan on creating multiple
+Migration files for a single feature.
 
 What must go in the Migration file?
 ===================================
 
-The only absolute requirement is creating a new class that extends ``\phpbb\db\migration\migration``:
+The only absolute requirement is creating a new class that extends
+``\phpbb\db\migration\migration``:
 
 .. code-block:: php
 
@@ -30,15 +38,19 @@ The only absolute requirement is creating a new class that extends ``\phpbb\db\m
     class new_migration_class extends \phpbb\db\migration\migration
     {
         // Data for database changes will go in here!
-    }<
+    }
 
 What should the new migration class name be?
 --------------------------------------------
-The class naming scheme must follow the general coding guidelines and can be whatever you want.
+
+The class naming scheme must follow the general coding guidelines and can be
+whatever you want.
 
 What else goes in a Migration file?
 ===================================
-Now you're ready to get started adding instructions so that the Migrator knows what to do when it encounters your Migration file.
+
+Now you're ready to get started adding instructions so that the Migrator knows
+what to do when it encounters your Migration file.
 
 Migration Dependencies
 ----------------------

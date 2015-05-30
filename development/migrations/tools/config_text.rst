@@ -52,6 +52,7 @@ Example
 
 Delete Config_Text Setting
 ==========================
+
 Delete a config_text setting
 
 .. code-block:: php

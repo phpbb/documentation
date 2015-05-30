@@ -50,7 +50,8 @@ Example
 Update if current value equals specific value
 =============================================
 
-Update a config setting if the current config value is equal to a specified value
+Update a config setting if the current config value is equal to a specified
+value
 
 .. code-block:: php
 
@@ -70,6 +71,7 @@ Example
 
 Delete Config Setting
 =====================
+
 Delete a config setting
 
 .. code-block:: php
