@@ -1,0 +1,169 @@
+========
+Tutorial
+========
+
+Introduction
+============
+
+This tutorial explains the basic functionality of extensions:
+
+ * Basics: `Extension folder`_ and `composer.json`_
+ * HTML Events
+ * php Events
+ * Administration Module (ACP)
+ * Migrations (Database management)
+ * Controllers (Frontpage)
+ * Unit tests
+ * Automatic testing of changes on Travis CI
+
+.. seealso::
+
+   If you know modifications from phpBB 3.0, you may also have a look at
+   :doc:`modification_to_extension` which helps you to transform your
+   modification into an extension step by step.
+
+Extension folder
+================
+
+The first thing you need to do, in order to make phpBB aware of your extension,
+is to create a ``composer.json``. The file needs to be in a subfolder of the
+``ext/`` folder that is shipped with phpBB.
+Inside this folder you need to create a folder with your author (vendor) name.
+Then create the folder of the extension inside the vendor folder.
+
+.. note::
+
+    Both, the vendor and extension folder names, must start with a lower or
+    upper case ASCII letter (a to z), followed by ASCII letters and numbers
+    only!
+
+In this tutorial we use ``acme`` as vendor name and ``demo`` as extension name.
+So the ``composer.json`` should be located at ``ext/acme/demo/composer.json``.
+
+composer.json
+=============
+
+The content of the ``composer.json`` is very technical and contains the
+relevant information about the extension as a json array. The details are
+explained after the sample, but now let's have a look at the complete file:
+
+.. code-block:: json
+
+    {
+        "name": "acme/demo",
+        "type": "phpbb-extension",
+        "description": "Acme Demo Extension for phpBB 3.1",
+        "homepage": "https://github.com/nickvergessen/phpbb-ext-acme-demo",
+        "version": "0.1.0",
+        "time": "2013-11-05",
+        "license": "GPL-2.0",
+        "authors": [{
+                "name": "Nickv",
+                "email": "nickvergessen@localhost",
+                "homepage": "https://github.com/nickvergessen/",
+                "role": "Lead Developer"
+            }],
+        "require": {
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "phpbb/epv": "dev-master"
+        },
+        "extra": {
+            "display-name": "Acme Demo Extension",
+            "soft-require": {
+                "phpbb/phpbb": "~3.1"
+            }
+        }
+    }
+
+.. csv-table::
+   :header: "Field", "Content"
+   :delim: |
+
+   ``name`` | "Must contain the vendor and extension name, matching the folder
+   structure"
+   ``type`` | ``phpbb-extension`` **must not be changed**
+   ``description`` | "A short description of your extension, may also be empty
+   (but not skipped)"
+   ``homepage`` | "Must contain a valid URL. It is recommended to use the link
+   to the contribution in the customisation database, or to the repository of
+   your extension (if you are using a public one like GitHub)."
+   ``version`` | "The version of your extension. You may also use ``-a1``
+   (alpha), ``-b1`` (beta), ``-rc1`` (release candidate) and ``-dev`` suffixes
+   (although you may not submit them to the customisation database."
+   ``time`` | "Must contain the release date of this version (date is required,
+   time is optional)"
+   ``license`` | The license must be ``GPL-2.0`` for now
+   ``authors`` | "An array with the authors of the extension.
+   See `authors`_ for more details."
+   ``require`` | "An array with requirements of the extension.
+   See `require`_ for more details."
+   ``require-dev`` | "An array with development requirements of the extension.
+   See `require-dev`_ for more details."
+   ``extra`` | "An array with additional values of the extension.
+   See `extra`_ for more details."
+
+authors
+-------
+
+You may have unlimited authors. But you should at least have one.
+
+.. csv-table::
+   :header: "Field", "Content"
+   :delim: |
+
+   ``name`` | Name of the author
+   ``email`` | Email address of the author
+   ``homepage`` | Must contain one valid URL or be empty
+   ``role`` | "Role can be used to specify what the authors did for the
+   extension (e.g. Developer, Translator, Supporter, ...)"
+
+require
+-------
+
+In the ``require`` section you can specify technical requirements of your
+extension. Examples are the ``php`` version, or
+`third party libraries <https://packagist.org/>`_. Since our demo extension does
+not require any additional library, we only use the php version requirement, to
+make sure people have the right php version on their server. phpBB 3.1 requires
+php 5.3.3 or higher, so the version comparison is ``>= 5.3.3``.
+
+require-dev
+-----------
+
+In the ``require-dev`` section you can specify technical requirements of your
+extension, which are only required for development. We use the
+`Extension PreValidation <https://packagist.org/packages/phpbb/epv>`_ Tool from
+the phpBB Extension team here. To perform some basic validation when running our
+tests on Travis CI later. Since we always want to have the newest version, we
+require ``dev-master``.
+
+.. todo:: add link to testing/travis section.
+
+extra
+-----
+
+This section contains only additional information and is up to free usage in
+terms of the composer-specification. However, phpBB is using 2 special entries
+in this array for extensions:
+
+.. csv-table::
+   :header: "Field", "Content"
+   :delim: |
+
+   ``display-name`` | "Display name of the extension (can be different then the
+   folder name)"
+   ``soft-require`` | "Soft requirements are basically like `require`_. The only
+   difference is, that composer does not know that these requirements exist.
+   This allows us e.g. to compare the phpBB version, although there might not be
+   a phpBB package with the specified version. In this case we require any 3.1
+   version. This can be done, by prefixing it with a ``~``:
+   ``""phpbb/phpbb"": ""~3.1""``"
+
+Enable extension
+================
+
+After you filled the ``composer.json`` with the content from above, you can go
+to the "Administration Control Panel" (ACP) > "Customise" > "Extensions" and
+enable the extension.
