@@ -8,7 +8,7 @@ Introduction
 This tutorial explains the basic functionality of extensions:
 
  * Basics: `Extension folder`_ and `composer.json`_
- * HTML Events
+ * `HTML Events`_
  * php Events
  * Administration Module (ACP)
  * Migrations (Database management)
@@ -167,3 +167,55 @@ Enable extension
 After you filled the ``composer.json`` with the content from above, you can go
 to the "Administration Control Panel" (ACP) > "Customise" > "Extensions" and
 enable the extension.
+
+HTML Events
+===========
+
+Up to now, we have an extension that does not. So let's start with adding some
+code to the output, to verify that the extension really works.
+
+In order to add new HTML elements to the output, we need to create a listener,
+which is then included by phpBB when the event happens. You can find a full list
+of events in the `Event list <https://wiki.phpbb.com/Event_List>`_ on the Wiki.
+
+For now we will use the ``overall_header_navigation_prepend`` event, to add a
+new link before the existing links in the navigation.
+
+In order to "subscribe" to an event, you need to create an HTML file that is
+named like the event. So in our case the file is named
+``overall_header_navigation_prepend.html``. The file needs to be inside a
+``event`` subfolder of the template of your style: e.g.
+``styles/prosilver/template/event/overall_header_navigation_prepend.html``.
+
+You can also put the file into ``styles/all/template/event/``. This will make
+phpBB include the listener (``overall_header_navigation_prepend.html``)
+independent from the used style.
+
+Inside the listener, we create a simple list element, with a link and a
+description:
+
+.. code-block:: html
+
+    <li class="small-icon icon-faq no-bulletin">
+        <a href="{U_DEMO_PAGE}">
+            {L_DEMO_PAGE}
+        </a>
+    </li>
+
+.. note::
+
+    The template syntax is explained on the
+    `Template Syntax <https://wiki.phpbb.com/Tutorial.Template_syntax#Syntax_elements>`_
+    Wiki page.
+
+After saving the file, you should see a new link at the top left, with the icon
+of the FAQ link and the text ``DEMO_PAGE``. We will fix the link description in
+the next section.
+
+.. note::
+
+    If the link does not show up for you, you might need to purge the cache on
+    the front page of the ACP. You should also make sure that
+    "Recompile stale style components" is enabled in the "General" > "Load
+    settings" section, to avoid having to purge the cache each time you modify
+    an existing template/style file.
