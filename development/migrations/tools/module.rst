@@ -13,17 +13,14 @@ Add a new module
 
     array('module.add', array( mixed $class [, mixed $parent [, array $data [, mixed $include_path ]]] ))
 
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| Parameter    | Required/Default | Usage                                                                                            |
-+==============+==================+==================================================================================================+
-| class        | Required         | The module class: acp, mcp, or ucp                                                               |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| parent       | default 0        | The parent module_id or module_langname (0 for no parent)                                        |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| data         | default array()  | An array of the data on the new module. This can be setup in two different ways. (see below)     |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| include_path | default false    | Optionally specify a custom include path (only works when using the automatic module add method) |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required/Default", "Usage"
+   :delim: |
+
+   class | Required | The module class: acp, mcp, or ucp
+   parent | default 0 | The parent module_id or module_langname (0 for no parent)
+   data | default array() | An array of the data on the new module. This can be setup in two different ways. (see below)
+   include_path | default false | Optionally specify a custom include path (only works when using the automatic module add method)
 
 Manually specifying module info
 -------------------------------
@@ -114,17 +111,14 @@ Remove Module
 Parameters
 ----------
 
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| Parameter    | Required/Default | Usage                                                                                            |
-+==============+==================+==================================================================================================+
-| class        | Required         | The module class: acp, mcp, or ucp                                                               |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| parent       | default 0        | The parent module_id or module_langname (0 for no parent)                                        |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| module       | default ''       | The module_id or module_langname of the module to remove (more information below)                |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
-| include_path | default false    | Optionally specify a custom include path (only works when using the automatic module add method) |
-+--------------+------------------+--------------------------------------------------------------------------------------------------+
+.. csv-table::
+   :header: "Parameter", "Required/Default", "Usage"
+   :delim: |
+
+   class | Required | The module class: acp, mcp, or ucp
+   parent | default 0 | The parent module_id or module_langname (0 for no parent)
+   module | default '' | The module_id or module_langname of the module to remove (more information below)
+   include_path | default false | Optionally specify a custom include path (only works when using the automatic module add method)
 
 Manually specifying module info
 -------------------------------

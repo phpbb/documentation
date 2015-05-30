@@ -18,28 +18,19 @@ Each extension has its own directory. However, you can (and should) also use an 
 
 There should not be a need to have files located outside of that directory. No matter which files, may it be styles, language or ACP module files. All of them will be moved into your extension's directory:
 
-+--------------------+------------------------------+
-| new directory      | current directory            |
-+====================+==============================+
-| acp/\*_module.php  | phpBB/includes/acp/          |
-+--------------------+------------------------------+
-| acp/\*_info.php    | phpBB/includes/acp/info/     |
-+--------------------+------------------------------+
-| adm/style/         | phpBB/adm/style/             |
-+--------------------+------------------------------+
-| config/            | ---                          |
-+--------------------+------------------------------+
-| controller/        | \*.php                       |
-+--------------------+------------------------------+
-| event/             | ---                          |
-+--------------------+------------------------------+
-| language/          | phpBB/language/              |
-+--------------------+------------------------------+
-| migrations/        | ---                          |
-+--------------------+------------------------------+
-| styles/            | phpBB/styles/                |
-+--------------------+------------------------------+
+.. csv-table::
+   :header: "new directory", "current directory"
+   :delim: |
 
+   ``acp/*_module.php`` | ``phpBB/includes/acp/``
+   ``acp/*_info.php`` | ``phpBB/includes/acp/info/``
+   ``adm/style/`` | ``phpBB/adm/style/``
+   ``config/`` | ---
+   ``controller/`` | ``*.php``
+   ``event/`` | ---
+   ``language/`` | ``phpBB/language/``
+   ``migrations/`` | ---
+   ``styles/`` | ``phpBB/styles/``
 
 Newly added, additional directories have already been listed. Their use will be explained in the following paragraphs.
 

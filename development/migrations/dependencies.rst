@@ -56,37 +56,30 @@ depends_on creates a tree
 
 Imagine the following situation:
 
-+-------------+---------------------------------------+----------------------------------------------------+
-| Migration   | Dependencies                          | Note                                               |
-+=============+=======================================+====================================================+
-| migration_1 | phpbb\\db\\migration\\data\\v310\\dev | Initial release, 1.0.0, requires phpBB 3.1.0       |
-+-------------+---------------------------------------+----------------------------------------------------+
-| migration_2 | migration_1                           | New feature for 1.0.1 (during development)         |
-+-------------+---------------------------------------+----------------------------------------------------+
-| migration_3 | migration_1                           | Another new feature for 1.0.1 (during development) |
-+-------------+---------------------------------------+----------------------------------------------------+
-| migration_4 | migration_2                           | Modifying the feature in migration_2               |
-+-------------+---------------------------------------+----------------------------------------------------+
-| migration_5 | migration_3, migration_4              | Release 1.0.1                                      |
-+-------------+---------------------------------------+----------------------------------------------------+
+.. csv-table::
+   :header: "Migration", "Dependencies", "Note"
+   :delim: |
+
+   ``migration_1`` | ``phpbb\db\migration\data\\v310\\dev`` | Initial release, 1.0.0, requires phpBB 3.1.0
+   ``migration_2`` | ``migration_1`` | New feature for 1.0.1 (during development)
+   ``migration_3`` | ``migration_1`` | Another new feature for 1.0.1 (during development)
+   ``migration_4`` | ``migration_2`` | Modifying the feature in ``migration_2``
+   ``migration_5`` | ``migration_3``, ``migration_4`` | Release 1.0.1
 
 This dependency setup would cause the following Migrations to be additionally
 installed when an individual Migration was installed manually. *Assumes*
 ``phpbb\db\migration\data\v310\dev`` *is already installed.*
 
-+-------------+-----------------------------------------------------------------+
-| Install     | Migrations that are installed                                   |
-+=============+=================================================================+
-| migration_1 | migration_1                                                     |
-+-------------+-----------------------------------------------------------------+
-| migration_2 | migration_1, migration_2                                        |
-+-------------+-----------------------------------------------------------------+
-| migration_3 | migration_1, migration_3                                        |
-+-------------+-----------------------------------------------------------------+
-| migration_4 | migration_1, migration_2, migration_4                           |
-+-------------+-----------------------------------------------------------------+
-| migration_5 | migration_1, migration_3, migration_2, migration_4, migration_5 |
-+-------------+-----------------------------------------------------------------+
+
+.. csv-table::
+   :header: "Install", "Migrations that are installed"
+   :delim: |
+
+   ``migration_1`` | ``migration_1``
+   ``migration_2`` | ``migration_1``, ``migration_2``
+   ``migration_3`` | ``migration_1``, ``migration_3``
+   ``migration_4`` | ``migration_1``, ``migration_2``, ``migration_4``
+   ``migration_5`` | ``migration_1``, ``migration_2``, ``migration_4``, ``migration_3``, ``migration_5``
 
 What does this mean for me?
 ===========================
