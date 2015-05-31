@@ -9,7 +9,7 @@ This tutorial explains the basic functionality of extensions:
 
  * Basics: `Extension folder`_ and `composer.json`_
  * `HTML Events`_
- * `php Events`_
+ * `PHP Events`_
  * Administration Module (ACP)
  * Migrations (Database management)
  * Controllers (Frontpage)
@@ -126,9 +126,9 @@ require
 In the ``require`` section you can specify the technical requirements of your
 extension. Examples are the ``php`` version, or
 `third party libraries <https://packagist.org/>`_. Since our demo extension does
-not require any additional library, we only use the php version requirement, to
-make sure people have the right php version on their server, and composer
-installers for some internal handling. phpBB 3.1 requires php 5.3.3 or higher,
+not require any additional library, we only use the PHP version requirement, to
+make sure people have the right PHP version on their server, and composer
+installers for some internal handling. phpBB 3.1 requires PHP 5.3.3 or higher,
 so the version comparison is ``>= 5.3.3``.
 
 require-dev
@@ -246,12 +246,15 @@ event.
     they always want to listen to both places, or just one? In case of doubt:
     use a new event and unique.
 
-php Events
+PHP Events
 ==========
 
 In order to fix the description of the link in the previous section, we are
 going to load a language file that contains the ``DEMO_PAGE`` language variable
 we used.
+
+Creating the language file
+--------------------------
 
 The language file should be placed in the ``language/`` folder of the extension.
 Since this tutorial is in English, we only add the English language file:
@@ -297,3 +300,73 @@ Since this tutorial is in English, we only add the English language file:
         {
             exit;
         }
+
+Loading the language file
+-------------------------
+
+Now there is a bit of magic involved in this section, but you may ignore the
+details, if you just want to get the demo working.
+
+Similar to the `HTML Events`_ phpBB also has PHP events. Those can be used, to
+execute PHP code. In order to subscribe to a PHP event, you need to create a
+class that extends Symfony's
+``Symfony\Component\EventDispatcher\EventSubscriberInterface`` interface. This
+interface contains a static method ``getSubscribedEvents()`` which returns an
+array, with ``'name of the event' => 'name of the method to call'`` pairs.
+In case when the event is triggered, the method will be called, with an array
+argument, containing all variables that are supported by the PHP event.
+
+A full list of the supported PHP events, including the version they have been
+added in, can be found in the Wiki
+`Event list <https://wiki.phpbb.com/Event_List>`_. Since we want to load the new
+language file everywhere, we subscribe to the ``core.user_setup`` event. In the
+listener method we add our language file to the ``lang_set_ext`` array. phpBB
+will then load the file automatically:
+
+.. code-block:: php
+
+    <?php
+    /**
+     *
+     * This file is part of the phpBB Forum Software package.
+     *
+     * @copyright (c) phpBB Limited <https://www.phpbb.com>
+     * @license GNU General Public License, version 2 (GPL-2.0)
+     *
+     * For full copyright and license information, please see
+     * the docs/CREDITS.txt file.
+     *
+     */
+
+    namespace acme\demo\event;
+
+    use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+    /**
+     * Event listener
+     */
+    class main_listener implements EventSubscriberInterface
+    {
+        static public function getSubscribedEvents()
+        {
+            return array(
+                'core.user_setup' => 'load_language_on_setup',
+            );
+        }
+
+        public function load_language_on_setup($event)
+        {
+            $lang_set_ext = $event['lang_set_ext'];
+            $lang_set_ext[] = array(
+                'ext_name' => 'acme/demo',
+                'lang_set' => 'demo',
+            );
+            $event['lang_set_ext'] = $lang_set_ext;
+        }
+    }
+
+.. warning::
+
+    Due to a limitation in PHP itself, you can not add entries to arrays of the
+    event argument. In order to do that you need to create a copy of the array,
+    add the value and then reassign the new array to the event array.
