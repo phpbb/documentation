@@ -69,10 +69,13 @@ directory. There are however a few exceptions, notably log entries and module
 names. Those need to be placed in their appropriate common.php language file,
 either in the language's directory or the acp subdirectory.
 
-**Note:** When writing or editing a language file, make sure to save it using
-utf-8 encoding **without BOM**
-(`Byte Order Mark <http://en.wikipedia.org/wiki/Byte_Order_Mark>`_). Otherwise
-the forum will not function properly. Some editors call that mode "utf8 cookie".
+.. note::
+
+    When writing or editing a language file, make sure to save it using
+    utf-8 encoding **without BOM**
+    (`Byte Order Mark <http://en.wikipedia.org/wiki/Byte_Order_Mark>`_).
+    Otherwise the forum will not function properly. Some editors call that mode
+    "utf8 cookie".
 
 .. code-block:: php
 

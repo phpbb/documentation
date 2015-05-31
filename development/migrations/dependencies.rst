@@ -37,10 +37,12 @@ have already been installed.
         );
     }
 
-**Note:** It is highly recommended to add a dependency for all migrations. If
-the migration is the first migration of your extension just depend on the
-release migration of the minimum phpBB requirement of your extension, e.g.
-3.1.4:
+.. note::
+
+    It is highly recommended to add a dependency for all migrations. If
+    the migration is the first migration of your extension just depend on the
+    release migration of the minimum phpBB requirement of your extension, e.g.
+    3.1.4:
 
 .. code-block:: php
 
