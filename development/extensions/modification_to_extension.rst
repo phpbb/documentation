@@ -93,6 +93,7 @@ functionality while install/uninstalling your extension:
 .. code-block:: php
 
      <?php
+     // ext/nickvergessen/newspage/ext.php
 
      // this file is not really needed, when empty it can be ommitted
      // however you can override the default methods and add custom
@@ -124,6 +125,7 @@ second rule requires a second part of the url to be an integer.
 
 .. code-block:: yaml
 
+     # ext/nickvergessen/newspage/config/routing.yml
      newspage_base_controller:
          pattern: /newspage
          defaults: { _controller: nickvergessen.newspage.controller:base, page: 1 }
@@ -144,6 +146,7 @@ definition of the newspage controller service would be something similar to:
 
 .. code-block:: yaml
 
+     # ext/nickvergessen/newspage/config/services.yml
      services:
          nickvergessen.newspage.controller:
              class: nickvergessen\newspage\controller\main
@@ -180,6 +183,7 @@ In this example my **controller/main.php** would look like the following:
 .. code-block:: php
 
      <?php
+     // ext/nickvergessen/newspage/controller/main.php
 
      /**
       *
@@ -279,6 +283,7 @@ As for the ``main_info.php`` I need to adjust the class name from
 .. code-block:: php
 
      <?php
+     // ext/nickvergessen/newspage/acp/main_info.php
 
      /**
       *
@@ -318,6 +323,7 @@ In case of the module, I just adjust the class name:
 .. code-block:: php
 
      <?php
+     // ext/nickvergessen/newspage/acp/main_module.php
 
      /**
       *
@@ -543,6 +549,7 @@ A complete file could look like this:
 .. code-block:: php
 
      <?php
+     // ext/nickvergessen/newspage/migrations/v10x/release_1_0_0.php
      /**
       *
       * @package migration
@@ -643,6 +650,7 @@ implements some Symfony class:
 .. code-block:: php
 
      <?php
+     // ext/nickvergessen/newspage/event/main_listener.php
 
      /**
       *
@@ -722,10 +730,11 @@ Now we add the function which is then called:
         }
 
 As a last step we need to register the event listener to the system.
-This is done using the ``event.listener`` tag in the service.yml:
+This is done using the ``event.listener`` tag in the ``config/service.yml``:
 
 .. code-block:: yaml
 
+    # ext/nickvergessen/newspage/config/service.yml
     nickvergessen.newspage.listener:
         class: nickvergessen\newspage\event\main_listener
         arguments:
