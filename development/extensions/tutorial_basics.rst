@@ -374,8 +374,8 @@ the ``lang_set_ext`` array. phpBB will then load the file automatically:
 Registering the listener
 ++++++++++++++++++++++++
 
-Before our language file is loaded correctly, we need to register the event
-listener, so phpBB knows, how to create it.
+To have phpBB execute our listener, we need to register the event listener, so
+phpBB knows, how to create it.
 
 This is done by creating a ``config/services.yml`` file. ``#`` is used to start
 inline comments in ``yaml`` files.
