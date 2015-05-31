@@ -1,6 +1,6 @@
-========
-Tutorial
-========
+===========================
+Tutorial: Basics and Events
+===========================
 
 Introduction
 ============
@@ -10,11 +10,6 @@ This tutorial explains the basic functionality of extensions:
  * Basics: `Extension folder`_ and `composer.json`_
  * `HTML Events`_
  * `PHP Events`_
- * Administration Module (ACP)
- * Migrations (Database management)
- * Controllers (Frontpage)
- * Unit tests
- * Automatic testing of changes on Travis CI
 
 .. seealso::
 
@@ -43,9 +38,10 @@ So the ``composer.json`` should be located at ``ext/acme/demo/composer.json``.
 composer.json
 =============
 
-The content of the ``composer.json`` is very technical and contains the
-relevant information about the extension as a JSON array. The details are
-explained after the sample, but now let's have a look at the complete file:
+The content of the ``composer.json`` file may look very technical, but you only
+have to change a few lines. The information about the extension is stored as a
+JSON array. The details are explained after the sample, but now let's have a
+look at the complete file:
 
 .. code-block:: json
 
@@ -137,9 +133,9 @@ require-dev
 In the ``require-dev`` section you can specify the technical requirements of your
 extension, which are only required for development. We use the
 `Extension PreValidation <https://packagist.org/packages/phpbb/epv>`_ Tool from
-the phpBB Extension team here, to perform some basic validation when running our
-tests on Travis CI later. Since we always want to have the newest version, we
-require ``dev-master``.
+the phpBB Extensions Team here, to perform some basic validation when running
+our tests on Travis CI in :doc:`tutorial_testing`. Since we always want to have
+the newest version, we require ``dev-master``.
 
 .. todo:: add link to testing/travis section.
 
@@ -417,4 +413,4 @@ In the ``tags`` list we tell phpBB that the defined service is an event
 listener.
 
 After purging the cache in the ACP, the description of the link in the
-navigation bar should ``Demo`` rather then ``DEMO_PAGE``.
+navigation bar should now be ``Demo`` instead of ``DEMO_PAGE``.

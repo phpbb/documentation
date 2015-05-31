@@ -5,4 +5,5 @@ Extensions
    :maxdepth: 2
    :glob:
 
+   tutorial*
    *
