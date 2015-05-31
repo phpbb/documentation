@@ -33,7 +33,7 @@ Then create the folder of the extension inside the vendor folder.
 
 .. note::
 
-    Both, the vendor and extension folder names, must start with a lower or
+    Both the vendor and extension folder names must start with a lower or
     upper case ASCII letter (a to z), followed by ASCII letters and numbers
     only!
 
@@ -44,7 +44,7 @@ composer.json
 =============
 
 The content of the ``composer.json`` is very technical and contains the
-relevant information about the extension as a json array. The details are
+relevant information about the extension as a JSON array. The details are
 explained after the sample, but now let's have a look at the complete file:
 
 .. code-block:: json
@@ -64,7 +64,8 @@ explained after the sample, but now let's have a look at the complete file:
                 "role": "Lead Developer"
             }],
         "require": {
-            "php": ">=5.3.3"
+            "php": ">=5.3.3",
+            "composer/installers": "~1.0"
         },
         "require-dev": {
             "phpbb/epv": "dev-master"
@@ -91,7 +92,7 @@ explained after the sample, but now let's have a look at the complete file:
    your extension (if you are using a public one like GitHub)."
    ``version`` | "The version of your extension. You may also use ``-a1``
    (alpha), ``-b1`` (beta), ``-rc1`` (release candidate) and ``-dev`` suffixes
-   (although you may not submit them to the customisation database."
+   (although you may not submit them to the customisation database.)"
    ``time`` | "Must contain the release date of this version (date is required,
    time is optional)"
    ``license`` | The license must be ``GPL-2.0`` for now
@@ -122,20 +123,21 @@ You may have unlimited authors. But you should at least have one.
 require
 -------
 
-In the ``require`` section you can specify technical requirements of your
+In the ``require`` section you can specify the technical requirements of your
 extension. Examples are the ``php`` version, or
 `third party libraries <https://packagist.org/>`_. Since our demo extension does
 not require any additional library, we only use the php version requirement, to
-make sure people have the right php version on their server. phpBB 3.1 requires
-php 5.3.3 or higher, so the version comparison is ``>= 5.3.3``.
+make sure people have the right php version on their server, and composer
+installers for some internal handling. phpBB 3.1 requires php 5.3.3 or higher,
+so the version comparison is ``>= 5.3.3``.
 
 require-dev
 -----------
 
-In the ``require-dev`` section you can specify technical requirements of your
+In the ``require-dev`` section you can specify the technical requirements of your
 extension, which are only required for development. We use the
 `Extension PreValidation <https://packagist.org/packages/phpbb/epv>`_ Tool from
-the phpBB Extension team here. To perform some basic validation when running our
+the phpBB Extension team here, to perform some basic validation when running our
 tests on Travis CI later. Since we always want to have the newest version, we
 require ``dev-master``.
 
@@ -145,34 +147,34 @@ extra
 -----
 
 This section contains only additional information and is up to free usage in
-terms of the composer-specification. However, phpBB is using 2 special entries
+terms of the composer-specification. However, phpBB is using two special entries
 in this array for extensions:
 
 .. csv-table::
    :header: "Field", "Content"
    :delim: |
 
-   ``display-name`` | "Display name of the extension (can be different then the
+   ``display-name`` | "Display name of the extension (can be different than the
    folder name)"
    ``soft-require`` | "Soft requirements are basically like `require`_. The only
-   difference is, that composer does not know that these requirements exist.
-   This allows us e.g. to compare the phpBB version, although there might not be
-   a phpBB package with the specified version. In this case we require any 3.1
-   version. This can be done, by prefixing it with a ``~``:
+   difference is that composer does not know that these requirements exist.
+   This allows us, for example, to compare the phpBB version, although there
+   might not be a phpBB package with the specified version. In this case we
+   require any 3.1 version. This can be done, by prefixing it with a ``~``:
    ``""phpbb/phpbb"": ""~3.1""``"
 
 Enable extension
 ================
 
-After you filled the ``composer.json`` with the content from above, you can go
-to the "Administration Control Panel" (ACP) > "Customise" > "Extensions" and
-enable the extension.
+After you filled the ``composer.json`` with the content as described above, you
+can go to the "Administration Control Panel" (ACP) > "Customise" > "Extensions"
+and enable the extension.
 
 HTML Events
 ===========
 
-Up to now, we have an extension that does not. So let's start with adding some
-code to the output, to verify that the extension really works.
+So far, all we have done is create an extension that does nothing. So let's
+create some code to generate output and verify that the extension is working.
 
 Listening to an event
 ---------------------
@@ -182,17 +184,17 @@ which is then included by phpBB when the event happens. You can find a full list
 of events in the `Event list <https://wiki.phpbb.com/Event_List>`_ on the Wiki.
 
 For now we will use the ``overall_header_navigation_prepend`` event, to add a
-new link before the existing links in the navigation.
+new link before the existing links in the navigation bar.
 
 In order to "subscribe" to an event, you need to create an HTML file that is
-named like the event. So in our case the file is named
-``overall_header_navigation_prepend.html``. The file needs to be inside a
+named the same as the event. So in our case the file is named
+``overall_header_navigation_prepend.html``. The file needs to be inside an
 ``event`` subfolder of the template of your style: e.g.
 ``styles/prosilver/template/event/overall_header_navigation_prepend.html``.
 
 You can also put the file into ``styles/all/template/event/``. This will make
-phpBB include the listener (``overall_header_navigation_prepend.html``)
-independent from the used style.
+phpBB include the listener (``overall_header_navigation_prepend.html``) in all
+styles.
 
 Inside the listener, we create a simple list element, with a link and a
 description:
@@ -238,21 +240,21 @@ event.
 
 .. warning::
 
-    It is not recommended, to reuse existing event names in different locations.
-    This should only be done, if the code (nested HTML elements) around the
+    It is not recommended to reuse existing event names in different locations.
+    This should only be done if the code (nested HTML elements) around the
     event is the same for both locations. Also think about other extensions: do
     they always want to listen to both places, or just one? In case of doubt:
-    use a new event.
+    use a new event and unique.
 
 php Events
 ==========
 
 In order to fix the description of the link in the previous section, we are
-going to load a language file, that contains the ``DEMO_PAGE`` language variable
+going to load a language file that contains the ``DEMO_PAGE`` language variable
 we used.
 
 The language file should be placed in the ``language/`` folder of the extension.
-Since this tutorial is in english, we only add the english language file:
+Since this tutorial is in English, we only add the English language file:
 ``language/en/demo.php``
 
 .. code-block:: php
