@@ -9,3 +9,11 @@ latest versions on area51:
 * Rules for `Ascraeus (3.1.x) code <http://area51.phpbb.com/docs/31x/coding-guidelines.html>`_
 
 These documents are automatically updated when changes are made to them.
+
+JavaScript Linting
+------------------
+
+We use JSHint and JSCS for checking the quality of the JavaScript—JSHint for
+linting, and JSCS for ensuring consistent code. There is a .jshintrc and a
+.jscs file in the root of the project, and your editor probably has a plugin
+available which will show you when you violate these standards.
