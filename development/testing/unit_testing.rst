@@ -3,10 +3,10 @@ Unit Testing
 ============
 
 Unit tests simply verify that specific portions of the source code work
-properly. These tests are located in the main phpBB repository at ./tests/
+properly. These tests are located in the main phpBB repository at ``tests/``
 and are grouped into folders based on commonality between the functionality
 they are testing. For instance, tests that are meant to test the config will
-be in ./tests/config/.
+be in ``tests/config/``.
 
 Running Unit Tests
 ==================
