@@ -318,10 +318,14 @@ argument, containing all variables that are supported by the PHP event.
 
 A full list of the supported PHP events, including the version they have been
 added in, can be found in the Wiki
-`Event list <https://wiki.phpbb.com/Event_List>`_. Since we want to load the new
-language file everywhere, we subscribe to the ``core.user_setup`` event. In the
-listener method we add our language file to the ``lang_set_ext`` array. phpBB
-will then load the file automatically:
+`Event list <https://wiki.phpbb.com/Event_List>`_.
+
+Writing the listener
+++++++++++++++++++++
+
+Since we want to load the new language file everywhere, we subscribe to the
+``core.user_setup`` event. In the listener method we add our language file to
+the ``lang_set_ext`` array. phpBB will then load the file automatically:
 
 .. code-block:: php
 
@@ -370,3 +374,47 @@ will then load the file automatically:
     Due to a limitation in PHP itself, you can not add entries to arrays of the
     event argument. In order to do that you need to create a copy of the array,
     add the value and then reassign the new array to the event array.
+
+Registering the listener
+++++++++++++++++++++++++
+
+Before our language file is loaded correctly, we need to register the event
+listener, so phpBB knows, how to create it.
+
+This is done by creating a ``config/services.yml`` file. ``#`` is used to start
+inline comments in ``yaml`` files.
+
+.. code-block:: yaml
+
+    services:
+        acme.demo.listener:       # name of the service you want to register
+            class: acme\demo\event\main_listener
+            tags:
+                - { name: event.listener }
+
+.. caution::
+
+    ``yaml`` is indentation sensitive, so make sure that each line that is a
+    child of the previous line is indented with four additional spaces and do
+    **not use tabs**.
+
+The first line tells phpBB that a list of services is being registered. On the
+next line we specify the name of the service.
+
+.. warning::
+
+    Similar to event names your service names should be prefixed with your
+    vendor and extension name.
+
+The ``class`` attribute must contain the namespace and class name of the service
+we want to register. The class and namespace depends on the file's location,
+whereby the ``ext/`` is the root of the name. So the our file
+``ext/acme/demo/event/main_listener.php`` has the namespace ``acme\demo\event``
+and class name ``main_listener``. The full name of the class is therefor
+``acme\demo\event\main_listener`` which is what we need to specify here.
+
+In the ``tags`` list we tell phpBB that the defined service is an event
+listener.
+
+After purging the cache in the ACP, the description of the link in the
+navigation bar should ``Demo`` rather then ``DEMO_PAGE``.
