@@ -225,19 +225,19 @@ the template engine and controller helper as dependencies:
             );
         }
 
-        /* @var helper */
+        /* @var \phpbb\controller\helper */
         protected $helper;
 
-        /* @var template */
+        /* @var \phpbb\template\template */
         protected $template;
 
         /**
          * Constructor
          *
-         * @param helper $helper
-         * @param template $template
+         * @param \phpbb\controller\helper $helper
+         * @param \phpbb\template\template $template
          */
-        public function __construct(helper $helper, template $template)
+        public function __construct(\phpbb\controller\helper $helper, \phpbb\template\template $template)
         {
             $this->helper = $helper;
             $this->template = $template;
