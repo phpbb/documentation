@@ -133,6 +133,7 @@ directory.
 .. code-block:: php
 
     <?php
+    // language/en/sample.php
     /**
      *
      * This file is part of the phpBB Forum Software package.
