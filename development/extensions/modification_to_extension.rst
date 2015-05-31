@@ -776,12 +776,11 @@ And that's it. No file edits required for the template files aswell.
 Adding Events
 -------------
 
-You can also add events to your extensions php and template code. If you miss an
-event from the core, please post a topic into the
-`[3.x] Event Requests <https://area51.phpbb.com/phpBB/viewforum.php?f=111>`_-Forum
-and we will include it for the next release. We try to include a huge bunch of
-events by default, but surely we can not cover every place your MODs need to be
-covered.
+There are already numerous events available. However, if your extension needs to
+make use of an event which is not yet in the phpBB code you can request the
+event be added to the core by creating a ticket in the
+`phpBB Bug Tracker <https://tracker.phpbb.com/projects/PHPBB3>`_. and we will
+endeavour to include it in the next release.
 
 Basics finished!
 ----------------
