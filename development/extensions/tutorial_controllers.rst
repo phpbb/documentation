@@ -244,7 +244,7 @@ the template engine and controller helper as dependencies:
         }
 
 We also have to extend the definition of the listener in the
-``config/servies.yml``:
+``config/services.yml``:
 
 .. code-block:: yaml
 

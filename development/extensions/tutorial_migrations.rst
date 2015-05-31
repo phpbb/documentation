@@ -13,7 +13,7 @@ This tutorial explains:
 Module information
 ==================
 
-First we need to specify the the information about the module in the
+First we need to specify the information about the module in the
 ``*_info.php`` file in the ``acp/`` folder of the extension. The name name of
 the info and module file have to match. In this tutorial we will use
 ``main_info.php`` and ``main_module.php``.
@@ -205,3 +205,83 @@ the files are also stored in an other directory. Since we specified
 The ``{S_FORM_TOKEN}`` template variable belongs to the `Form key`_ security
 check. Other then that, the page just contains two radio buttons and two buttons
 to submit or reset the form.
+
+Migrations
+==========
+
+The module is now completed, but it does not show up so far. We need to add a
+migration that installs the module, when the extension is enabled. The migration
+files need to be in a directory called ``migrations``. In case of this demo
+extension we only add the config value that is being set by the administrator
+form and the category and module in the ACP.
+
+.. code-block:: php
+
+    <?php
+    /**
+     *
+     * This file is part of the phpBB Forum Software package.
+     *
+     * @copyright (c) phpBB Limited <https://www.phpbb.com>
+     * @license GNU General Public License, version 2 (GPL-2.0)
+     *
+     * For full copyright and license information, please see
+     * the docs/CREDITS.txt file.
+     *
+     */
+
+    namespace acme\demo\migrations;
+
+    use phpbb\db\migration\migration;
+
+    class add_module extends migration
+    {
+        public function effectively_installed()
+        {
+            return isset($this->config['acme_demo_goodbye']);
+        }
+
+        static public function depends_on()
+        {
+            return array('\phpbb\db\migration\data\v31x\v314');
+        }
+
+        public function update_data()
+        {
+            return array(
+                array('config.add', array('acme_demo_goodbye', 0)),
+
+                array('module.add', array(
+                    'acp',
+                    'ACP_CAT_DOT_MODS',
+                    'ACP_DEMO_TITLE'
+                )),
+
+                array('module.add', array(
+                    'acp',
+                    'ACP_DEMO_TITLE',
+                    array(
+                        'module_basename'	=> '\acme\demo\acp\main_module',
+                        'modes'				=> array('settings'),
+                    ),
+                )),
+            );
+        }
+    }
+
+If you want to learn more about migrations, please have a look at the
+:doc:`../migrations/index` section.
+
+When you now disable and reenable the extension in "ACP" > "Customise", the
+module is going to be created and will then be accessible via the "ACP" >
+"Extensions"
+
+Only the language keys are missing, so we add some more language variables to
+the array in ``language/en/demo.php``:
+
+.. code-block:: php
+
+        'ACP_DEMO_TITLE'         => 'Demo Module',
+        'ACP_DEMO'               => 'Settings',
+        'ACP_DEMO_GOODBYE'       => 'Should say goodbye?',
+        'ACP_DEMO_SETTING_SAVED' => 'Settings have been saved successfully!',
