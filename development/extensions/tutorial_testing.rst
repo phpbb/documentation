@@ -5,7 +5,8 @@ Tutorial: Testing
 Introduction
 ============
 
-This tutorial explains the basic functionality of extensions:
+This tutorial explains:
 
  * Unit tests
- * Automatic testing of changes on Travis CI
+ * Functional tests
+ * Automatic testing on Travis CI

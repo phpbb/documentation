@@ -5,7 +5,7 @@ Tutorial: Controllers and Routes
 Introduction
 ============
 
-This tutorial explains the basic functionality of extensions:
+This tutorial explains:
 
  * Controllers: User facing files
  * Routes: URLs
