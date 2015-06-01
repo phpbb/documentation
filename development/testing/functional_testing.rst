@@ -25,6 +25,7 @@ executed.
 .. code-block:: php
 
     <?php
+    // tests/functional/my_test.php
 
     /**
      * @group functional
@@ -62,7 +63,13 @@ parts of the page using CSS selectors. Here is an example:
 
 .. code-block:: php
 
-    class phpbb_my_test extends phpbb_functional_test_case
+    <?php
+    // tests/functional/my_test.php
+
+    /**
+     * @group functional
+     */
+    class phpbb_functional_my_test extends phpbb_functional_test_case
     {
         public function test_index()
         {
@@ -106,7 +113,7 @@ framework.
 
 .. code-block:: php
 
-    function test_example()
+    public function test_example()
     {
         // include the file at ./phpBB/language/en/ucp.php
         $this->add_lang('ucp');
