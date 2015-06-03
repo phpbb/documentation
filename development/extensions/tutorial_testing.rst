@@ -7,18 +7,17 @@ Introduction
 
 This tutorial explains:
 
- * Unit tests
- * Unit tests with database interaction
- * Functional testing
- * Continuous testing with Travis CI
+ * `Unit tests`_
+ * `Unit tests with database interaction`_
+ * `Functional testing`_
 
-.. note::
+.. warning::
 
     It is required to run the tests from a phpBB clone of the git repository,
     because the test framework is not included in the download packages.
 
-Unit Testing
-============
+Unit Tests
+==========
 
 Since unit tests are explained more in details in the
 :doc:`../testing/unit_testing` section of the general testing documentation and
@@ -619,6 +618,128 @@ whether the values are really in the database:
         }
     }
 
+Functional testing
+==================
 
+Functional tests simulate calling a URL and allow you to filter the output then
+and check whether certain elements have a specific content.
 
+.. note::
 
+    Again it is recommended to run the functional tests of phpBB first, before
+    writing the tests for the extension.
+
+    More details are explained in the :doc:`../testing/functional_testing`
+    section.
+
+Again like with the database changes we need to tell phpBB that the test depends
+on the extension, then phpBB will take care of enabling the extension before the
+test execution. Our little test opens the route we added and then checks for the
+right message, like the unit test we wrote in `unit tests`_ at the beginning:
+
+.. code-block:: php
+
+    <?php
+    /**
+     *
+     * This file is part of the phpBB Forum Software package.
+     *
+     * @copyright (c) phpBB Limited <https://www.phpbb.com>
+     * @license GNU General Public License, version 2 (GPL-2.0)
+     *
+     * For full copyright and license information, please see
+     * the docs/CREDITS.txt file.
+     *
+     */
+
+    namespace acme\demo\tests\functional;
+
+    /**
+     * @group functional
+     */
+    class demo_test extends \phpbb_functional_test_case
+    {
+        static protected function setup_extensions()
+        {
+            return array('acme/demo');
+        }
+
+        public function test_demo_world()
+        {
+            $this->add_lang_ext('acme/demo', 'demo');
+
+            $crawler = self::request('GET', 'app.php/demo/world');
+            $this->assertContains($this->lang('DEMO_HELLO', 'world'), $crawler->filter('h2')->text());
+        }
+
+        public function test_demo_bertie()
+        {
+            $this->add_lang_ext('acme/demo', 'demo');
+
+            $crawler = self::request('GET', 'app.php/demo/bertie');
+            $this->assertContains($this->lang('NO_AUTH_SPEAKING', 'bertie'), $crawler->filter('#message p')->text());
+        }
+    }
+
+Running this test, however, will fail::
+
+    $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
+    PHPUnit 4.1.0 by Sebastian Bergmann.
+
+    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+
+    ........F
+
+    Time: 22.37 seconds, Memory: 17.25Mb
+
+    There was 1 failure:
+
+    1) acme\demo\tests\functional\demo_test::test_demo_bertie
+    HTTP status code does not match
+    Failed asserting that 403 matches expected 200.
+
+    /home/nickv/phpBB/Ascraeus/tests/test_framework/phpbb_functional_test_case.php:900
+    /home/nickv/phpBB/Ascraeus/tests/test_framework/phpbb_functional_test_case.php:859
+    /home/nickv/phpBB/Ascraeus/tests/test_framework/phpbb_functional_test_case.php:138
+    /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/tests/functional/demo_test.php:38
+
+    FAILURES!
+    Tests: 9, Assertions: 49, Failures: 1.
+
+The reason is, that the test suite compares the response for the correct format
+(valid HTML, without debug errors) and a successful status code ``200``.
+
+Therefor we need to adjust the bertie test, because we return a ``403`` status
+in the controller, if someone tries to talk to bertie:
+
+.. code-block:: php
+
+        public function test_demo_bertie()
+        {
+            $this->add_lang_ext('acme/demo', 'demo');
+
+            $crawler = self::request('GET', 'app.php/demo/bertie', array(), false);
+            self::assert_response_html(403);
+            $this->assertContains($this->lang('NO_AUTH_SPEAKING', 'bertie'), $crawler->filter('#message p')->text());
+        }
+
+Now the tests will pass correctly::
+
+    $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
+    PHPUnit 4.1.0 by Sebastian Bergmann.
+
+    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+
+    .........
+
+    Time: 22.11 seconds, Memory: 17.00Mb
+
+    OK (9 tests, 52 assertions)
+
+.. note::
+
+    Functional tests are **slow**. Depending on your server, it might take up to
+    2 seconds per page view. phpBB is installed via page views aswell, which
+    takes another 20 to 100 seconds, depending on various configurations, for
+    the first functional tests. Subsequent functional tests **do not reinstall**
+    the board, so they do not have the huge setup time.
