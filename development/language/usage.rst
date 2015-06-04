@@ -77,11 +77,11 @@ pass the name with the subdirectory but without extension as argument of setup.
 
 .. code-block:: php
 
-    $user->setup('search')
+    $user->setup('search');
     // or
-    $user->setup('ucp')
+    $user->setup('ucp');
     // or
-    $user->setup(array('ucp', 'search'))
+    $user->setup(array('ucp', 'search'));
 
 Since ``phpbb\user::setup()`` must only be called once,
 ``phpbb\user::add_lang()`` has to be used, to load additional language files,
@@ -97,7 +97,9 @@ a second argument.
 
 .. code-block:: php
 
-    $user->add_lang_ext('acme/demo', array('demo'));
+    $user->add_lang_ext('acme/demo', 'demo');
+    // or
+    $user->add_lang_ext('acme/demo', array('demo', 'demo2'));
 
 Using the Language System in template files
 ===========================================
@@ -109,7 +111,8 @@ assign these in the PHP file; language entries of loaded language files can be
 used automatically.
 
 To use the language entry with the key ``MY_KEY`` in a template file, just write
-``{L_MY_KEY}`` in the template - it's as simple as that.
+``{L_MY_KEY}`` in the template (phpBB syntax) or ``{{ lang('MY_KEY') }}`` (new
+twig syntax).
 
 Add new entries
 ===============
