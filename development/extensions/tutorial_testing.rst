@@ -10,6 +10,7 @@ This tutorial explains:
  * `Unit tests`_
  * `Unit tests with database interaction`_
  * `Functional testing`_
+ * `Continuous integration with Travis CI`_
 
 .. warning::
 
@@ -743,3 +744,170 @@ Now the tests will pass correctly::
     takes another 20 to 100 seconds, depending on various configurations, for
     the first functional tests. Subsequent functional tests **do not reinstall**
     the board, so they do not have the huge setup time.
+
+Continuous integration with Travis CI
+=====================================
+
+As a final step in this tutorial, we want to explain testing your extension on
+`Travis CI <https://travis-ci.org/>`_ (free of charge, when your project is
+public). In order to do that, you need to set up your extension as a project on
+`GitHub <https://github.com>`_ (free of charge, when your project is public).
+
+If you need help, setting up git and creating your GitHub project, please have
+a look at the `Help section <https://help.github.com/>`_ on Github. Especially
+the two highlighted topics at the top:
+
+* `Set Up Git <https://help.github.com/articles/set-up-git>`_
+* `Create A Repo <https://help.github.com/articles/create-a-repo>`_
+
+.. note::
+
+    It is recommended to use the root of the extension (``ext/acme/demo``) also
+    as root for the repository. Otherwise the scripts that phpBB provides for
+    easy test execution on Travis CI will not work correctly.
+
+Travis CI configuration file
+----------------------------
+
+When you are done with that, we need to add two files to our extension. The
+first file is the ``.travis.yml`` file:
+
+.. note::
+
+    If you have trouble generating the file, because it has a leading dot, try
+    naming the file ``.travis.yml.`` (with a leading and trailing dot). This
+    will allow you to create the file on most operating systems.
+
+    The file should now also be hidden. If you can not see it anymore, your
+    file explorer should have an option to make hidden files visible again.
+
+.. code-block:: yaml
+
+    language: php
+
+    matrix:
+      include:
+        - php: 5.3.3
+          env: DB=mysqli
+        - php: 5.3
+          env: DB=mysqli # MyISAM
+        - php: 5.4
+          env: DB=mysqli
+        - php: 5.4
+          env: DB=mysql
+        - php: 5.4
+          env: DB=mariadb
+        - php: 5.4
+          env: DB=postgres
+        - php: 5.4
+          env: DB=sqlite3
+        - php: 5.5
+          env: DB=mysqli
+        - php: 5.6
+          env: DB=mysqli
+        - php: hhvm
+          env: DB=mysqli
+      allow_failures:
+        - php: hhvm
+      fast_finish: true
+
+    env:
+      global:
+        - EXTNAME="acme/demo"  # CHANGE name of the extension HERE
+        - SNIFF="1"            # Should we run code sniffer on your code?
+        - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
+        - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
+        - PHPBB_BRANCH="3.1.x"
+
+    branches:
+      only:
+        - master
+        - /^\d+(\.\d+)?\.x$/
+
+    install:
+      - composer install --dev --no-interaction --prefer-source
+      - travis/prepare-phpbb.sh $EXTNAME $PHPBB_BRANCH
+      - cd ../../phpBB3
+      - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
+      - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION
+
+    before_script:
+      - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION
+
+    script:
+      - sh -c "if [ '$SNIFF' != '0' ]; then travis/ext-sniff.sh $DB $TRAVIS_PHP_VERSION $EXTNAME; fi"
+      - sh -c "if [ '$IMAGE_ICC' != '0' ]; then travis/check-image-icc-profiles.sh $DB $TRAVIS_PHP_VERSION; fi"
+      - phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/travis/phpunit-$DB-travis.xml --bootstrap ./tests/bootstrap.php
+      - sh -c "if [ '$EPV' != '0' ] && [ '$TRAVIS_PHP_VERSION' = '5.3.3' ] && [ '$DB' = 'mysqli' ]; then phpBB/ext/$EXTNAME/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
+
+.. note::
+
+    You should not need to make any changes in this file, apart from the
+    following section, which should be quite self explaining:
+
+    .. code-block:: yaml
+
+        env:
+          global:
+            - EXTNAME="acme/demo"  # CHANGE name of the extension HERE
+            - SNIFF="1"            # Should we run code sniffer on your code?
+            - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
+            - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
+            - PHPBB_BRANCH="3.1.x"
+
+Preparing phpBB
+---------------
+
+The second file we need to create is a helper file called
+``travis/prepare-phpbb.sh``, that is used by Travis CI, to set up the phpBB
+installation from GitHub for us:
+
+.. warning::
+
+    You should not edit the content of this file!
+
+.. code-block:: bash
+
+    #!/bin/bash
+    #
+    # This file is part of the phpBB Forum Software package.
+    #
+    # @copyright (c) phpBB Limited <https://www.phpbb.com>
+    # @license GNU General Public License, version 2 (GPL-2.0)
+    #
+    # For full copyright and license information, please see
+    # the docs/CREDITS.txt file.
+    #
+    set -e
+    set -x
+
+    EXTNAME=$1
+    BRANCH=$2
+    EXTPATH_TEMP=$3
+
+    # Copy extension to a temp folder
+    mkdir ../../tmp
+    cp -R . ../../tmp
+    cd ../../
+
+    # Clone phpBB
+    git clone --depth=1 "git://github.com/phpbb/phpbb.git" "phpBB3" --branch=$BRANCH
+
+Enable Travis CI on GitHub
+--------------------------
+
+As a last step you need to enable Travis CI on GitHub.
+
+    1. Open your repository, e.g. `<https://github.com/phpbb/phpbb-ext-acme-demo>`_,
+    2. Go to "Settings"
+    3. "Webhooks & Services"
+    4. In the "Services" table press the "Add Service" button and search for ``Travis CI``
+
+When you now commit and push your the travis files from above to your ``master``
+branch, the unit, database and functional tests will be executed.
+This helps to avoids have a regression, so basically breaking another part of
+your code, while fixing a bug on one end.
+
+If your tests fail after committing changes one day, you will receive a
+notification email from Travis CI, so you can fix it, before submitting it to
+the customisation database for validation.
