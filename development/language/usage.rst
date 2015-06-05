@@ -80,19 +80,23 @@ pass the name with the subdirectory but without extension as argument of setup.
 
     $user->setup('search');
     // or
-    $user->setup('ucp');
-    // or
     $user->setup(array('ucp', 'search'));
 
 Since ``phpbb\user::setup()`` must only be called once,
 ``phpbb\language\language::add_lang()`` has to be used, to load additional
 language files, after ``phpbb\user::setup()`` has already been called.
 
+.. code-block:: php
+
+    $language->add_lang('search');
+    // or
+    $language->add_lang(array('ucp', 'search'));
+
 Loading from an extension
 -------------------------
 
 To load a file from an extension
-you need to use ``phpbb\language\language::add_lang_ext()`` which takes
+you need to use ``phpbb\language\language::add_lang()`` which takes
 the vendor + extension name as first argument and the array of language files as
 a second argument.
 
