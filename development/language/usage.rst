@@ -119,6 +119,23 @@ To use the language entry with the key ``MY_KEY`` in a template file, just write
 ``{L_MY_KEY}`` in the template (phpBB syntax) or ``{{ lang('MY_KEY') }}`` (new
 twig syntax).
 
+Javascript
+----------
+
+If the language entry is going to be used inside of JavaScript, it must be properly
+escaped. This is easy to achieve by using ``{LA_MY_KEY}`` in the template (phpBB 
+syntax) or ``{{ lang('MY_KEY')|e('js') }}`` (new twig syntax).
+
+.. note::
+
+    When using language extries in the JavaScript context with the new twig syntax,
+    the following methods are possible:
+
+    * ``{{ lang('MY_KEY')|escape('js') }}`` Twig's native JavaScript context escape filter.
+    * ``{{ lang('MY_KEY')|e('js') }}`` Short-hand version for calling ``escape`` using ``e``.
+    * ``{{ lang('MY_KEY')|escape('addslashes') }}`` phpBB's legacy addslashes escape filter.
+    * ``{{ lang('MY_KEY')|e('addslashes') }}`` Short-hand version for calling ``escape`` using ``e``.
+
 Add new entries
 ===============
 
