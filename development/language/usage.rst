@@ -125,10 +125,11 @@ syntax) or ``{{ lang('MY_KEY')|e('js') }}`` (new twig syntax).
 
     When using language extries in the JavaScript context with the new twig syntax,
     the following methods are possible:
-    ``{{ lang('MY_KEY')|escape('js') }}`` Twig's native JavaScript context escape filter.
-    ``{{ lang('MY_KEY')|e('js') }}`` Short-hand version for calling ``escape`` using ``e``.
-    ``{{ lang('MY_KEY')|escape('addslashes') }}`` phpBB's legacy addslashes escape filter.
-    ``{{ lang('MY_KEY')|e('addslashes') }}`` Short-hand version for calling ``escape`` using ``e``.
+
+    * ``{{ lang('MY_KEY')|escape('js') }}`` Twig's native JavaScript context escape filter.
+    * ``{{ lang('MY_KEY')|e('js') }}`` Short-hand version for calling ``escape`` using ``e``.
+    * ``{{ lang('MY_KEY')|escape('addslashes') }}`` phpBB's legacy addslashes escape filter.
+    * ``{{ lang('MY_KEY')|e('addslashes') }}`` Short-hand version for calling ``escape`` using ``e``.
 
 Add new entries
 ===============
