@@ -22,12 +22,12 @@ Using the Language System in php
 ================================
 
 The object holding the language dictionary for the current user is the ``$user``
-object (``phpbb\user`` class). To get the translation of a language entry inside
-of php code, call the ``phpbb\user::lang()`` method:
+object (``phpbb\language\language`` class). To get the translation of a language
+entry inside of php code, call the ``phpbb\language\language::lang()`` method:
 
 .. code-block:: php
 
-    $user->lang('LANG_KEY');
+    $language->lang('LANG_KEY');
 
 You can also insert values into translated string. Use ``%s`` as placeholders
 for string in the language string and ``%d`` for integers:
@@ -35,11 +35,11 @@ for string in the language string and ``%d`` for integers:
 .. code-block:: php
 
     // Language string: "My translation has a %s"
-    echo $user->lang('LANG_KEY', 'parameter');
+    echo $language->lang('LANG_KEY', 'parameter');
     // Output: "My translation has a parameter"
 
     // Language string: "My translation has %d parameter"
-    echo $user->lang('LANG_KEY', 1);
+    echo $language->lang('LANG_KEY', 1);
     // Output: "My translation has 1 parameter"
 
 .. warning::
@@ -55,13 +55,14 @@ for string in the language string and ``%d`` for integers:
 The dictionary is not loaded into memory all at once, but is split up in several
 files, which have to be manually loaded on demand. The files are stored inside
 the language directory, named after its
-`language tag <https://area51.phpbb.com/docs/31x/coding-guidelines.html#translation>`_,
+`language tag <https://area51.phpbb.com/docs/master/coding-guidelines.html#translation>`_,
 where one subdirectory is used for each installed language. The default language
 files are in the root of that subdirectory, while ACP language files go into the
 ``/acp`` subdirectory; email templates are placed in the ``/email``
 subdirectory.
 
 .. note::
+
     Files for extensions should be placed in the extension's ``/language``
     directory.
 
@@ -79,27 +80,31 @@ pass the name with the subdirectory but without extension as argument of setup.
 
     $user->setup('search');
     // or
-    $user->setup('ucp');
-    // or
     $user->setup(array('ucp', 'search'));
 
 Since ``phpbb\user::setup()`` must only be called once,
-``phpbb\user::add_lang()`` has to be used, to load additional language files,
-after ``phpbb\user::setup()`` has already been called.
+``phpbb\language\language::add_lang()`` has to be used, to load additional
+language files, after ``phpbb\user::setup()`` has already been called.
+
+.. code-block:: php
+
+    $language->add_lang('search');
+    // or
+    $language->add_lang(array('ucp', 'search'));
 
 Loading from an extension
 -------------------------
 
 To load a file from an extension
-you need to use ``phpbb\user::add_lang_ext()`` which takes
+you need to use ``phpbb\language\language::add_lang()`` which takes
 the vendor + extension name as first argument and the array of language files as
 a second argument.
 
 .. code-block:: php
 
-    $user->add_lang_ext('acme/demo', 'demo');
+    $language->add_lang('demo', 'acme/demo');
     // or
-    $user->add_lang_ext('acme/demo', array('demo', 'demo2'));
+    $language->add_lang(array('demo', 'demo2'), 'acme/demo');
 
 Using the Language System in template files
 ===========================================
