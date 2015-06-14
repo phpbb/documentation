@@ -20,7 +20,7 @@ This tutorial explains:
 Unit Tests
 ==========
 
-Since unit tests are explained more in details in the
+Since unit tests are explained in more detail in the
 :doc:`../testing/unit_testing` section of the general testing documentation and
 require no changes for extensions, we only add a quick example here.
 
@@ -146,15 +146,16 @@ Using mocks
 -----------
 
 In the ``setUp()`` method we create our controller object. However, we do not
-use the actual classes of phpBB which are used by the controller, when opening
+use the actual phpBB classes which are used by the controller when opening
 the page. Instead
 `phpunit mocks <https://phpunit.de/manual/current/en/test-doubles.html>`_ are
 injected.
 
-These mocks allow to check how often a method is called, what the arguments are
-and let you specify the return value. This helps us to verify that **our**
-controller code behaves as expected. We do not want to get an error, when phpBB
-itself behaves unexpected.
+These mocks allow us to check how often a method is called, what the arguments
+are and let us specify the return value. This helps us to verify that **our**
+controller code behaves as expected. These mocks also help prevent getting
+false errors in cases where using the actual phpBB classes may behave
+unexpectedly.
 
 Testing a method
 ----------------
@@ -187,14 +188,15 @@ correctly the test will pass.
 .. note::
 
     Make sure that the name of your testing method starts with ``test``.
-    Otherwise it is not being executed as a test by phpunit.
+    Otherwise the test will not be executed by phpunit.
 
 Data providers
 --------------
 
-For the normal case we use a data provider. A data provider is a method that
-returns an array of arrays. The inner array contains the arguments for the
-``test`` method.
+In most cases we will want to provide some test data to our unit test methods.
+A data provider is a method that returns an array of arrays containing input
+variables and expected output variables. The inner array contains the arguments
+for the ``test`` method.
 
 .. code-block:: php
 
@@ -206,7 +208,8 @@ returns an array of arrays. The inner array contains the arguments for the
             );
         }
 
-So in our case the test will be called twice, once with the arguments:
+This data provider contains two arrays of test data, so our test will be called
+twice, once with the arguments:
 
 * 'foo'
 * true
@@ -218,8 +221,9 @@ and a second time with:
 * false
 * 'DEMO_HELLO'
 
-In the test we then tell the ``phpbb\config\config`` mock to return the
-specified value which is passed in as an argument.
+In the test we then tell the ``phpbb\config\config`` mock to expect to be
+called only once, and to return the specified value (which is passed in as an
+argument) for the ``acme_demo_goodbye`` config variable.
 
 .. code-block:: php
 
@@ -304,7 +308,7 @@ The file should be stored as ``ext/acme/demo/phpunit.xml.dist``:
         </filter>
     </phpunit>
 
-Now we can finally run the tests by executing the following command::
+Now we can finally run the test suite by executing the following command::
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
     PHPUnit 4.1.0 by Sebastian Bergmann.
@@ -317,6 +321,21 @@ Now we can finally run the tests by executing the following command::
 
     OK (3 tests, 12 assertions)
 
+To run only the tests from one file just append the relative path to the call::
+
+
+    $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist phpBB/ext/acme/demo/tests/controller/main_test.php
+    PHPUnit 4.1.0 by Sebastian Bergmann.
+
+    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+
+    ...
+
+    Time: 92 ms, Memory: 9.00Mb
+
+    OK (3 tests, 12 assertions)
+
+
 Unit tests with database interaction
 ====================================
 
@@ -326,8 +345,8 @@ that phpBB's unit tests set up by default.
 Migration with database changes
 -------------------------------
 
-We add a new migration file
-``ext/acme/demo/migrations/add_database_changes.php`` now, which contains some
+Our extension has a migration file
+``ext/acme/demo/migrations/add_database_changes.php``, which contains some
 database changes, so we can test them:
 
 .. code-block:: php
@@ -400,7 +419,7 @@ database changes, so we can test them:
 Testing database changes
 ------------------------
 
-If we add a new test, that checks for the existence of the table, we will see,
+If we add a new test that checks for the existence of the table, we will see
 that the test fails:
 
 .. code-block:: php
@@ -521,7 +540,7 @@ test and returning an array with the extension name:
 
     ...
 
-and now the execution passes successfully::
+and now the test passes successfully::
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
     PHPUnit 4.1.0 by Sebastian Bergmann.
@@ -536,11 +555,11 @@ and now the execution passes successfully::
 
 .. note::
 
-    As you could see, the time for the test execution went up from a few
-    hundred milliseconds to a few seconds. This is, because database tests
+    As you can see, the time for the test execution went up from a few
+    hundred milliseconds to a few seconds. This is because database tests
     set up the database and populate it, which just takes time.
 
-    Therefor it is recommended to only use database tests, when you really need
+    Therefor it is recommended to only use database tests when you really need
     the database. It is better to split your test file into a database-test and
     a non-database one, to keep the run time short.
 
@@ -707,7 +726,7 @@ Running this test, however, will fail::
     FAILURES!
     Tests: 9, Assertions: 49, Failures: 1.
 
-The reason is, that the test suite compares the response for the correct format
+The reason is that the test suite compares the response for the correct format
 (valid HTML, without debug errors) and a successful status code ``200``.
 
 Therefor we need to adjust the bertie test, because we return a ``403`` status
@@ -740,10 +759,10 @@ Now the tests will pass correctly::
 .. note::
 
     Functional tests are **slow**. Depending on your server, it might take up to
-    2 seconds per page view. phpBB is installed via page views aswell, which
+    2 seconds per page view. phpBB is installed via page views as well, which
     takes another 20 to 100 seconds, depending on various configurations, for
     the first functional tests. Subsequent functional tests **do not reinstall**
-    the board, so they do not have the huge setup time.
+    the board, so they do not have the long setup time.
 
 Continuous integration with Travis CI
 =====================================
@@ -753,7 +772,7 @@ As a final step in this tutorial, we want to explain testing your extension on
 public). In order to do that, you need to set up your extension as a project on
 `GitHub <https://github.com>`_ (free of charge, when your project is public).
 
-If you need help, setting up git and creating your GitHub project, please have
+If you need help setting up git and creating your GitHub project, please have
 a look at the `Help section <https://help.github.com/>`_ on Github. Especially
 the two highlighted topics at the top:
 
@@ -782,6 +801,8 @@ first file is the ``.travis.yml`` file:
     file explorer should have an option to make hidden files visible again.
 
 .. code-block:: yaml
+
+    sudo: required
 
     language: php
 
@@ -843,7 +864,7 @@ first file is the ``.travis.yml`` file:
 .. note::
 
     You should not need to make any changes in this file, apart from the
-    following section, which should be quite self explaining:
+    following section, which should be quite self explanatory:
 
     .. code-block:: yaml
 
@@ -903,11 +924,11 @@ As a last step you need to enable Travis CI on GitHub.
     3. "Webhooks & Services"
     4. In the "Services" table press the "Add Service" button and search for ``Travis CI``
 
-When you now commit and push your the travis files from above to your ``master``
+When you now commit and push your the travis files from above to ``master``
 branch, the unit, database and functional tests will be executed.
-This helps to avoids have a regression, so basically breaking another part of
-your code, while fixing a bug on one end.
+Tests help to avoid causing a regression (breaking another part of your code)
+while fixing bugs or adding new features and other changes to your extension.
 
-If your tests fail after committing changes one day, you will receive a
+If your tests fail after comitting changes one day, you will receive a
 notification email from Travis CI, so you can fix it, before submitting it to
 the customisation database for validation.
