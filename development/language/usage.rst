@@ -123,7 +123,7 @@ syntax) or ``{{ lang('MY_KEY')|e('js') }}`` (new twig syntax).
 
 .. note::
 
-    When using language extries in the JavaScript context with the new twig syntax,
+    When using language entries in the JavaScript context with the new twig syntax,
     the following methods are possible:
 
     * ``{{ lang('MY_KEY')|escape('js') }}`` Twig's native JavaScript context escape filter.
