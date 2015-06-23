@@ -137,8 +137,6 @@ the phpBB Extensions Team here, to perform some basic validation when running
 our tests on Travis CI in :doc:`tutorial_testing`. Since we always want to have
 the newest version, we require ``dev-master``.
 
-.. todo:: add link to testing/travis section.
-
 extra
 -----
 

@@ -360,7 +360,10 @@ Extension.
 Database Changes, UMIL replaced by Migrations
 =============================================
 
-`Wiki/Migrations <https://wiki.phpbb.com/Migrations>`_
+.. seealso::
+
+   For more documentation about migrations, see the relevant documentation at
+   :doc:`../migrations/index`
 
 Basically migrations to the same as your 3.0 UMIL files. It performs the
 database changes of your MOD/Extension. The biggest difference between
