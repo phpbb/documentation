@@ -924,11 +924,12 @@ As a last step you need to enable Travis CI on GitHub.
     3. "Webhooks & Services"
     4. In the "Services" table press the "Add Service" button and search for ``Travis CI``
 
-When you now commit and push your the travis files from above to ``master``
-branch, the unit, database and functional tests will be executed.
-Tests help to avoid causing a regression (breaking another part of your code)
-while fixing bugs or adding new features and other changes to your extension.
+When you now commit and push the travis files from above to the ``master``
+branch of your repository, the unit, database and functional tests will be executed.
+Tests help avoid causing regressions (breaking other parts of your code)
+by alerting you to any problems resulting from changes to your code while fixing bugs,
+adding new features and other changes to your extension.
 
-If your tests fail after comitting changes one day, you will receive a
-notification email from Travis CI, so you can fix it, before submitting it to
-the customisation database for validation.
+If your tests fail after comitting changes, you will receive a notification email
+from Travis CI, so you can fix it, before submitting it to the customisation
+database for validation.
