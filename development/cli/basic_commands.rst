@@ -9,11 +9,11 @@ Common commands that can be run at any time.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php help
+    $ php bin/phpbbcli.php help
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php list
+    $ php bin/phpbbcli.php list
 
 .. csv-table::
    :header: "Command", "Usage"

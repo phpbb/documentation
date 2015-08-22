@@ -14,4 +14,4 @@ Purge the cache
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php cache:purge
+    $ php bin/phpbbcli.php cache:purge

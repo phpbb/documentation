@@ -14,4 +14,4 @@ Updates the database by applying migrations.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php db:migrate
+    $ php bin/phpbbcli.php db:migrate

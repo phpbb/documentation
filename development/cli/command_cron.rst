@@ -14,7 +14,7 @@ Prints a list of ready and unready cron jobs.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php cron:list
+    $ php bin/phpbbcli.php cron:list
 
 cron:run
 ========
@@ -23,11 +23,11 @@ Runs all ready cron tasks.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php cron:run
+    $ php bin/phpbbcli.php cron:run
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php cron:run task_name
+    $ php bin/phpbbcli.php cron:run task_name
 
 .. csv-table::
    :header: "Arguments", "Usage"

@@ -14,4 +14,4 @@ Finds migrations that are not depended on.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php dev:migration-tips
+    $ php bin/phpbbcli.php dev:migration-tips

@@ -14,4 +14,4 @@ Recalculates the user_email_hash column of the users table.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php fixup:recalculate-email-hash
+    $ php bin/phpbbcli.php fixup:recalculate-email-hash

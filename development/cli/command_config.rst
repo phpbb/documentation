@@ -14,7 +14,7 @@ Deletes a configuration option.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:delete config_key_name
+    $ php bin/phpbbcli.php config:delete config_key_name
 
 .. csv-table::
    :header: "Arguments", "Usage"
@@ -29,11 +29,11 @@ Gets a configuration option’s value.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:get config_key_name
+    $ php bin/phpbbcli.php config:get config_key_name
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:get config_key_name --no-newline
+    $ php bin/phpbbcli.php config:get config_key_name --no-newline
 
 .. csv-table::
    :header: "Arguments", "Usage"
@@ -54,15 +54,15 @@ Increments a configuration option’s value.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:increment config_key_name 1
+    $ php bin/phpbbcli.php config:increment config_key_name 1
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:increment config_key_name 1 --dynamic
+    $ php bin/phpbbcli.php config:increment config_key_name 1 --dynamic
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:increment config_key_name 1 -d
+    $ php bin/phpbbcli.php config:increment config_key_name 1 -d
 
 .. csv-table::
    :header: "Arguments", "Usage"
@@ -84,15 +84,15 @@ Sets a configuration option’s value.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:set config_key_name foo
+    $ php bin/phpbbcli.php config:set config_key_name foo
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:set config_key_name foo --dynamic
+    $ php bin/phpbbcli.php config:set config_key_name foo --dynamic
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:set config_key_name foo -d
+    $ php bin/phpbbcli.php config:set config_key_name foo -d
 
 .. csv-table::
    :header: "Arguments", "Usage"
@@ -114,15 +114,15 @@ Sets a configuration option’s value only if the old matches the current value.
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:set-atomic config_key_name foo bar
+    $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:set-atomic config_key_name foo bar --dynamic
+    $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar --dynamic
 
 .. code-block:: console
 
-    $php phpBB/bin/phpbbcli.php config:set-atomic config_key_name foo bar -d
+    $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar -d
 
 .. csv-table::
    :header: "Arguments", "Usage"
