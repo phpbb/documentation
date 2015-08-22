@@ -31,15 +31,15 @@ Gets a configuration option’s value.
 
     $ php bin/phpbbcli.php config:get config_key_name
 
-.. code-block:: console
-
-    $ php bin/phpbbcli.php config:get config_key_name --no-newline
-
 .. csv-table::
    :header: "Arguments", "Usage"
    :delim: |
 
    key | The configuration option’s name (required)
+
+.. code-block:: console
+
+    $ php bin/phpbbcli.php config:get config_key_name --no-newline
 
 .. csv-table::
    :header: "Options", "Usage"
@@ -56,6 +56,13 @@ Increments a configuration option’s value.
 
     $ php bin/phpbbcli.php config:increment config_key_name 1
 
+.. csv-table::
+   :header: "Arguments", "Usage"
+   :delim: |
+
+   key | The configuration option’s name (required)
+   increment | Amount to increment by (required)
+
 .. code-block:: console
 
     $ php bin/phpbbcli.php config:increment config_key_name 1 --dynamic
@@ -63,13 +70,6 @@ Increments a configuration option’s value.
 .. code-block:: console
 
     $ php bin/phpbbcli.php config:increment config_key_name 1 -d
-
-.. csv-table::
-   :header: "Arguments", "Usage"
-   :delim: |
-
-   key | The configuration option’s name (required)
-   increment | Amount to increment by (required)
 
 .. csv-table::
    :header: "Options", "Usage"
@@ -86,6 +86,13 @@ Sets a configuration option’s value.
 
     $ php bin/phpbbcli.php config:set config_key_name foo
 
+.. csv-table::
+   :header: "Arguments", "Usage"
+   :delim: |
+
+   key | The configuration option’s name (required)
+   value | New configuration value, use 0 and 1 to specify boolean values (required)
+
 .. code-block:: console
 
     $ php bin/phpbbcli.php config:set config_key_name foo --dynamic
@@ -93,13 +100,6 @@ Sets a configuration option’s value.
 .. code-block:: console
 
     $ php bin/phpbbcli.php config:set config_key_name foo -d
-
-.. csv-table::
-   :header: "Arguments", "Usage"
-   :delim: |
-
-   key | The configuration option’s name (required)
-   value | New configuration value, use 0 and 1 to specify boolean values (required)
 
 .. csv-table::
    :header: "Options", "Usage"
@@ -116,14 +116,6 @@ Sets a configuration option’s value only if the old matches the current value.
 
     $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar
 
-.. code-block:: console
-
-    $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar --dynamic
-
-.. code-block:: console
-
-    $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar -d
-
 .. csv-table::
    :header: "Arguments", "Usage"
    :delim: |
@@ -131,6 +123,14 @@ Sets a configuration option’s value only if the old matches the current value.
    key | The configuration option’s name (required)
    old | Current configuration value, use 0 and 1 to specify boolean values (required)
    new | New configuration value, use 0 and 1 to specify boolean values (required)
+
+.. code-block:: console
+
+    $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar --dynamic
+
+.. code-block:: console
+
+    $ php bin/phpbbcli.php config:set-atomic config_key_name foo bar -d
 
 .. csv-table::
    :header: "Options", "Usage"
