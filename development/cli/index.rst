@@ -7,5 +7,5 @@ phpBB ships with a set of Command Line Interface (CLI) tools that allow for easy
    :maxdepth: 1
    :glob:
 
-   basic_commands
+   getting_started
    *
