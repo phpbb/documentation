@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    development/coding_guidelines
+   cli/index
    extensions/index
    language/index
    migrations/index
