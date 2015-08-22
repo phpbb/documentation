@@ -8,7 +8,7 @@ Most operating systems ship with a built in command line application. For Mac OS
 
 To use phpBB's CLI on a web server, you will need SSH access to your web server. You can find out from your web hosting company if they offer SSH access and how to log into your web server from the CLI.
 
-Once you have accessed your web server via SSH, or if you are in a localhost development environemnt, you simply need to navigate to your phpBB forum directory via the "cd" command:
+Once you have accessed your web server via SSH, or if you are in a localhost development environment, you simply need to navigate to your phpBB forum directory via the "cd" command:
 
 .. code-block:: console
 
