@@ -2,7 +2,7 @@
 Getting started
 ===============
 
-The command line interface (CLI) is a useful utility for phpBB administrators who have access to a shell on the server they run phpBB on, as well as for extension developers.
+The command line interface (CLI) is a useful utility for phpBB administrators who have access to a shell on the server they run phpBB on, as well as for extension developers. It provides CLI commands for managing config values, extensions, running database migration, purging the cache, and more.
 
 Most operating systems ship with a built in command line application. For Mac OS and Ubuntu it is called "Terminal" and for Windows it is called "Command Prompt". Third party software such as PuTTy and iTerm can also be used.
 
@@ -25,25 +25,31 @@ From there, issuing commands is simply a matter of calling phpBB's CLI applicati
 General commands
 ================
 
-Common commands that can be run at any time.
-
-.. code-block:: console
-
-    $ php bin/phpbbcli.php help
+The ``list`` command will show a list of all available commands available for phpBB's CLI.
 
 .. code-block:: console
 
     $ php bin/phpbbcli.php list
 
-.. csv-table::
-   :header: "Command", "Usage"
-   :delim: |
+The ``help`` command will display general help for using phpBB's CLI.
 
-   help | Displays help for a command
-   list | Lists commands
+.. code-block:: console
 
-Options
-=======
+    $ php bin/phpbbcli.php help
+
+Using commands
+==============
+
+All phpBB commands have integrated help documentation available within the CLI. Use the ``--help`` option with any of phpBB's CLI commands to get detailed help for that command.
+
+.. code-block:: console
+
+    $ php bin/phpbbcli.php config:set --help
+
+The above command will display any required arguments and available options that can be used with the specified command, including example usages of the command.
+
+General options
+===============
 
 Common options that can be used with any of phpBB's CLI commands.
 
