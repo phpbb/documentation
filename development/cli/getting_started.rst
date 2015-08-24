@@ -2,9 +2,9 @@
 Getting started
 ===============
 
-The command line interface (CLI) is a useful utility for phpBB administrators who have access to a shell on the server they run phpBB on, as well as for extension developers. It provides CLI commands for managing config values, extensions, running database migration, purging the cache, and more.
+The command line interface (CLI) is a useful utility for phpBB administrators who have access to a shell (or SSH) on the server they run phpBB on, as well as for extension developers. It provides CLI commands for managing config values, extensions, running database migration, purging the cache, and more.
 
-Most operating systems ship with a built in command line application. For Mac OS and Ubuntu it is called "Terminal" and for Windows it is called "Command Prompt". Third party software such as PuTTy and iTerm can also be used.
+Most operating systems ship with a built in command line application. For Mac OS and Ubuntu it is called "Terminal" and for Windows it is called "Command Prompt". Third party software such as `PuTTy <http://www.putty.org>`_ and `iTerm <https://www.iterm2.com>`_ can also be used.
 
 To use phpBB's CLI on a web server, you will need SSH access to your web server. You can find out from your web hosting company if they offer SSH access and how to log into your web server from the CLI.
 
@@ -12,7 +12,7 @@ Once you have accessed your web server via SSH, or if you are in a localhost dev
 
 .. code-block:: console
 
-    $ cd /path/to/phpBB
+    $ cd path/to/phpBB
 
 From there, issuing commands is simply a matter of calling phpBB's CLI application.
 
@@ -40,7 +40,7 @@ The ``help`` command will display general help for using phpBB's CLI.
 Using commands
 ==============
 
-All phpBB commands have integrated help documentation available within the CLI. Use the ``--help`` option with any of phpBB's CLI commands to get detailed help for that command.
+All phpBB commands (as described when running the list command) have integrated help documentation available within the CLI. Use the ``--help`` option with any of phpBB's CLI commands to get detailed help for that command.
 
 .. code-block:: console
 
