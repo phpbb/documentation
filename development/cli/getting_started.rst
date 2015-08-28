@@ -40,13 +40,20 @@ The ``help`` command will display general help for using phpBB's CLI.
 Using commands
 ==============
 
-All phpBB commands (as described when running the list command) have integrated help documentation available within the CLI. Use the ``--help`` option with any of phpBB's CLI commands to get detailed help for that command.
+All phpBB commands (as described when running the ``list`` command) have integrated help documentation available within the CLI. Use the ``--help`` or ``-h`` option with any of phpBB's CLI commands to view detailed help for that command.
 
 .. code-block:: console
 
     $ php bin/phpbbcli.php config:set --help
 
-The above command will display any required arguments and available options that can be used with the specified command, including example usages of the command.
+The above command will display information about the arguments and options that can be used with the specified command, in this example ``config:set``. For example, the above command will output:
+
+.. code-block:: console
+
+    Usage:
+     config:set [-d|--dynamic] key value
+
+Arguments or options shown inside of brackets indicates that they are optional to use. This shows us that the ``key`` and ``value`` arguments are required. However, the ``-d`` or ``--dynamic`` options available for this command are optional. Also note that ``-d`` is shorthand for ``--dynamic``. Most options have a shorthand equivalent.
 
 General options
 ===============
