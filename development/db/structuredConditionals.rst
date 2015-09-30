@@ -129,7 +129,7 @@ Why not Objects?
 -------
 
 1. Tranversing Objects forming a tree is **seriously slow** in php.
-	1.1 This wouln't much be noticed on vanilla phpBB but as you add extensions, it would easily be dead slow.
+	1.1 This wouln't much be noticed on vanilla phpBB but, as you add extensions, it would easily be dead slow.
 2. Doing this with immutable objects is completely unviable.
 	2.1 It would require the code that manipulates it to know how to rebuild everything related for almost any change.
 3. Mutable objects with an easy-enough-to-use API is hell to design.
@@ -141,6 +141,110 @@ Mostly due to those reasons above arrays was decided as the medium.
 How to use
 =============
 
+This system is used when building queries using the db's sql_build_query() method.
+
+While building the array to send to it as the 2nd parameter, when writting the WHERE clause, you my use this system instead of simply typing a string or making your own accumulator of conditionals.
+
+For the sake of this example, I will simulate an execution that exists in phpBB and assume that the query has to go through an event that does a small change to it.
+
+
+
+
+How to use in phpBB
+=============
+In the ideal situation, all DB queries that may use multiple stages where SQL data is manipulated or changed should use this, specially if they also go through an event.
+
+
+Translate SQL to the structured conditional
+----------
+Here's a step-by-step guide to transform a query made using a string into the format that uses
+
+Now imagine you want something like this (source: viewforum.php:277):
+
+.. code-block:: php
+ 
+	$sql = 'SELECT COUNT(topic_id) AS num_topics
+	FROM ' . TOPICS_TABLE . "
+	WHERE forum_id = $forum_id
+		AND (topic_last_post_time >= $min_post_time
+			OR topic_type = " . POST_ANNOUNCE . '
+			OR topic_type = ' . POST_GLOBAL . ')
+		AND ' . $phpbb_content_visibility->get_visibility_sql('topic', $forum_id);
+
+		
+Looks quite direct to the point, right?
+OK, **step1**, prepare it for sql_build_query();
+
+According to the manual for this transformation, it should look like this:
+
+
+.. code-block:: php
+ 
+	$sql_ary = array(
+		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
+		'FROM'		=> array(
+			TOPICS_TABLE		=> '',
+		),
+		'WHERE'		=> "forum_id = $forum_id
+				AND (topic_last_post_time >= $min_post_time
+					OR topic_type = " . POST_ANNOUNCE . '
+					OR topic_type = ' . POST_GLOBAL . ')
+				AND ' . $phpbb_content_visibility->get_visibility_sql('topic', $forum_id),
+	);
+	
+	$db->sql_build_query('SELECT', $sql_ary);
+
+That's fine and all but it does not use this processor yet.
+**Step 2**
+Now to focus on the WHERE clause only
+
+Hum... Let's see... There's a set of AND's to join in. Let's start there.
+
+.. code-block:: php
+ // ...
+		'WHERE'		=> array('AND',
+			"forum_id = $forum_id",
+			"topic_last_post_time >= $min_post_time
+					OR topic_type = " . POST_ANNOUNCE . '
+					OR topic_type = ' . POST_GLOBAL,
+			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
+		),
+// ...
+
+
+.. code-block:: php
+ // ...
+		'WHERE'		=> array('AND',
+			array('forum_id', '=', $forum_id),
+			array('OR',
+				array('topic_last_post_time', '>=', $min_post_time),
+				array('topic_type', '=', POST_ANNOUNCE),
+				array('topic_type', '=', POST_GLOBAL),
+			),
+			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
+// ...
+
+
+
+.. code-block:: php
+ 
+	$sql_ary = array(
+		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
+		'FROM'		=> array(
+			TOPICS_TABLE		=> '',
+		),
+		'WHERE'		=> array('AND',
+			array('forum_id', '=', $forum_id),
+			array('OR',
+				array('topic_last_post_time', '>=', $min_post_time),
+				array('topic_type', '=', POST_ANNOUNCE),
+				array('topic_type', '=', POST_GLOBAL),
+			),
+			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
+		),
+	);
+	
+	$db->sql_build_query('SELECT', $sql_ary);
 
 
 
