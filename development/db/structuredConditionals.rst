@@ -76,6 +76,7 @@ The 2nd type is variable length. It is identified by having the string 'AND', 'O
 The first element contains the boolean operator that is used to join together all its other elements.
 
 E.g.
+
 .. code-block:: php
 
 		array('OR',
@@ -85,6 +86,7 @@ E.g.
 		)
 
 which outputs (after reindenting)
+
 .. code-block:: php
 
 		t.forum_id = 3 OR
@@ -98,7 +100,7 @@ type3
 The 3rd type has 5 elements
 Left hand, operator, sub query operator, sub query SELECT type, the sub query.
 
-This is used when you require a subquery in your DB query.
+This is used when you require a subquery in your DB query.  
 Essentially, what this does is that it will call sql_build_query() recursively with the 4th and the 5th elements.
 
 .. code-block:: php
@@ -241,7 +243,7 @@ There! Better! But it still isn't that easy to work with. There's a string for e
 			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
 	// ...
 
-There you go! No variable interpolation, no explicit string concatenation, in case of a requirement to build it or change it later, it becomes a very straightforwar task (see next section) and all data is properly escaped.
+There you go! No variable interpolation, no explicit string concatenation, in case of a requirement to build it or change it later, it becomes a very straightforward task (see next section) and all data is properly escaped.
 
 Just for the last piece of code in this section, here's how the full SQL query should be written when using this system:
 
@@ -269,10 +271,8 @@ Just for the last piece of code in this section, here's how the full SQL query s
 
 Modify the structured conditional in an extension
 ----------
-One of the major reasons why this feature is designed in this very way is mostly because of what is exemplified in this section.
-
-Same as the sub-section above, I will present you practical example(s) on how to use this feature.
-
+One of the major reasons why this feature is designed in this very way is mostly because of what is exemplified in this section.  
+Same as the sub-section above, I will present you practical example(s) on how to use this feature.  
 Piking up the code above as an example:
 	
 .. code-block:: php
