@@ -200,7 +200,8 @@ Now to focus on the WHERE clause only
 Hum... Let's see... There's a set of AND's to join in. Let's start there.
 
 .. code-block:: php
- // ...
+
+	// ...
 		'WHERE'		=> array('AND',
 			"forum_id = $forum_id",
 			"(topic_last_post_time >= $min_post_time
@@ -208,12 +209,13 @@ Hum... Let's see... There's a set of AND's to join in. Let's start there.
 					OR topic_type = ' . POST_GLOBAL . ')',
 			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
 		),
-// ...
+	// ...
 
 Inside the set of AND's, one of them is a set of OR's.
 
 .. code-block:: php
- // ...
+
+	// ...
 		'WHERE'		=> array('AND',
 			"forum_id = $forum_id",
 			array('OR',
@@ -223,12 +225,13 @@ Inside the set of AND's, one of them is a set of OR's.
 			),
 			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
 		),
-// ...
+	// ...
 
 There! Better! But it still isn't that easy to work with. There's a string for each comparison. BUT! If I use the type1 array mentioned above, I can separate each one of those into a single thing! In this case...
 
 .. code-block:: php
- // ...
+
+	// ...
 		'WHERE'		=> array('AND',
 			array('forum_id', '=', $forum_id),
 			array('OR',
@@ -237,7 +240,7 @@ There! Better! But it still isn't that easy to work with. There's a string for e
 				array('topic_type', '=', POST_GLOBAL),
 			),
 			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
-// ...
+	// ...
 
 There you go! No variable interpolation, no explicit string concatenation, in case of a requirement to build it or change it later, it becomes a very straightforwar task (see next section) and all data is properly escaped.
 
