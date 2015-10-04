@@ -149,7 +149,6 @@ For the sake of this example, I will simulate an execution that exists in phpBB 
 
 
 
-
 How to use in phpBB
 =============
 In the ideal situation, all DB queries that may use multiple stages where SQL data is manipulated or changed should use this, specially if they also go through an event.
@@ -204,13 +203,29 @@ Hum... Let's see... There's a set of AND's to join in. Let's start there.
  // ...
 		'WHERE'		=> array('AND',
 			"forum_id = $forum_id",
-			"topic_last_post_time >= $min_post_time
+			"(topic_last_post_time >= $min_post_time
 					OR topic_type = " . POST_ANNOUNCE . '
-					OR topic_type = ' . POST_GLOBAL,
+					OR topic_type = ' . POST_GLOBAL . ')',
 			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
 		),
 // ...
 
+Inside the set of AND's, one of them is a set of OR's.
+
+.. code-block:: php
+ // ...
+		'WHERE'		=> array('AND',
+			"forum_id = $forum_id",
+			array('OR',
+				"topic_last_post_time >= $min_post_time",
+				'topic_type = ' . POST_ANNOUNCE,
+				'topic_type = ' . POST_GLOBAL,
+			),
+			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
+		),
+// ...
+
+There! Better! But it still isn't that easy to work with. There's a string for each comparison. BUT! If I use the type1 array mentioned above, I can separate each one of those into a single thing! In this case...
 
 .. code-block:: php
  // ...
@@ -224,6 +239,9 @@ Hum... Let's see... There's a set of AND's to join in. Let's start there.
 			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
 // ...
 
+There you go! No variable interpolation, no explicit string concatenation, in case of a requirement to build it or change it later, it becomes a very straightforwar task (see next section) and all data is properly escaped.
+
+Just for the last piece of code in this section, here's how the full SQL query should be written when using this system:
 
 
 .. code-block:: php
