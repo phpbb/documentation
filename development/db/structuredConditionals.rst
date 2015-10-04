@@ -65,7 +65,7 @@ For the operator, there are 6 special values (everything else is taken literally
 5. IS
 6. IS_NOT
 
-All of them are special because they call the dbal's methods to process the data.
+All of them are special because they call the dbal's methods to process the data.  
 For example, if you use the **IN** operator, it calls $db->sql_in_set() with the right hand data.
 
 type2
@@ -97,7 +97,7 @@ which outputs (after reindenting)
 type3
 -------
 
-The 3rd type has 5 elements
+The 3rd type has 5 elements  
 Left hand, operator, sub query operator, sub query SELECT type, the sub query.
 
 This is used when you require a subquery in your DB query.  
@@ -333,6 +333,7 @@ Do notice that I kept the OR clause. This is just so that these changes have as 
 Anyway, moving on.
 
 In your function:
+
 .. code-block:: php
 	
 	function eventGrabber($event){
@@ -342,6 +343,7 @@ Below, I use nesting of "if", if you prefer, you may use exceptions instead.
 In order to access what we want, we can do it like this:
 
 .. code-block:: php
+
 	// May be required by PHP
 	$sql = $event['sql'];
 	// Is the element I expect there?
