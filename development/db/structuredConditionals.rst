@@ -265,6 +265,164 @@ Just for the last piece of code in this section, here's how the full SQL query s
 	$db->sql_build_query('SELECT', $sql_ary);
 
 
+Modify the structured conditional in an extension
+----------
+One of the major reasons why this feature is designed in this very way is mostly because of what is exemplified in this section.
+
+Same as the sub-section above, I will present you practical example(s) on how to use this feature.
+
+Piking up the code above as an example:
+	
+.. code-block:: php
+
+	$sql = array(
+		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
+		'FROM'		=> array(
+			TOPICS_TABLE		=> '',
+		),
+		'WHERE'		=> array('AND',
+			array('forum_id', '=', $forum_id),
+			array('OR',
+				array('topic_last_post_time', '>=', $min_post_time),
+				array('topic_type', '=', POST_ANNOUNCE),
+				array('topic_type', '=', POST_GLOBAL),
+			),
+			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
+		),
+	);
+
+
+Imagine you are building an extension that requires modifying that query above. For example, you want to make topic_last_post_time as a forced requirement for this query.
+In other words, you want the query to be like this:
+
+.. code-block:: php
+
+	$sql = array(
+		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
+		'FROM'		=> array(
+			TOPICS_TABLE		=> '',
+		),
+		'WHERE'		=> array('AND',
+			array('forum_id', '=', $forum_id),
+			array('topic_last_post_time', '>=', $min_post_time),
+			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
+		),
+	);
+
+Just as a good practice and to help other extension writers to modify this query in an easier way, let's make it like this instead:
+
+.. code-block:: php
+
+	$sql = array(
+		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
+		'FROM'		=> array(
+			TOPICS_TABLE		=> '',
+		),
+		'WHERE'		=> array('AND',
+			array('forum_id', '=', $forum_id),
+			array('OR',
+				array('topic_last_post_time', '>=', $min_post_time),
+			),
+			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
+		),
+	);
+
+Do notice that I kept the OR clause. This is just so that these changes have as little chance as possible to break other extensions.
+Anyway, moving on.
+
+In your function:
+.. code-block:: php
+	
+	function eventGrabber($event){
+	
+You will have an $event['sql'] which will contain the query.  
+Below, I use nesting of "if", if you prefer, you may use exceptions instead.  
+In order to access what we want, we can do it like this:
+
+.. code-block:: php
+	// May be required by PHP
+	$sql = $event['sql'];
+	// Is the element I expect there?
+	if(isset($sql['WHERE'][2][0])){
+		if(is_array($sql['WHERE'][2])){
+			if($sql['WHERE'][2][0] === 'OR'){
+				// This should be the array with the OR I wanted
+				if(isset($sql['WHERE'][2][0][1]) && $sql['WHERE'][2][0][1][0] === 'topic_last_post_time'){
+					// Confirmed to be what I want it to be!
+					// this array_slice() will remove the elements after the above-mentioned topic_last_post_time
+					$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
+					
+					$event['sql'] = $sql;
+					return;
+				}
+			} else {
+				// For example, write code to log this happened so that an admin can help you making your
+				// extension compatible with other extensions or even for you to be warned about phpBB changes.
+		} else {
+			// For example, write code to log this happened so that an admin can help you making your
+			// extension compatible with other extensions or even for you to be warned about phpBB changes.
+		}
+	} else {
+		// For example, write code to log this happened so that an admin can help you making your
+		// extension compatible with other extensions or even for you to be warned about phpBB changes.
+	}
+	
+	
+
+If you are thinking:
+Eh?!??!? That's too complicated... How is this better than before?!?!
+
+Well, I'm just safeguarding myself above. I'm just doing in a way to make sure it will surely work.
+If you don't feel like it, however, then this is enough:
+
+.. code-block:: php
+	
+	function myEventListener($event){
+		$sql = $event['sql'];
+		$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
+		$event['sql'] = $sql;
+	}
+
+Or to protect yourself slightly:
+
+.. code-block:: php
+	
+	function myEventListener($event){
+		$sql = $event['sql'];
+		if(!empty($sql['WHERE'][2][0][1]) && is_array($sql['WHERE'][2][0][1])){
+			$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
+		} else {
+			// For example, write code to log this happened so that an admin can help you making your
+			// extension compatible with other extensions or even for you to be warned about phpBB changes.
+		}
+		$event['sql'] = $sql;
+	}
+
+I've shown you the above one first because I wanted you to experience the wilness to do everybody's work the easiest and most flexible way.
+
+**Example 2:**
+
+Now imagining that you want to add a condition to the OR statement list.
+For example, you want sticky posts to not be counted.
+
+The long/self.protected way uses just about the same formula as 3 samples above.
+The short way is about as much as this:
+
+.. code-block:: php
+	
+	function myEventListener($event){
+		$sql = $event['sql'];
+		if(!empty($sql['WHERE'][2][0][1]) && is_array($sql['WHERE'][2][0][1])){
+			$sql['WHERE'][2][0][1][] = array('topic_type', '=', POST_STICKY);
+		} else {
+			// For example, write code to log this happened so that an admin can help you making your
+			// extension compatible with other extensions or even for you to be warned about phpBB changes.
+		}
+		$event['sql'] = $sql;
+	}
+	
+... And you are done. No Regex, no need to write down your own 'OR' or anything like that.
+As a bonus, if what you write follows basic rules on how SQL is written, it is guaranteed that the output will be valid SQL.
 
 Usage examples
 =============
