@@ -143,10 +143,9 @@ How to use
 
 This system is used when building queries using the db's sql_build_query() method.
 
-While building the array to send to it as the 2nd parameter, when writting the WHERE clause, you my use this system instead of simply typing a string or making your own accumulator of conditionals.
+While building the array to send to it as the 2nd parameter, when writting the WHERE clause, you may use this system instead of simply typing a string or making your own accumulator of conditionals.
 
-For the sake of this example, I will simulate an execution that exists in phpBB and assume that the query has to go through an event that does a small change to it.
-
+For the sake of the examples below, I will simulate an execution that exists in phpBB and assume that the query has to go through an event that does a small change to it.
 
 
 How to use in phpBB
@@ -156,7 +155,7 @@ In the ideal situation, all DB queries that may use multiple stages where SQL da
 
 Translate SQL to the structured conditional
 ----------
-Here's a step-by-step guide to transform a query made using a string into the format that uses
+Here's a step-by-step guide to transform a query made using a string into the format that this feature uses.
 
 Now imagine you want something like this (source: viewforum.php:277):
 
