@@ -13,12 +13,6 @@ If done correctly, incompatibilities between extensions that use the same SQL qu
 This is not magic thought It will definitely reduce the probability of inter-incompatibilities between extensions but it will not solve them by any means.
 
 
-Why use
-=============
-
-
-
-
 Main use-case ideals
 =============
 
