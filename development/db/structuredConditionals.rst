@@ -22,7 +22,7 @@ Main use-case ideals
 Why not...
 =============
 
-1. Doctrine dbal -> The issue with Doctrine dbal is that it's query builder is not ready for the 2nd major use case listed above. There is no way of altering an SQL query. If you want to alter something, you have to rebuild the whole SQL query.
+1. Doctrine dbal -> The issue with Doctrine dbal is that its query builder is not ready for the 2nd major use case listed above. There is no way of altering an SQL query. If you want to alter something, you have to rebuild the whole SQL query.
 2. Linq -> I didn't know the assistance of Linq until today. From what I searched, not only it has the same issue as Doctrine, while also its interface is unnecessarily complex for the common folk who just wants to change a small amount of information.
 
 
