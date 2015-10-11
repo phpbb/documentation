@@ -489,4 +489,16 @@ In phpBB's code
 	
 In phpBB's extensions code
 -------
+
+.. code-block:: php
 	
+	function myEventListener($event){
+		$sql = $event['sql'];
+		$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
+		$event['sql'] = $sql;
+	}
+
+
+
+
+More will come as people submit more useful examples
