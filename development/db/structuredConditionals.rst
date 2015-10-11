@@ -430,14 +430,7 @@ In phpBB's code
 -------
 
 
-.. code-block:: php	
-	
-	array('f.forum_id', '=', 'ANY', 'SELECT', array(
-							'SELECT' => array(/*...*/),
-							'FROM' => array(/*...*/),
-						)
-		)
-		
+.. code-block:: php
 		
 	$db->sql_build_query('SELECT', array(
 		'SELECT' => array('f.forum_id', 'f.forum_title'),
@@ -474,6 +467,7 @@ In phpBB's code
 				array('t.topic_poster', '<>', 5),
 			),
 
+.. code-block:: php
 
 		array('AND',
 				array('t.forum_id', '=', 3),
