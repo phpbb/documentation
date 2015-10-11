@@ -114,7 +114,7 @@ Essentially, what this does is that it will call sql_build_query() recursively w
 Why arrays?
 =============
 
-De motivation to use arrays comes from the needs:
+The motivation to use arrays comes from the needs:
 
 1. This is information that is going to be used quite a lot.
 	1.1. In the ideal case, every SQL query with either an ON or a WHERE clause (just about all) will use this.
@@ -125,12 +125,12 @@ Why not Objects?
 -------
 
 1. Tranversing Objects forming a tree is **seriously slow** in php.
-	1.1 This wouln't much be noticed on vanilla phpBB but, as you add extensions, it would easily be dead slow.
+	1.1. This wouldn't much be noticed on vanilla phpBB but, as you add extensions, it would easily be dead slow.
 2. Doing this with immutable objects is completely unviable.
-	2.1 It would require the code that manipulates it to know how to rebuild everything related for almost any change.
+	2.1. It would require the code that manipulates it to know how to rebuild everything related for almost any change.
 3. Mutable objects with an easy-enough-to-use API is hell to design.
-	3.1 How would a script know how to specify the changes that are required to make without using a complex API?
-	3.2 How would a user script swiftly test if a query has the correct format?
+	3.1. How would a script know how to specify the changes that are required to make without using a complex API?
+	3.2. How would a user script swiftly test if a query has the correct format?
 
 Mostly due to those reasons above arrays was decided as the medium.
 
@@ -139,7 +139,7 @@ How to use
 
 This system is used when building queries using the db's sql_build_query() method.
 
-While building the array to send to it as the 2nd parameter, when writting the WHERE clause, you may use this system instead of simply typing a string or making your own accumulator of conditionals.
+While building the array to send to it as the 2nd parameter, when writing the WHERE clause, you may use this system instead of simply typing a string or making your own accumulator of conditionals.
 
 For the sake of the examples below, I will simulate an execution that exists in phpBB and assume that the query has to go through an event that does a small change to it.
 
@@ -396,7 +396,7 @@ Or to protect yourself slightly:
 		$event['sql'] = $sql;
 	}
 
-I've shown you the above one first because I wanted you to experience the wilness to do everybody's work the easiest and most flexible way.
+I've shown you the above one first because I wanted you to experience the will to do everybody's work the easiest and most flexible way.
 
 **Example 2:**
 
@@ -424,7 +424,7 @@ As a bonus, if what you write follows basic rules on how SQL is written, it is g
 
 Usage examples
 =============
-Here I present code samples that examplify how to use this system.
+Here I present code samples that exemplify how to use this system.
 
 In phpBB's code
 -------
