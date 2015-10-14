@@ -1,9 +1,9 @@
-===========================
+============================
 The boolean structure system
-===========================
+============================
 
 Intro
-=============
+=====
 
 This feature helps extension authors to edit SQL queries in an easy and quick way without the need to parse the SQL queries, most likely, using regex and complex text editing.
 Instead of a single string, this allows editing the WHERE clause in an SQL query by adding, removing and editing php arrays. Using this method, finding the portion of the query to edit
@@ -14,27 +14,27 @@ This is not magic thought It will definitely reduce the probability of inter-inc
 
 
 Main use-case ideals
-=============
+====================
 
 1. To flexibly the build of the WHERE clause in SQL queries
 2. To ease, simplify and prevent errors when doing SQL query editing by phpBB's extensions
 
 Why not...
-=============
+==========
 
 1. Doctrine dbal -> The issue with Doctrine dbal is that its query builder is not ready for the 2nd major use case listed above. There is no way of altering an SQL query. If you want to alter something, you have to rebuild the whole SQL query.
 2. Linq -> I didn't know the assistance of Linq until today. From what I searched, not only it has the same issue as Doctrine, while also its interface is unnecessarily complex for the common folk who just wants to change a small amount of information.
 
 
 The Data structure
-=============
+==================
 
 This builder uses a tree-like information organization for the boolean comparisons in SQL queries.
 Each node of such tree is a php array.
 Each node can have one of 3 formats:
 
 type1
--------
+-----
 
 The 1st type contains 3 elements:
 
@@ -63,7 +63,7 @@ All of them are special because they call the dbal's methods to process the data
 For example, if you use the **IN** operator, it calls $db->sql_in_set() with the right hand data.
 
 type2
--------
+-----
 
 The 2nd type is variable length. It is identified by having the string 'AND', 'OR' or 'NOT' in the first position of the array.
 
@@ -89,7 +89,7 @@ which outputs (after reindenting)
 
 
 type3
--------
+-----
 
 The 3rd type has 5 elements  
 Left hand, operator, sub query operator, sub query SELECT type, the sub query.
@@ -112,7 +112,7 @@ Essentially, what this does is that it will call sql_build_query() recursively w
 	)
 
 Why arrays?
-=============
+===========
 
 The motivation to use arrays comes from the needs:
 
@@ -122,7 +122,7 @@ The motivation to use arrays comes from the needs:
 3. Editing arrays is a quite trivial task for any piece of code.
 
 Why not Objects?
--------
+----------------
 
 1. Tranversing Objects forming a tree is **seriously slow** in php.
 	1.1. This wouldn't much be noticed on vanilla phpBB but, as you add extensions, it would easily be dead slow.
@@ -135,7 +135,7 @@ Why not Objects?
 Mostly due to those reasons above arrays was decided as the medium.
 
 How to use
-=============
+==========
 
 This system is used when building queries using the db's sql_build_query() method.
 
@@ -145,12 +145,12 @@ For the sake of the examples below, I will simulate an execution that exists in 
 
 
 How to use in phpBB
-=============
+===================
 In the ideal situation, all DB queries that may use multiple stages where SQL data is manipulated or changed should use this, specially if they also go through an event.
 
 
 Translate SQL to the structured conditional
-----------
+-------------------------------------------
 Here's a step-by-step guide to transform a query made using a string into the format that this feature uses.
 
 Now imagine you want something like this (source: viewforum.php:277):
@@ -264,7 +264,7 @@ Just for the last piece of code in this section, here's how the full SQL query s
 
 
 Modify the structured conditional in an extension
-----------
+-------------------------------------------------
 One of the major reasons why this feature is designed in this very way is mostly because of what is exemplified in this section.  
 Same as the sub-section above, I will present you practical example(s) on how to use this feature.  
 Piking up the code above as an example:
@@ -423,11 +423,11 @@ The short way is about as much as this:
 As a bonus, if what you write follows basic rules on how SQL is written, it is guaranteed that the output will be valid SQL.
 
 Usage examples
-=============
+==============
 Here I present code samples that exemplify how to use this system.
 
 In phpBB's code
--------
+---------------
 
 
 .. code-block:: php
@@ -488,7 +488,7 @@ In phpBB's code
 
 	
 In phpBB's extensions code
--------
+--------------------------
 
 .. code-block:: php
 	
