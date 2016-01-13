@@ -7,6 +7,11 @@ These have been refactored and are based on the previously available filespec
 and fileupload classes. In addition to that, there is also a factory class which
 can be used for easy access to the files classes.
 
+.. warning::
+    The previously used file ``functions_upload.php`` no longer exists.
+    Instead, the newly added classes should be passed to your classes,
+    controllers, etc. using the container infrastructure.
+
 Overview of available classes
 =============================
 
@@ -45,6 +50,11 @@ The files classes can easily be retrieved using the container:
 The filespec and upload classes are defined with the prototype scope.
 This results in the container returning a new instance of these classes every time one calls the get() method.
 
+.. warning::
+    If a class outside the prototype scope gets passed an instance of the upload or filespec class,
+    the class will always use the same instance. As a result of that, it is recommended to use the
+    factory for retrieving a new instance of the required class(es) during runtime.
+
 Using the factory to retrieve the classes
 =========================================
 
@@ -68,6 +78,4 @@ Once the factory is available, the other class can be retrieved using the ``get(
 
 .. code-block:: php
 
-    $filespec = $files_factory->get('filespec');
-
-The main classes ``filespec`` and ``upload`` do not need to be prefixed with ``files.``.
+    $filespec = $files_factory->get('files.filespec');
