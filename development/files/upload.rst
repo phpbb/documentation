@@ -7,8 +7,8 @@ The newly introduced files ``upload`` class replaces the previously existing ``f
 Passing settings to upload class
 ================================
 
-In phpBB versions prior to 3.2, the settings like maximaum image dimensions were
-passed to the ``fileupload`` class via the constructor. Since these are now retrieved via the container
+In phpBB versions prior to 3.2, the settings like maximum image dimensions could be passed directly
+to the ``fileupload`` class via the constructor. Since these are now retrieved via the container
 infrastructure, this is no longer possible. Instead, the new ``upload`` class incorporates several
 methods for easily setting the necessary upload requirements:
 
@@ -131,3 +131,36 @@ This can also be chained to directly call the ``handle_upload()`` method:
         ->set_allowed_dimensions($min_width, $min_height, $max_width, $max_height)
         ->set_disallowed_content($disallowed_content)
         ->handle_upload('files.types.local', $local_storage, $local_filedata);
+
+Reset settings
+==============
+
+The settings like maximum file size, allowed dimensions, and error prefix can easily be reset using the
+``reset_vars()`` method.
+
+Perform common checks on upload
+===============================
+
+The ``common_checks()`` method can be used to perform common checks on the ``filespec`` object returned
+by the ``handle_upload()`` method. These include checks for the file size of the uploaded file, the file's
+name and extension, and disallowed file content.
+This can be performed by simply passing the ``filespec`` object:
+
+.. code-block:: php
+
+    $upload->common_checks($filespec);
+
+.. note::
+
+    ``common_checks()`` does not have a function return. Instead, please check the ``$filespec->error```
+    property after running ``common_checks()``
+
+Check form for validity
+=======================
+
+One can check if a form is valid for file uploads by simply passing the form name to the ``is_valid()`` method.
+It will return true on valid forms and false if the form does not exist or contains invalid content.
+
+.. code-block:: php
+
+    $valid_form = $upload->is_valid('acme_form');
