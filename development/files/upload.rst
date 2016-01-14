@@ -18,7 +18,7 @@ methods for easily setting the necessary upload requirements:
 - ``set_disallowed_content($disallowed_content)``
 - ``set_error_prefix($error_prefix)``
 
-Each of these methods return the instance of the ``upload`` class allowing for chained calls:
+Each of these methods returns the current instance of the ``upload`` class allowing for chained calls:
 
 .. code-block:: php
 
@@ -27,3 +27,61 @@ Each of these methods return the instance of the ``upload`` class allowing for c
         ->set_max_filesize(65536)
         ->set_error_prefix('AVATAR_');
 
+Uploading files
+===============
+
+The previously existing ``form_upload()``, ``remote_upload``, and ``local_upload`` methods no longer exist. Instead, the ``upload`` class now contains the ``handle_upload`` method.
+
+.. code-block:: php
+
+    $files_upload->handle_upload('files.type.local', $source_file, $filedata);
+
+The method expects the upload type as the first argument. Types that are available by default are
+
+- ``files.types.form``
+- ``files.types.local``
+- ``files.types.remote``
+
+Extensions can of course add new upload types and use them provided that they implement ``phpbb\files\types\type_interface``.
+Any arguments after the type will passed on to the upload type class. These have to implement the upload method and retrieve the passed arguments with ``func_get_args()``.
+
+Converting uses of ``fileupload`` class
+=======================================
+
+It is recommended to use the ``files`` factory for retrieving the ``files`` classes. In this example we will
+however use the phpBB container.
+
+In phpBB 3.1, the basic use of the ``fileupload`` class looked as follows:
+
+.. code-block:: php
+
+    include_once($phpbb_root_path . 'includes/functions_upload.' . $phpEx);
+    $upload = new fileupload();
+    $upload->set_disallowed_content(array());
+    $extensions = $cache->obtain_attach_extensions((($is_message) ? false : (int) $forum_id));
+    $upload->set_allowed_extensions(array_keys($extensions['_allowed_']));
+    $file = ($local) ? $upload->local_upload($local_storage, $local_filedata, $mimetype_guesser) : $upload->form_upload($form_name, $mimetype_guesser, $plupload);
+
+As of phpBB 3.2, this is changed to:
+
+.. code-block:: php
+
+    $upload = $phpbb_container->get('files.upload');
+    $upload->set_disallowed_content(array());
+    $extensions = $cache->obtain_attach_extensions((($is_message) ? false : (int) $forum_id));
+    $upload->set_allowed_extensions(array_keys($extensions['_allowed_']));
+    $file = ($local) ? $upload->handle_upload('files.types.local', '$local_storage, $local_filedata) : $upload->handle_upload('files.types.form', $form_name);
+
+.. note::
+    Services like ``phpbb\mimetype\guesser`` and ``phpbb\plupload\plupload`` are no longer passed to the upload methods.
+
+
+The calls can of course also be chained:
+
+.. code-block:: php
+
+    $extensions = $cache->obtain_attach_extensions((($is_message) ? false : (int) $forum_id));
+    $file = $phpbb_container->get('files.upload')
+        ->set_disallowed_content(array())
+        ->set_allowed_extensions(array_keys($extensions['_allowed_']))
+        ->handle_upload('files.types.local', '$local_storage, $local_filedata);
