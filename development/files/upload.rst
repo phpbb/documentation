@@ -51,6 +51,9 @@ Converting uses of ``fileupload`` class
 It is recommended to use the ``files`` factory for retrieving the ``files`` classes. In this example we will
 however use the phpBB container.
 
+Empty constructor
+*****************
+
 In phpBB 3.1, the basic use of the ``fileupload`` class looked as follows:
 
 .. code-block:: php
@@ -73,6 +76,7 @@ As of phpBB 3.2, this is changed to:
     $file = ($local) ? $upload->handle_upload('files.types.local', '$local_storage, $local_filedata) : $upload->handle_upload('files.types.form', $form_name);
 
 .. note::
+
     Services like ``phpbb\mimetype\guesser`` and ``phpbb\plupload\plupload`` are no longer passed to the upload methods.
 
 
@@ -84,4 +88,46 @@ The calls can of course also be chained:
     $file = $phpbb_container->get('files.upload')
         ->set_disallowed_content(array())
         ->set_allowed_extensions(array_keys($extensions['_allowed_']))
-        ->handle_upload('files.types.local', '$local_storage, $local_filedata);
+        ->handle_upload('files.types.local', $local_storage, $local_filedata);
+
+Settings passed to constructor
+******************************
+
+phpBB 3.1 also allowed passing the settings directly to the constructor of the ``fileupload`` class:
+
+.. code-block:: php
+
+    $upload = new fileupload(
+        $error_prefix,
+        $allowed_extensions,
+        $max_filesize,
+        $min_width,
+        $min_height,
+        $max_width,
+        $max_height,
+        $disallowed_content
+    );
+
+Since the ``upload`` class is retrieved with the container or the factory, passing these settings to the
+constructor is no longer possible. Instead, these should be passed with the accompanying ``set_`` methods:
+
+.. code-block:: php
+
+    $upload = $files_factory->get('files.upload')
+        ->set_error_prefix($error_prefix)
+        ->set_allowed_extensions($allowed_extensions)
+        ->set_max_filesize($max_filesize)
+        ->set_allowed_dimensions($min_width, $min_height, $max_width, $max_height)
+        ->set_disallowed_content($disallowed_content);
+
+This can also be chained to directly call the ``handle_upload()`` method:
+
+.. code-block:: php
+
+    $upload = $files_factory->get('files.upload')
+        ->set_error_prefix($error_prefix)
+        ->set_allowed_extensions($allowed_extensions)
+        ->set_max_filesize($max_filesize)
+        ->set_allowed_dimensions($min_width, $min_height, $max_width, $max_height)
+        ->set_disallowed_content($disallowed_content)
+        ->handle_upload('files.types.local', $local_storage, $local_filedata);
