@@ -5,3 +5,4 @@ File uploads
    :maxdepth: 2
 
    overview
+   upload
