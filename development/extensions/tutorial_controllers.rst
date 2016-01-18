@@ -110,10 +110,10 @@ should look as follows:
         acme.demo.controller:
             class: acme\demo\controller\main
             arguments:
-                - @config
-                - @controller.helper
-                - @template
-                - @user
+                - '@config'
+                - '@controller.helper'
+                - '@template'
+                - '@user'
         acme.demo.listener:
             class: acme\demo\event\main_listener
             tags:
@@ -251,8 +251,8 @@ We also have to extend the definition of the listener in the
         acme.demo.listener:
             class: acme\demo\event\main_listener
             arguments:
-                - @controller.helper
-                - @template
+                - '@controller.helper'
+                - '@template'
             tags:
                 - { name: event.listener }
 
