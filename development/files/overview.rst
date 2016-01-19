@@ -66,7 +66,7 @@ It can be passed as a service to a class:
     myclass:
         class: some\namespace\myclass
         arguments:
-            - @files.factory
+            - '@files.factory'
 
 Of course, the class can also be instantiated manually:
 
