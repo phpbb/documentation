@@ -58,16 +58,19 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 5.3.3+ (>=5.3.3, >6.0-dev (compatible)) with support for the database you intend to use.</para>
+				<para>PHP >= 5.3.3, PHP &lt; 7.0-dev</para>
 			</listitem>
 			<listitem>
 				<para>getimagesize() function enabled</para>
 			</listitem>
 			<listitem>
-				<para>The following PHP modules are required.</para>
+				<para>The following PHP modules are required:</para>
 				<itemizedlist>
 					<listitem>
 						<para>json</para>
+					</listitem>
+					<listitem>
+						<para>Corresponding PHP module for the database system you intend to use</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
