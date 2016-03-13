@@ -167,3 +167,26 @@ Check out the class definition for more information about the different methods
 that are available (such as specifying a different directory for extensions than
 core files, and getting class names based on files it finds). The return of the
 ``find()`` method is an array of file paths that match the given criteria.
+
+For example, assume you have an extension and you need to get a collection of all
+PNG image files from one of its directories. You could use the extension manager
+to load the finder, and traverse the extension's image directory as follows:
+
+.. code-block:: php
+
+  $finder = $extension_manager->get_finder();
+
+  $images = $finder
+      ->extension_suffix('.png')
+      ->extension_directory('/images')
+      ->find_from_extension('demo', $phpbb_root_path . 'ext/acme/demo/');
+
+The ``$images`` array would look something like (as you can see the image paths are 
+contained in the array keys):
+
+.. code-block:: php
+
+  array(
+      'ext/acme/demo/images/image1.png' => 'demo',
+      'ext/acme/demo/images/image2.png' => 'demo',
+  );
