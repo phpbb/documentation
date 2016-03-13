@@ -1,6 +1,6 @@
-========================================================
-Tutorial: Letting other extensions extend your extension
-========================================================
+=========================================================
+Tutorial: Allowing other extensions extend your extension
+=========================================================
 
 This tutorial is based on the work by `imkingdavid <https://www.phpbb.com/community/viewtopic.php?f=461&t=2210001>`_
 
@@ -9,14 +9,14 @@ Introduction
 
 This tutorial explains:
 
-* Adding a PHP event to your extension
-* Adding template event to your extension
-* Using service collection
-* Using the phpBB finder tool
+* `Adding a PHP event to your extension`_
+* `Adding a template event to your extension`_
+* `Using service collections`_
+* `Using the phpBB finder tool`_
 
 Adding a PHP event to your extension
 ====================================
-The first of the three is probably the easiest, but is limited in abilities once
+The first of the these is probably the easiest, but is limited in abilities once
 implemented. Basically, this involves you, the extension author, making your own
 events at key points in the code of your extension that other extensions can then
 listen for. If your extension is not enabled, the relevant code in other
@@ -57,10 +57,10 @@ event's scope for listeners to use.
 The name of your event should be in the form of acme.demo.identifer, where
 vendor.name matches the value in your composer.json.
 
-Adding template event to your extension
-=======================================
+Adding a template event to your extension
+=========================================
 Besides PHP events there are also template events. Template events can be used
-to extent the template of a extension. To create a template event you simply add
+to extend the template of a extension. To create a template event you simply add
 the EVENT tag to your template:
 
 .. code-block:: html
@@ -73,10 +73,10 @@ See :doc:`tutorial_basics` on how to use these events.
 .. warning::
   Like with PHP events you should not change the identifier of the event after
   a release of your extension. Other extensions might use your event and be broken
-  afterwards. 
+  afterwards.
 
-Using service collection
-========================
+Using service collections
+=========================
 In 3.1, a new concept is that of "services". You can read up on exactly what a
 service is `here <http://symfony.com/doc/current/book/service_container.html>`_;
 the rest of this guide will assume you have basic knowledge of services and how
@@ -133,9 +133,9 @@ service.
           - '@acme.demo.foobar_collection'
 
 That argument will return an instance of ``phpbb\di\service_collection``, which
-extends ``ArrayObject`` so it can be used an array containing the service name of
-each item in the collection as the key, and an instance of each of the items as
-the corresponding value.
+extends ``ArrayObject`` so it can be used as an array containing the service name
+of each item in the collection as the key, and an instance of each of the items
+as the corresponding value.
 
 This system is used in the core for several features, including notifications
 and authentication providers.
@@ -160,7 +160,7 @@ is used to find all routing files, both for extensions and core routes.
   $finder
       ->directory('config')
       ->suffix('routing.yml')
-      ->find()
+      ->find();
 
 As you can see, you are able to chain method calls together (ending with ``find()``).
 Check out the class definition for more information about the different methods
