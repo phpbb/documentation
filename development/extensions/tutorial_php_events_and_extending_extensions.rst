@@ -119,3 +119,31 @@ the corresponding value.
 
 This system is used in the core for several features, including notifications
 and authentication providers.
+
+Using the phpBB finder tool
+===========================
+This is probably the least used method because it requires a rigid file and
+directory naming structure, but in doing so it provides the most reliable
+organization of files, so you always can be sure where to look if you want to
+find a certain feature. The extension finder object is used to traverse the
+directory tree to look for files that are located in specific folders and adhere
+to a set of requirements. It is used, for example, to locate migration files,
+both in the core, and in extensions, without those files having to all be
+registered as services.
+
+The ``\phpbb\extension\finder`` is available from the service container as
+``ext.finder`` and can be used as follows. The following example is part of what
+is used to find all routing files, both for extensions and core routes.
+
+.. code-block:: php
+
+  $finder
+      ->directory('config')
+      ->suffix('routing.yml')
+      ->find()
+
+As you can see, you are able to chain method calls together (ending with ``find()``).
+Check out the class definition for more information about the different methods
+that are available (such as specifying a different directory for extensions than
+core files, and getting class names based on files it finds). The return of the
+``find()`` method is an array of file paths that match the given criteria.
