@@ -2,7 +2,7 @@
 Tutorial: Letting other extensions extend your extension
 ========================================================
 
-This tutorial is based on the work by `imkingdavid<https://www.phpbb.com/community/viewtopic.php?f=461&t=2210001>`_
+This tutorial is based on the work by `imkingdavid <https://www.phpbb.com/community/viewtopic.php?f=461&t=2210001>`_
 
 Introduction
 ============
@@ -25,16 +25,16 @@ listening for that event will be run.
 
 This is what an event looks like:
 .. code-block:: php
-        /**
-        * Short description of the event
-        *
-        * @event vendor.name.identifier
-        * @var  string  var1  A variable to make available to the event
-        * @var  string  var2  A second variable to make available to the event
-        * @since 3.1-A1
-        */
-        $vars = array('var1', 'var2');
-        extract($phpbb_dispatcher->trigger_event('vendor.name.identifier', compact($vars)));
+    /**
+    * Short description of the event
+    *
+    * @event vendor.name.identifier
+    * @var  string  var1  A variable to make available to the event
+    * @var  string  var2  A second variable to make available to the event
+    * @since 3.1-A1
+    */
+    $vars = array('var1', 'var2');
+    extract($phpbb_dispatcher->trigger_event('vendor.name.identifier', compact($vars)));
 
 In this case, var1 and var2 refer to the implied variables $var1 and $var2 from
 the current scope. These are passed into the event and are available through the
@@ -51,3 +51,6 @@ changes prior to releasing a new version.
 
 The name of your event should be in the form of vendor.name.identifer, where
 vendor.name matches the value in your composer.json.
+
+Using service collection
+========================
