@@ -10,6 +10,7 @@ Introduction
 This tutorial explains:
 
 * Adding a PHP event to your extension
+* Adding template event to your extension
 * Using service collection
 * Using the phpBB finder tool
 
@@ -45,15 +46,34 @@ $event array. They can be used and altered as needed and then passed back from t
 event. When making a custom event, be sure to provide several variables from the
 event's scope for listeners to use.
 
-It is also important once you create an event that is contained in a full release
-that you do not change the event's identifier or otherwise alter the event in such
-a way that breaks backwards compatibility unless absolutely necessary. Otherwise,
-other extensions may break without warning! It is probably best to publish a
-list of events provided by your extension and make public note of any event
-changes prior to releasing a new version.
+.. warning::
+  It is important once you create an event that is contained in a full release
+  that you do not change the event's identifier or otherwise alter the event in such
+  a way that breaks backwards compatibility unless absolutely necessary. Otherwise,
+  other extensions may break without warning! It is probably best to publish a
+  list of events provided by your extension and make public note of any event
+  changes prior to releasing a new version.
 
 The name of your event should be in the form of acme.demo.identifer, where
 vendor.name matches the value in your composer.json.
+
+Adding template event to your extension
+=======================================
+Besides PHP events there are also template events. Template events can be used
+to extent the template of a extension. To create a template event you simply add
+the EVENT tag to your template:
+
+.. code-block:: html
+
+  <!-- EVENT acme_demo_identifier -->
+
+The event can be used in the same way as the template events in the phpBB Core.
+See :doc:`tutorial_basics` on how to use these events.
+
+.. warning::
+  Like with PHP events you should not change the identifier of the event after
+  a release of your extension. Other extensions might use your event and be broken
+  afterwards. 
 
 Using service collection
 ========================
