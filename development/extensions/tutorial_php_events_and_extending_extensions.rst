@@ -83,7 +83,7 @@ the rest of this guide will assume you have basic knowledge of services and how
 to use them (if you have further questions, feel free to ask). A service
 collection is basically what it sounds like: a collection of services. Basically,
 when you define your service, you give it a special "tag", which associates it
-with a the collection of services. Later on, this can be used to easily get a
+with a collection of services. Later on, this can be used to easily get a
 list of services for use by your extension.
 
 To use this, you first create a service for your service collection. This will
@@ -140,6 +140,25 @@ as the corresponding value.
 This system is used in the core for several features, including notifications
 and authentication providers.
 
+Ordered service collection
+--------------------------
+.. note::
+  Ordered service collections are introduced in phpBB 3.2.
+
+Ordered service collections are based on a normal service collection, but the
+collection is sorted with `ksort <http://php.net/ksort>`_. The usage of the
+sorted service collection is nearly the same as the normal service collection,
+except instead of using ``service_collection`` you should use ``ordered_service_collection``:
+
+.. code-block:: yaml
+
+  acme.demo.foobar_collection:
+      class: phpbb\di\ordered_service_collection
+      arguments:
+          - '@service_container'
+      tags:
+          - { name: service_collection, tag: acme.demo.foobar_service }
+
 Using the phpBB finder tool
 ===========================
 This is probably the least used method because it requires a rigid file and
@@ -181,7 +200,7 @@ to load the finder, and traverse the extension's image directory as follows:
       ->extension_directory('/images')
       ->find_from_extension('demo', $phpbb_root_path . 'ext/acme/demo/');
 
-The ``$images`` array would look something like (as you can see the image paths are 
+The ``$images`` array would look something like (as you can see the image paths are
 contained in the array keys):
 
 .. code-block:: php
