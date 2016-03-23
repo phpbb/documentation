@@ -2,7 +2,7 @@
 Tutorial: Allowing other extensions extend your extension
 =========================================================
 
-This tutorial is based on the work by `imkingdavid <https://www.phpbb.com/community/viewtopic.php?f=461&t=2210001>`_
+Some parts of this tutorial is based on the work by `imkingdavid <https://www.phpbb.com/community/viewtopic.php?f=461&t=2210001>`_
 
 Introduction
 ============
@@ -13,6 +13,9 @@ This tutorial explains:
 * `Adding a template event to your extension`_
 * `Using service collections`_
 * `Using the phpBB finder tool`_
+* `Using service replacement`_
+* `Using service decoration`_
+* `Replacing the phpBB Datetime class`_
 
 Adding a PHP event to your extension
 ====================================
@@ -209,3 +212,94 @@ contained in the array keys):
       'ext/acme/demo/images/image1.png' => 'demo',
       'ext/acme/demo/images/image2.png' => 'demo',
   );
+
+
+Using service replacement
+=========================
+.. warning::
+  Only use service replacements if your extensions needs to be compatible with
+  phpBB 3.1. For 3.2 and later, see `Using service decoration`_.
+
+.. warning::
+  You can't assume the order of a service is defined in phpBB if other extensions
+  are installed. Be really carefully when using service replacements.
+
+With a service replacement you can replace a existing service in phpBB (Or in an
+extension) with your own service. Your replacement should type match the original
+service (so if the original service implements a interface, you should minimal
+implement that specific interface, if it is a concrete class, you will need to
+extent that class). The best way to accomplish this is by extending the original
+class, and only replace the features you want to change.
+
+To replace a core phpBB service, you simply name your extensions service name
+with the same name as the service in phpBB's core.
+
+If you want, for example, replace the ``config`` service in phpBB with your own
+implementation, your service configuration will look like this:
+
+.. code-block:: yaml
+
+  config:
+      class: acme\demo\config\db
+      arguments:
+          - '@dbal.conn'
+          - '@cache.driver'
+          - '%tables.config%'
+          - '@acme.demo.db_reader'
+
+Your php class should extends, at least, ``\phpbb\config\config``, which is the base
+class phpBB extends from. However, to be sure everything still works, you should
+extend from ``\phpbb\config\db``, which is the original class the service had.
+
+.. warning::
+  If you are using EPV in travis, or during submission toe the extensions database
+  at phpBB.com, you will receive a warning that your service configuration
+  doesn't follow the extensions database policies. As you are overwriting a core
+  service, you can simply ignore this message. However, in all cases you should
+  inform the the phpBB extensions team why you got the warning.
+
+Using service decoration
+========================
+.. note::
+  See for full documentation regarding service decoration the
+  `Symfony <http://symfony.com/doc/current/components/dependency_injection/advanced.html#decorating-services>`_
+  documentation.
+
+Instead of replacing a service, you should decorate the service. The will
+make the original service being renamed to a new name, so the old service is
+kept around and can be referenced in the new service.
+
+Decorating the original service is done by setting the decororates option in your
+service.yml:
+
+.. code-block:: yaml
+
+  acme.demo.decorated:
+    class: '\acme\demo\decorated\config'
+    decorates: 'config'
+
+If you want to inject the original service, which is renamed to have .inner appended
+to its name, you can use:
+
+.. code-block:: yaml
+
+  acme.demo.decorated:
+    class: '\acme\demo\decorated\config'
+    decorates: 'config'
+    arguments:
+      - '@config.inner'
+
+Again, keep in mind that your new class type matches the original class.
+
+Replacing the phpBB Datetime class
+==================================
+If you want to replace the phpBB Datetime class, for example if you want to use
+a different type of calendar, you can set the datetime.class parameter in your
+service.yml:
+
+.. code-block:: yaml
+
+  parameters:
+      datetime.class: '\acme\demo\datetime'
+
+Your class should extend the phpBB datetime class (``\phpbb\datetime``).
