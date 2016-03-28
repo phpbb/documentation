@@ -510,7 +510,7 @@ from the newspage would look like the following:
      }
 
 More information about these data update tools can be found in
-:doc:`migration/tools/index`.
+:doc:`../migrations/tools/index`.
 
 Dependencies and finishing up migrations
 ----------------------------------------
