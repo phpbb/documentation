@@ -231,6 +231,19 @@ contained in the array keys):
       'ext/acme/demo/images/image2.png' => 'demo',
   );
 
+.. note::
+  The method ``find_from_extension`` used above will only search in that specific
+  extension. If you want to search for images in all extensions, you use ``suffix``,
+  ``directory`` and ``find`` instead:
+  
+  .. code-block:: php
+
+    $finder = $extension_manager->get_finder();
+
+    $images = $finder
+        ->find('.png')
+        ->directory('/images')
+        ->find($phpbb_root_path . 'ext/');
 
 Using service replacement
 =========================
@@ -260,22 +273,21 @@ implementation, your service configuration would look like this:
   config:
       class: acme\demo\config\db
       arguments:
-          - '@dbal.conn'
-          - '@cache.driver'
-          - '%tables.config%'
+          - '@auth'
+          - '@passwords.manager'
           - '@acme.demo.db_reader'
 
-Your PHP class could extend ``\phpbb\config\config`` which is the base class phpBB
-extends from. However, to avoid any unforseen problems, it's better to more
-explicitly extend from the ``\phpbb\config\db`` class, which is the specific class
-being replaced by the service.
+Your PHP class should extend ``\phpbb\config\db`` which is original class in
+phpBB. To avoid any unforseen problems, you should not extend directly
+from ``\phpbb\config\config``. If both implemented the same interface, you could
+have extended from ``\phpbb\config\config``.
 
 .. warning::
   If you are using EPV in travis, or during submission to the extensions database
   at phpBB.com, you will receive a warning that your service configuration
   doesn't follow the extensions database policies. As you are overwriting a core
   service, you can simply ignore this message. However, in all cases you should
-  inform the the phpBB extensions team why you received the warning.
+  inform the phpBB extensions team why you received the warning.
 
 Using service decoration
 ========================
