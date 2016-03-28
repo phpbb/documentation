@@ -298,8 +298,8 @@ add the ``decorates`` option to its service definition:
     class: '\acme\demo\decorated\config'
     decorates: 'config'
 
-In Symfony, the old config service will have been renamed config.inner, so you
-can inject it into your new service by adding it to your services arguments:
+In Symfony, the old config service will have been renamed to ``acme.demo.decorated.inner``,
+so you can inject it into your new service by adding it to your services arguments:
 
 .. code-block:: yaml
 
@@ -307,7 +307,7 @@ can inject it into your new service by adding it to your services arguments:
     class: '\acme\demo\decorated\config'
     decorates: 'config'
     arguments:
-      - '@config.inner'
+      - '@acme.demo.decorated.inner'
 
 Again, keep in mind that your new class type matches the original class.
 
