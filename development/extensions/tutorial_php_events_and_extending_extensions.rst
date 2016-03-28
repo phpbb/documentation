@@ -78,6 +78,13 @@ See :doc:`tutorial_basics` on how to use these events.
   a release of your extension. Other extensions might use your event and be broken
   afterwards.
 
+.. note::
+  If you use twig instead of the phpBB template syntax, you can use:
+
+  .. code-block:: html
+
+    {% EVENT acme_demo_identifier %}
+
 Using service collections
 =========================
 In 3.1, a new concept is that of "services". You can read up on exactly what a
@@ -235,7 +242,7 @@ contained in the array keys):
   The method ``find_from_extension`` used above will only search in that specific
   extension. If you want to search for images in all extensions, you use ``suffix``,
   ``directory`` and ``find`` instead:
-  
+
   .. code-block:: php
 
     $finder = $extension_manager->get_finder();
