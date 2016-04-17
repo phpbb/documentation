@@ -73,7 +73,7 @@ As of phpBB 3.2, this is changed to:
     $upload->set_disallowed_content(array());
     $extensions = $cache->obtain_attach_extensions((($is_message) ? false : (int) $forum_id));
     $upload->set_allowed_extensions(array_keys($extensions['_allowed_']));
-    $file = ($local) ? $upload->handle_upload('files.types.local', '$local_storage, $local_filedata) : $upload->handle_upload('files.types.form', $form_name);
+    $file = ($local) ? $upload->handle_upload('files.types.local', $local_storage, $local_filedata) : $upload->handle_upload('files.types.form', $form_name);
 
 .. note::
 
