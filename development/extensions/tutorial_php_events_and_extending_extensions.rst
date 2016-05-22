@@ -284,10 +284,12 @@ implementation, your service configuration would look like this:
           - '@passwords.manager'
           - '@acme.demo.db_reader'
 
-Your PHP class should extend ``\phpbb\config\db`` which is original class in
-phpBB. To avoid any unforseen problems, you should not extend directly
-from ``\phpbb\config\config``. If both implemented the same interface, you could
-have extended from ``\phpbb\config\config``.
+The original config class in ``\phpbb\config\db`` didn't implement an interface.
+This means you need to extend the original ``\phpbb\config\db``, otherwise type
+won't match the type hinting in the constructors which use the config service.
+If the original service implemented a interface directly, and all type hints
+are done based on the interface, you are not required to extend the original class
+but you can simply implement the interface.
 
 .. warning::
   If you are using EPV in travis, or during submission to the extensions database
