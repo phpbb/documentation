@@ -240,8 +240,8 @@ contained in the array keys):
 
 .. note::
   The method ``find_from_extension`` used above will only search in that specific
-  extension. If you want to search for images in all extensions, you use ``suffix``,
-  ``directory`` and ``find`` instead:
+  extension. If you want to search for png files in the extension directory you
+  can use:
 
   .. code-block:: php
 
@@ -249,8 +249,14 @@ contained in the array keys):
 
     $images = $finder
         ->find('.png')
-        ->directory('/images')
-        ->find($phpbb_root_path . 'ext/');
+        ->core_path('ext/')
+        ->find();
+
+.. note::
+  Depending on how the Finder class is configured, the find method searches both
+  the phpBB core files as the extensions directories. You can use the extension_*
+  methods in the Finder class to configure extension specific search, and you can
+  use the core_* methods to specific core specific searches.
 
 Using service replacement
 =========================
