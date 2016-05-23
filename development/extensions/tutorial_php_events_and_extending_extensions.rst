@@ -256,7 +256,7 @@ contained in the array keys):
   Depending on how the Finder class is configured, the find method searches both
   the phpBB core files as the extensions directories. You can use the extension_*
   methods in the Finder class to configure extension specific search, and you can
-  use the core_* methods to specific core specific searches.
+  use the core_* methods to configure core specific searches.
 
 Using service replacement
 =========================
@@ -290,12 +290,12 @@ implementation, your service configuration would look like this:
           - '@passwords.manager'
           - '@acme.demo.db_reader'
 
-The original config class in ``\phpbb\config\db`` didn't implement an interface.
-This means you need to extend the original ``\phpbb\config\db``, otherwise type
+The original config class in ``\phpbb\config\db`` does not implement an interface.
+This means you need to extend the original ``\phpbb\config\db``, otherwise the type
 won't match the type hinting in the constructors which use the config service.
-If the original service implemented a interface directly, and all type hints
-are done based on the interface, you are not required to extend the original class
-but you can simply implement the interface.
+If the original service implements an interface directly, and all type hints
+are referencing the interface, you are not required to extend the original class
+and should instead implement the interface.
 
 .. warning::
   If you are using EPV in travis, or during submission to the extensions database
