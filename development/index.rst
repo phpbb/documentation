@@ -8,6 +8,7 @@ Contents:
 
    development/coding_guidelines
    extensions/index
+   files/index
    language/index
    migrations/index
    testing/index
