@@ -3,7 +3,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!--
-	$Id: ascraeus_php_subsection.xsl 347 2010-01-09 23:40:51Z naderman $
+	$Id: rhea_php_subsection.xsl 347 2010-01-09 23:40:51Z naderman $
 	Copyright 2006, 2008 phpBB Group
 	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
 	http://creativecommons.org/licenses/by-nc-sa/3.0/
@@ -40,7 +40,7 @@
 <xsl:param name="chunker.output.doctype-public" select="''"/>
 <xsl:param name="chunker.output.doctype-system" select="''"/>
 
-<xsl:variable name="main.title.text" select="'phpBB 3.1 Ascraeus Documentation'"/>
+<xsl:variable name="main.title.text" select="'phpBB 3.2 Rhea Documentation'"/>
 
 <xsl:template name="user.preroot">
 
