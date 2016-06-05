@@ -808,10 +808,6 @@ first file is the ``.travis.yml`` file:
 
     matrix:
       include:
-        - php: 5.3.3
-          env: DB=mysqli
-        - php: 5.3
-          env: DB=mysqli # MyISAM
         - php: 5.4
           env: DB=mysqli
         - php: 5.4
@@ -826,6 +822,8 @@ first file is the ``.travis.yml`` file:
           env: DB=mysqli
         - php: 5.6
           env: DB=mysqli
+        - php: 7.0
+          env: DB=mysqli
         - php: hhvm
           env: DB=mysqli
       allow_failures:
@@ -838,7 +836,7 @@ first file is the ``.travis.yml`` file:
         - SNIFF="1"            # Should we run code sniffer on your code?
         - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
         - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-        - PHPBB_BRANCH="3.1.x"
+        - PHPBB_BRANCH="3.2.x"
 
     branches:
       only:
@@ -874,7 +872,7 @@ first file is the ``.travis.yml`` file:
             - SNIFF="1"            # Should we run code sniffer on your code?
             - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
             - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-            - PHPBB_BRANCH="3.1.x"
+            - PHPBB_BRANCH="3.2.x"
 
 Preparing phpBB
 ---------------
