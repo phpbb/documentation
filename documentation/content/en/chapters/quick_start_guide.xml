@@ -50,15 +50,15 @@
 						<para>PostgreSQL 8.3+</para>
 					</listitem>
 					<listitem>
-						<para>SQLite 2</para>
+						<para>SQLite 2.8.2+</para>
 					</listitem>
 					<listitem>
-						<para>SQLite 3</para>
+						<para>SQLite 3.6.15+</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 5.3.3+ (>=5.3.3, >6.0-dev (compatible)) with support for the database you intend to use.</para>
+				<para>PHP 5.4.0+ (>=5.4.0, 7.0) with support for the database you intend to use.</para>
 			</listitem>
 			<listitem>
 				<para>getimagesize() function enabled</para>
