@@ -30,7 +30,7 @@ Each of these methods returns the current instance of the ``upload`` class allow
 Uploading files
 ===============
 
-The previously existing ``form_upload()``, ``remote_upload``, and ``local_upload`` methods no longer exist. Instead, the ``upload`` class now contains the ``handle_upload`` method.
+The previously existing ``form_upload()``, ``remote_upload()``, and ``local_upload()`` methods no longer exist. Instead, the ``upload`` class now contains the ``handle_upload()`` method.
 
 .. code-block:: php
 
@@ -152,14 +152,15 @@ This can be performed by simply passing the ``filespec`` object:
 
 .. note::
 
-    ``common_checks()`` does not have a function return. Instead, please check the ``$filespec->error```
+    ``common_checks()`` does not have a function return. Instead, please check the ``$filespec->error``
     property after running ``common_checks()``
 
 Check form for validity
 =======================
 
 One can check if a form is valid for file uploads by simply passing the form name to the ``is_valid()`` method.
-It will return true on valid forms and false if the form does not exist or contains invalid content.
+It will return true on valid forms and false if the file was not uploaded for the specified form or the upload file was
+not properly set.
 
 .. code-block:: php
 

@@ -48,7 +48,7 @@ look at the complete file:
     {
         "name": "acme/demo",
         "type": "phpbb-extension",
-        "description": "Acme Demo Extension for phpBB 3.1",
+        "description": "Acme Demo Extension for phpBB 3.2",
         "homepage": "https://github.com/nickvergessen/phpbb-ext-acme-demo",
         "version": "0.1.0",
         "time": "2013-11-05",
@@ -60,7 +60,7 @@ look at the complete file:
                 "role": "Lead Developer"
             }],
         "require": {
-            "php": ">=5.3.3",
+            "php": ">=5.4.0",
             "composer/installers": "~1.0"
         },
         "require-dev": {
@@ -69,7 +69,7 @@ look at the complete file:
         "extra": {
             "display-name": "Acme Demo Extension",
             "soft-require": {
-                "phpbb/phpbb": "~3.1"
+                "phpbb/phpbb": "~3.2"
             }
         }
     }
@@ -124,8 +124,8 @@ extension. Examples are the ``php`` version, or
 `third party libraries <https://packagist.org/>`_. Since our demo extension does
 not require any additional library, we only use the PHP version requirement, to
 make sure people have the right PHP version on their server, and composer
-installers for some internal handling. phpBB 3.1 requires PHP 5.3.3 or higher,
-so the version comparison is ``>= 5.3.3``.
+installers for some internal handling. phpBB 3.2 requires PHP 5.4.0 or higher,
+so the version comparison is ``>= 5.4.0``.
 
 require-dev
 -----------
@@ -154,8 +154,8 @@ in this array for extensions:
    difference is that composer does not know that these requirements exist.
    This allows us, for example, to compare the phpBB version, although there
    might not be a phpBB package with the specified version. In this case we
-   require any 3.1 version. This can be done, by prefixing it with a ``~``:
-   ``""phpbb/phpbb"": ""~3.1""``"
+   require any 3.2 version. This can be done, by prefixing it with a ``~``:
+   ``""phpbb/phpbb"": ""~3.2""``"
 
 Enable extension
 ================

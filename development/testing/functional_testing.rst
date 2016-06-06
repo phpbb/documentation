@@ -100,7 +100,7 @@ class. This method will assign the user's SID to the inherited class property
 ``$this->sid``. You will need to append this to the URLs that the logged-in
 user will be navigating to in order to hold the session. For usage examples,
 view the logout test in
-`tests/functional/auth_test.php <https://github.com/phpbb/phpbb/blob/3.1.x/tests/functional/auth_test.php>`_.
+`tests/functional/auth_test.php <https://github.com/phpbb/phpbb/blob/3.2.x/tests/functional/auth_test.php>`_.
 
 Localisation
 ------------
@@ -129,4 +129,4 @@ framework.
     }
 
 For more usage examples, please view
-`tests/functional/lang_test.php <https://github.com/phpbb/phpbb/blob/3.1.x/tests/functional/lang_test.php>`_.
+`tests/functional/lang_test.php <https://github.com/phpbb/phpbb/blob/3.2.x/tests/functional/lang_test.php>`_.

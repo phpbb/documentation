@@ -39,7 +39,8 @@ Simply pass the name of the property to retrieve and it will returns its value.
 Clean file name
 ===============
 
-``filespec`` supports several ways of cleaning the filename depending on the specified mode.
+``filespec`` supports several ways of cleaning the filename depending on the specified mode with
+the ``clean_filename()`` method.
 Possible modes are:
 
 - avatar

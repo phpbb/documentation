@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Quick Start Guide</title>
 	<abstract>
-		<para>A quick guide through the first steps of installing and configuring up your very own phpBB 3.1 forum.</para>
+		<para>A quick guide through the first steps of installing and configuring up your very own phpBB 3.2 forum.</para>
 	</abstract>
 	<section id="quick_requirements">
 		<sectioninfo>
@@ -50,24 +50,27 @@
 						<para>PostgreSQL 8.3+</para>
 					</listitem>
 					<listitem>
-						<para>SQLite 2</para>
+						<para>SQLite 2.8.2+</para>
 					</listitem>
 					<listitem>
-						<para>SQLite 3</para>
+						<para>SQLite 3.6.15+</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 5.3.3+ (>=5.3.3, >6.0-dev (compatible)) with support for the database you intend to use.</para>
+				<para>PHP 5.4.0+ (>=5.4.0, 7.0) with support for the database you intend to use.</para>
 			</listitem>
 			<listitem>
 				<para>getimagesize() function enabled</para>
 			</listitem>
 			<listitem>
-				<para>The following PHP modules are required.</para>
+				<para>The following PHP modules are required:</para>
 				<itemizedlist>
 					<listitem>
 						<para>json</para>
+					</listitem>
+					<listitem>
+						<para>Corresponding PHP module for the database system you intend to use</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
@@ -103,7 +106,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Installation</title>
-		<para>phpBB 3.1 Ascraeus has an easy to use installation system that will guide you through the installation process.</para>
+		<para>phpBB 3.2 Rhea has an easy to use installation system that will guide you through the installation process.</para>
 		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introduction</title>
@@ -121,14 +124,14 @@
 		</important>
 		<section id="quick_installation_intro">
 			<title>Introduction</title>
-			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.1 is released under (the <ulink url="http://opensource.org/licenses/gpl-2.0.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> tab (see <xref linkend="img_quick_installation_intro" />).</para>
+			<para>The installation screen gives you a short introduction into phpBB. It allows you to read the license phpBB 3.2 is released under (the <ulink url="http://opensource.org/licenses/gpl-2.0.php">General Public License</ulink>) and provides information about how you can receive support. To start the installation, click the <guilabel>Install</guilabel> tab (see <xref linkend="img_quick_installation_intro" />).</para>
 		</section>
 		<section id="quick_installation_requirements">
 			<title>Requirements</title>
 			<important>
-				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.1's minimum requirements.</para>
+				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.2's minimum requirements.</para>
 			</important>
-			<para>The requirements list is the first page you will see after starting the installation. phpBB 3.1 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.1 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
+			<para>The requirements list is the first page you will see after starting the installation. phpBB 3.2 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.2 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
 		</section>
 		<section id="quick_installation_database">
 			<title>Database settings</title>
@@ -166,7 +169,7 @@
 				</mediaobject>
 			</figure>
 			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multiple phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
-			<para>After you have entered your details, you can continue by clicking the <guilabel>Proceed to next step</guilabel> button. Now, phpBB 3.1 will test and verify the data you entered.</para>
+			<para>After you have entered your details, you can continue by clicking the <guilabel>Proceed to next step</guilabel> button. Now, phpBB 3.2 will test and verify the data you entered.</para>
 			<para>If you see a "<guilabel>Could not connect to the database</guilabel>" error, this means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
 			<tip>
 				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
@@ -176,7 +179,7 @@
 		</section>
 		<section id="quick_installation_admin">
 			<title>Administrator details</title>
-			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.1 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com/languages/">www.phpbb.com</ulink>, and add them later.</para>
+			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.2 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com/languages/">www.phpbb.com</ulink>, and add them later.</para>
 		</section>
 		<section id="quick_installation_config">
 			<title>Configuration file</title>
@@ -186,8 +189,8 @@
 		<section id="quick_installation_advanced">
 			<title>Advanced settings</title>
 			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
-			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.1 successfully. But there is still a lot of work ahead!</para>
-			<para>If you are unable to get phpBB 3.1 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
+			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.2 successfully. But there is still a lot of work ahead!</para>
+			<para>If you are unable to get phpBB 3.2 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
 			<para>At this point if you are upgrading from phpBB 2.0 or phpBB 3.0, you should refer to the <link linkend="upgrade_guide">upgrade guide</link> for further information. If not, you should remove the install directory from your server as you will only be able to access the Administration Control Panel whilst it is present.</para>
 		</section>
 	</section>
@@ -290,7 +293,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Setting permissions</title>
-		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB3 Ascraeus can be adjusted with permissions.</para>
+		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB 3.2 Rhea can be adjusted with permissions.</para>
 
 		<section id="quick_permissions_types">
 			<title>Permission types</title>
@@ -341,7 +344,7 @@
 			</figure>
 			<para>The <guilabel>Forum Permissions</guilabel> page shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users</guilabel> and <guilabel> Manage Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Edit Permissions</guilabel> button, or use <guilabel>Remove Permissions</guilabel> to remove them which leads to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
 			<para>To add permissions for groups, select one or more groups either in the <guilabel>Add Groups</guilabel> list (this works similar with users, but if you want to add new users, you have to type them in manually in the <guilabel>Add Users</guilabel> text box or use the <guilabel>Find a member</guilabel> function). <guilabel>Add Permissions</guilabel> will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
-			<para>There are two ways to assign permissions: You can set them manually or use predefined <guilabel>Permission Roles</guilabel> for a simpler but less powerful way. You can switch between both approaches any time you want. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running as quickly as possible. But remember that permission roles do only offer a small bit of what the permission system has to offer and we believe that to be a good Ascraeus administrator, you have to fully grasp permissions. </para>
+			<para>There are two ways to assign permissions: You can set them manually or use predefined <guilabel>Permission Roles</guilabel> for a simpler but less powerful way. You can switch between both approaches any time you want. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running as quickly as possible. But remember that permission roles do only offer a small bit of what the permission system has to offer and we believe that to be a good Rhea administrator, you have to fully grasp permissions. </para>
 			<para>Both ways only differ in the way you set them. They both share the same interface.</para>
 		</section>
 		<section id="quick_permissions_manual">
@@ -373,7 +376,7 @@
 		</section>
 		<section id="quick_permissions_roles">
 			<title>Permissions roles</title>
-			<para>phpBB3 Ascraeus ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
+			<para>phpBB 3.2 Rhea ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
 			<figure id="img_quick_permissions_roles">
 				<title>Permission roles</title>
 				<mediaobject>

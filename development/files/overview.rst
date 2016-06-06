@@ -24,7 +24,7 @@ themselves.
 
 filespec
 ********
-``\phpbb\files\filespec```
+``\phpbb\files\filespec``
 
 Responsible for holding all file relevant information, as well as doing
 file-specific operations.
