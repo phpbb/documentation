@@ -1,20 +1,20 @@
-==========================================================
-Updating a phpBB 3.0 modification to a phpBB 3.1 extension
-==========================================================
+=================================================
+Updating a phpBB 3.0 modification to an extension
+=================================================
 
 Extension Structure
 ===================
 
-The most obvious change should be the location the MODs / Extensions are stored
-in 3.1. In phpBB 3.0 all files were put into the core's root folder. In phpBB
-3.1 a special directory for Extensions has been created. It's called ``ext/``.
+The most obvious change should be the location where the MODs / Extensions are
+stored. In phpBB 3.0 all files were put into the core's root folder. In phpBB 
+3.1 a special directory for extensions has been created. It's called ``ext/``.
 
 Directory
 ---------
 
-Each extension has its own directory. However, you can (and should) also use an
+Each extension has its own directory. However, you must also use an
 additional vendor directory (with your author name or author-group name). In
-case of my newspage the files will be in
+the case of my Newspage, the files will be in
 
 .. code-block:: php
 
@@ -22,7 +22,7 @@ case of my newspage the files will be in
 
 There should not be a need to have files located outside of that directory. No
 matter which files, may it be styles, language or ACP module files. All of them
-will be moved into your extension's directory:
+should be moved into your extension's directory:
 
 .. csv-table::
    :header: "new directory", "current directory"
@@ -44,9 +44,9 @@ explained in the following paragraphs.
 Important new files
 -------------------
 
-There is a new file, your extension needs, in order to be recognized by the
+There is a new file your extension needs in order to be recognized by the
 system. It's called ``composer.json``:
-it specifies the requirements of your extension aswell as some author
+it specifies the requirements of your extension as well as some author
 information. The layout is a simple json array, the keys should really explain
 enough.
 
@@ -56,7 +56,7 @@ enough.
 
 In the ``require`` section you can also specify other extensions which are
 required in order to install this one. (*Validation for this is not yet
-implemented, but will be in 3.1.0*)
+implemented, but should be in 3.3.0*)
 
 .. code-block:: json
 
@@ -110,16 +110,16 @@ Front-facing files, routes and services
 ---------------------------------------
 
 While in 3.0 you just created a new file in the root directory of phpBB, you
-might want to use the new controller system of 3.1 in future. Your links change
-from something like ``phpBB/newspage.php`` to ``phpBB/app.php/newspage`` in
-first place, but with a little htaccess rule this can be rewritten to
+must use the new controller system in 3.1 for extensions. Your links will change
+from something like ``phpBB/newspage.php`` to ``phpBB/app.php/newspage``. If the
+board has enabled url rewriting, your links will look a little nicer like
 ``phpBB/newspage``.
 
 In order to link a specific routing rule to your extension, you need to define
 the route in your extension's ``config/routing.yml``.
 
-For the easy start of the newspage, 2 rules are enough. The first rule is for
-the basic page currently ``newspage.php``, the second one is for the pagination,
+For an easy start to the Newspage, two rules are enough. The first rule is for
+the basic page, currently ``newspage.php``. The second one is for the pagination,
 like ``newspage.php?start=5``. The first rule sets a default page (1), while the
 second rule requires a second part of the url to be an integer.
 
@@ -142,7 +142,7 @@ which is then called. Services are defined in your extensions
 ``config/services.yml``. Services are instances of classes. Services are used,
 so there is only one instance of the class which is used all the time. You can
 also define the arguments for the constructor of your class. The example
-definition of the newspage controller service would be something similar to:
+definition of the Newspage controller service would be something similar to:
 
 .. code-block:: yaml
 
@@ -163,8 +163,8 @@ definition of the newspage controller service would be something similar to:
                  - '%core.php_ext%'
 
 Any service that is previously defined in your file, or in the file of the phpBB
-core ``phpBB/config/services.yml``, can also be used as an argument, aswell as
-some predefined string (like ``core.root_path`` here).
+core ``phpBB/config/services.yml``, can also be used as an argument, as well as
+some predefined strings (like ``core.root_path`` here).
 
 .. note::
 
@@ -174,9 +174,8 @@ some predefined string (like ``core.root_path`` here).
     in ``phpBB/ext/nickvergessen/newspage/controller/main.php``
 
 For more explanations about
-`Routing <http://symfony.com/doc/2.3/book/routing.html>`_ and
-`Services <http://symfony.com/doc/2.3/book/service_container.html>`_ see the
-Symfony 2.3 Documentation.
+`Routing <https://area51.phpbb.com/docs/dev/master/extensions/tutorial_controllers.html#routing>`_ and
+`Services <https://area51.phpbb.com/docs/dev/master/extensions/tutorial_controllers.html#dependencies>`_ see our documentation.
 
 In this example my **controller/main.php** would look like the following:
 
@@ -202,12 +201,12 @@ In this example my **controller/main.php** would look like the following:
          * NOTE: The parameters of this method must match in order and type with
          * the dependencies defined in the services.yml file for this service.
          *
-         * @param \phpbb\config    $config        Config object
-         * @param \phpbb\template    $template    Template object
-         * @param \phpbb\user    $user        User object
-         * @param \phpbb\controller\helper        $helper                Controller helper object
-         * @param string            $root_path    phpBB root path
-         * @param string            $php_ext    phpEx
+         * @param \phpbb\config            $config    Config object
+         * @param \phpbb\template          $template  Template object
+         * @param \phpbb\user              $user      User object
+         * @param \phpbb\controller\helper $helper    Controller helper object
+         * @param string                   $root_path phpBB root path
+         * @param string                   $php_ext   phpEx
          */
         public function __construct(\phpbb\config\config $config, \phpbb\template\template $template, \phpbb\user $user, \phpbb\controller\helper $helper, $root_path, $php_ext)
         {
@@ -248,19 +247,13 @@ In this example my **controller/main.php** would look like the following:
 
 .. note::
 
-    The consecution of arguments in services.yml should match the consecution of
+    The order of arguments in services.yml should match the order of
     arguments passed to the class constructor ``public function __construct()``.
-    Otherwise, error will be thrown and the board will be broken if you try to
+    Otherwise, an error will be thrown and the board will be broken if you try to
     enable the extension.
 
-You can also have multiple different methods in one controller aswell as having
+You can also have multiple different methods in one controller as well as having
 multiple controllers, in order to organize your code a bit better.
-
-If we now add the entry for our extension into the phpbb_ext table, and go to
-``example.tld/app.php/newspage/`` you can see your template file.
-
-**Congratulations!** You just finished the "Hello World" example for phpBB
-Extensions. ;)
 
 ACP Modules
 -----------
@@ -273,10 +266,10 @@ The info-file, currently located in
 ``ext/nickvergessen/newspage/acp/main_info.php`` and the module itself is moved
 from ``phpBB/includes/acp/acp_newspage.php`` to
 ``ext/nickvergessen/newspage/acp/main_module.php``. In order to be able to
-automatically load the files by their class names we need to make some little
+automatically load the files by their class names we need to make some
 adjustments to the classes themselves.
 
-As for the ``main_info.php`` I need to adjust the class name from
+As for the ``main_info.php`` we need to adjust the class name from
 ``acp_newspage_info`` to ``main_info`` and also change the value of
 ``'filename'`` in the returned array.
 
@@ -308,17 +301,20 @@ As for the ``main_info.php`` I need to adjust the class name from
         function module()
         {
             return array(
-                'filename'    => '\nickvergessen\newspage\acp\main_module',
-                'title'        => 'ACP_NEWSPAGE_TITLE',
-                'version'    => '1.0.1',
-                'modes'        => array(
-                    'config_newspage'    => array('title' => 'ACP_NEWSPAGE_CONFIG', 'auth' => 'acl_a_board', 'cat' => array('ACP_NEWSPAGE_TITLE')),
+                'filename' => '\nickvergessen\newspage\acp\main_module',
+                'title'    => 'ACP_NEWSPAGE_TITLE',
+                'modes'    => array(
+                    'config_newspage' => array(
+                        'title' => 'ACP_NEWSPAGE_CONFIG',
+                        'auth'  => 'acl_a_board',
+                        'cat'   => array('ACP_NEWSPAGE_TITLE')
+                    ),
                 ),
             );
         }
      }
 
-In case of the module, I just adjust the class name:
+In case of the module, just adjust the class name:
 
 .. code-block:: php
 
@@ -353,23 +349,20 @@ In case of the module, I just adjust the class name:
         }
      }
 
-And there you go. Your Extensions ACP module can now be added through the ACP
-and you just finished another step of successfully converting a MOD into an
-Extension.
-
 Database Changes, UMIL replaced by Migrations
 =============================================
 
 .. seealso::
 
-   For more documentation about migrations, see the relevant documentation at
-   :doc:`../migrations/index`
+   For more documentation about migrations, see the :doc:`../migrations/index` API and 
+   :doc:`../extensions/tutorial_migrations.html` documentation
 
-Basically migrations to the same as your 3.0 UMIL files. It performs the
+Basically migrations do the same as your 3.0 UMIL files. It performs the
 database changes of your MOD/Extension. The biggest difference between
-migrations and UMIL hereby is, that while you had one file with one array in
-UMIL for all your changes, you have one file per version in Migrations. But
-let's have a look at the newspage again.
+migrations and UMIL is that while you had one file with one array in
+UMIL for all your changes, you can have multiple files in Migrations. You usually
+create a new migration file each time you need to introduce new database changes. But
+let's have a look at the Newspage again.
 
 .. code-block:: php
 
@@ -412,8 +405,8 @@ let's have a look at the newspage again.
 Schema Changes
 --------------
 
-The newspage does not have any database schema changes, so I will use the
-Example from the `Wiki <https://wiki.phpbb.com/Migrations/Schema_Changes>`_.
+The Newspage does not have any database schema changes, so I will use the
+:doc:`../migrations/schema_changes.html` example from the Documentation.
 Basically you need to have two methods in your migration class file:
 
 .. code-block:: php
@@ -478,7 +471,7 @@ The data changes, like adding modules, permissions and configs, are provided
 with the ``update_data()`` function.
 
 This function returns an array as well. The example for the 1.0.0 version update
-from the newspage would look like the following:
+from the Newspage would look like the following:
 
 .. code-block:: php
 
@@ -510,13 +503,13 @@ from the newspage would look like the following:
      }
 
 More information about these data update tools can be found in
-:doc:`migration/tools/index`.
+:doc:`migration/tools/index.html`.
 
 Dependencies and finishing up migrations
 ----------------------------------------
 
-Now there are only two things left, your migration file needs. The first thing
-is a check, which allows phpbb to see whether the migration is already
+Now there are only two things your migration file still needs. The first thing
+is a check, which allows phpBB to see whether the migration is already
 installed, although it did not run yet (f.e. when updating from a 3.0 MOD to a
 3.1 Extension).
 
@@ -535,7 +528,7 @@ your migration files correctly. To avoid this problem, you can define a set of
 dependencies which must be installed before your migration can be installed.
 phpBB will try to install them, before installing your migration. If they can
 not be found or installed, your installation will fail as well. For the 1.0.0
-migration I will only require the ``3.1.0-a1`` Migration:
+migration I will only require phpBB's ``3.1.0-a1`` migration:
 
 .. code-block:: php
 
@@ -544,8 +537,8 @@ migration I will only require the ``3.1.0-a1`` Migration:
         return array('\phpbb\db\migration\data\v310\alpha1');
      }
 
-All further updates can now require this Migration and so also require the
-3.1.0-a1 Migration.
+All further Newspage migrations can now require Newspage's first migration file,
+and thus all will be also dependent on phpBB's 3.1.0-a1 migration.
 
 A complete file could look like this:
 
@@ -607,29 +600,29 @@ A complete file could look like this:
 Include extension's language files
 ==================================
 
-As the language files in your extension are not detected by the
+As the language files in your extension are not detected by
 ``$user->add_lang()`` any more, you need to use the ``$user->add_lang_ext()``
 method. This method takes two arguments, the first one is the fullname of the
 extension (including the vendor) and the second one is the file name or array of
-file names. so in order to load my newspage language file I now call:
+file names. So in order to load the Newspage language file we call:
 
 .. code-block:: php
 
      $user->add_lang_ext('nickvergessen/newspage', 'newspage');
 
-to load my language from
+to load the language file
 ``phpBB/ext/nickvergessen/newspage/language/en/newspage.php``
 
-File edits - Better don't edit anything, just use Events and Listeners
+File edits - Don't edit! Use Events and Listeners!
 ======================================================================
 
-As for the newspage Modification, the only thing that is now missing from
+As for the Newspage Modification, the only thing that is now missing from
 completion is the link in the header section, so you can start browsing the
-newspage.
+Newspage.
 
-In order to do this, I used to define the template variable in the
-``page_header()``-function of phpBB and then edit the ``overall_header.html``.
-But this is 3.1 so we don't like file edits anymore and added **events**
+In order to do this, the template variable used to be defined in the
+``page_header()`` function of phpBB along with an edit in the ``overall_header.html`` template.
+But this is not phpBB 3.0, so we don't like file edits anymore and now use **events**
 instead. With events you can hook into several places and execute your code,
 without editing them.
 
@@ -645,10 +638,10 @@ So instead of adding
      ));
 
 to the ``page_header()``, we put that into an event listener, which is then
-called, everytime ``page_header()`` itself is called.
+called everytime ``page_header()`` itself is called.
 
 So we add the **event/main_listener.php** file to our extension, which
-implements some Symfony class:
+implements a Symfony class:
 
 .. code-block:: php
 
@@ -692,9 +685,10 @@ implements some Symfony class:
         }
      }
 
-In the ``getSubscribedEvents()`` method we tell the system for which events we
-want to get notified and which function should be executed in case it's called.
-In our case we want to subscribe to the ``core.page_header``-Event (a full list
+In the ``getSubscribedEvents()`` method we tell the system which events we
+want to subscribe our new custom functions to.
+In our case we want to subscribe to two events: the ``core.page_header`` event 
+and the ``core.user_setup`` event (a full list
 of events can be found `here <https://wiki.phpbb.com/Event_List>`_):
 
 .. code-block:: php
@@ -702,12 +696,12 @@ of events can be found `here <https://wiki.phpbb.com/Event_List>`_):
         static public function getSubscribedEvents()
         {
             return array(
-                'core.user_setup'                => 'load_language_on_setup',
-                'core.page_header'                => 'add_page_header_link',
+                'core.user_setup'    => 'load_language_on_setup',
+                'core.page_header'   => 'add_page_header_link',
             );
         }
 
-Now we add the function which is then called:
+Now we add the two functions which are called with each event:
 
 .. code-block:: php
 
@@ -750,39 +744,37 @@ This is done using the ``event.listener`` tag in the ``config/service.yml``:
 After this is added, your listener gets called and we are done with the
 php-editing.
 
-Your users will not get conflicts on searching for files blocks and other things
-because another MOD already edited the code. Again like with the controllers,
-you can have multiple listeners in the event/ directory, aswell as subscribe to
-multiple events with one listener.
+Again like with the controllers, you can have multiple listeners in the 
+``event/`` directory, as well as subscribe to multiple events with one listener.
 
 Template Event
 --------------
 
-Now the only thing left is, adding the code to the html output. For templates
-you need one file per event.
+Now the only thing left is adding the code to the html output. For templates
+you need one file per template event.
 
-The filename thereby includes the event name. In order to add the newspage link
+The filename includes the event name. In order to add the Newspage link
 next to the FAQ link, we need to use the
-``'overall_header_navigation_prepend'``-event (a full list of events can be
+``'overall_header_navigation_prepend'`` event (a full list of events can be
 found `here <https://wiki.phpbb.com/Event_List>`_).
 
 So we add the
 ``styles/prosilver/template/event/overall_header_navigation_prepend_listener.html``
-to our extensions directory and add the html code into it.
+to our extensions directory and add our html code into it.
 
 .. code-block:: html
 
      <li class="icon-newspage"><a href="{U_NEWSPAGE}">{L_NEWSPAGE}</a></li>
 
-And that's it. No file edits required for the template files aswell.
+And that's it. No file edits required for the template files as well.
 
 Adding Events
 -------------
 
 There are already numerous events available. However, if your extension needs to
-make use of an event which is not yet in the phpBB code you can request the
+make use of an event which is not yet in the phpBB code, you can request the
 event be added to the core by creating a ticket in the
-`phpBB Bug Tracker <https://tracker.phpbb.com/projects/PHPBB3>`_. and we will
+`phpBB Bug Tracker <https://tracker.phpbb.com/projects/PHPBB3>`_ and we will
 endeavour to include it in the next release.
 
 Basics finished!
@@ -794,8 +786,8 @@ Extension.
 Compatibility
 =============
 
-In some cases the compatibility of functions and classes count not be kept,
-while increasing their power. You can see a list of things in the Wiki-Article
+In some cases the compatibility of functions and classes could not be kept,
+while increasing their power for 3.1. You can see a list of these in the Wiki-Article
 about `PhpBB3.1 <https://wiki.phpbb.com/PhpBB3.1>`_
 
 Pagination
@@ -805,8 +797,8 @@ When you use your old 3.0 code you will receive an error like the following::
 
     Fatal error: Call to undefined function generate_pagination() in .../phpBB3/ext/nickvergessen/newspage/controller/main.php on line 534
 
-The problem is, that the pagination is now not returned by the function anymore,
-but instead automatically put into the template. In the same step, the function
+The problem is that the pagination is no longer returned by the function,
+but instead automatically put into the template. Also, the function
 name was updated with a phpbb-prefix.
 
 The old pagination code was similar to:
