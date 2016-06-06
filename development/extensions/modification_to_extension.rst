@@ -503,7 +503,7 @@ from the Newspage would look like the following:
      }
 
 More information about these data update tools can be found in
-:doc:`migration/tools/index.html`.
+:doc:`../migration/tools/index.html`.
 
 Dependencies and finishing up migrations
 ----------------------------------------
