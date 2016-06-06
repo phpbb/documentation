@@ -64,10 +64,13 @@
 				<para>getimagesize() function enabled</para>
 			</listitem>
 			<listitem>
-				<para>The following PHP modules are required.</para>
+				<para>The following PHP modules are required:</para>
 				<itemizedlist>
 					<listitem>
 						<para>json</para>
+					</listitem>
+					<listitem>
+						<para>Corresponding PHP module for the database system you intend to use</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>

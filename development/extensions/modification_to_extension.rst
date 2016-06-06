@@ -151,16 +151,16 @@ definition of the newspage controller service would be something similar to:
          nickvergessen.newspage.controller:
              class: nickvergessen\newspage\controller\main
              arguments:
-                 - @auth
-                 - @cache
-                 - @config
-                 - @dbal.conn
-                 - @request
-                 - @template
-                 - @user
-                 - @controller.helper
-                 - %core.root_path%
-                 - %core.php_ext%
+                 - '@auth'
+                 - '@cache'
+                 - '@config'
+                 - '@dbal.conn'
+                 - '@request'
+                 - '@template'
+                 - '@user'
+                 - '@controller.helper'
+                 - '%core.root_path%'
+                 - '%core.php_ext%'
 
 Any service that is previously defined in your file, or in the file of the phpBB
 core ``phpBB/config/services.yml``, can also be used as an argument, aswell as
@@ -741,9 +741,9 @@ This is done using the ``event.listener`` tag in the ``config/service.yml``:
     nickvergessen.newspage.listener:
         class: nickvergessen\newspage\event\main_listener
         arguments:
-            - @controller.helper
-            - @template
-            - @user
+            - '@controller.helper'
+            - '@template'
+            - '@user'
         tags:
             - { name: event.listener }
 
