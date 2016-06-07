@@ -614,7 +614,7 @@ to load the language file
 ``phpBB/ext/nickvergessen/newspage/language/en/newspage.php``
 
 File edits - Don't edit! Use Events and Listeners!
-======================================================================
+==================================================
 
 As for the Newspage Modification, the only thing that is now missing from
 completion is the link in the header section, so you can start browsing the
