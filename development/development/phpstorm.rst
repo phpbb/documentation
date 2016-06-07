@@ -4,7 +4,7 @@ Using PhpStorm With phpBB
 
 PhpStorm is a leading IDE (Integrated Development Environment) and is the preferred development platform of the phpBB development team.
 
-This guide explains how to setup phpStorm for development with phpBB.
+This guide explains how to setup PhpStorm for development with phpBB.
 
 Create a New Project
 ====================
@@ -19,16 +19,16 @@ First you will need to get a copy of phpBB's development repository from GitHub.
 
 4. Choose "Create New Project from Existing Files" and follow the Wizard's steps.
 
-.. note:: Depending on your local environment, typically the best choise is "Source files are in a local directory, no web server is yet configured". You can always set up the web server later if want to use PhpStorm's server instead of a local WAMP/LAMP/MAMP stack.
+.. note:: Depending on your local environment, typically the best choise is "Source files are in a local directory, no web server is yet configured". You can always set up the web server later.
 
 5. Select the phpBB project folder you cloned from GitHub and click "Project Root". Then click "Finish".
 
 Code Style
 ==========
 
-Setting up PhpStorm to honor phpBB's coding style guide will ensure you are always writing code that meets phpBB's requirements. These settings are configured in phpStorm's Options/Preferences, under **Editor > Code Style**.
+Setting up PhpStorm to honor phpBB's coding style guide will ensure you are always writing code that meets phpBB's requirements. These settings are configured in PhpStorm's Options/Preferences, under **Editor > Code Style**.
 
-.. note:: Before changing settings, it's a good idea to create a phpBB "Scheme" in the Code Style settings pane. This phpBB scheme can be applied to any phpBB project you create in phpStorm.
+.. note:: Before changing settings, it's a good idea to create a phpBB "Scheme" in the Code Style settings pane. This phpBB scheme can be applied to any phpBB project you create in PhpStorm.
 
 .. seealso:: For your convenience we have provided an XML export of the following code style settings for phpBB (see`phpBB Code Style Scheme`_). You can import these settings into your project and all the following styling settings will be configured for you.
 
@@ -70,7 +70,7 @@ One of the most powerful features of an IDE like PhpStorm is its ability to insp
 
 The default inspection settings should work just fine. However there are a couple adjustments that might be desired:
 
-* If phpStorm is not connected to your database server, you may want to turn off **SQL > SQL Dialect Detection** and **SQL > No data sources configured warnings**.
+* If PhpStorm is not connected to your database server, you may want to turn off **SQL > SQL Dialect Detection** and **SQL > No data sources configured warnings**.
 * phpBB uses fully qualified namespaces, so you can turn off this inspection warning **PHP > Code Style > Unnecessary fully qualified name**.
 * You may enable additional JavaScript inspections. Under **JavaScript > Code quality tools**, you can enable JSCS, JSHint, JSlint and/or ESLint.
 
