@@ -11,7 +11,7 @@ Create a New Project
 
 First you will need to get a copy of phpBB's development repository from GitHub.
 
-1. Visit the `phpBB repository <https://github.com/phpbb/phpbb>`_ and Fork it to your GitHub account.
+1. Visit the `phpBB repository <https://github.com/phpbb/phpbb>`_ and fork it to your GitHub account.
 
 2. Clone your new phpBB fork to your computer.
 
@@ -58,7 +58,7 @@ Tabs & Indents:
 
 Tabs should be used (not spaces). All tab and indent sizes should be set to 4 spaces. Also be sure "Keep indents on empty lines" is NOT checked.
 
-JSON, YAML
+JSON & YAML
 ##########
 
 Json and Yaml files uses 4 spaces over tabs, so tab character should be disabled and 4 spaces the indent size.
