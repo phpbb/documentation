@@ -622,7 +622,7 @@ Newspage.
 
 In order to do this, the template variable used to be defined in the
 ``page_header()`` function of phpBB along with an edit in the ``overall_header.html`` template.
-But this is not phpBB 3.0, so we don't like file edits anymore and now use **events**
+But this is not phpBB 3.0, so we don't use file edits anymore and instead employ **events**
 instead. With events you can hook into several places and execute your code,
 without editing them.
 
