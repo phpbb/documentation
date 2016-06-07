@@ -74,6 +74,8 @@ The default inspection settings should work just fine. However there are a coupl
 * phpBB uses fully qualified namespaces, so you can turn off this inspection warning **PHP > Code Style > Unnecessary fully qualified name**.
 * You may enable additional JavaScript inspections. Under **JavaScript > Code quality tools**, you can enable JSCS, JSHint, JSlint and/or ESLint.
 
+.. note:: phpBB comes with configuration files for JSHint and JSCS. With these inspections enabled, you can use the configuration files provided by phpBB instead of PhpStorm's default settings. To do so, you should point PhpStorm to the custom configuration files under **Language & Frameworks > JavaScript > Code Quality Tools**. Point JSHint to `.jshintrc` and point JSCS to `.jscsrc`.
+
 .. note:: phpBB uses jQuery. The Javascript inspections need to be made aware of jQuery to avoid any false warnings/errors. To do this, simply go to **Languages & Frameworks > JavaScript > Libraries** and enable jQuery. If jQuery is not in the list, you can use the Download button to download a copy of jQuery to PhpStorm.
 
 .. seealso:: For your convenience we have provided an XML export of the above code inspection settings for phpBB (see`phpBB Inspection Profile`_). You can import these settings into your project and all the above inspection settings will be configured for you.
