@@ -2,7 +2,7 @@
 Using PhpStorm With phpBB
 =========================
 
-PhpStorm is a leading IDE (Integrated Development Environment) and is the preferred development platform of the phpBB development team.
+PhpStorm is an IDE (Integrated Development Environment) and is the preferred development platform of the phpBB development team.
 
 This guide explains how to setup PhpStorm for development with phpBB.
 
@@ -26,11 +26,11 @@ First you will need to get a copy of phpBB's development repository from GitHub.
 Code Style
 ==========
 
-Setting up PhpStorm to honor phpBB's coding style guide will ensure you are always writing code that meets phpBB's requirements. These settings are configured in PhpStorm's Options/Preferences, under **Editor > Code Style**.
+Setting up PhpStorm to honor phpBB's coding style guide will ensure you are always writing code that meets phpBB's requirements. These settings are configured in PhpStorm's Settings/Preferences, under **Editor > Code Style**.
 
 .. note:: Before changing settings, it's a good idea to create a phpBB "Scheme" in the Code Style settings pane. This phpBB scheme can be applied to any phpBB project you create in PhpStorm.
 
-.. seealso:: For your convenience we have provided an XML export of the following code style settings for phpBB (see`phpBB Code Style Scheme`_). You can import these settings into your project and all the following styling settings will be configured for you.
+.. seealso:: For your convenience we have provided an XML export of the following code style settings for phpBB (see `phpBB Code Style Scheme`_). You can import these settings into your project and all the following styling settings will be configured for you.
 
 PHP
 ###
@@ -43,20 +43,18 @@ Tabs should be used (not spaces). All tab and indent sizes should be set to 4 sp
 Spaces:
 *******
 
-There are many settings for handling spaces, and the defaults should work for the most part. The general rule is single-spaces should surround all operators and parenthesis (except for function declarations/calls).
+There are many settings for handling spaces, and the defaults should work for the most part. The general rule is single-spaces should surround all operators and parentheses (except for function declarations/calls).
 
 Wrapping and Braces:
 ********************
 
 The general rule here is that braces always go on new lines.
 
-CSS, JAVASCRIPT, HTML, TWIG
+CSS, JavaScript, HTML, Twig
 ###########################
 
-Tabs & Indents:
-***************
-
-Tabs should be used (not spaces). All tab and indent sizes should be set to 4 spaces. Also be sure "Keep indents on empty lines" is NOT checked.
+Tabs should be used (not spaces). All tab and indent sizes should be set to 4 spaces. 
+Also be sure "Keep indents on empty lines" is NOT checked.
 
 JSON & YAML
 ##########
@@ -70,17 +68,17 @@ One of the most powerful features of an IDE like PhpStorm is its ability to insp
 
 The default inspection settings should work just fine. However there are a couple adjustments that might be desired:
 
-* If PhpStorm is not connected to your database server, you may want to turn off **SQL > SQL Dialect Detection** and **SQL > No data sources configured warnings**.
+* If PhpStorm is not connected to your database server, you may want to turn off **SQL > SQL Dialect Detection** and **SQL > No data sources configured** warnings.
 * phpBB uses fully qualified namespaces, so you can turn off this inspection warning **PHP > Code Style > Unnecessary fully qualified name**.
 * You may enable additional JavaScript inspections. Under **JavaScript > Code quality tools**, you can enable JSCS, JSHint, JSlint and/or ESLint. phpBB comes with configuration files for JSHint and JSCS. With these inspections enabled, you can use the configuration files provided by phpBB instead of PhpStorm's default settings. To do so, point PhpStorm to the custom configuration files under **Language & Frameworks > JavaScript > Code Quality Tools**. Point JSHint to `.jshintrc` and point JSCS to `.jscsrc`.
 
 .. warning:: JSCS is not bundled with PhpStorm. The JSCS tool is run through NodeJS. To use JSCS, make sure the NodeJS framework is downloaded and installed on your computer. Then you can install JSCS via the npm package manager and configure the JSCS options in PhpStorm to use the JSCS package. For more information review `PhpStorm's documentation <https://www.jetbrains.com/help/phpstorm/10.0/using-javascript-code-quality-tools.html#JSCS>`_.
 
-.. note:: phpBB uses jQuery. The Javascript inspections need to be made aware of jQuery to avoid any false warnings/errors. To do this, simply go to **Languages & Frameworks > JavaScript > Libraries** and enable jQuery. If jQuery is not in the list, you can use the Download button to download a copy of jQuery to PhpStorm.
+.. note:: phpBB uses jQuery. The Javascript inspections need to be made aware of jQuery to avoid any false warnings/errors. To do this, simply go to **Languages & Frameworks > JavaScript > Libraries** and enable jQuery. If jQuery is not in the list, you can use the "Download" button to download a copy of jQuery to PhpStorm.
 
-.. seealso:: For your convenience we have provided an XML export of the above code inspection settings for phpBB (see`phpBB Inspection Profile`_). You can import these settings into your project and all the above inspection settings will be configured for you.
+.. seealso:: For your convenience we have provided an XML export of the above code inspection settings for phpBB (see `phpBB Inspection Profile`_). You can import these settings into your project and all the above inspection settings will be configured for you.
 
-PLUGINS:
+Plugins:
 ========
 
 Adding plugins to PhpStorm can bring even more features, tools, inspectors and code quality analysis to your IDE.
@@ -93,27 +91,35 @@ phpBB uses an EditorConfig profile. Install the EditorConfig plug-in to take adv
 Languages & Frameworks:
 =======================
 
-PHP inspections are dependent upon the PHP language level (i.e.: PHP 5.3, 5.4 7.0, etc.). You should set the **PHP language level** to the minimum version phpBB supports. This is to ensure you don't accidentally write code that may be valid in PHP 5.6, but incompatible with PHP 5.4 (which phpBB supports). The **PHP interpreter** should be set to whatever PHP binary is available in the drop down menu. If no interpreter is found, you need to direct it to your PHP executable on your system (e.g.: /usr/bin/php).
+PHP inspections are dependent upon the PHP language level (i.e.: PHP 5.3, 5.4, 7.0, etc.). You should set the **PHP language level** to the minimum version phpBB supports. This is to ensure you don't accidentally write code that may be valid in PHP 5.6, but incompatible with PHP 5.4 (which phpBB supports). The **PHP interpreter** should be set to whatever PHP binary is available in the drop down menu. If no interpreter is found, you need to direct it to your PHP executable on your system (e.g.: /usr/bin/php).
 
 PHPUnit Testing:
 ================
 
 While it's possible to run PHPUnit tests in PhpStorm directly from the Terminal window, PHPUnit testing is also built into PhpStorm as a Run/Debug action. The benefit of this, is testing can more easily be paused or aborted. Failed tests can be re-run without having to run the entire test suite. Best of all the failed test reporting has hyperlinks to the failing code points, making it much easier to jump to the problem tests and phpBB code and debug them.
 
-.. note:: This assumes you already have PHPUnit testing configured and working from the command line interface.
+.. note:: This assumes you already have PHPUnit testing configured and working from the command line interface. Read the `Testing ../testing/index`_ documentation for more information.
 
 To set up PHPunit within PhpStorm, go to:
+
 * **Run > Edit Configurations**
 
 * Hit the **+** to create a new PHPUnit configuration and give it a name, like 'phpBB tests'.
 
-* Set **Test Runner > Defined in configuration file**.
+* Set **Test Runner** to **Defined in configuration file**.
 
-* Check **Use alternative configuration file** and point it to the **phpunit.xml.dist** file in the phpBB project.
+* Check **Use alternative configuration file** and point it to the **phpunit.xml.dist** file in the phpBB project root.
 
-* Set **Command Line > Custom Working Directory** to the root of the phpBB project.
+* Set **Command Line > Custom working directory** to the phpBB project root.
 
 * Now you can choose **Run > phpBB tests** and the unit tests should run within PhpStorm.
+
+.. note:: If you are writing extensions for phpBB, you can set up PHPUnit test configurations for each extension as well. Just change each configuration to use the extension's configuration file instead of phpBB's.
+
+PhpStorm Setting Exports for phpBB
+==================================
+
+Copy and save these code blocks as XML files, and they can be imported into PhpStorm's settings to automatically set up most of the configuration reccomendations mentioned in this documentation for phpBB.
 
 phpBB Code Style Scheme
 #######################
