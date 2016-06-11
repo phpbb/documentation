@@ -21,7 +21,7 @@ We generally refer to the name of the word in the dictionary as
 Using the Language System in php
 ================================
 
-The object holding the language dictionary for the current user is the ``$user``
+The object holding the language dictionary for the current user is the ``$language``
 object (``phpbb\language\language`` class). To get the translation of a language
 entry inside of php code, call the ``phpbb\language\language::lang()`` method:
 
