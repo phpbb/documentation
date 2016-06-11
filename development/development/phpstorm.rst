@@ -119,7 +119,7 @@ To set up PHPunit within PhpStorm, go to:
 PhpStorm Setting Exports for phpBB
 ==================================
 
-Copy and save these code blocks as XML files, and they can be imported into PhpStorm's settings to automatically set up most of the configuration reccomendations mentioned in this documentation for phpBB.
+Copy and save these code blocks as XML files, and they can be imported into PhpStorm's settings to automatically set up most of the configuration recommendations mentioned in this documentation for phpBB.
 
 phpBB Code Style Scheme
 #######################
