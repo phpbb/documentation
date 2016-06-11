@@ -12,6 +12,7 @@ Contents:
    language/index
    migrations/index
    testing/index
+   development/phpstorm
 
 Indices and tables
 ==================
