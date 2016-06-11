@@ -98,7 +98,7 @@ PHPUnit Testing:
 
 While it's possible to run PHPUnit tests in PhpStorm directly from the Terminal window, PHPUnit testing is also built into PhpStorm as a Run/Debug action. The benefit of this, is testing can more easily be paused or aborted. Failed tests can be re-run without having to run the entire test suite. Best of all the failed test reporting has hyperlinks to the failing code points, making it much easier to jump to the problem tests and phpBB code and debug them.
 
-.. note:: This assumes you already have PHPUnit testing configured and working from the command line interface. Read the `Testing ../testing/index`_ documentation for more information.
+.. note:: This assumes you already have PHPUnit testing configured and working from the command line interface. Read the :doc:`Testing` documentation for more information.
 
 To set up PHPunit within PhpStorm, go to:
 
