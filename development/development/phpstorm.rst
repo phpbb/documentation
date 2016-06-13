@@ -35,18 +35,18 @@ Setting up PhpStorm to honor phpBB's coding style guide will ensure you are alwa
 PHP
 ###
 
-Tabs & Indents:
-***************
+Tabs & Indents
+**************
 
 Tabs should be used (not spaces). All tab and indent sizes should be set to 4 spaces. Also be sure "Keep indents on empty lines" is NOT checked.
 
-Spaces:
-*******
+Spaces
+******
 
 There are many settings for handling spaces, and the defaults should work for the most part. The general rule is single-spaces should surround all operators and parentheses (except for function declarations/calls).
 
-Wrapping and Braces:
-********************
+Wrapping and Braces
+*******************
 
 The general rule here is that braces always go on new lines.
 
@@ -57,7 +57,7 @@ Tabs should be used (not spaces). All tab and indent sizes should be set to 4 sp
 Also be sure "Keep indents on empty lines" is NOT checked.
 
 JSON & YAML
-##########
+###########
 
 Json and Yaml files uses 4 spaces over tabs, so tab character should be disabled and 4 spaces the indent size.
 
@@ -78,8 +78,8 @@ The default inspection settings should work just fine. However there are a coupl
 
 .. seealso:: For your convenience we have provided an XML export of the above code inspection settings for phpBB (see `phpBB Inspection Profile`_). You can import these settings into your project and all the above inspection settings will be configured for you.
 
-Plugins:
-========
+Plugins
+=======
 
 Adding plugins to PhpStorm can bring even more features, tools, inspectors and code quality analysis to your IDE.
 
@@ -88,17 +88,17 @@ EditorConfig
 
 phpBB uses an EditorConfig profile. Install the EditorConfig plug-in to take advantage of it. This nifty plug-in will automatically make sure your PHP, CSS, JS, HTML, YML and MD files will always correctly use tabs or spaces as required by the file type, trim trailing whitespaces, and ensure all files have a new empty line at the end.
 
-Languages & Frameworks:
-=======================
+Languages & Frameworks
+======================
 
 PHP inspections are dependent upon the PHP language level (i.e.: PHP 5.3, 5.4, 7.0, etc.). You should set the **PHP language level** to the minimum version phpBB supports. This is to ensure you don't accidentally write code that may be valid in PHP 5.6, but incompatible with PHP 5.4 (which phpBB supports). The **PHP interpreter** should be set to whatever PHP binary is available in the drop down menu. If no interpreter is found, you need to direct it to your PHP executable on your system (e.g.: /usr/bin/php).
 
-PHPUnit Testing:
-================
+PHPUnit Testing
+===============
 
 While it's possible to run PHPUnit tests in PhpStorm directly from the Terminal window, PHPUnit testing is also built into PhpStorm as a Run/Debug action. The benefit of this, is testing can more easily be paused or aborted. Failed tests can be re-run without having to run the entire test suite. Best of all the failed test reporting has hyperlinks to the failing code points, making it much easier to jump to the problem tests and phpBB code and debug them.
 
-.. note:: This assumes you already have PHPUnit testing configured and working from the command line interface. Read the :doc:`Testing` documentation for more information.
+.. note:: This assumes you already have PHPUnit testing configured and working from the command line interface. Read the :doc:`../Testing` documentation for more information.
 
 To set up PHPunit within PhpStorm, go to:
 
