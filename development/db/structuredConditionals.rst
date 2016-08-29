@@ -330,7 +330,8 @@ In your function:
 
 .. code-block:: php
 	
-	function eventGrabber($event){
+	function eventGrabber($event)
+	{
 	
 You will have an $event['sql'] which will contain the query.  
 Below, I use nesting of "if", if you prefer, you may use exceptions instead.  
@@ -341,11 +342,15 @@ In order to access what we want, we can do it like this:
 	// May be required by PHP
 	$sql = $event['sql'];
 	// Is the element I expect there?
-	if(isset($sql['WHERE'][2][0])){
-		if(is_array($sql['WHERE'][2])){
-			if($sql['WHERE'][2][0] === 'OR'){
+	if(isset($sql['WHERE'][2][0]))
+	{
+		if(is_array($sql['WHERE'][2]))
+		{
+			if($sql['WHERE'][2][0] === 'OR')
+			{
 				// This should be the array with the OR I wanted
-				if(isset($sql['WHERE'][2][0][1]) && $sql['WHERE'][2][0][1][0] === 'topic_last_post_time'){
+				if(isset($sql['WHERE'][2][0][1]) && $sql['WHERE'][2][0][1][0] === 'topic_last_post_time')
+				{
 					// Confirmed to be what I want it to be!
 					// this array_slice() will remove the elements after the above-mentioned topic_last_post_time
 					$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
@@ -353,14 +358,21 @@ In order to access what we want, we can do it like this:
 					$event['sql'] = $sql;
 					return;
 				}
-			} else {
+			}
+			else 
+			{
 				// For example, write code to log this happened so that an admin can help you making your
 				// extension compatible with other extensions or even for you to be warned about phpBB changes.
-		} else {
+			}
+		}
+		else
+		{
 			// For example, write code to log this happened so that an admin can help you making your
 			// extension compatible with other extensions or even for you to be warned about phpBB changes.
 		}
-	} else {
+	}
+	else
+	{
 		// For example, write code to log this happened so that an admin can help you making your
 		// extension compatible with other extensions or even for you to be warned about phpBB changes.
 	}
@@ -385,11 +397,15 @@ Or to protect yourself slightly:
 
 .. code-block:: php
 	
-	function myEventListener($event){
+	function myEventListener($event)
+	{
 		$sql = $event['sql'];
-		if(!empty($sql['WHERE'][2][0][1]) && is_array($sql['WHERE'][2][0][1])){
+		if(!empty($sql['WHERE'][2][0][1]) && is_array($sql['WHERE'][2][0][1]))
+		{
 			$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
-		} else {
+		}
+		else 
+		{
 			// For example, write code to log this happened so that an admin can help you making your
 			// extension compatible with other extensions or even for you to be warned about phpBB changes.
 		}
@@ -408,11 +424,15 @@ The short way is about as much as this:
 
 .. code-block:: php
 	
-	function myEventListener($event){
+	function myEventListener($event)
+	{
 		$sql = $event['sql'];
-		if(!empty($sql['WHERE'][2][0][1]) && is_array($sql['WHERE'][2][0][1])){
+		if(!empty($sql['WHERE'][2][0][1]) && is_array($sql['WHERE'][2][0][1]))
+		{
 			$sql['WHERE'][2][0][1][] = array('topic_type', '=', POST_STICKY);
-		} else {
+		}
+		else 
+		{
 			// For example, write code to log this happened so that an admin can help you making your
 			// extension compatible with other extensions or even for you to be warned about phpBB changes.
 		}
@@ -461,22 +481,22 @@ In phpBB's code
 .. code-block:: php
 
 		array('AND',
-				array('t.forum_id', '=', 3),
-				array('t.topic_type', '=', 0),
-				array('t.topic_id', '>', 5),
-				array('t.topic_poster', '<>', 5),
-			),
+			array('t.forum_id', '=', 3),
+			array('t.topic_type', '=', 0),
+			array('t.topic_id', '>', 5),
+			array('t.topic_poster', '<>', 5),
+		),
 
 .. code-block:: php
 
 		array('AND',
-				array('t.forum_id', '=', 3),
-				array('NOT',
-					array('t.topic_type', '=', 0),
-				),
-				array('t.topic_id', '>', 5),
-				array('t.topic_poster', '<>', 5),
+			array('t.forum_id', '=', 3),
+			array('NOT',
+				array('t.topic_type', '=', 0),
 			),
+			array('t.topic_id', '>', 5),
+			array('t.topic_poster', '<>', 5),
+		),
 	
 
 .. code-block:: php
@@ -492,7 +512,8 @@ In phpBB's extensions code
 
 .. code-block:: php
 	
-	function myEventListener($event){
+	function myEventListener($event)
+	{
 		$sql = $event['sql'];
 		$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
 		$event['sql'] = $sql;
