@@ -6,7 +6,7 @@ Intro
 =====
 
 This feature helps extension authors to edit SQL queries in an easy and quick way without the need to parse the SQL queries, most likely, using regex and complex text editing.
-Instead of a single string, this allows editing the WHERE clause in an SQL query by adding, removing and editing php arrays. Using this method, finding the portion of the query to edit
+Instead of a single string, this allows editing the WHERE clause in an SQL query by adding, removing and editing php arrays. Using this method, finding the portion of the query to edit should be much more straightforward.
 
 If done correctly, incompatibilities between extensions that use the same SQL query can either much easily be averted (and warned) or where a regex match could fault while finding the wanted content the fact they are only arrays, they can be come automatically compatible.
 
