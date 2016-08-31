@@ -387,7 +387,8 @@ If you don't feel like it, however, then this is enough:
 
 .. code-block:: php
 	
-	function myEventListener($event){
+	function myEventListener($event)
+	{
 		$sql = $event['sql'];
 		$sql['WHERE'][2][0][1] = array_slice($sql['WHERE'][2][0][1], 1);
 		$event['sql'] = $sql;
