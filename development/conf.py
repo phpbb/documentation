@@ -111,6 +111,15 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #html_theme_options = {}
 
+html_context = dict(
+    conf_py_path='/development/',
+    display_github=True,
+    github_repo='documentation',
+    github_user='phpbb',
+    github_version=version,
+    source_suffix='.rst',
+)
+
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
