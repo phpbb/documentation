@@ -116,7 +116,7 @@ html_context = dict(
     display_github=True,
     github_repo='documentation',
     github_user='phpbb',
-    github_version=version,
+    github_version=version + ".x",
     source_suffix='.rst',
 )
 
