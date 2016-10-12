@@ -767,14 +767,15 @@ Now the tests will pass correctly::
 Continuous integration with Travis CI
 =====================================
 
-As a final step in this tutorial, we want to explain testing your extension on
-`Travis CI <https://travis-ci.org/>`_ (free of charge, when your project is
-public). In order to do that, you need to set up your extension as a project on
-`GitHub <https://github.com>`_ (free of charge, when your project is public).
+As a final step in this tutorial, we want to explain how to set up automated
+testing of your extension on `Travis CI <https://travis-ci.org/>`_ (free of
+charge, when your project is public). In order to do that, your extension must
+first be set up as a project repository on `GitHub <https://github.com>`_ (also
+free of charge, when your project is public).
 
 If you need help setting up git and creating your GitHub project, please have
-a look at the `Help section <https://help.github.com/>`_ on Github. Especially
-the two highlighted topics at the top:
+a look at the `Help section <https://help.github.com/>`_ on Github, particularly
+the following two help topics:
 
 * `Set Up Git <https://help.github.com/articles/set-up-git>`_
 * `Create A Repo <https://help.github.com/articles/create-a-repo>`_
@@ -782,14 +783,17 @@ the two highlighted topics at the top:
 .. note::
 
     It is recommended to use the root of the extension (``ext/acme/demo``) also
-    as root for the repository. Otherwise the scripts that phpBB provides for
+    as root for the Git repository. Otherwise the scripts that phpBB provides for
     easy test execution on Travis CI will not work correctly.
+
+    View one of phpBB's official extension repositories as an example:
+    `Board Rules <https://github.com/phpbb-extensions/boardrules>`_.
 
 Travis CI configuration file
 ----------------------------
 
 When you are done with that, we need to add two files to our extension. The
-first file is the ``.travis.yml`` file:
+first file is the Travis CI configuration file, ``.travis.yml``:
 
 .. note::
 
@@ -846,11 +850,11 @@ first file is the ``.travis.yml`` file:
         - /^\d+(\.\d+)?\.x$/
 
     install:
-      - composer install --dev --no-interaction --prefer-source
       - travis/prepare-phpbb.sh $EXTNAME $PHPBB_BRANCH
       - cd ../../phpBB3
       - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
       - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION
+      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.5' -a '$DB' = 'mysqli' ]; then cd phpBB; composer require phpbb/epv:dev-master --dev --no-interaction; cd ../; fi"
 
     before_script:
       - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION
@@ -859,7 +863,7 @@ first file is the ``.travis.yml`` file:
       - sh -c "if [ '$SNIFF' != '0' ]; then travis/ext-sniff.sh $DB $TRAVIS_PHP_VERSION $EXTNAME; fi"
       - sh -c "if [ '$IMAGE_ICC' != '0' ]; then travis/check-image-icc-profiles.sh $DB $TRAVIS_PHP_VERSION; fi"
       - phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/travis/phpunit-$DB-travis.xml --bootstrap ./tests/bootstrap.php
-      - sh -c "if [ '$EPV' != '0' ] && [ '$TRAVIS_PHP_VERSION' = '5.3.3' ] && [ '$DB' = 'mysqli' ]; then phpBB/ext/$EXTNAME/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
+      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.5' -a '$DB' = 'mysqli' ]; then phpBB/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
 
 .. note::
 
@@ -880,8 +884,8 @@ Preparing phpBB
 ---------------
 
 The second file we need to create is a helper file called
-``travis/prepare-phpbb.sh``, that is used by Travis CI, to set up the phpBB
-installation from GitHub for us:
+``travis/prepare-phpbb.sh``, which is a script used by Travis CI, to set up
+the phpBB installation from GitHub for us:
 
 .. warning::
 
@@ -914,22 +918,41 @@ installation from GitHub for us:
     # Clone phpBB
     git clone --depth=1 "git://github.com/phpbb/phpbb.git" "phpBB3" --branch=$BRANCH
 
+.. note::
+
+    The prepare-phpbb.sh file needs to have executable permissions or Travis CI
+    tests will fail. You can set the correct permission for this file from a
+    terminal command line interface, e.g.:
+
+    .. code-block:: bash
+
+        $ cd path/to/your/extension
+        $ git update-index --chmod=+x travis/prepare-phpbb.sh
+
 Enable Travis CI on GitHub
 --------------------------
 
-As a last step you need to enable Travis CI on GitHub.
+As a final step you need to enable Travis CI in your GitHub repository.
 
     1. Open your repository, e.g. `<https://github.com/phpbb/phpbb-ext-acme-demo>`_,
     2. Go to "Settings"
-    3. "Webhooks & Services"
-    4. In the "Services" table press the "Add Service" button and search for ``Travis CI``
+    3. "Integrations & Services"
+    4. Press the "Add Service" button and search for ``Travis CI``
 
-When you now commit and push the travis files from above to the ``master``
+Now when you commit and push the travis files you created to the ``master``
 branch of your repository, the unit, database and functional tests will be executed.
-Tests help avoid causing regressions (breaking other parts of your code)
-by alerting you to any problems resulting from changes to your code while fixing bugs,
-adding new features and other changes to your extension.
+All future commits pushed to your repository, including Pull Requests, will trigger
+your tests to execute.
 
-If your tests fail after comitting changes, you will receive a notification email
-from Travis CI, so you can fix it, before submitting it to the customisation
-database for validation.
+Well written tests help prevent regressions (breaking other parts of your code)
+by alerting you to any problems resulting from changes to your code while fixing bugs,
+adding new features and other code changes to your extension.
+
+If your tests fail after committing changes, you will receive a notification email
+from Travis CI. The error logs from Travis CI can be a little daunting at first,
+but once you get used to them they can help you pinpoint unforeseen bugs and regressions
+in your code that must be fixed.
+
+Travis CI also provides Build Status badges. They provide you the code in markdown
+format so you can add the badge to your repository's README so visitors can see that
+the build status of your extension.
