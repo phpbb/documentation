@@ -30,17 +30,17 @@ installed into a phpBB board just the same as any other.
 
 .. note::
 
-    The Skeleton Extension is a tool for extension developers. As such,
-    it is intended to be installed in a phpBB board used for
-    offline/local development of extensions. It is not necessarily
-    intended to be installed on live/production web sites.
+    The Skeleton Extension is intended to be installed in a phpBB
+    board used for offline/local development of extensions. It is
+    not necessarily intended to be installed on live/production web
+    sites.
 
 Requirements
 ------------
 
 -  A phpBB board, version 3.1.4 or newer or 3.2.0-b3 or newer.
 -  PHP version 5.3.9 or newer.
--  PHP ``ZipArchive`` module enabled.
+-  PHP ZipArchive module enabled.
 
 Installation
 ------------
@@ -57,10 +57,10 @@ Create an extension
 
 .. note::
 
-    The Skeleton Extension is based on the ACME Demo extension. As a
-    result, some of its files may have working classes and methods
+    The Skeleton Extension is based on the Acme Demo extension. As a
+    result, some of its files will have working classes and methods
     already. These are provided to make the skeleton both functional and
-    educational. You will want to remove any ACME Demo code you do not
+    educational. You will want to remove any Acme Demo code you do not
     need from the skeleton and replace it with your own custom code.
 
 phpBB Web interface
@@ -76,7 +76,7 @@ interface (UI).
     :alt: alternate text
 
 In order to create an extension via the web UI, open the phpBB board you
-installed it in and visit the "Create skeleton extension" link in the
+installed this extension in and visit the "Create skeleton extension" link in the
 board's navigation bar.
 
 You will be presented with a form where you can enter information about
@@ -110,7 +110,7 @@ To create an extension, run:
 You will be prompted to enter information about the extension you want
 to create.
 
-A packaged ZIP file will be download to ``phpBB/store/tmp-ext/``.
+A packaged ZIP file will be saved to ``phpBB/store/tmp-ext/``.
 
 Unzip your skeleton extension and begin writing your own code.
 
@@ -118,8 +118,8 @@ Documentation
 =============
 
 The following documentation describes how to use the Skeleton Extension
-to generate a skeleton that will suit your needs best, so you can jump 
-straight into writing your own code.
+to configure and generate a skeleton that will suit your needs, so you
+can jump straight into writing your own code.
 
 Extension packaging
 -------------------
@@ -138,7 +138,7 @@ this would be ``acme``. **This field is required.**
 Package name
 ^^^^^^^^^^^^
 
-The folder name is the name of the extension. Valid naming conventions must 
+The package name is the name of the extension. Valid naming conventions must
 start with a letter and contain letters and numbers only. In the case of the 
 Acme Demo extension, this would be ``demo``. **This field is required.**
 
@@ -147,7 +147,7 @@ Display name (readable)
 
 This is the name (or title) of your extension in plain English. This is what the user will
 see when your extension appears in the phpBB ACP Extension Manager. In the case of the 
-Acme Demo extension, this would be ``ACME Demo``. **This field is required.**
+Acme Demo extension, this would be ``Acme Demo``. **This field is required.**
 
 Description
 ^^^^^^^^^^^
@@ -159,7 +159,7 @@ Version
 ^^^^^^^
 
 The version of your extension. phpBB's coding guidelines require an ``x.y.z`` semantic 
-versioning format, with available ``-dev``, ``-alpha``, ``-beta`` and ``-RC`` pre-release suffixes.
+versioning format, with optional ``-dev``, ``-alpha``, ``-beta`` and ``-RC`` pre-release suffixes.
 When left blank, the Skeleton Extension will use ``1.0.0-dev`` by default.
 
 Date of the extension
@@ -177,7 +177,7 @@ GitHub repository or any other site related to your extension.
 Authors
 -------
 
-Here you can name your extension's author(s). Use the ``Add author`` button if need
+Here you can name your extension's author(s). Use the ``Add author`` button
 to add additional authors.
 
 Author name
@@ -188,7 +188,7 @@ The name of an extension's author. Must not be empty.
 Author email
 ^^^^^^^^^^^^
 
-The email of an extension's author. (Optional)
+The email address of an extension's author. (Optional)
 
 Author homepage
 ^^^^^^^^^^^^^^^
@@ -225,8 +225,7 @@ To mitigate compatibility breaks, it is common to set the maximum version
 to the next major release version of phpBB.
 
 For example, if your extension is being developed for phpBB 3.1.x, you can
-set the maximum requirement to be any version less than 3.2.x-dev by using 
-``<3.2.0@dev``.
+set the maximum requirement to phpBB 3.2.x by using ``<3.2.0@dev``.
 
 PHP requirement of the extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -243,15 +242,14 @@ an alternative version.
 Components
 ----------
 
-The default Skeleton Extension outputs just a license file and composer.json.
-Obviously this doesn't do anything. The Components section allows
-you to choose from a variety of typical components an extension could
-need, such as the files to create an ACP module, migrations, events, and
-tasks such as cron, CLI and notifications. The files generated for these
-components are simple yet fully working examples based off the ACME Demo
-extension. They are intended to give you a consistent and phpBB
-code-ready starting point, so you can focus more on writing your code
-and less on file structure and organization.
+The default Skeleton Extension outputs a license file and composer.json.
+The Components section allows you to choose from a variety of typical
+components an extension could need, such as an ACP module, migrations,
+events, and tasks such as cron, CLI and notifications. The files
+generated for these components are simple yet fully working examples
+based off the Acme Demo extension. They are intended to give you a
+consistent and phpBB code-ready starting point, so you can focus more
+on writing your code and less on file structure and organization.
 
 PHP event listeners
 -------------------
@@ -259,8 +257,8 @@ PHP event listeners
 PHP event listeners work with core events to inject code into phpBB.
 Core events are like hooks, and they can be found throughout phpBB's
 codebase at key points. They give your extension access to phpBB's
-variables and allow you to modify them or to inject additional PHP code
-during phpBB's execution.
+variables and allow you to use and modify them or to inject additional
+PHP code during phpBB's execution.
 
 The Skeleton Extension will generate a sample event listener PHP file
 and necessary services YAML file:
@@ -357,7 +355,7 @@ files:
 Moderator control panel (MCP)
 -----------------------------
 
-Add a functional MCP module tab for an extension to the MCP.
+Add a functional MCP module for an extension to the MCP.
 
 The Skeleton Extension will generate all the files needed for a
 functioning MCP module including its migration, language, style and PHP
@@ -397,7 +395,7 @@ files:
 User control panel (UCP)
 ------------------------
 
-Add a functional UCP module tab for an extension to the UCP.
+Add a functional UCP module for an extension to the UCP.
 
 The Skeleton Extension will generate all the files needed for a
 functioning UCP module including its migration, language, style and PHP
@@ -439,8 +437,8 @@ Database migration
 ------------------
 
 Migration files are used to make database changes. This includes adding
-data to tables and schema changes which are changes to the database's
-tables and fields.
+data to tables and schema changes (which are changes to the database's
+tables and columns).
 
 The Skeleton Extension will generate all of its sample migration files:
 
@@ -484,15 +482,15 @@ YAML files:
 Controller (front page)
 -----------------------
 
-Controllers are typically used for the front-facing files/classes. They
-run the code that produces a new and complete page that the user views.
-Examples of front-facing pages an extension may use include a news page,
-a blog, a FAQ, etc.
+Controllers are typically used for front-facing files/classes. They
+run the code that produces a new and complete page that the user will
+interact with. Examples of front-facing pages an extension may use
+include a news page, a blog, a FAQ, etc.
 
-The Skeleton Extension generates a front-facing page that simply
-displays a message to the user. Included with this component are the
-HTML template file for the page, PHP and template event listeners (to
-demonstrate adding a link to the new page from the nav bar), the
+The Skeleton Extension generates a front-facing page that displays a
+"Hello world" message to the user. Included with this component are
+the HTML template file for the page, PHP and template event listeners
+(to demonstrate adding a link to the new page in the nav bar), the
 language file, and the config and routing YAML files:
 
 ::
@@ -527,14 +525,14 @@ language file, and the config and routing YAML files:
 Extension base (ext.php)
 ------------------------
 
-The optional ext.php file can be used to run code before or during
+The optional ``ext.php`` file can be used to run code before or during
 extension installation and removal operations. This is most useful if
 your extension needs to run code when it is enabled, disabled, or
 purged. Extensions have also used it to check if phpBB satisfies the
 requirements of the extension before proceeding with installation, to
 define class constants, and more.
 
-The Skeleton Extension will generate a sample ext.php class. This class
+The Skeleton Extension will generate a sample ``ext.php`` class. This class
 is empty by default but can be populated with methods when used with
 other components (such as Notifications):
 
@@ -598,7 +596,7 @@ necessary migration and config files:
     │   │   │   └── ...
     │   │   └── ...
     │   ├── migrations            # Dir containing migration files
-    │   │   ├── install_cron.php  # A migration installing cron related configs
+    │   │   ├── install_cron.php  # A migration installing cron related data
     │   │   └── ...
     │   └── ...
     └── ...
@@ -611,7 +609,7 @@ through phpBB's notification system.
 
 The Skeleton Extension will generate a sample notification, including
 the necessary language and config files. Additionally it will generate
-an ext.php file with important actions that must run during an
+an ``ext.php`` file with important actions that must run during an
 extension's enable, disable and purge steps:
 
 ::
@@ -650,7 +648,7 @@ functional tests:
 
     vendor
     ├── package
-    │   ├── phpunit.xml.dist          # A PHPUnit configuration file
+    │   ├── phpunit.xml.dist          # A PHPUnit configuration file (do not edit)
     │   ├── tests                     # Dir containing test scripts
     │   │   ├── controller            # Example dir containing controller tests
     │   │   │   ├── main_test.php     # A simple unit test (tests a controller class)
@@ -685,7 +683,7 @@ pushed to your GitHub repository:
     │   ├── .travis.yml           # A Travis CI configuration file
     │   ├── tests                 # Dir containing PHPUnit tests
     │   ├── travis                # Dir containing Travis CI scripts
-    │   │   ├── prepare-phpbb.sh  # Script required by Travis CI during testing
+    │   │   ├── prepare-phpbb.sh  # Script required by Travis CI during testing (do not edit)
     │   │   └── ...
     │   └── ...
     └── ...
@@ -698,17 +696,23 @@ pushed to your GitHub repository:
 
 .. note::
 
-    The Skeleton Extension currently does not allow you to
-    generate the Travis CI component without also generating the PHPUnit
-    tests component. This is because without tests, there is no benefit to
-    using Travis CI.
+    The Skeleton Extension currently does not allow you to generate
+    the Travis CI component without also generating the PHPUnit tests
+    component. This is because without unit tests, there is little
+    benefit to using Travis CI.
 
 Build script (phing)
 --------------------
 
 A phing build script is generated for your extension which can be used
 to generate build packages to help simplify the release or deployment
-processes.
+process.
+
+For example, when you are ready to release a version of your extension,
+running the build script will package your extension in the appropriate
+vendor/package format and generate a ZIP file ready to submit to phpBB's
+Customisation Database. It can also clean out files not intended for
+distribution such as unit tests and hidden Git files.
 
 To run the build script, use the following console commands:
 
