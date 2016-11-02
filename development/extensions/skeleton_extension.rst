@@ -142,8 +142,8 @@ The package name is the name of the extension. Valid naming conventions must
 start with a letter and contain letters and numbers only. In the case of the 
 Acme Demo extension, this would be ``demo``. **This field is required.**
 
-Display name (readable)
-^^^^^^^^^^^^^^^^^^^^^^^
+Display name
+^^^^^^^^^^^^
 
 This is the name (or title) of your extension in plain English. This is what the user will
 see when your extension appears in the phpBB ACP Extension Manager. In the case of the 
