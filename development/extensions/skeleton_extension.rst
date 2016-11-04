@@ -5,16 +5,16 @@ phpBB Skeleton Extension
 The Skeleton Extension is a tool for extension developers. Its 
 purpose is to kick start your extension development projects.
 
-What is a Skeleton? It's a working extension, based off the phpBB 
+What is a skeleton? It's a working extension, based off the phpBB
 Acme Demo extension. When you want to develop an extension, creating 
-a Skeleton will generate most of the initial files you would need,
+a skeleton will generate most of the initial files you would need,
 so you don't have to.
 
 This means you can jump straight into writing code for your extension,
 and bypass the mundane task of creating the initial files, methods
 and docblocks yourself.
 
-If you've never written an extension before, a Skeleton provides an ideal way
+If you've never written an extension before, a skeleton provides an ideal way
 to get started with your first one. Experienced developers will love it
 too, no longer having to copy-paste code from their existing 
 extensions in order to start up new ones.
