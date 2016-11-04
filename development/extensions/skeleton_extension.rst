@@ -698,8 +698,8 @@ pushed to your GitHub repository:
 
 .. warning::
 
-    The ``.travis.yml`` is an invisible file. You can only edit
-    it from a Text Editor or IDE that is capable of handling invisible
+    The ``.travis.yml`` is a hidden file. You can view and edit it
+    using a Text Editor or IDE that is capable of displaying hidden
     files.
 
 .. note::
