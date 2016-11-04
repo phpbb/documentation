@@ -165,7 +165,7 @@ When left blank, the Skeleton Extension will use ``1.0.0-dev`` by default.
 Date of the extension
 ^^^^^^^^^^^^^^^^^^^^^
 
-Date the extension was created. Dates must be in the ``YYYY-MM-DD`` format. 
+Date the extension is released. Dates must be in the ``YYYY-MM-DD`` format.
 When left blank, the Skeleton Extension will use the current date by default.
 
 Homepage of the extension
