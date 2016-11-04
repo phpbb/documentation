@@ -227,6 +227,14 @@ to the next major release version of phpBB.
 For example, if your extension is being developed for phpBB 3.1.x, you can
 set the maximum requirement to phpBB 3.2.x by using ``<3.2.0@dev``.
 
+.. note::
+
+    Currently, phpBB does not automatically enforce the minimum and maximum
+    requirements. However, it will begin enforcing it in a future release.
+    In the meantime, it is possible to use the ``is_enableable()`` method
+    in the ``ext.php`` class to `enforce the minimum and maximum requirements
+    <https://github.com/phpbb-extensions/boardrules/blob/master/ext.php#L29-L43>`_.
+
 PHP requirement of the extension
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
