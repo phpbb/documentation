@@ -38,7 +38,7 @@ installed into a phpBB board just the same as any other.
 Requirements
 ------------
 
--  A phpBB board, version 3.1.4 or newer or 3.2.0-b3 or newer.
+-  A phpBB board, version 3.1.4 or newer (from the 3.1.x branch) or 3.2.0-b3 or newer (from the 3.2.x branch).
 -  PHP version 5.3.9 or newer.
 -  PHP ZipArchive module enabled.
 
