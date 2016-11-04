@@ -11,7 +11,7 @@ a skeleton will generate most of the initial files you would need,
 so you don't have to.
 
 This means you can jump straight into writing code for your extension,
-and bypass the mundane task of creating the initial files, methods
+and bypass the boring task of creating the initial files, methods
 and docblocks yourself.
 
 If you've never written an extension before, a skeleton provides an ideal way
