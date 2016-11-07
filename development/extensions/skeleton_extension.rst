@@ -284,8 +284,8 @@ and necessary services YAML file:
     │   └── ...
     └── ...
 
-Styles listeners
-----------------
+Style event listeners
+---------------------
 
 Style listeners use template events to inject HTML, JS and CSS into
 phpBB’s style files. Style listeners must be located in a directory
