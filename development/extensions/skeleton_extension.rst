@@ -114,9 +114,7 @@ To create an extension, run:
 You will be prompted to enter information about the extension you want
 to create.
 
-A packaged ZIP file will be saved to ``phpBB/store/tmp-ext/``.
-
-Unzip your skeleton extension and begin writing your own code.
+Your extension will be saved to ``phpBB/store/tmp-ext/``.
 
 Documentation
 =============
@@ -528,6 +526,9 @@ language file, and the config and routing YAML files:
     │   │   ├── prosilver               # Dir containing prosilver style files
     │   │   │   ├── template            # Dir containing HTML template files
     │   │   │   │   ├── demo_body.html  # An HTML template used by the controller
+    │   │   │   │   ├── event           # Dir containing template event files
+    │   │   │   │   │   ├── overall_header_navigation_prepend.html  # A template event
+    │   │   │   │   │   └── ...
     │   │   │   │   └── ...
     │   │   │   └── ...
     │   │   └── ...
