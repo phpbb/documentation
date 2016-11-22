@@ -145,7 +145,7 @@ List the dependencies required by the extension, i.e: the PHP version and
 
    ``php`` | "The minimum-stability version of PHP required by the extension. phpBB 3.1 requires PHP 5.3.3 or higher,
    so the version comparison is ``>= 5.3.3``."
-   ``composer/installers`` | "Recommended by phpBB for some internal handling."
+   ``composer/installers`` | "Recommended by phpBB. This will install extensions to the correct location in phpBB when installed via Composer."
 
 require-dev
 -----------
