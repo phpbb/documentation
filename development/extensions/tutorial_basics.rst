@@ -46,7 +46,7 @@ The extension name is the name of the extension. In this tutorial we will use ``
 Composer JSON
 =============
 
-Every extension requires a metadata file named ``composer.json`` in order for phpBB to identify your extension.
+Every extension requires a meta data file named ``composer.json`` in order for phpBB to identify your extension.
 This file contains basic information about an extension as well its dependencies. It is written using the JSON format
 and must be stored in the root folder of the extension, e.g.: ``phpBB/ext/acme/demo/composer.json``.
 
@@ -160,8 +160,7 @@ extra
 -----
 
 This section can contain virtually any arbitrary data according to the composer-specification. However, phpBB requires
- two
-special entries in this array for extensions:
+two special entries in this array for extensions:
 
 .. csv-table::
    :header: "Field", "Content"
