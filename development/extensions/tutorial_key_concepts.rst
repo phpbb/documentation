@@ -57,15 +57,16 @@ define its controller class as a service in the following manner:
                 - '@template'
                 - '@user'
 
-Note that ``acme.demo.controller`` is the unique service name for the class. Service names
-can be whatever you want, but phpBB extensions should prefix them with the vendor and extension name (in this case,
+Note that ``acme.demo.controller`` is the unique service name for the class. Extensions 
+must prefix them with the vendor and extension name (in this case,
 ``acme.demo``) to prevent potential conflicts with other extensions or core services.
 
 The ``class`` is simply the name-spaced path to the class.
 
 The ``arguments`` are the service dependencies required by the class. It is important that the
 order of arguments must match the order of parameters in the ``__construct()`` method definition.
-It is also recommended that any arguments beginning with ``@`` or ``%`` symbols be wrapped in single quotes.
+Any arguments beginning with ``@`` or ``%`` symbols should be wrapped in single quotes (this will be required 
+starting from phpBB 3.2).
 
 Most PHP files in an extension should use the dependency injection model with service definitions, particularly
 controllers and event listeners. The exceptions to this are any ACP/MCP/UCP files, language files and migration files
