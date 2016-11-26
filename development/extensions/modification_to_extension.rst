@@ -355,7 +355,7 @@ Database Changes, UMIL replaced by Migrations
 .. seealso::
 
    For more documentation about migrations, see the :doc:`../migrations/index` API and 
-   :doc:`../extensions/tutorial_migrations.html` documentation
+   :doc:`tutorial_migrations` documentation
 
 Basically migrations do the same as your 3.0 UMIL files. It performs the
 database changes of your MOD/Extension. The biggest difference between
@@ -406,7 +406,7 @@ Schema Changes
 --------------
 
 The Newspage does not have any database schema changes, so I will use the
-:doc:`../migrations/schema_changes.html` example from the Documentation.
+:doc:`../migrations/schema_changes` example from the Documentation.
 Basically you need to have two methods in your migration class file:
 
 .. code-block:: php
@@ -503,7 +503,7 @@ from the Newspage would look like the following:
      }
 
 More information about these data update tools can be found in
-:doc:`../migration/tools/index.html`.
+:doc:`../migrations/tools/index`.
 
 Dependencies and finishing up migrations
 ----------------------------------------
