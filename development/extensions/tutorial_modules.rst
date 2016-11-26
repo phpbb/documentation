@@ -123,11 +123,11 @@ For this tutorial, we will use ``ext/acme/demo/acp/main_module.php``:
             $this->tpl_name = 'acp_demo_body';
             $this->page_title = $user->lang('ACP_DEMO_TITLE');
 
-            add_form_key('acme/demo');
+            add_form_key('acme_demo_settings');
 
             if ($request->is_set_post('submit'))
             {
-                if (!check_form_key('acme/demo'))
+                if (!check_form_key('acme_demo_settings'))
                 {
                      trigger_error('FORM_INVALID');
                 }
@@ -155,16 +155,22 @@ title is assigned a language key.
 
 To strengthen the form against security vulnerabilities, we
 use a form key check to verify that the form being submitting
-is valid. This is done by calling ``add_form_key('acme/demo')``
+is valid. This is done by calling ``add_form_key('acme_demo_settings')``
 when displaying the form and then later checking the form key
 when it is being submitted:
 
 .. code-block:: php
 
-    if (!check_form_key('acme/demo'))
+    if (!check_form_key('acme_demo_settings'))
     {
         trigger_error('FORM_INVALID');
     }
+
+.. warning::
+
+    The form key should be unique for every form. The key can be
+    any string value, but extensions should include their vendor
+    and extension names.
 
 If the form key passes, we set the configuration value to the
 submitted value and display a success message to the user:
