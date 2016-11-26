@@ -6,8 +6,13 @@ Extensions
    :glob:
 
    tutorial_basics
+   tutorial_key_concepts
+   tutorial_events
    tutorial_controllers
    tutorial_migrations
-   tutorial_php_events_and_extending_extensions
-   tutorial_testing.rst
+   tutorial_modules
+   tutorial_permissions
+   tutorial_authentication
+   tutorial_advanced
+   tutorial_testing
    *
