@@ -121,7 +121,7 @@ The details of the meta data are explained below the sample, but for now let's h
 authors
 -------
 
-You may have unlimited authors. At least have one author is highly recommended.
+You may have unlimited authors. At least one author is highly recommended.
 
 .. csv-table::
    :header: "Field", "Content"
