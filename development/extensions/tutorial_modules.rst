@@ -91,9 +91,9 @@ Note that we have defined one mode named ``settings`` with the following informa
 
     ``title`` | "Language key of the mode-title that is displayed in the ACP module
     management section."
-    ``auth`` | "An authorisation key used to control access to the mode.
-    In this case we require the extension ``acme/demo`` to be enabled and
-    that the user have the ``a_board`` permission."
+    ``auth`` | "An authorisation key used to control access to the mode. The extension
+    vendor/name ``acme/demo`` is required to ensure the extension is enabled. Optionally
+    we also specify that the user must have, in this case, the ``a_board`` permission."
     ``cat`` | "References the parent category the mode belongs to. Should
     typically contain the language key of the parent category."
 
