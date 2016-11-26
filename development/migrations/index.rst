@@ -15,7 +15,9 @@ RFC Topic if you're interested in the reasons:
    :glob:
 
    getting_started
-   *
+   dependencies
+   schema_changes
+   data_changes
    tools/index
 
 What do Migrations mean for me?
@@ -58,9 +60,3 @@ Migration Helpers
 
 How to use Migration helpers to perform basic database changes
 :doc:`tools/index`
-
-Using Migrations in an Extension
---------------------------------
-
-How to use Migrations in your Extension to make database changes
-:doc:`extensions`
