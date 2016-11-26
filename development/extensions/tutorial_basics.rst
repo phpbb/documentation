@@ -36,7 +36,7 @@ The vendor name can be the author's username or any other name you choose to gro
 The extension name is the name of the extension. In this tutorial we will use ``acme`` as the vendor name and
 ``demo`` as the extension name.
 
-.. warning::
+.. important::
 
     Both the vendor and extension names must start with a lower or upper case letter, followed by letters and numbers
     only. **Underscores, dashes and other characters are not permitted.** It is perfectly fine to have an extension
