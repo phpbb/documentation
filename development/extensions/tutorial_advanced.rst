@@ -467,13 +467,13 @@ file:
 
 .. code-block:: yaml
 
-	"extra": {
-		"version-check": {
-			"host": "my.site.com",
-			"directory": "/versions",
-			"filename": "acme_version_file.json"
-		}
-	}
+    "extra": {
+        "version-check": {
+            "host": "my.site.com",
+            "directory": "/versions",
+            "filename": "acme_version_file.json"
+        }
+    }
 
 .. csv-table::
     :header: "Parameter", "Description"
