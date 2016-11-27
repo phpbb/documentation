@@ -127,7 +127,7 @@ The complete ``services.yml`` file should look like:
 
 .. caution::
 
-    Remember the order of arguments must match the order of parameters in the
+    Remember that the order of arguments must match the order of parameters in the
     constructor method definition.
 
 Request handling
@@ -213,7 +213,7 @@ access name (i.e. what is typed in the URL) with its service (i.e. what we
 covered in `Dependencies`_).
 
 Recall that our controller expects a URL parameter to be passed to it as
-the ``$name`` variable. Therefor, we want our URL to look like:
+the ``$name`` variable. Therefore, we want our URL to look like:
 ``/app.php/demo/<name>``.
 
 .. note::
@@ -294,7 +294,7 @@ generated. We must update the ``getSubscribedEvents()`` method in the
         }
 
 Next we will add a new method to the event listener which creates our link
-and assigns it to our template variable, as follows:
+and assigns it to our template variable:
 
 .. code-block:: php
 
@@ -325,7 +325,7 @@ arguments:
     equivalent to ``./app.php/demo?name=world``.
 
 Notice that our new method ``add_page_header_link()`` requires the
-Controller Helper and Template objects from phpBB. Therefor, we must
+Controller Helper and Template objects from phpBB. Therefore, we must
 add a new constructor method to inject these dependencies. Putting
 everything together, the complete event listener should look like:
 
