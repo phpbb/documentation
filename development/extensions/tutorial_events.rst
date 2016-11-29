@@ -131,7 +131,7 @@ to PHP events in phpBB's codebase. The listener class must be created in the
 `event/` subdirectory of the extension directory or it will not work. It must also
 conform to the following requirements:
 
-* Follow extension class naming conventions: ``vendor_extname_event_subscribername.php``.
+* Follow extension class name-spacing conventions: ``vendor\extname\event\subscribername.php``.
 * Implement Symfony's ``Symfony\Component\EventDispatcher\EventSubscriberInterface``
   interface.
 * Use the static method ``getSubscribedEvents()`` to subscribe methods in the listener
