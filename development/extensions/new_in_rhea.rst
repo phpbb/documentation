@@ -178,7 +178,7 @@ Notice that the table name has not been identified yet. The table name is actual
         tags:
             - { name: text_reparser.plugin }
 
-To ensures that it will be added to phpBB's cron jobs queue, we must also define a cron task service for our reparser:
+The next step is to add our reparser to phpBB's cron jobs queue. To do so, we simply define a cron task service for our reparser in the following way:
 
 .. code-block:: yaml
 
@@ -195,6 +195,22 @@ To ensures that it will be added to phpBB's cron jobs queue, we must also define
             - [set_reparser, [text_reparser.acme_demo_text]]
         tags:
             - { name: cron.task }
+
+Notice that the service is using phpBB's reparser cron task class, then uses the ``calls`` option to include our reparser. Be sure to set the calls options to your cron and reparser services we just defined.
+
+Finally, to complete setting up the cron jobs, we must add two new configs to the config table using a migration:
+
+.. code-block:: php
+
+    public function update_data()
+	{
+		return array(
+			array('config.add', array('text_reparser.acme_demo_text_cron_interval', 10)),
+			array('config.add', array('text_reparser.acme_demo_text_last_cron', 0)),
+		);
+	}
+
+Note that these configs are the name of the our cron.task ``text_reparser.acme_demo_text`` plus ``_cron_interval`` and ``_last_cron``. The ``cron_interval`` should be a value in seconds to wait between jobs, in this case "10", and the ``last_cron`` should always be set to "0".
 
 .. tip::
     In some cases you may want to run your reparser from a migration. For example, you need your stored text reparsed immediately during the extension update and do not want to wait for it to go through the cron task queue.
