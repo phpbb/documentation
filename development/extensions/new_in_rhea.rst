@@ -130,7 +130,7 @@ A major change introduced by the new engine is how text (in posts, PMs, signatur
 .. note::
     Messages stored in the old HTML format will still display as normal, even before being converted to the new XML format. This ensures a seemless experience for a board's users.
 
-Extensions that are storing their own messages with BBCodes and smilies should consider adding a TextReparser class to ensure their messages are updated to the new XML format. See `New Text Reparser` for more information.
+Extensions that are storing their own messages with BBCodes and smilies should consider adding a TextReparser class to ensure their messages are updated to the new XML format. See `New Text Reparser`_ for more information.
 
 .. seealso::
     The s9e/TextFormatter library `documentation and cookbook <http://s9etextformatter.readthedocs.io>`_.
@@ -170,7 +170,7 @@ Notice that the table name has not been identified yet. The table name is actual
 
 .. code-block:: yaml
 
-    acme.demo.text_reparser.demo_text:
+    text_reparser.acme_demo_text:
         class: acme\demo\textreparser\plugins\demo_text
         arguments:
             - '@dbal.conn'
@@ -178,7 +178,23 @@ Notice that the table name has not been identified yet. The table name is actual
         tags:
             - { name: text_reparser.plugin }
 
-Notice that the service is tagged as a ``text_reparser.plugin``. This ensures that it will be added to phpBB's cron tasks queue along with any other reparser plugins.
+To ensures that it will be added to phpBB's cron jobs queue, we must also define a cron task service for our reparser:
+
+.. code-block:: yaml
+
+    cron.task.text_reparser.acme_demo_text:
+        class: phpbb\cron\task\text_reparser\reparser
+        arguments:
+            - '@config'
+            - '@config_text'
+            - '@text_reparser.lock'
+            - '@text_reparser.manager'
+            - '@text_reparser_collection'
+        calls:
+            - [set_name, [cron.task.text_reparser.acme_demo_text]]
+            - [set_reparser, [text_reparser.acme_demo_text]]
+        tags:
+            - { name: cron.task }
 
 .. tip::
     In some cases you may want to run your reparser from a migration. For example, you need your stored text reparsed immediately during the extension update and do not want to wait for it to go through the cron task queue.
