@@ -10,10 +10,10 @@ This documentation explains how to contribute to phpBB development:
 - `Basics`_
 - `Branch Names`_
 - `Commit Messages`_
-- Developers
-- Windows
-- Further reading
-- External links
+- `Developers`_
+- `Windows`_
+- `Further reading`_
+- `External links`_
 
 Basics
 ======
