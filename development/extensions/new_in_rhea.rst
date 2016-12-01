@@ -5,7 +5,7 @@ What's New for phpBB 3.2
 Introduction
 ============
 
-phpBB 3.2 (rhea) introduces many new and updated components that extensions can take advantage of. Some of these changes may require extensions to make updates to maintain compatibility with phpBB 3.2 (some changes provide a layer of backwards compatibility with 3.1). Extension authors should review the changes documented below to see how their extensions may be affected.
+phpBB 3.2 (Rhea) introduces many new and updated components that extensions can take advantage of. Some of these changes may require extensions to make updates to maintain compatibility with phpBB 3.2 (some changes provide a layer of backwards compatibility with 3.1). Extension authors should review the changes documented below to see how their extensions may be affected.
 
 This documentation explains:
 
@@ -26,7 +26,7 @@ New Language Object
 .. warning::
     The following applies to phpBB 3.2 and later versions. If you must maintain backwards compatibility with phpBB 3.1, continue using the deprecated language methods from the User object.
 
-A new Language object has been introduced that decouples language functions from the User object.  That is to say, the following language functions now belong to the ``\phpbb\language\language`` class:
+A new Language object has been introduced that decouples language functions from the User object. That is to say, the following language functions now belong to the ``\phpbb\language\language`` class:
 
 .. csv-table::
    :header: "Function", "Description"
@@ -36,7 +36,7 @@ A new Language object has been introduced that decouples language functions from
    ``add_lang`` | "Add Language Items."
    ``get_plural_form`` | "Determine which plural form we should use."
    ``set_user_language`` | "Function to set user's language to display."
-   ``set_default_language`` | "Function to set the board's default languageto display."
+   ``set_default_language`` | "Function to set the board's default language to display."
 
 The Language object is available as a service from the DI container, and can be added to an extension's services as an argument:
 
@@ -72,7 +72,7 @@ New BBCode Engine
 =================
 
 .. warning::
-    The following applies to phpBB 3.2 and later versions. It is not backwards compatibile with phpBB 3.1.
+    The following applies to phpBB 3.2 and later versions. It is not backwards compatible with phpBB 3.1.
 
 As of phpBB 3.2, a new and more powerful BBCode formatting engine has been integrated. The new engine is the third-party `s9e/TextFormatter <https://github.com/s9e/TextFormatter/>`_ library. Its integration classes can be found in ``phpBB/phpbb/textformatter``.
 
@@ -91,7 +91,7 @@ The new engine has already been equipped with many PHP events making it even eas
    ``core.text_formatter_s9e_render_before`` | "Modify a parsed text before it is rendered."
    ``core.text_formatter_s9e_render_after`` | "Modify a rendered text."
 
-Fortunately, the integration is pretty seemless and most existing extensions that handle messages processed by the BBCode engine should continue to work without needing any changes. For example, the following phpBB functions will continue to work as they did in phpBB 3.1:
+Fortunately, the integration is pretty seamless and most existing extensions that handle messages processed by the BBCode engine should continue to work without needing any changes. For example, the following phpBB functions will continue to work as they did in phpBB 3.1:
 
   * ``decode_message()``
   * ``generate_text_for_display()``
@@ -122,13 +122,13 @@ Some simple examples of what can be done with the new library include:
     // Remove a BBCode and its content from a message      
     $text_formatter_utils->remove_bbcode($message, $bbcode)
 
-    // Unparse text back to its original form
+    // Un-parse text back to its original form
     $text_formatter_utils->unparse($message)
 
 A major change introduced by the new engine is how text (in posts, PMs, signatures, etc.) is stored. In phpBB 3.1, text is stored as HTML, with BBCodes and some other features being replaced at rendering time. As of phpBB 3.2, text is stored as XML and transformed into HTML at rendering time. phpBB 3.2 has a `New Text Reparser`_ class which will convert all posts, PMs, signatures, etc. to the new format shortly after updating to 3.2 (this is handled mostly by incremental cron jobs).
 
 .. note::
-    Messages stored in the old HTML format will still display as normal, even before being converted to the new XML format. This ensures a seemless experience for a board's users.
+    Messages stored in the old HTML format will still display as normal, even before being converted to the new XML format. This ensures a seamless experience for a board's users.
 
 Extensions that are storing their own messages with BBCodes and smilies should consider adding a TextReparser class to ensure their messages are updated to the new XML format. See `New Text Reparser`_ for more information.
 
@@ -139,7 +139,7 @@ New Text Reparser
 =================
 
 .. warning::
-    The following applies to phpBB 3.2 and later versions. It is not backwards compatibile with phpBB 3.1.
+    The following applies to phpBB 3.2 and later versions. It is not backwards compatible with phpBB 3.1.
 
 phpBB 3.2 introduces the ``\phpbb\textreparser`` class to reparse stored text in the database. By reparsing, it will rebuild BBCodes, smilies and other text formatting in posts, private messages, signatures and anywhere else BBCodes are used.
 
@@ -258,7 +258,7 @@ New File Uploader
 =================
 
 .. warning::
-    The following is a **required** change for phpBB 3.2 and later versions. It is not backwards compatibile with phpBB 3.1. Extensions making this change must release a new major version dropping support for 3.1.
+    The following is a **required** change for phpBB 3.2 and later versions. It is not backwards compatible with phpBB 3.1. Extensions making this change must release a new major version dropping support for 3.1.
 
 phpBB 3.2 introduces two new classes for uploading files: ``filespec`` and ``upload``. These have been refactored and are based on the previously available ``filespec`` and ``fileupload`` classes.
 
@@ -270,7 +270,7 @@ New Font Awesome Icons
 ======================
 
 .. warning::
-    The following applies to phpBB 3.2 and later versions. It is not backwards compatibile with phpBB 3.1.
+    The following applies to phpBB 3.2 and later versions. It is not backwards compatible with phpBB 3.1.
 
 phpBB 3.2 includes the Font Awesome toolkit. It is used by the default style Prosilver, and has replaced almost every gif/png icon with a font icon.
 
@@ -288,7 +288,7 @@ Updated Notifications
 =====================
 
 .. warning::
-    The following is a **required** change for phpBB 3.2 and later versions. It is not backwards compatibile with phpBB 3.1. Extensions making this change must release a new major version dropping support for 3.1.
+    The following is a **required** change for phpBB 3.2 and later versions. It is not backwards compatible with phpBB 3.1. Extensions making this change must release a new major version dropping support for 3.1.
 
 Extensions that make use of the phpBB's built-in notification system must make the following updates to their notification classes, if necessary. The notable changes have been made to the ``find_users_for_notification()`` and ``create_insert_array()`` methods.
 
@@ -388,7 +388,7 @@ If you want to maintain backwards compatibility with phpBB 3.1, you must continu
 Updated Symfony Services
 ========================
 
-The following changes are due to deprecations introduced in Symfony 2.8 (which is used in phpBB 3.2). These deprecations are being removed from Symfony 3.0 (which is used in phpBB 3.3).
+The following changes are due to deprecations introduced in Symfony 2.8 (which is used in phpBB 3.2). These deprecations are being removed from Symfony 3 (which is used in phpBB 3.3).
 
 Deprecated usage of @ at the beginning of unquoted strings
 ----------------------------------------------------------
@@ -415,7 +415,7 @@ Deprecating Scopes and Introducing Shared Services
 --------------------------------------------------
 
 .. warning::
-    The following is a **required** change for phpBB 3.2 and later versions. It is not backwards compatibile with phpBB 3.1.  Extensions making this change must release a new major version dropping support for 3.1.
+    The following is a **required** change for phpBB 3.2 and later versions. It is not backwards compatible with phpBB 3.1.  Extensions making this change must release a new major version dropping support for 3.1.
 
 By default, all services are shared services. This means a class is instantiated once, and used each time you ask for it from the service container.
 
