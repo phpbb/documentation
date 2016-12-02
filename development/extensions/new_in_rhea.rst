@@ -348,7 +348,7 @@ In phpBB 3.1, this method returned an array of data ready to be inserted into th
         return parent::create_insert_array($data, $pre_create_data);
     } 
 
-In phpBB 3.2, the data is now added the the class data property, so it is no longer necessary to use a ``return``, just call the method from the parent class at the end:
+In phpBB 3.2, the data is now added to the the class data property, so it is no longer necessary to use a ``return``. Just call the method from the parent class at the end:
 
 .. code-block:: php
 
