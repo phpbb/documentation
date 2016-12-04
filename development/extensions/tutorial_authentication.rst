@@ -26,21 +26,19 @@ a class and an entry in a ``config/auth.yml`` file. Authentication providers tha
 are part of an extension must provide their own YAML file defining the
 service in addition to all normal requirements of an extension.
 
-Following is an example using a mock plugin, authext, by author imkingdavid.
-
 The class file
 ++++++++++++++
 The provider class must implement the ``\phpbb\auth\provider\provider_interface`` in order to
-insure proper functionality. However, it is recommended to extend
+ensure proper functionality. However, it is recommended to extend
 ``\phpbb\auth\provider\base`` so as to not implement unneeded methods and to ensure
 that the provider will not break due to an update to the interface. An example
-authentication provider class is show below.
+authentication provider class is show below:
 
 .. code-block:: php
 
     <?php
 
-    namespace imkingdavid\authext\auth\provider;
+    namespace acme\demo\auth\provider;
 
     /**
      * Database authentication provider for phpBB3
@@ -120,7 +118,7 @@ for the class to be made available in phpBB.
 
     services:
         auth.provider.db2:
-            class: imkingdavid\authext\auth\provider\db2
+            class: acme\demo\auth\provider\db2
             arguments:
                 - '@dbal.conn'
             tags:
@@ -133,7 +131,7 @@ However, to allow an admin to configure your plugin the available fields need to
 be created in order to reach the configuration from the php-auth-provider plugin.
 This interface is configured in HTML format in ``adm/style/auth_provider_<providername>.html``.
 
-For example the below sample is based on existing LDAP terms used to configure an HTTPS server:
+For example, the sample below is based on existing LDAP terms used to configure an HTTPS server:
 
 .. code-block:: html
 
@@ -154,7 +152,8 @@ This value can then be retrieved from the ``<provider>.php`` file like this:
 OAuth Providers
 ===============
 phpBB 3.1 ships with a new authentication provider: OAuth. This provider is
-based on `Lusitanian/PHPoAuthLib <https://github.com/Lusitanian/PHPoAuthLib>`_.
+based on the `Lusitanian/PHPoAuthLib <https://github.com/Lusitanian/PHPoAuthLib>`_
+library.
 
 Enabling an OAuth Provider
 --------------------------
@@ -163,7 +162,8 @@ extension. The class file which defines functionality necessary for phpBB to
 get the data it needs from the service, and the service file which allows
 phpBB to find the class. To find out how you should most likely make calls
 to the OAuh service, it is recommended that you refer to the included OAuth
-services and to the examples provided by Lusitanian/PHPoAuthLib.
+services and to the examples provided by
+`Lusitanian/PHPoAuthLib <https://github.com/Lusitanian/PHPoAuthLib>`_.
 
 The example files below show the minimum needed to enable an OAuth service in
 phpBB. They are copies of the bitly service implementation from phpBB3's
