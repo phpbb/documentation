@@ -21,7 +21,7 @@ Dependency injection
 ====================
 
 A large portion of the phpBB codebase since 3.1 is based on a fundamental mechanism, namely dependency injection. The
-goal is to not have to worry about managing the different dependencies of the components you want to use (e.g.: the
+goal is to not have to worry about managing the different dependencies of the components you want to use (e.g. the
 database layer, the cache system or the current user object). It's also a means to cease using globally scoped
 variables.
 
@@ -43,8 +43,8 @@ controller class ``main.php``:
     }
 
 As you can see, it requires the ``$config``, ``$helper``, ``$template``, and ``$user`` objects
-(aka services). To have these services automatically resolved by dependency injection, The Acme Demo extension must
-define its controller class as a service in the following manner:
+(a.k.a. services). To have these services automatically resolved by dependency injection, The Acme Demo extension must
+define its controller class as a service in its ``config/services.yml``:
 
 .. code-block:: yaml
 
@@ -143,8 +143,8 @@ Template files
 ==============
 
 Templating for extensions is no different than templating for phpBB3 in general. phpBB 3.1 has switched to the
-TWIG template engine but retains phpBB’s original templating syntax. Therefor, either phpBB or TWIG template syntax
-is permissible in an extension. If you are not familiar with TWIG, you may use phpBB’s syntax.
+Twig template engine but retains phpBB’s original templating syntax. Therefore, either phpBB or Twig template syntax
+is permissible in an extension. If you are not familiar with Twig, you may use phpBB’s syntax.
 
 An extension can contain two types of template files: custom templates and :ref:`template-events-label`.
 An extension's custom template files should have unique names, preferably prefixed with the vendor and extension
@@ -196,7 +196,7 @@ An example directory structure for an extension with universal (all) files and t
 
 .. seealso::
 
-    * `TWIG Template Syntax <http://twig.sensiolabs.org/>`_ at Sensio Labs.
+    * `Twig Template Syntax <http://twig.sensiolabs.org/>`_ at Sensio Labs.
     * `phpBB Template Syntax <https://wiki.phpbb.com/Tutorial.Template_syntax#Syntax_elements>`_ Wiki page.
     * The phpBB Customisation Database `Template Validation Policy <https://www.phpbb.com/extensions/rules-and-policies/validation-policy/#templates>`_.
 
@@ -247,7 +247,7 @@ and the second being the name of the language file (or an array of language file
     // acme/demo/language/en/controller.php
     $user->add_lang_ext(‘acme/demo’, array(‘common’, ‘controller’));
 
-For performance reasons, tt is preferred to use the above method to load language files at any point in your extension’s code
+For performance reasons, it is preferred to use the above method to load language files at any point in your extension’s code
 execution where the language keys are needed. However, if it is absolutely necessary to load an extension's
 language keys globally, so they are available at all times, the ``core.user_setup`` PHP event should be used.
 
@@ -298,7 +298,7 @@ is already defined, and if not, then include your script and define the script. 
     <!-- ENDIF -->
 
 Some example template variable definitions to use with common libraries (the common practice should be to name
-the variable definition after the library filename, e.g.: highslide.js becomes HIGHSLIDEJS):
+the variable definition after the library filename, e.g. highslide.js becomes HIGHSLIDEJS):
 
 * HighSlide JS: ``$INCLUDED_HIGHSLIDEJS``
 * Font Awesome CSS: ``$INCLUDED_FONTAWESOMECSS``
