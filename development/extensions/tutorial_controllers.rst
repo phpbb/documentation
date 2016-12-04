@@ -266,7 +266,25 @@ our route definition:
 The ``routing.yml`` can hold multiple route definitions for multiple URLs,
 as may be required by the needs of the extension. Routes are compared in
 the order of their declaration in the ``routing.yml`` file, which is
-important to consider when defining routes.
+important to consider when defining routes. For example:
+
+.. code-block:: yaml
+
+    acme_blog_home:
+        path: /blog
+        defaults: { _controller: acme.blog.controller:handle }
+
+    acme_blog_entry:
+        path: /blog/{id}
+        defaults: { _controller: acme.blog.controller:handle }
+        requirements:
+            id: \d+
+
+    acme_blog_edit:
+        path: /blog/{id}/edit
+        defaults: { _controller: acme.blog.controller:handle }
+        requirements:
+            id: \d+
 
 Generating links to routes
 --------------------------
@@ -326,8 +344,9 @@ arguments:
 
 Notice that our new method ``add_page_header_link()`` requires the
 Controller Helper and Template objects from phpBB. Therefore, we must
-add a new constructor method to inject these dependencies. Putting
-everything together, the complete event listener should look like:
+also add a new constructor to our event listener in order to
+inject these dependencies. Putting everything together, the complete
+event listener should look like:
 
 .. code-block:: php
 
