@@ -17,16 +17,13 @@ the same way UMIL was used in phpBB 3.0. Through Migrations,
 extension developers are able to easily modify and add new schema
 and data to the database as required by an extension.
 
-Our Developer Docs already contain in-depth documentation for phpBB's
-migrations:
-
-Migrations: :doc:`../migrations/getting_started`.
+Read the Migrations: :doc:`../migrations/getting_started` Developer
+Docs for in-depth migration documentation. We will briefly summarise
+the key concepts of migrations here.
 
 .. seealso::
 
     The phpBB Customisation Database `Migrations Validation Policy <https://www.phpbb.com/extensions/rules-and-policies/validation-policy/#migrations>`_.
-
-We will briefly summarise the key concepts of migrations here.
 
 Database changes
 ----------------
@@ -50,9 +47,12 @@ Data changes
 The ``update_data()`` method is for inserting, updating and dropping
 field data.
 
-The ``update_data()`` method is automatically reverted during a purge
-step. Calling the ``revert_data()`` method is optional, and usually
-only needed to perform special changes during an extension's uninstall.
+The ``revert_data()`` method is optional and can be used to undo data
+changes. Normally, the ``update_data()`` method is automatically reverted
+during a purge step, reversing any of the changes introduced by the
+migration tools. Using the ``revert_data()`` method is only
+needed to perform additional changes during an extension's uninstall,
+such as performing a custom functions.
 
 We recommend putting data changes in their own migration.
 
