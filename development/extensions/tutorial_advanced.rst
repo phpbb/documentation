@@ -95,7 +95,7 @@ Make sure to only use underscores, numbers and lowercase letters.
   and would risk breaking.
 
 .. tip::
-  If you prefer TWIG instead of the phpBB template syntax, you can use:
+  If you prefer Twig instead of the phpBB template syntax, you can use:
 
   .. code-block:: html
 
