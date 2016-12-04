@@ -10,7 +10,7 @@ Administration Control Panels. This modular approach has many advantages
 over creating settings pages from scratch:
 
   * You can manage modules in the ACP.
-  * You don't have to directly handle authorization.
+  * You don't have to directly handle authorisation.
   * You get a navigation tree built-in to the system.
   * The module templates already contain features like pagination,
     breadcrumbs and confirmation messages.
@@ -21,7 +21,7 @@ This tutorial explains:
  * `Installing Control Panel Modules`_
 
 .. note::
-    This tutorial describes how to create an ACP module. If you want to
+    This tutorial describes how to create an ACP module. To
     create MCP or UCP modules, you usually only need to replace all occurrences
     of "acp" with "mcp" or "ucp".
 
@@ -148,7 +148,7 @@ which takes the ``id`` of the module in the database and the ``mode``
 being called as arguments.
 
 In the code of the ``main`` method, we first set the name of the
-template file that is used to render the module, and the page
+`Module template`_ file that is used to render the module, and the page
 title is assigned a language key.
 
 .. _form key:
@@ -188,14 +188,14 @@ the URL of the current form action.
 Module template
 ---------------
 
-Our ACP module now needs the template file we assigned to it in the module.
+Our ACP module now needs the template file we assigned to it in the `Module class`_.
 We will use ``ext/acme/demo/adm/style/acp_demo_body.html``.
 
 .. note::
 
     The ACP differs from the MCP and UCP in that it has its own
     style. The MCP and UCP use the main board style, i.e. prosilver.
-    As a result, ACP template files must be stored in ``./adm/style/``
+    Therefore, ACP template files must be stored in ``./adm/style/``
     while MCP and UCP template files are stored in ``./styles/prosilver/template/``.
 
 .. code-block:: html
