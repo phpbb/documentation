@@ -9,8 +9,8 @@ Welcome to phpBB's official extension tutorial and documentation.
 
 These tutorial pages are based on phpBB's `Acme Demo <https://github.com/phpbb/phpbb-ext-acme-demo>`_ extension. This
 simple extension demonstrates many common features of an extension, including using a front-controller page, modifying
-phpBB through core events and template events, modifying the database using migrations, and installing an ACP module
-with configuration settings.
+phpBB through core events and template events, modifying the database using migrations, and setting up an ACP module
+for configuration settings.
 
 This tutorial covers the basic creation of extensions:
 
@@ -19,7 +19,7 @@ This tutorial covers the basic creation of extensions:
 
 .. seealso::
 
-    The :doc:`skeleton_extension` is a fantastic tool to help developers rapidly generate the initial
+    The :doc:`skeleton_extension` is a tool to help developers rapidly generate the initial
     files and components needed to start developing new extensions for phpBB.
 
 
@@ -30,9 +30,9 @@ All extensions must be located within the ``ext/`` folder which can be found in 
 
 Extensions are packaged using a folder structure as follows: ``vendor/extname``.
 
-Thus, an extension should be located in the phpBB directory as follows: ``phpBB/ext/vendor/extname``
+Thus, an extension should be located in the phpBB directory as follows: ``phpBB/ext/vendor/extname``.
 
-The vendor name can be the author's username or any other name you choose to group your extensions with.
+The vendor name can be the author's username or any other name you choose to group your extensions by.
 The extension name is the name of the extension. In this tutorial we will use ``acme`` as the vendor name and
 ``demo`` as the extension name.
 
@@ -48,7 +48,7 @@ Composer JSON
 
 Every extension requires a meta data file named ``composer.json`` in order for phpBB to identify your extension.
 This file contains basic information about an extension as well its dependencies. It is written using the JSON format
-and must be stored in the root folder of the extension, e.g.: ``phpBB/ext/acme/demo/composer.json``.
+and must be stored in the root folder of the extension, e.g. ``phpBB/ext/acme/demo/composer.json``.
 
 The information in ``composer.json`` will be used by the Extensions Manager in the ACP.
 The details of the meta data are explained below the sample, but for now let's have a look at the complete file:
@@ -59,7 +59,7 @@ The details of the meta data are explained below the sample, but for now let's h
         "name": "acme/demo",
         "type": "phpbb-extension",
         "description": "Acme Demo Extension for phpBB 3.1",
-        "homepage": "https://github.com/nickvergessen/phpbb-ext-acme-demo",
+        "homepage": "https://github.com/phpbb/phpbb-ext-acme-demo",
         "version": "0.1.0",
         "time": "2013-11-05",
         "keywords": ["phpbb", "extension", "acme", "demo"],
@@ -92,30 +92,30 @@ The details of the meta data are explained below the sample, but for now let's h
     It is important to remember that the last item or object in any JSON array must not contain a trailing comma.
 
 .. csv-table::
-   :header: "Field", "Content"
+   :header: "Field", "Required", "Content"
    :delim: |
 
-   ``name`` | "The vendor name and extension name, separated by ``/``, matching the folder
+   ``name`` | Yes | "The vendor name and extension name, separated by ``/``, matching the folder
    structure."
-   ``type`` | "The type of package. It should always be ``phpbb-extension``."
-   ``description`` | "A short description of your extension, may be empty
+   ``type`` | Yes | "The type of package. It should always be ``phpbb-extension``."
+   ``description`` | Yes | "A short description of your extension, may be empty
    (but not skipped)."
-   ``homepage`` *optional* | "A valid URL. It is recommended to use the link
+   ``homepage`` | No | "A valid URL. It is recommended to use the link
    to the contribution in the customisation database, or to the repository of
    your extension (if you are using a public one like GitHub)."
-   ``version`` | "The version of your extension. This should follow the format of X.Y.Z with an optional suffix
+   ``version`` | Yes | "The version of your extension. This should follow the format of X.Y.Z with an optional suffix
    of -dev, -patch, -alpha, -beta or -RC."
-   ``time`` *optional* | "The release date of your extension. Must be in YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format."
-   ``keywords`` *optional* | "An array of keywords related to the extension."
-   ``license`` | "The license of the package. This can be either a string or an array of strings.
+   ``time`` | No | "The release date of your extension. Must be in YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format."
+   ``keywords`` | No | "An array of keywords related to the extension."
+   ``license`` | Yes | "The license of the package. This can be either a string or an array of strings.
    Typically extensions should be licensed under the same GPL-2.0 license as phpBB."
-   ``authors`` | "An array of authors of the extension.
+   ``authors`` | Yes | "An array of authors of the extension.
    See `authors`_ for more details."
-   ``require`` | "An array of requirements of the extension.
+   ``require`` | Yes | "An array of requirements of the extension.
    See `require`_ for more details."
-   ``require-dev`` *optional* | "An array of development requirements of the extension.
+   ``require-dev`` | No | "An array of development requirements of the extension.
    See `require-dev`_ for more details."
-   ``extra`` | "An array of arbitrary extra data.
+   ``extra`` | Yes | "An array of arbitrary extra data.
    See `extra`_ for more details."
 
 authors
@@ -124,19 +124,19 @@ authors
 You may have unlimited authors. At least one author is highly recommended.
 
 .. csv-table::
-   :header: "Field", "Content"
+   :header: "Field", "Required", "Content"
    :delim: |
 
-   ``name`` | "The name of an author."
-   ``email`` *optional* | "An email address of the author."
-   ``homepage`` *optional* | "A URL pointing to the website of the author."
-   ``role`` *optional* | "Role can be used to specify what the author did for the
+   ``name`` | Yes | "The name of an author."
+   ``email`` | No | "An email address of the author."
+   ``homepage`` | No | "A URL pointing to the website of the author."
+   ``role`` | No | "Role can be used to specify what the author did for the
    extension (e.g. Developer, Translator, Supporter, etc.)"
 
 require
 -------
 
-List the dependencies required by the extension, i.e: the PHP version and
+List the dependencies required by the extension, i.e. the PHP version and
 `third party libraries <https://packagist.org/>`_.
 
 .. csv-table::
@@ -159,14 +159,14 @@ the newest version, we require ``dev-master``.
 extra
 -----
 
-This section can contain virtually any arbitrary data according to the composer-specification. However, phpBB requires
+This section can contain virtually any arbitrary data according to the composer specification. However, phpBB requires
 two special entries in this array for extensions:
 
 .. csv-table::
    :header: "Field", "Content"
    :delim: |
 
-   ``display-name`` | "The name of your extension, e.g.: Acme Demo Extension."
+   ``display-name`` | "The name of your extension, e.g. Acme Demo Extension."
    ``soft-require`` | "The minimum-stability version of phpBB required by the extension. In this case we require
    any 3.1 version, which is done by prefixing it with a ``~``: ``""phpbb/phpbb"": ""~3.1""``."
 
@@ -176,5 +176,5 @@ two special entries in this array for extensions:
 
     More information on specifying package version constraints can be found here: https://getcomposer.org/doc/articles/versions.md#basic-constraints
 
-So far, your extension has no functionality yet. Continue on to the next sections to learn more about how to write
+So far, our extension has no functionality yet. Continue on to the next sections to learn more about how to write
 an extension that will do something useful.

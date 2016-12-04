@@ -41,7 +41,7 @@ use, and place it in the ``event/`` subdirectory of a style’s template folder.
 
 For example, we will use the ``overall_header_navigation_prepend`` event to add a
 new link before the existing links in the board's navigation bar. The listener
-will be located at:
+for this event will be:
 
 ::
 
@@ -50,7 +50,7 @@ will be located at:
 .. tip::
 
     If you want a template listener to be used by all styles, it should be placed
-    in the ``all/`` style directory, e.g.: ``vendor/extname/styles/all/template/event/``.
+    in the ``all/`` style directory, e.g. ``vendor/extname/styles/all/template/event/``.
     This helps prevent code duplication and eases style file management.
 
     The prosilver and subsilver2 directories should be used for template files that
@@ -58,7 +58,7 @@ will be located at:
     requires additional customisation to maintain compatibility, a folder for that
     style should be included with those template files.
 
-    To add ACP template listeners, place the those files in ``vendor/extname/adm/style/event/``.
+    To add ACP template listeners, place those files in ``vendor/extname/adm/style/event/``.
 
 Inside the template listener, we will create a nav-bar link. This consists of a
 simple list element, with a link and a description:
@@ -71,8 +71,8 @@ simple list element, with a link and a description:
         </a>
     </li>
 
-Once the template listener has been saved, you should be able to see the new link
-in the top-left of the board's nav-bar, with the icon of the FAQ link and the
+Once the template listener has been created, you should be able to see the new link
+in the board's nav-bar, with the icon of the FAQ link and the
 text ``DEMO_PAGE``. We will fix the link text in the next section.
 
 .. tip::
@@ -82,11 +82,11 @@ text ``DEMO_PAGE``. We will fix the link text in the next section.
     ``config.php`` file, which will force the template engine to always
     look for template listeners when a page is being rendered.
 
-It's also important to understand that when phpBB compiles the templates,
+It's important to understand that when phpBB compiles the templates,
 there is no current system for determining the priority in which template
 listeners from different extensions subscribed to the same event are
 compiled. In rare cases some extensions could cause a conflict, in which case
-the recommendation is for the extension authors to work out a solution for their
+the recommendation is for the extension authors to work together on a solution for their
 conflicting template listeners.
 
 
@@ -94,15 +94,15 @@ PHP Core Events & Listeners
 ===========================
 
 Events allow extensions to execute code in many locations within core phpBB code,
-without modifying any of the code. That way extensions can add features, remove
-functionality or modify behaviour easily and while maintaining easy compatibility
-and simple update procedures.
+without modifying any of the code. That way extensions can easily add features,
+remove functionality or modify behaviour, while maintaining compatibility and
+simple update procedures.
 
 Terminology
 -----------
 
 Events
-    Events are triggered in various places of the core phpBB code. Listeners in
+    Events are dispatched at various places in the core phpBB code. Listeners in
     extensions subscribe to these events. They are able to execute code whenever
     the respective event has occurred. An alternative name for events is “hook locations”.
 
@@ -126,9 +126,9 @@ file that contains the ``DEMO_PAGE`` language key so that our nav-bar link will
 display with the correct text.
 
 To do so, we need to create a PHP event listener class (a.k.a. subscriber class).
-This class includes a set of listeners as methods, each of which can *subscribe*
+This class includes a set of listener methods, each of which can *subscribe*
 to PHP events in phpBB's codebase. The listener class must be created in the
-`event/` subdirectory of the extension directory or it will not work. It must also
+``event/`` subdirectory of the extension directory or it will not work. It must also
 conform to the following requirements:
 
 * Follow extension class name-spacing conventions: ``vendor\extname\event\subscribername.php``.
@@ -138,7 +138,7 @@ conform to the following requirements:
   to specific events, the keys of which contain event names and the values of which
   contain listener function names.
 
-In the Acme Demo extension, we want to load our language file everywhere. Therefor
+In the Acme Demo extension, we want to load our language file everywhere. Therefore
 we will subscribe a listener function to phpBB's ``core.user_setup`` event:
 
 .. code-block:: php
@@ -182,16 +182,19 @@ we will subscribe a listener function to phpBB's ``core.user_setup`` event:
 
 So what is the ``main_listener.php`` class above actually doing?
 
-The ``getSubscribedEvents()`` method is subscribing our function
+The ``getSubscribedEvents()`` method is subscribing our listener function
 ``load_language_on_setup()`` to the event named ``core.user_setup``. This means
 that when this event occurs, our function will execute.
 
-.. note::
+.. tip::
 
     You can assign multiple listener functions to a single event using an array:
-    ``'core.user_setup' => array(array('foo_method'), array('bar_method'))``
 
-The ``load_language_on_setup()`` method is our listener method and it simply adds
+    .. code-block:: php
+
+        'core.user_setup' => array(array('foo_method'), array('bar_method'))
+
+The ``load_language_on_setup()`` listener method simply adds
 our language file to phpBB's language data array. Generally speaking, a listener
 is simply a public function in the subscriber class, referred to in the array
 returned by ``getSubscribedEvents()``. It takes one argument, ``$event``. This
@@ -209,7 +212,7 @@ variable by adding Acme Demo's language file to it.
 Registering the listener
 ------------------------
 
-To have phpBB autoload and execute our event listener, we need to create a
+To have phpBB autoload and execute our event listener class, we need to create a
 service definition for it. This is done by creating a ``config/services.yml``
 file in the extension:
 
@@ -238,7 +241,7 @@ The ``class`` attribute must contain the name-space and class name of the
 service being registered. The name-space depends on the file's location,
 within the ``ext/`` directory. Thus, the file ``ext/acme/demo/event/main_listener.php``
 has the namespace ``acme\demo\event`` and class name ``main_listener``.
-The full name of the class is therefor ``acme\demo\event\main_listener``
+The full name of the class is therefore ``acme\demo\event\main_listener``
 which is what we need to specify here.
 
 The ``tags`` attribute tells phpBB that the service is an event listener.
