@@ -559,7 +559,7 @@ and now the test passes successfully::
     hundred milliseconds to a few seconds. This is because database tests
     set up the database and populate it, which just takes time.
 
-    Therefor it is recommended to only use database tests when you really need
+    Therefore it is recommended to only use database tests when you really need
     the database. It is better to split your test file into a database-test and
     a non-database one, to keep the run time short.
 
@@ -567,7 +567,7 @@ Using fixtures
 --------------
 
 Now let's make use of the fixture file to populate the database for our test.
-Therefor we replace the content of the
+Therefore we replace the content of the
 ``ext/acme/demo/tests/migrations/database/fixtures/add_database_changes.xml``
 file with the following content:
 
@@ -729,7 +729,7 @@ Running this test, however, will fail::
 The reason is that the test suite compares the response for the correct format
 (valid HTML, without debug errors) and a successful status code ``200``.
 
-Therefor we need to adjust the bertie test, because we return a ``403`` status
+Therefore we need to adjust the bertie test, because we return a ``403`` status
 in the controller, if someone tries to talk to bertie:
 
 .. code-block:: php
@@ -922,7 +922,7 @@ the phpBB installation from GitHub for us:
 
     The prepare-phpbb.sh file needs to have executable permissions or Travis CI
     tests will fail. You can set the correct permission for this file from a
-    terminal command line interface, e.g.:
+    terminal command line interface, e.g.
 
     .. code-block:: bash
 
