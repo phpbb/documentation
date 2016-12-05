@@ -51,7 +51,7 @@ Installation
 
 -  `Download the latest
    release <https://www.phpbb.com/customise/db/official_tool/ext_skeleton/>`_.
--  Unzip and install it to your phpBB ``ext/`` folder, e.g.:
+-  Unzip and install it to your phpBB ``ext/`` folder, e.g.
    ``phpBB/ext/phpbb/skeleton``
 -  In phpBB, go to "ACP" > "Customise" > "Extensions" and enable "phpBB
    Skeleton Extension".
