@@ -234,18 +234,24 @@ The Acme Demo extension's language file looks like:
     ));
 
 Loading language files in an extension is simple enough using the
-``add_lang_ext()`` method of the ``$user`` object. It takes two arguments, the first being the vendor/package
-and the second being the name of the language file (or an array of language file names).
+``add_lang()`` method of the ``$language`` object. It takes two arguments, the first being the name of the language file (or an array of language file names)
+and the second being the extension vendor/package.
+
+.. note::
+
+    The Language object was introduced in 3.2 to provide a dedicated class of language methods,
+    extracted from the User object. The previous method of using ``add_lang_ext()``
+    from the User object has been deprecated in 3.2, and will eventually be removed in the future.
 
 .. code-block:: php
 
     // Load a single language file from acme/demo/language/en/common.php
-    $user->add_lang_ext(‘acme/demo’, ‘common’);
+    $language->add_lang(‘common’, ‘acme/demo’);
 
     // Load multiple language files from
     // acme/demo/language/en/common.php
     // acme/demo/language/en/controller.php
-    $user->add_lang_ext(‘acme/demo’, array(‘common’, ‘controller’));
+    $language->add_lang(array(‘common’, ‘controller’), ‘acme/demo’);
 
 For performance reasons, it is preferred to use the above method to load language files at any point in your extension’s code
 execution where the language keys are needed. However, if it is absolutely necessary to load an extension's
