@@ -91,7 +91,7 @@ phpBB uses an EditorConfig profile. Install the EditorConfig plug-in to take adv
 Languages & Frameworks
 ======================
 
-PHP inspections are dependent upon the PHP language level (i.e.: PHP 5.3, 5.4, 7.0, etc.). You should set the **PHP language level** to the minimum version phpBB supports. This is to ensure you don't accidentally write code that may be valid in PHP 5.6, but incompatible with PHP 5.4 (which phpBB supports). The **PHP interpreter** should be set to whatever PHP binary is available in the drop down menu. If no interpreter is found, you need to direct it to your PHP executable on your system (e.g.: /usr/bin/php).
+PHP inspections are dependent upon the PHP language level (i.e. PHP 5.3, 5.4, 7.0, etc.). You should set the **PHP language level** to the minimum version phpBB supports. This is to ensure you don't accidentally write code that may be valid in PHP 5.6, but incompatible with PHP 5.4 (which phpBB supports). The **PHP interpreter** should be set to whatever PHP binary is available in the drop down menu. If no interpreter is found, you need to direct it to your PHP executable on your system (e.g.: /usr/bin/php).
 
 PHPUnit Testing
 ===============
