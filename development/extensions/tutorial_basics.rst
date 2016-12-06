@@ -5,7 +5,7 @@ Tutorial: Getting Started
 Introduction
 ============
 
-Welcome to phpBB's official extension tutorial and documentation.
+Welcome to phpBB's extension development tutorial and documentation.
 
 These tutorial pages are based on phpBB's `Acme Demo <https://github.com/phpbb/phpbb-ext-acme-demo>`_ extension. This
 simple extension demonstrates many common features of an extension, including using a front-controller page, modifying
