@@ -259,7 +259,7 @@ events, and tasks such as cron, CLI and notifications. The files
 generated for these components are simple yet fully working examples
 based off the Acme Demo extension. They are intended to give you a
 consistent and phpBB code-ready starting point, so you can focus more
-on writing your code and less on file structure and organization.
+on writing your code and less on file structure and organisation.
 
 PHP event listeners
 -------------------
@@ -291,7 +291,7 @@ Style event listeners
 
 Style listeners use template events to inject HTML, JS and CSS into
 phpBB’s style files. Style listeners must be located in a directory
-named ``event`` to be recognized as a template event. All files outside
+named ``event`` to be recognised as a template event. All files outside
 the ``event`` dir are seen as standard style files.
 
 ``all/`` Directory contains style files that can be used by any/all

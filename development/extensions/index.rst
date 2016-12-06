@@ -1,6 +1,8 @@
 Extensions
 ==========
 
+Welcome to phpBB's extension development tutorial and documentation.
+
 .. toctree::
    :maxdepth: 2
    :glob:
