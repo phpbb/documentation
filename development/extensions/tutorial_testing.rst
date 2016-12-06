@@ -57,8 +57,8 @@ require no changes for extensions, we only add a quick example here.
 
         protected $config;
         protected $helper;
+        protected $language;
         protected $template;
-        protected $user;
 
         public function setUp()
         {
@@ -73,7 +73,7 @@ require no changes for extensions, we only add a quick example here.
             $this->template = $this->getMockBuilder('\phpbb\template\template')
                 ->disableOriginalConstructor()
                 ->getMock();
-            $this->user = $this->getMockBuilder('\phpbb\user')
+            $this->language = $this->getMockBuilder('\phpbb\language\language')
                 ->disableOriginalConstructor()
                 ->getMock();
 
@@ -81,7 +81,7 @@ require no changes for extensions, we only add a quick example here.
                 $this->config,
                 $this->helper,
                 $this->template,
-                $this->user
+                $this->language
             );
         }
 
@@ -123,7 +123,7 @@ require no changes for extensions, we only add a quick example here.
                 ->with('acme_demo_goodbye')
                 ->willReturn($config);
 
-            $this->user->expects($this->once())
+            $this->language->expects($this->once())
                 ->method('lang')
                 ->with($expected_language, $name)
                 ->willReturn($language_return);
@@ -240,19 +240,19 @@ argument) for the ``acme_demo_goodbye`` config variable.
                 ->willReturn($config);
 
 If we have a short look at our controller again, we see that the value of the
-config influences the ``\phpbb\user::lang()`` call:
+config influences the ``\phpbb\language\language::lang()`` call:
 
 .. code-block:: php
 
     $l_message = empty($this->config['acme_demo_goodbye']) ? 'DEMO_HELLO' : 'DEMO_GOODBYE';
-    $this->template->assign_var('DEMO_MESSAGE', $this->user->lang($l_message, $name));
+    $this->template->assign_var('DEMO_MESSAGE', $this->language->lang($l_message, $name));
 
 This is what we check with the third argument ``$expected_language`` of our test
 method:
 
 .. code-block:: php
 
-            $this->user->expects($this->once())
+            $this->language->expects($this->once())
                 ->method('lang')
                 ->with($expected_language, $name)
                 ->willReturn($language_return);
