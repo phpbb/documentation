@@ -44,7 +44,7 @@ explained in the following paragraphs.
 Important new files
 -------------------
 
-There is a new file your extension needs in order to be recognized by the
+There is a new file your extension needs in order to be recognised by the
 system. It's called ``composer.json``:
 it specifies the requirements of your extension as well as some author
 information. The layout is a simple json array, the keys should really explain
@@ -239,7 +239,7 @@ In this example my **controller/main.php** would look like the following:
             *                        - phpBB/styles/<style_name>/template/
             *                        - phpBB/ext/<all_active_extensions>/styles/<style_name>/template/
             * @param    string        Page title
-            * @param    int            Status code of the page (200 - OK [ default ], 403 - Unauthorized, 404 - Page not found, etc.)
+            * @param    int            Status code of the page (200 - OK [ default ], 403 - Unauthorised, 404 - Page not found, etc.)
             */
             return $this->helper->render('newspage_body.html');
         }
@@ -253,7 +253,7 @@ In this example my **controller/main.php** would look like the following:
     enable the extension.
 
 You can also have multiple different methods in one controller as well as having
-multiple controllers, in order to organize your code a bit better.
+multiple controllers, in order to organise your code a bit better.
 
 ACP Modules
 -----------

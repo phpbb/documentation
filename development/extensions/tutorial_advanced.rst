@@ -292,7 +292,7 @@ Using the phpBB finder tool
 ===========================
 This is probably the least used method because it requires a rigid file and
 directory naming structure, but in doing so it provides the most reliable
-organization of files, so you can always be sure where to look if you want to
+organisation of files, so you can always be sure where to look if you want to
 find a certain feature. The extension finder object is used to traverse the
 directory tree to look for files that are located in specific folders and adhere
 to a set of requirements. It is used, for example, to locate migration files,

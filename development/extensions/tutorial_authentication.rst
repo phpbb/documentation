@@ -273,7 +273,7 @@ The Service File
 
 In the service file, the name of the service must be in the form of
 ``auth.provider.oauth.service.<service name>`` in order for phpBB to
-properly recognize it.
+properly recognise it.
 
 .. code-block:: yaml
 
