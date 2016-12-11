@@ -113,6 +113,8 @@ the provider must be added to ``services.yml``. The arguments are those
 of the provider's constructor and may be empty if no arguments are
 necessary. The provider must be tagged with ``{ name: auth.provider }`` in order
 for the class to be made available in phpBB.
+The service file, the name of the service, must also be in the form of
+``auth.provider.<service name>`` in order for phpBB to properly recognise it.
 
 .. code-block:: yaml
 
