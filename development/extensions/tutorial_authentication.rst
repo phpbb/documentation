@@ -110,7 +110,7 @@ The service file
 ++++++++++++++++
 For proper `dependency injection <https://wiki.phpbb.com/Dependency_Injection_Container>`_
 the provider must be added to ``services.yml``. The name of the service 
-must be in the form of ``auth.provider.``<service name> in order for phpBB to register it.
+must be in the form of ``auth.provider.<service name>`` in order for phpBB to register it.
 The arguments are those of the provider's constructor and may be empty if no arguments are
 necessary. The provider must be tagged with ``{ name: auth.provider }`` in order
 for the class to be made available in phpBB.
