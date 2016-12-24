@@ -98,7 +98,7 @@ if config "allow_avatar_upload" or "allow_avatar_local" is true, update
 
 .. note::
 
-    Calls to the Migration Tools wrapped in the if conditional will **not** be automatically reverted, as if statements are     ignored by the ``revert_data()`` method. You must define your own ``revert_data()`` method to revert any of these data changes if necessary.
+    Calls to the Migration Tools wrapped in the if conditional will **not** be automatically reverted, as if statements are ignored by the ``revert_data()`` method. You must define your own ``revert_data()`` method to revert any of these data changes if necessary.
 
 Custom
 ======
