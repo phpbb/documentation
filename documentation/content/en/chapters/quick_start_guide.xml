@@ -38,10 +38,7 @@
 						<para>MariaDB 5.1 or above</para>
 					</listitem>
 					<listitem>
-						<para>MS SQL Server 2000 or above (via ODBC)</para>
-					</listitem>
-					<listitem>
-						<para>MS SQL Server 2005 or above (via the native adapter, SQLSRV)</para>
+						<para>MS SQL Server 2000 or above (via ODBC or SQLSRV PHP extensions)</para>
 					</listitem>
 					<listitem>
 						<para>Oracle</para>
@@ -50,15 +47,12 @@
 						<para>PostgreSQL 8.3+</para>
 					</listitem>
 					<listitem>
-						<para>SQLite 2.8.2+</para>
-					</listitem>
-					<listitem>
 						<para>SQLite 3.6.15+</para>
 					</listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 5.4.0+ (>=5.4.0, 7.0) with support for the database you intend to use.</para>
+				<para>PHP 5.4.0+ with support for the database you intend to use.</para>
 			</listitem>
 			<listitem>
 				<para>getimagesize() function enabled</para>
@@ -68,6 +62,9 @@
 				<itemizedlist>
 					<listitem>
 						<para>json</para>
+					</listitem>
+					<listitem>
+						<para>XML support</para>
 					</listitem>
 					<listitem>
 						<para>Corresponding PHP module for the database system you intend to use</para>
@@ -82,9 +79,6 @@
 					</listitem>
 					<listitem>
 						<para>Remote FTP support</para>
-					</listitem>
-					<listitem>
-						<para>XML support</para>
 					</listitem>
 					<listitem>
 						<para>Imagemagick support</para>
@@ -131,7 +125,11 @@
 			<important>
 				<para>Please read the <link linkend="quick_requirements">section on phpBB3's requirements</link> to find out more about the phpBB 3.2's minimum requirements.</para>
 			</important>
-			<para>The requirements list is the first page you will see after starting the installation. phpBB 3.2 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.2 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
+			<para>The requirements list is the first page you will see after starting the installation if you are missing any necessary PHP extensions or have a server setting misconfigured. phpBB 3.2 automatically checks if everything that it needs to run properly is installed on your server. In order to continue the installation, you will need to have <acronym>PHP</acronym> installed (the minimum version number is shown on the requirements page), and at least one database available to continue the installation. It is also important that all shown folders are available and have the correct permissions set. Please see the description of each section to find out if they are optional or required for phpBB 3.2 to run. If everything is in order, you can continue the installation by clicking the <guilabel>Start Install</guilabel> button.</para>
+		</section>
+		<section id="quick_installation_admin">
+			<title>Administrator details</title>
+			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum.</para>
 		</section>
 		<section id="quick_installation_database">
 			<title>Database settings</title>
@@ -169,17 +167,12 @@
 				</mediaobject>
 			</figure>
 			<para>You don't need to change the <guilabel>Prefix for tables in database</guilabel> setting, unless you plan on using multiple phpBB installations on one database. In this case you can use a different prefix for each installation to make it work.</para>
-			<para>After you have entered your details, you can continue by clicking the <guilabel>Proceed to next step</guilabel> button. Now, phpBB 3.2 will test and verify the data you entered.</para>
-			<para>If you see a "<guilabel>Could not connect to the database</guilabel>" error, this means that you didn't enter the database data correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
+			<para>After you have entered your details, you can continue by clicking the <guilabel>Submit</guilabel> button. Now, phpBB 3.2 will test and verify the data you entered.</para>
+			<para>If you see a "<guilabel>Could not connect to the database</guilabel>" error, this means that you didn't enter the database information correctly and it is not possible for phpBB to connect. Make sure that everything you entered is in order and try again. Again, if you are unsure about your database settings, please contact your host.</para>
 			<tip>
 				<para>Remember that your database username and password are case sensitive. You must use the exact one you have set up or been given by your host</para>
 			</tip>
 			<para>If you installed another version of phpBB before on the same database with the same prefix, phpBB will inform you and you just need to enter a different database prefix.</para>
-			<para>If you see the <guilabel>Successful Connection</guilabel> message, you can continue to the next step.</para>
-		</section>
-		<section id="quick_installation_admin">
-			<title>Administrator details</title>
-			<para>Now you have to create your administration user. This user will have full administration access and he will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla (basic) phpBB 3.2 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="http://www.phpbb.com/languages/">www.phpbb.com</ulink>, and add them later.</para>
 		</section>
 		<section id="quick_installation_config">
 			<title>Configuration file</title>
@@ -188,10 +181,28 @@
 		</section>
 		<section id="quick_installation_advanced">
 			<title>Advanced settings</title>
-			<para>The <guilabel>Advanced settings</guilabel> allow you to set some parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
-			<para>If the installation was successful, you can now use the <guilabel>Login</guilabel> button to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.2 successfully. But there is still a lot of work ahead!</para>
+			<para>The next several sections allow you to set some more advanced parameters of the board configuration. They are optional, and you can always change them later if you wish. So if you are unsure of what these settings mean, ignore them and proceed to the final step to finish the installation.</para>
+		</section>
+		<section id="final_steps">
+			<title>Final Steps</title>
+			<para>At the end of the installation, you can set the default language of your board, a title for your board, and a short description of it. In a vanilla (basic) phpBB 3.2 installation we only include <guilabel>English [GB]</guilabel>. You can download further languages from <ulink url="https://www.phpbb.com/languages/">www.phpbb.com</ulink>, and add them later.</para>
+			<para>After clicking <guilabel>Submit</guilabel>, a progress bar will appear and will be updated with the status of the board installation. Please be patient as this may take a few moments.</para>
+			<para>If the installation was successful, you can now use the <guilabel>ACP</guilabel> link to visit the <guilabel>Administration Control Panel</guilabel>. Congratulations, you have installed phpBB 3.2 successfully. But there is still a lot of work ahead!</para>
 			<para>If you are unable to get phpBB 3.2 installed even after reading this guide, please look at the <link linkend="quick_support">support section</link> to find out where you can ask for further assistance. </para>
 			<para>At this point if you are upgrading from phpBB 2.0 or phpBB 3.0, you should refer to the <link linkend="upgrade_guide">upgrade guide</link> for further information. If not, you should remove the install directory from your server as you will only be able to access the Administration Control Panel whilst it is present.</para>
+		</section>
+		<section id="support_phpbb">
+			<title>Supporting the phpBB organization</title>
+			<para>When visiting the ACP for the first time after installing phpBB, a screen will be presented which provides ways for you to assist the phpBB organization.</para>
+			<itemizedlist>
+				<listitem>
+					<para><guilabel>Send Statistics</guilabel> - Sends us information about your server, such as PHP version, selected database type, some PHP settings, etc... All sensitive information has been removed. Clicking the <guilabel>Show details</guilabel> link shows exactly what information will be sent. This information helps up make design decisions for future versions of phpBB.</para>
+				</listitem>
+				<listitem>
+					<para><guilabel>VigLink</guilabel> - This option adds referral codes to certain links which are posted on your board by your users. When certain actions are taken on these links (such as purchasing an item from a posted Amazon link), VigLink receives a commission, of which a share is donated to the phpBB project. These funds will be used to further the development of phpBB. You can also choose to use your own VigLink account by clicking <guilabel>Convert account</guilabel> under <guilabel>VigLink settings</guilabel> in the <guilabel>Board Configuration</guilabel> section of the Administration Control Panel.</para>
+				</listitem>
+			</itemizedlist>
+			<para>Both of these actions are optional and will <emphasis role="strong">not</emphasis> be enabled without your explicit consent. Clicking away from this page without pressing <guilabel>Submit</guilabel> will deactivate the options. If you wish to enable or disable these options at a later time, this can be done through the <guilabel>Help support phpBB</guilabel> page of the <guilabel>Administration Control Panel</guilabel> under <guilabel>Server Configuration</guilabel>.</para>
 		</section>
 	</section>
 	<section id="quick_settings">
@@ -220,7 +231,7 @@
 				</mediaobject>
 			</figure>
 			<para>This form also holds the options for changing things like the main site URL as well as the date format used to render dates/times (<guilabel>Date format</guilabel>).</para>
-			<para>There you can also select a new style (after having installed it) for your board and enforce it on all members ignoring whatever style they've selected in their "User Control Panel". The style will also be used for all forums where you haven't specified a different one. For details on where to get new styles and how to install them, please visit the <ulink url="http://www.phpbb.com/styles/">styles home page</ulink> at <ulink url="http://www.phpbb.com/">phpbb.com</ulink>.</para>
+			<para>There you can also select a new style (after having installed it) for your board and enforce it on all members ignoring whatever style they've selected in their "User Control Panel". The style will also be used for all forums where you haven't specified a different one. For details on where to get new styles and how to install them, please visit the <ulink url="https://www.phpbb.com/styles/">styles home page</ulink> at <ulink url="https://www.phpbb.com/">phpbb.com</ulink>.</para>
 			<para>If you want to use your board for a non-English community, this form also lets you change the default language (<guilabel>Default Language</guilabel>) (which can be overridden by each user in their UCPs). By default, phpBB3 only ships with the English language pack. So, before using this field, you will have to download the language pack for the language you want to use and install it. For details, please read <link linkend="acp_customise_language">Language packs</link> .</para>
 		</section>
 		<!--/board_settings-->
@@ -467,7 +478,7 @@
 	</section>
 	<section id="quick_support">
 		<title>Obtaining support</title>
-		<para>The <ulink url="https://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="https://www.phpbb.com/community/viewforum.php?f=466">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="https://www.phpbb.com/support/srt/">Support Request Template</ulink> with the information it asks for.</para>
+		<para>The <ulink url="https://www.phpbb.com/about/">phpBB Team</ulink> provides many options for users to find support for their phpBB install. In addition to this very documentation, the <ulink url="https://www.phpbb.com/community/viewforum.php?f=556">support forum on www.phpbb.com</ulink> has many answers that users like you are searching for. Therefore, we highly recommend the use of the search feature before asking a new question. If you are unable to find an answer, feel free to post a new topic asking for help. Be sure to be descriptive when explaining your problem! The more we know about what is happening, the faster we can provide you with the answer you are looking for. Be sure to fill out the <ulink url="https://www.phpbb.com/support/srt/">Support Request Template</ulink> with the information it asks for and provide it in your post.</para>
 
 		<para>In addition to the support forum on www.phpbb.com, we provide a <ulink url="https://www.phpbb.com/kb/">Knowledge Base</ulink> for users to read and submit articles on common answers to questions. Our community has taken a lot of time in writing these articles, so be sure to check them out.</para>
 
