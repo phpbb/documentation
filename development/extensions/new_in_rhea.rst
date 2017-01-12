@@ -104,9 +104,8 @@ Some simple examples of what can be done with the new library include:
 
 .. code-block:: php
 
-    // Lets get the parser from the container in this example
-    $parser = $container->get('text_formatter.parser')
-        ->get_parser();
+    // Lets get the parser service from the container in this example
+    $parser = $container->get('text_formatter.parser');
     
     // Disable or enable a BBCode
     $parser->disable_bbcode($name);
@@ -120,10 +119,10 @@ Some simple examples of what can be done with the new library include:
     $text_formatter_utils = $container->get('text_formatter.utils');
     
     // Remove a BBCode and its content from a message      
-    $text_formatter_utils->remove_bbcode($message, $bbcode)
+    $text_formatter_utils->remove_bbcode($message, $bbcode);
 
     // Un-parse text back to its original form
-    $text_formatter_utils->unparse($message)
+    $text_formatter_utils->unparse($message);
 
 A major change introduced by the new engine is how text (in posts, PMs, signatures, etc.) is stored. In phpBB 3.1, text is stored as HTML, with BBCodes and some other features being replaced at rendering time. As of phpBB 3.2, text is stored as XML and transformed into HTML at rendering time. phpBB 3.2 has a `New Text Reparser`_ class which will convert all posts, PMs, signatures, etc. to the new format shortly after updating to 3.2 (this is handled mostly by incremental cron jobs).
 
