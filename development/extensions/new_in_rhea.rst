@@ -98,7 +98,6 @@ Fortunately, the integration is pretty seamless and most existing extensions tha
   * ``generate_text_for_edit()``
   * ``generate_text_for_storage()``
   * ``strip_bbcode()``
-  * ``smiley_text()``
 
 Some simple examples of what can be done with the new library include:
 
