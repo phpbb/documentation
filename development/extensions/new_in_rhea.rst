@@ -103,7 +103,7 @@ Some simple examples of what can be done with the new library include:
 
 .. code-block:: php
 
-    // Lets get the parser service from the container in this example
+    // Let's get the parser service from the container in this example
     $parser = $container->get('text_formatter.parser');
     
     // Disable or enable a BBCode
@@ -114,7 +114,7 @@ Some simple examples of what can be done with the new library include:
     $parser->disable_bbcodes();
     $parser->enable_bbcodes();
 
-    // Lets get the text formatter utils from the container in this example
+    // Let's get the text formatter utils from the container in this example
     $text_formatter_utils = $container->get('text_formatter.utils');
     
     // Remove a BBCode and its content from a message      
