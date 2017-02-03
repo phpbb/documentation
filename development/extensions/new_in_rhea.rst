@@ -208,7 +208,7 @@ Finally, to complete setting up the cron jobs, we must add two new configs to th
 		);
 	}
 
-Note that these configs are the name of the our cron.task ``text_reparser.acme_demo_text`` plus ``_cron_interval`` and ``_last_cron``. The ``cron_interval`` should be a value in seconds to wait between jobs, in this case "10", and the ``last_cron`` should always be set to "0".
+Note that these configs are the name of our text_reparser.plugin ``text_reparser.acme_demo_text`` plus ``_cron_interval`` and ``_last_cron``. The ``cron_interval`` should be a value in seconds to wait between jobs, in this case "10", and the ``last_cron`` should always be set to "0".
 
 .. tip::
     In some cases you may want to run your reparser from a migration. For example, you need your stored text reparsed immediately during the extension update and do not want to wait for it to go through the cron task queue.
