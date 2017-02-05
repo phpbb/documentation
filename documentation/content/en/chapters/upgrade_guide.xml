@@ -135,6 +135,7 @@
 			<listitem><para>On your website, delete all files from your board <emphasis role="bold">EXCEPT</emphasis> for:</para>
 				<itemizedlist>
 					<listitem><para>The config.php file</para></listitem>
+					<listitem><para>The ext/ directory</para></listitem>
 					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The files/ directory</para></listitem>
 					<listitem><para>The store/ directory</para></listitem>
