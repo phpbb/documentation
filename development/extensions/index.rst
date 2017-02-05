@@ -15,6 +15,7 @@ Welcome to phpBB's extension development tutorial and documentation.
    tutorial_modules
    tutorial_permissions
    tutorial_authentication
+   tutorial_bbcodes
    tutorial_advanced
    tutorial_testing
    *
