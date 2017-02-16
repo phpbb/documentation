@@ -47,7 +47,7 @@ Package Validation
 * Language packages must include all files that are included in the folders for
   the English language. This includes the following folders:
 
-    + `ext/phpbb/viglink/language/en/`
+    + ``ext/phpbb/viglink/language/en/``
     + ``language/en/``
     + ``styles/prosilver/theme/en/``
 
