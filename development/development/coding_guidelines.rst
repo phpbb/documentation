@@ -17,3 +17,14 @@ We use JSHint and JSCS for checking the quality of the JavaScript—JSHint for
 linting, and JSCS for ensuring consistent code. There is a .jshintrc and a
 .jscs file in the root of the project, and your editor probably has a plugin
 available which will show you when you violate these standards.
+
+CSS & SCSS Linting
+------------------
+
+We use `stylelint <https://stylelint.io/>` for checking the quality, linting,
+and ensuring consistent CSS code standards. There is a .stylelintrc
+file in the root of the project, and your editor probably has a plugin available
+which will show you when you violate these standards.
+
+We employ a set of standards loosely based on the following widely used
+`CSS Guidelines <http://cssguidelin.es/>`
