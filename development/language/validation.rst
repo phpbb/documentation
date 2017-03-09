@@ -8,7 +8,7 @@ Submission guidelines
 Description
 -----------
 
-Contribution description in the `Customisation Database`_
+Contribution description in the `Customisations Database`_
 should be translated into English in addition of your local language, as some
 administrators might want to download your translation without speak your
 language.
@@ -16,14 +16,14 @@ language.
 Screenshot
 ----------
 
-Contribution screenshot in the `Customisation Database`_ should only be the
+Contribution screenshot in the `Customisations Database`_ should only be the
 flag of the country whose the language is spoken. For example, the flag of
 France for the French language.
 
 Demo-Link
 ---------
 
-The Demo URL in the Customisation Database must be empty, unless you want to
+The Demo URL in the Customisations Database must be empty, unless you want to
 put a link to an international community (
 `officially <https://www.phpbb.com/support/intl/>`_ listed or not) related to
 the language of the contribution. For example, http://www.phpbbarabia.com/ as
@@ -37,7 +37,7 @@ Package
 * The submitted ``<languagename>_<version>.zip`` must contain a
   ``<languagename>_<version>`` folder. The files from above should be placed in
   this folder.
-* Revision name in the `Customisation Database`_ should be left blank, contain
+* Revision name in the `Customisations Database`_ should be left blank, contain
   the phpBB package version and/or package release name (e.g. ``3.0.12`` /
   ``Richard 'D¡cky' Foote`` for 3.0.12) for more understanding.
 
@@ -271,4 +271,4 @@ License
 * All translations must be released under
   `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
 
-.. _Customisation Database: https://www.phpbb.com/customise/db/language_packs-25
+.. _Customisations Database: https://www.phpbb.com/customise/db/language_packs-25
