@@ -271,4 +271,4 @@ License
 * All translations must be released under
   `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
 
-.. _Customisation Database: https://www.phpbb.com/go/customise/language-packs
+.. _Customisation Database: https://www.phpbb.com/languages/
