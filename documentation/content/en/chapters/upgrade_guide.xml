@@ -79,7 +79,7 @@
 					</tip>
 					<listitem><para>Using your web browser, visit install/ in your board's root. (e.g. http://www.example.com/yourforum/install)</para></listitem>
 					<listitem><para>Click the Update tab</para></listitem>
-					<listitem><para>Click the Update button</para></listitem><
+					<listitem><para>Click the Update button</para></listitem>
 					<listitem><para>Select "Update database only" and click Submit</para></listitem>
 					<listitem><para>Wait for the progress bar to reach 100% and for a message indicating that the update has completed</para></listitem>
 				</orderedlist>
