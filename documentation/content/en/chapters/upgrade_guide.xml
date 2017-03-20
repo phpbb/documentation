@@ -50,7 +50,7 @@
 			<listitem><para><emphasis role="bold">Make a backup of the original files</emphasis></para></listitem>
 			<listitem><para><emphasis role="bold">Make a backup of the database</emphasis></para></listitem>
 			<listitem><para>Deactivate all styles except for prosilver</para></listitem>
-			<listitem><para>Remove all MOD-related changes from the database.  The <ulink url="http://www.phpbb.com/support/stk/">Support Toolkit</ulink>Database Cleaner can be used for this.</para></listitem>
+			<listitem><para>Remove all MOD-related changes from the database. The <ulink url="http://www.phpbb.com/support/stk/">Support Toolkit</ulink>'s Database Cleaner can be used for this.</para></listitem>
 			<listitem><para>Set British English as the only language pack</para></listitem>
 			<listitem><para>Download the phpBB 3.2 <ulink url="https://www.phpbb.com/downloads/#install">Full Package</ulink> archive</para></listitem>
 			<listitem><para>Extract the contents of the archive to your computer and open the phpBB3 directory</para></listitem>
