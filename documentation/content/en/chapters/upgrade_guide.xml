@@ -111,7 +111,7 @@
 		</sectioninfo>
 		<title>Upgrading from 3.1 to 3.2</title>
 		<warning>
-			<para>Upgrading to phpBB 3.1 may cause some extensions to no longer work. All styles will need to be updated, even if they give the appearance of working.</para>
+			<para>Upgrading to phpBB 3.2 may cause some extensions to no longer work. All styles will need to be updated, even if they give the appearance of working.</para>
 		</warning>
 
 		<para>phpBB 3.2 is not completely backwards compatible with 3.1 and custom edits may no longer work. The easiest upgrade method is to remove all existing files prior to upgrading and re-applying custom changes after verifying their correctness.</para>
