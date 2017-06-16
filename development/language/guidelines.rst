@@ -121,8 +121,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                     posting.php
                     README (optional)
                     search.php
-                    search_ignore_words.php
-                    search_synonyms.php
                     ucp.php
                     VERSION (optional)
                     viewforum.php
