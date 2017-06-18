@@ -135,7 +135,7 @@ language/{iso}/help_*.php
 * For TextA and TextB normal `Key Validation`_ applies.
 
 language/{iso}/email/\*.txt and language/{iso}/email/short/\*.txt
----------------------------
+-----------------------------------------------------------------
 * Emails must only contain the subject-line, when the english email template
   also contains it::
 
@@ -152,7 +152,7 @@ language/{iso}/email/\*.txt and language/{iso}/email/short/\*.txt
 * There must be an empty new line at the end of the file.
 
 language/{iso}/\*.php and language/{iso}/acp/\*.php
----------------------
+---------------------------------------------------
 * The file must must only contain 1 array named ``$lang``. No other variables
   are allowed.
 * Language files must contain all keys, which are included in the english
