@@ -31,8 +31,8 @@ sys.path.insert(0, os.path.abspath('.'))
 extensions = [
     'sensio.sphinx.refinclude',
     'sensio.sphinx.configurationblock',
-    'sensio.sphinx.phpcode'#,
-#    'sensio.sphinx.bestpractice'
+    'sensio.sphinx.phpcode',
+    'sensio.sphinx.bestpractice'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
