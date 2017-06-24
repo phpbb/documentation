@@ -3,6 +3,7 @@ language: python
 install:
   - pip install sphinx
   - pip install sphinx_rtd_theme
+  - pip install sphinxcontrib-phpdomain
   - pip install git+https://github.com/marc1706/sphinx-php.git
 
 script:
