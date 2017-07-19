@@ -111,7 +111,7 @@ How it works
 .. code-block:: php
 
     array('custom', array(
-        array(/* Callable function, sent to call_user_func_array */)
+        array(/* Callable function */)
     )),
 
 Example
@@ -122,7 +122,7 @@ Call a function within the migrations file named some_function
 .. code-block:: php
 
     array('custom', array(
-        array(&$this, 'some_function')
+        array($this, 'some_function')
     )),
 
 .. note::
@@ -150,7 +150,7 @@ Example
     {
         return array(
             array('custom', array(
-                array(&$this, 'some_function')
+                array($this, 'some_function')
             )),
         );
     }
