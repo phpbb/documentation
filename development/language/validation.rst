@@ -47,9 +47,9 @@ Package Validation
 * Language packages must include all files that are included in the folders for
   the English language. This includes the following folders:
 
+    + ``ext/phpbb/viglink/language/en/``
     + ``language/en/``
     + ``styles/prosilver/theme/en/``
-    + ``styles/subsilver2/theme/en/``
 
 * Language packages must contain 1 additional files:
 
@@ -57,10 +57,10 @@ Package Validation
 
 * Language packages may contain 4 more additional files:
 
-    + ``language/{iso}/AUTHORS`` or ``language/{iso}/AUTHORS.md``
-    + ``language/{iso}/CHANGELOG`` or ``language/{iso}/CHANGELOG.md``
-    + ``language/{iso}/README`` or ``language/{iso}/README.md``
-    + ``language/{iso}/VERSION`` or ``language/{iso}/VERSION.md``
+    + ``language/{iso}/AUTHORS.md``
+    + ``language/{iso}/CHANGELOG.md``
+    + ``language/{iso}/README.md``
+    + ``language/{iso}/VERSION.md``
 
 * No other additional files are allowed!
 * All folders must contain an ``index.htm`` file.
@@ -113,41 +113,10 @@ contains the default html body:
     </body>
     </html>
 
-language/{iso}/search_ignore_words.php
---------------------------------------
-
-* The file must must only contain 1 array named ``$words``. No other variables
-  are allowed.
-* The array must only contain entries of type ``string``, integers or nested
-  entries are not allowed.
-* If you do not wish to use this file, you can either use the english
-  ``search_ignore_words.php`` or you just use an empty array:
-
-    .. code-block:: php
-
-        $words = array(
-        );
-
-language/{iso}/search_synonyms.php
-----------------------------------
-
-* The file must must only contain 1 array named ``$synonyms``. No other
-  variables are allowed.
-* The array must only contain ``string`` to ``string`` pairs, anything else is
-  not allowed.
-* If you do not wish to use this file, you can either use the english
-  ``search_synonyms.php`` or you just use an empty array:
-
-    .. code-block:: php
-
-        $synonyms = array(
-        );
-
-language/{iso}/help_*.php
+language/{iso}/help/*.php
 -------------------------
 
-* The file must must only contain 1 array named ``$help``. No other variables
-  are allowed.
+* The file must must only contain 1 array named `$lang`. No other variables are allowed.
 * The array must only contain arrays with the following structure:
 
     .. code-block:: php
@@ -159,7 +128,7 @@ language/{iso}/help_*.php
 
     + If TextA is ``--`` the entry is a headline.
     + If both, TextA and TextB, are ``--`` the entry causes a column switch for
-      the 2 column page layout. A ``help_*.php`` file must contain exactly one
+      the 2 column page layout. A ``help/*.php`` file must contain exactly one
       of these entries.
 
 * For TextA and TextB normal `Key Validation`_ applies.
@@ -271,4 +240,4 @@ License
 * All translations must be released under
   `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
 
-.. _Customisation Database: https://www.phpbb.com/go/customise/language-packs
+.. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/3.1
