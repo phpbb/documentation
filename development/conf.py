@@ -32,7 +32,8 @@ extensions = [
     'sensio.sphinx.refinclude',
     'sensio.sphinx.configurationblock',
     'sensio.sphinx.phpcode',
-    'sensio.sphinx.bestpractice'
+    'sensio.sphinx.bestpractice',
+    'sphinxcontrib.phpdomain'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
