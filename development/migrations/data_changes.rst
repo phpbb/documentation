@@ -184,7 +184,7 @@ Passing parameters to custom functions
 
 .. note::
 
-    This functionalilty is only available from 3.2.2 onwards
+    This functionality is only available from 3.2.2 onwards
 
 .. code-block:: php
 
@@ -248,7 +248,8 @@ Fully compatible with multi step process
 
 .. note::
 
-    The function called must accept the specified parameters, plus the $value param as the last one
+    To support the multi-step process, the function called must accept the explicit parameters, 
+	plus an additional last parameter that will receive the receive the return of the previous step.
 
 Examples
 ========
