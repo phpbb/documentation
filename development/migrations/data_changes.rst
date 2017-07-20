@@ -249,7 +249,7 @@ Fully compatible with multi step process
 .. note::
 
     To support the multi-step process, the function called must accept the explicit parameters, 
-	plus an additional last parameter that will receive the receive the return of the previous step.
+	plus an additional last parameter that will receive the return of the previous step.
 
 Examples
 ========
