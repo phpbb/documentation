@@ -4,7 +4,7 @@ Language Pack Submission Policy
 Below are the procedures and guidelines that need to be followed by any translator submitting a language pack to our `Customisation Database`_.
 All approved language packs can be found in our `Language Packs Database`_.
 If you submit your language pack to our `Customisation Database`_, it will first be automatically sent to the Translations Manager for validation.
-He is responsible for ensuring that your submission follows the guidelines below.
+The translations manager is responsible for ensuring that your submission follows the guidelines below.
 Failure to comply with the following instructions could lead to an instant denial of your submission.
 Please note the Translations Manager has full discretion on what he approves or denies.
 This process can sometimes take a considerable amount of time, so it's in your best interest to follow all of the guidelines from the start.
@@ -12,7 +12,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 1) Submissions have to be compatible with the latest version of phpBB. Any missing key will be detected during the upload process and your submission will be automatically denied.
 
-2) Submissions have to be complete. Partial translations are not allowed and will be systematically denied. E-mail text files and theme-images must also be fully translated.
+2) Submissions have to be complete. Partial translations are not allowed and will be automatically denied. E-mails, text files and theme-images must also be fully translated.
 
 3) Language packs can contain five additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README`` / ``README.md`` (optional), ``AUTHORS`` / ``AUTHORS.md`` (optional), ``VERSION`` / ``VERSION.md`` (optional) and ``CHANGELOG`` / ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README`` file, you can list all the authors and contributors of your language pack in the ``AUTHORS`` file, you can put the version of your language pack in the ``VERSION`` file and you can list all the version history in the ``CHANGELOG`` file. Concerning the ``LICENSE`` file, it is automatically added during the upload process, you do not have to manually add it. It tells to the user the license used. Language packs inherits phpBB's license `GNU General Public License 2.0`_, and no additional or alternative licenses are allowed. These files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file will be detected and your submission will be denied.
 
@@ -161,7 +161,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           index.htm (optional)
                           stylesheet.css
 
-5) Submissions have to follow as much as possible the `3.1 Translation (i18n/L10n) Guidelines`_ recommandantions, especially the `3.1 Writing style`_.
+5) Submissions have to follow as much as possible the `3.1 Translation (i18n/L10n) Guidelines`_ recommendations, especially the `3.1 Writing style`_.
 
 6) All the PHP and text files have to be encoding in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you `Notepad++`_ or `PSPad`_, both lightweight and free.
 
