@@ -388,13 +388,13 @@ Updated Symfony Services
 
 The following changes are due to deprecations introduced in Symfony 2.8 (which is used in phpBB 3.2). These deprecations are being removed from Symfony 3 (which is used in phpBB 3.3).
 
-Deprecated usage of @ at the beginning of unquoted strings
-----------------------------------------------------------
+Deprecating special characters at the beginning of unquoted strings
+-------------------------------------------------------------------
 
 .. warning::
     The following is recommended for phpBB 3.1 and later versions. It will be required from phpBB 3.3 and later.
 
-According to Yaml specification, unquoted strings cannot start with ``@``, so you must wrap these arguments with single or double quotes:
+According to Yaml specification, unquoted strings cannot start with ``@``, ``%``, `````, ``|`` or ``>``. You must wrap these strings with single or double quotes:
 
 .. code-block:: yaml
 
@@ -405,9 +405,6 @@ According to Yaml specification, unquoted strings cannot start with ``@``, so yo
           - '%custom.tables%'
        calls:
           - [set_controller_helper, ['@controller.helper']]
-
-.. note::
-    In phpBB, we have decided that to maintain consistency, we also quote strings that begin with ``%``. We also prefer using single quotes instead of double quotes.
 
 Deprecating Scopes and Introducing Shared Services
 --------------------------------------------------
@@ -434,6 +431,26 @@ For phpBB 3.2, instead of ``scope``, service definitions must now configure a ``
     vendor.package.class:
        class: vendor\package\classname
        shared: false
+
+Deprecating Route Pattern
+-------------------------
+
+.. warning::
+    The following is recommended for phpBB 3.1 and later versions. It will be required from phpBB 3.3 and later.
+
+Older versions of Symfony and phpBB have allowed routes to be defined using the keyword ``pattern``:
+
+.. code-block:: yaml
+
+    vendor.package.route:
+       pattern: /{value}
+
+For phpBB 3.2, route paths must instead be defined using the keyword ``path``:
+
+.. code-block:: yaml
+
+    vendor.package.route:
+       path: /{value}
 
 Updated INCLUDECSS
 ==================
