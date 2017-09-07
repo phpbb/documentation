@@ -11,7 +11,7 @@ goals, and CSS Guidelines is a document of recommendations and approaches that
 will help us to do so.
 
 The first part of this will deal with syntax, formatting and CSS anatomy, the
-second part will deal with approach, mindframe and attitude toward writing and
+second part will deal with approach, mind frame and attitude toward writing and
 architecting CSS.
 
 
@@ -41,8 +41,7 @@ At a very high-level, we want
 Anatomy of a Ruleset
 --------------------
 
-Before we discuss how we write out our rulesets, let’s first familiarise
-ourselves with the relevant terminology:
+Before we discuss how we write out our rulesets, let’s first familiarize ourselves with the relevant terminology:
 
 The following is a ``[ruleset]``
 
@@ -58,7 +57,7 @@ The following is a ``[ruleset]``
 
 
 
-Formating
+Formatting
 ---------
 
 - Use one discrete selector per line in multi-selector rulesets.
@@ -214,7 +213,7 @@ Proper Use of units
 
 CSS allows for the use of several different unit types. As such it can get
 confusing when using more than one type of unit through out the project. For
-that reason its benefital to stick to a stick set of rules for what unit types
+that reason its beneficial to stick to a stick set of rules for what unit types
 are to be used for certain selectors.
 
 Furthermore there are certain reasons to use or avoid using specific units in
@@ -222,7 +221,7 @@ certain places.
 
 EM
 ++
-The 'em' unit. This is a very problamactic unit which reaks havoc on countless
+The 'em' unit. This is a very problematic unit which reeks havoc on countless
 projects due to the way its calculated. As such this unit type must be avoid
 except for very very minimal use cases. We prevent the use of ``em`` except for
 ``letter-spaceing`` & ``word-spacing``. It is also used for icon sizing but that is
@@ -230,11 +229,11 @@ an edge case.
 
 Line-heights
 ++++++++++++
-All line-heights are to be specified as unitless inorder to prevent in proper
+All line-heights are to be specified as unitless in order to prevent in proper
 inheritance. By nature when using units with line-heights the children inherit
 by default. This can lead to unwanted effects and bloated code. A ``sass``
 function called ``unitless`` is provided which will convert px values for
-convienence, but for clarity the math is simply
+convenience, but for clarity the math is simply
 
 .. code-block:: scss
 
@@ -264,7 +263,7 @@ Dimensions
 ++++++++++
 All dimensional values ``width``, ``min-width``, ``height``, & ``min-height`` should be
 specified in ``px`` or ``%``. A case can be made for ``vw`` & ``vh``, but they are still
-on the fringe of browser acceptence, as such fallbacks in ``px`` or ``%`` are
+on the fringe of browser acceptance, as such fallbacks in ``px`` or ``%`` are
 required. These values will remain as px if specified. This is done as ``height``
 is more effectively and appropriately controlled via the ``line-height`` property,
 and ``width`` is better specified using the objects box-model via ``padding`` unless
@@ -304,7 +303,7 @@ blank line before and after the nested ruleset.
 **N.B.** Nesting in Sass should be avoided in most cases. See `Specificity`_ for more details.
 
 
-Enforcing standardisation
+Enforcing standardization
 -------------------------
 
 Our project makes use of several tools to lint and to keep us to the standards.
@@ -313,7 +312,7 @@ Our project makes use of several tools to lint and to keep us to the standards.
 ++++++++++++++++++++++++++++++++++++++++++++
 .. note::
 
-This is used to provide detailed linting for our stadards via the ``.stlyelintrc`` file in the root of the project.
+This is used to provide detailed linting for our standards via the ``.stlyelintrc`` file in the root of the project.
 
 2. `postcss-sorting <https://github.com/hudochenkov/postcss-sorting>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -325,7 +324,7 @@ This is used to provide automatic sorting to our declaration order via the ``.po
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. note::
 
-This is used to ensure the proper units are consistently used throughout the project vduring the build process via the ``gulp`` as well as on save in your editor.
+This is used to ensure the proper units are consistently used throughout the project during the build process via the ``gulp`` as well as on save in your editor.
 
 4. `stylefmt <https://github.com/morishitter/stylefmt>`_
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -335,4 +334,4 @@ This is used to help automatically re-format your code to the standards on the f
 
 .. warning::
 
-As a **NOTE** our editor of choice is `ATOM <http://www.atom.io>`_ which provides usefull plugins to make use of these tools. Checkout the `Editor Setup`_ section of the docs for more information
+As a **NOTE** our editor of choice is `ATOM <http://www.atom.io>`_ which provides useful plugins to make use of these tools. Checkout the `Editor Setup`_ section of the docs for more information
