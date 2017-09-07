@@ -57,8 +57,8 @@ require no changes for extensions, we only add a quick example here.
 
         protected $config;
         protected $helper;
+        protected $language;
         protected $template;
-        protected $user;
 
         public function setUp()
         {
@@ -73,7 +73,7 @@ require no changes for extensions, we only add a quick example here.
             $this->template = $this->getMockBuilder('\phpbb\template\template')
                 ->disableOriginalConstructor()
                 ->getMock();
-            $this->user = $this->getMockBuilder('\phpbb\user')
+            $this->language = $this->getMockBuilder('\phpbb\language\language')
                 ->disableOriginalConstructor()
                 ->getMock();
 
@@ -81,7 +81,7 @@ require no changes for extensions, we only add a quick example here.
                 $this->config,
                 $this->helper,
                 $this->template,
-                $this->user
+                $this->language
             );
         }
 
@@ -123,7 +123,7 @@ require no changes for extensions, we only add a quick example here.
                 ->with('acme_demo_goodbye')
                 ->willReturn($config);
 
-            $this->user->expects($this->once())
+            $this->language->expects($this->once())
                 ->method('lang')
                 ->with($expected_language, $name)
                 ->willReturn($language_return);
@@ -240,19 +240,19 @@ argument) for the ``acme_demo_goodbye`` config variable.
                 ->willReturn($config);
 
 If we have a short look at our controller again, we see that the value of the
-config influences the ``\phpbb\user::lang()`` call:
+config influences the ``\phpbb\language\language::lang()`` call:
 
 .. code-block:: php
 
     $l_message = empty($this->config['acme_demo_goodbye']) ? 'DEMO_HELLO' : 'DEMO_GOODBYE';
-    $this->template->assign_var('DEMO_MESSAGE', $this->user->lang($l_message, $name));
+    $this->template->assign_var('DEMO_MESSAGE', $this->language->lang($l_message, $name));
 
 This is what we check with the third argument ``$expected_language`` of our test
 method:
 
 .. code-block:: php
 
-            $this->user->expects($this->once())
+            $this->language->expects($this->once())
                 ->method('lang')
                 ->with($expected_language, $name)
                 ->willReturn($language_return);
@@ -812,10 +812,6 @@ first file is the Travis CI configuration file, ``.travis.yml``:
 
     matrix:
       include:
-        - php: 5.3.3
-          env: DB=mysqli
-        - php: 5.3
-          env: DB=mysqli # MyISAM
         - php: 5.4
           env: DB=mysqli
         - php: 5.4
@@ -830,6 +826,8 @@ first file is the Travis CI configuration file, ``.travis.yml``:
           env: DB=mysqli
         - php: 5.6
           env: DB=mysqli
+        - php: 7.0
+          env: DB=mysqli
         - php: hhvm
           env: DB=mysqli
       allow_failures:
@@ -842,7 +840,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
         - SNIFF="1"            # Should we run code sniffer on your code?
         - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
         - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-        - PHPBB_BRANCH="3.1.x"
+        - PHPBB_BRANCH="3.2.x"
 
     branches:
       only:
@@ -878,7 +876,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
             - SNIFF="1"            # Should we run code sniffer on your code?
             - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
             - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-            - PHPBB_BRANCH="3.1.x"
+            - PHPBB_BRANCH="3.2.x"
 
 Preparing phpBB
 ---------------

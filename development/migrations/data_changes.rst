@@ -179,6 +179,78 @@ Example
         return $value + $limit;
     }
 
+Passing parameters to custom functions
+--------------------------------------
+
+.. note::
+
+    This functionality is only available from 3.2.2 onwards
+
+.. code-block:: php
+
+    array('custom', array(
+        array(/* Callable function */), array(/* Parameters to the function */),
+    )),
+
+Example
+-------
+
+Call a function within the migrations file named some_function, passing it some parameters
+
+.. code-block:: php
+
+    array('custom', array(
+        array($this, 'some_function'), array('first param', 2)
+    )),
+
+.. note::
+
+    The function called must accept the specified parameters
+
+Example
+-------
+
+Fully compatible with multi step process
+
+.. code-block:: php
+
+    public function update_data()
+    {
+        return array(
+            array('custom', array(
+                array($this, 'some_function'), array(500) // The param is the limit
+            )),
+        );
+    }
+
+    // $value is the value returned on the previous call, and is always the last parameter
+    public function some_function($limit, $value)
+    {
+        $i = 0;
+
+        // Select all topics, starting at $value, limit $limit
+        while ($topic = fetchrow)
+        {
+            $i++;
+
+            // Do something
+        }
+
+        if ($i < $limit)
+        {
+            // There are no more topics, we are done
+            return;
+        }
+
+        // There are still more topics to query, return the next start value
+        return $value + $limit;
+    }
+
+.. note::
+
+    To support the multi-step process, the function called must accept the explicit parameters, 
+	plus an additional last parameter that will receive the return of the previous step.
+
 Examples
 ========
 

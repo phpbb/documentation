@@ -118,10 +118,10 @@ For this tutorial, we will use ``ext/acme/demo/acp/main_module.php``:
 
         public function main($id, $mode)
         {
-            global $user, $template, $request, $config;
+            global $language, $template, $request, $config;
 
             $this->tpl_name = 'acp_demo_body';
-            $this->page_title = $user->lang('ACP_DEMO_TITLE');
+            $this->page_title = $language->lang('ACP_DEMO_TITLE');
 
             add_form_key('acme_demo_settings');
 
@@ -133,7 +133,7 @@ For this tutorial, we will use ``ext/acme/demo/acp/main_module.php``:
                 }
 
                 $config->set('acme_demo_goodbye', $request->variable('acme_demo_goodbye', 0));
-                trigger_error($user->lang('ACP_DEMO_SETTING_SAVED') . adm_back_link($this->u_action));
+                trigger_error($language->lang('ACP_DEMO_SETTING_SAVED') . adm_back_link($this->u_action));
             }
 
             $template->assign_vars(array(
@@ -178,7 +178,7 @@ submitted value and display a success message to the user:
 .. code-block:: php
 
     $config->set('acme_demo_goodbye', $request->variable('acme_demo_goodbye', 0));
-    trigger_error($user->lang('ACP_DEMO_SETTING_SAVED') . adm_back_link($this->u_action));
+    trigger_error($language->lang('ACP_DEMO_SETTING_SAVED') . adm_back_link($this->u_action));
 
 At the end of the method we assign two template variables.
 The first contains the current value of the config value.

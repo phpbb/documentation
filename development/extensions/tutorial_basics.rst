@@ -58,7 +58,7 @@ The details of the meta data are explained below the sample, but for now let's h
     {
         "name": "acme/demo",
         "type": "phpbb-extension",
-        "description": "Acme Demo Extension for phpBB 3.1",
+        "description": "Acme Demo Extension for phpBB 3.2",
         "homepage": "https://github.com/phpbb/phpbb-ext-acme-demo",
         "version": "0.1.0",
         "time": "2013-11-05",
@@ -73,7 +73,7 @@ The details of the meta data are explained below the sample, but for now let's h
             }
         ],
         "require": {
-            "php": ">=5.3.3",
+            "php": ">=5.4.0",
             "composer/installers": "~1.0"
         },
         "require-dev": {
@@ -82,7 +82,7 @@ The details of the meta data are explained below the sample, but for now let's h
         "extra": {
             "display-name": "Acme Demo Extension",
             "soft-require": {
-                "phpbb/phpbb": "~3.1"
+                "phpbb/phpbb": "~3.2"
             }
         }
     }
@@ -143,8 +143,8 @@ List the dependencies required by the extension, i.e. the PHP version and
    :header: "Field", "Content"
    :delim: |
 
-   ``php`` | "The minimum-stability version of PHP required by the extension. phpBB 3.1 requires PHP 5.3.3 or higher,
-   so the version comparison is ``>= 5.3.3``."
+   ``php`` | "The minimum-stability version of PHP required by the extension. phpBB 3.2 requires PHP 5.4.0 or higher,
+   so the version comparison is ``>= 5.4.0``."
    ``composer/installers`` | "Recommended by phpBB. This will install extensions to the correct location in phpBB when installed via Composer."
 
 require-dev
@@ -168,7 +168,7 @@ two special entries in this array for extensions:
 
    ``display-name`` | "The name of your extension, e.g. Acme Demo Extension."
    ``soft-require`` | "The minimum-stability version of phpBB required by the extension. In this case we require
-   any 3.1 version, which is done by prefixing it with a ``~``: ``""phpbb/phpbb"": ""~3.1""``."
+   any 3.1 version, which is done by prefixing it with a ``~``: ``""phpbb/phpbb"": ""~3.2""``."
 
 .. seealso::
 
