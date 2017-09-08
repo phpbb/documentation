@@ -113,36 +113,6 @@ contains the default html body:
     </body>
     </html>
 
-language/{iso}/search_ignore_words.php
---------------------------------------
-
-* The file must must only contain 1 array named ``$words``. No other variables
-  are allowed.
-* The array must only contain entries of type ``string``, integers or nested
-  entries are not allowed.
-* If you do not wish to use this file, you can either use the english
-  ``search_ignore_words.php`` or you just use an empty array:
-
-    .. code-block:: php
-
-        $words = array(
-        );
-
-language/{iso}/search_synonyms.php
-----------------------------------
-
-* The file must must only contain 1 array named ``$synonyms``. No other
-  variables are allowed.
-* The array must only contain ``string`` to ``string`` pairs, anything else is
-  not allowed.
-* If you do not wish to use this file, you can either use the english
-  ``search_synonyms.php`` or you just use an empty array:
-
-    .. code-block:: php
-
-        $synonyms = array(
-        );
-
 language/{iso}/help_*.php
 -------------------------
 
@@ -164,8 +134,8 @@ language/{iso}/help_*.php
 
 * For TextA and TextB normal `Key Validation`_ applies.
 
-language/{iso}/email/\*.txt
----------------------------
+language/{iso}/email/\*.txt and language/{iso}/email/short/\*.txt
+-----------------------------------------------------------------
 * Emails must only contain the subject-line, when the english email template
   also contains it::
 
@@ -181,8 +151,8 @@ language/{iso}/email/\*.txt
 * Emails must not use HTML content.
 * There must be an empty new line at the end of the file.
 
-language/{iso}/\*.php
----------------------
+language/{iso}/\*.php and language/{iso}/acp/\*.php
+---------------------------------------------------
 * The file must must only contain 1 array named ``$lang``. No other variables
   are allowed.
 * Language files must contain all keys, which are included in the english
