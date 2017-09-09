@@ -100,16 +100,14 @@ Essentially, what this does is that it will call sql_build_query() recursively w
 .. code-block:: php
 
 	array('f.forum_id', '=', 'ANY', 'SELECT', array(
-						'SELECT' => array(/*...*/),
-						'FROM' => array(/*...*/),
-					)
-	)
+		'SELECT' => array(/*...*/),
+		'FROM' => array(/*...*/),
+	))
 
 	array('f.forum_id', '', 'IN', 'SELECT', array(
-						'SELECT' => array(/*...*/),
-						'FROM' => array(/*...*/),
-					)
-	)
+		'SELECT' => array(/*...*/),
+		'FROM' => array(/*...*/),
+	))
 
 Why arrays?
 ===========
@@ -180,10 +178,10 @@ According to the manual for this transformation, it should look like this:
 			TOPICS_TABLE		=> '',
 		),
 		'WHERE'		=> "forum_id = $forum_id
-				AND (topic_last_post_time >= $min_post_time
-					OR topic_type = " . POST_ANNOUNCE . '
-					OR topic_type = ' . POST_GLOBAL . ')
-				AND ' . $phpbb_content_visibility->get_visibility_sql('topic', $forum_id),
+			AND (topic_last_post_time >= $min_post_time
+				OR topic_type = " . POST_ANNOUNCE . '
+				OR topic_type = ' . POST_GLOBAL . ')
+			AND ' . $phpbb_content_visibility->get_visibility_sql('topic', $forum_id),
 	);
 	
 	$db->sql_build_query('SELECT', $sql_ary);
@@ -200,8 +198,8 @@ Hum... Let's see... There's a set of AND's to join in. Let's start there.
 		'WHERE'		=> array('AND',
 			"forum_id = $forum_id",
 			"(topic_last_post_time >= $min_post_time
-					OR topic_type = " . POST_ANNOUNCE . '
-					OR topic_type = ' . POST_GLOBAL . ')',
+				OR topic_type = " . POST_ANNOUNCE . '
+				OR topic_type = ' . POST_GLOBAL . ')',
 			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
 		),
 	// ...
