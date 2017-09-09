@@ -480,6 +480,7 @@ certain places.
 
 EM
 ++
+
 The 'em' unit. This is a very problematic unit which reeks havoc on countless
 projects due to the way its calculated. As such this unit type must be avoid
 except for very very minimal use cases. We prevent the use of ``em`` except for
@@ -508,8 +509,8 @@ values will be converted to ``rem`` during the build process as ``rem`` provide 
 control in responsive situations.
 
 Margins & Paddings
-
 ++++++++++++++++++
+
 All ``margin`` & ``padding`` should be specified in ``px`` values or ``%``. All ``px`` All
 px values will be converted to ``rem`` during the build process as `rem` provide
 for control in responsive situations.
