@@ -1,36 +1,23 @@
-| In working on large, long running projects with dozens of developers,
-  it is
-| important that we all work in a unified way in order to, among other
-  things:
+In working on large, long running projects with dozens of developers, it is important that we all work in a unified way in order to, among other things:
 
 -  Keep code maintainable
 -  Keep code transparent and readable
 -  Keep code scalable
 
-| There are a variety of techniques we must employ in order to satisfy
-  these
-| goals.
+There are a variety of techniques we must employ in order to satisfy these goals.
 
 The Importance of a Styleguide
 ------------------------------
 
-| A coding styleguide (note, not a visual styleguide) is a valuable tool
-  for teams
-| who
+A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who
 
 -  build and maintain products for a reasonable length of time;
 -  have developers of differing abilities and specialisms;
--  have a number of different developers working on a product at any
-   given time;
+-  have a number of different developers working on a product at any given time;
 -  on-board new staff regularly;
 -  have a number of codebases that developers dip in and out of.
 
-| Whilst styleguides are typically more suited to production teams—large
-  codebases
-| on long-lived and evolving projects, with multiple developers
-  contributing over
-| prolonged periods of time—all developers should strive for a degree of
-| standardization in their code.
+Whilst styleguides are typically more suited to production teams—large codebases on long-lived and evolving projects, with multiple developers contributing over prolonged periods of time—all developers should strive for a degree of standardization in their code.
 
 A good styleguide, when well followed, will
 
@@ -42,18 +29,11 @@ A good styleguide, when well followed, will
 Disclaimers
 ~~~~~~~~~~~
 
-| These Guidelines are a styleguide; they may not be the styleguide.
-  They contain
-| methodologies, techniques, and tips that we firmly recommend to teams
+These Guidelines are a styleguide; they may not be the styleguide. They contain methodologies, techniques, and tips that we firmly recommend to teams
 
-| They are opinionated, but have been repeatedly tried, tested,
-  stressed, refined,
-| broken, reworked, and revisited over a number of years on projects of
-  all sizes.
+They are opinionated, but have been repeatedly tried, tested, stressed, refined, broken, reworked, and revisited over a number of years on projects of all sizes.
 
-| They should be learned, understood, and implemented at all times on
-  this
-| project, any deviation must be fully justified.
+They should be learned, understood, and implemented at all times on this project, any deviation must be fully justified.
 
 Some General principles
 -----------------------
@@ -64,36 +44,23 @@ Some General principles
     clarity, not your personal preference of how to get clever within
     the spec.” - Idan Gazit
 
--  Don’t try to prematurely optimize your code; keep it readable and
-   understandable.
--  All code should look like a single person typed it, even when many
-   people are contributing to it.
--  We use a strictly enforced agreed-upon style based on existing common
-   patterns.
+-  Don’t try to prematurely optimize your code; keep it readable and understandable.
+-  All code should look like a single person typed it, even when many people are contributing to it.
+-  We use a strictly enforced agreed-upon style based on existing common patterns.
 
 Meaningful Whitespace
 ---------------------
 
-| Only one style should exist across the entire source of all your
-  code-base.
-| Always be consistent in your use of whitespace. Use whitespace to
-  improve
-| readability.
+Only one style should exist across the entire source of all your code-base. Always be consistent in your use of whitespace. Use whitespace to improve readability.
 
--  Never mix spaces and tabs for indentation. Stick to your choice
-   without fail. (**Preference: tabs**)
--  Choose the number of preferred characters used per indentation level.
-   (**Preference: 4 spaces**)
+-  Never mix spaces and tabs for indentation. Stick to your choice without fail. (**Preference: tabs**)
+-  Choose the number of preferred characters used per indentation level. (**Preference: 4 spaces**)
 
 .. warning::
 
-configure your editor to “show invisibles” or to automatically remove
-end-of-line whitespace. The use of an `EditorConfig`_ file is being used
-to help maintain the basic whitespace conventions.
+configure your editor to “show invisibles” or to automatically remove end-of-line whitespace. The use of an `EditorConfig`_ file is being used to help maintain the basic whitespace conventions.
 
-| As well as indentation, we can provide a lot of information through
-  liberal and
-| judicious use of whitespace between rulesets. We use:
+As well as indentation, we can provide a lot of information through liberal and judicious use of whitespace between rulesets. We use:
 
 -  One (1) empty line between closely related rulesets.
 -  Two (2) empty lines between loosely related rulesets.
@@ -113,9 +80,7 @@ For example:
 
     .foo--baz { }
 
-| There should never be a scenario in which two rulesets do not have an
-  empty line
-| between them. This would be incorrect:
+There should never be a scenario in which two rulesets do not have an empty line between them. This would be incorrect:
 
 .. code:: scss
 
@@ -126,57 +91,29 @@ For example:
 Multiple Files
 ~~~~~~~~~~~~~~
 
-| With the meteoric rise of preprocessors of late, more often is the
-  case that
-| developers are splitting CSS across multiple files.
+With the meteoric rise of preprocessors of late, more often is the case that developers are splitting CSS across multiple files.
 
-| Even if not using a preprocessor, it is a good idea to split discrete
-  chunks of
-| code into their own files, which are concatenated during a build step.
+Even if not using a preprocessor, it is a good idea to split discrete chunks of code into their own files, which are concatenated during a build step.
 
-| We follow the ITCSS principles for the organization of our code and as
-  such
-| everything is broken up into partials. All partials are to be named to
-  reflect
-| the contained component/module and lead by an underscore(\ ``_``) to
-  prevent self
-| rendering.
+We follow the ITCSS principles for the organization of our code and as such everything is broken up into partials. All partials are to be named to reflect the contained component/module and lead by an underscore(\ ``_``) to prevent self rendering.
 
 Commenting
 ----------
 
 **CSS needs more comments.**
 
-| The cognitive overhead of working with CSS is huge. With so much to be
-  aware of,
-| and so many project-specific nuances to remember, the worst situation
-  most
-| developers find themselves in is being
-  the-person-who-didn’t-write-this-code.
-| Remembering your own classes, rules, objects, and helpers is
-  manageable to an
-| extent, but anyone inheriting CSS barely stands a chance.
+The cognitive overhead of working with CSS is huge. With so much to be aware of, and so many project-specific nuances to remember, the worst situation most developers find themselves in is being the-person-who-didn’t-write-this-code. Remembering your own classes, rules, objects, and helpers is manageable to an extent, but anyone inheriting CSS barely stands a chance.
 
-| This is why well commented code is extremely important. Take time to
-  describe
-| components, how they work, their limitations, and the way they are
-  constructed.
-| Don’t leave others in the project guessing as to the purpose of
-  uncommon or
-| non-obvious code.
+This is why well commented code is extremely important. Take time to describe components, how they work, their limitations, and the way they are constructed. Don’t leave others in the project guessing as to the purpose of uncommon or non-obvious code.
 
 Comment style should be simple and consistent within the code base.
 
 -  Place comments on a new line above their subject.
 -  Keep line-length to a sensible maximum, e.g., 80 columns.
--  Make liberal use of comments to break CSS code into discrete
-   sections.
+-  Make liberal use of comments to break CSS code into discrete sections.
 -  Use “sentence case” comments and consistent text indentation.
 
-| As CSS is something of a declarative language that doesn’t really
-  leave much of
-| a paper-trail, it is often hard to discern—from looking at the CSS
-  alone—
+As CSS is something of a declarative language that doesn’t really leave much of a paper-trail, it is often hard to discern—from looking at the CSS alone—
 
 -  whether some CSS relies on other code elsewhere;
 -  what effect changing some code will have elsewhere;
@@ -185,98 +122,75 @@ Comment style should be simple and consistent within the code base.
 -  what styles something might pass on (intentionally or otherwise);
 -  where the author intended a piece of CSS to be used.
 
-| This doesn’t even take into account some of CSS’ many quirks—such as
-  various
-| sates of ``overflow`` triggering block formatting context, or certain
-  transform
-| properties triggering hardware acceleration—that make it even more
-  baffling to
-| developers inheriting projects.
+This doesn’t even take into account some of CSS’ many quirks—such as various sates of ``overflow`` triggering block formatting context, or certain transform properties triggering hardware acceleration—that make it even more baffling to developers inheriting projects.
 
-As a result of CSS not telling its own story very well, it is a
- language that
-| really does benefit from being heavily commented.
-
-| As a rule, you should comment anything that isn’t immediately obvious
- from the
-| code alone. That is to say, there is no need to tell someone that
- ``color: red;``
-| will make something red, but if you’re using ``overflow: hidden;`` to
- clear
-| floats—as opposed to clipping an element’s overflow—this is probably
- something
-| worth documenting.
+As a result of CSS not telling its own story very well, it is a language that really does benefit from being heavily commented. As a rule, you should comment anything that isn’t immediately obvious from the code alone. That is to say, there is no need to tell someone that ``color: red;`` will make something red, but if you’re using ``overflow: hidden;`` to clear floats—as opposed to clipping an element’s overflow—this is probably something worth documenting.
 
 .. warning::
 
-Tip: you can configure your editor to provide you with shortcuts to
-output agreed-upon comment patterns.
+Tip: you can configure your editor to provide you with shortcuts to output agreed-upon comment patterns.
 
 Comment Example:
 
 .. code:: scss
 
-   //------------------------------------------------------------------------------
-   // #[LAYER]: PARTIAL NAME
-   //------------------------------------------------------------------------------
-   // #description
-   //
-   // This is a description of the PARTIAL
-   //
-   //------------------------------------------------------------------------------
+    //------------------------------------------------------------------------------
+    // #[LAYER]: PARTIAL NAME
+    //------------------------------------------------------------------------------
+    // #description
+    //
+    // This is a description of the PARTIAL
+    //
+    //------------------------------------------------------------------------------
 
-   //
-   // #settings
+    //
+    // #settings
 
-   // Layout Variables
-   $variable: [value]
+    // Layout Variables
+    $variable: [value]
 
-   // Theme Variables
-   $variable: [value]
+    // Theme Variables
+    $variable: [value]
 
-   //
-   // #scss
+    //
+    // #scss
 
-   //
-   // 1. inline comment
-   // 2. inline comment
-   // 3. inline comment
-   //
+    //
+    // 1. inline comment
+    // 2. inline comment
+    // 3. inline comment
+    //
 
-   [selector] {
-	   [property]: [value];
-	   [property]: [value]; // [1]
-	   [property]: [value]; // [1]
-	   [property]: [value]; // [2]
-	   [property]: [value];
-	   [property]: [value]; // [3]
-   }
+    [selector] {
+        [property]: [value];
+        [property]: [value]; // [1]
+        [property]: [value]; // [1]
+        [property]: [value]; // [2]
+        [property]: [value];
+        [property]: [value]; // [3]
+    }
 
-   //
-   // Section Block Comment
-   //------------------------------------------------------------------------------
-   //
-   // 1. inline comment
-   // 2. inline comment
-   // 3. inline comment
-   //
-   [selector] {
-	   [property]: [value];
-	   [property]: [value]; // [1]
-	   [property]: [value]; // [1]
-	   [property]: [value]; // [2]
-	   [property]: [value];
-	   [property]: [value]; // [3]
-   }
+    //
+    // Section Block Comment
+    //------------------------------------------------------------------------------
+    //
+    // 1. inline comment
+    // 2. inline comment
+    // 3. inline comment
+    //
+    [selector] {
+        [property]: [value];
+        [property]: [value]; // [1]
+        [property]: [value]; // [1]
+        [property]: [value]; // [2]
+        [property]: [value];
+        [property]: [value]; // [3]
+    }
 
 Low-level
 ~~~~~~~~~
 
-| Oftentimes we want to comment on specific declarations (i.e. lines) in
- a
-| ruleset. To do this we use a kind of reverse footnote. Here is a more
- complex
-| comment detailing the larger site headers mentioned above:
+Oftentimes we want to comment on specific declarations (i.e. lines) in a ruleset. To do this we use a kind of reverse footnote. Here is a more complex comment detailing the larger site headers mentioned above:
 
 .. code:: scss
 
@@ -321,9 +235,7 @@ Low-level
         will-change: box-shadow;
     }
 
-| These types of comment allow us to keep all of our documentation in
-  one place
-| whilst referring to the parts of the ruleset to which they belong.
+These types of comment allow us to keep all of our documentation in one place whilst referring to the parts of the ruleset to which they belong.
 
 Titling
 ~~~~~~~
@@ -338,25 +250,13 @@ Begin every new major section of a CSS project with a title:
 
     .selector { }
 
-| The title of the section is prefixed with a hash (``#``) symbol to
-  allow us to
-| perform more targeted searches (e.g. ``grep``, etc.): instead of
-  searching for
-| just ``SECTION-TITLE``—which may yield many results—a more scoped
-  search of
-| ``#SECTION-TITLE`` should return only the section in question.
+The title of the section is prefixed with a hash (``#``) symbol to allow us to perform more targeted searches (e.g. ``grep``, etc.): instead of searching for just ``SECTION-TITLE``—which may yield many results—a more scoped search of ``#SECTION-TITLE`` should return only the section in question.
 
-| Leave a carriage return between this title and the next line of code
-  (be that a
-| comment, some Sass, or some CSS).
+Leave a carriage return between this title and the next line of code (be that a comment, some Sass, or some CSS).
 
 Preprocessor Comments
 ~~~~~~~~~~~~~~~~~~~~~
 
-| With most—if not all—preprocessors, we have the option to write
-  comments that
-| will not get compiled out into our resulting CSS file. As a rule, use
-  these
-| comments to speed up and prevent errors in the minification step.
+With most—if not all—preprocessors, we have the option to write comments that will not get compiled out into our resulting CSS file. As a rule, use these comments to speed up and prevent errors in the minification step.
 
 .. _EditorConfig: http://editorconfig.org/
