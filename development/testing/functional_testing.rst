@@ -10,7 +10,7 @@ Running Functional Tests
 ========================
 
 Information on how to run tests is available in the GitHub repository at
-`<https://github.com/phpbb/phpbb3/blob/develop/tests/RUNNING_TESTS.md>`_. You
+`<https://github.com/phpbb/phpbb/blob/3.2.x/tests/RUNNING_TESTS.md>`_. You
 can switch the branch to check instructions for a specific version of phpBB.
 
 Writing Functional Tests
