@@ -10,6 +10,7 @@ Contents:
    development/coding_guidelines
    cli/index
    extensions/index
+   files/index
    language/index
    migrations/index
    testing/index

@@ -15,7 +15,7 @@
 <xsl:param name="html.ext" select="'.php'"/>
 
 <!-- Link to the stylesheet -->
-<xsl:param name="html.stylesheet" select="'/support/documentation/3.1/style.css'"/>
+<xsl:param name="html.stylesheet" select="'/support/documentation/3.2/style.css'"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
@@ -37,7 +37,7 @@
 <xsl:param name="chunker.output.doctype-public" select="''"/>
 <xsl:param name="chunker.output.doctype-system" select="''"/>
 
-<xsl:variable name="main.title.text" select="'phpBB 3.1 Ascraeus Documentation'"/>
+<xsl:variable name="main.title.text" select="'phpBB 3.2 Rhea Documentation'"/>
 
 <xsl:template name="user.preroot">
 

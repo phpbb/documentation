@@ -47,9 +47,9 @@ Package Validation
 * Language packages must include all files that are included in the folders for
   the English language. This includes the following folders:
 
+    + ``ext/phpbb/viglink/language/en/``
     + ``language/en/``
     + ``styles/prosilver/theme/en/``
-    + ``styles/subsilver2/theme/en/``
 
 * Language packages must contain 1 additional files:
 
@@ -57,10 +57,10 @@ Package Validation
 
 * Language packages may contain 4 more additional files:
 
-    + ``language/{iso}/AUTHORS`` or ``language/{iso}/AUTHORS.md``
-    + ``language/{iso}/CHANGELOG`` or ``language/{iso}/CHANGELOG.md``
-    + ``language/{iso}/README`` or ``language/{iso}/README.md``
-    + ``language/{iso}/VERSION`` or ``language/{iso}/VERSION.md``
+    + ``language/{iso}/AUTHORS.md``
+    + ``language/{iso}/CHANGELOG.md``
+    + ``language/{iso}/README.md``
+    + ``language/{iso}/VERSION.md``
 
 * No other additional files are allowed!
 * All folders must contain an ``index.htm`` file.
@@ -113,11 +113,10 @@ contains the default html body:
     </body>
     </html>
 
-language/{iso}/help_*.php
+language/{iso}/help/*.php
 -------------------------
 
-* The file must must only contain 1 array named ``$help``. No other variables
-  are allowed.
+* The file must must only contain 1 array named `$lang`. No other variables are allowed.
 * The array must only contain arrays with the following structure:
 
     .. code-block:: php
@@ -129,7 +128,7 @@ language/{iso}/help_*.php
 
     + If TextA is ``--`` the entry is a headline.
     + If both, TextA and TextB, are ``--`` the entry causes a column switch for
-      the 2 column page layout. A ``help_*.php`` file must contain exactly one
+      the 2 column page layout. A ``help/*.php`` file must contain exactly one
       of these entries.
 
 * For TextA and TextB normal `Key Validation`_ applies.
