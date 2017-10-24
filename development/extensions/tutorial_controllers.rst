@@ -374,6 +374,14 @@ event listener should look like:
             $this->template = $template;
         }
 
+        static public function getSubscribedEvents()
+         {
+            return array(
+             'core.user_setup'	=> 'load_language_on_setup',
+             'core.page_header'	=> 'add_page_header_link',
+            );
+         }
+
         /**
          * Load the Acme Demo language file
          *     acme/demo/language/en/demo.php
