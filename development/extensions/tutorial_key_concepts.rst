@@ -288,8 +288,7 @@ for the supplied JS file in the footer of the HTML document.
 
 .. note::
 
-    The INCLUDECSS tag will only work inside the ``overall_header_head_append`` template event. However, the INCLUDEJS
-    tag can be used in any template event or custom template file.
+    The INCLUDECSS and INCLUDEJS tags can be used in any template event or custom template file.
 
 When including JavaScript/CSS libraries and frameworks such as jQuery-UI or Font Awesome, the potential
 for resource overlap between extensions can be mitigated using a simple work-around endorsed by the phpBB
