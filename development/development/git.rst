@@ -26,7 +26,7 @@ Forking and Cloning
 To contribute to phpBB development, you should sign up for a
 `GitHub <https://github.com>`_ user account if you don't already have one.
 
-Begin by forking the phpBB repository to your account, by clicking the
+Begin by forking the `phpBB repository <https://github.com/phpbb/phpbb>`_ to your account, by clicking the
 "Fork" button at phpBB's repository.
 
 Clone your fork of phpBB's repository to your computer:
@@ -36,11 +36,11 @@ See `Set Up Git <https://help.github.com/articles/set-up-git>`_ for help on sett
 
 Branches
 ++++++++
-- `master <http://github.com/phpbb/phpbb3/tree/master>`_ - The latest unstable development version with new features etc.
-- `3.2.x <http://github.com/phpbb/phpbb3/tree/3.2.x>`_ - Development branch of the 3.2 line. Bug fixes and minor feature changes are applied here.
-- `3.1.x <http://github.com/phpbb/phpbb3/tree/3.1.x>`_ - Development branch of the stable 3.1 line. Bug fixes are applied here.
-- `3.0.x <http://github.com/phpbb/phpbb3/tree/3.0.x>`_ - Development branch of the stable 3.0 line. phpBB 3.0 has reached its End of Life and is therefore no longer maintained.
-- `2.0.x <http://github.com/phpbb/phpbb3/tree/2.0.x>`_ - Development branch of the deprecated 2.0 line.
+- `master <http://github.com/phpbb/phpbb/tree/master>`_ - The latest unstable development version with new features etc.
+- `3.2.x <http://github.com/phpbb/phpbb/tree/3.2.x>`_ - Development branch of the 3.2 line. Bug fixes and minor feature changes are applied here.
+- `3.1.x <http://github.com/phpbb/phpbb/tree/3.1.x>`_ - Development branch of the stable 3.1 line. phpBB 3.1 has reached its End of Life and is therefore no longer maintained.
+- `3.0.x <http://github.com/phpbb/phpbb/tree/3.0.x>`_ - Development branch of the stable 3.0 line. phpBB 3.0 has reached its End of Life and is therefore no longer maintained.
+- `2.0.x <http://github.com/phpbb/phpbb/tree/2.0.x>`_ - Development branch of the deprecated 2.0 line.
 
 Tags
 ++++
@@ -52,7 +52,7 @@ Tags are released versions. Stable ones get merged into the master branch.
 - release-3.Y.Z - Stable 3.Y.Z release.
 - release-2.0.X - Deprecated stable 2.0.X release.
 
-This means all bug-fix development should take place on the 3.1.x branch, and
+This means all bug-fix development should take place on the 3.2.x branch, and
 will be merged into higher branches, including master. All feature development
 should take place in master. Read more about the workflow in the next section.
 
@@ -60,10 +60,10 @@ How to contribute?
 ++++++++++++++++++
 When fixing a bug, please post in the `bug tracker <https://tracker.phpbb.com>`__.
 When adding a feature to 3.x post your patch for review in a new topic on the
-`[3.x] Discussion forum <http://area51.phpbb.com/phpBB/viewforum.php?f=81>`__ at
+`[3.x] Discussion forum <https://area51.phpbb.com/phpBB/viewforum.php?f=81>`__ at
 Area51. Please either provide a link to your commit or branch on GitHub or
 attach a patch created with ``git format-patch``. For larger features or changes
-consider posting an RFC on Area51 first.
+consider adding it as an idea to `phpBB Ideas <https://www.phpbb.com/community/ideas>`_ or posting an RFC on Area51 first.
 
 Branch Names
 ============
@@ -158,8 +158,8 @@ Add the upstream remote (you can change 'upstream' to whatever you like):
     git remote add upstream git://github.com/phpbb/phpbb.git
 
 .. note::
-    The *upstream* remote url **is** the phpbb GitHub repo. Your cloned
-    fork of the phpbb GitHub repo will, by default, use the *origin* remote url.
+    The *upstream* remote url **is** the phpBB GitHub repo. Your cloned
+    fork of the phpBB GitHub repo will, by default, use the *origin* remote url.
 
 Composer
 ++++++++
@@ -215,7 +215,7 @@ Workflows
 Pulling in upstream changes
 +++++++++++++++++++++++++++
 You will need to merge in changes made to the upstream repository for them to appear in
-your fork, the steps to do this follow. I'm assuming you are performing this on the **master**
+your fork, the steps to do this follow. We're assuming you are performing this on the **master**
 branch, but it could be a bug fix branch or a develop release branch, so ensure you are on
 the correct branch using ``git branch`` and change with ``git checkout`` if required.
 
@@ -229,19 +229,19 @@ the correct branch using ``git branch`` and change with ``git checkout`` if requ
 
      git push origin master
 
-The following image visualises the phpBB 3 branching model. It may help you to understand the
+The following image visualises the phpBB branching model. It may help you to understand the
 different branches this section refers to later.
 
 .. image:: images/Phpbb-git-workflow.png
 
 Bug fixing
 ++++++++++
-Ensure you are using the correct develop branch (e.g. *3.1.x*) first and not the *master*
-branch. In this example we are using 3.1.x.
+Ensure you are using the correct develop branch (e.g. *3.2.x*) first and not the *master*
+branch. In this example we are using 3.2.x.
 
 .. code-block:: shell
 
-    git checkout 3.1.x # Checkout the base branch 3.1.x or 3.2.x
+    git checkout 3.2.x # Checkout the base branch 3.2.x
     git branch ticket/12345 # Create a new branch for your bug fix
     git checkout ticket/12345 # Switch to the new branch
     # Make your changes
@@ -307,6 +307,7 @@ merging a topic branch into the phpBB repository.
 
     Note that tests should be run prior to merging to the official repository. Tests are run
     for each push to a pull request by `Travis (Continuous Integration) <https://travis-ci.org/phpbb/phpbb>`_
+    and `AppVeyor <https://ci.appveyor.com/project/phpBB/phpbb/>`_
     but it is a good idea to run them yourself as well. For more information, read :doc:`../testing/index`.
 
 Merging only to master
@@ -324,6 +325,28 @@ Merging only to master
     git push origin master
     # Before continuing, look at your commit list in your fork to make sure it looks correct.
     # If unsure, ask.
+    git push upstream master
+
+Merging to 3.2.x
+^^^^^^^^^^^^^^^^
+.. warning::
+
+    **ALL** merges to 3.2.x **must** also be merged to master!
+
+.. code-block:: shell
+
+    git remote update upstream
+    git checkout 3.2.x
+    git reset --hard upstream/3.2.x
+    git merge --no-ff <author>/<branch> # example: git merge --no-ff naderman/ticket/000000
+    git push origin 3.2.x
+    git checkout master
+    git reset --hard upstream/master
+    git merge --no-ff 3.2.x
+    git push origin master
+    # Before continuing, look at your commit list in your fork to make sure it looks correct.
+    # If unsure, ask.
+    git push upstream 3.2.x
     git push upstream master
 
 Merging to 3.1.x
@@ -357,7 +380,7 @@ Merging to 3.0.x
 ^^^^^^^^^^^^^^^^
 .. warning::
 
-    **ALL** merges to 3.0.x **must** also be merged to 3.1.x and master!
+    **ALL** merges to 3.0.x **must** also be merged to 3.1.x, 3.2.x, and master!
 
 .. code-block:: shell
 
@@ -370,51 +393,56 @@ Merging to 3.0.x
     git reset --hard upstream/3.1.x
     git merge --no-ff 3.0.x
     git push origin 3.1.x
+    git checkout 3.2.x
+    git reset --hard upstream/3.2.x
+    git merge --no-ff 3.1.x
+    git push origin 3.2.x
     git checkout master
     git reset --hard upstream/master
-    git merge --no-ff 3.1.x
+    git merge --no-ff 3.2.x
     git push origin master
     # Before continuing, look at your commit list in your fork to make sure it looks correct.
     # If unsure, ask.
     git push upstream 3.0.x
     git push upstream 3.1.x
+    git push upstream 3.2.x
     git push upstream master
 
-Merging to 3.1.x and master with different patches
+Merging to 3.2.x and master with different patches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. warning::
 
-    **ALL** merges to 3.1.x **must** also be merged to master!
+    **ALL** merges to 3.2.x **must** also be merged to master!
 
-1. Patch author creates fix-3.1
-2. Patch author merges his fix-3.1 into a fix-master branch
+1. Patch author creates fix-3.2
+2. Patch author merges his fix-3.2 into a fix-master branch
 3. Patch author changes fix-master until it works as expected
 4. Patch author sends 2 Pull Requests
-5. Merger merges Authors fix-3.1 into his 3.1.x
+5. Merger merges Authors fix-3.2 into his 3.2.x
 6. Merger merges Authors fix-master into his master
-7. Merger merges his 3.1.x into master (should work fast-forward)
+7. Merger merges his 3.2.x into master (should work fast-forward)
 8. Merger verifies the results
-9. Merger pushes 3.1.x and master to phpbb
+9. Merger pushes 3.2.x and master to phpbb
 
-Merging to 3.0.x, 3.1.x and master with different patches
+Merging to 3.1.x, 3.2.x and master with different patches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. warning::
 
-    **ALL** merges to 3.0.x **must** also be merged to 3.1.x and master!
+    **ALL** merges to 3.1.x **must** also be merged to 3.2.x and master!
 
-1. Patch author creates fix-3.0
-2. Patch author merges his fix-3.0 into a fix-3.1 branch
-3. Patch author changes fix-3.1 until it works as expected
-4. Patch author merges his fix-3.1 into a fix-master branch
+1. Patch author creates fix-3.1
+2. Patch author merges his fix-3.1 into a fix-3.2 branch
+3. Patch author changes fix-3.2 until it works as expected
+4. Patch author merges his fix-3.2 into a fix-master branch
 5. Patch author changes fix-master until it works as expected
 6. Patch author sends 3 Pull Requests
-7. Merger merges Authors fix-3.0 into his 3.0.x
-8. Merger merges Authors fix-3.1 into his 3.1.x
+7. Merger merges Authors fix-3.1 into his 3.1.x
+8. Merger merges Authors fix-3.2 into his 3.2.x
 9. Merger merges Authors fix-master into his master
-10. Merger merges his 3.0.x into 3.1.x (should work fast-forward)
-11. Merger merges his 3.1.x into master (should work fast-forward)
+10. Merger merges his 3.1.x into 3.2.x (should work fast-forward)
+11. Merger merges his 3.2.x into master (should work fast-forward)
 12. Merger verifies the results
-13. Merger pushes 3.0.x, 3.1.x and master to phpbb
+13. Merger pushes 3.1.x, 3.2.x and master to phpbb
 
 Windows
 =======
