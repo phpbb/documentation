@@ -14,7 +14,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 2) Submissions have to be complete. Partial translations are not allowed and will be automatically denied. E-mails, text files and theme-images must also be fully translated.
 
-3) Language packs can contain five additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README`` / ``README.md`` (optional), ``AUTHORS`` / ``AUTHORS.md`` (optional), ``VERSION`` / ``VERSION.md`` (optional) and ``CHANGELOG`` / ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README`` file, you can list all the authors and contributors of your language pack in the ``AUTHORS`` file, you can put the version of your language pack in the ``VERSION`` file and you can list the entire version history in the ``CHANGELOG`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of GNU General Public License 2.0_ and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file(s) will be detected and your submission will be denied.
+3) Language packs can contain five additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README`` / ``README.md`` (optional), ``AUTHORS`` / ``AUTHORS.md`` (optional), ``VERSION`` / ``VERSION.md`` (optional) and ``CHANGELOG`` / ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README`` file, you can list all the authors and contributors of your language pack in the ``AUTHORS`` file, you can put the version of your language pack in the ``VERSION`` file and you can list the entire version history in the ``CHANGELOG`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of GNU General Public License 2.0 and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file(s) will be detected and your submission will be denied.
 
 4) Submissions must have the following files and structure:
 
@@ -62,6 +62,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           topic_disapproved.txt
                           topic_in_queue.txt
                           topic_notify.txt
+
                        admin_activate.txt
                        admin_send_email.txt
                        admin_welcome_activated.txt
@@ -102,6 +103,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        user_resend_inactive.txt
                        user_welcome.txt
                        user_welcome_inactive.txt
+
                     app.php
                     AUTHORS (optional)
                     captcha_qa.php

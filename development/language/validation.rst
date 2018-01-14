@@ -113,8 +113,8 @@ contains the default html body:
     </body>
     </html>
 
-language/{iso}/help_*.php
--------------------------
+language/{iso}/help/\*.php
+--------------------------
 
 * The file must must only contain 1 array named ``$help``. No other variables
   are allowed.
