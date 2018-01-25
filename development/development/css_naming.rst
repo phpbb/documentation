@@ -5,17 +5,17 @@ Naming conventions in CSS are hugely useful in making your code more strict, mor
 
 A good naming convention will tell you and your team
 
--  what type of thing a class does;
--  where a class can be used;
--  what (else) a class might be related to.
+-  what type of thing a class does
+-  where a class can be used
+-  what (else) a class might be related to
 
 The naming convention we follow are as follows
 
--  Hyphen (``-``) delimited strings.
+-  Hyphen (``-``) delimited strings
 -  Layer namespacing
 -  A variation on BEM-like naming for action modifiers
 
-It’s worth noting that not all the naming convention are normally useful in the CSS-side of development; they really come into their own when viewed in HTML.
+It’s worth noting that not all the naming conventions are normally useful in the CSS side of development; they really come into their own when viewed in HTML.
 
 Hyphen Delimited
 ~~~~~~~~~~~~~~~~
@@ -143,11 +143,7 @@ Further Reading
 JavaScript Hooks
 ~~~~~~~~~~~~~~~~
 
-As a rule, it is unwise to bind your CSS and your JS onto the same class in your HTML. This is because doing so means you can’t have (or remove) one without (removing) the other. It is much cleaner, much more transparent, and much more maintainable to bind your JS onto specific classes.
-
-I have known occasions before when trying to refactor some CSS has unwittingly removed JS functionality because the two were tied to each other—it was impossible to have one without the other.
-
-Typically, these are classes that are prepended with ``js-``, for
+As a rule, it is unwise to bind your CSS and your JS onto the same class in your HTML. This is because doing so means you can’t have (or remove) one without (removing) the other. It is much cleaner, much more transparent, and much more maintainable to bind your JS onto specific classes. Typically, this is why you sometimes se classes that are prepended with ``js-``, for
 
 example:
 
@@ -155,12 +151,12 @@ example:
 
     <input type="submit" class="btn js-btn" value="Follow" />
 
-This means that we can have an element elsewhere which can carry with style of ``.btn {}``, but without the behavior of ``.js-btn``.
+This means that we can have an element elsewhere which can carry the style of ``.btn {}``, but without the behavior of ``.js-btn``.
 
 ``data-*`` Attributes
 ^^^^^^^^^^^^^^^^^^^^^
 
-A common practice is to use ``data-*`` attributes as JS hooks, but this is incorrect. ``data-*`` attributes, as per the spec, are used to store custom data private to the page or application’\* (emphasis Harry Roberts). ``data-*`` attributes are designed to store data, not be bound to.
+A cleaner and preferred practice is to use ``data-*`` attributes as JS hooks.``data-*`` attributes, as per the spec, are typically used to store custom data private to the page or application’. however since you are already binding this attribute to your js, it makes since to use the same attribute as the js hook.
 
 .. _ITCSS: https://www.youtube.com/watch?v=1OKZOV-iLj4
 .. _SUITcss: https://suitcss.github.io/

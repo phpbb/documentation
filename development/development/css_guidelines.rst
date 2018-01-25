@@ -5,7 +5,7 @@ CSS is not a pretty language. While it is simple to learn and get started with, 
 
 There are a variety of techniques we must employ in order to satisfy these goals, and CSS Guidelines is a document of recommendations and approaches that will help us to do so.
 
-The first part of this will deal with syntax, formatting and CSS anatomy, the second part will deal with approach, mindframe and attitude toward writing and architecting CSS.
+The first part of this will deal with syntax, formatting, and CSS anatomy. The second part will deal with approach, mindframe, and attitude toward writing/architecting CSS.
 
 Syntax and Formatting
 ---------------------
@@ -14,14 +14,14 @@ One of the simplest forms of a styleguide is a set of rules regarding syntax and
 
 Further, code that looks clean feels clean. It is a much nicer environment to work in, and prompts other team members to maintain the standard of cleanliness that they found. Ugly code sets a bad precedent.
 
-The chosen code format must ensure that code is: easy to read; easy to clearly comment; minimizes the chance of accidentally introducing errors; and results in useful diffs and blames.
+The chosen code format must ensure that code is: easy to read, easy to clearly comment, minimizes the chance of accidentally introducing errors, and results in useful diffs and blames.
 
 At a very high-level, we want
 
--  Tab (4 space width) indents;
--  80 character wide columns;
--  multi-line CSS;
--  a meaningful use of comments & whitespace.
+-  Tab (4 space width) indents
+-  80 character wide columns
+-  multi-line CSS
+-  a meaningful use of comments & whitespace
 
 Anatomy of a Ruleset
 ~~~~~~~~~~~~~~~~~~~~
@@ -43,22 +43,22 @@ The following is a ``[ruleset]``
 Formating
 ~~~~~~~~~
 
--  Use one discrete selector per line in multi-selector rulesets.
--  The opening brace (``{``) should be on the same line as our last selector.
--  Include a single space before the opening brace (``{``).
--  Include properties and values on the same line.
--  Include one declaration per line in a declaration block.
--  Use one level of indentation for each declaration.
--  Include a single space after the colon (``:``) of a declaration.
--  Use lowercase hex values, e.g., #abc123.
--  Use quotes consistently. **Preference double quotes**, e.g., ``content: ""``.
--  Always quote attribute values in selectors, e.g., ``input[type="checkbox"]``.
--  Avoid specifying units for zero-values, e.g., ``margin: 0``.
--  Always use leading zeros, e.g, ``font-size: 0.875rem``
--  Include a space after each comma(\ ``,``) in comma-separated property or function values.
--  Include a semi-colon(\ ``;``) at the end of every declaration including the last in a declaration block.
--  Place the closing brace (``}``) of a ruleset in the same column as the first character of the ruleset, on its own line.
--  Separate each ruleset by a blank line.
+-  Use one discrete selector per line in multi-selector rulesets
+-  The opening brace (``{``) should be on the same line as our last selector
+-  Include a single space before the opening brace (``{``)
+-  Include properties and values on the same line
+-  Include one declaration per line in a declaration block
+-  Use one level of indentation for each declaration
+-  Include a single space after the colon (``:``) of a declaration
+-  Use lowercase hex values, e.g. #abc123
+-  Use quotes consistently. **Preference double quotes**, e.g., ``content: ""``
+-  Always quote attribute values in selectors, e.g. ``input[type="checkbox"]``
+-  Avoid specifying units for zero-values, e.g. ``margin: 0``
+-  Always use leading zeros, e.g. ``font-size: 0.875rem``
+-  Include a space after each comma(\ ``,``) in comma-separated property or function values
+-  Include a semi-colon(\ ``;``) at the end of every declaration including the last in a declaration block
+-  Place the closing brace (``}``) of a ruleset in the same column as the first character of the ruleset, on its own line
+-  Separate each ruleset by a blank line
 
 Example:
 
@@ -97,12 +97,12 @@ As such, the following would be incorrect:
 
 Problems here include
 
--  2 spaces instead of tabs (4 space width).
--  selectors on the same line.
--  the opening brace (``{``) on its own line.
--  the closing brace (``}``) does not sit on its own line.
--  the last semi-colon (``;``) is missing.
--  no spaces after colons (``:``).
+-  2 spaces instead of tabs (4 space width)
+-  selectors on the same line
+-  the opening brace (``{``) on its own line
+-  the closing brace (``}``) does not sit on its own line
+-  the last semi-colon (``;``) is missing
+-  no spaces after colons (``:``)
 
 Multi-line CSS
 ~~~~~~~~~~~~~~
@@ -130,8 +130,8 @@ Exceptions to this rule should be fairly apparent, such as similar rulesets that
 
 These types of ruleset benefit from being single-lined because
 
--  they still conform to the one-reason-to-change-per-line rule;
--  they share enough similarities that they don’t need to be read as thoroughly as other rulesets—there is more benefit in being able to scan their selectors, which are of more interest to us in these cases.
+-  they still conform to the one-reason-to-change-per-line rule
+-  they share enough similarities that they don’t need to be read as thoroughly as other rulesets - there is more benefit in being able to scan their selectors, which are of more interest to us in these cases
 
 Declaration order
 ~~~~~~~~~~~~~~~~~
@@ -180,22 +180,22 @@ Example:
         content: "-";
     }
 
-Proper Use of units
+Proper use of units
 ~~~~~~~~~~~~~~~~~~~
 
-CSS allows for the use of several different unit types. As such it can get confusing when using more than one type of unit through out the project. For that reason its beneficial to stick to a stick set of rules for what unit types are to be used for certain selectors.
+CSS allows for the use of several different unit types. As such it can get confusing when using more than one type of unit throughout, it's for that reason its beneficial to stick to a strict set of rules for what unit types are to be used for certain selectors.
 
 Furthermore there are certain reasons to use or avoid using specific units in certain places.
 
 EM
 ^^
 
-The ‘em’ unit. This is a very problematic unit which reeks havoc on countless projects due to the way its calculated. As such this unit type must be avoid except for very very minimal use cases. We prevent the use of ``em`` except for ``letter-spaceing`` & ``word-spacing``. It is also used for icon sizing but that is an edge case.
+The ‘em’ unit. This is a very problematic unit which wreaks havoc on countless projects due to the way its calculated. As such this unit type must be avoid except for very very minimal use cases. We prevent the use of ``em`` except for ``letter-spacing`` & ``word-spacing``. It is also used for icon sizing but that is an edge case.
 
 Line-heights
 ^^^^^^^^^^^^
 
-All line-heights are to be specified as ``unitless`` in order to prevent in proper inheritance. By nature when using units with line-heights the children inherit by default. This can lead to unwanted effects and bloated code. A ``sass`` function called ``unitless`` is provided which will convert px values for convenience, but for clarity the math is simply
+All line-heights are to be specified as ``unitless`` in order to prevent improper inheritance. By nature when using units with line-heights the children inherit by default. This can lead to unwanted effects and bloated code. A ``sass`` function called ``unitless`` is provided which will convert px values for convenience, but for clarity the math is simply
 
 .. code:: scss
 
@@ -209,17 +209,17 @@ All ``font-size`` should be specified either in ``px`` or ``%`` in small cases. 
 Margins & Paddings
 ^^^^^^^^^^^^^^^^^^
 
-All ``margin`` & ``padding`` should be specified in ``px`` values or ``%``. All ``px`` All px values will be converted to ``rem`` during the build process as ``rem`` provide for control in responsive situations.
+All ``margin`` & ``padding`` should be specified in ``px`` values or ``%``. All ``px`` values will be converted to ``rem`` during the build process as ``rem`` provide for control in responsive situations.
 
 PX
 ^^
 
-All ``px`` will be whole numbers. Browsers do not render ``px`` in fractional values despite what you browser may say it is. Only calculated values will display as fractional ``px``. For clarification a calculated value would be units like ``rem``, ``em``, ``%``, & even ``unitless`` as is the case with line-heights.
+All ``px`` will be whole numbers. Browsers do not render ``px`` in fractional values despite what your browser may say it is. Only calculated values will display as fractional ``px``. For clarification a calculated value would be units like ``rem``, ``em``, ``%``, & even ``unitless`` as is the case with line-heights.
 
 Dimensions
 ^^^^^^^^^^
 
-All dimensional values ``width``, ``min-width``, ``height``, & ``min-height`` should be specified in ``px`` or ``%``. A case can be made for ``vw`` & ``vh``, but they are still on the fringe of browser acceptance, as such fallbacks in ``px`` or ``%`` are required. These values will remain as px if specified. This is done as ``height`` is more effectively and appropriately controlled via the ``line-height`` property, and ``width`` is better specified using the objects box-model via ``padding`` unless its fluid in which ``100%`` can be specified or u can also use ``left: 0; right: 0;``
+All dimensional values ``width``, ``min-width``, ``height``, & ``min-height`` should be specified in ``px`` or ``%``. A case can be made for ``vw`` & ``vh``, but they are still on the fringe of browser acceptance, as such fallbacks in ``px`` or ``%`` are required. These values will remain as px if specified. This is done as ``height`` is more effectively and appropriately controlled via the ``line-height`` property, and ``width`` is better specified using the objects box-model via ``padding`` unless its fluid in which ``100%`` can be specified or you can also use ``left: 0; right: 0;``
 
 Indenting Sass
 ^^^^^^^^^^^^^^
@@ -236,14 +236,14 @@ Sass provides nesting functionality. That is to say, by writing this:
         }
     }
 
-…we will be left with this compiled CSS:
+… we will be left with this compiled CSS:
 
 .. code:: css
 
     .foo { color: red; }
     .foo .bar { color: blue; }
 
-When indenting Sass, we stick to the same two indentation, and we also leave a blank line before and after the nested ruleset.
+When indenting Sass, we stick to the same four space tab indentation, and we also leave a blank line before and after the nested ruleset.
 
 **N.B.** Nesting in Sass should be avoided in most cases. See the Specificity section for more data
 
@@ -257,7 +257,7 @@ Our project makes use of several tools to lint and to keep us to the standards.
 
 .. note::
 
-This is used to provide detailed linting for our standards via the ``.stlyelintrc`` file in the root of the project.
+This is used to provide detailed linting for our standards via the ``.stylelintrc`` file in the root of the project.
 
 2. `postcss-sorting`_
 ^^^^^^^^^^^^^^^^^^^^^
@@ -271,7 +271,7 @@ This is used to provide automatic sorting to our declaration order via the ``.po
 
 .. note::
 
-This is used to ensure the proper units are consistently used throughout the project during the build process via the ``gulp`` as well as on save in your editor.
+This is used to ensure the proper units are consistently used throughout the project during the build process via ``gulp`` as well as on save in your editor.
 
 4. `stylefmt`_
 ^^^^^^^^^^^^^^
@@ -282,11 +282,12 @@ This is used to help automatically re-format your code to the standards on the f
 
 .. note::
 
-As a **NOTE** our editor of choice is `ATOM`_ which provides usefull plugins to make use of these tools. Checkout the `Editor Setup`_ section of the docs for more information
+As a **NOTE** our editors of choice are `PhpStorm`_ & `ATOM`_ which provides usefull plugins to make use of these tools. Checkout the `Editor Setup`_ section of the docs for more information
 
 .. _stylelint.io: http://www.stylelint.io
 .. _postcss-sorting: https://github.com/hudochenkov/postcss-sorting
 .. _postcss-pxtorem: https://github.com/cuth/postcss-pxtorem
 .. _stylefmt: https://github.com/morishitter/stylefmt
+.. _PhpStorm: https://www.jetbrains.com/phpstorm/
 .. _ATOM: http://www.atom.io
 .. _Editor Setup: /editor-setup
