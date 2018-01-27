@@ -18,6 +18,8 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 4) Submissions must have the following files and structure:
 
+.. code-block:: text
+
         languagename_versionnumber.zip
            languagename_versionnumber/
               language/
