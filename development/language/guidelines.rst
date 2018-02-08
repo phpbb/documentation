@@ -14,7 +14,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 2) Submissions have to be complete. Partial translations are not allowed and will be automatically denied. E-mails, text files and theme-images must also be fully translated.
 
-3) Language packs can contain five additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README`` / ``README.md`` (optional), ``AUTHORS`` / ``AUTHORS.md`` (optional), ``VERSION`` / ``VERSION.md`` (optional) and ``CHANGELOG`` / ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README`` file, you can list all the authors and contributors of your language pack in the ``AUTHORS`` file, you can put the version of your language pack in the ``VERSION`` file and you can list the entire version history in the ``CHANGELOG`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of GNU General Public License 2.0_ and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file(s) will be detected and your submission will be denied.
+3) Language packs can contain five additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README.md`` (optional), ``AUTHORS.md`` (optional), ``VERSION.md`` (optional) and ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README.md`` file, you can list all the authors and contributors of your language pack in the ``AUTHORS.md`` file, you can put the version of your language pack in the ``VERSION.md`` file and you can list the entire version history in the ``CHANGELOG.md`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of GNU General Public License 2.0_ and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file(s) will be detected and your submission will be denied.
 
 4) Submissions must have the following files and structure:
 
@@ -22,6 +22,13 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
         languagename_versionnumber.zip
            languagename_versionnumber/
+              ext/
+                 phpbb/
+                    viglink/
+                       language/
+                          {iso}/
+                             info_acp_viglink.php
+                             viglink_module_acp.php
               language/
                  {iso}/
                     acp/
@@ -58,6 +65,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           quote.txt
                           report_pm.txt
                           report_post.txt
+                          test.txt
                           topic_approved.txt
                           topic_disapproved.txt
                           topic_in_queue.txt
@@ -102,16 +110,17 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        user_resend_inactive.txt
                        user_welcome.txt
                        user_welcome_inactive.txt
+                    help/
+                       bbcode.php
+                       faq.php
                     app.php
-                    AUTHORS (optional)
+                    AUTHORS.md (optional)
                     captcha_qa.php
                     captcha_recaptcha.php
                     cli.php
-                    CHANGELOG (optional)
+                    CHANGELOG.md (optional)
                     common.php
                     groups.php
-                    help_bbcode.php
-                    help_faq.php
                     index.htm (optional)
                     install.php
                     iso.txt (
@@ -121,10 +130,10 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                     migrator.php
                     plupload.php
                     posting.php
-                    README (optional)
+                    README.md (optional)
                     search.php
                     ucp.php
-                    VERSION (optional)
+                    VERSION.md (optional)
                     viewforum.php
                     viewtopic.php
               styles/
@@ -134,36 +143,8 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           icon_user_online.gif
                           index.htm (optional)
                           stylesheet.css
-                 subsilver2/
-                    theme/
-                       {iso}/
-                          button_pm_new.gif
-                          button_pm_reply.gif
-                          button_topic_locked.gif
-                          button_topic_new.gif
-                          button_topic_reply.gif
-                          icon_contact_aim.gif
-                          icon_contact_email.gif
-                          icon_contact_icq.gif
-                          icon_contact_jabber.gif
-                          icon_contact_msnm.gif
-                          icon_contact_pm.gif
-                          icon_contact_www.gif
-                          icon_contact_yahoo.gif
-                          icon_post_delete.gif
-                          icon_post_edit.gif
-                          icon_post_info.gif
-                          icon_post_quote.gif
-                          icon_post_report.gif
-                          icon_user_offline.gif
-                          icon_user_online.gif
-                          icon_user_profile.gif
-                          icon_user_search.gif
-                          icon_user_warn.gif
-                          index.htm (optional)
-                          stylesheet.css
 
-5) Submissions should follow the recommendations in the `3.1 Translation (i18n/L10n) Guidelines`_ as closely as possible, especially the `3.1 Writing style`_.
+5) Submissions should follow the recommendations in the `3.2 Translation (i18n/L10n) Guidelines`_ as closely as possible, especially the `3.2 Writing style`_.
 
 6) All PHP and text files must be encoded in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
 
@@ -181,11 +162,11 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 13) The Demo URL in the Customisations Database must be empty, unless you want to put a link to an international community (`officially`_ listed or not) related to the language of the contribution. For example, http://www.phpbbarabia.com/ as Demo URL concerning the `Arabic language`_ is allowed.
 
-.. _Customisations Database: https://www.phpbb.com/go/customise/language-packs/3.1
+.. _Customisations Database: https://www.phpbb.com/go/customise/language-packs/3.2
 .. _Language Packs Database: https://www.phpbb.com/languages/
 .. _GNU General Public License 2.0: http://www.opensource.org/licenses/gpl-2.0.php
-.. _3.1 Translation (i18n/L10n) Guidelines: https://area51.phpbb.com/docs/31x/coding-guidelines.html#translation
-.. _3.1 Writing style: https://area51.phpbb.com/docs/31x/coding-guidelines.html#writingstyle
+.. _3.2 Translation (i18n/L10n) Guidelines: https://area51.phpbb.com/docs/32x/coding-guidelines.html#translation
+.. _3.2 Writing style: https://area51.phpbb.com/docs/32x/coding-guidelines.html#writingstyle
 .. _Notepad++: https://notepad-plus-plus.org/
 .. _PSPad: http://www.pspad.com/en/
 .. _officially: https://www.phpbb.com/support/intl/
