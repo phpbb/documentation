@@ -112,6 +112,17 @@ the specified config value already exists in the database:
        return isset($this->config['acme_demo_goodbye']);
     }
 
+.. warning::
+
+    As a general rule, migrations should never be changed once they have been
+    installed. Changing a migration in an extension that has already been
+    installed could prevent it from reverting database changes or uninstalling
+    successfully. In order to make subsequent changes to the database, new
+    migrations should be created to implement the additional changes or updates.
+    The only exceptions to this rule are to fix SQL and logic errors or bugs,
+    as long as they do not alter the database changes that have already been
+    made or the dependencies listed in the migration's ``depends_on()`` method.
+
 Once you are familiar with how Migrations work, continue on
 to the next section to learn how to create and install an ACP
 module that will allow us to configure some settings for
