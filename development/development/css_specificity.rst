@@ -39,11 +39,11 @@ Now we have a selector that is even more specific still! And if we ever want to 
 
 Specificity can, among other things,
 
--  limit your ability to extend and manipulate a codebase;
--  interrupt and undo CSS’ cascading, inheriting nature;
--  cause avoidable verbosity in your project;
--  prevent things from working as expected when moved into different environments;
--  lead to serious developer frustration.
+-  limit your ability to extend and manipulate a codebase
+-  interrupt and undo CSS’ cascading, inheriting nature
+-  cause avoidable verbosity in your project
+-  prevent things from working as expected when moved into different environments
+-  lead to serious developer frustration
 
 All of these issues are greatly magnified when working on a larger project with a number of developers contributing code.
 
@@ -58,10 +58,10 @@ Doing so will instantly help us tame and manage the project, meaning that no ove
 
 Simple changes to the way we work include, but are not limited to,
 
--  not using IDs in your CSS;
--  not nesting selectors;
--  not qualifying classes;
--  not chaining selectors.
+-  not using IDs in your CSS
+-  not nesting selectors
+-  not qualifying classes
+-  not chaining selectors
 
 **Specificity can be wrangled and understood, but it is safer just to avoid it entirely.**
 

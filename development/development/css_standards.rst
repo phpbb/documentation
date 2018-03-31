@@ -11,20 +11,20 @@ The Importance of a Styleguide
 
 A coding styleguide (note, not a visual styleguide) is a valuable tool for teams who
 
--  build and maintain products for a reasonable length of time;
--  have developers of differing abilities and specialisms;
--  have a number of different developers working on a product at any given time;
--  on-board new staff regularly;
--  have a number of codebases that developers dip in and out of.
+-  build and maintain products for a reasonable length of time
+-  have developers of differing abilities and specialisms
+-  have a number of different developers working on a product at any given time
+-  on-board new staff regularly
+-  have a number of codebases that developers dip in and out of
 
 Whilst styleguides are typically more suited to production teams—large codebases on long-lived and evolving projects, with multiple developers contributing over prolonged periods of time—all developers should strive for a degree of standardization in their code.
 
 A good styleguide, when well followed, will
 
--  set the standard for code quality across a codebase;
--  promote consistency across codebases;
--  give developers a feeling of familiarity across codebases;
--  increase productivity.
+-  set the standard for code quality across a codebase
+-  promote consistency across codebases
+-  give developers a feeling of familiarity across codebases
+-  increase productivity
 
 Disclaimers
 ~~~~~~~~~~~
@@ -44,17 +44,17 @@ Some General principles
     clarity, not your personal preference of how to get clever within
     the spec.” - Idan Gazit
 
--  Don’t try to prematurely optimize your code; keep it readable and understandable.
--  All code should look like a single person typed it, even when many people are contributing to it.
--  We use a strictly enforced agreed-upon style based on existing common patterns.
+-  Don’t try to prematurely optimize your code; keep it readable and understandable
+-  All code should look like a single person typed it, even when many people are contributing to it
+-  We use a strictly enforced agreed-upon style based on existing common patterns
 
 Meaningful Whitespace
 ---------------------
 
 Only one style should exist across the entire source of all your code-base. Always be consistent in your use of whitespace. Use whitespace to improve readability.
 
--  Never mix spaces and tabs for indentation. Stick to your choice without fail. (**Preference: tabs**)
--  Choose the number of preferred characters used per indentation level. (**Preference: 4 spaces**)
+-  Never mix spaces and tabs for indentation. Stick to your choice without fail (**Preference: tabs**)
+-  Choose the number of preferred characters used per indentation level (**Preference: 4 spaces**)
 
 .. warning::
 
@@ -62,8 +62,8 @@ configure your editor to “show invisibles” or to automatically remove end-of
 
 As well as indentation, we can provide a lot of information through liberal and judicious use of whitespace between rulesets. We use:
 
--  One (1) empty line between closely related rulesets.
--  Two (2) empty lines between loosely related rulesets.
+-  One (1) empty line between closely related rulesets
+-  Two (2) empty lines between loosely related rulesets
 
 For example:
 
@@ -108,19 +108,19 @@ This is why well commented code is extremely important. Take time to describe co
 
 Comment style should be simple and consistent within the code base.
 
--  Place comments on a new line above their subject.
--  Keep line-length to a sensible maximum, e.g., 80 columns.
--  Make liberal use of comments to break CSS code into discrete sections.
--  Use “sentence case” comments and consistent text indentation.
+-  Place comments on a new line above their subject
+-  Keep line-length to a sensible maximum, e.g., 80 columns
+-  Make liberal use of comments to break CSS code into discrete sections
+-  Use “sentence case” comments and consistent text indentation
 
-As CSS is something of a declarative language that doesn’t really leave much of a paper-trail, it is often hard to discern—from looking at the CSS alone—
+As CSS is something of a declarative language that doesn’t really leave much of a paper-trail, it is often hard to discern—from looking at the CSS alone
 
--  whether some CSS relies on other code elsewhere;
--  what effect changing some code will have elsewhere;
--  where else some CSS might be used;
--  what styles something might inherit (intentionally or otherwise);
--  what styles something might pass on (intentionally or otherwise);
--  where the author intended a piece of CSS to be used.
+-  whether some CSS relies on other code elsewhere
+-  what effect changing some code will have elsewhere
+-  where else some CSS might be used
+-  what styles something might inherit (intentionally or otherwise)
+-  what styles something might pass on (intentionally or otherwise)
+-  where the author intended a piece of CSS to be used
 
 This doesn’t even take into account some of CSS’ many quirks—such as various sates of ``overflow`` triggering block formatting context, or certain transform properties triggering hardware acceleration—that make it even more baffling to developers inheriting projects.
 

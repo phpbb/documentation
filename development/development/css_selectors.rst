@@ -191,11 +191,11 @@ Generally speaking, the longer a selector is (i.e. the more component parts) the
 
 This is because browsers read CSS selectors right-to-left. A browser will read the first selector as
 
--  find all ``ul`` elements in the DOM;
--  now check if they live anywhere inside an element with a class of ``.header``;
--  next check that ``.header`` class exists on a ``div`` element;
--  now check that that all lives anywhere inside any elements with a class of ``.home``;
--  finally, check that ``.home`` exists on a ``body`` element.
+-  find all ``ul`` elements in the DOM
+-  now check if they live anywhere inside an element with a class of ``.header``
+-  next check that ``.header`` class exists on a ``div`` element
+-  now check that that all lives anywhere inside any elements with a class of ``.home``
+-  finally, check that ``.home`` exists on a ``body`` element
 
 The second, in contrast, is simply a case of the browser reading, find all the elements with a class of ``.primary-nav``.
 
