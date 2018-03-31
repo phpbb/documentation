@@ -51,7 +51,7 @@ Formating
 -  Use one level of indentation for each declaration
 -  Include a single space after the colon (``:``) of a declaration
 -  Use lowercase hex values, e.g. #abc123
--  Use quotes consistently. **Preference double quotes**, e.g., ``content: ""``
+-  Use quotes consistently. **Preference double quotes**, e.g. ``content: ""``
 -  Always quote attribute values in selectors, e.g. ``input[type="checkbox"]``
 -  Avoid specifying units for zero-values, e.g. ``margin: 0``
 -  Always use leading zeros, e.g. ``font-size: 0.875rem``
