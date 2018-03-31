@@ -57,7 +57,7 @@ To take an analogy (note, not an example):
     .dropdown-item { }
     .dropdown--active { }
 
-Elements are delimited with two (hyphens (``-``), and Modifiers are delimited by two (2) hyphens (``--``).
+Elements are delimited with one (1) hyphen (``-``), and Modifiers are delimited by two (2) hyphens (``--``).
 
 Here we can see that ``.dropdown {}`` is the Block; it is the sole root of a discrete entity. ``.dropdown-item {}`` is an Element; it is a smaller part of the ``.dropdown {}`` Block. Finally, ``.dropdown--active {}`` is a Modifier; it is a specific variant of the ``.dropdown {}`` Block.
 
