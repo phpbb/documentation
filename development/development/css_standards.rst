@@ -95,7 +95,7 @@ With the meteoric rise of preprocessors of late, more often is the case that dev
 
 Even if not using a preprocessor, it is a good idea to split discrete chunks of code into their own files, which are concatenated during a build step.
 
-We follow the ITCSS principles for the organization of our code and as such everything is broken up into partials. All partials are to be named to reflect the contained component/module and lead by an underscore(\ ``_``) to prevent self rendering.
+We follow the ITCSS principles for the organization of our code and as such everything is broken up into partials. All partials are to be named to reflect the contained component/module and lead by an underscore (``_``) to prevent self rendering.
 
 Commenting
 ----------

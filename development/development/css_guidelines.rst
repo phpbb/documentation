@@ -55,8 +55,8 @@ Formating
 -  Always quote attribute values in selectors, e.g. ``input[type="checkbox"]``
 -  Avoid specifying units for zero-values, e.g. ``margin: 0``
 -  Always use leading zeros, e.g. ``font-size: 0.875rem``
--  Include a space after each comma(\ ``,``) in comma-separated property or function values
--  Include a semi-colon(\ ``;``) at the end of every declaration including the last in a declaration block
+-  Include a space after each comma (``,``) in comma-separated property or function values
+-  Include a semi-colon (``;``) at the end of every declaration including the last in a declaration block
 -  Place the closing brace (``}``) of a ruleset in the same column as the first character of the ruleset, on its own line
 -  Separate each ruleset by a blank line
 
