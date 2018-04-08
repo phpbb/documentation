@@ -52,7 +52,7 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 5.4.0+ with support for the database you intend to use.</para>
+				<para>PHP 5.4.7+ with support for the database you intend to use.</para>
 			</listitem>
 			<listitem>
 				<para>getimagesize() function enabled</para>
