@@ -199,11 +199,9 @@ HTML
   all HTML it has opened. Exceptions here are:
 
     + ``language/{iso}/install.php``
-        * ``INSTALL_CONGRATS_EXPLAIN``
         * ``INSTALL_INTRO_BODY``
         * ``SUPPORT_BODY``
         * ``UPDATE_INSTALLATION_EXPLAIN``
-        * ``OVERVIEW_BODY``
     + ``language/{iso}/ucp.php``
         * ``TERMS_OF_USE_CONTENT``
         * ``PRIVACY_POLICY``
