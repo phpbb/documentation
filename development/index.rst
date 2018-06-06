@@ -8,6 +8,7 @@ Contents:
 
    development/git
    development/coding_guidelines
+   css_guidelines/css_guidelines
    cli/index
    extensions/index
    files/index
