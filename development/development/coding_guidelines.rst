@@ -28,4 +28,4 @@ file in the root of the project, and your editor probably has a plugin available
 which will show you when you violate these standards.
 
 We employ a set of standards loosely based on the following widely used
-`CSS Guidelines <http://cssguidelin.es/>`_
+`CSS Guidelines <http://area51.phpbb.com/docs/master/css-guidelines.html/>`_
