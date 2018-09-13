@@ -42,7 +42,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        extensions.php
                        forums.php
                        groups.php
-                       index.htm (optional)
+                       index.htm
                        language.php
                        modules.php
                        permissions.php
@@ -56,7 +56,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                     email/
                        short/
                           bookmark.txt
-                          index.htm (optional)
                           newtopic_notify.txt
                           post_approved.txt
                           post_disapproved.txt
@@ -65,7 +64,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           quote.txt
                           report_pm.txt
                           report_post.txt
-                          test.txt
                           topic_approved.txt
                           topic_disapproved.txt
                           topic_in_queue.txt
@@ -82,7 +80,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        forum_notify.txt
                        group_added.txt
                        group_request.txt
-                       index.htm (optional)
+                       index.htm
                        installed.txt
                        newtopic_notify.txt
                        pm_report_closed.txt
@@ -121,7 +119,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                     CHANGELOG.md (optional)
                     common.php
                     groups.php
-                    index.htm (optional)
+                    index.htm
                     install.php
                     iso.txt (
                     LICENSE
@@ -148,7 +146,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 6) All PHP and text files must be encoded in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
 
-7) The translation is mostly your work and you have a right to hold a copyright on the translation and put your name or the names of those on your team in the ``AUTHORS`` / ``AUTHORS.md`` file.
+7) The translation is mostly your work and you have a right to hold a copyright on the translation and put your name or the names of those on your team in the ``AUTHORS.md`` file.
 
 8) A maximum of 3 links can be included as an author credit in the footer, customisable via the ``'TRANSLATION_INFO'`` key in ``common.php``. Please note that the Translations Manager has complete discretion on what is acceptable as an author credit link.
 
@@ -158,9 +156,9 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 11) The contribution screenshot in the Customisations Database should only be the flag of the country where the primary spoken language is that of the language pack. For example, the flag of France for the French language.
 
-12) Revision name in the Customisations Database should be left blank, contain the phpBB package version, and/or package release name (e.g. "**3.0.12 / Richard 'D¡cky' Foote**" for 3.0.12).
+12) Revision name in the Customisations Database should be left blank, contain the phpBB package version, and/or package release name (e.g. "**3.2.2 / Bertie’s New Year Resolution**" for 3.2.2).
 
-13) The Demo URL in the Customisations Database must be empty, unless you want to put a link to an international community (`officially`_ listed or not) related to the language of the contribution. For example, http://www.phpbbarabia.com/ as Demo URL concerning the `Arabic language`_ is allowed.
+13) The Demo URL in the Customisations Database must be empty, unless you want to put a link to an international community (`officially`_ listed or not) related to the language of the contribution. For example, https://www.phpbb.nl/ as Demo URL concerning the `Dutch language`_ is allowed.
 
 .. _Customisations Database: https://www.phpbb.com/go/customise/language-packs/3.2
 .. _Language Packs Database: https://www.phpbb.com/languages/
@@ -170,4 +168,4 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 .. _Notepad++: https://notepad-plus-plus.org/
 .. _PSPad: http://www.pspad.com/en/
 .. _officially: https://www.phpbb.com/support/intl/
-.. _Arabic language: https://www.phpbb.com/customise/db/translation/arabic/
+.. _Dutch language: https://www.phpbb.com/customise/db/translation/dutch_casual_honorifics/
