@@ -56,9 +56,7 @@ Only one style should exist across the entire source of all your code-base. Alwa
 -  Never mix spaces and tabs for indentation. Stick to your choice without fail (**Preference: tabs**)
 -  Choose the number of preferred characters used per indentation level (**Preference: 4 spaces**)
 
-.. warning::
-
-configure your editor to “show invisibles” or to automatically remove end-of-line whitespace. The use of an `EditorConfig`_ file is being used to help maintain the basic whitespace conventions.
+.. warning:: configure your editor to “show invisibles” or to automatically remove end-of-line whitespace. The use of an `EditorConfig`_ file is being used to help maintain the basic whitespace conventions.
 
 As well as indentation, we can provide a lot of information through liberal and judicious use of whitespace between rulesets. We use:
 
@@ -126,9 +124,7 @@ This doesn’t even take into account some of CSS’ many quirks—such as vario
 
 As a result of CSS not telling its own story very well, it is a language that really does benefit from being heavily commented. As a rule, you should comment anything that isn’t immediately obvious from the code alone. That is to say, there is no need to tell someone that ``color: red;`` will make something red, but if you’re using ``overflow: hidden;`` to clear floats—as opposed to clipping an element’s overflow—this is probably something worth documenting.
 
-.. warning::
-
-Tip: you can configure your editor to provide you with shortcuts to output agreed-upon comment patterns.
+.. warning:: Tip: you can configure your editor to provide you with shortcuts to output agreed-upon comment patterns.
 
 Comment Example:
 

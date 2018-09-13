@@ -238,7 +238,7 @@ Your selectors are fundamental to writing good CSS. To very briefly sum up the a
 Focussing on these points will keep your selectors a lot more sane and easy to work with on changing and long running projects.
 
 Further Reading
-'''''''''''''''
+^^^^^^^^^^^^^^^
 
 -  `Shoot to kill; CSS selector intent`_
 -  `‘Scope’ in CSS`_

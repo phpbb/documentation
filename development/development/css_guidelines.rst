@@ -255,34 +255,24 @@ Our project makes use of several tools to lint and to keep us to the standards.
 1. `stylelint.io`_
 ^^^^^^^^^^^^^^^^^^
 
-.. note::
-
-This is used to provide detailed linting for our standards via the ``.stylelintrc`` file in the root of the project.
+.. note:: This is used to provide detailed linting for our standards via the ``.stylelintrc`` file in the root of the project.
 
 2. `postcss-sorting`_
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-
-This is used to provide automatic sorting to our declaration order via the ``.postcss-sorting.json`` file in the root of the project.
+.. note:: This is used to provide automatic sorting to our declaration order via the ``.postcss-sorting.json`` file in the root of the project.
 
 3. `postcss-pxtorem`_
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-
-This is used to ensure the proper units are consistently used throughout the project during the build process via ``gulp`` as well as on save in your editor.
+.. note:: This is used to ensure the proper units are consistently used throughout the project during the build process via ``gulp`` as well as on save in your editor.
 
 4. `stylefmt`_
 ^^^^^^^^^^^^^^
 
-.. note::
+.. note:: This is used to help automatically re-format your code to the standards on the fly during the build process via ``gulp`` as well as on save in your editor.
 
-This is used to help automatically re-format your code to the standards on the fly during the build process via ``gulp`` as well as on save in your editor.
-
-.. note::
-
-As a **NOTE** our editors of choice are `PhpStorm`_ & `ATOM`_ which provides usefull plugins to make use of these tools. Checkout the `Editor Setup`_ section of the docs for more information
+.. note:: Our editors of choice are `PhpStorm`_ & `ATOM`_ which provides usefull plugins to make use of these tools. Checkout the `Editor Setup`_ section of the docs for more information
 
 .. _stylelint.io: http://www.stylelint.io
 .. _postcss-sorting: https://github.com/hudochenkov/postcss-sorting

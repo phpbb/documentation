@@ -70,21 +70,15 @@ IDs in CSS
 
 If we want to keep specificity low, which we do, we have one really quick-win, simple, easy-to-follow rule that we can employ to help us:
 
-.. warning::
-
-**NEVER USE IDs in CSS**
+.. warning:: **NEVER USE IDs in CSS**
 
 Not only are IDs inherently non-reusable, they are also vastly more specific than any other selector, and therefore become specificity anomalies. Where the rest of your selectors are relatively low specificity, your ID-based selectors are, comparatively, much, much higher.
 
 In fact, to highlight the severity of this difference, see how one thousand chained classes cannot override the specificity of a single ID: `jsfiddle.net/0yb7rque`_.
 
-.. warning::
+.. warning:: Please note that in Firefox you may see the text rendering in blue: this is a `known bug`_, and an ID will be overridden by 256 chained classes.
 
-(Please note that in Firefox you may see the text rendering in blue: this is a `known bug`_, and an ID will be overridden by 256 chained classes.)
-
-.. note::
-
-**N.B.** It is still perfectly okay to use IDs in HTML and JavaScript; it is only in CSS that they prove troublesome.
+.. note:: **N.B.** It is still perfectly okay to use IDs in HTML and JavaScript; it is only in CSS that they prove troublesome.
 
 It is often suggested that developers who choose not to use IDs in CSS merely don’t understand how specificity works. This is as incorrect as it is offensive: no matter how experienced a developer you are, this behavior cannot be circumvented; no amount of knowledge will make an ID less specific.
 
@@ -164,9 +158,7 @@ To style an element with a class of ``.widget-title``, we have a selector that i
 
 Not only is this entirely avoidable—we caused this problem ourselves—we have a selector that is literally double the specificity it needs to be. We used 200% of the specificity actually required. And not only that, but this also leads to needless verbosity in our code—more to send over the wire.
 
-.. warning::
-
-As a rule, **if a selector will work without it being nested then do not nest it.**
+.. warning:: As a rule, **if a selector will work without it being nested then do not nest it.**
 
 Scope
 ~~~~~
@@ -178,7 +170,7 @@ This goes some way to providing our CSS with scope and encapsulation, but does s
 Now we have better scoped CSS with minimal specificity—the best of both worlds.
 
 Further Reading
-'''''''''''''''
+^^^^^^^^^^^^^^^
 
 -  `‘Scope’ in CSS`_
 
@@ -239,9 +231,7 @@ Here we can see how we’ve used ``!important`` to force our ``.heading-sub {}``
 
 In these situations, it is preferable that you investigate and refactor any offending rulesets to try and bring specificity down across the board, as opposed to introducing such specificity heavyweights.
 
-.. warning::
-
-**Only use** ``!important`` **proactively, not reactively.**
+.. warning:: **Only use** ``!important`` **proactively, not reactively.**
 
 Hacking Specificity
 ~~~~~~~~~~~~~~~~~~~
@@ -283,7 +273,7 @@ Here we are selecting based on an attribute rather than an ID, and attribute sel
 Do keep in mind that these are hacks, and should not be used unless you have no better alternative.
 
 Further Reading
-'''''''''''''''
+^^^^^^^^^^^^^^^
 
 -  `Hacks for dealing with specificity`_
 
