@@ -63,7 +63,8 @@ Package Validation
     + ``language/{iso}/VERSION.md``
 
 * No other additional files are allowed!
-* All folders must contain an ``index.htm`` file.
+* All folders within the language-directories must contain an ``index.htm`` file (e.g. ``language/en/acp/index.htm``, ``language/en/index.htm``, ``styles/prosilver/theme/de/index.htm``, see the `Language Pack Submission Policy`_ for a complete list.).
+* An exception from this rule are the the directories for the viglink-translation and the directories which belong the phpBB package (e.g. ``language/``, ``styles/``).
 
 File Validation
 ===============
@@ -238,3 +239,4 @@ License
 * All translations must be released under
   `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
 .. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/3.2
+.. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/3.2.x/language/guidelines.html#language-pack-submission-policy
