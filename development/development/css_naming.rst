@@ -136,7 +136,7 @@ In no particular order, here are the individual namespaces and a brief descripti
 Even from this short list alone, we can see just how much more information we can communicate to developers simply by placing a character or two at the front of our existing classes.
 
 Further Reading
-'''''''''''''''
+^^^^^^^^^^^^^^^
 
    -  `UI Selector Namspacing`_
 
@@ -156,7 +156,7 @@ This means that we can have an element elsewhere which can carry the style of ``
 ``data-*`` Attributes
 ^^^^^^^^^^^^^^^^^^^^^
 
-A cleaner and preferred practice is to use ``data-*`` attributes as JS hooks.``data-*`` attributes, as per the spec, are typically used to store custom data private to the page or application’. however since you are already binding this attribute to your js, it makes since to use the same attribute as the js hook.
+A cleaner and preferred practice is to use ``data-*`` attributes as JS hooks. ``data-*`` attributes, as per the spec, are typically used to store custom data private to the page or application’. however since you are already binding this attribute to your js, it makes since to use the same attribute as the js hook.
 
 .. _ITCSS: https://www.youtube.com/watch?v=1OKZOV-iLj4
 .. _SUITcss: https://suitcss.github.io/

@@ -183,19 +183,19 @@ Example:
 Proper use of units
 ~~~~~~~~~~~~~~~~~~~
 
-CSS allows for the use of several different unit types. As such it can get confusing when using more than one type of unit throughout, it's for that reason its beneficial to stick to a strict set of rules for what unit types are to be used for certain selectors.
+Because CSS allows for the use of several different unit types, it can get confusing when using more than one type of unit throughout. For that reason it's beneficial to stick to a strict set of rules for what unit types are to be used for certain selectors.
 
 Furthermore there are certain reasons to use or avoid using specific units in certain places.
 
 EM
 ^^
 
-The ‘em’ unit. This is a very problematic unit which wreaks havoc on countless projects due to the way its calculated. As such this unit type must be avoid except for very very minimal use cases. We prevent the use of ``em`` except for ``letter-spacing`` & ``word-spacing``. It is also used for icon sizing but that is an edge case.
+The ‘em’ unit. This is a very problematic unit which wreaks havoc on countless projects due to the way it's calculated. As such, this unit type must be avoid except for very very minimal use cases. We prevent the use of ``em`` except for ``letter-spacing`` & ``word-spacing``. It is also used for icon sizing, but that is an edge case.
 
 Line-heights
 ^^^^^^^^^^^^
 
-All line-heights are to be specified as ``unitless`` in order to prevent improper inheritance. By nature when using units with line-heights the children inherit by default. This can lead to unwanted effects and bloated code. A ``sass`` function called ``unitless`` is provided which will convert px values for convenience, but for clarity the math is simply
+All line-heights are to be specified as ``unitless`` in order to prevent improper inheritance. By nature when using units with line-heights, the children inherit by default. This can lead to unwanted effects and bloated code. A ``sass`` function called ``unitless`` is provided which will convert px values for convenience, but for clarity the math is simply
 
 .. code:: scss
 
@@ -204,12 +204,12 @@ All line-heights are to be specified as ``unitless`` in order to prevent imprope
 Font-size
 ^^^^^^^^^
 
-All ``font-size`` should be specified either in ``px`` or ``%`` in small cases. All px values will be converted to ``rem`` during the build process as ``rem`` provide for control in responsive situations.
+All ``font-size`` should be specified either in ``px`` or ``%`` in small cases. All px values will be converted to ``rem`` during the build process as ``rem`` provides for control in responsive situations.
 
 Margins & Paddings
 ^^^^^^^^^^^^^^^^^^
 
-All ``margin`` & ``padding`` should be specified in ``px`` values or ``%``. All ``px`` values will be converted to ``rem`` during the build process as ``rem`` provide for control in responsive situations.
+All ``margin`` & ``padding`` should be specified in ``px`` values or ``%``. All ``px`` values will be converted to ``rem`` during the build process as ``rem`` provides for control in responsive situations.
 
 PX
 ^^
@@ -250,39 +250,29 @@ When indenting Sass, we stick to the same four space tab indentation, and we als
 Enforcing standardization
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Our project makes use of several tools to lint and to keep us to the standards.
+Our project makes use of several tools to lint and keep code up to standards.
 
 1. `stylelint.io`_
 ^^^^^^^^^^^^^^^^^^
 
-.. note::
-
-This is used to provide detailed linting for our standards via the ``.stylelintrc`` file in the root of the project.
+.. note:: This is used to provide detailed linting for our standards via the ``.stylelintrc`` file in the root of the project.
 
 2. `postcss-sorting`_
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-
-This is used to provide automatic sorting to our declaration order via the ``.postcss-sorting.json`` file in the root of the project.
+.. note:: This is used to provide automatic sorting to our declaration order via the ``.postcss-sorting.json`` file in the root of the project.
 
 3. `postcss-pxtorem`_
 ^^^^^^^^^^^^^^^^^^^^^
 
-.. note::
-
-This is used to ensure the proper units are consistently used throughout the project during the build process via ``gulp`` as well as on save in your editor.
+.. note:: This is used to ensure that proper units are consistently used throughout the project during the build process via ``gulp`` as well as on save in your editor.
 
 4. `stylefmt`_
 ^^^^^^^^^^^^^^
 
-.. note::
+.. note:: This is used to help automatically re-format your code on-the-fly to meet standards during the build process via ``gulp`` as well as on save in your editor.
 
-This is used to help automatically re-format your code to the standards on the fly during the build process via ``gulp`` as well as on save in your editor.
-
-.. note::
-
-As a **NOTE** our editors of choice are `PhpStorm`_ & `ATOM`_ which provides usefull plugins to make use of these tools. Checkout the `Editor Setup`_ section of the docs for more information
+.. note:: Our editors of choice are `PhpStorm`_ & `ATOM`_ which provide useful plugins to make use of these tools. Check out the `Editor Setup`_ section of the docs for more information
 
 .. _stylelint.io: http://www.stylelint.io
 .. _postcss-sorting: https://github.com/hudochenkov/postcss-sorting
