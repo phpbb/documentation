@@ -119,11 +119,14 @@ method to read and change its attributes during parsing based on who is being qu
             }
             elseif (stripos($tag->getAttribute('author'), 'Gary Oak') !== false)
             {
-                // If the author is Gary Oak we return FALSE to disallow the tag
+                // If the author is Gary Oak we invalidate the tag to disallow it
+                $tag->invalidate();
+
+                // Return FALSE for backward compatibility
                 return false;
             }
 
-            // We return TRUE to indicate that the tag is allowed
+            // We return TRUE for backward compatibility, to indicate that the tag is allowed
             return true;
         }
     }
