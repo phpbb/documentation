@@ -352,6 +352,9 @@ files:
     │   │   │   ├── acp_demo_body.html   # Sample ACP HTML template file
     │   │   │   └── ...
     │   │   └── ...
+    │   ├── controller                   # Dir containing controller files
+    │   │   ├── acp_controller.php       # A sample ACP controller class
+    │   │   └── ...
     │   ├── language                     # Dir containing language files
     │   │   ├── en                       # English language files (required)
     │   │   │   ├── common.php           # A language file used by the extension
@@ -382,6 +385,9 @@ files:
 
     vendor
     ├── package
+    │   ├── controller                      # Dir containing controller files
+    │   │   ├── mcp_controller.php          # A sample MCP controller class
+    │   │   └── ...
     │   ├── language                        # Dir containing language files
     │   │   ├── en                          # English language files (required)
     │   │   │   ├── info_mcp_demo.php       # An auto-loaded lang file for MCP modules
@@ -422,6 +428,9 @@ files:
 
     vendor
     ├── package
+    │   ├── controller                      # Dir containing controller files
+    │   │   ├── ucp_controller.php          # A sample UCP controller class
+    │   │   └── ...
     │   ├── language                        # Dir containing language files
     │   │   ├── en                          # English language files (required)
     │   │   │   ├── info_ucp_demo.php       # An auto-loaded lang file for UCP modules
@@ -518,8 +527,8 @@ language file, and the config and routing YAML files:
     │   │   ├── routing.yml     # A routing YAML file
     │   │   ├── services.yml    # A config YAML file
     │   │   └── ...
-    │   ├── controller             # Dir containing controller files
-    │   │   ├── main.php           # A sample controller class
+    │   ├── controller               # Dir containing controller files
+    │   │   ├── main_controller.php  # A sample controller class
     │   │   └── ...
     │   ├── event                  # The event dir contains all PHP event listeners
     │   │   ├── main_listener.php  # A sample PHP event listener
