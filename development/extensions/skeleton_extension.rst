@@ -5,13 +5,13 @@ phpBB Skeleton Extension
 The Skeleton Extension is a tool for extension developers. Its 
 purpose is to kick start your extension development projects.
 
-What is a skeleton? It's a working extension, based off the phpBB
-Acme Demo extension. When you want to develop an extension, creating 
-a skeleton will generate most of the initial files you would need,
+What is a skeleton? It's a working boiler-plate extension. When
+you want to begin development on an extension, creating a
+skeleton will generate most of the initial files you would need,
 so you don't have to.
 
 This means you can jump straight into writing code for your extension,
-and bypass the boring task of creating the initial files, methods
+and bypass the mundane task of creating the initial files, methods
 and docblocks yourself.
 
 If you've never written an extension before, a skeleton provides an ideal way
@@ -42,7 +42,7 @@ installed into a phpBB board just the same as any other.
 Requirements
 ------------
 
--  A phpBB board, version 3.1.4 or newer (from the 3.1.x branch) or 3.2.0-b3 or newer (from the 3.2.x branch).
+-  A phpBB board, version 3.2.0 or newer.
 -  PHP version 5.4 or newer.
 -  PHP ZipArchive module enabled.
 
@@ -59,13 +59,20 @@ Installation
 Create an extension
 ===================
 
-.. note::
+.. important::
 
-    The Skeleton Extension is based on the Acme Demo extension. As a
-    result, some of its files will have working classes and methods
-    already. These are provided to make the skeleton both functional and
-    educational. You will want to remove any Acme Demo code you do not
-    need from the skeleton and replace it with your own custom code.
+    The Skeleton Extension generates working classes and methods
+    which are intended to make the skeleton nominally functional and,
+    more importantly, instructional.
+
+    This documentation will assume we are creating the Acme Demo
+    extension, with the vendor/package naming structure: ``acme/demo``.
+    Most file, function, class, table and variable names will be
+    populated with the vendor and package names specified.
+
+    The skeleton generated is only a starting point! You should always
+    review the skeleton code you generate and update, edit or remove any
+    of the code you do not need as you begin to develop your extension.
 
 phpBB Web interface
 -------------------
@@ -345,6 +352,9 @@ files:
     │   │   │   ├── acp_demo_body.html   # Sample ACP HTML template file
     │   │   │   └── ...
     │   │   └── ...
+    │   ├── controller                   # Dir containing controller files
+    │   │   ├── acp_controller.php       # A sample ACP controller class
+    │   │   └── ...
     │   ├── language                     # Dir containing language files
     │   │   ├── en                       # English language files (required)
     │   │   │   ├── common.php           # A language file used by the extension
@@ -375,6 +385,9 @@ files:
 
     vendor
     ├── package
+    │   ├── controller                      # Dir containing controller files
+    │   │   ├── mcp_controller.php          # A sample MCP controller class
+    │   │   └── ...
     │   ├── language                        # Dir containing language files
     │   │   ├── en                          # English language files (required)
     │   │   │   ├── info_mcp_demo.php       # An auto-loaded lang file for MCP modules
@@ -415,6 +428,9 @@ files:
 
     vendor
     ├── package
+    │   ├── controller                      # Dir containing controller files
+    │   │   ├── ucp_controller.php          # A sample UCP controller class
+    │   │   └── ...
     │   ├── language                        # Dir containing language files
     │   │   ├── en                          # English language files (required)
     │   │   │   ├── info_ucp_demo.php       # An auto-loaded lang file for UCP modules
@@ -511,8 +527,8 @@ language file, and the config and routing YAML files:
     │   │   ├── routing.yml     # A routing YAML file
     │   │   ├── services.yml    # A config YAML file
     │   │   └── ...
-    │   ├── controller             # Dir containing controller files
-    │   │   ├── main.php           # A sample controller class
+    │   ├── controller               # Dir containing controller files
+    │   │   ├── main_controller.php  # A sample controller class
     │   │   └── ...
     │   ├── event                  # The event dir contains all PHP event listeners
     │   │   ├── main_listener.php  # A sample PHP event listener
@@ -576,7 +592,7 @@ necessary language and config files:
     │   │   └── ...
     │   ├── console            # Dir containing CLI related classes
     │   │   ├── command        # Dir containing CLI command classes
-    │   │   │   ├── demo.php   # A sample CLI command class
+    │   │   │   ├── sample.php # A sample CLI command class
     │   │   │   └── ...
     │   │   └── ...
     │   ├── language           # Dir containing language files
@@ -605,7 +621,7 @@ necessary migration and config files:
     │   │   └── ...
     │   ├── cron               # Dir containing cron related classes
     │   │   ├── task           # Dir containing cron task classes
-    │   │   │   ├── demo.php   # A sample cron task class
+    │   │   │   ├── sample.php # A sample cron task class
     │   │   │   └── ...
     │   │   └── ...
     │   ├── migrations            # Dir containing migration files
@@ -641,7 +657,7 @@ extension's enable, disable and purge steps:
     │   │   └── ...
     │   ├── notification       # Dir containing notification related classes
     │   │   ├── type           # Dir containing notification types
-    │   │   │   ├── demo.php   # A sample notification type class
+    │   │   │   ├── sample.php # A sample notification type class
     │   │   │   └── ...
     │   │   └── ...
     │   └── ...
@@ -673,7 +689,7 @@ functional tests:
     │   │   │   ├── simple_test.php   # A simple test (tests a database interaction)
     │   │   │   └── ...
     │   │   ├── functional            # Dir containing functional tests
-    │   │   │   ├── demo_test.php     # A simple functional test
+    │   │   │   ├── view_test.php     # A simple functional test
     │   │   │   └── ...
     │   │   └── ...
     │   └── ...
