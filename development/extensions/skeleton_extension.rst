@@ -438,7 +438,7 @@ files:
     │   │   └── ...
     │   ├── migrations                      # Dir containing migration files
     │   │   ├── install_ucp_module.php      # A migration installing the UCP module
-    │   │   ├── install_user_schema.php     # Contains changes used in the new module
+    │   │   ├── install_sample_schema.php   # Contains changes used in the new module
     │   │   └── ...
     │   ├── styles                          # The styles dir
     │   │   ├── prosilver                   # Dir containing prosilver style files
@@ -476,7 +476,8 @@ The Skeleton Extension will generate all of its sample migration files:
     │   │   ├── install_acp_module.php      # A migration installing the ACP module
     │   │   ├── install_mcp_module.php      # A migration installing the MCP module
     │   │   ├── install_ucp_module.php      # A migration installing the UCP module
-    │   │   ├── install_user_schema.php     # Sample schema changes to the database
+    │   │   ├── install_sample_schema.php   # Sample schema changes to the database
+    │   │   ├── install_sample_data.php     # Sample data changes to the database
     │   │   └── ...
     │   └── ...
     └── ...
