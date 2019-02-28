@@ -438,7 +438,7 @@ files:
     │   │   └── ...
     │   ├── migrations                      # Dir containing migration files
     │   │   ├── install_ucp_module.php      # A migration installing the UCP module
-    │   │   ├── install_user_schema.php     # Contains changes used in the new module
+    │   │   ├── install_sample_schema.php   # Contains changes used in the new module
     │   │   └── ...
     │   ├── styles                          # The styles dir
     │   │   ├── prosilver                   # Dir containing prosilver style files
@@ -476,7 +476,8 @@ The Skeleton Extension will generate all of its sample migration files:
     │   │   ├── install_acp_module.php      # A migration installing the ACP module
     │   │   ├── install_mcp_module.php      # A migration installing the MCP module
     │   │   ├── install_ucp_module.php      # A migration installing the UCP module
-    │   │   ├── install_user_schema.php     # Sample schema changes to the database
+    │   │   ├── install_sample_schema.php   # Sample schema changes to the database
+    │   │   ├── install_sample_data.php     # Sample data changes to the database
     │   │   └── ...
     │   └── ...
     └── ...
@@ -659,6 +660,40 @@ extension's enable, disable and purge steps:
     │   │   ├── type           # Dir containing notification types
     │   │   │   ├── sample.php # A sample notification type class
     │   │   │   └── ...
+    │   │   └── ...
+    │   └── ...
+    └── ...
+
+Permissions
+-------------
+
+Permissions can be used to grant users, groups and roles access to
+specific extension features and functionality.
+
+The Skeleton Extension will generate a migration file showing the
+installation of admin, moderator and user level permissions and assign
+then to some roles and user groups. Additionally, the required
+permissions language file is created as well as a PHP event that
+shows how permissions are assigned to their respective language
+keys and permission categories:
+
+::
+
+    vendor
+    ├── package
+    │   ├── config             # The config dir contains all service config files
+    │   │   ├── services.yml   # A config YAML file
+    │   │   └── ...
+    │   ├── event                  # The event dir contains all PHP event listeners
+    │   │   ├── main_listener.php  # A sample PHP event listener
+    │   │   └── ...
+    │   ├── language                      # Dir containing language files
+    │   │   ├── en                        # English language files (required)
+    │   │   │   ├── permissions_demo.php  # A language file specifically for permissions
+    │   │   │   └── ...
+    │   │   └── ...
+    │   ├── migrations                    # Dir containing migration files
+    │   │   ├── install_sample_data.php   # Sample data changes to the database
     │   │   └── ...
     │   └── ...
     └── ...
