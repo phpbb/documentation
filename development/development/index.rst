@@ -1,4 +1,4 @@
-CSS Coding Styleguide
+CSS Coding Guidelines
 ======================
 
 .. toctree::
