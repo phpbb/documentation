@@ -17,3 +17,4 @@ These documents are automatically updated when changes are made to them.
    php
    js
    css
+   html
