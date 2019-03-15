@@ -4,12 +4,13 @@ phpBB Development Documentation
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
+   start/install
+   start/getting_started
    db/dbal
    development/git
-   development/coding_guidelines
-   development/index
+   development/coding_guidelines/index
    cli/index
    extensions/index
    files/index
