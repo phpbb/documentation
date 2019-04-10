@@ -76,7 +76,7 @@ Common options that can be used with any of phpBB's CLI commands.
 Install phpBB using the CLI
 ===========================
 
-You need to use the ``install/phpbbcli.php``. Open the file ``docs/install-config.sample.yml`` and copy its content in a new file ``install/install-config.yml``. Change the parameters to your needs. For example a mysql database with ``mysqli`` interface, ``localhost`` and with an database user ``bertie`` with the password ``bertiepasswd`` into the database named ``bertiedb``:
+The phpBB CLI installer uses a YAML file populated with the data needed to configure a database for a new phpBB installation. You can find a sample configuration file in ``docs/install-config.sample.yml``. Copy this file to ``install/install-config.yml``. Adjust the sample parameters to your needs.  For example, a MySQL database using the ``mysqli`` interface hosted on a ``localhost`` server with the root user ``bertie`` and password ``bertiepasswd`` and named ``bertiedb`` would look like:
 
 .. code-block:: console
 
@@ -119,9 +119,9 @@ You need to use the ``install/phpbbcli.php``. Open the file ``docs/install-confi
 
             extensions: ['phpbb/viglink']
 
-You can add more settings like the admins username, admins email-address and board-name. Make sure the file is readable by the CLI. 
+You can adjust additional settings like the admin's username, email address and the board info. Make sure the file is readable by the CLI. 
 
-Now run in the command line:
+To install the board, run the following command:
 
 .. code-block:: console
 
@@ -132,7 +132,7 @@ The installer will start now and show its progress during the installation.
 Update phpBB using the CLI
 ==========================
 
-You will need the ``install/phpbbcli.php`` and a update-config.yml. Open the example file ``docs/update-config.sample.yml`` and copy its content into a new file ``install/update-config.yml``, this file will update your phpBB database and the files. Change the config file, if you have additional extensions:
+Much like installing from the CLI, phpBB can also be updated from the CLI using a YAML file with update instructions. You can find a sample update configuration file in ``docs/update-config.sample.yml``. Copy this file to ``install/update-config.yml``.
 
 .. code-block:: console
 
@@ -140,14 +140,16 @@ You will need the ``install/phpbbcli.php`` and a update-config.yml. Open the exa
         type: all
         extensions: ['phpbb/viglink']
 
-The recommended update method replaces all files with the latest ones, so the file update is not necessary but the database still needs an update. Therefor use this ``update-config.yml``:
+In this state, the updater will update your phpBB database and it will also replace all phpBB files with the updated files, giving you a complete upgrade.
+
+However, if you have already replaced the files via the filesystem or FTP, you can choose to update the database only by changing the ``type`` from ``all` to ``db_only``:
 
 .. code-block:: console
 
     updater:
        type: db_only
 
-In the next step, please run the command line:
+To update the board, run the following command:
 
 .. code-block:: console
 
