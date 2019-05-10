@@ -53,13 +53,16 @@ The general rule here is that braces always go on new lines.
 CSS, JavaScript, HTML, Twig
 ###########################
 
-Tabs should be used (not spaces). All tab and indent sizes should be set to 4 spaces. 
+Tabs should be used (not spaces). All tab and indent sizes should be set to 4 spaces.
 Also be sure "Keep indents on empty lines" is NOT checked.
 
 JSON & YAML
 ###########
 
 Json and Yaml files uses 4 spaces over tabs, so tab character should be disabled and 4 spaces the indent size.
+
+3Di's placeholder
+############
 
 Inspections
 ===========
