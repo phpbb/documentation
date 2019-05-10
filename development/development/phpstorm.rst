@@ -78,6 +78,9 @@ The default inspection settings should work just fine. However there are a coupl
 
 .. seealso:: For your convenience we have provided an XML export of the above code inspection settings for phpBB (see `phpBB Inspection Profile`_). You can import these settings into your project and all the above inspection settings will be configured for you.
 
+3Di's placheholder
+###########
+
 Plugins
 =======
 
