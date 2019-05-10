@@ -471,7 +471,8 @@ file:
         "version-check": {
             "host": "my.site.com",
             "directory": "/versions",
-            "filename": "acme_version_file.json"
+            "filename": "acme_version_file.json",
+	    "ssl": false
         }
     }
 
@@ -482,6 +483,7 @@ file:
     ``host`` | "Full URL to the host domain server."
     ``directory`` | "Path from the domain root to the directory containing the file, starting with a leading slash."
     ``filename`` | "A JSON file containing the latest version information."
+    ``ssl`` | "true or false depending on the host domain server running ssl"
 
 Notice that a JSON file is required, hosted from your own server. In the example above
 it would be: ``http://my.site.com/versions/acme_version_file.json``
