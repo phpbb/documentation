@@ -852,7 +852,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
       - cd ../../phpBB3
       - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
       - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION
-      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.5' -a '$DB' = 'mysqli' ]; then cd phpBB; composer require phpbb/epv:dev-master --dev --no-interaction; cd ../; fi"
+      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.6' -a '$DB' = 'mysqli' ]; then cd phpBB; composer require phpbb/epv:dev-master --dev --no-interaction; cd ../; fi"
 
     before_script:
       - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION
@@ -861,7 +861,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
       - sh -c "if [ '$SNIFF' != '0' ]; then travis/ext-sniff.sh $DB $TRAVIS_PHP_VERSION $EXTNAME; fi"
       - sh -c "if [ '$IMAGE_ICC' != '0' ]; then travis/check-image-icc-profiles.sh $DB $TRAVIS_PHP_VERSION; fi"
       - phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/travis/phpunit-$DB-travis.xml --bootstrap ./tests/bootstrap.php
-      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.5' -a '$DB' = 'mysqli' ]; then phpBB/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
+      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.6' -a '$DB' = 'mysqli' ]; then phpBB/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
 
 .. note::
 

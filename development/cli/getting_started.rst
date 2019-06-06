@@ -72,3 +72,87 @@ Common options that can be used with any of phpBB's CLI commands.
    --no-ansi | Disable ANSI (colors) output
    --no-interaction (-n) | Do not ask any interactive question
    --safe-mode | Run in Safe Mode (without extensions)
+
+Install phpBB using the CLI
+===========================
+
+The phpBB CLI installer uses a YAML file populated with the data needed to configure a database for a new phpBB installation. You can find a sample configuration file in ``docs/install-config.sample.yml``. Copy this file to ``install/install-config.yml``. Adjust the sample parameters to your needs.  For example, a MySQL database using the ``mysqli`` interface hosted on a ``localhost`` server with the root user ``bertie`` and password ``bertiepasswd`` and named ``bertiedb`` would look like:
+
+.. code-block:: console
+
+        installer:
+            admin:
+                name: admin
+                password: mypassword
+                email: admin@example.org
+
+            board:
+                lang: en
+                name: My Board
+                description: My amazing new phpBB board
+
+            database:
+                dbms: mysqli
+                dbhost: ~
+                dbport: ~
+                dbuser: bertie
+                dbpasswd: bertiepasswd
+                dbname: bertiedb
+                table_prefix: phpbb_
+
+            email:
+                enabled: false
+                smtp_delivery : ~
+                smtp_host: ~
+                smtp_port: ~
+                smtp_auth: ~
+                smtp_user: ~
+                smtp_pass: ~
+
+            server:
+                cookie_secure: false
+                server_protocol: http://
+                force_server_vars: false
+                server_name: localhost
+                server_port: 80
+                script_path: /
+
+            extensions: ['phpbb/viglink']
+
+You can adjust additional settings like the admin's username, email address and the board info. Make sure the file is readable by the CLI. 
+
+To install the board, run the following command:
+
+.. code-block:: console
+
+    $ php install/phpbbcli.php install install-config.yml
+
+The installer will start now and show its progress during the installation.
+
+Update phpBB using the CLI
+==========================
+
+Much like installing from the CLI, phpBB can also be updated from the CLI using a YAML file with update instructions. You can find a sample update configuration file in ``docs/update-config.sample.yml``. Copy this file to ``install/update-config.yml``.
+
+.. code-block:: console
+
+    updater:
+        type: all
+        extensions: ['phpbb/viglink']
+
+In this state, the updater will update your phpBB database and it will also replace all phpBB files with the updated files, giving you a complete upgrade.
+
+However, if you have already replaced the files via the filesystem or FTP, you can choose to update the database only by changing the ``type`` from ``all` to ``db_only``:
+
+.. code-block:: console
+
+    updater:
+       type: db_only
+
+To update the board, run the following command:
+
+.. code-block:: console
+
+    $ php install/phpbbcli.php update update-config.yml
+
+The updater will start and show its progress.
