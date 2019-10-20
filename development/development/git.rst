@@ -37,6 +37,7 @@ See `Set Up Git <https://help.github.com/articles/set-up-git>`_ for help on sett
 Branches
 ++++++++
 - `master <http://github.com/phpbb/phpbb/tree/master>`_ - The latest unstable development version with new features etc.
+- `3.3.x <http://github.com/phpbb/phpbb/tree/3.3.x>`_ - Development branch of the 3.3 line. Bug fixes and minor feature changes are applied here.
 - `3.2.x <http://github.com/phpbb/phpbb/tree/3.2.x>`_ - Development branch of the 3.2 line. Bug fixes and minor feature changes are applied here.
 - `3.1.x <http://github.com/phpbb/phpbb/tree/3.1.x>`_ - Development branch of the stable 3.1 line. phpBB 3.1 has reached its End of Life and is therefore no longer maintained.
 - `3.0.x <http://github.com/phpbb/phpbb/tree/3.0.x>`_ - Development branch of the stable 3.0 line. phpBB 3.0 has reached its End of Life and is therefore no longer maintained.
@@ -209,7 +210,7 @@ you need. Issue the following command to perform this operation:
 
     git checkout -b master origin/master
 
-Workflows
+Workflow
 ---------
 
 Pulling in upstream changes
@@ -283,18 +284,18 @@ Merging a feature or bugfix branch
 ++++++++++++++++++++++++++++++++++
 Once a feature or bug-fix is complete it can be merged back into the master branch. To preserve
 history we never fast-forward such merges. In this example we will merge the bug-fix created
-earlier into 3.1.x. We then merge the changes into 3.2.x and then merge 3.2.x into master
+earlier into 3.2.x. We then merge the changes into 3.3.x and then merge 3.3.x into master
 to keep these branches up to date.
 
 .. code-block:: shell
 
-    git checkout 3.1.x # Branch we want to merge into, pull in upstream changes first.
-    git merge --no-ff remote/ticket/12345 # Merge remote branch without fast forward
     git checkout 3.2.x # Branch we want to merge into, pull in upstream changes first.
-    git merge --no-ff 3.1.x # Merge to keep the 3.2.x branch in sync
+    git merge --no-ff remote/ticket/12345 # Merge remote branch without fast forward
+    git checkout 3.3.x # Branch we want to merge into, pull in upstream changes first.
+    git merge --no-ff 3.2.x # Merge to keep the 3.3.x branch in sync
     git checkout master # Branch we want to merge into, pull in upstream changes first.
-    git merge --no-ff 3.2.x # Merge to keep the master branch in sync
-    git push origin 3.1.x 3.2.x master # Push the three changed branches back to GitHub
+    git merge --no-ff 3.3.x # Merge to keep the master branch in sync
+    git push origin 3.2.x 3.3.x master # Push the three changed branches back to GitHub
 
 Additionally the merge.log config setting of Git is set to true, producing a summary of merged commits.
 
@@ -327,11 +328,33 @@ Merging only to master
     # If unsure, ask.
     git push upstream master
 
+Merging to 3.3.x
+^^^^^^^^^^^^^^^^
+.. warning::
+
+    **ALL** merges to 3.3.x **must** also be merged to master!
+
+.. code-block:: shell
+
+    git remote update upstream
+    git checkout 3.3.x
+    git reset --hard upstream/3.3.x
+    git merge --no-ff <author>/<branch> # example: git merge --no-ff naderman/ticket/000000
+    git push origin 3.3.x
+    git checkout master
+    git reset --hard upstream/master
+    git merge --no-ff 3.3.x
+    git push origin master
+    # Before continuing, look at your commit list in your fork to make sure it looks correct.
+    # If unsure, ask.
+    git push upstream 3.3.x
+    git push upstream master
+
 Merging to 3.2.x
 ^^^^^^^^^^^^^^^^
 .. warning::
 
-    **ALL** merges to 3.2.x **must** also be merged to master!
+    **ALL** merges to 3.2.x **must** also be merged to 3.3.x and master!
 
 .. code-block:: shell
 
@@ -340,109 +363,55 @@ Merging to 3.2.x
     git reset --hard upstream/3.2.x
     git merge --no-ff <author>/<branch> # example: git merge --no-ff naderman/ticket/000000
     git push origin 3.2.x
+    git checkout 3.3.x
+    git reset --hard upstream/3.3.x
+    git merge --no-ff 3.2.x
+    git push origin 3.3.x
     git checkout master
     git reset --hard upstream/master
-    git merge --no-ff 3.2.x
+    git merge --no-ff 3.3.x
     git push origin master
     # Before continuing, look at your commit list in your fork to make sure it looks correct.
     # If unsure, ask.
     git push upstream 3.2.x
+    git push upstream 3.3.x
     git push upstream master
 
-Merging to 3.1.x
-^^^^^^^^^^^^^^^^
-.. warning::
-
-    **ALL** merges to 3.1.x **must** also be merged to 3.2.x and master!
-
-.. code-block:: shell
-
-    git remote update upstream
-    git checkout 3.1.x
-    git reset --hard upstream/3.1.x
-    git merge --no-ff <author>/<branch> # example: git merge --no-ff naderman/ticket/000000
-    git push origin 3.1.x
-    git checkout 3.2.x
-    git reset --hard upstream/3.2.x
-    git merge --no-ff 3.1.x
-    git push origin 3.2.x
-    git checkout master
-    git reset --hard upstream/master
-    git merge --no-ff 3.2.x
-    git push origin master
-    # Before continuing, look at your commit list in your fork to make sure it looks correct.
-    # If unsure, ask.
-    git push upstream 3.1.x
-    git push upstream 3.2.x
-    git push upstream master
-
-Merging to 3.0.x
-^^^^^^^^^^^^^^^^
-.. warning::
-
-    **ALL** merges to 3.0.x **must** also be merged to 3.1.x, 3.2.x, and master!
-
-.. code-block:: shell
-
-    git remote update upstream
-    git checkout 3.0.x
-    git reset --hard upstream/3.0.x
-    git merge --no-ff <author>/<branch> # example: git merge --no-ff naderman/ticket/000000
-    git push origin 3.0.x
-    git checkout 3.1.x
-    git reset --hard upstream/3.1.x
-    git merge --no-ff 3.0.x
-    git push origin 3.1.x
-    git checkout 3.2.x
-    git reset --hard upstream/3.2.x
-    git merge --no-ff 3.1.x
-    git push origin 3.2.x
-    git checkout master
-    git reset --hard upstream/master
-    git merge --no-ff 3.2.x
-    git push origin master
-    # Before continuing, look at your commit list in your fork to make sure it looks correct.
-    # If unsure, ask.
-    git push upstream 3.0.x
-    git push upstream 3.1.x
-    git push upstream 3.2.x
-    git push upstream master
-
-Merging to 3.2.x and master with different patches
+Merging to 3.3.x and master with different patches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. warning::
 
-    **ALL** merges to 3.2.x **must** also be merged to master!
+    **ALL** merges to 3.3.x **must** also be merged to master!
 
-1. Patch author creates fix-3.2
-2. Patch author merges his fix-3.2 into a fix-master branch
+1. Patch author creates fix-3.3
+2. Patch author merges his fix-3.3 into a fix-master branch
 3. Patch author changes fix-master until it works as expected
 4. Patch author sends 2 Pull Requests
-5. Merger merges Authors fix-3.2 into his 3.2.x
+5. Merger merges Authors fix-3.3 into his 3.3.x
 6. Merger merges Authors fix-master into his master
-7. Merger merges his 3.2.x into master (should work fast-forward)
+7. Merger merges his 3.3.x into master (should work fast-forward)
 8. Merger verifies the results
-9. Merger pushes 3.2.x and master to phpbb
+9. Merger pushes 3.3.x and master to phpbb
 
-Merging to 3.1.x, 3.2.x and master with different patches
+Merging to 3.2.x, 3.3.x and master with different patches
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. warning::
 
-    **ALL** merges to 3.1.x **must** also be merged to 3.2.x and master!
+    **ALL** merges to 3.2.x **must** also be merged to 3.3.x and master!
 
-1. Patch author creates fix-3.1
-2. Patch author merges his fix-3.1 into a fix-3.2 branch
-3. Patch author changes fix-3.2 until it works as expected
-4. Patch author merges his fix-3.2 into a fix-master branch
+1. Patch author creates fix-3.2
+2. Patch author merges his fix-3.2 into a fix-3.3 branch
+3. Patch author changes fix-3.3 until it works as expected
+4. Patch author merges his fix-3.3 into a fix-master branch
 5. Patch author changes fix-master until it works as expected
 6. Patch author sends 3 Pull Requests
-7. Merger merges Authors fix-3.1 into his 3.1.x
-8. Merger merges Authors fix-3.2 into his 3.2.x
+7. Merger merges Authors fix-3.2 into his 3.2.x
+8. Merger merges Authors fix-3.3 into his 3.3.x
 9. Merger merges Authors fix-master into his master
-10. Merger merges his 3.1.x into 3.2.x (should work fast-forward)
-11. Merger merges his 3.2.x into master (should work fast-forward)
+10. Merger merges his 3.2.x into 3.3.x (should work fast-forward)
+11. Merger merges his 3.3.x into master (should work fast-forward)
 12. Merger verifies the results
-13. Merger pushes 3.1.x, 3.2.x and master to phpbb
+13. Merger pushes 3.2.x, 3.3.x and master to phpbb
 
 Windows
 =======
