@@ -9,7 +9,7 @@ We employ a set of standards based on the following widely used
 .. note:: Our editors of choice are `PhpStorm`_ & `ATOM`_ which provide useful plugins to make use of these tools. Check out the `Editor Setup`_ section of the docs for more information
 
 .. _PhpStorm: https://www.jetbrains.com/phpstorm/
-.. _ATOM: http://www.atom.io
+.. _ATOM: https://atom.io
 .. _Editor Setup: /editor-setup
 
 .. toctree::

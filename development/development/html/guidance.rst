@@ -1,4 +1,4 @@
-Idiomatic HTMLGuidelines
+Idiomatic HTML Guidelines
 ================================================
 
 1. Whitespace

@@ -155,7 +155,7 @@ This means that we can have an element elsewhere which can carry the style of ``
 ``data-*`` Attributes
 ^^^^^^^^^^^^^^^^^^^^^
 
-It is our preferred practice to use ``data-*`` attributes as JS hooks. ``data-*`` attributes, as per the spec, are typically used to store custom data private to the page or application’. however since you are already binding this attribute to your js, it makes since to use the same attribute as the js hook.
+It is our preferred practice to use ``data-*`` attributes as JS hooks. ``data-*`` attributes, as per the spec, are typically used to store custom data private to the page or application’. however since you are already binding this attribute to your js, it makes sense to use the same attribute as the js hook.
 
 .. _ITCSS: https://www.youtube.com/watch?v=1OKZOV-iLj4
 .. _SUITcss: https://suitcss.github.io/
