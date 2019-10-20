@@ -27,7 +27,7 @@ whitespace, and avoid polluting commits.
 -  Omit the ``type`` attributes from ``link`` stylesheet, ``style`` and
    ``script`` elements.
 -  Always include closing tags. ``<p>Some text</p>`` **NOT** ``<p>Some text``
--  Don’t include a trailing slash in self-closing elements.
+-  Don’t include a trailing slash in self-closing elements. ``<img src="#" alt="something">`` **NOT** ``<img src="#" alt="something" />``
 
 Example:
 
@@ -40,7 +40,7 @@ Example:
        <button disabled>Reply</button>
    </div>
 
-4. Attribute order
+3. Attribute order
 ------------------
 
 HTML attributes should be listed in an order that reflects the fact that
@@ -56,6 +56,68 @@ Example:
 
 .. code:: html
    <a class="[value]" id="[value]" data-name="[value]" href="[url]">[text]</a>
+
+4. Line Breaks
+--------------
+
+We highly recommend using ``<p>`` **OR** ``<span>`` to wrap all blocks of text over using ``<br>`` to control line breaks. You are not able to stlye the ``<br>`` tag which limits the control of the content on a page.
+Prefer the use of paragrphs or block level spans over breaks as you can not style a ``br`` tag. ``<p>Some text</p><p>Some More Text</p>`` **OR** ``<span class="something">Some text</span><span class="display-block-class">Some More Text</span>`` **NOT** ``Some text<br>Some More Text``
+
+**Example with bad formated text:**
+
+.. code:: html
+
+    <div class="content">
+
+        <h3>
+            This is a Title<br>
+            <small>This is a subtitle</small>
+        </h3>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>
+        </p>
+
+    </div>
+
+**Example with good formated text:**
+
+.. code:: css
+    .subtitle {
+        display: block;
+    }
+
+    .no-margin {
+        padding: 0;
+        margin: 0;
+    }
+
+.. code:: html
+
+    <div class="content">
+
+        <h3>
+            This is a Title
+            <small class="subtitle">This is a subtitle</small>
+        </h3>
+
+        <p class="no-margin">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="no-margin">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p class="no-margin">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <p class="no-margin">
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+    </div>
 
 5. Naming
 ---------
@@ -115,10 +177,6 @@ An example of various conventions.
        <body>
            <article class="post" id="1234">
                <time class="timestamp">March 15, 2012</time>
-               <a data-id="1234"
-                data-analytics-category="[value]"
-                data-analytics-action="[value]"
-                href="[url]">[text]</a>
                <ul>
                    <li>
                        <a href="[url]">[text]</a>
