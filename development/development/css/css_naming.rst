@@ -131,7 +131,6 @@ In no particular order, here are the individual namespaces and a brief descripti
 -  ``s-``: Signify that a class creates a new styling context or Scope. Similar to a Theme, but not necessarily cosmetic, these should be used sparingly—they can be open to abuse and lead to poor CSS if not used wisely.
 -  ``is-``, ``has-``: Signify that the piece of UI in question is currently styled a certain way because of a state or condition. This stateful namespace is gorgeous, and comes from `SMACSS`_. It tells us that the DOM currently has a temporary, optional, or short-lived style applied to it due to a certain state being invoked.
 -  ``_``: Signify that this class is the worst of the worst—a hack! Sometimes, although incredibly rarely, we need to add a class in our markup in order to force something to work. If we do this, we need to let others know that this class is less than ideal, and hopefully temporary (i.e. do not bind onto this).
--  ``js``-: Signify that this piece of the DOM has some behavior acting upon it, and that JavaScript binds onto it to provide that behavior. If you’re not a developer working with JavaScript, leave these well alone.
 
 Even from this short list alone, we can see just how much more information we can communicate to developers simply by placing a character or two at the front of our existing classes.
 
@@ -143,20 +142,20 @@ Further Reading
 JavaScript Hooks
 ~~~~~~~~~~~~~~~~
 
-As a rule, it is unwise to bind your CSS and your JS onto the same class in your HTML. This is because doing so means you can’t have (or remove) one without (removing) the other. It is much cleaner, much more transparent, and much more maintainable to bind your JS onto specific classes. Typically, this is why you sometimes se classes that are prepended with ``js-``, for
+As a rule, it is unwise to bind your CSS and your JS onto the same class in your HTML. This is because doing so means you can’t have (or remove) one without (removing) the other. It is much cleaner, much more transparent, and much more maintainable to bind your JS onto data attributes.
 
 example:
 
 .. code:: html
 
-    <input type="submit" class="btn js-btn" value="Follow" />
+    <input type="submit" class="btn" data-execute="addSomething" value="Follow" />
 
-This means that we can have an element elsewhere which can carry the style of ``.btn {}``, but without the behavior of ``.js-btn``.
+This means that we can have an element elsewhere which can carry the style of ``.btn {}``, but without the behavior of ``data-execute="addSomething"``.
 
 ``data-*`` Attributes
 ^^^^^^^^^^^^^^^^^^^^^
 
-A cleaner and preferred practice is to use ``data-*`` attributes as JS hooks. ``data-*`` attributes, as per the spec, are typically used to store custom data private to the page or application’. however since you are already binding this attribute to your js, it makes since to use the same attribute as the js hook.
+It is our preferred practice to use ``data-*`` attributes as JS hooks. ``data-*`` attributes, as per the spec, are typically used to store custom data private to the page or application’. however since you are already binding this attribute to your js, it makes sense to use the same attribute as the js hook.
 
 .. _ITCSS: https://www.youtube.com/watch?v=1OKZOV-iLj4
 .. _SUITcss: https://suitcss.github.io/
