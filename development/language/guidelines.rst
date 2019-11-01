@@ -68,6 +68,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           topic_disapproved.txt
                           topic_in_queue.txt
                           topic_notify.txt
+
                        admin_activate.txt
                        admin_send_email.txt
                        admin_welcome_activated.txt
