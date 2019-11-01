@@ -12,6 +12,7 @@ Contents:
    development/git
    development/coding_guidelines/index
    cli/index
+   db/dbal
    extensions/index
    files/index
    language/index

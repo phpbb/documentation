@@ -14,3 +14,4 @@ functional tests.
 
    unit_testing
    functional_testing
+   ui_testing

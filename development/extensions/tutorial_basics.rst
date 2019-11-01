@@ -63,7 +63,7 @@ The details of the meta data are explained below the sample, but for now let's h
         "version": "0.1.0",
         "time": "2013-11-05",
         "keywords": ["phpbb", "extension", "acme", "demo"],
-        "license": "GPL-2.0",
+        "license": "GPL-2.0-only",
         "authors": [
             {
                 "name": "Nickv",
