@@ -806,14 +806,15 @@ first file is the Travis CI configuration file, ``.travis.yml``:
 
 .. code-block:: yaml
 
-    sudo: required
-
     language: php
+    dist: trusty
 
     matrix:
       include:
+        - php: 5.5
+          env: DB=none;NOTESTS=1
         - php: 5.4
-          env: DB=mysqli
+          env: DB=mysqli #myisam
         - php: 5.4
           env: DB=mysql
         - php: 5.4
@@ -828,10 +829,14 @@ first file is the Travis CI configuration file, ``.travis.yml``:
           env: DB=mysqli
         - php: 7.0
           env: DB=mysqli
-        - php: hhvm
+        - php: 7.1
+          env: DB=mysqli
+        - php: 7.2
+          env: DB=mysqli
+        - php: nightly
           env: DB=mysqli
       allow_failures:
-        - php: hhvm
+        - php: nightly
       fast_finish: true
 
     env:
@@ -845,6 +850,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
     branches:
       only:
         - master
+        - develop
         - /^\d+(\.\d+)?\.x$/
 
     install:
@@ -852,16 +858,16 @@ first file is the Travis CI configuration file, ``.travis.yml``:
       - cd ../../phpBB3
       - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
       - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION
-      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.6' -a '$DB' = 'mysqli' ]; then cd phpBB; composer require phpbb/epv:dev-master --dev --no-interaction; cd ../; fi"
+      - sh -c "if [ '$EPV' == '1' -a '$NOTESTS' == '1' ]; then cd phpBB; composer remove sami/sami --update-with-dependencies --dev --no-interaction; composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs; cd ../; fi"
 
     before_script:
-      - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION
+      - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
 
     script:
-      - sh -c "if [ '$SNIFF' != '0' ]; then travis/ext-sniff.sh $DB $TRAVIS_PHP_VERSION $EXTNAME; fi"
-      - sh -c "if [ '$IMAGE_ICC' != '0' ]; then travis/check-image-icc-profiles.sh $DB $TRAVIS_PHP_VERSION; fi"
-      - phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/travis/phpunit-$DB-travis.xml --bootstrap ./tests/bootstrap.php
-      - sh -c "if [ '$EPV' != '0' -a '$TRAVIS_PHP_VERSION' = '5.6' -a '$DB' = 'mysqli' ]; then phpBB/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
+      - sh -c "if [ '$SNIFF' != '0' ]; then travis/ext-sniff.sh $DB $TRAVIS_PHP_VERSION $EXTNAME $NOTESTS; fi"
+      - sh -c "if [ '$IMAGE_ICC' != '0' ]; then travis/check-image-icc-profiles.sh $DB $TRAVIS_PHP_VERSION $NOTESTS; fi"
+      - sh -c "if [ '$EPV' != '0' -a '$NOTESTS' = '1' ]; then phpBB/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
+      - sh -c "if [ '$NOTESTS' != '1' ]; then phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/travis/phpunit-$DB-travis.xml --bootstrap ./tests/bootstrap.php; fi"
 
 .. note::
 

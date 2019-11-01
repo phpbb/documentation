@@ -114,8 +114,8 @@ contains the default html body:
     </body>
     </html>
 
-language/{iso}/help/*.php
--------------------------
+language/{iso}/help/\*.php
+--------------------------
 
 * The file must must only contain 1 array named `$lang`. No other variables are allowed.
 * The array must only contain arrays with the following structure:
@@ -238,5 +238,6 @@ License
 
 * All translations must be released under
   `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
+
 .. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/3.2
 .. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/3.2.x/language/guidelines.html#language-pack-submission-policy
