@@ -28,7 +28,7 @@ Symfony 3.4
 Symfony has been updated to 3.4 (from 2.8). The following changes are due to deprecations introduced in Symfony 2 that have been removed from Symfony 3. The following changes are **required** for phpBB 3.3 and later.
 
 .. note::
-    Although the following changes are required for phpBB 3.3, they are backwards compatible and therefor, will still work with phpBB 3.2 and 3.1.
+    Although the following changes are required for phpBB 3.3, they are backwards compatible and therefore, will still work with phpBB 3.2 and 3.1.
 
 Deprecated special characters at the beginning of unquoted strings
 ------------------------------------------------------------------
