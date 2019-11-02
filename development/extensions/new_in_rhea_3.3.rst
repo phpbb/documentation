@@ -87,42 +87,35 @@ Typically extension authors use their extension's ``ext.php`` file to set condit
 
 Now extension authors can finally explain what the specific requirements are that caused the extension to fail to install.
 
-This can still be done in the same ``ext.php`` file and the same ``is_enableable()`` method as before. Except now, instead of only being able to return either a true or false boolean, the method allows you to return an array of error messages for each reason why an extension can not be enabled/installed; such as in this following example:
+This can be done in the same ``ext.php`` file and the same ``is_enableable()`` method as before. Except now, instead of only being able to return either a true or false boolean, the method allows you to return an array of error messages for each reason why an extension can not be enabled/installed; such as in this following example:
+
+.. note::
+
+    To be backwards compatible with phpBB 3.2 and 3.1, check for phpBB 3.3 or newer before using the new message system. Otherwise for older phpBB boards you must use the original method of returning a simple true/false boolean.
 
 .. code-block:: php
 
+    /**
+     * Check if extension can be enabled
+     *
+     * @return bool|array True if enableable, false (or an array of error messages) if not.
+     */
     public function is_enableable()
     {
-        // Only install extension on phpBB 3.3.0 or newer
-        $enableable = phpbb_version_compare(PHPBB_VERSION, '3.3.0', '>=');
-
-        // If the test failed, return an error message explaining why
-        if (!$enableable)
-        {
-            return array('phpBB 3.3.0 or newer is required to enable this extension.');
-        }
-
-        // Return the result of the test, which would be true if we reached this
-        return $enableable;
-    }
-
-The previous example only needs a slight modification to be backwards compatible with phpBB 3.2 and 3.1. In the following example we can check if the board is phpBB 3.3 and if it is, we can use the new message system, otherwise for older phpBB boards we can use the default system returning a simple true/false boolean:
-
-.. code-block:: php
-
-    public function is_enableable()
-    {
-        // Only install extension on phpBB 3.2.0 or newer
-        $enableable = phpbb_version_compare(PHPBB_VERSION, '3.2.0', '>=');
+        // Only install extension if PHP ZipArchive is present
+        $enableable = class_exists('ZipArchive');
 
         // If the test failed and phpBB 3.3 is detected, return error message explaining why
         if (!$enableable && phpbb_version_compare(PHPBB_VERSION, '3.3.0', '>='))
         {
-            return array('phpBB 3.2.0 or newer is required to enable this extension.');
+            // Import my extension's language file
+            $language = $this->container->get('language');
+            $language->add_lang('my_install_lang_file', 'myvendor/myextension');
+
+            // Return message 'PHP ZipArchive is required to enable and use this extension.'
+            return array($language->lang('INSTALL_FAILED_MESSAGE'));
         }
 
-        // Return the result of the test, which could be true (or false for phpBB 3.2 and 3.1)
+        // Return the boolean result of the test, either true (or false for phpBB 3.2 and 3.1)
         return $enableable;
     }
-
-Also note that in this one case, we are hard-coding language in the extension. Technically, if your extension could not be enabled, then its language files will not be loaded in the system so using language keys here will not work. There are workarounds to this, however in the interest of cleaner and more elegant code an exception can be made here for allowing hard-coded language strings.
