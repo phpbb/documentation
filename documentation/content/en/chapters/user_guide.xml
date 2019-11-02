@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>User Guide</title>
 	<abstract>
-		<para>This chapter is targeted at the forum users. It explains all user facing functions that are needed to use phpBB 3.2</para>
+		<para>This chapter is targeted at the forum users. It explains all user facing functions that are needed to use phpBB 3.3</para>
 	</abstract>
 	<section id="user_permissions">
 		<sectioninfo>
@@ -432,7 +432,7 @@
 	</section>
 	<section id="user_pm">
 		<title>Communicate with Private Messages</title>
-		<para>phpBB 3.2 allows its users to communicate privately by using Private Messages. To visit the Private Messages section, you either can click on the [X new messages] link on the left hand side below the forum header, or you can directly access it through the <link linkend="user_control_panel">User Control Panel.</link>.</para>
+		<para>phpBB 3.3 allows its users to communicate privately by using Private Messages. To visit the Private Messages section, you either can click on the [X new messages] link on the left hand side below the forum header, or you can directly access it through the <link linkend="user_control_panel">User Control Panel.</link>.</para>
 		<para>Depending on the communication methods allowed by the board administrator, there can be 3 ways of being notified of a new Private Message's arrival:</para>
 		<orderedlist>
 			<listitem>
@@ -479,7 +479,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Message Folders</title>
-			<para>Just like in your e-mail client, all <glossterm>private messages</glossterm> are stored in folders. Working with folders is similar to working with forums in phpBB 3.2. The <guilabel>Inbox</guilabel> is your default incoming message folder. All messages you receive will appear in here.</para>
+			<para>Just like in your e-mail client, all <glossterm>private messages</glossterm> are stored in folders. Working with folders is similar to working with forums in phpBB 3.3. The <guilabel>Inbox</guilabel> is your default incoming message folder. All messages you receive will appear in here.</para>
 			<para><guilabel>Sent messages</guilabel> will appear in either the <guilabel>Outbox</guilabel> or the <guilabel>Sent messages</guilabel> folder. As long as the recipient(s) have not yet read the message, it will stay in the <guilabel>Outbox</guilabel>. As soon as someone reads the message it will be archived to the <guilabel>Sent messages</guilabel> folder. If the administrator allows it, you can edit messages after sending them as long as they are in the <guilabel>Outbox</guilabel> and the recipients have not yet read them.</para>
 			<para>Each folder, including <guilabel>Sent messages</guilabel> and <guilabel>Outbox</guilabel>, can hold a board-defined amount of messages. This is a global setting that only a board administrator can change. An info text displays the current number of allowed messages and the current percentage of space your messages are using at the top of each folder. If no restriction is displayed, you are allowed unlimited messages in each folder.</para>
 			<note>
@@ -496,7 +496,7 @@
 				</sectioninfo>
 				<title>Custom Folders</title>
 				
-				<para>If the administrator allows it, you can create your own custom <glossterm>private message</glossterm> folders in phpBB 3.2. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
+				<para>If the administrator allows it, you can create your own custom <glossterm>private message</glossterm> folders in phpBB 3.3. To check whether you can add folders, visit the <guimenuitem>Edit options</guimenuitem> section of the <guilabel>private message</guilabel> area. </para>
 				<para>To add a new folder, enter the folder's name into the <guilabel>Add folder</guilabel> input box. If creation was successful, your new folder will appear at the bottom of the folder list. You can then use it like a normal message folder and move messages into it or set a filter (see the section on <link linkend="pm_rules">Private Message Rules</link> for more information about filters) to automatically do it for you.</para>
 			</section>
 			
