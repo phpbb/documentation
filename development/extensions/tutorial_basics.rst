@@ -38,8 +38,8 @@ The extension name is the name of the extension. In this tutorial we will use ``
 
 .. important::
 
-    Both the vendor and extension names must be lowercase and must start with a letter. Names can contain numbers
-    and letters only. **Uppercase letters, underscores, dashes and other characters are not permitted.** The
+    Both the vendor and extension names must start with a lowercase letter, followed by lowercase letters
+    and numbers only. **Uppercase letters, underscores, dashes and other characters are not permitted.** The
     following is an example of an allowed vendor and extension name: ``iamuser1/iamanextension``.
 
 
