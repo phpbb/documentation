@@ -12,7 +12,7 @@
 	</chapterinfo>
 	<title>Administration Guide</title>
 	<abstract>
-		<para>This chapter describes the phpBB 3.2 admin controls.</para>
+		<para>This chapter describes the phpBB 3.3 admin controls.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -23,7 +23,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>The Administration Control Panel</title>
-		<para>Even more so than its predecessor, phpBB 3.2 &quot;Rhea&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
+		<para>Even more so than its predecessor, phpBB 3.3 &quot;Rhea&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 		
@@ -71,7 +71,7 @@
 					</authorgroup>
 				</sectioninfo>
 				<title>Attachment Settings</title>
-				<para>One of the many features in phpBB 3.2 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
+				<para>One of the many features in phpBB 3.3 is <glossterm>Attachments</glossterm>. Attachments are files that can be attached to posts, like e-mail attachments. Certain restrictions, set by the board administrator, control what users can attach. You can set these restrictions via the <guimenuitem>Attachment Settings</guimenuitem> page.</para>
 				<para>For more information, see the section on <link linkend="acp_attach_settings">configuring your board's attachment settings</link>.</para>
 			</section>
 			
@@ -183,7 +183,7 @@
            </authorgroup>
         </sectioninfo>
         <title>Spambot Countermeasures</title>
-        <para>phpBB 3.2 uses a plugin system to allow easy switching between different spambot countermeasures. Available plugins are automatically loaded from the includes/captcha/plugins directory in your installation. </para>
+        <para>phpBB 3.3 uses a plugin system to allow easy switching between different spambot countermeasures. Available plugins are automatically loaded from the includes/captcha/plugins directory in your installation. </para>
         <itemizedlist>
            <title>phpBB ships with these plugins installed:</title>
            <listitem><para>GD 3D image: a graphical CAPTCHA using 3D characters on a wave.</para></listitem>
@@ -711,7 +711,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Explanation of forum types</title>
-			<para>In phpBB 3.2, there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
+			<para>In phpBB 3.3, there are three forum types. A forum can be a normal forum where people can post in, a category that contains forums, or it can be a simple link.</para>
 			<variablelist>
 				<varlistentry>
 					<term>Forum</term>
@@ -742,7 +742,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Subforums</title>
-			<para>One of the features in phpBB 3.2 is <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Rhea you can now put as many forums, links, or categories as you like inside other forums.</para>
+			<para>One of the features in phpBB 3.3 is <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Rhea you can now put as many forums, links, or categories as you like inside other forums.</para>
 			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 				
@@ -818,7 +818,7 @@
 			</sectioninfo>
 			<title>BBCodes</title>
 			
-			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.2 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
+			<para><glossterm>BBCodes</glossterm> are a special way of formatting posts, similar to HTML. phpBB 3.3 allows you to create your own BBCodes very easily. On this page, you can see the custom BBCodes that currently exist.</para>
 			<para>Adding a BBCode is very easy. If done right, allowing users to use your new BBCode may be safer than allowing them to use HTML code. To add a BBCode, click <guilabel>Add a new BBCode</guilabel> to begin. There are four main things to consider when adding a BBCode: how you want your users to use the BBCode, what HTML code the BBcode will actually use (the users will not see this), what short info message you want for the BBCode, and whether or not you want a button for the new BBCode to be displayed on the posting screen. Once you are done configuring all of the custom BBCode settings, click <guilabel>Submit</guilabel> to add your new BBCode.</para>
 			
 			<figure id="img_acp_creating_bbcodes">
@@ -936,12 +936,12 @@
 			
 			<itemizedlist>
 				<title>General options</title>
-				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.2, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
+				<listitem><para><guilabel>Allow sending of private messages to multiple users and groups</guilabel>: In phpBB 3.3, it is possible to send a private message to more than user. To allow this, select <guilabel>Yes</guilabel>.</para></listitem>
 				<listitem><para><guilabel>Allow BBCode in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow BBCode to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow smilies in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow smilies to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow attachments in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow attachments to be used in private messages.</para></listitem>
 				<listitem><para><guilabel>Allow signature in private messages</guilabel>: Select <guilabel>Yes</guilabel> to let your users include their <glossterm>signature</glossterm> in their private messages.</para></listitem>
-				<listitem><para><guilabel>Allow print view in private messages</guilabel>: Another new feature in phpBB 3.2 is a printer-friendly view. Select <guilabel>Yes</guilabel> to allow your users to view any of their PMs in print view.</para></listitem>
+				<listitem><para><guilabel>Allow print view in private messages</guilabel>: Another new feature in phpBB 3.3 is a printer-friendly view. Select <guilabel>Yes</guilabel> to allow your users to view any of their PMs in print view.</para></listitem>
 				<listitem><para><guilabel>Allow forwarding in private messages</guilabel>: Select <guilabel>Yes</guilabel> to allow your users to forward private messages.</para></listitem>
 				<listitem><para><guilabel>Allow use of [img] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline images in their private messages.</para></listitem>
 				<listitem><para><guilabel>Allow use of [flash] BBCode tag</guilabel>: Select <guilabel>Yes</guilabel> if you want your users to be able to post inline Macromedia Flash objects in their private messages.</para></listitem>
@@ -1758,7 +1758,7 @@
 		
 		<title>Group Management</title>
 		
-		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.2 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
+		<para><glossterm>Usergroups</glossterm> are a way of grouping users. This makes it easier to set permissions to many people at the same time. phpBB 3.3 has six pre-defined groups: Administrators, Bots, Global Moderators, Guests, Registered Users, and Registered COPPA Users.</para>
 		
 		<section id="acp_groups_types">
 			<sectioninfo>
@@ -1781,7 +1781,7 @@
 				<varlistentry>
 					<term>Pre-defined groups</term>
 					<listitem>
-						<para>These are groups that are available by default in phpBB 3.2. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar, and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users", for instance. Do not try to remove them manually through the database, or your board will no longer function properly.
+						<para>These are groups that are available by default in phpBB 3.3. You <emphasis>cannot</emphasis> delete them, as the board needs them for various features. You can still change their attributes (description, colour, rank, avatar, and so forth) and group leaders. Users that register to your board are automatically added to the predefined group "Registered Users", for instance. Do not try to remove them manually through the database, or your board will no longer function properly.
 						
 							<variablelist>
 								<varlistentry>
@@ -1791,7 +1791,7 @@
 								
 								<varlistentry>
 									<term>Bots</term>
-									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.2 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
+									<listitem><para>This usergroup is meant for search engine bots. phpBB 3.3 has the ability to overcome the common problems that search engine spiders encounter when spidering your board. For more information on managing settings for each bot, see the Spiders and Bots section.</para></listitem>
 								</varlistentry>
 								
 								<varlistentry>
@@ -2184,7 +2184,7 @@
 
 	<section id="acp_customise">
 		<title>Customise</title>
-		<para>phpBB 3.2 allows you to customise its appearance and interactions in several ways:</para>
+		<para>phpBB 3.3 allows you to customise its appearance and interactions in several ways:</para>
 		<variablelist>
 				<varlistentry>
 					<term>Styles</term>
@@ -2235,7 +2235,7 @@
 			<para>Creating a style is not an easy task and it takes quite a lot of time. Skilled designers from the phpBB community create styles that are available publicly and anyone can download them. This is a good place to start if you want to download and install a new style and you cannot afford to create your own, for any possible reason. The first place where you should stop is the <ulink url="https://www.phpbb.com/styles/">Styles section on phpBB.com</ulink>, you will find a list of useful links for places like the:
 				<variablelist>
 					<varlistentry>
-						<term><ulink url="https://www.phpbb.com/styles/demo/3.2/">Styles Demo</ulink></term>
+						<term><ulink url="https://www.phpbb.com/styles/demo/3.3/">Styles Demo</ulink></term>
 						<listitem><para>The styles demo allows you to display each style on a live forum and see how each part of the board looks like using the specified style. You can browse through the styles until you find one that suits you and/or your board. The styles demo provides links to download the style and see its entry in the styles database.</para></listitem>
 					</varlistentry>
 					
@@ -2342,7 +2342,7 @@
 		</sectioninfo>
 		<title>Board Maintenance</title>
 		
-		<para>Running a phpBB 3.2 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
+		<para>Running a phpBB 3.3 board is a very important job that is up to the administrator(s). Maintaining the board to make sure it runs as cleanly and properly as possible is the administrator's job.</para>
 		
 		<para><guimenuitem>Board Maintenance</guimenuitem> is a section in the <acronym>ACP</acronym> that allows you to keep track of internal phpBB information, such as logs, as well as maintaining your database (which holds your phpBB-related data), such as backing up and restoring data.</para>
 		
@@ -2439,7 +2439,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Search Indexing</title>
-			<para>phpBB 3.2 provides you with a powerful search system which can be used to search throughout your board. The main controls for the search features are located in the <link linkend="acp_server_search">Search settings</link> section. Here you can manage the <guilabel>search index</guilabel>, which is used to hold the data necessary for quick and precise search results, it's something like an giant table of contents. By default, two search backends are available - fulltext native, which is included in the phpBB code and works on all <glossterm>DBMS</glossterm>s, and fulltext mysql, which uses the built-in MySQL fulltext searching feature. The first one offers more flexible configuration, while the second one doesn't take too much space in the database and the index is created much faster.</para>
+			<para>phpBB 3.3 provides you with a powerful search system which can be used to search throughout your board. The main controls for the search features are located in the <link linkend="acp_server_search">Search settings</link> section. Here you can manage the <guilabel>search index</guilabel>, which is used to hold the data necessary for quick and precise search results, it's something like an giant table of contents. By default, two search backends are available - fulltext native, which is included in the phpBB code and works on all <glossterm>DBMS</glossterm>s, and fulltext mysql, which uses the built-in MySQL fulltext searching feature. The first one offers more flexible configuration, while the second one doesn't take too much space in the database and the index is created much faster.</para>
 			<note>
 				<para>Creating a search index can take a very long time, a new window will pop up and refresh itself while creating the necessary search table entries. Please be patient, the process can take several hours on large boards.</para>
 			</note>
@@ -2489,7 +2489,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Checking for updates</title>
-			<para>The phpBB 3.2.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use one of the other packages provided.</para>
+			<para>The phpBB 3.3.x branch is usually updated every couple of months as necessary. Bugfixes, new features and other changes are included in these updates. The minor version number gets incremented each time. It is strongly recommended to keep your phpBB installation up to date. Updating from older versions is more difficult and you will have a hard time finding solutions to possible conflicts. You can update with the Automatic Update Package, which is able to merge modifications from MODs with the updates or you can use one of the other packages provided.</para>
 			<para>You will be notified in your ACP if a new version is released, you will also have a link to the newest release announcement, which will brief you on the added features and the overall changelog.</para>
 			<para>Updating with the Automatic Update Package is very simple. First, you will go to the linked phpBB.com downloads page and download the appropriate file. You will extract the contents on your PC and upload them to the root directory of your board. The board will be offline for normal users for the moment. Then simply go to the <filename class='directory'>install/</filename> directory and select the <guilabel>Update</guilabel> tab, the updater will then give you further instructions.</para>
 		</section>
