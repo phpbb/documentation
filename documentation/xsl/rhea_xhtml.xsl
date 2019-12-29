@@ -12,7 +12,7 @@
 <xsl:import href="xhtml/chunk.xsl"/>
 
 <!-- Link to the stylesheet -->
-<xsl:param name="html.stylesheet" select="'/support/documentation/3.2/style.css'"/>
+<xsl:param name="html.stylesheet" select="'/support/documentation/3.3/style.css'"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
