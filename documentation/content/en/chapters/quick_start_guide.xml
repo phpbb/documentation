@@ -32,13 +32,13 @@
 				<para>A SQL database system, one of:</para>
 				<itemizedlist>
 					<listitem>
-						<para>MySQL 3.23 or above (MySQLi supported)</para>
+						<para>MySQL 4.1.3 or above (MySQLi required)</para>
 					</listitem>
 					<listitem>
 						<para>MariaDB 5.1 or above</para>
 					</listitem>
 					<listitem>
-						<para>MS SQL Server 2000 or above (via ODBC or SQLSRV PHP extensions)</para>
+						<para>MS SQL Server 2000 or above (via ODBC or the native adapter)</para>
 					</listitem>
 					<listitem>
 						<para>Oracle</para>
@@ -52,7 +52,7 @@
 				</itemizedlist>
 			</listitem>
 			<listitem>
-				<para>PHP 5.4.7+ with support for the database you intend to use.</para>
+				<para>PHP 7.1.3+ with support for the database you intend to use.</para>
 			</listitem>
 			<listitem>
 				<para>getimagesize() function enabled</para>
