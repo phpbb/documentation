@@ -183,7 +183,7 @@
 		</sectioninfo>
 		<title>Upgrading from 3.2 to 3.3</title>
 		<warning>
-			<para>Upgrading to phpBB 3.3 may cause some styles and extensions to no longer work. If you have a custom logo, it might need to be redone after the upgrade. See <ulink url="https://www.phpbb.com/support/docs/en/3.3/kb/article/how-to-change-your-board-logo/">Knowledge Base: How to Change your Board Logo</ulink>.</para>/para>
+			<para>Upgrading to phpBB 3.3 may cause some styles and extensions to no longer work. If you have a custom logo, it might need to be redone after the upgrade. See <ulink url="https://www.phpbb.com/support/docs/en/3.3/kb/article/how-to-change-your-board-logo/">Knowledge Base: How to Change your Board Logo</ulink>.</para>
 		</warning>
 
 		<para>phpBB 3.3 should be backwards compatible with 3.2, however some extensions and custom edits may no longer work. The easiest upgrade method is to remove all existing files prior to upgrading and re-applying custom changes after verifying their correctness.</para>
