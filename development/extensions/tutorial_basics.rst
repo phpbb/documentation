@@ -38,9 +38,9 @@ The extension name is the name of the extension. In this tutorial we will use ``
 
 .. important::
 
-    Both the vendor and extension names must start with a lower or upper case letter, followed by letters and numbers
-    only. **Underscores, dashes and other characters are not permitted.** It is perfectly fine to have an extension
-    named ``iamanextension``.
+    Both the vendor and extension names must start with a lowercase letter, followed by lowercase letters
+    and numbers only. **Uppercase letters, underscores, dashes and other characters are not permitted.** The
+    following is an example of an allowed vendor and extension name: ``iamuser1/iamanextension``.
 
 
 Composer JSON

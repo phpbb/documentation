@@ -134,9 +134,7 @@
 				<para>There are several ways a user can add an avatar to their profile. The first way is through <guilabel>Gravatar</guilabel>. If this feature is enabled, users can choose to have the board load the Gravatar.com image associated with their email address.</para>
 				<para>The second way is through an avatar gallery you provide. Note that there is no avatar gallery available in a default phpBB installation. The <guilabel>Avatar Gallery Path</guilabel> is the path to the gallery images. The default path is <guilabel>images/avatars/gallery</guilabel>. The gallery folder does not exist in the default installation so you have to add it manually if you want to use it.</para>
 				<para>The images you want to use for your gallery need to be in a folder inside the gallery path. Images directly in the gallery path won't be recognised.</para>
-				<para>The third approach to avatars is through <guilabel>Remote Avatars</guilabel>. These are simply images linked from another website. Your members can add a link to the image they want to use on the <guilabel>edit avatars</guilabel> page of their profile. To give you some control over the size of the avatars you can define the minimum and maximum size of the images. The disadvantage of <guilabel>Remote Avatars</guilabel> is that you are not able to control the file size.</para>
-				<para>The fourth approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image from their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is <glossterm>server-writable</glossterm>. The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
-				<para>Avatars can also be uploaded through <guilabel>Remote Uploading</guilabel> which allows users to provide a URL to an image and have it downloaded to the board for use as their avatar. This allows you to keep the avatars locally instead of having external links to image hosts.</para>
+				<para>The third approach to avatars is through <guilabel>Avatar Uploading</guilabel>. Your members can upload an image from their local system which will be stored on your server. They will be uploaded into the <guilabel>Avatar Storage Path</guilabel> you can define. The default path is <guilabel>images/avatars/upload</guilabel> and does already exist after installation. You have to make sure that it is <glossterm>server-writable</glossterm>. The file format of the images has to be either gif, jpeg, or png, and the avatars will be automatically checked for their file and image size after the upload. You can adjust the <guilabel>Maximum Avatar File Size</guilabel> and images that are bigger than the allowed value will be discarded.</para>
 			</section>
 			
 			<section id="acp_board_pms">
@@ -206,14 +204,14 @@
            </mediaobject>
         </figure>
         <tip>
-           <para>Check the MOD database for new existing plugins.</para>
+           <para>Check the Extension database for new existing plugins.</para>
         </tip>
         <itemizedlist>
            <title>How to select a plugin</title>
            <listitem><para>Click the &quot;Installed plugins&quot; dropdown and select the module you want to use. Do not let grayed out entries stop you, they only mean that you have to perform another step. If your intended module is not in the list, check whether the files are present in the plugin directory.</para></listitem>
            <listitem><para>Click the &quot;Configure&quot; button to see the module's ACP page. Many plugins need configuration prior to use. Note that plugins without configuration options will not show the button.</para></listitem>
            <listitem><para>Configure the plugin to meet your needs.</para></listitem>
-           <listitem><para>After configuring the plugin, re-select your intended plugin from the dropdown. It shold not be grayed out any more.</para></listitem>
+           <listitem><para>After configuring the plugin, re-select your intended plugin from the dropdown. It should not be grayed out any more.</para></listitem>
            <listitem><para>Click &quot;Submit&quot;.</para></listitem>
            <listitem><para>Congratulations, you’re done.</para></listitem>
         </itemizedlist>
@@ -1069,7 +1067,6 @@
 				<listitem><para><guilabel>Create thumbnail</guilabel>: This setting configures your board to either create a thumbnail for every image attached, or not.</para></listitem>
 				<listitem><para><guilabel>Maximum thumbnail width in pixels</guilabel>: This is the maximum width in pixels for the created thumbnails.</para></listitem>
 				<listitem><para><guilabel>Maximum thumbnail filesize</guilabel>: Thumbnails will not be created for images if the created thumbnail filesize exceeds this value, in bytes. This is useful for particularly large images that are posted.</para></listitem>
-				<listitem><para><guilabel>Imagemagick path</guilabel>: If you have Imagemagick installed and would like to set your board to use it, specify the full path to your Imagemagick convert application. An example is <filename>/usr/bin/</filename>.</para></listitem>
 				<listitem><para><guilabel>Maximum image dimensions</guilabel>: The maximum size of image attachments, in pixels. If you would like to disable dimension checking (and thereby allow image attachments of any dimensions), set each value to 0.</para></listitem>
 				<listitem><para><guilabel>Image link dimensions</guilabel>: If an image attachment is larger than these dimensions (in pixels), a link to the image will be displayed in the post instead. If you want images to be displayed inline regardless of dimensions, set each value to 0.</para></listitem>
 			</itemizedlist>
@@ -2404,9 +2401,8 @@
 			<para>phpBB uses a database to store all the data used on the board, including users, posts, topics etc. Backing up the database can be useful as a protective measure in case of any accidents which could cause data loss or damage to the database. If any accident like this would occur, you would have a possibility to restore the database to a previous state from the backup. You can use the backup tool to move your board to another host - you will make a backup on your current server and restore it on the new one to keep all data.</para>
 			<itemizedlist>
 				<title>Database backup</title>
-				<listitem><para><guilabel>Backup type</guilabel>: You can backup the whole database or you can either backup the <guilabel>structure</guilabel> or <guilabel>data</guilabel>. The structure only contains the hiearchy in which the data is stored, on the other side, if you only backup the data, you will need a pre-prepared structure when restoring/importing data.</para></listitem>
+				<listitem><para><guilabel>Backup type</guilabel>: You can backup the whole database or you can either backup the <guilabel>structure</guilabel> or <guilabel>data</guilabel>. The structure only contains the hierarchy in which the data is stored, on the other side, if you only backup the data, you will need a pre-prepared structure when restoring/importing data.</para></listitem>
 				<listitem><para><guilabel>File type</guilabel>: Depending on your server setup, you can save the backup in several formats. The <guilabel>Text</guilabel> option saves the backup in plain text, other options compress the file to decrease the filesize of the dump.</para></listitem>
-				<listitem><para><guilabel>Action</guilabel>: You have three options: you can both <guilabel>Store and download</guilabel> the file, saving it in the store directory and downloading it to your PC, or you can choose to <guilabel>download</guilabel> or <guilabel>store</guilabel> the file.</para></listitem>
 				<listitem>
 					<para><guilabel>Table select</guilabel>: You can either <guilabel>Select all</guilabel> tables or you can select individual tables to backup. When backing up a large database, you can exclude the search tables (do not forget to restore their structure) and recreate the search index on the new server.</para>
 					<tip>
