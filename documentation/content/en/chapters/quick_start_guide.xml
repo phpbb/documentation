@@ -81,9 +81,6 @@
 						<para>Remote FTP support</para>
 					</listitem>
 					<listitem>
-						<para>Imagemagick support</para>
-					</listitem>
-					<listitem>
 						<para>GD support</para>
 					</listitem>
 				</itemizedlist>
