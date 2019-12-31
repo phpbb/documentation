@@ -83,11 +83,11 @@ Extension Installation Error Messages
 
 One often requested feature by extension authors finally makes its debut in phpBB 3.3: Displaying error messages to users when an extension can not be enabled!
 
-Typically extension authors use their extension's ``ext.php`` file to set conditional tests to check and see if a phpBB board meets the basic requirements of their extension. If it fails, the extension is not be enabled. However users are only met with an error message that they failed to meet the extension's requirements.
+Typically extension authors use their extension's ``ext.php`` file to set conditional tests to check and see if a phpBB board meets the basic requirements of their extension. If it fails, the extension is not enabled. However users are only met with an error message that their board failed to meet the extension's requirements.
 
-Now extension authors can finally explain what the specific requirements are that caused the extension to fail to install.
+Now extension authors can explain what the specific requirements are that caused the extension to fail to install.
 
-This can be done in the same ``ext.php`` file and the same ``is_enableable()`` method as before. Except now, instead of only being able to return either a true or false boolean, the method allows you to return an array of error messages for each reason why an extension can not be enabled/installed; such as in this following example:
+This can be done in the same ``ext.php`` file and the same ``is_enableable()`` method as before. Except now, instead of only being able to return either a true or false boolean, the method allows you to return an array of error messages for each reason why an extension can not be enabled/installed.
 
 .. note::
 
