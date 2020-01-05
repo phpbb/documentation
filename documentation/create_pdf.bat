@@ -4,9 +4,9 @@
 set fop_path=C:\fop
 
 echo Removing previous PDF
-del rhea_33_doc.pdf
+del proteus_doc.pdf
 
 echo Creating new PDF
-%fop_path%\fop -xml rhea_33_doc.xml -xsl xsl\rhea_33_pdf.xsl -pdf rhea_33_doc.pdf
+%fop_path%\fop -xml proteus_doc.xml -xsl xsl\proteus_pdf.xsl -pdf proteus_doc.pdf
 
 echo Done
