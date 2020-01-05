@@ -5,7 +5,7 @@ What's New for phpBB 3.3
 Introduction
 ============
 
-phpBB 3.3 (Rhea) is only a minor version update to 3.2. There are, however, a few changes extension developers need to be aware of. The biggest changes to come in 3.3 are updates to many of phpBB's underlying dependencies, bringing Symfony, Twig, jQuery and PHP up to date.
+phpBB 3.3 (Proteus) is only a minor version update to 3.2. There are, however, a few changes extension developers need to be aware of. The biggest changes to come in 3.3 are updates to many of phpBB's underlying dependencies, bringing Symfony, Twig, jQuery and PHP up to date.
 
 This documentation explains:
 
@@ -18,7 +18,7 @@ This documentation explains:
 PHP 7
 =====
 
-PHP 7.1 is the minimum version required by phpBB 3.3. It is unlikely that this should cause any problems for extensions. If your PHP code worked in phpBB 3.1 or 3.2, it should work in phpBB 3.3 as well.
+PHP 7.1.3 is the minimum version required by phpBB 3.3. It is unlikely that this should cause any problems for extensions. If your PHP code worked in phpBB 3.1 or 3.2, it should work in phpBB 3.3 as well.
 
 If you intend to start using some of the new language constructs introduced in PHP 7, you must make your extension's minimum PHP requirement known to your users. This can include setting the minimum PHP version in your extension's ``composer.json`` file as well as designating phpBB 3.3 as a minimum requirement. You can also use the ``ext.php`` file to check that the minimum PHP and phpBB version requirements are satisfied in the ``is_enableable()`` method, which will prevent users who do not meet the requirements from accidentally installing your extension. Examples of this can be found `here <tutorial_advanced.html#using-installation-commands-in-ext-php>`_.
 

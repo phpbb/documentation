@@ -7,7 +7,7 @@ echo "Removing build directory"
 rm -rf build
 
 echo "Creating docs"
-xsltproc --xinclude xsl/rhea_33_php.xsl rhea_33_doc.xml
+xsltproc --xinclude xsl/proteus_php.xsl proteus_doc.xml
 
 if [ "$?" == "0" ]; then
 	echo "Successfully created documentation"
