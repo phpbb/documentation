@@ -1,6 +1,7 @@
 # phpBB Documentation
 
-Documentation for board visitors, moderators and administrators. Can be seen online [here](http://www.phpbb.com/support/documentation/3.2/)
+Documentation for board visitors, moderators and administrators. Can be seen online [here](https://www.phpbb.com/support/docs/en/3.3/ug/)
+<br>Documentation for developers and extension writers. Can be seen online [here](https://area51.phpbb.com/docs/dev/)
 
 ## Patches
 
