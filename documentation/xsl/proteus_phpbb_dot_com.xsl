@@ -3,7 +3,6 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!--
-	$Id$
 	Copyright 2006, 2008 phpBB Group
 	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
 	http://creativecommons.org/licenses/by-nc-sa/3.0/
@@ -15,7 +14,7 @@
 <xsl:param name="html.ext" select="'.php'"/>
 
 <!-- Link to the stylesheet -->
-<xsl:param name="html.stylesheet" select="'/support/documentation/3.2/style.css'"/>
+<xsl:param name="html.stylesheet" select="'/support/documentation/3.3/style.css'"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
@@ -40,7 +39,7 @@
 <xsl:param name="chunker.output.doctype-public" select="''"/>
 <xsl:param name="chunker.output.doctype-system" select="''"/>
 
-<xsl:variable name="main.title.text" select="'phpBB 3.2 Rhea Documentation'"/>
+<xsl:variable name="main.title.text" select="'phpBB 3.3 Proteus Documentation'"/>
 
 <xsl:template name="user.preroot">
 
@@ -53,32 +52,19 @@
 		// The page title
 		$page_title = '</xsl:text>
 
-	<xsl:copy-of select="$title"/>
+	<!-- use the substring replace template defined in Docbook XSL's lib to escape apostrophes -->
+	<xsl:call-template name="string.subst">
+		<xsl:with-param name="string">
+			<xsl:value-of select="$title"/>
+		</xsl:with-param>
+		<xsl:with-param name="target" select='"&apos;"'/>
+		<xsl:with-param name="replacement" select='"\&apos;"'/>
+	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">';
-// Paths
-</xsl:text>
-
-	<xsl:choose>
-		<xsl:when test="$title = $main.title.text">
-			<xsl:text>$root_path = './../../../';</xsl:text>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:text>$root_path = './../../../../';</xsl:text>
-		</xsl:otherwise>
-	</xsl:choose>
-
-	<xsl:text disable-output-escaping="yes">
-define('IN_PHPBB', true);
-
-include($root_path . 'common.php');
-include($root_path . 'includes/functions_docbook.php');
-
-$template->set_filenames(array(
-	'body'	=> 'support/support_documentation_docbook.html')
-);
 
 </xsl:text>
+
 </xsl:template>
 
 
@@ -96,15 +82,6 @@ $template->set_filenames(array(
 
 $content = str_replace(' xmlns="http://www.w3.org/1999/xhtml"', '', ob_get_clean());
 
-$template->assign_vars(array(
-	'PAGE_TITLE'		=> $page_title,
-	'S_CONTENT'			=> $content,
-	'S_BODY_CLASS'		=> 'support documentation docbook')
-);
-
-page_header($page_title, false);
-
-page_footer(false);
 ?&gt;</xsl:text>
 </xsl:template>
 
@@ -531,8 +508,6 @@ page_footer(false);
 
 	<xsl:text disable-output-escaping="yes">
 );
-
-docbook_navigation($navigation);
 
 ob_start();
 ?&gt;</xsl:text>
