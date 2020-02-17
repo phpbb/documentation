@@ -13,7 +13,7 @@ This variable is included from :class:`common.php` through :class:`includes/comp
 
 Some database functions are within the base driver and others are within specific database drivers.
 Each function below will indicate whether it is defined in the base driver or in each specific driver.
-The *MySQLi* specific database driver will be used in the examples below.
+The *MySQLi* specific database driver will be used in the examples throughout this page.
 |br| All drivers are located in the :class:`\\phpbb\\db\\driver` namespace.
 |br| Base driver is located at :class:`\\phpbb\\db\\driver\\driver.php`
 |br| Specific driver is located at :class:`\\phpbb\\db\\driver\\mysqli.php`
@@ -123,11 +123,6 @@ Parameters
 
    Query Type # Type of query which needs to be created (SELECT, SELECT_DISTINCT)
    Associative array # An associative array with the items to add to the query. |br| SELECT and FROM are required. |br| LEFT_JOIN, WHERE, GROUP_BY and ORDER_BY are optional.
-
-..
-   [sql_build_query]
-   Builds full SQL statement from array. Possible types of queries: SELECT, SELECT_DISTINCT Defined in the base driver.
-   See [[db.sql_build_query|dbal::sql_build_query]] manual page.
 
 sql_build_array
 ---------------
@@ -416,7 +411,7 @@ Example:
     	FROM ' . POSTS_TABLE . "
     	WHERE topic_id = $topic_id
     		AND post_time >= $min_post_time
-			" . (($auth->acl_get('m_approve', $forum_id)) ? '' : 'AND post_approved = 1');
+    		" . (($auth->acl_get('m_approve', $forum_id)) ? '' : 'AND post_approved = 1');
     $result = $db->sql_query($sql);
 
     $total_posts = (int) $db->sql_fetchfield('num_posts');
