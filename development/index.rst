@@ -9,6 +9,7 @@ Contents:
    development/git
    development/coding_guidelines
    cli/index
+   db/dbal
    extensions/index
    files/index
    language/index
