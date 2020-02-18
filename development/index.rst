@@ -14,6 +14,7 @@ Contents:
    files/index
    language/index
    migrations/index
+   request/request
    testing/index
    development/phpstorm
 
