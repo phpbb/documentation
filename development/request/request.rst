@@ -40,27 +40,27 @@ This can be useful for returning different responses.
 .. code-block:: php
    :caption: Example of checking for an AJAX request
 
-    if ($request->is_set_post('submit'))
-    {
-    	$message = $language->lang('CONFIG_UPDATED');
+   if ($request->is_set_post('submit'))
+   {
+       $message = $language->lang('CONFIG_UPDATED');
 
-    	if ($request->is_ajax())
-    	{
-    		// Send a JSON response for an AJAX request
-    		$json_response = new \phpbb\json_response();
+       if ($request->is_ajax())
+       {
+           // Send a JSON response for an AJAX request
+           $json_response = new \phpbb\json_response();
 
-    		return $json_response->send([
-    			'MESSAGE_TITLE'	=> $language->lang('INFORMATION');
-    			'MESSAGE_TEXT'	=> $message,
-    		]);
-    	}
+           return $json_response->send([
+               'MESSAGE_TITLE'	=> $language->lang('INFORMATION');
+               'MESSAGE_TEXT'	=> $message,
+           ]);
+       }
 
-    	// Include a back link for a non-AJAX request
-    	$u_back = $helper->route('my_route');
-    	$message .= '<br><br>' . $language->lang('RETURN_PAGE', '<a href="' . $u_back . '">', '</a>');
+       // Include a back link for a non-AJAX request
+       $u_back = $helper->route('my_route');
+       $message .= '<br><br>' . $language->lang('RETURN_PAGE', '<a href="' . $u_back . '">', '</a>');
 
-    	return $helper->message($message);
-    }
+       return $helper->message($message);
+   }
 
 is_secure
 ---------
@@ -92,11 +92,11 @@ Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **variable**     # The name of the variable to check
-    **super_global** # The super global to check within for the variable. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
+   **variable**     # The name of the variable to check
+   **super_global** # The super global to check within for the variable. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
 
 is_set_post
 -----------
@@ -119,10 +119,10 @@ Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **variable** # The name of the variable to check
+   **variable** # The name of the variable to check
 
 variable
 --------
@@ -206,13 +206,13 @@ Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **variable**     # The name of the variable to retrieve
-    **default**      # The default value with the correct variable type
-    **multibyte**    # Whether or not the variable may contain any UTF-8 characters
-    **super_global** # The super global to check within for the variable. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
+   **variable**     # The name of the variable to retrieve
+   **default**      # The default value with the correct variable type
+   **multibyte**    # Whether or not the variable may contain any UTF-8 characters
+   **super_global** # The super global to check within for the variable. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
 
 file
 ----
@@ -226,21 +226,21 @@ So for ``<input name="attachment" type="file">`` the variable name is ``attachme
 .. code-block:: php
    :caption: Example of retrieving a file
 
-    $upload_file = $request->file('avatar_upload_file');
+   $upload_file = $request->file('avatar_upload_file');
 
-    if (!empty($upload_file['name']))
-    {
-    	$file = $upload->handle_upload('files.types.form', 'avatar_upload_file');
-    }
+   if (!empty($upload_file['name']))
+   {
+       $file = $upload->handle_upload('files.types.form', 'avatar_upload_file');
+   }
 
 Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **variable** # The name of the HTML file input's name attribute
+   **variable** # The name of the HTML file input's name attribute
 
 header
 ------
@@ -249,28 +249,28 @@ This function is a shortcut to retrieve the value of the client's HTTP headers.
 .. code-block:: php
    :caption: Example of retrieving headers
 
-    // Basic client information
-    $browser		= $request->header('User-Agent');
-    $referer		= $request->header('Referer');
-    $forwarded_for	= $request->header('X-Forwarded-For');
+   // Basic client information
+   $browser		= $request->header('User-Agent');
+   $referer		= $request->header('Referer');
+   $forwarded_for	= $request->header('X-Forwarded-For');
 
-    // Client's accepted language
-    if ($request->header('Accept-Language'))
-    {
-    	$accept_languages = explode(',', $request->header('Accept-Language'));
+   // Client's accepted language
+   if ($request->header('Accept-Language'))
+   {
+       $accept_languages = explode(',', $request->header('Accept-Language'));
 
-    	// ...
-    }
+       // ...
+   }
 
 Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **variable** # The name of the header to retrieve
-    **default**  # The default value with the correct variable type |br| Defaults to an empty string: ``''``
+   **variable** # The name of the header to retrieve
+   **default**  # The default value with the correct variable type |br| Defaults to an empty string: ``''``
 
 server
 ------
@@ -280,23 +280,23 @@ It also provides a fallback to ``getenv()`` as some CGI setups may need it.
 .. code-block:: php
    :caption: Example of retrieving SERVER variables
 
-    $script_name = htmlspecialchars_decode($request->server('REQUEST_URI'));
-    $script_name = ($pos = strpos($script_name, '?')) !== false ? substr($script_name, 0, $pos) : $script_name;
+   $script_name = htmlspecialchars_decode($request->server('REQUEST_URI'));
+   $script_name = ($pos = strpos($script_name, '?')) !== false ? substr($script_name, 0, $pos) : $script_name;
 
-    $server_name = htmlspecialchars_decode($request->header('Host', $request->server('SERVER_NAME')));
-    $server_name = (string) strtolower($server_name);
+   $server_name = htmlspecialchars_decode($request->header('Host', $request->server('SERVER_NAME')));
+   $server_name = (string) strtolower($server_name);
 
-    $server_port = $request->server('SERVER_PORT', 0);
+   $server_port = $request->server('SERVER_PORT', 0);
 
 Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **variable** # The name of the variable to retrieve
-    **default**  # The default value with the correct variable type |br| Defaults to an empty string: ``''``
+   **variable** # The name of the variable to retrieve
+   **default**  # The default value with the correct variable type |br| Defaults to an empty string: ``''``
 
 overwrite
 ---------
@@ -313,31 +313,31 @@ Changes which are performed on the super globals directly will **not** have any 
 .. code-block:: php
    :caption: Example of overwriting a variable
 
-    // Reset start parameter if we jumped from the quickmod dropdown
-    if ($request->variable('start', 0))
-    {
-    	$request->overwrite('start', 0);
-    }
+   // Reset start parameter if we jumped from the quickmod dropdown
+   if ($request->variable('start', 0))
+   {
+       $request->overwrite('start', 0);
+   }
 
 .. code-block:: php
    :caption: Example of unsetting a variable in a specific super global
 
-    if ($error)
-    {
-    	$request->overwrite('confirm', null, \phpbb\request\request_interface::POST);
-    	$request->overwrite('confirm_key', null, \phpbb\request\request_interface::POST);
-    }
+   if ($error)
+   {
+       $request->overwrite('confirm', null, \phpbb\request\request_interface::POST);
+       $request->overwrite('confirm_key', null, \phpbb\request\request_interface::POST);
+   }
 
 Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **variable**     # The name of the variable that should be overwritten
-    **value**        # The value the variable should be set at. |br| Setting it to ``null`` will unset the variable.
-    **super_global** # The super global in which the variable should be changed. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
+   **variable**     # The name of the variable that should be overwritten
+   **value**        # The value the variable should be set at. |br| Setting it to ``null`` will unset the variable.
+   **super_global** # The super global in which the variable should be changed. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
 
 variable_names
 --------------
@@ -349,40 +349,40 @@ It will then return all the names *(keys)* that exist for that super global.
 .. code-block:: php
    :caption: Example of retrieving and iterating over a super global's variables
 
-    // Converts query string (GET) parameters in request into hidden fields.
-    $hidden = '';
-    $names = $request->variable_names(\phpbb\request\request_interface::GET);
+   // Converts query string (GET) parameters in request into hidden fields.
+   $hidden = '';
+   $names = $request->variable_names(\phpbb\request\request_interface::GET);
 
-    foreach ($names as $name)
-    {
-    	// Sessions are dealt with elsewhere, omit sid always
-    	if ($name == 'sid')
-    	{
-    		continue;
-    	}
+   foreach ($names as $name)
+   {
+       // Sessions are dealt with elsewhere, omit sid always
+       if ($name == 'sid')
+       {
+           continue;
+       }
 
-    	$value = $request->variable($name, '', true);
-    	$get_value = $request->variable($name, '', true, \phpbb\request\request_interface::GET);
+       $value = $request->variable($name, '', true);
+       $get_value = $request->variable($name, '', true, \phpbb\request\request_interface::GET);
 
-    	if ($value === $get_value)
-    	{
-    		$escaped_name = phpbb_quoteattr($name);
-    		$escaped_value = phpbb_quoteattr($value);
+       if ($value === $get_value)
+       {
+           $escaped_name = phpbb_quoteattr($name);
+           $escaped_value = phpbb_quoteattr($value);
 
-    		$hidden .= "<input type='hidden' name=$escaped_name value=$escaped_value />";
-    	}
-    }
+           $hidden .= "<input type='hidden' name=$escaped_name value=$escaped_value />";
+       }
+   }
 
-    return $hidden;
+   return $hidden;
 
 Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **super_global** # The super global to get the variable names from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
+   **super_global** # The super global to get the variable names from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
 
 
 get_super_global
@@ -395,32 +395,32 @@ It will then return the original array with all the variables for that super glo
 .. code-block:: php
    :caption: Example of retrieving all POST variables
 
-    // Any post data could be necessary for auth (un)linking
-    $link_data = $request->get_super_global(\phpbb\request\request_interface::POST);
+   // Any post data could be necessary for auth (un)linking
+   $link_data = $request->get_super_global(\phpbb\request\request_interface::POST);
 
-    // The current user_id is also necessary
-    $link_data['user_id'] = $user->data['user_id'];
+   // The current user_id is also necessary
+   $link_data['user_id'] = $user->data['user_id'];
 
-    // Tell the provider that the method is auth_link not login_link
-    $link_data['link_method'] = 'auth_link';
+   // Tell the provider that the method is auth_link not login_link
+   $link_data['link_method'] = 'auth_link';
 
-    if (!empty($link_data['link']))
-    {
-    	$auth_provider->link_account($link_data);
-    }
-    else
-    {
-    	$auth_provider->unlink_account($link_data);
-    }
+   if (!empty($link_data['link']))
+   {
+       $auth_provider->link_account($link_data);
+   }
+   else
+   {
+       $auth_provider->unlink_account($link_data);
+   }
 
 Parameters
 ++++++++++
 
 .. csv-table::
-    :header: "Parameter", "Description"
-    :delim: #
+   :header: "Parameter", "Description"
+   :delim: #
 
-    **super_global** # The super global to get the original array from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
+   **super_global** # The super global to get the original array from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
 
 request_var
 ===========
