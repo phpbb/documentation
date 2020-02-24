@@ -13,6 +13,7 @@ Welcome to phpBB's extension development tutorial and documentation.
    tutorial_controllers
    tutorial_migrations
    tutorial_modules
+   tutorial_notifications
    tutorial_permissions
    tutorial_authentication
    tutorial_bbcodes
