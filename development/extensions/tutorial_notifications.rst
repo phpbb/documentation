@@ -465,12 +465,23 @@ If there is no parent for the item, you can set this to zero: ``return 0;``.
 
 find_users_for_notification
 ---------------------------
-// @todo
-users that need to be notified.
+This function is responsible for finding the users that need to be notified.
+It should return an array with the user identifiers as keys and the notification methods as value.
+There are various helper functions that help you achieve the desired outcome.
 
-get_authorised_recipients()
+check_user_notification_options
++++++++++++++++++++++++++++++++
+You can send an array of user identifiers to this function.
+This function will then check the available notification methods for each user.
+If the notification type is available in the :abbr:`UCP (User Control Panel)`, it will check the user's preferences.
+Otherwise it will use the default notification methods; the board method and the email method (if *board-wide emails* is enabled).
+The array that is returned by this function, can be used as a return value for find_users_for_notification_.
 
-check_user_notification_options()
+get_authorised_recipients
++++++++++++++++++++++++++
+If your notification is for an event within a specific forum, you might want to check the users' authentication.
+This can be done by using this function, which will check all users' ``f_read`` permission for the provided ``forum_id``.
+The array that is returned by this function is already put through check_user_notification_options_.
 
 .. code-block:: php
 
@@ -486,7 +497,18 @@ check_user_notification_options()
     */
    public function find_users_for_notification($data, $options = [])
    {
-       return $this->check_user_notification_options($data['user_id']);
+       return $this->check_user_notification_options([$data['user_id']], $options);
+   }
+
+.. note::
+
+    The ``forum_id`` variable below is not set in this Tutorial, just shown as an example.
+
+.. code-block:: php
+
+   public function_find_users_for_notification($data, $options = [])
+   {
+       return $this->get_authorised_recipients([$data['user_id']], $data['forum_id'], $options);
    }
 
 users_to_query
@@ -905,7 +927,8 @@ This can be useful, for example, when you want to show which users have replied 
    |br| *The topic title*
 
 // @todo
-
+Easiest thing to do is extend the :class:`post` notification type and override the necessary functions.
+Make sure to send the correct variables to comply with :class:`post`'s ``get_title`` and ``find_users_for_notification``.
 
 .. |fa-ext| raw:: html
 
