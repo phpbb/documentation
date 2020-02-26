@@ -114,70 +114,70 @@ Each function will retrieve the notification manager from the service container 
 
    class ext extends \phpbb\extension\base
    {
-   	/**
-   	 * Enable notifications for the extension.
-   	 *
-   	 * @param mixed		$old_state		State returned by previous call of this method
-   	 * @return mixed				Returns false after last step, otherwise temporary state
-   	 * @access public
-   	 */
-   	public function enable_step($old_state)
-   	{
-   		if ($old_state === false)
-   		{
-   			/** @var \phpbb\notification\manager $notification_manager */
-   			$notification_manager = $this->container->get('notification_manager');
+       /**
+        * Enable notifications for the extension.
+        *
+        * @param mixed		$old_state		State returned by previous call of this method
+        * @return mixed				Returns false after last step, otherwise temporary state
+        * @access public
+        */
+       public function enable_step($old_state)
+       {
+           if ($old_state === false)
+           {
+               /** @var \phpbb\notification\manager $notification_manager */
+               $notification_manager = $this->container->get('notification_manager');
 
-   			$notification_manager->enable_notifications('vendor.extension.notification.type.sample');
-   			return 'notification';
-   		}
+               $notification_manager->enable_notifications('vendor.extension.notification.type.sample');
+               return 'notification';
+           }
 
-   		return parent::enable_step($old_state);
-   	}
+           return parent::enable_step($old_state);
+       }
 
-   	/**
-   	 * Disable notifications for the extension.
-   	 *
-   	 * @param mixed		$old_state		State returned by previous call of this method
-   	 * @return mixed				Returns false after last step, otherwise temporary state
-   	 * @access public
-   	 */
-   	public function disable_step($old_state)
-   	{
-   		if ($old_state === false)
-   		{
-   			/** @var \phpbb\notification\manager $notification_manager */
-   			$notification_manager = $this->container->get('notification_manager');
+       /**
+        * Disable notifications for the extension.
+        *
+        * @param mixed		$old_state		State returned by previous call of this method
+        * @return mixed				Returns false after last step, otherwise temporary state
+        * @access public
+        */
+       public function disable_step($old_state)
+       {
+           if ($old_state === false)
+           {
+               /** @var \phpbb\notification\manager $notification_manager */
+               $notification_manager = $this->container->get('notification_manager');
 
-   			$notification_manager->disable_notifications('vendor.extension.notification.type.sample');
+               $notification_manager->disable_notifications('vendor.extension.notification.type.sample');
 
-   			return 'notification';
-   		}
+               return 'notification';
+           }
 
-   		return parent::disable_step($old_state);
-   	}
+           return parent::disable_step($old_state);
+       }
 
-   	/**
-   	 * Purge notifications for the extension.
-   	 *
-   	 * @param mixed		$old_state		State returned by previous call of this method
-   	 * @return mixed				Returns false after last step, otherwise temporary state
-   	 * @access public
-   	 */
-   	public function purge_step($old_state)
-   	{
-   		if ($old_state === false)
-   		{
-   			/** @var \phpbb\notification\manager $notification_manager */
-   			$notification_manager = $this->container->get('notification_manager');
+       /**
+        * Purge notifications for the extension.
+        *
+        * @param mixed		$old_state		State returned by previous call of this method
+        * @return mixed				Returns false after last step, otherwise temporary state
+        * @access public
+        */
+       public function purge_step($old_state)
+       {
+           if ($old_state === false)
+           {
+               /** @var \phpbb\notification\manager $notification_manager */
+               $notification_manager = $this->container->get('notification_manager');
 
-   			$notification_manager->purge_notifications('vendor.extension.notification.type.sample');
+               $notification_manager->purge_notifications('vendor.extension.notification.type.sample');
 
-   			return 'notification';
-   		}
+               return 'notification';
+           }
 
-   		return parent::purge_step($old_state);
-   	}
+           return parent::purge_step($old_state);
+       }
    }
 
 Defining the language strings
@@ -195,27 +195,28 @@ You can remove any strings that you will not need.
 
 .. code-block:: php
    :caption: :class:`vendor/extension/language/en/extension_common.php`
+   :name: language file
 
    <?php
 
    if (!defined('IN_PHPBB'))
    {
-   	exit;
+       exit;
    }
 
    if (empty($lang) || !is_array($lang))
    {
-   	$lang = [];
+       $lang = [];
    }
 
    // Some characters you may want to copy&paste: ’ » “ ” …
    $lang = array_merge($lang, [
-   	'VENDOR_EXTENSION_NOTIFICATION_REASON'		=> 'This is a sample reason',
-   	'VENDOR_EXTENSION_NOTIFICATION_TITLE'		=> '<strong>This is a sample  notification</strong> from %s',
+       'VENDOR_EXTENSION_NOTIFICATION_REASON'		=> 'This is a sample reason',
+       'VENDOR_EXTENSION_NOTIFICATION_TITLE'		=> '<strong>Received a sample notification</strong> from %s',
 
-   	// These strings should ideally be defined in a info_ucp_*.php language file
-   	'VENDOR_EXTENSION_NOTIFICATIONS'		=> 'Sample notifications category',
-   	'VENDOR_EXTENSION_NOTIFICATION_SAMPLE'		=> 'Someone sends you a sample notification',
+       // These strings should ideally be defined in a info_ucp_*.php language file
+       'VENDOR_EXTENSION_NOTIFICATIONS'		=> 'Sample notifications category',
+       'VENDOR_EXTENSION_NOTIFICATION_SAMPLE'		=> 'Someone sends you a sample notification',
    ]);
 
 Now lets create the sample email template file, which is located in the language directory.
@@ -273,7 +274,7 @@ Therefore it is important, that our notification type class extends the :class:`
 
    class sample extends \phpbb\notification\type\base
    {
-      // All the functions
+       // All the functions
    }
 
 .. tip::
@@ -328,7 +329,7 @@ You can use this construct for any registered Symfony service that you may need 
     */
    public function set_helper(\phpbb\controller\helper $helper)
    {
-   	$this->helper = $helper;
+       $this->helper = $helper;
    }
 
    /**
@@ -339,7 +340,7 @@ You can use this construct for any registered Symfony service that you may need 
     */
    public function set_user_loader(\phpbb\user_loader $user_loader)
    {
-   	$this->user_loader = $user_loader;
+       $this->user_loader = $user_loader;
    }
 
 get_type
@@ -355,12 +356,12 @@ This should return the service identifier as defined in `Registering as a Symfon
     */
    public function get_type()
    {
-   	return 'vendor.extension.notification.type.sample';
+       return 'vendor.extension.notification.type.sample';
    }
 
 notification_option
 -------------------
-This function defines 2 language strings for the notification to show up in the :abbr:`UCP (User Control Panel)`.
+This variable defines 2 language strings for the notification to show up in the :abbr:`UCP (User Control Panel)`.
 |br| The ``group`` is for the category under which the the notification type will show up.
 |br| The ``lang`` is for the actual notification type.
 
@@ -370,8 +371,8 @@ This ``id`` variable is used to concatenate multiple notification types into one
 So if you have multiple notification types that should show up as a single type in the user's preferences,
 you can set the same ``id`` on all those types.
 
-If you do not wish to display this notification in the user's preferences, you can omit this function.
-Also make sure to set the is_available_ to ``false`` then.
+If you do not wish to display this notification in the user's preferences, you can omit this variable.
+In that case also make sure to set the is_available_ to ``false``.
 
 .. code-block:: php
 
@@ -383,8 +384,8 @@ Also make sure to set the is_available_ to ``false`` then.
     * @static
     */
    static public $notification_option = [
-   	'lang'	=> 'VENDOR_EXTENSION_NOTIFICATION_SAMPLE',
-   	'group'	=> 'VENDOR_EXTENSION_NOTIFICATIONS',
+       'lang'	=> 'VENDOR_EXTENSION_NOTIFICATION_SAMPLE',
+       'group'	=> 'VENDOR_EXTENSION_NOTIFICATIONS',
    ];
 
 is_available
@@ -403,24 +404,32 @@ and thus can not enable/disable any notification methods.
    /**
     * Is this type available to the current user.
     *
-    * Defines whether or not it will be shown in the UCP Edit notification options.
+    * Defines whether or not it will be shown in the UCP "Edit notification options".
     *
     * @return bool				Whether or not this is available to the user
     */
    public function is_available()
    {
-   	return $this->config['allow_privmsg'] && $this->auth->acl_get('u_readpm');
+       return $this->config['allow_privmsg'] && $this->auth->acl_get('u_readpm');
    }
 
 get_item_id
 -----------
-// @todo
-the id for the notification, for the item it represents.
+This function should return the identifier for the item this notification belongs to.
+Usually this refers to some sort of entity, like a forum, topic, post, etc..
+If you do not have any specific "item", you can have a look at the `Custom item identifier`_.
+
+Just to be clear, this identifier is not the actual notification identifier (``notification_id``).
+However, it is used - in conjunction with the `parent identifier <get_item_parent_id_>`_ - to create an index.
+For example, when a notification with an item/parent id is send to a user,
+and that user still has not read a prior notification with the same item/parent id combination,
+the new notification will not be send.
+This is to prevent spamming the user with notifications about the same item over and over.
 
 .. code-block:: php
 
    /**
-    * Get the id of the notification.
+    * Get the id of the item.
     *
     * @param array	$data			The notification type specific data
     * @return int				Identifier of the notification
@@ -428,14 +437,17 @@ the id for the notification, for the item it represents.
     */
    public static function get_item_id($data)
    {
-   	return $data['message_id'];
+       return $data['message_id'];
    }
 
 get_item_parent_id
 ------------------
-// @todo
-the id for the parent of the item it represents.
-eg. the topic id for a post, or a forum id for a topic, etc.
+This function should return the identifier for the parent of the item this notification belongs to.
+Usually this refers to some sort of parent entity for the `item identifier <get_item_id_>`_, like a forum, topic, post, etc..
+When the item is a topic, the parent is the forum.
+When the item is a post, the parent is the topic.
+And so on, and so forth.
+If there is no parent for the item, you can set this to zero: ``return 0;``.
 
 .. code-block:: php
 
@@ -448,7 +460,7 @@ eg. the topic id for a post, or a forum id for a topic, etc.
     */
    public static function get_item_parent_id($data)
    {
-   	return 0;
+       return 0;
    }
 
 find_users_for_notification
@@ -456,8 +468,9 @@ find_users_for_notification
 // @todo
 users that need to be notified.
 
-
 get_authorised_recipients()
+
+check_user_notification_options()
 
 .. code-block:: php
 
@@ -467,13 +480,13 @@ get_authorised_recipients()
     * @param array $data			The type specific data
     * @param array $options			Options for finding users for notification
     * 				 		ignore_users => array of users and user types that should not receive notifications from this type
-    *              				 because they've already been notified
+    * 				 		because they've already been notified
     * 						  e.g.: array(2 => array(''), 3 => array('', 'email'), ...)
     * @return array				Array of user identifiers with their notification method(s)
     */
    public function find_users_for_notification($data, $options = [])
    {
-   	return $this->check_user_notification_options($data['user_id']);
+       return $this->check_user_notification_options($data['user_id']);
    }
 
 users_to_query
@@ -491,7 +504,7 @@ For example users whose username need to be displayed, or the user whose avatar 
     */
    public function users_to_query()
    {
-   	return [$this->get_data('sender_id')];
+       return [$this->get_data('sender_id')];
    }
 
 get_avatar
@@ -517,12 +530,14 @@ If you do not wish to display an avatar next to the notification text, you can o
     */
    public function get_avatar()
    {
-   	return $this->user_loader->get_avatar($this->get_data('sender_id'), false, true);
+       return $this->user_loader->get_avatar($this->get_data('sender_id'), false, true);
    }
 
 get_title
 ---------
-// @todo
+This should return the main text for the notification.
+Usually the action that was taken why this user received a notification.
+Commonly the action is made bold and everything else is regular, as shown in the `language file`_.
 
 .. code-block:: php
 
@@ -533,15 +548,48 @@ get_title
     */
    public function get_title()
    {
-   	return $this->language->lang(
-   		'VENDOR_EXTENSION_NOTIFICATION_SAMPLE_TITLE',
-   		$this->user_loader->get_username($this->get_data('sender_id'), 'no_profile')
-   	);
+       return $this->language->lang(
+           'VENDOR_EXTENSION_NOTIFICATION_SAMPLE_TITLE',
+           $this->user_loader->get_username($this->get_data('sender_id'), 'no_profile')
+       );
+   }
+
+get_forum
+---------
+If you want to provide the name of the forum the action occurred that triggered this notification,
+that is possible through this notification. For example when a new topic is posted.
+Can be omitted if no forum name is required or available.
+It will be prefixed by the *Forum:* string:
+
+    *Forum:* The forum name
+
+.. note::
+
+    The ``forum_name`` variable below is not set in this Tutorial, just shown as an example.
+
+.. code-block:: php
+
+   /**
+    * Get the forum name for this notification.
+    *
+    * @return string
+    */
+   public function get_forum()
+   {
+       return $this->language->lang(
+           'NOTIFICATION_FORUM',
+           $this->get_data('forum_name')
+       );
    }
 
 get_reason
 ----------
-// @todo
+If you want to provide a literal reason for this notification, that is possible through this function.
+For example the reason provided when creating or closing a report, or for editing or deleting a post.
+Can be omitted if no additional reason is required.
+It will be prefixed by the *Reason:* string:
+
+    *Reason:* This is a sample reason
 
 .. code-block:: php
 
@@ -552,15 +600,20 @@ get_reason
     */
    public function get_reason()
    {
-   	return $this->language->lang(
-   		'NOTIFICATION_REASON',
-   		$this->language->lang('VENDOR_EXTENSION_NOTIFICATION_SAMPLE_REASON'))
-   	);
+       return $this->language->lang(
+           'NOTIFICATION_REASON',
+           $this->language->lang('VENDOR_EXTENSION_NOTIFICATION_SAMPLE_REASON'))
+       );
    }
 
 get_reference
 -------------
-// @todo
+If you want to provide an additional reference for this notification, that is possible through this notification.
+For example the subject of a private message, post or topic.
+Can be omitted if no additional reference is required.
+It will be encapsulated in double quotes:
+
+    "The message subject"
 
 .. code-block:: php
 
@@ -571,33 +624,20 @@ get_reference
     */
    public function get_reference()
    {
-   	return $this->language->lang(
-   		'NOTIFICATION_REFERENCE',
-   		censor_text($this->get_data('message_subject'))
-   	);
-   }
-
-get_forum
----------
-// @todo
-
-.. code-block:: php
-
-   /**
-    * Get the forum for this notification.
-    *
-    * @return string
-    */
-   public function get_forum()
-   {
-   	return $this->language->lang(
-   		'NOTIFICATION_FORUM',
-   		$this->get_data('forum_name')
-   	);
+       return $this->language->lang(
+           'NOTIFICATION_REFERENCE',
+           censor_text($this->get_data('message_subject'))
+       );
    }
 
 get_style_class
 ---------------
+It is also possible to add a custom CSS class to the notification row.
+This can be useful if you want to do some additional or different styling.
+For example when the notification is about a report or a disapproval.
+Providing a string here, will add it as classes to the notification.
+Can be omitted if no additional CSS class is required.
+
 .. code-block:: php
 
    /**
@@ -607,36 +647,71 @@ get_style_class
     */
    public function get_style_class()
    {
-   	return 'sample-notification-class';
+       return 'sample-notification-class and-another-class';
    }
 
 get_url
 -------
-// @todo
+This should return the url the user is send to when clicking on the notification.
+It is required to have this function in your notification type, even if there is no url to send the user to.
+In such a case, return an empty string: ``return '';``.
+
+There are - usually - two ways to create the required url.
+Either through ``append_sid()`` or using the *Controller helper object*.
+The first one is commonly used when sending a user to a page within the phpBB core, such as viewforum, viewtopic or the ucp.
+The second one is commonly used when sending a user to a page within an extension, which are often routes.
 
 .. code-block:: php
+   :caption: Returning a url with the ``append_sid`` option
 
    /**
     * Get the url to this item.
     *
-    * @return string				URL for this notification
+    * @return string				The notification's url
     */
    public function get_url()
    {
-   	return $this->helper->route('phpbbstudio_tasks_operator', [
-   		'action'		=> 'entries',
-   		'operator_id'	=> $this->get_data('operator_id'),
-   		'entry_id'		=> $this->get_data('entry_id'),
-   		'#'				=> 'e' . $this->get_data('entry_id'),
-   	]);
+       return append_sid("{$this->phpbb_root_path}ucp.{$this->php_ext}", [
+           'mode' => 'view',
+           'i'    => 'pm'
+           'p'    => $this->get_data('message_id'),
+       ]);
    }
 
-Unfortunately, that object is not available by default in the `Base services`_.
-However, we have added that in the `Additional services`_ section, so we can use it anyway!
+.. note::
+
+    We have added the *Controller helper object* in the `Additional services`_ section.
+
+.. code-block:: php
+   :caption: Returning a url with the Controller helper object
+
+   public function get_url()
+   {
+       return $this->helper->route('vendor_extension_route', [
+           'subject'	=> $this->get_data('message_subject'),
+       ]);
+   }
 
 get_redirect_url
 ----------------
-// @todo
+This function can return a different url than get_url_.
+The url returned by this function, will be used to ``redirect()`` the user to when they mark the notification as read.
+Most commonly this url is the same as the url returned by get_url_, it even defaults to that.
+So if you do not want to provide a different *"mark read"*-url, you can omit this function.
+
+For example, the :class:`post` notification uses this to send the user to first unread post in a topic.
+
+.. code-block:: php
+
+   /**
+    * Get the url to redirect to after the item has been marked as read.
+    *
+    * @return string				The notification's "mark read"-url
+    */
+   public function get_redirect_url()
+   {
+       return append_sid("{$this->phpbb_root_path}viewtopic.{$this->php_ext}", "t={$this->item_parent_id}&amp;view=unread#unread");
+   }
 
 get_email_template
 ------------------
@@ -662,7 +737,7 @@ you will have to indicate that in the path: ``@vendor_extension/subdirectory/sam
     */
    public function get_email_template()
    {
-   	return '@vendor_extension/sample';
+       return '@vendor_extension/sample';
    }
 
 There is also a third notification method, Jabber, which uses the :class:`email/short` directory for its template files.
@@ -705,27 +780,53 @@ The example below will show you how to achieve this for both regular urls and ur
     */
    public function get_email_template_variables()
    {
-   	return [
-   		'AUTHOR'	=> htmlspecialchars_decode($this->user_loader->get_username($this->get_data('sender_id'), 'username')),
-   		'SUBJECT'	=> htmlspecialchars_decode(censor_text($this->get_data('message_subject')),
+       return [
+           'AUTHOR'	=> htmlspecialchars_decode($this->user_loader->get_username($this->get_data('sender_id'), 'username')),
+           'SUBJECT'	=> htmlspecialchars_decode(censor_text($this->get_data('message_subject')),
 
-   		// Absolute url: regular
-   		'U_REGULAR'     => generate_board_url() . '/ucp.' . $this->php_ext . '?i=pm&mode=view&p=' . $this->get_data('message_id'),
+           // Absolute url: regular
+           'U_REGULAR'     => generate_board_url() . '/ucp.' . $this->php_ext . '?i=pm&mode=view&p=' . $this->get_data('message_id'),
 
-   		// Absolute url: route
-   		'U_ROUTE'       => generate_board_url(false) . $this->helper->route('vendor_extension_route'),
-   	];
+           // Absolute url: route
+           'U_ROUTE'       => generate_board_url(false) . $this->helper->route('vendor_extension_route'),
+       ];
    }
 
 get_data
 --------
-// @todo
-There is no ``$data`` parameter for this function, so if you need any data from the notification, to retrieve a specific identifier,
-you will have to use the get_data_ function, which retrieves data inserted by the create_insert_array_.
+This is a helper function, commonly used within functions that are called when displaying this notification type.
+These *display functions* often need to access some data specific to a certain notification, such as a ``message_id``.
+To retrieve those data variables, you can use this function, with the variable name as argument: ``$this->get_data('key')``.
+
+.. important::
+
+    All data that you have to retrieve, must be inserted upon creation of the notification.
+    |br| This is done through create_insert_array_ function.
+
+.. code-block:: php
+
+   $this->get_data('sender_id');
+   $this->get_data('message_id');
+   $this->get_data('message_subject');
 
 create_insert_array
 -------------------
-// @todo
+This function is responsible for inserting data specific to this notification type.
+This data will be stored in the database and used when displaying the notification.
+
+The ``$data`` parameter will contain the array that is being send when `Sending a notification`_.
+So, all data that is needed for creating and displaying the notification has to be included.
+
+However, only the data that is needed for displaying the notification, must be inserted.
+If you've paid close attention, you will have noticed that we use 4 data variables.
+Namely ``user_id``, ``sender_id``, ``message_id`` and ``message_subject``.
+But the ``user_id`` is only required when creating the notification, and not needed when displaying it.
+So this variable does not have to be stored in the database.
+All other variables can be inserted using the ``set_data('key', 'value')`` helper function.
+
+.. hint::
+
+    As a rule of thumb, only the data you get through ``get_data()`` has to be set through ``set_data()``.
 
 .. code-block:: php
 
@@ -739,19 +840,11 @@ create_insert_array
     */
    public function create_insert_array($data, $pre_create_data = [])
    {
-   	$keys = [
-   		'message_subject',
-   		'message_id',
-   		'sender_id',
-   		'user_id',
-   	];
+       $this->set_data('sender_id', $data['sender_id']);
+       $this->set_data('message_id', $data['message_id']);
+       $this->set_data('message_subject', $data['message_subject']);
 
-   	foreach ($keys as $key)
-   	{
-   		$this->set_data($key, $data[$key]);
-   	}
-
-   	parent::create_insert_array($data, $pre_create_data);
+       parent::create_insert_array($data, $pre_create_data);
    }
 
 Sending a notification
@@ -791,7 +884,7 @@ You can use the Config object's (:class:`\\phpbb\\config\\config`) ``increment()
    $this->config->increment('vendor_extension_notification_id', 1);
 
    $this->notification_manager->add_notification('vendor.extension.notification.type.sample', [
-      'item_id'   => $this->config['vendor_extension_notification_id'],
+       'item_id'   => $this->config['vendor_extension_notification_id'],
    ]);
 
 You can use this custom notification identifier in the get_item_id_ function.
@@ -800,7 +893,7 @@ You can use this custom notification identifier in the get_item_id_ function.
 
    public static function get_item_id($data)
    {
-   	return $data['item_id'];
+       return $data['item_id'];
    }
 
 Building a users list
@@ -836,4 +929,4 @@ This can be useful, for example, when you want to show which users have replied 
 
 .. |br| raw:: html
 
-	<br>
+    <br>
