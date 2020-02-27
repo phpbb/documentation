@@ -57,10 +57,10 @@ Registering as a Symfony service
 --------------------------------
 Firstly the notification type has to be registered as a Symfony service.
 As with any service declaration, it will need a service identifier and the class argument.
-However, notifications types also need three additional parameters. The parent, shared and tags parameters.
+However, notification types also need three additional parameters. The parent, shared and tags parameters.
 The parent parameter will indicate from which service this notification type will inherit.
 And the shared parameter will make sure that each time this notification type is requested, a new instance is created.
-This will prevent that any data will be transferred over.
+This will prevent that any data from one notification is transferred over to an other.
 Lastly, the service needs to be tagged as a notification type, so it will be correctly listed in all places.
 
 .. code-block:: yaml
@@ -74,13 +74,15 @@ Lastly, the service needs to be tagged as a notification type, so it will be cor
            tags: [{ name: notification.type }]
 
 However, we want to use two additional services in our notification type.
-We want to also use the Controller helper object (:class:`\\phpbb\\controller\\helper`)
-and the User loader object (:class:`\\phpbb\\user_loader`).
+We want to also use the Controller helper object (:class:`\\phpbb\\controller\\helper`) to create a route (see get_url_)
+and the User loader object (:class:`\\phpbb\\user_loader`) to display a user's details (see get_title_ and get_avatar_).
 But because we are defining a ``parent``, we can not also use the ``arguments`` parameter.
 We either have to define all ``arguments``, including the ones from the parent,
 or we can use a different setup and use the ``calls`` parameter as shown below.
 You can read more about this in `Additional services`_.
-The first argument is the function's name and the second parameter is an array of service definitions.
+
+The first argument in the call is the name of the ``set_`` function we are going to call and create in our :class:`sample` class.
+The second argument is an array with service definitions that our ``set_`` functions will be adding to our :class:`sample` class.
 
 .. code-block:: yaml
    :caption: :class:`vendor/config/services.yml`
@@ -117,8 +119,8 @@ Each function will retrieve the notification manager from the service container 
        /**
         * Enable notifications for the extension.
         *
-        * @param mixed		$old_state		State returned by previous call of this method
-        * @return mixed				Returns false after last step, otherwise temporary state
+        * @param mixed  $old_state  State returned by previous call of this method
+        * @return mixed             Returns false after last step, otherwise temporary state
         * @access public
         */
        public function enable_step($old_state)
@@ -138,8 +140,8 @@ Each function will retrieve the notification manager from the service container 
        /**
         * Disable notifications for the extension.
         *
-        * @param mixed		$old_state		State returned by previous call of this method
-        * @return mixed				Returns false after last step, otherwise temporary state
+        * @param mixed  $old_state  State returned by previous call of this method
+        * @return mixed             Returns false after last step, otherwise temporary state
         * @access public
         */
        public function disable_step($old_state)
@@ -160,8 +162,8 @@ Each function will retrieve the notification manager from the service container 
        /**
         * Purge notifications for the extension.
         *
-        * @param mixed		$old_state		State returned by previous call of this method
-        * @return mixed				Returns false after last step, otherwise temporary state
+        * @param mixed  $old_state  State returned by previous call of this method
+        * @return mixed             Returns false after last step, otherwise temporary state
         * @access public
         */
        public function purge_step($old_state)
@@ -222,7 +224,7 @@ You can remove any strings that you will not need.
 Now lets create the sample email template file, which is located in the language directory.
 The variables used in this file are defined in get_email_template_variables_.
 The first line of the file should begin with ``Subject:``, followed by the actual email subject and an empty line.
-It is possible to use variables in the subject line aswell.
+It is possible to use variables in the subject line as well.
 
 .. code-block:: text
    :caption: :class:`vendor/extension/language/en/email/sample.txt`
@@ -259,7 +261,7 @@ It is possible to use variables in the subject line aswell.
 
 Setting up the notification type class
 --------------------------------------
-This is the bare bones of notification type class.
+The following example shows what is needed as the bare minimum for a notification type class.
 `All the functions <Functions of a notification type_>`_ will be discussed later on.
 
 We have defined the :class:`base` notification type class as a ``parent`` when we were `Registering as a Symfony service`_.
@@ -324,7 +326,7 @@ You can use this construct for any registered Symfony service that you may need 
    /**
     * Set controller helper.
     *
-    * @param \phpbb\controller\helper	$helper		Controller helper object
+    * @param \phpbb\controller\helper  $helper  Controller helper object
     * @return void
     */
    public function set_helper(\phpbb\controller\helper $helper)
@@ -335,7 +337,7 @@ You can use this construct for any registered Symfony service that you may need 
    /**
     * Set user loader.
     *
-    * @param \phpbb\user_loader		$user_loader	User loader object
+    * @param \phpbb\user_loader  $user_loader  User loader object
     * @return void
     */
    public function set_user_loader(\phpbb\user_loader $user_loader)
@@ -352,7 +354,7 @@ This should return the service identifier as defined in `Registering as a Symfon
    /**
     * Get notification type name.
     *
-    * @return string				The notification name as defined in services.yml
+    * @return string  The notification name as defined in services.yml
     */
    public function get_type()
    {
@@ -379,8 +381,8 @@ In that case also make sure to set the is_available_ to ``false``.
    /**
     * Notification option data (for outputting to the user).
     *
-    * @var bool|array				False if the service should use it's default data
-    * 						Array of data (including keys 'id', 'lang', and 'group')
+    * @var bool|array  False if the service should use it's default data
+    *                  Array of data (including keys 'id', 'lang', and 'group')
     * @static
     */
    static public $notification_option = [
@@ -391,7 +393,8 @@ In that case also make sure to set the is_available_ to ``false``.
 is_available
 ------------
 This function determines if this notification type should show in the :abbr:`UCP (User Control Panel)`.
-You can simply set it to ``true`` or check some configuration or authentication settings. Or anything else for that matter.
+You can simply set it to ``true`` or check some configuration or authentication settings.
+Or anything else for that matter, as long as it always returns either a ``true`` or ``false`` boolean.
 As shown below, where we check if the private messages are enabled and the user is authorised to read them.
 
 If it is not set to ``false``, make sure the `notification_option`_ array is set.
@@ -406,7 +409,7 @@ and thus can not enable/disable any notification methods.
     *
     * Defines whether or not it will be shown in the UCP "Edit notification options".
     *
-    * @return bool				Whether or not this is available to the user
+    * @return bool  Whether or not this is available to the user
     */
    public function is_available()
    {
@@ -421,9 +424,9 @@ If you do not have any specific "item", you can have a look at the `Custom item 
 
 Just to be clear, this identifier is not the actual notification identifier (``notification_id``).
 However, it is used - in conjunction with the `parent identifier <get_item_parent_id_>`_ - to create an index.
-For example, when a notification with an item/parent id is send to a user,
+For example, when a notification with an item/parent id is sent to a user,
 and that user still has not read a prior notification with the same item/parent id combination,
-the new notification will not be send.
+the new notification will not be sent.
 This is to prevent spamming the user with notifications about the same item over and over.
 
 .. code-block:: php
@@ -431,8 +434,8 @@ This is to prevent spamming the user with notifications about the same item over
    /**
     * Get the id of the item.
     *
-    * @param array	$data			The notification type specific data
-    * @return int				Identifier of the notification
+    * @param array  $data  The notification type specific data
+    * @return int          Identifier of the notification
     * @static
     */
    public static function get_item_id($data)
@@ -454,8 +457,8 @@ If there is no parent for the item, you can set this to zero: ``return 0;``.
    /**
     * Get the id of the parent.
     *
-    * @param array	$data			The type notification specific data
-    * @return int				Identifier of the parent
+    * @param array  $data  The type notification specific data
+    * @return int          Identifier of the parent
     * @static
     */
    public static function get_item_parent_id($data)
@@ -488,12 +491,12 @@ The array that is returned by this function is already put through check_user_no
    /**
     * Find the users who want to receive notifications.
     *
-    * @param array $data			The type specific data
-    * @param array $options			Options for finding users for notification
-    * 				 		ignore_users => array of users and user types that should not receive notifications from this type
-    * 				 		because they've already been notified
-    * 						  e.g.: array(2 => array(''), 3 => array('', 'email'), ...)
-    * @return array				Array of user identifiers with their notification method(s)
+    * @param array  $data     The type specific data
+    * @param array  $options  Options for finding users for notification
+    *                           ignore_users => array of users and user types that should not receive notifications from this type
+    *                           because they've already been notified
+    *                           e.g.: array(2 => array(''), 3 => array('', 'email'), ...)
+    * @return array           Array of user identifiers with their notification method(s)
     */
    public function find_users_for_notification($data, $options = [])
    {
@@ -514,15 +517,22 @@ The array that is returned by this function is already put through check_user_no
 users_to_query
 --------------
 This function should return an array of user identifiers.
-Identifiers of users that need to be queried for this notification to be displayed to the user that is notified.
-For example users whose username need to be displayed, or the user whose avatar will be shown next to the notification text.
+The Notification manager object (:class:`\\phpbb\\notification\\manager`) will retrieve all identifiers from all the notifications that need to be displayed.
+It will then use a single SQL query to retrieve all the data for these users,
+rather than each notification having to query a user's data separately.
+Therefore return the identifiers for the users whose username need to be displayed,
+or for users whose avatar will be shown next to the notification text.
+
+.. tip::
+
+   As a rule of thumb, all the user ids that are used in the ``$user_loader`` should be returned here.
 
 .. code-block:: php
 
    /**
     * Users needed to query before this notification can be displayed.
     *
-    * @return array				Array of user identifiers to query.
+    * @return array  Array of user identifiers to query.
     */
    public function users_to_query()
    {
@@ -548,7 +558,7 @@ If you do not wish to display an avatar next to the notification text, you can o
    /**
     * Get the user's avatar.
     *
-    * @return string				The HTML formatted avatar
+    * @return string  The HTML formatted avatar
     */
    public function get_avatar()
    {
@@ -558,15 +568,20 @@ If you do not wish to display an avatar next to the notification text, you can o
 get_title
 ---------
 This should return the main text for the notification.
-Usually the action that was taken why this user received a notification.
+Usually the action that was taken that resulted in this notification.
 Commonly the action is made bold and everything else is regular, as shown in the `language file`_.
+
+We send the sender's username as a second argument, which will be inserted in our notification title's placeholder: ``%s``.
+The username can be easily retrieved by the ``$user_loader`` object.
+All the data for this user has already been queried, as we provided the user identifier in the users_to_query_ function.
+So no additional SQL queries have to be ran.
 
 .. code-block:: php
 
    /**
     * Get the title of this notification.
     *
-    * @return string				The notification's title
+    * @return string  The notification's title
     */
    public function get_title()
    {
@@ -578,7 +593,7 @@ Commonly the action is made bold and everything else is regular, as shown in the
 
 get_forum
 ---------
-If you want to provide the name of the forum the action occurred that triggered this notification,
+If you want to provide the name of the forum that triggered this notification,
 that is possible through this notification. For example when a new topic is posted.
 Can be omitted if no forum name is required or available.
 It will be prefixed by the *Forum:* string:
@@ -594,7 +609,7 @@ It will be prefixed by the *Forum:* string:
    /**
     * Get the forum name for this notification.
     *
-    * @return string
+    * @return string  The notification's forum name
     */
    public function get_forum()
    {
@@ -618,7 +633,7 @@ It will be prefixed by the *Reason:* string:
    /**
     * Get the reason for this notification.
     *
-    * @return string				The notification's reason
+    * @return string  The notification's reason
     */
    public function get_reason()
    {
@@ -642,7 +657,7 @@ It will be encapsulated in double quotes:
    /**
     * Get the reference for this notification.
     *
-    * @return string				The notification's reference
+    * @return string  The notification's reference
     */
    public function get_reference()
    {
@@ -665,7 +680,7 @@ Can be omitted if no additional CSS class is required.
    /**
     * Get the CSS style class for this notification.
     *
-    * @return string                The notification's CSS class
+    * @return string  The notification's CSS class
     */
    public function get_style_class()
    {
@@ -674,14 +689,14 @@ Can be omitted if no additional CSS class is required.
 
 get_url
 -------
-This should return the url the user is send to when clicking on the notification.
-It is required to have this function in your notification type, even if there is no url to send the user to.
+This should return the url the user is sent to when clicking on the notification.
+This function is required in your notification type, even if there is no url to send the user to (in which case it should return an empty string).
 In such a case, return an empty string: ``return '';``.
 
 There are - usually - two ways to create the required url.
 Either through ``append_sid()`` or using the *Controller helper object*.
 The first one is commonly used when sending a user to a page within the phpBB core, such as viewforum, viewtopic or the ucp.
-The second one is commonly used when sending a user to a page within an extension, which are often routes.
+The second one is commonly used when sending a user to a page within an extension, which often use routes.
 
 .. code-block:: php
    :caption: Returning a url with the ``append_sid`` option
@@ -689,7 +704,7 @@ The second one is commonly used when sending a user to a page within an extensio
    /**
     * Get the url to this item.
     *
-    * @return string				The notification's url
+    * @return string  The notification's url
     */
    public function get_url()
    {
@@ -717,7 +732,7 @@ The second one is commonly used when sending a user to a page within an extensio
 get_redirect_url
 ----------------
 This function can return a different url than get_url_.
-The url returned by this function, will be used to ``redirect()`` the user to when they mark the notification as read.
+The url returned by this function will be used to ``redirect()`` the user to when they mark the notification as read.
 Most commonly this url is the same as the url returned by get_url_, it even defaults to that.
 So if you do not want to provide a different *"mark read"*-url, you can omit this function.
 
@@ -728,7 +743,7 @@ For example, the :class:`post` notification uses this to send the user to first 
    /**
     * Get the url to redirect to after the item has been marked as read.
     *
-    * @return string				The notification's "mark read"-url
+    * @return string  The notification's "mark read"-url
     */
    public function get_redirect_url()
    {
@@ -755,7 +770,7 @@ you will have to indicate that in the path: ``@vendor_extension/subdirectory/sam
    /**
     * Get email template.
     *
-    * @return string|false			This notification's template file or false if there is none
+    * @return string|false  This notification's template file or false if there is none
     */
    public function get_email_template()
    {
@@ -798,7 +813,7 @@ The example below will show you how to achieve this for both regular urls and ur
    /**
     * Get email template variables.
     *
-    * @return array				Array of variables that can be used in the email template
+    * @return array  Array of variables that can be used in the email template
     */
    public function get_email_template_variables()
    {
@@ -836,7 +851,7 @@ create_insert_array
 This function is responsible for inserting data specific to this notification type.
 This data will be stored in the database and used when displaying the notification.
 
-The ``$data`` parameter will contain the array that is being send when `Sending a notification`_.
+The ``$data`` parameter will contain the array that is being sent when `Sending a notification`_.
 So, all data that is needed for creating and displaying the notification has to be included.
 
 However, only the data that is needed for displaying the notification, must be inserted.
@@ -856,8 +871,8 @@ All other variables can be inserted using the ``set_data('key', 'value')`` helpe
     * Function for preparing the data for insertion in an SQL query.
     * (The service handles insertion)
     *
-    * @param array	$data			The type specific data
-    * @param array	$pre_create_data	Data from pre_create_insert_array()
+    * @param array  $data             The type specific data
+    * @param array  $pre_create_data  Data from pre_create_insert_array()
     * @return void
     */
    public function create_insert_array($data, $pre_create_data = [])
@@ -872,10 +887,11 @@ All other variables can be inserted using the ``set_data('key', 'value')`` helpe
 Sending a notification
 ======================
 
-Deleting a notification
-=======================
 
 Updating a notification
+=======================
+
+Deleting a notification
 =======================
 
 Marking a notification
