@@ -8,8 +8,8 @@ Tutorial: Notifications
 
 Introduction
 ============
-Notifications have been a part of phpBB ever since :guilabel:`3.0`.
-Since then they have been further developed, extended and enhanced.
+The notification system have been a part of phpBB ever since :guilabel:`3.1`.
+Since then it has been further developed, extended and enhanced.
 In :guilabel:`3.2` the notification system has been completely refactored, so it worked faster and more efficiently.
 This change also reduced the posting time to be almost instantaneous.
 
