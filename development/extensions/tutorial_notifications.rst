@@ -886,10 +886,117 @@ All other variables can be inserted using the ``set_data('key', 'value')`` helpe
 
 Sending a notification
 ======================
+Now that we've set up our notification type class, it's time to start sending the notification.
+We know what data we need, so we can collect that when the event is triggered.
 
+Sending a notification is done with the Notification manager object (:class:`\\phpbb\\notification\\manager`).
+This service can be injected with the ``- '@notification_manager'`` service declaration.
+
+Then you can use the notification manager to send the notification.
+This is done with the ``add_notifications`` function.
+The notification type (:class:`vendor.extension.notification.type.sample`) should be provided as the first argument,
+and all the ``$data`` that we need in our notification type as the second argument.
+
+Below you'll find a simple example on how to send the notification.
+It's possible to send a notification from anywhere.
+This example uses an event listener, but it is also possible to send it from a controller.
+
+.. code-block:: php
+   :caption: :class:`\\vendor\\extension\\event\\listener`
+
+   <?php
+
+   namespace vendor\extension\event;
+
+   class listener implements \Symfony\Component\EventDispatcher\EventSubscriberInterface
+   {
+       static public function getSubscribedEvents()
+       {
+           return ['core.submit_pm_after' => 'send_sample_notification'];
+       }
+
+       /** @var \phpbb\notification\manager */
+       protected $notification_manager;
+
+       public function __construct(\phpbb\notification\manager $notication_manager)
+       {
+           $this->notification_manager   = $notification_manager;
+       }
+
+       public function send_sample_notification(\phpbb\event\data $event)
+       {
+           // For the sake of this tutorial, we assume that the PM is send to a single user
+           $this->notification_manager->add_notifications('vendor.extension.notification.type.sample', [
+               'user_id'         => array_key_first($event['pm_data']['recipients']),
+               'sender_id'       => $event['data']['from_user_id'],
+               'message_id'      => $event['data']['msg_id'],
+               'message_subject' => $event['subject'],
+           ]);
+       }
+   }
 
 Updating a notification
 =======================
+Updating a notification is done with the Notification manager object (:class:`\\phpbb\\notification\\manager`).
+This service can be injected with the ``- '@notification_manager'`` service declaration.
+
+Then you can use the notification manager to update the notification.
+This is done with the ``update_notifications`` function.
+The notification type (:class:`vendor.extension.notification.type.sample`) should be provided as the first argument,
+and all the ``$data`` that we need in our notification type as the second argument.
+Optionally you can send a third argument, ``$options``, to specify which notification should be updated.
+The options that can be defined are listed below:
+
+.. csv-table::
+    :header: "Object", "Class"
+    :delim: #
+
+    ``item_id``        # The item identifier for the notification. |br| Defaults to get_item_id_
+    ``item_parent_id`` # The item's parent identifier for the notification. |br| Optional
+    ``user_id``        # The user identifier for who received the notification. |br| Optional
+    ``read``           # A boolean indicating whether the notification has been read. |br| Optional
+
+.. code-block:: php
+
+   // For the sake of this tutorial, we assume that the PM is send to a single user
+   $user_id = array_key_first($event['pm_data']['recipients']);
+
+   $data = [
+       'user_id'         => $user_id,
+       'sender_id'       => $event['data']['from_user_id'],
+       'message_id'      => $event['data']['msg_id'],
+       'message_subject' => $event['data']['subject'],
+   ];
+
+   // Just the item identifier is sufficient to update this notification as it is unique
+   // But lets include some options to demonstrate how that can be done aswell.
+   $options = [
+       'user_id'  => $user_id,
+       'item_id'  => $event['data']['msg_id'],
+       'read'     => false, // Only update when user has not read it yet
+   ];
+
+   $this->notification_manager->update_notifications('vendor.extension.notification.type.sample', $data, $options);
+
+Now lets go through how this works.
+It will create the notification type as if it was being sent.
+Then, rather than inserting the notification, it will retrieve the data created by the create_insert_array_ function.
+That data is turned into a SQL :class:`UPDATE` statement ``$db->sql_create_array('UPDATE', $data)``.
+And the ``$options`` provided are turned into a SQL :class:`WHERE` statement.
+
+// @todo The data set in the create insert array belongs to notification_data - serialize()
+
+How the data is retrieved, is done with a function in the notification type :class:`base` class.
+This function is called ``create_update_array``.
+Which first creates the insert array and then unsets a few variables that should not be updated;
+``user_id``, ``notification_id``, ``notification_time`` and ``notification_read``
+*(which is the indicator for whether or not the notification has already been read)*.
+If you want to update any of these variables aswell, you will have to override the :class:`base` ``create_update_array`` function.
+
+Now, there is another option that you can utilise.
+A possibility where you handle the update process for your notification type completely yourself.
+This is done by creating a ``update_notifications`` function in your notification type class.
+Have a look at the :class:`quote` type to see an example.
 
 Deleting a notification
 =======================
