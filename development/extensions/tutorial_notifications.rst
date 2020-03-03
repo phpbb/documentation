@@ -297,8 +297,8 @@ Therefore it is important that our notification type class extends the :class:`b
    |br| you will have to register that as the service's parent: ``parent: notification.type.post``
    |br| and extend that class instead: ``class sample extends \phpbb\notification\type\post``
 
-Functions of a Notification Type
-================================
+Notification Type Class Functions
+=================================
 Now it is time to dive into the wonderful world of our notification type class.
 We will try to cover all the functions (functions) that are possible for you to use.
 We will also mention whether each function is required or optional to use.
@@ -355,6 +355,11 @@ You can use this construct for any registered Symfony service that you may need 
    {
        $this->user_loader = $user_loader;
    }
+
+Required Class Functions
+------------------------
+
+The following functions must be implemented in every notification type class.
 
 get_type
 --------
@@ -550,32 +555,6 @@ rather than each notification having to query a user's data separately.
        return [$this->get_data('sender_id')];
    }
 
-get_avatar
-----------
-The user identifiers returned by the users_to_query_ function are added to the User loader object.
-Unfortunately, that object is not available by default in the `Base Services`_.
-This was why we added it in the `Additional Services`_ section.
-
-So we use the convenient function, applicably named, ``get_avatar()`` that is available from the User loader.
-And we supply three parameters. The first being the user identifier from whom we want to show the avatar.
-The second is a boolean, indicating that the user does not have to be queried from the database, as that is already done.
-And the third is also a boolean, indicating that the avatar image should be lazy loaded in the HTML.
-As the notification GUI is a dropdown and not visible immediately, lazy loading is more beneficial for a page's load time.
-
-If you do not wish to display an avatar next to the notification text, you can omit this function all together.
-
-.. code-block:: php
-
-   /**
-    * Get the user's avatar.
-    *
-    * @return string  The HTML formatted avatar
-    */
-   public function get_avatar()
-   {
-       return $this->user_loader->get_avatar($this->get_data('sender_id'), false, true);
-   }
-
 get_title
 ---------
 This should return the main text for the notification.
@@ -600,6 +579,156 @@ So no additional SQL queries will be run.
            'VENDOR_EXTENSION_NOTIFICATION_SAMPLE_TITLE',
            $this->user_loader->get_username($this->get_data('sender_id'), 'no_profile')
        );
+   }
+
+get_url
+-------
+This should return the URL the user is sent to when clicking on the notification.
+This function is required in your notification type, even if there is no URL to send the user to,
+in which case it should return an empty string: ``return '';``.
+
+There are usually two ways to create the required URL.
+Either through ``append_sid()`` or using the *Controller helper object*.
+The first one is commonly used when sending a user to a page within the phpBB core, such as viewforum, viewtopic or the ucp.
+The second one is commonly used when sending a user to a page within an extension, which often use routes.
+
+.. code-block:: php
+   :caption: Returning a URL with the ``append_sid`` option
+
+   /**
+    * Get the URL to this item.
+    *
+    * @return string  The notification's URL
+    */
+   public function get_url()
+   {
+       return append_sid("{$this->phpbb_root_path}ucp.{$this->php_ext}", [
+           'mode' => 'view',
+           'i'    => 'pm'
+           'p'    => $this->get_data('message_id'),
+       ]);
+   }
+
+.. note::
+
+    We have added the *Controller helper object* in the `Additional Services`_ section.
+
+.. code-block:: php
+   :caption: Returning a URL with the Controller helper object
+
+   public function get_url()
+   {
+       return $this->helper->route('vendor_extension_route', [
+           'subject'	=> $this->get_data('message_subject'),
+       ]);
+   }
+
+get_email_template
+------------------
+If you do not want to make use of the email notification method, this should return ``false``
+and users will not be able to select the email method in their notification preferences.
+
+However, if you do want to make use of the email notification method, you should return the email *template* file here.
+It is not a template file like you may be used to, as it is not located in the :class:`styles/all/template` directory.
+Rather, it is located in the language's :class:`email` directory, as shown in the `File Structure`.
+
+You can, or rather should, use the ``@vendor_extension/`` prefix to indicate your extension's path.
+The *default* directory, as mentioned, is the :class:`email` directory and in our case, the filename is :class:`sample`.
+So the file name should be appended to the prefix, so that will result in ``@vendor_extension/sample``.
+If your email template is located in a subdirectory of the :class:`email` directory,
+you will have to indicate that in the path, e.g.: ``@vendor_extension/subdirectory/sample``.
+
+.. code-block:: php
+
+   /**
+    * Get email template.
+    *
+    * @return string|false  This notification's template file or false if there is none
+    */
+   public function get_email_template()
+   {
+       return '@vendor_extension/sample';
+   }
+
+There is also a third notification method, Jabber, which uses the :class:`email/short` directory for its template files.
+This notification method is closely tied to the email method, so it is important to also supply that template file,
+even though the content might be identical to the email template.
+
+.. warning::
+
+   Make sure to have both :class:`language/en/email/sample.txt` and :class:`language/en/email/short/sample.txt`
+   in your extension's language directory to prevent errors.
+
+get_email_template_variables
+----------------------------
+If you are not making use of the email notification method, this should return an empty ``array()``.
+But if you are using the email method, then you should use this function to define the variables that are used in your `email template`_.
+However, note that the phpBB core already defines some *default* variables for you:
+
+.. csv-table::
+    :header: "Variable", "Description", "Defined in"
+    :delim: #
+
+    ``USERNAME`` # The recipient's username # :class:`\\phpbb\\notification\\method\\messenger_base` ``notify_using_messenger()``
+    ``U_NOTIFICATION_SETTINGS`` # The recipient's notification preferences URL # :class:`\\phpbb\\notification\\method\\messenger_base` ``notify_using_messenger()``
+    ``EMAIL_SIG`` # The board's email signature # :class:`includes/functions_messenger.php` ``send()``
+    ``SITENAME`` # The board's site name # :class:`includes/functions_messenger.php` ``send()``
+    ``U_BOARD`` # The board's URL # :class:`includes/functions_messenger.php` ``send()``
+
+When specifying additional template variables such as URLs, you must make sure they are absolute URLs.
+They have to include the *full* URL: ``https://www.example.com/forum/ucp.php`` rather than just ``./ucp.php``.
+The example below will show you how to achieve this for both regular URLs and URLs generated from Symfony routes.
+
+.. code-block:: php
+
+   /**
+    * Get email template variables.
+    *
+    * @return array  Array of variables that can be used in the email template
+    */
+   public function get_email_template_variables()
+   {
+       return [
+           'AUTHOR'	=> htmlspecialchars_decode($this->user_loader->get_username($this->get_data('sender_id'), 'username')),
+           'SUBJECT'	=> htmlspecialchars_decode(censor_text($this->get_data('message_subject')),
+
+           // Absolute URL: regular
+           'U_REGULAR'     => generate_board_url() . '/ucp.' . $this->php_ext . '?i=pm&mode=view&p=' . $this->get_data('message_id'),
+
+           // Absolute URL: route
+           'U_ROUTE'       => generate_board_url(false) . $this->helper->route('vendor_extension_route'),
+       ];
+   }
+
+Optional Class Functions
+------------------------
+
+The following functions are optional and can be omitted if your notification does not need to use them.
+
+get_avatar
+----------
+The user identifiers returned by the users_to_query_ function are added to the User loader object.
+Unfortunately, that object is not available by default in the `Base Services`_.
+This was why we added it in the `Additional Services`_ section.
+
+So we use the convenient function, applicably named, ``get_avatar()`` that is available from the User loader.
+And we supply three parameters. The first being the user identifier from whom we want to show the avatar.
+The second is a boolean, indicating that the user does not have to be queried from the database, as that is already done.
+And the third is also a boolean, indicating that the avatar image should be lazy loaded in the HTML.
+As the notification GUI is a dropdown and not visible immediately, lazy loading is more beneficial for a page's load time.
+
+If you do not wish to display an avatar next to the notification text, you can omit this function all together.
+
+.. code-block:: php
+
+   /**
+    * Get the user's avatar.
+    *
+    * @return string  The HTML formatted avatar
+    */
+   public function get_avatar()
+   {
+       return $this->user_loader->get_avatar($this->get_data('sender_id'), false, true);
    }
 
 get_forum
@@ -698,48 +827,6 @@ This function can be omitted if no additional CSS class is required.
        return 'sample-notification-class and-another-class';
    }
 
-get_url
--------
-This should return the URL the user is sent to when clicking on the notification.
-This function is required in your notification type, even if there is no URL to send the user to,
-in which case it should return an empty string: ``return '';``.
-
-There are usually two ways to create the required URL.
-Either through ``append_sid()`` or using the *Controller helper object*.
-The first one is commonly used when sending a user to a page within the phpBB core, such as viewforum, viewtopic or the ucp.
-The second one is commonly used when sending a user to a page within an extension, which often use routes.
-
-.. code-block:: php
-   :caption: Returning a URL with the ``append_sid`` option
-
-   /**
-    * Get the URL to this item.
-    *
-    * @return string  The notification's URL
-    */
-   public function get_url()
-   {
-       return append_sid("{$this->phpbb_root_path}ucp.{$this->php_ext}", [
-           'mode' => 'view',
-           'i'    => 'pm'
-           'p'    => $this->get_data('message_id'),
-       ]);
-   }
-
-.. note::
-
-    We have added the *Controller helper object* in the `Additional Services`_ section.
-
-.. code-block:: php
-   :caption: Returning a URL with the Controller helper object
-
-   public function get_url()
-   {
-       return $this->helper->route('vendor_extension_route', [
-           'subject'	=> $this->get_data('message_subject'),
-       ]);
-   }
-
 get_redirect_url
 ----------------
 This function can return a different URL than get_url_.
@@ -759,83 +846,6 @@ For example, the :class:`post` notification uses this to send the user to first 
    public function get_redirect_url()
    {
        return append_sid("{$this->phpbb_root_path}viewtopic.{$this->php_ext}", "t={$this->item_parent_id}&amp;view=unread#unread");
-   }
-
-get_email_template
-------------------
-If you do not want to make use of the email notification method, this should return ``false``
-and users will not be able to select the email method in their notification preferences.
-
-However, if you do want to make use of the email notification method, you should return the email *template* file here.
-It is not a template file like you may be used to, as it is not located in the :class:`styles/all/template` directory.
-Rather, it is located in the language's :class:`email` directory, as shown in the `File Structure`.
-
-You can, or rather should, use the ``@vendor_extension/`` prefix to indicate your extension's path.
-The *default* directory, as mentioned, is the :class:`email` directory and in our case, the filename is :class:`sample`.
-So the file name should be appended to the prefix, so that will result in ``@vendor_extension/sample``.
-If your email template is located in a subdirectory of the :class:`email` directory,
-you will have to indicate that in the path, e.g.: ``@vendor_extension/subdirectory/sample``.
-
-.. code-block:: php
-
-   /**
-    * Get email template.
-    *
-    * @return string|false  This notification's template file or false if there is none
-    */
-   public function get_email_template()
-   {
-       return '@vendor_extension/sample';
-   }
-
-There is also a third notification method, Jabber, which uses the :class:`email/short` directory for its template files.
-This notification method is closely tied to the email method, so it is important to also supply that template file,
-even though the content might be identical to the email template.
-
-.. warning::
-
-   Make sure to have both :class:`language/en/email/sample.txt` and :class:`language/en/email/short/sample.txt`
-   in your extension's language directory to prevent errors.
-
-get_email_template_variables
-----------------------------
-If you are not making use of the email notification method, this should return an empty ``array()``.
-But if you are using the email method, then you should use this function to define the variables that are used in your `email template`_.
-However, note that the phpBB core already defines some *default* variables for you:
-
-.. csv-table::
-    :header: "Variable", "Description", "Defined in"
-    :delim: #
-
-    ``USERNAME`` # The recipient's username # :class:`\\phpbb\\notification\\method\\messenger_base` ``notify_using_messenger()``
-    ``U_NOTIFICATION_SETTINGS`` # The recipient's notification preferences URL # :class:`\\phpbb\\notification\\method\\messenger_base` ``notify_using_messenger()``
-    ``EMAIL_SIG`` # The board's email signature # :class:`includes/functions_messenger.php` ``send()``
-    ``SITENAME`` # The board's site name # :class:`includes/functions_messenger.php` ``send()``
-    ``U_BOARD`` # The board's URL # :class:`includes/functions_messenger.php` ``send()``
-
-When specifying additional template variables such as URLs, you must make sure they are absolute URLs.
-They have to include the *full* URL: ``https://www.example.com/forum/ucp.php`` rather than just ``./ucp.php``.
-The example below will show you how to achieve this for both regular URLs and URLs generated from Symfony routes.
-
-.. code-block:: php
-
-   /**
-    * Get email template variables.
-    *
-    * @return array  Array of variables that can be used in the email template
-    */
-   public function get_email_template_variables()
-   {
-       return [
-           'AUTHOR'	=> htmlspecialchars_decode($this->user_loader->get_username($this->get_data('sender_id'), 'username')),
-           'SUBJECT'	=> htmlspecialchars_decode(censor_text($this->get_data('message_subject')),
-
-           // Absolute URL: regular
-           'U_REGULAR'     => generate_board_url() . '/ucp.' . $this->php_ext . '?i=pm&mode=view&p=' . $this->get_data('message_id'),
-
-           // Absolute URL: route
-           'U_ROUTE'       => generate_board_url(false) . $this->helper->route('vendor_extension_route'),
-       ];
    }
 
 get_data
