@@ -520,7 +520,7 @@ The array that is returned by this function is already put through check_user_no
 
 .. code-block:: php
 
-   public function_find_users_for_notification($data, $options = [])
+   public function find_users_for_notification($data, $options = [])
    {
        return $this->get_authorised_recipients([$data['user_id']], $data['forum_id'], $options);
    }
@@ -799,7 +799,7 @@ even though the content might be identical to the email template.
 
 get_email_template_variables
 ----------------------------
-If you are not making use of the email notification method, you can omit this function.
+If you are not making use of the email notification method, this should return an empty ``array()``.
 But if you are using the email method, then you should use this function to define the variables that are used in your `email template`_.
 However, note that the phpBB core already defines some *default* variables for you:
 
