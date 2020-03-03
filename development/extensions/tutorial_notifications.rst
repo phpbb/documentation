@@ -300,7 +300,7 @@ Therefore it is important that our notification type class extends the :class:`b
 Notification Type Class Functions
 =================================
 Now it is time to dive into the wonderful world of our notification type class.
-We will try to cover all the functions (functions) that are possible for you to use.
+We will try to cover all the functions that are possible for you to use.
 We will also mention whether each function is required or optional to use.
 
 Base Services
