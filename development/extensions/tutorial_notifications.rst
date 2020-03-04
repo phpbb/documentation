@@ -1003,7 +1003,10 @@ Then, rather than inserting the notification, it will retrieve the data created 
 That data is turned into an SQL :class:`UPDATE` statement ``$db->sql_create_array('UPDATE', $data)``.
 And the ``$options`` provided are turned into an SQL :class:`WHERE` statement.
 
-// @todo The data set in the create insert array belongs to notification_data - serialize()
+.. note::
+
+   The data retrieved from create_insert_array_ are not database columns.
+   |br| The data is put through ``serialize()`` and and stored in the :class:`notification_data` column.
 
 The data is retrieved by the ``create_update_array`` function in the notification type :class:`base` class.
 First it creates the insert array and then unsets a few variables that should not be updated:
@@ -1017,10 +1020,18 @@ Have a look at the :class:`quote` type to see an example.
 
 Deleting a Notification
 =======================
+Delete a notification.
+For example when a post is deleted.
+type, item id, parent id, user id
 
 Marking a Notification
 ======================
-Do not use X, as it is deprecated
+Mark a notification.
+mark_notifications (type, item id, before time, user id, read/unread)
+mark_notifications_by_parent (type, parent id, before time, user id, read/unread)
+mark_notifications_by_id (method, notification id, before time, read/unread)
+deprecated: mark_notifications_read => mark_notifications
+deprecated: mark_notifications_read_by_parent => mark_notifications_by_parent
 
 Advanced Lessons
 ================
@@ -1035,7 +1046,6 @@ For example with the following code: ``['config.add', ['vendor_extension_notific
 .. seealso::
 
   Read more about this in the `Add config setting <../migrations/tools/config.html#add-config-setting>`__ section.
-
 
 Then when sending a notification, you will have to increment the identifier and use that as the item id.
 You can use the Config object's (:class:`\\phpbb\\config\\config`) ``increment()`` function to achieve this.
@@ -1066,9 +1076,10 @@ This can be useful, for example, when you want to show which users have replied 
    **Reply** from **User 1**, **User 2**, **User 3** and 7 others in topic:
    |br| *The topic title*
 
-// @todo
 Easiest thing to do is extend the :class:`post` notification type and override the necessary functions.
-Make sure to send the correct variables to comply with :class:`post`'s ``get_title`` and ``find_users_for_notification``.
+Make sure to send variables that comply with the :class:`post`'s ``get_title`` and ``find_users_for_notification``.
+
+*This advanced lesson still needs expanding.*
 
 .. |fa-ext| raw:: html
 
