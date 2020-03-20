@@ -113,7 +113,7 @@ This can be done in the same ``ext.php`` file and the same ``is_enableable()`` m
             $language->add_lang('my_install_lang_file', 'myvendor/myextension');
 
             // Return message 'PHP ZipArchive is required to enable and use this extension.'
-            return array($language->lang('INSTALL_FAILED_MESSAGE'));
+            return [$language->lang('INSTALL_FAILED_MESSAGE')];
         }
 
         // Return the boolean result of the test, either true (or false for phpBB 3.2 and 3.1)

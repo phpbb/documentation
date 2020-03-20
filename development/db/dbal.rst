@@ -78,10 +78,10 @@ Example:
 .. code-block:: php
 
     //Array with the data to insert
-    $data = array(
+    $data = [
     	'username' 	=> 'Bertie',
     	'email' 	=> 'bertie@example.com',
-    );
+    ];
 
     // First doing a select with this data.
     // Note: By using the SELECT type, it uses always AND in the query.
@@ -120,7 +120,7 @@ Example:
 
 .. code-block:: php
 
-    $sql_in = array(2, 58, 62);
+    $sql_in = [2, 58, 62];
 
     $sql = 'SELECT *
     	FROM ' . USERS_TABLE . '
@@ -225,17 +225,17 @@ Example:
 .. code-block:: php
 
     // Users which will be added to group
-    $users = array(11, 57, 87, 98, 154, 211);
-    $sql_ary = array();
+    $users = [11, 57, 87, 98, 154, 211];
+    $sql_ary = [];
 
     foreach ($users as $user_id)
     {
-    	$sql_ary[] = array(
+    	$sql_ary[] = [
     		'user_id'		=> (int) $user_id,
     		'group_id'		=> 154,
     		'group_leader'	=> 0,
     		'user_pending'	=> 0,
-    	);
+    	];
     }
 
     $db->sql_multi_insert(USER_GROUP_TABLE, $sql_ary);

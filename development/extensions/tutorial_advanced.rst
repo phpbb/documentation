@@ -40,7 +40,7 @@ This is what an event looks like:
     * @var  string  var2  A second variable to make available to the event
     * @since 3.1-A1
     */
-    $vars = array('var1', 'var2');
+    $vars = ['var1', 'var2'];
     extract($phpbb_dispatcher->trigger_event('acme.demo.identifier', compact($vars)));
 
 You will need to replace ``identifier`` with the name of your event. This must
@@ -334,10 +334,10 @@ contained in the array keys):
 
 .. code-block:: php
 
-  array(
+  [
       'ext/acme/demo/images/image1.png' => 'demo',
       'ext/acme/demo/images/image2.png' => 'demo',
-  );
+  ];
 
 .. note::
   The method ``find_from_extension`` used above will only search in the specified
