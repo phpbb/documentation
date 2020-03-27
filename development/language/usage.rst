@@ -80,7 +80,7 @@ pass the name with the subdirectory but without extension as argument of setup.
 
     $user->setup('search');
     // or
-    $user->setup(array('ucp', 'search'));
+    $user->setup(['ucp', 'search']);
 
 Since ``phpbb\user::setup()`` must only be called once,
 ``phpbb\language\language::add_lang()`` has to be used, to load additional
@@ -90,7 +90,7 @@ language files, after ``phpbb\user::setup()`` has already been called.
 
     $language->add_lang('search');
     // or
-    $language->add_lang(array('ucp', 'search'));
+    $language->add_lang(['ucp', 'search']);
 
 Loading from an extension
 -------------------------
@@ -104,7 +104,7 @@ a second argument.
 
     $language->add_lang('demo', 'acme/demo');
     // or
-    $language->add_lang(array('demo', 'demo2'), 'acme/demo');
+    $language->add_lang(['demo', 'demo2'], 'acme/demo');
 
 Using the Language System in template files
 ===========================================
@@ -176,7 +176,7 @@ directory.
      */
     if (empty($lang) || !is_array($lang))
     {
-        $lang = array();
+        $lang = [];
     }
 
     // DEVELOPERS PLEASE NOTE
@@ -191,8 +191,8 @@ directory.
     // equally where a string contains only two placeholders which are used to wrap text
     // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
-    $lang = array_merge($lang, array(
+    $lang = array_merge($lang, [
         'MY_LANGUAGE_KEY'         => 'A language entry',
         'MY_OTHER_LANGUAGE_KEY'   => 'Another language entry',
         'MY_TRICKY_LANGUAGE_KEY'  => 'This is a %slink%s',
-    ));
+    ]);

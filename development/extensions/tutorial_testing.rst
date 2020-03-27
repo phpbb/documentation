@@ -89,7 +89,7 @@ require no changes for extensions, we only add a quick example here.
         {
             $this->helper->expects($this->once())
                 ->method('message')
-                ->with('NO_AUTH_SPEAKING', array('bertie'), 'NO_AUTH_OPERATION', 403)
+                ->with('NO_AUTH_SPEAKING', ['bertie'], 'NO_AUTH_OPERATION', 403)
                 ->willReturn($this->getMock('Symfony\Component\HttpFoundation\Response'));
 
             $this->helper->expects($this->never())
@@ -101,10 +101,10 @@ require no changes for extensions, we only add a quick example here.
 
         public function handle_data()
         {
-            return array(
-                array('foo', true, 'DEMO_GOODBYE'),
-                array('bar', false, 'DEMO_HELLO'),
-            );
+            return [
+                ['foo', true, 'DEMO_GOODBYE'],
+                ['bar', false, 'DEMO_HELLO'],
+            ];
         }
 
         /**
@@ -175,7 +175,7 @@ correctly the test will pass.
         {
             $this->helper->expects($this->once())
                 ->method('message')
-                ->with('NO_AUTH_SPEAKING', array('bertie'), 'NO_AUTH_OPERATION', 403)
+                ->with('NO_AUTH_SPEAKING', ['bertie'], 'NO_AUTH_OPERATION', 403)
                 ->willReturn($this->getMock('Symfony\Component\HttpFoundation\Response'));
 
             $this->helper->expects($this->never())
@@ -202,10 +202,10 @@ for the ``test`` method.
 
         public function handle_data()
         {
-            return array(
-                array('foo', true, 'DEMO_GOODBYE'),
-                array('bar', false, 'DEMO_HELLO'),
-            );
+            return [
+                ['foo', true, 'DEMO_GOODBYE'],
+                ['bar', false, 'DEMO_HELLO'],
+            ];
         }
 
 This data provider contains two arrays of test data, so our test will be called
@@ -378,41 +378,41 @@ database changes, so we can test them:
 
         static public function depends_on()
         {
-            return array('\acme\demo\migrations\add_module');
+            return ['\acme\demo\migrations\add_module'];
         }
 
         public function update_schema()
         {
-            return array(
-                'add_tables'		=> array(
-                    $this->table_prefix . 'acme_demo'	=> array(
-                        'COLUMNS'		=> array(
-                            'acme_id'			=> array('UINT', null, 'auto_increment'),
-                            'acme_name'			=> array('VCHAR:255', ''),
-                        ),
+            return [
+                'add_tables'		=> [
+                    $this->table_prefix . 'acme_demo'	=> [
+                        'COLUMNS'		=> [
+                            'acme_id'			=> ['UINT', null, 'auto_increment'],
+                            'acme_name'			=> ['VCHAR:255', ''],
+                        ],
                         'PRIMARY_KEY'	=> 'acme_id',
-                    ),
-                ),
-                'add_columns'	=> array(
-                    $this->table_prefix . 'users'			=> array(
-                        'user_acme'				=> array('UINT', 0),
-                    ),
-                ),
-            );
+                    ],
+                ],
+                'add_columns'	=> [
+                    $this->table_prefix . 'users'			=> [
+                        'user_acme'				=> ['UINT', 0],
+                    ],
+                ],
+            ];
         }
 
         public function revert_schema()
         {
-            return array(
-                'drop_columns'	=> array(
-                    $this->table_prefix . 'users'			=> array(
+            return [
+                'drop_columns'	=> [
+                    $this->table_prefix . 'users'			=> [
                         'user_acme',
-                    ),
-                ),
-                'drop_tables'		=> array(
+                    ],
+                ],
+                'drop_tables'		=> [
                     $this->table_prefix . 'acme_demo',
-                ),
-            );
+                ],
+            ];
         }
     }
 
@@ -535,7 +535,7 @@ test and returning an array with the extension name:
     {
         static protected function setup_extensions()
         {
-            return array('acme/demo');
+            return ['acme/demo'];
         }
 
     ...
@@ -610,10 +610,10 @@ whether the values are really in the database:
 
         public function data_acme_demo_content()
         {
-            return array(
-                array(1, 'one'),
-                array(2, 'two'),
-            );
+            return [
+                [1, 'one'],
+                [2, 'two'],
+            ];
         }
 
         /**
@@ -681,7 +681,7 @@ right message, like the unit test we wrote in `unit tests`_ at the beginning:
     {
         static protected function setup_extensions()
         {
-            return array('acme/demo');
+            return ['acme/demo'];
         }
 
         public function test_demo_world()
@@ -738,7 +738,7 @@ in the controller, if someone tries to talk to bertie:
         {
             $this->add_lang_ext('acme/demo', 'demo');
 
-            $crawler = self::request('GET', 'app.php/demo/bertie', array(), false);
+            $crawler = self::request('GET', 'app.php/demo/bertie', [], false);
             self::assert_response_html(403);
             $this->assertContains($this->lang('NO_AUTH_SPEAKING', 'bertie'), $crawler->filter('#message p')->text());
         }

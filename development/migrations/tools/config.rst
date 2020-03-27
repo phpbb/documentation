@@ -11,7 +11,7 @@ Add a new config setting
 
 .. code-block:: php
 
-    array('config.add', array(config name, config value, is dynamic (default: false) )),
+    ['config.add', [config name, config value, is dynamic (default: false) ]],
 
 Example
 -------
@@ -20,10 +20,10 @@ Example
 
     public function update_data()
     {
-        return array(
-             array('config.add', array('foo', 'bar')), // $config['foo'] = 'bar';
-             array('config.add', array('foo2', 1, true)), // $config['foo2'] = '1'; Dynamic, do not cache
-        );
+        return [
+             ['config.add', ['foo', 'bar']], // $config['foo'] = 'bar';
+             ['config.add', ['foo2', 1, true]], // $config['foo2'] = '1'; Dynamic, do not cache
+        ];
     }
 
 Update Config Setting
@@ -33,7 +33,7 @@ Update a config setting
 
 .. code-block:: php
 
-    array('config.update', array(config name, new config value)),
+    ['config.update', [config name, new config value]],
 
 Example
 -------
@@ -42,9 +42,9 @@ Example
 
     public function update_data()
     {
-        return array(
-             array('config.update', array('foo', 'bar')), // $config['foo'] = 'bar';
-        );
+        return [
+             ['config.update', ['foo', 'bar']], // $config['foo'] = 'bar';
+        ];
     }
 
 Update if current value equals specific value
@@ -55,7 +55,7 @@ value
 
 .. code-block:: php
 
-    array('config.update_if_equals', array(compare to, config name, new config value)),
+    ['config.update_if_equals', [compare to, config name, new config value]],
 
 Example
 -------
@@ -64,9 +64,9 @@ Example
 
     public function update_data()
     {
-        return array(
-             array('config.update_if_equals', array('bar', 'foo', 'bar2')), // if ($config['foo'] == 'bar') { $config['foo'] = 'bar2'; }
-        );
+        return [
+             ['config.update_if_equals', ['bar', 'foo', 'bar2']], // if ($config['foo'] == 'bar') { $config['foo'] = 'bar2'; }
+        ];
     }
 
 Delete Config Setting
@@ -76,7 +76,7 @@ Delete a config setting
 
 .. code-block:: php
 
-    array('config.remove', array(config name)),
+    ['config.remove', [config name]],
 
 Example
 -------
@@ -85,7 +85,7 @@ Example
 
     public function update_data()
     {
-        return array(
-             array('config.remove', array('foo')), // unset($config['foo']);
-        );
+        return [
+             ['config.remove', ['foo']], // unset($config['foo']);
+        ];
     }

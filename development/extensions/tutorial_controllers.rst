@@ -89,7 +89,7 @@ Every controller should contain at least two methods:
         {
             if ($name === 'bertie')
             {
-                throw new \phpbb\exception\http_exception(403, 'NO_AUTH_SPEAKING', array($name));
+                throw new \phpbb\exception\http_exception(403, 'NO_AUTH_SPEAKING', [$name]);
             }
 
             $l_message = !$this->config['acme_demo_goodbye'] ? 'DEMO_HELLO' : 'DEMO_GOODBYE';
@@ -305,10 +305,10 @@ generated. We must update the ``getSubscribedEvents()`` method in the
 
         static public function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.user_setup'  => 'load_language_on_setup',
                 'core.page_header' => 'add_page_header_link',
-            );
+            ];
         }
 
 Next we will add a new method to the event listener which creates our link
@@ -323,9 +323,9 @@ and assigns it to our template variable:
          */
         public function add_page_header_link($event)
         {
-            $this->template->assign_vars(array(
-                'U_DEMO_PAGE' => $this->helper->route('acme_demo_route', array('name' => 'world')),
-            ));
+            $this->template->assign_vars([
+                'U_DEMO_PAGE' => $this->helper->route('acme_demo_route', ['name' => 'world']),
+            ]);
         }
 
 In this new method we use the Controller Helper object's ``route()``
@@ -381,10 +381,10 @@ event listener should look like:
          */
         static public function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.user_setup'  => 'load_language_on_setup',
                 'core.page_header' => 'add_page_header_link',
-            );
+            ];
         }
 
         /**
@@ -396,10 +396,10 @@ event listener should look like:
         public function load_language_on_setup($event)
         {
             $lang_set_ext = $event['lang_set_ext'];
-            $lang_set_ext[] = array(
+            $lang_set_ext[] = [
                 'ext_name' => 'acme/demo',
                 'lang_set' => 'demo',
-            );
+            ];
             $event['lang_set_ext'] = $lang_set_ext;
         }
 
@@ -410,9 +410,9 @@ event listener should look like:
          */
         public function add_page_header_link($event)
         {
-            $this->template->assign_vars(array(
-                'U_DEMO_PAGE' => $this->helper->route('acme_demo_route', array('name' => 'world')),
-            ));
+            $this->template->assign_vars([
+                'U_DEMO_PAGE' => $this->helper->route('acme_demo_route', ['name' => 'world']),
+            ]);
         }
     }
 

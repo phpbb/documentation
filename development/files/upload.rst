@@ -22,7 +22,7 @@ Each of these methods returns the current instance of the ``upload`` class allow
 
 .. code-block:: php
 
-    $upload->set_allowed_extensions(array('png', 'jpg'))
+    $upload->set_allowed_extensions(['png', 'jpg'])
         ->set_allowed_dimensions(20, 20, 90, 90)
         ->set_max_filesize(65536)
         ->set_error_prefix('AVATAR_');
@@ -60,7 +60,7 @@ In phpBB 3.1, the basic use of the ``fileupload`` class looked as follows:
 
     include_once($phpbb_root_path . 'includes/functions_upload.' . $phpEx);
     $upload = new fileupload();
-    $upload->set_disallowed_content(array());
+    $upload->set_disallowed_content([]);
     $extensions = $cache->obtain_attach_extensions((($is_message) ? false : (int) $forum_id));
     $upload->set_allowed_extensions(array_keys($extensions['_allowed_']));
     $file = ($local) ? $upload->local_upload($local_storage, $local_filedata, $mimetype_guesser) : $upload->form_upload($form_name, $mimetype_guesser, $plupload);
@@ -70,7 +70,7 @@ As of phpBB 3.2, this is changed to:
 .. code-block:: php
 
     $upload = $phpbb_container->get('files.upload');
-    $upload->set_disallowed_content(array());
+    $upload->set_disallowed_content([]);
     $extensions = $cache->obtain_attach_extensions((($is_message) ? false : (int) $forum_id));
     $upload->set_allowed_extensions(array_keys($extensions['_allowed_']));
     $file = ($local) ? $upload->handle_upload('files.types.local', $local_storage, $local_filedata) : $upload->handle_upload('files.types.form', $form_name);
@@ -86,7 +86,7 @@ The calls can of course also be chained:
 
     $extensions = $cache->obtain_attach_extensions((($is_message) ? false : (int) $forum_id));
     $file = $phpbb_container->get('files.upload')
-        ->set_disallowed_content(array())
+        ->set_disallowed_content([])
         ->set_allowed_extensions(array_keys($extensions['_allowed_']))
         ->handle_upload('files.types.local', $local_storage, $local_filedata);
 

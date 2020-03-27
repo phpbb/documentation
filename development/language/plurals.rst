@@ -177,33 +177,33 @@ While the English language only has 2 rows in its array:
 
 .. code-block:: php
 
-    'EXAMPLE' => array(
+    'EXAMPLE' => [
         1 => '1 example',
         2 => '2 or more examples',
-    ),
+    ],
 
 You need to specify the zero-row and 4 rows for the "plurals":
 
 .. code-block:: php
 
-    'EXAMPLE' => array(
+    'EXAMPLE' => [
         1 => '1 example',
         2 => '[0 or number ending with 01-10] examples',
         3 => '[number ending with 11-19] example',
         4 => 'even more examples',
-    ),
+    ],
 
 If you require separate handling for 0, you can simple add the 0-case:
 
 .. code-block:: php
 
-    'EXAMPLE' => array(
+    'EXAMPLE' => [
         0 => 'No example',
         1 => '1 example',
         2 => '[zero is not handled here anymore! Only number ending with 01-10] examples',
         3 => '[number ending with 11-19] example',
         4 => 'even more examples',
-    ),
+    ],
 
 If you forget a line the system will automatically use the row before. So if
 you forget to add the *3*-row, it will use *2*-row for 11-19 as well. If there

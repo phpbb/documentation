@@ -58,9 +58,9 @@ The following sample code shows how BBCodes can be toggled and manipulated using
     {
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.text_formatter_s9e_parse_before' => 'toggle_bbcodes',
-            );
+            ];
         }
 
         public function toggle_bbcodes($event)
@@ -98,16 +98,16 @@ method to read and change its attributes during parsing based on who is being qu
     {
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.text_formatter_s9e_configure_after' => 'configure_quotes'
-            );
+            ];
         }
 
         public function configure_quotes($event)
         {
             // Add self::filter_quote() to filter the QUOTE tag that handles quotes
             $event['configurator']->tags['QUOTE']->filterChain
-                ->append(array(__CLASS__, 'filter_quote'));
+                ->append([__CLASS__, 'filter_quote']);
         }
 
         static public function filter_quote(\s9e\TextFormatter\Parser\Tag $tag)
@@ -173,9 +173,9 @@ users can see the contents of:
     {
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.text_formatter_s9e_configure_after'	=> 'configure_noguests',
-            );
+            ];
         }
 
         public function configure_noguests($event)
@@ -228,9 +228,9 @@ your own template parameters, in addition to the default one's already available
     {
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.text_formatter_s9e_render_before' => 'set_random'
-            );
+            ];
         }
 
         public function set_random($event)
@@ -270,10 +270,10 @@ set the value before each parsing.
     {
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.text_formatter_s9e_configure_after' => 'configure_links',
                 'core.text_formatter_s9e_parser_setup'    => 'set_random_id'
-            );
+            ];
         }
 
         static public function add_link_id($url, $my_id)
@@ -285,7 +285,7 @@ set the value before each parsing.
         {
             // Add self::add_link_id() to filter the attribute value of [url] BBCodes and links
             $event['configurator']->tags['url']->attributes['url']->filterChain
-                ->append(array(__CLASS__, 'add_link_id'))
+                ->append([__CLASS__, 'add_link_id'])
                 ->resetParameters()
                 ->addParameterByName('attrValue')
                 ->addParameterByName('my.id');
@@ -321,9 +321,9 @@ settings are configured.
     {
         public static function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.text_formatter_s9e_configure_after' => 'configure'
-            );
+            ];
         }
 
         public function configure($event)

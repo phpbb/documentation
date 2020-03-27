@@ -23,7 +23,7 @@ changes you need when installing the migration.
 
     public function update_data()
     {
-        return array();
+        return [];
     }
 
 revert_data
@@ -43,7 +43,7 @@ absolutely needed.
 
     public function revert_data()
     {
-        return array();
+        return [];
     }
 
 
@@ -68,10 +68,10 @@ How it works
 
 .. code-block:: php
 
-    array('if', array(
+    ['if', [
         true, // Some statement that is either true or false
-        array(/* Call to make if the statement is true */),
-    )),
+        [/* Call to make if the statement is true */],
+    ]],
 
 Examples
 --------
@@ -80,10 +80,10 @@ if config "captcha_gd" is true, update "captcha_plugin" with "phpbb_captcha_gd"
 
 .. code-block:: php
 
-    array('if', array(
+    ['if', [
         ($this->config['captcha_gd']),
-        array('config.update', array('captcha_plugin', 'phpbb_captcha_gd')),
-    )),
+        ['config.update', ['captcha_plugin', 'phpbb_captcha_gd']],
+    ]],
 
 if config "allow_avatar_upload" or "allow_avatar_local" is true, update
 "allow_avatar" with value "1"
@@ -91,10 +91,10 @@ if config "allow_avatar_upload" or "allow_avatar_local" is true, update
 
 .. code-block:: php
 
-    array('if', array(
+    ['if', [
         ($this->config['allow_avatar_upload'] || $this->config['allow_avatar_local']),
-        array('config.update', array('allow_avatar', 1)),
-    )),
+        ['config.update', ['allow_avatar', 1]],
+    ]],
 
 .. note::
 
@@ -110,9 +110,9 @@ How it works
 
 .. code-block:: php
 
-    array('custom', array(
-        array(/* Callable function */)
-    )),
+    ['custom', [
+        [/* Callable function */]
+    ]],
 
 Example
 -------
@@ -121,9 +121,9 @@ Call a function within the migrations file named some_function
 
 .. code-block:: php
 
-    array('custom', array(
-        array($this, 'some_function')
-    )),
+    ['custom', [
+        [$this, 'some_function']
+    ]],
 
 .. note::
 
@@ -148,11 +148,11 @@ Example
 
     public function update_data()
     {
-        return array(
-            array('custom', array(
-                array($this, 'some_function')
-            )),
-        );
+        return [
+            ['custom', [
+                [$this, 'some_function']
+            ]],
+        ];
     }
 
     // $value is equal to the value returned on the previous call (false if this is the first time it is run)
@@ -188,44 +188,44 @@ From ``\phpbb\db\migration\data\v310\dev``
 
     public function update_data()
     {
-        return array(
-            array('config.update', array('search_type', 'phpbb_search_' . $this->config['search_type'])),
+        return [
+            ['config.update', ['search_type', 'phpbb_search_' . $this->config['search_type']]],
 
-            array('config.add', array('fulltext_postgres_ts_name', 'simple')),
-            array('config.add', array('fulltext_postgres_min_word_len', 4)),
+            ['config.add', ['fulltext_postgres_ts_name', 'simple']],
+            ['config.add', ['fulltext_postgres_min_word_len', 4]],
             ...
 
-            array('permission.add', array('u_chgprofileinfo', true, 'u_sig')),
+            ['permission.add', ['u_chgprofileinfo', true, 'u_sig']],
 
-            array('module.add', array(
+            ['module.add', [
                 'acp',
                 'ACP_GROUPS',
-                array(
+                [
                     'module_basename'    => 'acp_groups',
-                    'modes'                => array('position'),
-                ),
-            )),
+                    'modes'                => ['position'],
+                ],
+            ]],
             ...
 
             // Module will be renamed later
-            array('module.add', array(
+            ['module.add', [
                 'acp',
                 'ACP_CAT_STYLES',
                 'ACP_LANGUAGE'
-            )),
+            ]],
 
-            array('module.remove', array(
+            ['module.remove', [
                 'acp',
                 false,
                 'ACP_TEMPLATES',
-            )),
+            ]],
 
-            array('custom', array(array($this, 'rename_module_basenames'))),
-            array('custom', array(array($this, 'rename_styles_module'))),
+            ['custom', [[$this, 'rename_module_basenames']]],
+            ['custom', [[$this, 'rename_styles_module']]],
             ...
 
-            array('config.update', array('version', '3.1.0-dev')),
-        );
+            ['config.update', ['version', '3.1.0-dev']],
+        ];
     }
 
     public function rename_styles_module()

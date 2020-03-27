@@ -38,10 +38,10 @@ Without a Database
     {
         public function phpbb_email_hash_data()
         {
-            return array(
-                array('wiki@phpbb.com', 126830126620),
-                array('', 0),
-            );
+            return [
+                ['wiki@phpbb.com', 126830126620],
+                ['', 0],
+            ];
         }
 
         /**
@@ -85,14 +85,14 @@ Using a Database
 
         public function fetchrow_data()
         {
-            return array(
-                array('', array(array('username_clean' => 'barfoo'),
-                    array('username_clean' => 'foobar'),
-                    array('username_clean' => 'bertie'))),
-                array('user_id = 2', array(array('username_clean' => 'foobar'))),
-                array("username_clean = 'bertie'", array(array('username_clean' => 'bertie'))),
-                array("username_clean = 'phpBB'", array()),
-            );
+            return [
+                ['', [['username_clean' => 'barfoo'],
+                    ['username_clean' => 'foobar'],
+                    ['username_clean' => 'bertie']]],
+                ['user_id = 2', [['username_clean' => 'foobar']]],
+                ["username_clean = 'bertie'", [['username_clean' => 'bertie']]],
+                ["username_clean = 'phpBB'", []],
+            ];
         }
 
         /**
@@ -108,7 +108,7 @@ Using a Database
                 ' . (($where) ? ' WHERE ' . $where : '') . '
                 ORDER BY user_id ASC');
 
-            $ary = array();
+            $ary = [];
             while ($row = $db->sql_fetchrow($result))
             {
                 $ary[] = $row;
@@ -180,12 +180,12 @@ For more information how these test doubles work, see:
         public function test_auth_mock_hash($email, $expected)
 
             $auth = $this->getMock('auth');
-            $acl_get_map = array(
-                array('f_read', 23, true),
-                array('f_read', '23', true),// Called without int cast
-                array('m_', 23, true),
-                array('m_', '23', true),// Called without int cast
-            );
+            $acl_get_map = [
+                ['f_read', 23, true],
+                ['f_read', '23', true],// Called without int cast
+                ['m_', 23, true],
+                ['m_', '23', true],// Called without int cast
+            ];
 
             $auth->expects($this->any())
                 ->method('acl_get')
