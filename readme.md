@@ -14,3 +14,7 @@ If you have a translation please read the information on patches.
 ## Get Involved
 
 You can get involved by providing patches/improvements (See Above).
+
+## License
+Documentation &copy; 2020 [phpBB Limited](https://www.phpbb.com/)
+<br>Licensed under the [CC Attribution-NonCommercial-ShareAlike 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) license
