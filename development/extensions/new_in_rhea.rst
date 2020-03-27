@@ -155,12 +155,12 @@ Extensions that store their own text with BBCodes, smilies, etc. should consider
     {
         public function get_columns()
         {
-            return array(
+            return [
                 'id'            => 'demo_id',
                 'text'          => 'demo_message',
                 'bbcode_uid'    => 'demo_message_bbcode_uid',
                 'options'       => 'demo_message_bbcode_options',
-            );
+            ];
         }
     }
 
@@ -202,10 +202,10 @@ Finally, to complete setting up the cron jobs, we must add two new configs to th
 
     public function update_data()
 	{
-		return array(
-			array('config.add', array('text_reparser.acme_demo_text_cron_interval', 10)),
-			array('config.add', array('text_reparser.acme_demo_text_last_cron', 0)),
-		);
+		return [
+			['config.add', ['text_reparser.acme_demo_text_cron_interval', 10]],
+			['config.add', ['text_reparser.acme_demo_text_last_cron', 0]],
+		];
 	}
 
 Note that these configs are the name of our text_reparser.plugin ``text_reparser.acme_demo_text`` plus ``_cron_interval`` and ``_last_cron``. The ``cron_interval`` should be a value in seconds to wait between jobs, in this case "10", and the ``last_cron`` should always be set to "0".
@@ -297,13 +297,13 @@ This method must return an array of users who can see the notification. While it
 
 .. code-block:: php
 
-    public function find_users_for_notification($data, $options = array())
+    public function find_users_for_notification($data, $options = [])
     {
         // run code to query a group of users from the database...
         
         while ($row = $this->db->sql_fetchrow($result))
         {
-            $users[$row['user_id']] = array('');
+            $users[$row['user_id']] = [''];
         }
 
         // do any additional processing...
@@ -315,7 +315,7 @@ As of phpBB 3.2 a new helper to get the list of methods enabled by default is av
 
 .. code-block:: php
 
-    public function find_users_for_notification($data, $options = array())
+    public function find_users_for_notification($data, $options = [])
     {
         // run code to query a group of users from the database...
         
@@ -330,7 +330,7 @@ As of phpBB 3.2 a new helper to get the list of methods enabled by default is av
     }
 
 .. note::
-    Notice that we simply replaced the empty ``array('')`` value assigned to each user with the new ``$this->notification_manager->get_default_methods()`` method call.
+    Notice that we simply replaced the empty ``['']`` value assigned to each user with the new ``$this->notification_manager->get_default_methods()`` method call.
 
 create_insert_array()
 ---------------------
@@ -339,7 +339,7 @@ In phpBB 3.1, this method returned an array of data ready to be inserted into th
 
 .. code-block:: php
 
-    public function create_insert_array($data, $pre_create_data = array())
+    public function create_insert_array($data, $pre_create_data = [])
     {
         // prepare some data...
 
@@ -350,7 +350,7 @@ In phpBB 3.2, the data is now added to the the class data property, so it is no 
 
 .. code-block:: php
 
-    public function create_insert_array($data, $pre_create_data = array())
+    public function create_insert_array($data, $pre_create_data = [])
     {
         // prepare some data...
 

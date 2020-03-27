@@ -78,8 +78,8 @@ define('IN_PHPBB', true);
 include($root_path . 'common.php');
 include($root_path . 'includes/functions_docbook.php');
 
-$template->set_filenames(array(
-	'body'	=> 'support/support_documentation_docbook.html')
+$template->set_filenames([
+	'body'	=> 'support/support_documentation_docbook.html']
 );
 
 </xsl:text>
@@ -100,10 +100,10 @@ $template->set_filenames(array(
 
 $content = str_replace(' xmlns="http://www.w3.org/1999/xhtml"', '', ob_get_clean());
 
-$template->assign_vars(array(
+$template->assign_vars([
 	'PAGE_TITLE'		=> $page_title,
 	'S_CONTENT'			=> $content,
-	'S_BODY_CLASS'		=> 'support documentation docbook')
+	'S_BODY_CLASS'		=> 'support documentation docbook']
 );
 
 page_header($page_title, false);

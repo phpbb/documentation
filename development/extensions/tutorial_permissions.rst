@@ -33,11 +33,11 @@ the Standard User Role:
 
 .. code-block:: php
 
-    return array(
-        array('permission.add', array('u_foo_bar')),
-        array('permission.permission_set', array('REGISTERED', 'u_foo_bar', 'group')),
-        array('permission.permission_set', array('ROLE_USER_STANDARD', 'u_foo_bar')),
-    );
+    return [
+        ['permission.add', ['u_foo_bar']],
+        ['permission.permission_set', ['REGISTERED', 'u_foo_bar', 'group']],
+        ['permission.permission_set', ['ROLE_USER_STANDARD', 'u_foo_bar']],
+    ];
 
 Define permissions
 ==================
@@ -49,9 +49,9 @@ language array. For example, the language file ``permissions_foobar.php``:
 
 .. code-block:: php
 
-    $lang = array_merge($lang, array(
+    $lang = array_merge($lang, [
         'ACL_U_FOOBAR' => 'Can post foobars',
-    ));
+    ]);
 
 Wire up permissions
 ===================
@@ -67,7 +67,7 @@ add your new permissions to phpBB's permission data array:
 .. code-block:: php
 
     $permissions = $event['permissions'];
-    $permissions['u_foo_bar'] = array('lang' => 'ACL_U_FOOBAR', 'cat' => 'post');
+    $permissions['u_foo_bar'] = ['lang' => 'ACL_U_FOOBAR', 'cat' => 'post'];
     $event['permissions'] = $permissions;
 
 .. note::
@@ -79,4 +79,4 @@ add your new permissions to phpBB's permission data array:
 
     .. code-block:: php
 
-        $event['permissions']['u_foo_bar'] = array('lang' => 'ACL_U_FOOBAR', 'cat' => 'post');
+        $event['permissions']['u_foo_bar'] = ['lang' => 'ACL_U_FOOBAR', 'cat' => 'post'];

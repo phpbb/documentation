@@ -300,17 +300,17 @@ As for the ``main_info.php`` we need to adjust the class name from
      {
         function module()
         {
-            return array(
+            return [
                 'filename' => '\nickvergessen\newspage\acp\main_module',
                 'title'    => 'ACP_NEWSPAGE_TITLE',
-                'modes'    => array(
-                    'config_newspage' => array(
+                'modes'    => [
+                    'config_newspage' => [
                         'title' => 'ACP_NEWSPAGE_CONFIG',
                         'auth'  => 'acl_a_board',
-                        'cat'   => array('ACP_NEWSPAGE_TITLE')
-                    ),
-                ),
-            );
+                        'cat'   => ['ACP_NEWSPAGE_TITLE']
+                    ],
+                ],
+            ];
         }
      }
 
@@ -366,41 +366,41 @@ let's have a look at the Newspage again.
 
 .. code-block:: php
 
-     $versions = array(
-        '1.0.0'    => array(
-            'config_add' => array(
-                array('news_number', 5),
-                array('news_forums', '0'),
-                array('news_char_limit', 500),
-                array('news_user_info', 1),
-                array('news_post_buttons', 1),
-            ),
-            'module_add' => array(
-                array('acp', 'ACP_CAT_DOT_MODS', 'NEWS'),
+     $versions = [
+        '1.0.0'    => [
+            'config_add' => [
+                ['news_number', 5],
+                ['news_forums', '0'],
+                ['news_char_limit', 500],
+                ['news_user_info', 1],
+                ['news_post_buttons', 1],
+            ],
+            'module_add' => [
+                ['acp', 'ACP_CAT_DOT_MODS', 'NEWS'],
 
-                array('acp', 'NEWS', array(
+                ['acp', 'NEWS', [
                         'module_basename'    => 'newspage',
                         'module_langname'    => 'NEWS_CONFIG',
                         'module_mode'        => 'overview',
                         'module_auth'        => 'acl_a_board',
-                    ),
-                ),
-            ),
-        ),
-        '1.0.1'    => array(
-            'config_add' => array(
-                array('news_pages', 1),
-            ),
-        ),
-        '1.0.2'    => array(),
-        '1.0.3' => array(
-            'config_add' => array(
-                array('news_attach_show', 1),
-                array('news_cat_show', 1),
-                array('news_archive_per_year', 1),
-            ),
-        ),
-     );
+                    ],
+                ],
+            ],
+        ],
+        '1.0.1'    => [
+            'config_add' => [
+                ['news_pages', 1],
+            ],
+        ],
+        '1.0.2'    => [],
+        '1.0.3' => [
+            'config_add' => [
+                ['news_attach_show', 1],
+                ['news_cat_show', 1],
+                ['news_archive_per_year', 1],
+            ],
+        ],
+     ];
 
 Schema Changes
 --------------
@@ -425,40 +425,40 @@ whereby both methods return an array with the changes:
 
      public function update_schema()
      {
-        return array(
-            'add_columns'        => array(
-                $this->table_prefix . 'groups'        => array(
-                    'group_teampage'    => array('UINT', 0, 'after' => 'group_legend'),
-                ),
-                $this->table_prefix . 'profile_fields'    => array(
-                    'field_show_on_pm'        => array('BOOL', 0),
-                ),
-            ),
-            'change_columns'    => array(
-                $this->table_prefix . 'groups'        => array(
-                    'group_legend'        => array('UINT', 0),
-                ),
-            ),
-        );
+        return [
+            'add_columns'        => [
+                $this->table_prefix . 'groups'        => [
+                    'group_teampage'    => ['UINT', 0, 'after' => 'group_legend'],
+                ],
+                $this->table_prefix . 'profile_fields'    => [
+                    'field_show_on_pm'        => ['BOOL', 0],
+                ],
+            ],
+            'change_columns'    => [
+                $this->table_prefix . 'groups'        => [
+                    'group_legend'        => ['UINT', 0],
+                ],
+            ],
+        ];
      }
 
      public function revert_schema()
      {
-        return array(
-            'drop_columns'        => array(
-                $this->table_prefix . 'groups'        => array(
+        return [
+            'drop_columns'        => [
+                $this->table_prefix . 'groups'        => [
                     'group_teampage',
-                ),
-                $this->table_prefix . 'profile_fields'    => array(
+                ],
+                $this->table_prefix . 'profile_fields'    => [
                     'field_show_on_pm',
-                ),
-            ),
-            'change_columns'    => array(
-                $this->table_prefix . 'groups'        => array(
-                    'group_legend'        => array('BOOL', 0),
-                ),
-            ),
-        );
+                ],
+            ],
+            'change_columns'    => [
+                $this->table_prefix . 'groups'        => [
+                    'group_legend'        => ['BOOL', 0],
+                ],
+            ],
+        ];
      }
 
 The ``revert_schema()`` should thereby revert all changes made by the
@@ -477,29 +477,29 @@ from the Newspage would look like the following:
 
      public function update_data()
      {
-        return array(
-            array('config.add', array('news_number', 5)),
-            array('config.add', array('news_forums', '0')),
-            array('config.add', array('news_char_limit', 500)),
-            array('config.add', array('news_user_info', 1)),
-            array('config.add', array('news_post_buttons', 1)),
+        return [
+            ['config.add', ['news_number', 5]],
+            ['config.add', ['news_forums', '0']],
+            ['config.add', ['news_char_limit', 500]],
+            ['config.add', ['news_user_info', 1]],
+            ['config.add', ['news_post_buttons', 1]],
 
-            array('module.add', array(
+            ['module.add', [
                 'acp',
                 'ACP_CAT_DOT_MODS',
                 'ACP_NEWSPAGE_TITLE'
-            )),
-            array('module.add', array(
+            ]],
+            ['module.add', [
                 'acp',
                 'ACP_NEWSPAGE_TITLE',
-                array(
+                [
                     'module_basename'    => '\nickvergessen\newspage\acp\main_module',
-                    'modes'                => array('config_newspage'),
-                ),
-            )),
+                    'modes'                => ['config_newspage'],
+                ],
+            ]],
 
-            array('config.add', array('newspage_mod_version', '1.0.0')),
-        );
+            ['config.add', ['newspage_mod_version', '1.0.0']],
+        ];
      }
 
 More information about these data update tools can be found in
@@ -534,7 +534,7 @@ migration I will only require phpBB's ``3.1.0-a1`` migration:
 
      static public function depends_on()
      {
-        return array('\phpbb\db\migration\data\v310\alpha1');
+        return ['\phpbb\db\migration\data\v310\alpha1'];
      }
 
 All further Newspage migrations can now require Newspage's first migration file,
@@ -565,34 +565,34 @@ A complete file could look like this:
 
         static public function depends_on()
         {
-            return array('phpbb_db_migration_data_310_dev');
+            return ['phpbb_db_migration_data_310_dev'];
         }
 
         public function update_data()
         {
-            return array(
-                array('config.add', array('news_number', 5)),
-                array('config.add', array('news_forums', '0')),
-                array('config.add', array('news_char_limit', 500)),
-                array('config.add', array('news_user_info', 1)),
-                array('config.add', array('news_post_buttons', 1)),
+            return [
+                ['config.add', ['news_number', 5]],
+                ['config.add', ['news_forums', '0']],
+                ['config.add', ['news_char_limit', 500]],
+                ['config.add', ['news_user_info', 1]],
+                ['config.add', ['news_post_buttons', 1]],
 
-                array('module.add', array(
+                ['module.add', [
                     'acp',
                     'ACP_CAT_DOT_MODS',
                     'ACP_NEWSPAGE_TITLE'
-                )),
-                array('module.add', array(
+                ]],
+                ['module.add', [
                     'acp',
                     'ACP_NEWSPAGE_TITLE',
-                    array(
+                    [
                         'module_basename'    => '\nickvergessen\newspage\acp\main_module',
-                        'modes'                => array('config_newspage'),
-                    ),
-                )),
+                        'modes'                => ['config_newspage'],
+                    ],
+                ]],
 
-                array('config.add', array('newspage_mod_version', '1.0.0')),
-            );
+                ['config.add', ['newspage_mod_version', '1.0.0']],
+            ];
         }
      }
 
@@ -633,9 +633,9 @@ So instead of adding
 
 .. code-block:: php
 
-     $template->assign_vars(array(
+     $template->assign_vars([
         'U_NEWSPAGE'    => append_sid($phpbb_root_path . 'app.' . $phpEx, 'controller=newspage/'),
-     ));
+     ]);
 
 to the ``page_header()``, we put that into an event listener, which is then
 called everytime ``page_header()`` itself is called.
@@ -695,10 +695,10 @@ of events can be found `here <https://wiki.phpbb.com/Event_List>`_):
 
         static public function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.user_setup'    => 'load_language_on_setup',
                 'core.page_header'   => 'add_page_header_link',
-            );
+            ];
         }
 
 Now we add the two functions which are called with each event:
@@ -708,10 +708,10 @@ Now we add the two functions which are called with each event:
         public function load_language_on_setup($event)
         {
             $lang_set_ext = $event['lang_set_ext'];
-            $lang_set_ext[] = array(
+            $lang_set_ext[] = [
                 'ext_name' => 'nickvergessen/newspage',
                 'lang_set' => 'newspage',
-            );
+            ];
             $event['lang_set_ext'] = $lang_set_ext;
         }
 
@@ -721,9 +721,9 @@ Now we add the two functions which are called with each event:
             // This includes the name of the link, aswell as the ACP module names.
             $this->user->add_lang_ext('nickvergessen/newspage', 'newspage_global');
 
-            $this->template->assign_vars(array(
+            $this->template->assign_vars([
                 'U_NEWSPAGE'    => $this->helper->route('newspage_base_controller'),
-            ));
+            ]);
         }
 
 As a last step we need to register the event listener to the system.
@@ -807,11 +807,11 @@ The old pagination code was similar to:
 
         $pagination = generate_pagination(append_sid("{$phpbb_root_path}app.$phpEx", 'controller=newspage/'), $total_paginated, $config['news_number'], $start);
 
-        $this->template->assign_vars(array(
+        $this->template->assign_vars([
             'PAGINATION'        => $pagination,
             'PAGE_NUMBER'        => on_page($total_paginated, $config['news_number'], $start),
             'TOTAL_NEWS'        => $this->user->lang('VIEW_TOPIC_POSTS', $total_paginated),
-        ));
+        ]);
 
 The new code should look like:
 
@@ -819,15 +819,15 @@ The new code should look like:
 
         $pagination = $phpbb_container->get('pagination');
         $pagination->generate_template_pagination(
-            array(
-                'routes' => array(
+            [
+                'routes' => [
                     'newspage_base_controller',
                     'newspage_page_controller',
-                ),
-                'params' => array(),
-            ), 'pagination', 'page', $total_paginated, $this->config['news_number'], $start);
+                ],
+                'params' => [],
+            ], 'pagination', 'page', $total_paginated, $this->config['news_number'], $start);
 
-        $this->template->assign_vars(array(
+        $this->template->assign_vars([
             'PAGE_NUMBER'        => $pagination->on_page($total_paginated, $this->config['news_number'], $start),
             'TOTAL_NEWS'        => $this->user->lang('VIEW_TOPIC_POSTS', $total_paginated),
-        ));
+        ]);
