@@ -10,7 +10,7 @@ Contents:
    start/getting_started
    db/dbal
    development/git
-   development/coding_guidelines/index
+   development/index
    cli/index
    db/dbal
    extensions/index
