@@ -19,7 +19,7 @@ phpBB3 should now be available, please **MAKE SURE** you read at least `6. Conve
 If you experienced problems or do not know how to proceed with any of the steps above please read the rest of this document.
 
 2. Requirements
-============================
+===============
 
 phpBB 3.2.x has a few requirements which must be met before you are able to install and use it.
 
@@ -43,7 +43,7 @@ GD Support
 If your server or hosting account does not meet the requirements above then you will be unable to install phpBB 3.2.x.
 
 3. New installation
-============================
+================
 
 Installation of phpBB will vary according to your server and database. If you have shell access to your account (via telnet or ssh for example) you may want to upload the entire phpBB archive (in binary mode!) to a directory on your host and unarchive it there.
 
@@ -55,18 +55,18 @@ phpBB comes supplied with British English as its standard language. However, a n
 
 Once all the files have been uploaded to your site, you should point your browser at this location with the addition of ``/install/``. For example, if your domain name is ``www.example.com`` and you placed the phpBB files in the directory ``/phpBB3`` off your web root you would enter ``http://www.example.com/phpBB3/install/`` or (alternatively) ``http://www.example.com/phpBB3/install/app.php`` into your browser. When you have done this, you should see the **phpBB Introduction** screen appear.
 
-Introduction
-+++++++++++++
+3.i. Introduction
+-------------------
 
 The initial screen gives you a short introduction into phpBB. It allows you to read the license phpBB is released under (General Public License v2) and provides information about how you can receive support. To start the installation, use the **INSTALL** tab.
 
-Requirements
-++++++++++++
+3.ii. Requirements
+-------------------
 
 The first page you will see after starting the installation is the Requirements list. phpBB automatically checks whether everything that it needs to run properly is installed on your server. You need to have at least the minimum PHP version installed, and at least one database available to continue the installation. Also important, is that all shown folders are available and have the correct permissions. Please see the description of each section to find out whether they are optional or required for phpBB to run. If everything is in order, you can continue the installation with Start Install.
 
-Database settings
-++++++++++++++++++
+3.iii. Database settings
+-------------------
 
 You now have to decide which database to use. See the `Requirements`_ section for information on which databases are supported. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:
 
@@ -88,20 +88,20 @@ If you installed another version of phpBB before on the same database with the s
 
 If you see the **Successful Connection** message, you can continue to the next step.
 
-Administrator details
-++++++++++++++++++++++
+3.iv Administrator details
+-------------------
 
 Now you have to create your administration user. This user will have full administration access and he/she will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla phpBB installation, we only include British English. You can download further languages from https://www.phpbb.com/, and add them before installing or later.
 
-Configuration file
-+++++++++++++++++++
+3.v Configuration file
+-------------------
 
 In this step, phpBB will try to write the configuration file automatically. The forum needs the configuration file in order to operate. It contains all the database settings, so without it, phpBB will not be able to access the database.
 
 Usually, writing the configuration file automatically works fine. If the file permissions are not set correctly, this process can fail. In this case, you need to upload the file manually. phpBB asks you to download the `config.php` file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, use Done to get to the last step. If Done returns you to the same page as before, and does not return a success message, you did not upload the file correctly.
 
-Advanced settings
-++++++++++++++++++
+3.vi Advanced settings
+-------------------
 
 The Advanced settings allow you to set additional parameters of the board configuration. They are optional and you can always change them later. So, even if you are not sure what these settings mean, you can still proceed to the final step and finish the installation.
 
