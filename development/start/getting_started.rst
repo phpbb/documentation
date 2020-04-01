@@ -99,9 +99,25 @@ If you do seek help via our forums please be sure to do a search before posting;
 3.iv Internet Relay Chat
 --------------------------------------------
 
-Another place you may find help is our IRC channel. This operates on the Freenode IRC network, `irc.freenode.net <irc://irc.freenode.net>`_ and the channel is #phpbb and can be accessed by any decent IRC client such as mIRC, XChat, etc. Again, please do not abuse this service and be respectful of other users.
+Another place you may find help is our IRC channel. This operates on the Freenode IRC network, `irc.freenode.net <irc://irc.freenode.net>`_
 
-There are other IRC channels available, please see https://www.phpbb.com/support/irc/ for the complete list.
+The main phpBB IRC channel is ``#phpBB``, and it is for limited general phpBB support.
+For coding discussion related to phpBB in general, to Extensions, Styles, or similar, visit ``#phpBB-Coding``.
+
+An IRC client such as mIRC, XChat, etc. is required to access the Freenode IRC network. Alternatively, the `freenode webchat <https://webchat.freenode.net/>`_ can be used to access phpBB's IRC channels. There are other IRC channels available, please see https://www.phpbb.com/support/irc/ for the complete list. Again, please do not abuse this service and be respectful of other users.
+
+Once you have the client up and running, type ``/server irc.freenode.net`` to connect to the freenode IRC network, and then ``/join #phpbb`` to join the phpBB IRC channel. Alternatively, try clicking the following links to start up your client and connect automatically.
+
+`#phpBB channel <irc://irc.freenode.net/phpbb>`_
+`#phpBB-Coding channel <irc://irc.freenode.net/phpbb-coding>`_
+
+3.v Discord
+--------------------------------------------
+
+phpBB is also running a Discord server for discussing phpBB core development and related topics like Extensions and Styles. Please note that only limited support can be offered.
+To join the phpBB Discord server, follow this `invite link <https://discord.gg/y6kjMdA>`_.
+
+The channels on Discord are bridged to IRC so users on IRC will see your messages posted by the phpbb-discord user while posts from IRC will be flagged with a Bot flag next to a user's name in Discord.
 
 4. Status of this version
 ============================
