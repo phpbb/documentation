@@ -15,7 +15,7 @@ These documents are automatically updated when changes are made to them.
 .. toctree::
    :maxdepth: 2
 
-   php
-   js
-   css
-   html
+   php/index
+   js/index
+   css/index
+   html/index
