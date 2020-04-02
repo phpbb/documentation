@@ -73,19 +73,19 @@ E.g.
 
 .. code-block:: php
 
-		array('OR',
-			array('t.forum_id', '=', 3),
-			array('t.topic_type', '=', 0),
-			array('t.topic_id', 'IN', array(2,3,4)),
-		)
+	array('OR',
+		array('t.forum_id', '=', 3),
+		array('t.topic_type', '=', 0),
+		array('t.topic_id', 'IN', array(2,3,4)),
+	)
 
 which outputs (after reindenting)
 
 .. code-block:: php
 
-		t.forum_id = 3 OR
-		t.topic_type = 0 OR
-		t.topic_id IN (2, 3, 4)
+	t.forum_id = 3 OR
+	t.topic_type = 0 OR
+	t.topic_id IN (2, 3, 4)
 
 
 type3
@@ -195,13 +195,13 @@ Hum... Let's see... There's a set of AND's to join in. Let's start there.
 .. code-block:: php
 
 	// ...
-		'WHERE'		=> array('AND',
-			"forum_id = $forum_id",
-			"(topic_last_post_time >= $min_post_time
-				OR topic_type = " . POST_ANNOUNCE . '
-				OR topic_type = ' . POST_GLOBAL . ')',
-			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
-		),
+	'WHERE'		=> array('AND',
+		"forum_id = $forum_id",
+		"(topic_last_post_time >= $min_post_time
+			OR topic_type = " . POST_ANNOUNCE . '
+			OR topic_type = ' . POST_GLOBAL . ')',
+		$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
+	),
 	// ...
 
 Inside the set of AND's, one of them is a set of OR's.
@@ -209,15 +209,15 @@ Inside the set of AND's, one of them is a set of OR's.
 .. code-block:: php
 
 	// ...
-		'WHERE'		=> array('AND',
-			"forum_id = $forum_id",
-			array('OR',
-				"topic_last_post_time >= $min_post_time",
-				'topic_type = ' . POST_ANNOUNCE,
-				'topic_type = ' . POST_GLOBAL,
-			),
-			$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
+	'WHERE'		=> array('AND',
+		"forum_id = $forum_id",
+		array('OR',
+			"topic_last_post_time >= $min_post_time",
+			'topic_type = ' . POST_ANNOUNCE,
+			'topic_type = ' . POST_GLOBAL,
 		),
+		$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
+	),
 	// ...
 
 There! Better! But it still isn't that easy to work with. There's a string for each comparison. BUT! If I use the type1 array mentioned above, I can separate each one of those into a single thing! In this case...
@@ -225,14 +225,14 @@ There! Better! But it still isn't that easy to work with. There's a string for e
 .. code-block:: php
 
 	// ...
-		'WHERE'		=> array('AND',
-			array('forum_id', '=', $forum_id),
-			array('OR',
-				array('topic_last_post_time', '>=', $min_post_time),
-				array('topic_type', '=', POST_ANNOUNCE),
-				array('topic_type', '=', POST_GLOBAL),
-			),
-			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
+	'WHERE'		=> array('AND',
+		array('forum_id', '=', $forum_id),
+		array('OR',
+			array('topic_last_post_time', '>=', $min_post_time),
+			array('topic_type', '=', POST_ANNOUNCE),
+			array('topic_type', '=', POST_GLOBAL),
+		),
+		array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
 	// ...
 
 There you go! No variable interpolation, no explicit string concatenation, in case of a requirement to build it or change it later, it becomes a very straightforward task (see next section) and all data is properly escaped.
@@ -472,30 +472,30 @@ In phpBB's code
 
 .. code-block:: php
 
-		array('OR',
-			array('t.forum_id', '=', 3),
-			array('t.topic_type', '=', 0),
-		)
+	array('OR',
+		array('t.forum_id', '=', 3),
+		array('t.topic_type', '=', 0),
+	)
 
 .. code-block:: php
 
-		array('AND',
-			array('t.forum_id', '=', 3),
-			array('t.topic_type', '=', 0),
-			array('t.topic_id', '>', 5),
-			array('t.topic_poster', '<>', 5),
-		),
+	array('AND',
+		array('t.forum_id', '=', 3),
+		array('t.topic_type', '=', 0),
+		array('t.topic_id', '>', 5),
+		array('t.topic_poster', '<>', 5),
+	),
 
 .. code-block:: php
 
-		array('AND',
-			array('t.forum_id', '=', 3),
-			array('NOT',
-				array('t.topic_type', '=', 0),
-			),
-			array('t.topic_id', '>', 5),
-			array('t.topic_poster', '<>', 5),
+	array('AND',
+		array('t.forum_id', '=', 3),
+		array('NOT',
+			array('t.topic_type', '=', 0),
 		),
+		array('t.topic_id', '>', 5),
+		array('t.topic_poster', '<>', 5),
+	),
 	
 
 .. code-block:: php
