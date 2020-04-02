@@ -10,7 +10,7 @@ Instead of a single string, this allows editing the WHERE clause in an SQL query
 
 If done correctly, incompatibilities between extensions that use the same SQL query can be averted. Where a regex match could easly force the author into making very complex matches. With this, finding and replacing the content is just tree-like transversal as they are only arrays. Compatibility between extensions becomes much easier.
 
-Althought this will definitely reduce the probability of inter-incompatibilities between extensions, it is not magic. This is just a tool that helps solving this same issue.
+Althought this will definitely reduce the probability of inter-incompatibilities between extensions, it is not magic. This is just a tool that helps solving the same issue.
 
 
 Main use-case ideals
