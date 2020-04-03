@@ -81,7 +81,7 @@ E.g.
 
 which outputs (after reindenting)
 
-.. code-block:: php
+.. code-block:: SQL
 
 	t.forum_id = 3 OR
 	t.topic_type = 0 OR
