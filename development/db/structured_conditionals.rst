@@ -43,12 +43,12 @@ E.g.
 
 .. code-block:: php
 
-	array('f.forum_id', '=', 1)
-	array('f.forum_id', '<>', 1)
-	array('f.forum_id', 'IN', array())
-	array('f.forum_id', 'IN', array(1,2,5,6,7))
-	array('f.forum_id', 'NOT_IN', array(1,2,5,6,7))
-	array('f.forum_id', 'IS', NULL)
+	['f.forum_id', '=', 1]
+	['f.forum_id', '<>', 1]
+	['f.forum_id', 'IN', []]
+	['f.forum_id', 'IN', [1,2,5,6,7]]
+	['f.forum_id', 'NOT_IN', [1,2,5,6,7]]
+	['f.forum_id', 'IS', NULL]
 
 For the operator, there are 6 special values (everything else is taken literally):
 
@@ -73,10 +73,10 @@ E.g.
 
 .. code-block:: php
 
-	array('OR',
-		array('t.forum_id', '=', 3),
-		array('t.topic_type', '=', 0),
-		array('t.topic_id', 'IN', array(2,3,4)),
+	['OR',
+		['t.forum_id', '=', 3],
+		['t.topic_type', '=', 0],
+		['t.topic_id', 'IN', [2,3,4]],
 	)
 
 which outputs (after reindenting)
@@ -99,15 +99,15 @@ Essentially, what this does is that it will call sql_build_query() recursively w
 
 .. code-block:: php
 
-	array('f.forum_id', '=', 'ANY', 'SELECT', array(
-		'SELECT' => array(/*...*/),
-		'FROM' => array(/*...*/),
-	))
+	['f.forum_id', '=', 'ANY', 'SELECT', [
+		'SELECT' => [/*...*/],
+		'FROM' => [/*...*/],
+	]]
 
-	array('f.forum_id', '', 'IN', 'SELECT', array(
-		'SELECT' => array(/*...*/),
-		'FROM' => array(/*...*/),
-	))
+	['f.forum_id', '', 'IN', 'SELECT', [
+		'SELECT' => [/*...*/],
+		'FROM' => [/*...*/],
+	]]
 
 Why arrays?
 ===========
@@ -172,17 +172,17 @@ According to the manual for this transformation, it should look like this:
 
 .. code-block:: php
  
-	$sql_ary = array(
+	$sql_ary = [
 		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
-		'FROM'		=> array(
+		'FROM'		=> [
 			TOPICS_TABLE		=> '',
-		),
+		],
 		'WHERE'		=> "forum_id = $forum_id
 			AND (topic_last_post_time >= $min_post_time
 				OR topic_type = " . POST_ANNOUNCE . '
 				OR topic_type = ' . POST_GLOBAL . ')
 			AND ' . $phpbb_content_visibility->get_visibility_sql('topic', $forum_id),
-	);
+	];
 	
 	$db->sql_build_query('SELECT', $sql_ary);
 
@@ -195,13 +195,13 @@ Hum... Let's see... There's a set of AND's to join in. Let's start there.
 .. code-block:: php
 
 	// ...
-	'WHERE'		=> array('AND',
+	'WHERE'		=> ['AND,
 		"forum_id = $forum_id",
 		"(topic_last_post_time >= $min_post_time
 			OR topic_type = " . POST_ANNOUNCE . '
 			OR topic_type = ' . POST_GLOBAL . ')',
 		$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)
-	),
+	],
 	// ...
 
 Inside the set of AND's, one of them is a set of OR's.
@@ -209,9 +209,9 @@ Inside the set of AND's, one of them is a set of OR's.
 .. code-block:: php
 
 	// ...
-	'WHERE'		=> array('AND',
+	'WHERE'		=> ['AND,
 		"forum_id = $forum_id",
-		array('OR',
+		['OR',
 			"topic_last_post_time >= $min_post_time",
 			'topic_type = ' . POST_ANNOUNCE,
 			'topic_type = ' . POST_GLOBAL,
@@ -225,14 +225,14 @@ There! Better! But it still isn't that easy to work with. There's a string for e
 .. code-block:: php
 
 	// ...
-	'WHERE'		=> array('AND',
-		array('forum_id', '=', $forum_id),
-		array('OR',
-			array('topic_last_post_time', '>=', $min_post_time),
-			array('topic_type', '=', POST_ANNOUNCE),
-			array('topic_type', '=', POST_GLOBAL),
+	'WHERE'		=> ['AND,
+		['forum_id', '=', $forum_id],
+		['OR',
+			['topic_last_post_time', '>=', $min_post_time],
+			['topic_type', '=', POST_ANNOUNCE],
+			['topic_type', '=', POST_GLOBAL],
 		),
-		array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
+		[$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)],
 	// ...
 
 There you go! No variable interpolation, no explicit string concatenation, in case of a requirement to build it or change it later, it becomes a very straightforward task (see next section) and all data is properly escaped.
@@ -242,21 +242,21 @@ Just for the last piece of code in this section, here's how the full SQL query s
 
 .. code-block:: php
  
-	$sql_ary = array(
+	$sql_ary = [
 		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
-		'FROM'		=> array(
+		'FROM'		=> [
 			TOPICS_TABLE		=> '',
-		),
-		'WHERE'		=> array('AND',
-			array('forum_id', '=', $forum_id),
-			array('OR',
-				array('topic_last_post_time', '>=', $min_post_time),
-				array('topic_type', '=', POST_ANNOUNCE),
-				array('topic_type', '=', POST_GLOBAL),
-			),
-			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
-		),
-	);
+		],
+		'WHERE'		=> ['AND,
+			['forum_id', '=', $forum_id],
+			['OR',
+				['topic_last_post_time', '>=', $min_post_time],
+				['topic_type', '=', POST_ANNOUNCE],
+				['topic_type', '=', POST_GLOBAL],
+			],
+			[$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)],
+		],
+	];
 	
 	$db->sql_build_query('SELECT', $sql_ary);
 
@@ -269,21 +269,21 @@ Piking up the code above as an example:
 	
 .. code-block:: php
 
-	$sql = array(
+	$sql = [
 		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
-		'FROM'		=> array(
+		'FROM'		=> [
 			TOPICS_TABLE		=> '',
-		),
-		'WHERE'		=> array('AND',
-			array('forum_id', '=', $forum_id),
-			array('OR',
-				array('topic_last_post_time', '>=', $min_post_time),
-				array('topic_type', '=', POST_ANNOUNCE),
-				array('topic_type', '=', POST_GLOBAL),
+		],
+		'WHERE'		=> ['AND,
+			['forum_id', '=', $forum_id],
+			['OR',
+				['topic_last_post_time', '>=', $min_post_time],
+				['topic_type', '=', POST_ANNOUNCE],
+				['topic_type', '=', POST_GLOBAL],
 			),
-			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
-		),
-	);
+			[$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)]
+		],
+	];
 
 
 Imagine you are building an extension that requires modifying that query above. For example, you want to make topic_last_post_time as a forced requirement for this query.
@@ -291,35 +291,35 @@ In other words, you want the query to be like this:
 
 .. code-block:: php
 
-	$sql = array(
+	$sql = [
 		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
-		'FROM'		=> array(
+		'FROM'		=> [
 			TOPICS_TABLE		=> '',
-		),
-		'WHERE'		=> array('AND',
-			array('forum_id', '=', $forum_id),
-			array('topic_last_post_time', '>=', $min_post_time),
-			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
-		),
-	);
+		],
+		'WHERE'		=> ['AND,
+			['forum_id', '=', $forum_id],
+			['topic_last_post_time', '>=', $min_post_time],
+			[$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)],
+		],
+	];
 
 Just as a good practice and to help other extension writers to modify this query in an easier way, let's make it like this instead:
 
 .. code-block:: php
 
-	$sql = array(
+	$sql = [
 		'SELECT'	=> 'COUNT(topic_id) AS num_topics',
-		'FROM'		=> array(
+		'FROM'		=> [
 			TOPICS_TABLE		=> '',
-		),
-		'WHERE'		=> array('AND',
-			array('forum_id', '=', $forum_id),
-			array('OR',
-				array('topic_last_post_time', '>=', $min_post_time),
-			),
-			array($phpbb_content_visibility->get_visibility_sql('topic', $forum_id)),
-		),
-	);
+		],
+		'WHERE'		=> ['AND,
+			['forum_id', '=', $forum_id],
+			['OR',
+				['topic_last_post_time', '>=', $min_post_time],
+			],
+			[$phpbb_content_visibility->get_visibility_sql('topic', $forum_id)],
+		],
+	];
 
 Do notice that I kept the OR clause. This is just so that these changes have as little chance as possible to break other extensions.
 Anyway, moving on.
@@ -428,7 +428,7 @@ The short way is about as much as this:
 		$sql = $event['sql'];
 		if(!empty($sql['WHERE'][2][0][1]) && is_array($sql['WHERE'][2][0][1]))
 		{
-			$sql['WHERE'][2][0][1][] = array('topic_type', '=', POST_STICKY);
+			$sql['WHERE'][2][0][1][] = ['topic_type', '=', POST_STICKY];
 		}
 		else 
 		{
@@ -451,51 +451,51 @@ In phpBB's code
 
 .. code-block:: php
 		
-	$db->sql_build_query('SELECT', array(
-		'SELECT' => array('f.forum_id', 'f.forum_title'),
-		'FROM' => array(
+	$db->sql_build_query('SELECT', [
+		'SELECT' => ['f.forum_id', 'f.forum_title'],
+		'FROM' => [
 			FORUMS_TABLE  => 'f',
 			TOPICS_TABLE => 't',
-		),
-		'WHERE' => array(
+		],
+		'WHERE' => [
 			'AND',
-			array('t.topic_poster', '=', 1),
-			array('f.forum_id', '>=', 'ALL', 'SELECT', array(
-				'SELECT' => array('t.forum_id'),
-				'FROM' => array(TOPICS_TABLE  => 't'),
-				'WHERE' => array('t.topic_poster', '=', 1),
-			),
-		),
-	)
+			['t.topic_poster', '=', 1],
+			['f.forum_id', '>=', 'ALL', 'SELECT', [
+				'SELECT' => ['t.forum_id'],
+				'FROM' => [TOPICS_TABLE  => 't'],
+				'WHERE' => ['t.topic_poster', '=', 1],
+			],
+		],
+	);
 	
 
 
 .. code-block:: php
 
-	array('OR',
-		array('t.forum_id', '=', 3),
-		array('t.topic_type', '=', 0),
+	['OR',
+		['t.forum_id', '=', 3],
+		['t.topic_type', '=', 0],
 	)
 
 .. code-block:: php
 
-	array('AND',
-		array('t.forum_id', '=', 3),
-		array('t.topic_type', '=', 0),
-		array('t.topic_id', '>', 5),
-		array('t.topic_poster', '<>', 5),
+	['AND,
+		['t.forum_id', '=', 3],
+		['t.topic_type', '=', 0],
+		['t.topic_id', '>', 5],
+		['t.topic_poster', '<>', 5],
 	),
 
 .. code-block:: php
 
-	array('AND',
-		array('t.forum_id', '=', 3),
-		array('NOT',
-			array('t.topic_type', '=', 0),
-		),
-		array('t.topic_id', '>', 5),
-		array('t.topic_poster', '<>', 5),
-	),
+	['AND,
+		['t.forum_id', '=', 3],
+		['NOT',
+			['t.topic_type', '=', 0],
+		],
+		['t.topic_id', '>', 5],
+		['t.topic_poster', '<>', 5],
+	],
 	
 
 .. code-block:: php
