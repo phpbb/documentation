@@ -1022,27 +1022,17 @@ Have a look at the :class:`quote` type to see an example.
 Deleting a Notification
 =======================
 Sometimes it is necessary to delete a notification.
-For example when the private message gets deleted before it is read,
-or when a topic gets deleted which had unapproved post notifications.
+For example when a private message is deleted before it is read,
+or a topic with unapproved post notifications is deleted. In each
+of these cases the cause for the notification has been deleted,
+making the notification irrelevant.
 
-We will quickly go over the parameters used by this function.
-All parameters send to this method will be joined using :class:`AND` statements.
+Deleting a notification is handled using the ``delete_notifications``
+function located in the notification manager object (:class:`\\phpbb\\notification\\manager`).
+Typically you would use an appropriate event listener to call ``delete_notifications``,
+such as when an action occurs that would make your notification irrelevant.
 
-The **notification type** can either be a single or an array of service identifiers.
-As defined in our `services file`_, our notification type service identifier is: ``vendor.extension.notification.type.sample``.
-
-The **item identifier** can either be an integer or an array of integers.
-As a reminder: only item identifiers for the provided notification type(s) will be deleted.
-
-The **parent identifier** can either be an integer or an array of integers.
-Alternatively, it is also possible to pass ``false`` as a value,
-and all notifications for the notification type(s) will be deleted,
-regardless of which item or parent they belong to.
-
-The **user identifier** can either be an integer or an array of integers.
-Alternatively, it is also possible to pass ``false`` as a value,
-and all notifications for the notification type(s) will be deleted,
-regardless of which user received the notification.
+This function is very simple to use, and requires only a few basic parameters:
 
 Parameters
 ++++++++++
@@ -1051,22 +1041,32 @@ Parameters
    :header: "Parameter", "Description"
    :delim: #
 
-   **notification_type** # The notification service identifier. |br| In this example: ``vendor.extension.notification.type.sample``.
-   **item_id**           # The item identifier(s). |br| The item id for which you want to delete notifications
-   **parent_id**         # The parent identifier(s). |br| The parent id for which you want to delete notifications.
-   **user_id**           # The user identifier(s). |br| The user id for whom you want to delete notifications.
+   **notification_type** # The notification service identifier. |br| Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
+   **item_id**           # The item identifier(s). |br| The item id for which you want to delete notifications. |br| Can be a single integer or an array of integers. Only item identifiers for the provided |br| notification type(s) will be deleted.
+   **parent_id**         # The parent identifier(s). |br| The parent id for which you want to delete notifications. |br| Can be a single integer or an array of integers. Use this argument to delete the |br| notifications that only belong to the given parent identifier(s). Default is |br| false to ignore parent identifiers.
+   **user_id**           # The user identifier(s). |br| The user id for whom you want to delete notifications. |br| Can be a single integer or an array of integers. Use this argument to delete the |br| notifications for a given user or collection of users. Default is false to ignore |br| specific users.
+
+.. code-block:: php
+
+   // Let's take a look at a PM that was deleted.
+   // Say the item ID(s) for our notification come from the deleted PM's message IDs.
+   $item_ids = $event['data']['msg_ids'];
+
+   // Just the item identifier is sufficient to delete this notification as it is unique
+   // But you could include user_id or parent_id's if they were relevant as well.
+   $this->notification_manager->delete_notifications('vendor.extension.notification.type.sample', $item_ids);
 
 Marking a Notification
 ======================
-Notifications are automatically marked as read, when they are clicked in the dropdown.
-Or when marking forums or topics as read, their respective notifications are marked aswell.
-However, sometimes you might want to also manually mark a notification as read or unread.
+Notifications are automatically marked as read when they are clicked in the notifications dropdown.
+Or when marking forums or topics as read, their respective notifications are marked as well.
+However, sometimes it may preferable to manually mark a notification as read or unread.
 
 There are three methods available for marking a notification,
 all of these are located in the Notification Manager object (:class:`\\phpbb\\notification\\manager`).
 The distinct difference between these methods is how they determine which notifications should be marked.
 Either through their item id, parent id or the actual notification id.
-When marking notifications by their item id or parent id, it will automatically do so for all available notification methods.
+When marking notifications by their item id or parent id, it will automatically mark them for all available notification methods.
 But when marking notifications by their actual id, you will have to provide the specific notification method yourself.
 
 .. admonition:: Deprecated
@@ -1076,28 +1076,7 @@ But when marking notifications by their actual id, you will have to provide the 
    |br| ``mark_notifications_read``
    |br| ``mark_notifications_read_by_parent``
 
-We will quickly go over the parameters used by these functions.
-All parameters send to these methods will be joined using :class:`AND` statements.
-
-The **notification type** can either be a single or an array of service identifiers.
-As defined in our `services file`_, our notification type service identifier is: ``vendor.extension.notification.type.sample``.
-
-The **item identifier** or **parent identifier** can either be an integer or an array of integers.
-Alternatively, it is also possible to pass ``false`` as a value,
-and all notifications for the notification type(s) will be marked,
-regardless of which item or parent they belong to.
-
-The **user identifier** can either be an integer or an array of integers.
-Alternatively, it is also possible to pass ``false`` as a value,
-and all notifications for the notification type(s) will be marked,
-regardless of which user received the notification.
-
-The **time** can either be a UNIX timestamp or ``false``.
-Only notifications send before the specified timestamp will be marked.
-When sending ``false``, it will default to the current ``time()``, meaning all notifications will be marked.
-
-The **mark_read** can either be ``true`` or ``false``.
-This will indicate whether the notification should be marked as read, or unread.
+The following is a quick summary of the three methods available for marking notifications and their arguments.
 
 mark_notifications
 ------------------
@@ -1109,10 +1088,10 @@ Parameters
    :header: "Parameter", "Description"
    :delim: #
 
-   **notification_type** # The notification service identifier. |br| In this example: ``vendor.extension.notification.type.sample``.
-   **item_id**           # The item identifier(s). |br| The item id for which you want to mark notifications.
-   **user_id**           # The user identifier(s). |br| The user id for whom you want to mark notifications.
-   **time**              # The timestamp to use as cut off. |br| All notifications after this timestamp will not be marked.
+   **notification_type** # Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
+   **item_id**           # The item identifier(s). |br| The item id(s) for notifications you want to mark read. |br| Can be a single integer or an array of integers. Alternatively, it is also possible to pass |br| false to mark read for all item ids.
+   **user_id**           # The user identifier(s). |br| The user id(s) for whom you want to mark notifications read. |br| Can be a single integer or an array of integers. Alternatively, it is also possible to pass |br| false to mark read for all user ids.
+   **time**              # UNIX timestamp to use as a cut off. |br| Mark notifications sent before this time as read. All notifications created after this |br| time will not be marked read. The default value is false, which will mark all as read.
    **mark_read**         # Whether to mark the notification as *read* or *unread*. |br| Defaults to *read*.
 
 mark_notifications_by_parent
@@ -1125,18 +1104,19 @@ Parameters
    :header: "Parameter", "Description"
    :delim: #
 
-   **notification_type** # The notification service identifier. |br| In this example: ``vendor.extension.notification.type.sample``.
-   **parent_id**         # The parent identifier(s). |br| The parent id for which you want to mark notifications.
-   **user_id**           # The user identifier(s). |br| The user id for whom you want to mark notifications.
-   **time**              # The timestamp to use as cut off. |br| All notifications after this timestamp will not be marked.
+   **notification_type** # Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
+   **parent_id**         # The parent identifier(s). |br| The item parent id(s) for notifications you want to mark read. |br| Can be a single integer or an array of integers. Alternatively, it is also possible to pass |br| false to mark read for all item parent ids.
+   **user_id**           # The user identifier(s). |br| The user id(s) for whom you want to mark notifications read. |br| Can be a single integer or an array of integers. Alternatively, it is also possible to pass |br| false to mark read for all user ids.
+   **time**              # UNIX timestamp to use as a cut off. |br| Mark notifications sent before this time as read. All notifications created after this |br| time will not be marked read. The default value is false, which will mark all as read.
    **mark_read**         # Whether to mark the notification as *read* or *unread*. |br| Defaults to *read*.
 
 mark_notifications_by_id
 ------------------------
-Thus far we haven't had to work with the actual identifier of the notification itself, but mostly with the item id and parent id.
-This is mostly cause we never need the notification id, as most of the notification handling is done through the distinct item and parent id.
-However, there are time it is more convenient or accurate to work with the actual notification id.
-An example is when the notifications are listed in the :abbr:`UCP (User Control Panel)`, and a user can select specific notifications to be marked as read.
+Thus far we haven't had to work with the actual identifier of the notification itself, instead using the notification's item and parent ids.
+This is usually because in the core of phpBB's execution, we may never know or have access to the notification's actual id,
+as most of the notification handling is done through the distinct item and/or parent ids.
+However, there can be times where it is more convenient or accurate to work directly with the notification's unique id.
+For example, when the notifications are listed in the :abbr:`UCP (User Control Panel)` and a user can select specific notifications to be marked as read.
 
 Parameters
 ++++++++++
@@ -1145,10 +1125,10 @@ Parameters
    :header: "Parameter", "Description"
    :delim: #
 
-   **method_name**     # The notification method service identifier |br| For example: ``notification.method.board``
-   **notification_id** # The notification identifier(s) |br| Can be an integer or array of integers.
-   **time**            # The timestamp to use as cut off. |br| All notifications after this timestamp will not be marked.
-   **mark_read**       # Whether to mark the notification as *read* or *unread*. |br| Defaults to *read*.
+   **method_name**       # The notification method service identifier |br| For example: ``notification.method.board``
+   **notification_id**   # The notification identifier(s) |br| Can be an integer or array of integers.
+   **time**              # UNIX timestamp to use as a cut off. |br| Mark notifications sent before this time as read. All notifications created after this |br| time will not be marked read. The default value is false, which will mark all as read.
+   **mark_read**         # Whether to mark the notification as *read* or *unread*. |br| Defaults to *read*.
 
 Advanced Lessons
 ================
