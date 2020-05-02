@@ -1165,19 +1165,6 @@ You can use this custom notification identifier in the get_item_id_ function.
        return $data['item_id'];
    }
 
-Building a Users List
----------------------
-It is also possible to build a users list in a notification's text.
-This can be useful, for example, when you want to show which users have replied to a topic.
-
-   **Reply** from **User 1**, **User 2**, **User 3** and 7 others in topic:
-   |br| *The topic title*
-
-Easiest thing to do is extend the :class:`post` notification type and override the necessary functions.
-Make sure to send variables that comply with the :class:`post`'s ``get_title`` and ``find_users_for_notification``.
-
-*This advanced lesson still needs expanding.*
-
 .. |fa-ext| raw:: html
 
    <i class="fa fa-puzzle-piece fa-fw" aria-hidden="true"></i>
