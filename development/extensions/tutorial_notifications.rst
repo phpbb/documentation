@@ -73,7 +73,7 @@ This will prevent any data from one notification instance being inadvertently mi
 Finally ``tags`` is used to tag our service as a notification type. This is how phpBB will know this is part of its notification system.
 
 .. code-block:: yaml
-   :caption: :class:`vendor/config/services.yml`
+   :caption: :class:`vendor/extension/config/services.yml`
 
    services:
        vendor.extension.notification.type.sample:
@@ -95,7 +95,7 @@ The first argument in the call is the name of the ``set_`` function we are going
 The second argument is an array with service definitions that our ``set_`` functions will be adding to our :class:`sample` class.
 
 .. code-block:: yaml
-   :caption: :class:`vendor/config/services.yml`
+   :caption: :class:`vendor/extension/config/services.yml`
    :name: services file
 
    services:
