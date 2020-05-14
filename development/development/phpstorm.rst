@@ -54,7 +54,7 @@ CSS, JavaScript, HTML, Twig
 ###########################
 
 Tabs should be used (not spaces). All tab and indent sizes should be set to 4 spaces.
-Also be sure "Keep indents on empty lines" is NOT checked. We have coding guidlines for each language as well you can reference here :doc:`./index`
+Also be sure "Keep indents on empty lines" is NOT checked. We have coding guidelines for each language you can reference here :doc:`./index`
 
 JSON & YAML
 ###########
@@ -70,7 +70,9 @@ The default inspection settings should work just fine. However there are a coupl
 
 * If PhpStorm is not connected to your database server, you may want to turn off **SQL > SQL Dialect Detection** and **SQL > No data sources configured** warnings.
 * phpBB uses fully qualified namespaces, so you can turn off this inspection warning **PHP > Code Style > Unnecessary fully qualified name**.
-* You may enable additional JavaScript inspections. Under **JavaScript > Code quality tools**, you can enable ESLint. phpBB comes with configuration for XO.js which is a wrapper for ESLint. With these inspections enabled, you can use the configuration files provided by phpBB instead of PhpStorm's default settings. XO.js integration does not exsits for PhpStorm. XO.js is a wrapper tool for ESlint that is run through NodeJS on the command line. To use XO.js, make sure the NodeJS framework is downloaded and installed on your computer. Then you can install XO.js via the npm package manager and configure the ESlint options in PhpStorm. You can follow these  `Instructions <https://github.com/jamestalmage/xo-with-webstorm>`_ to get everything setup.
+* You may enable additional JavaScript inspections. Under **JavaScript > Code quality tools**, you can enable ESLint. phpBB comes with configuration for XO.js which is a wrapper for ESLint. With these inspections enabled, you can use the configuration files provided by phpBB instead of PhpStorm's default settings.
+
+.. warning:: XO.js is not bundled with PhpStorm. The XO.js tool is run through NodeJS. To use XO.js, make sure the NodeJS framework is downloaded and installed on your computer. Then you can install XO.js via the npm package manager and configure the ESlint options in PhpStorm. You can follow these  `Instructions <https://github.com/jamestalmage/xo-with-webstorm>`_.
 
 .. warning:: Stylelint is not bundled with PhpStorm. The Stylelint tool is run through NodeJS. To use Stylelint, make sure the NodeJS framework is downloaded and installed on your computer. Then you can follow these `Instructions <https://www.jetbrains.com/help/phpstorm/stylelint.html>`_.
 
