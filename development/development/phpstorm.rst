@@ -72,6 +72,8 @@ The default inspection settings should work just fine. However there are a coupl
 * phpBB uses fully qualified namespaces, so you can turn off this inspection warning **PHP > Code Style > Unnecessary fully qualified name**.
 * You may enable additional JavaScript inspections. Under **JavaScript > Code quality tools**, you can enable ESLint. phpBB comes with configuration for XO.js which is a wrapper for ESLint. With these inspections enabled, you can use the configuration files provided by phpBB instead of PhpStorm's default settings.
 
+.. note:: phpBB uses jQuery. The Javascript inspections need to be made aware of jQuery to avoid any false warnings/errors. To do this, simply go to **Languages & Frameworks > JavaScript > Libraries** and enable jQuery. If jQuery is not in the list, you can use the "Download" button to download a copy of jQuery to PhpStorm.
+
 .. warning:: XO.js is not bundled with PhpStorm. The XO.js tool is run through NodeJS. To use XO.js, make sure the NodeJS framework is downloaded and installed on your computer. Then you can install XO.js via the npm package manager and configure the ESlint options in PhpStorm. You can follow these  `Instructions <https://github.com/jamestalmage/xo-with-webstorm>`_.
 
 .. warning:: Stylelint is not bundled with PhpStorm. The Stylelint tool is run through NodeJS. To use Stylelint, make sure the NodeJS framework is downloaded and installed on your computer. Then you can follow these `Instructions <https://www.jetbrains.com/help/phpstorm/stylelint.html>`_.
