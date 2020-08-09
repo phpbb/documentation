@@ -2425,6 +2425,7 @@
 					</caption>
 				</mediaobject>
 			</figure>
+			<note><para>The ability to download backups from the ACP was removed in 3.2.6. Backups will need to be downloaded from the server using FTP, SCP, or another mechanism.</para></note>
 		</section>
 		<section id="acp_maintenance_search">
 			<sectioninfo>
