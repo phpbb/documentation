@@ -37,7 +37,8 @@ Case insensitive comparison of strings is no longer possible with ``strtolower``
 
 **Bad - The strings might be the same even if strtolower differs:**
 
-.. code: php
+.. code:: php
+
     if (strtolower($string1) == strtolower($string2))
     {
     	echo '$string1 and $string2 are equal or differ in case';
@@ -45,6 +46,7 @@ Case insensitive comparison of strings is no longer possible with ``strtolower``
 
 **Good - Case folding is really case insensitive:**
 
+.. code:: php
 
 	if (utf8_case_fold_nfc($string1) == utf8_case_fold_nfc($string2))
 	{
@@ -54,4 +56,7 @@ Case insensitive comparison of strings is no longer possible with ``strtolower``
 Confusables Detection
 +++++++++++++++++++++
 
-phpBB offers a special method ``utf8_clean_string`` which can be used to make sure string identifiers are unique. This method uses Normalization Form Compatibility Composition (NFKC) instead of NFC and replaces similarly looking characters with a particular representative of the equivalence class. This method is currently used for usernames and group names to avoid confusion with similarly looking names.
+phpBB offers a special method ``utf8_clean_string`` which can be used to make sure string identifiers are unique.
+This method uses Normalization Form Compatibility Composition (NFKC) instead of NFC and replaces similarly looking
+characters with a particular representative of the equivalence class. This method is currently used for usernames and
+group names to avoid confusion with similarly looking names.

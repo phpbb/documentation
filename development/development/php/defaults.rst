@@ -12,6 +12,7 @@ In order to make this as simple as possible, we will be using tabs, not spaces. 
 Tabs in front of lines are no problem, but having them within the text can be a problem if you do not set it to the amount of spaces every one of us uses. Here is a short example of how it should look like:
 
 .. code:: php
+
     {TAB}$mode{TAB}{TAB}= $request->variable('mode', '');
     {TAB}$search_id{TAB}= $request->variable('search_id', '');
 
@@ -29,6 +30,7 @@ Standard header for new files:
 This template of the header must be included at the start of all phpBB files:
 
 .. code:: php
+
     /**
     *
     * This file is part of the phpBB Forum Software package.
@@ -59,6 +61,7 @@ Files containing inline code
 For those files you have to put an empty comment directly after the header to prevent the documentor assigning the header to the first code element found.
 
 .. code:: php
+
     /**
     * {HEADER}
     */
@@ -70,12 +73,15 @@ For those files you have to put an empty comment directly after the header to pr
 Files containing only functions
 +++++++++++++++++++++++++++++++
 
-Do not forget to comment the functions (especially the first function following the header). Each function should have at least a comment of what this function does. For more complex functions it is recommended to document the parameters too.
+Do not forget to comment the functions (especially the first function following the header). Each function should have
+at least a comment of what this function does. For more complex functions it is recommended to document the parameters too.
 
 Files containing only classes
 +++++++++++++++++++++++++++++
 
-Do not forget to comment the class. Classes need a separate @package definition, it is the same as the header package name. Apart from this special case the above statement for files containing only functions needs to be applied to classes and it's methods too.
+Do not forget to comment the class. Classes need a separate @package definition, it is the same as the header package
+name. Apart from this special case the above statement for files containing only functions needs to be applied to
+classes and it's methods too.
 
 Code following the header but only functions/classes file
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -83,6 +89,7 @@ Code following the header but only functions/classes file
 If this case is true, the best method to avoid documentation confusions is adding an ignore command, for example:
 
 .. code:: php
+
     /**
     * {HEADER}
     */
@@ -159,6 +166,7 @@ phpBB Styles/Templates/Themes
 There are some special constants application developers are able to utilize to bend some of phpBB's internal functionality to suit their needs.
 
 .. code:: php
+
     PHPBB_MSG_HANDLER          (overwrite message handler)
     PHPBB_DB_NEW_LINK          (overwrite new_link parameter for sql_connect)
     PHPBB_ROOT_PATH            (overwrite $phpbb_root_path)

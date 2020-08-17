@@ -188,7 +188,7 @@ Low-level
 
 Oftentimes we want to comment on specific declarations (i.e. lines) in a ruleset. To do this we use a kind of reverse footnote. Here is a more complex comment detailing the larger site headers mentioned above:
 
-.. code:: scss
+.. code::
 
     //
     // 1. Allow us to style box model properties.

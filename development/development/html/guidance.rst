@@ -12,8 +12,8 @@ improve readability.
 -  Preference: ``Tabs``
 
 .. tip: configure your editor to “show invisibles”. This will allow you to
-eliminate end of line whitespace, eliminate unintended blank line
-whitespace, and avoid polluting commits.
+  eliminate end of line whitespace, eliminate unintended blank line
+  whitespace, and avoid polluting commits.
 
 2. Format
 ------------
@@ -32,6 +32,7 @@ whitespace, and avoid polluting commits.
 Example:
 
 .. code:: html
+
    <div class="tweet">
        <a href="path/to/somewhere">
            <img src="path/to/image.png" alt="">
@@ -55,6 +56,7 @@ select elements.
 Example:
 
 .. code:: html
+
    <a class="[value]" id="[value]" data-name="[value]" href="[url]">[text]</a>
 
 4. Line Breaks
@@ -86,6 +88,7 @@ Prefer the use of paragrphs or block level spans over breaks as you can not styl
 **Example with good formated text:**
 
 .. code:: css
+
     .subtitle {
         display: block;
     }
@@ -134,9 +137,11 @@ relatively scalable interface between your HTML and CSS/JS.
 **Example with bad names:**
 
 .. code:: html
+
    <div class="cb s-scr"></div>
 
 .. code:: css
+
    .s-scr {
      overflow: auto;
    }
@@ -148,9 +153,11 @@ relatively scalable interface between your HTML and CSS/JS.
 **Example with better names:**
 
 .. code:: html
+
    <div class="column-body is-scrollable"></div>
 
 .. code:: css
+
    .is-scrollable {
        overflow: auto;
    }

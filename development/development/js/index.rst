@@ -11,5 +11,3 @@ We use `XO.js <https://github.com/xojs/xo>`_ for checking the quality, linting, 
 
 .. toctree::
    :maxdepth: 2
-
-   test

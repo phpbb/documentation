@@ -43,7 +43,7 @@ GD Support
 If your server or hosting account does not meet the requirements above then you will be unable to install phpBB 3.2.x.
 
 3. New installation
-================
+===================
 
 Installation of phpBB will vary according to your server and database. If you have shell access to your account (via telnet or ssh for example) you may want to upload the entire phpBB archive (in binary mode!) to a directory on your host and unarchive it there.
 
@@ -51,7 +51,7 @@ If you do not have shell access or do not wish to use it, you will need to decom
 
 All .php, .sql, .cfg, .css, .js, .html, .htaccess and .txt files should be uploaded in **ASCII** mode, while all graphics should be uploaded in **BINARY** mode. If you are unfamiliar with what this means please refer to your FTP client documentation. In most cases this is all handled transparantly by your ftp client, but if you encounter problems later you should be sure the files were uploaded correctly as described here.
 
-phpBB comes supplied with British English as its standard language. However, a number of separate packs for different languages are available. If you are not a native English speaker you may wish to install one or more of these packages before continuing. The installation process below will allow you to select a default language from those available (you can, of course, change this default at a later stage). For more details on language packs, where to obtain them and how to install them please see :doc:`../start/getting_started.html#i-languages-internationalisation-i18n`.
+phpBB comes supplied with British English as its standard language. However, a number of separate packs for different languages are available. If you are not a native English speaker you may wish to install one or more of these packages before continuing. The installation process below will allow you to select a default language from those available (you can, of course, change this default at a later stage). For more details on language packs, where to obtain them and how to install them please see :ref:`i-languages-internationalisation-i18n`.
 
 Once all the files have been uploaded to your site, you should point your browser at this location with the addition of ``/install/``. For example, if your domain name is ``www.example.com`` and you placed the phpBB files in the directory ``/phpBB3`` off your web root you would enter ``http://www.example.com/phpBB3/install/`` or (alternatively) ``http://www.example.com/phpBB3/install/app.php`` into your browser. When you have done this, you should see the **phpBB Introduction** screen appear.
 
@@ -66,9 +66,9 @@ The initial screen gives you a short introduction into phpBB. It allows you to r
 The first page you will see after starting the installation is the Requirements list. phpBB automatically checks whether everything that it needs to run properly is installed on your server. You need to have at least the minimum PHP version installed, and at least one database available to continue the installation. Also important, is that all shown folders are available and have the correct permissions. Please see the description of each section to find out whether they are optional or required for phpBB to run. If everything is in order, you can continue the installation with Start Install.
 
 3.iii. Database settings
--------------------
+------------------------
 
-You now have to decide which database to use. See the `Requirements`_ section for information on which databases are supported. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:
+You now have to decide which database to use. See the `2. Requirements`_ section for information on which databases are supported. If you do not know your database settings, please contact your host and ask for them. You will not be able to continue without them. You need:
 
 - The Database Type - the database you will be using.
 - The Database server hostname or DSN - the address of the database server.
@@ -89,19 +89,19 @@ If you installed another version of phpBB before on the same database with the s
 If you see the **Successful Connection** message, you can continue to the next step.
 
 3.iv Administrator details
--------------------
+--------------------------
 
 Now you have to create your administration user. This user will have full administration access and he/she will be the first user on your forum. All fields on this page are required. You can also set the default language of your forum on this page. In a vanilla phpBB installation, we only include British English. You can download further languages from https://www.phpbb.com/, and add them before installing or later.
 
 3.v Configuration file
--------------------
+----------------------
 
 In this step, phpBB will try to write the configuration file automatically. The forum needs the configuration file in order to operate. It contains all the database settings, so without it, phpBB will not be able to access the database.
 
 Usually, writing the configuration file automatically works fine. If the file permissions are not set correctly, this process can fail. In this case, you need to upload the file manually. phpBB asks you to download the `config.php` file and tells you what to do with it. Please read the instructions carefully. After you have uploaded the file, use Done to get to the last step. If Done returns you to the same page as before, and does not return a success message, you did not upload the file correctly.
 
 3.vi Advanced settings
--------------------
+----------------------
 
 The Advanced settings allow you to set additional parameters of the board configuration. They are optional and you can always change them later. So, even if you are not sure what these settings mean, you can still proceed to the final step and finish the installation.
 
@@ -218,7 +218,7 @@ As with install, the conversion is automated. Your previous 2.0.x database table
 
 Please note that this conversion process may take quite some time and depending on your hosting provider this may result in it failing (due to web server resource limits or other timeout issues). If this is the case, you should ask your provider if they are willing to allow the convert script to temporarily exceed their limits (be nice and they will probably be quite helpful). If your host is unwilling to increase the limits to run the convertor, please see this article for performing the conversion on your local machine: `Knowledge Base - Offline Conversions <https://www.phpbb.com/kb/article/offline-conversions/>`_
 
-Once completed, your board should be immediately available. If you encountered errors, you should report the problems to our bug tracker or seek help via our forums (see `5. Reporting Bugs`_ for details).
+Once completed, your board should be immediately available. If you encountered errors, you should report the problems to our bug tracker or seek help via our forums (see :ref:`5. Reporting Bugs` for details).
 
 6.iii. Things to do after conversion
 ------------------------------------
@@ -277,6 +277,7 @@ For **Apache** there are ``.htaccess`` files already in place to do this for the
 On **Apache 2.4**, denying access to the ``phpbb`` folder in a phpBB instance located at ``/var/www/html/`` would be accomplished by adding the following access rules to the Apache configuration file (typically ``apache.conf``):
 
 .. code-block:: text
+
     <Directory /var/www/html/phpbb/*>
         Require all denied
     </Directory>
