@@ -30,7 +30,7 @@ Before we discuss how we write out our rulesets, let’s first familiarize ourse
 
 The following is a ``[ruleset]``
 
-.. code:: css
+.. code-block::
 
     [selector],
     [selector] {
@@ -226,7 +226,7 @@ Indenting Sass
 
 Sass provides nesting functionality. That is to say, by writing this:
 
-.. code:: css
+.. code::
 
     .foo {
         color: red;

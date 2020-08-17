@@ -15,4 +15,4 @@ We employ a set of standards based on the following widely used
 .. toctree::
    :maxdepth: 2
 
-   guidelines
+   guidance

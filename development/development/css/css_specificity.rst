@@ -146,7 +146,7 @@ Let’s look at an example:
 
 To style an element with a class of ``.widget-title``, we have a selector that is twice as specific as it needs to be. That means that if we want to make any modifications to ``.widget-title``, we’ll need another at-least-equally specific selector:
 
-.. code:: css
+.. code::
 
     .widget { ... }
 

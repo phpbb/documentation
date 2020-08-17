@@ -7,5 +7,5 @@ PHP Coding Guidelines
    defaults
    layout_guidelines
    templating
-   character_sets_and_encodings
-   translation_guidelines
+   character_set_and_encodings
+..   translation_guidelines

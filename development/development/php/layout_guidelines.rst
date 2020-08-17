@@ -27,6 +27,7 @@ Loop Indices
 The **only** situation where a one-character variable name is allowed is when it's the index for some looping construct. In this case, the index of the outer loop should always be ``$i``. If there's a loop inside that loop, its index should be ``$j``, followed by ``$k``, and so on. If the loop is being indexed by some already-existing variable with a meaningful name, this guideline does not apply, example:
 
 .. code:: php
+
     for ($i = 0; $i < $outer_size; $i++)
     {
        for ($j = 0; $j < $inner_size; $j++)
@@ -38,7 +39,7 @@ The **only** situation where a one-character variable name is allowed is when it
 Function Names
 ++++++++++++++
 
-Functions should also be named descriptively. We're not programming in C here, we don't want to write functions called things like "stristr()". Again, all lower-case names with words separated by a single underscore character in PHP, and camel caps in JavaScript. Function names should be prefixed with "phpbb_" and preferably have a verb in them somewhere. Good function names are ``phpbb_print_login_status()``, ``phpbb_get_user_data()``, etc. Constructor functions in JavaScript should begin with a capital letter.
+Functions should also be named descriptively. We're not programming in C here, we don't want to write functions called things like "stristr()". Again, all lower-case names with words separated by a single underscore character in PHP, and camel caps in JavaScript. Function names should be prefixed with `phpbb_` and preferably have a verb in them somewhere. Good function names are ``phpbb_print_login_status()``, ``phpbb_get_user_data()``, etc. Constructor functions in JavaScript should begin with a capital letter.
 
 Function Arguments
 ++++++++++++++++++
@@ -59,6 +60,7 @@ Apart from following the rules for function names, all classes should meet the f
 So given the following example directory structure you would result in the below listed lookups
 
 .. code:: text
+
     phpbb/
       class_name.php
       dir/
@@ -67,6 +69,7 @@ So given the following example directory structure you would result in the below
             class_name.php
 
 .. code:: text
+
     \phpbb\class_name            - phpbb/class_name.php
     \phpbb\dir\class_name        - phpbb/dir/class_name.php
     \phpbb\dir\subdir\class_name - phpbb/dir/subdir/class_name.php
@@ -92,6 +95,7 @@ This is another case of being too lazy to type 2 extra characters causing proble
 **These are all wrong:**
 
 .. code:: php
+
     if (condition) do_stuff();
 
     if (condition)
@@ -106,6 +110,7 @@ This is another case of being too lazy to type 2 extra characters causing proble
 **These are all right:**
 
 .. code:: php
+
     if (condition)
     {
         do_stuff();
@@ -127,6 +132,7 @@ Where to put the braces
 In PHP code, braces always go on their own line. The closing brace should also always be at the same column as the corresponding opening brace, examples:
 
 .. code:: php
+
     if (condition)
     {
         while (condition2)
@@ -162,6 +168,7 @@ This is another simple, easy step that helps keep code readable without much eff
 **Each pair shows the wrong way followed by the right way:**
 
 .. code:: php
+
     $i=0;
     $i = 0;
 
@@ -207,6 +214,7 @@ Also, if you are using a string variable as part of a function call, you do not 
 **Wrong:**
 
 .. code:: php
+
     $str = "This is a really long string with no variables for the parser to find.";
 
     do_stuff("$str");
@@ -214,6 +222,7 @@ Also, if you are using a string variable as part of a function call, you do not 
 **Right:**
 
 .. code:: php
+
     $str = 'This is a really long string with no variables for the parser to find.';
 
     do_stuff($str);
@@ -221,11 +230,13 @@ Also, if you are using a string variable as part of a function call, you do not 
 **Sometimes single quotes are just not right:**
 
 .. code:: php
+
     $post_url = $phpbb_root_path . 'posting.' . $phpEx . '?mode=' . $mode . '&amp;start=' . $start;
 
 **Double quotes are sometimes needed to not overcrowd the line with concatenations:**
 
 .. code:: php
+
     $post_url = "{$phpbb_root_path}posting.$phpEx?mode=$mode&amp;start=$start";
 
 In SQL statements mixing single and double quotes is partly allowed (following the guidelines listed here about SQL formatting), else one should try to only use one method - mostly single quotes.
@@ -238,6 +249,7 @@ If an array is defined with each element on its own line, you still have to modi
 **Wrong:**
 
 .. code:: php
+
     $foo = array(
         'bar' => 42,
         'boo' => 23
@@ -246,6 +258,7 @@ If an array is defined with each element on its own line, you still have to modi
 **Right:**
 
 .. code:: php
+
     $foo = array(
         'bar' => 42,
         'boo' => 23,
@@ -259,21 +272,25 @@ In PHP, it's legal to use a literal string as a key to an associative array with
 **Wrong:**
 
 .. code:: php
+
     $foo = $assoc_array[blah];
 
 **Right:**
 
 .. code:: php
+
     $foo = $assoc_array['blah'];
 
 **Wrong:**
 
 .. code:: php
+
     $foo = $assoc_array["$var"];
 
 **Right:**
 
 .. code:: php
+
     $foo = $assoc_array[$var];
 
 Comments
@@ -298,12 +315,14 @@ The only shortcut operators that cause readability problems are the shortcut inc
 **Wrong:**
 
 .. code:: php
+
     $array[++$i] = $j;
     $array[$i++] = $k;
 
 **Right:**
 
 .. code:: php
+
     $i++;
     $array[$i] = $j;
 
@@ -318,11 +337,13 @@ Inline conditionals should only be used to do very simple things. Preferably, th
 **Bad place to use them:**
 
 .. code:: php
+
     ($i < $size && $j > $size) ? do_stuff($foo) : do_stuff($bar);
 
 **OK place to use them:**
 
 .. code:: php
+
     $min = ($i < $j) ? $i : $j;
 
 Don't use uninitialized variables
@@ -333,16 +354,19 @@ For phpBB3, we intend to use a higher level of run-time error reporting. This wi
 **Wrong:**
 
 .. code:: php
+
     if ($forum) ...
 
 **Right:**
 
 .. code:: php
+
     if (isset($forum)) ...
 
 **Also possible:**
 
 .. code:: php
+
     if (isset($forum) && $forum == 5)
 
 The ``empty()`` function is useful if you want to check if a variable is not set or being empty (an empty string, 0 as an integer or string, NULL, false, an empty array or a variable declared, but without a value in a class). Therefore empty should be used in favor of ``isset($array) && count($array) > 0`` - this can be written in a shorter way as ``!empty($array)``.
@@ -355,6 +379,7 @@ Switch/case code blocks can get a bit long sometimes. To have some level of noti
 **Wrong:**
 
 .. code:: php
+
     switch ($mode)
     {
         case 'mode1':
@@ -369,6 +394,7 @@ Switch/case code blocks can get a bit long sometimes. To have some level of noti
 
 
 .. code:: php
+
     switch ($mode)
     {
         case 'mode1':
@@ -384,9 +410,10 @@ Switch/case code blocks can get a bit long sometimes. To have some level of noti
         break;
     }
 
-**Also good, if you have more code between the case and the break:
+**Also good, if you have more code between the case and the break:**
 
 .. code:: php
+
     switch ($mode)
     {
         case 'mode1':
@@ -412,9 +439,10 @@ Even if the break for the default case is not needed, it is sometimes better to 
 
 If no break is intended, please add a comment instead. An example:
 
-**Example with no break:
+**Example with no break:**
 
 .. code:: php
+
     switch ($mode)
     {
         case 'mode1':
@@ -446,12 +474,14 @@ Place the ``static`` qualifier before the visibility qualifiers.
 **Wrong:**
 
 .. code:: php
+
     var $x;
     private static function f()
 
 **Right:**
 
 .. code:: php
+
     public $x;
     static private function f()
 
@@ -476,6 +506,7 @@ SQL code layout
 SQL Statements are often unreadable without some formatting, since they tend to be big at times. Though the formatting of sql statements adds a lot to the readability of code. SQL statements should be formatted in the following way, basically writing keywords:
 
 .. code:: php
+
     $sql = 'SELECT *
     <-one tab->FROM ' . SOME_TABLE . '
     <-one tab->WHERE a = 1
@@ -486,6 +517,7 @@ SQL Statements are often unreadable without some formatting, since they tend to 
 **Here the example with the tabs applied:**
 
 .. code:: php
+
     $sql = 'SELECT *
         FROM ' . SOME_TABLE . '
         WHERE a = 1
@@ -501,6 +533,7 @@ Use double quotes where applicable. (The variables in these examples are typecas
 **Wrong:**
 
 .. code:: php
+
     "UPDATE " . SOME_TABLE . " SET something = something_else WHERE a = $b";
 
     'UPDATE ' . SOME_TABLE . ' SET something = ' . $user_id . ' WHERE a = ' . $something;
@@ -508,6 +541,7 @@ Use double quotes where applicable. (The variables in these examples are typecas
 **Right:**
 
 .. code:: php
+
     'UPDATE ' . SOME_TABLE . " SET something = something_else WHERE a = $b";
 
     'UPDATE ' . SOME_TABLE . " SET something = $user_id WHERE a = $something";
@@ -522,6 +556,7 @@ The "not equals operator", as defined by the SQL:2003 standard, is "<>"
 **Wrong:**
 
 .. code:: php
+
     $sql = 'SELECT *
         FROM ' . SOME_TABLE . '
         WHERE a != 2';
@@ -529,6 +564,7 @@ The "not equals operator", as defined by the SQL:2003 standard, is "<>"
 **Right:**
 
 .. code:: php
+
     $sql = 'SELECT *
         FROM ' . SOME_TABLE . '
         WHERE a <> 2';
@@ -542,6 +578,7 @@ sql_escape()
 Always use ``$db->sql_escape()`` if you need to check for a string within an SQL statement (even if you are sure the variable cannot contain single quotes - never trust your input), for example:
 
 .. code:: php
+
     $sql = 'SELECT *
         FROM ' . SOME_TABLE . "
         WHERE username = '" . $db->sql_escape($username) . "'";
@@ -561,6 +598,7 @@ sql_build_array()
 If you need to UPDATE or INSERT data, make use of the ``$db->sql_build_array()`` function. This function already escapes strings and checks other types, so there is no need to do this here. The data to be inserted should go into an array - ``$sql_ary`` - or directly within the statement if one or two variables needs to be inserted/updated. An example of an insert statement would be:
 
 .. code:: php
+
     $sql_ary = array(
         'somedata'		=> $my_string,
         'otherdata'		=> $an_int,
@@ -572,6 +610,7 @@ If you need to UPDATE or INSERT data, make use of the ``$db->sql_build_array()``
 To complete the example, this is how an update statement would look like:
 
 .. code:: php
+
     $sql_ary = array(
         'somedata'		=> $my_string,
         'otherdata'		=> $an_int,
@@ -591,6 +630,7 @@ sql_multi_insert()
 If you want to insert multiple statements at once, please use the separate ``sql_multi_insert()`` method. An example:
 
 .. code:: php
+
     $sql_ary = array();
 
     $sql_ary[] = array(
@@ -613,6 +653,7 @@ sql_in_set()
 The ``$db->sql_in_set()`` function should be used for building ``IN ()`` and ``NOT IN ()`` constructs. Since (specifically) MySQL tend to be faster if for one value to be compared the ``=`` and ``<>`` operator is used, we let the DBAL decide what to do. A typical example of doing a positive match against a number of values would be:
 
 .. code:: php
+
     $sql = 'SELECT *
         FROM ' . FORUMS_TABLE . '
         WHERE ' . $db->sql_in_set('forum_id', $forum_ids);
@@ -623,16 +664,19 @@ Based on the number of values in $forum_ids, the query can look differently.
 **SQL Statement if $forum_ids = array(1, 2, 3);**
 
 .. code:: php
+
     SELECT FROM phpbb_forums WHERE forum_id IN (1, 2, 3)
 
 **SQL Statement if $forum_ids = array(1) or $forum_ids = 1**
 
 .. code:: php
+
     SELECT FROM phpbb_forums WHERE forum_id = 1
 
 Of course the same is possible for doing a negative match against a number of values:
 
 .. code:: php
+
     $sql = 'SELECT *
         FROM ' . FORUMS_TABLE . '
         WHERE ' . $db->sql_in_set('forum_id', $forum_ids, true);
@@ -643,11 +687,13 @@ Based on the number of values in $forum_ids, the query can look differently here
 **SQL Statement if $forum_ids = array(1, 2, 3);**
 
 .. code:: php
+
     SELECT FROM phpbb_forums WHERE forum_id NOT IN (1, 2, 3)
 
 **SQL Statement if $forum_ids = array(1) or $forum_ids = 1**
 
 .. code:: php
+
     SELECT FROM phpbb_forums WHERE forum_id <> 1
 
 If the given array is empty, an error will be produced.
@@ -658,6 +704,7 @@ sql_build_query()
 The ``$db->sql_build_query()`` function is responsible for building sql statements for SELECT and SELECT DISTINCT queries if you need to JOIN on more than one table or retrieve data from more than one table while doing a JOIN. This needs to be used to make sure the resulting statement is working on all supported db's. Instead of explaining every possible combination, I will give a short example:
 
 .. code:: php
+
     $sql_array = array(
         'SELECT'	=> 'f.*, ft.mark_time',
 
@@ -684,6 +731,7 @@ The ``$db->sql_build_query()`` function is responsible for building sql statemen
 The possible first parameter for sql_build_query() is SELECT or SELECT_DISTINCT. As you can see, the logic is pretty self-explaining. For the LEFT_JOIN key, just add another array if you want to join on to tables for example. The added benefit of using this construct is that you are able to easily build the query statement based on conditions - for example the above LEFT_JOIN is only necessary if server side topic tracking is enabled; a slight adjustement would be:
 
 .. code:: php
+
     $sql_array = array(
         'SELECT'	=> 'f.*',
 
@@ -720,13 +768,14 @@ The possible first parameter for sql_build_query() is SELECT or SELECT_DISTINCT.
 -------------------
 
 Operations in loop definition:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+++++++++++++++++++++++++++++++
 
 Always try to optimize your loops if operations are going on at the comparing part, since this part is executed every time the loop is parsed through. For assignments a descriptive name should be chosen. Example:
 
 **On every iteration the count function is called:**
 
 .. code:: php
+
     for ($i = 0; $i < count($post_data); $i++)
     {
         do_something();
@@ -735,6 +784,7 @@ Always try to optimize your loops if operations are going on at the comparing pa
 **You are able to assign the (not changing) result within the loop itself:**
 
 .. code:: php
+
     for ($i = 0, $size = count($post_data); $i < $size; $i++)
     {
         do_something();
@@ -771,28 +821,33 @@ The $request->variable() method determines the type to set from the second param
 **Old method, do not use it:**
 
 .. code:: php
+
     $start = (isset($HTTP_GET_VARS['start'])) ? intval($HTTP_GET_VARS['start']) : intval($HTTP_POST_VARS['start']);
     $submit = (isset($HTTP_POST_VARS['submit'])) ? true : false;
 
 **Use request var and define a default variable (use the correct type):**
 
 .. code:: php
+
     $start = $request->variable('start', 0);
     $submit = $request->is_set_post('submit');
 
 **$start is an int, the following use of $request->variable() therefore is not allowed:**
 
 .. code:: php
+
     $start = $request->variable('start', '0');
 
 **Getting an array, keys are integers, value defaults to 0:**
 
 .. code:: php
+
     $mark_array = $request->variable('mark', array(0));
 
 **Getting an array, keys are strings, value defaults to 0:**
 
 .. code:: php
+
     $action_ary = $request->variable('action', array('' => 0));
 
 Login checks/redirection
@@ -815,6 +870,7 @@ Altering Operations
 For operations altering the state of the database, for instance posting, always verify the form token, unless you are already using ``confirm_box()``. To do so, make use of the ``add_form_key()`` and ``check_form_key()`` functions.
 
 .. code:: php
+
 	add_form_key('my_form');
 
 	if ($submit)
@@ -833,6 +889,7 @@ Sessions
 Sessions should be initiated on each page, as near the top as possible using the following code:
 
 .. code:: php
+
     $user->session_begin();
     $auth->acl($user->data);
     $user->setup();
@@ -845,22 +902,29 @@ Errors and messages
 All messages/errors should be outputted by calling ``trigger_error()`` using the appropriate message type and language string. Example:
 
 .. code:: php
+
     trigger_error('NO_FORUM');
 
 .. code:: php
+
     trigger_error($user->lang['NO_FORUM']);
 
 .. code:: php
+
     trigger_error('NO_MODE', E_USER_ERROR);
 
 Url formatting
 ++++++++++++++
 
-All urls pointing to internal files need to be prepended by the ``$phpbb_root_path`` variable. Within the administration control panel all urls pointing to internal files need to be prepended by the ``$phpbb_admin_path variable. This makes sure the path is always correct and users being able to just rename the admin folder and the acp still working as intended (though some links will fail and the code need to be slightly adjusted).
+All urls pointing to internal files need to be prepended by the ``$phpbb_root_path`` variable.
+Within the administration control panel all urls pointing to internal files need to be prepended by the ``$phpbb_admin_path variable``.
+This makes sure the path is always correct and users being able to just rename the admin folder and the acp still
+working as intended (though some links will fail and the code need to be slightly adjusted).
 
 The ``append_sid()`` function from 2.0.x is available too, though it does not handle url alterations automatically. Please have a look at the code documentation if you want to get more details on how to use append_sid(). A sample call to append_sid() can look like this:
 
 .. code:: php
+
     append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=group&amp;g=' . $row['group_id'])
 
 General function usage

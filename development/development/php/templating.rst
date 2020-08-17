@@ -22,6 +22,7 @@ Blocks/Loops
 The basic block level loop remains and takes the form:
 
 .. code:: html
+
 	<!-- BEGIN loopname -->
 		markup, {loopname.X_YYYYY}, etc.
 	<!-- END loopname -->
@@ -34,6 +35,7 @@ Including files
 Something that existed in 2.0.x which no longer exists in 3.x is the ability to assign a template to a variable. This was used (for example) to output the jumpbox. Instead (perhaps better, perhaps not but certainly more flexible) we now have INCLUDE. This takes the simple form:
 
 .. code:: html
+
 	<!-- INCLUDE filename -->
 
 You will note in the 3.x templates the major sources start with <!-- INCLUDE overall_header.html --> or <!-- INCLUDE simple_header.html -->, etc. In 2.0.x control of "which" header to use was defined entirely within the code. In 3.x the template designer can output what they like. Note that you can introduce new templates (i.e. other than those in the default set) using this system and include them as you wish ... perhaps useful for a common "menu" bar or some such. No need to modify loads of files as with 2.0.x.
@@ -41,11 +43,13 @@ You will note in the 3.x templates the major sources start with <!-- INCLUDE ove
 Added in **3.0.6** is the ability to include a file using a template variable to specify the file, this functionality only works for root variables (i.e. not block variables).
 
 .. code:: html
+
 	<!-- INCLUDE {FILE_VAR} -->
 
 Template defined variables can also be utilised.
 
 .. code:: html
+
 	<!-- DEFINE $SOME_VAR = 'my_file.html' -->
 	<!-- INCLUDE {$SOME_VAR} -->
 
@@ -55,6 +59,7 @@ PHP
 A contentious decision has seen the ability to include PHP within the template introduced. This is achieved by enclosing the PHP within relevant tags:
 
 .. code:: html
+
 	<!-- PHP -->
 		echo "hello!";
 	<!-- ENDPHP -->
@@ -62,6 +67,7 @@ A contentious decision has seen the ability to include PHP within the template i
 You may also include PHP from an external file using:
 
 .. code:: html
+
 	<!-- INCLUDEPHP somefile.php -->
 
 it will be included and executed inline.
@@ -74,6 +80,7 @@ Conditionals/Control structures
 The most significant addition to 3.x are conditions or control structures, "if something then do this else do that". The system deployed is very similar to Smarty. This may confuse some people at first but it offers great potential and great flexibility with a little imagination. In their most simple form these constructs take the form:
 
 .. code:: html
+
 	<!-- IF expr -->
 		markup
 	<!-- ENDIF -->
@@ -81,6 +88,7 @@ The most significant addition to 3.x are conditions or control structures, "if s
 expr can take many forms, for example:
 
 .. code:: html
+
 	<!-- IF loop.S_ROW_COUNT is even -->
 		markup
 	<!-- ENDIF -->
@@ -88,6 +96,7 @@ expr can take many forms, for example:
 This will output the markup if the S_ROW_COUNT variable in the current iteration of loop is an even value (i.e. the expr is TRUE). You can use various comparison methods (standard as well as equivalent textual versions noted in square brackets) including (``not, or, and, eq, neq, is`` should be used if possible for better readability):
 
 .. code:: php
+
 	== [eq]
 	!= [neq, ne]
 	<> (same as !=)
@@ -117,6 +126,7 @@ This will output the markup if the S_ROW_COUNT variable in the current iteration
 Basic parenthesis can also be used to enforce good old BODMAS rules. Additionally some basic comparison types are defined:
 
 .. code:: text
+
 	even
 	odd
 	div
@@ -124,6 +134,7 @@ Basic parenthesis can also be used to enforce good old BODMAS rules. Additionall
 Beyond the simple use of IF you can also do a sequence of comparisons using the following:
 
 .. code:: html
+
 	<!-- IF expr1 -->
 		markup
 	<!-- ELSEIF expr2 -->
@@ -142,6 +153,7 @@ Each statement will be tested in turn and the relevant output generated when a m
 So what can you do with all this? Well take for example the colouration of rows in viewforum. In 2.0.x row colours were predefined within the source as either row color1, row color2 or row class1, row class2. In 3.x this is moved to the template, it may look a little daunting at first but remember control flows from top to bottom and it's not too difficult:
 
 .. code:: html
+
 	<table>
 		<!-- IF loop.S_ROW_COUNT is even -->
 			<tr class="row1">
@@ -155,6 +167,7 @@ So what can you do with all this? Well take for example the colouration of rows 
 This will cause the row cell to be output using class row1 when the row count is even, and class row2 otherwise. The S_ROW_COUNT parameter gets assigned to loops by default. Another example would be the following:
 
 .. code:: html
+
 	<table>
 		<!-- IF loop.S_ROW_COUNT > 10 -->
 			<tr bgcolor="#FF0000">
@@ -174,6 +187,7 @@ This will output the row cell in purple for the first two rows, blue for rows 2 
 What else can you do? Well, you could use IF to do common checks on for example the login state of a user:
 
 .. code:: html
+
 	<!-- IF S_USER_LOGGED_IN -->
 		markup
 	<!-- ENDIF -->
@@ -186,6 +200,7 @@ Extended syntax for Blocks/Loops
 Back to our loops - they had been extended with the following additions. Firstly you can set the start and end points of the loop. For example:
 
 .. code:: html
+
 	<!-- BEGIN loopname(2) -->
 		markup
 	<!-- END loopname -->
@@ -200,17 +215,19 @@ Will start the loop on the third entry (note that indexes start at zero). Extens
 A further extension to begin is ``BEGINELSE``:
 
 .. code:: html
+
 	<!-- BEGIN loop -->
 		markup
 	<!-- BEGINELSE -->
 		markup
 	<!-- END loop -->
 
-This will cause the markup between ``BEGINELSE`` and ``END`` to be output if the loop contains no values. This is useful for forums with no topics (for example) ... in some ways it replaces "bits of" the existing "switch_" type control (the rest being replaced by conditionals).
+This will cause the markup between ``BEGINELSE`` and ``END`` to be output if the loop contains no values. This is useful for forums with no topics (for example) ... in some ways it replaces "bits of" the existing `switch_` type control (the rest being replaced by conditionals).
 
 Another way of checking if a loop contains values is by prefixing the loops name with a dot:
 
 .. code:: html
+
 	<!-- IF .loop -->
 		<!-- BEGIN loop -->
 			markup
@@ -222,6 +239,7 @@ Another way of checking if a loop contains values is by prefixing the loops name
 You are even able to check the number of items within a loop by comparing it with values within the IF condition:
 
 .. code:: html
+
 	<!-- IF .loop > 2 -->
 		<!-- BEGIN loop -->
 			markup
@@ -233,6 +251,7 @@ You are even able to check the number of items within a loop by comparing it wit
 Nesting loops cause the conditionals needing prefixed with all loops from the outer one to the inner most. An illustration of this:
 
 .. code:: html
+
 	<!-- BEGIN firstloop -->
 		{firstloop.MY_VARIABLE_FROM_FIRSTLOOP}
 
@@ -244,6 +263,7 @@ Nesting loops cause the conditionals needing prefixed with all loops from the ou
 Sometimes it is necessary to break out of nested loops to be able to call another loop within the current iteration. This sounds a little bit confusing and it is not used very often. The following (rather complex) example shows this quite good - it also shows how you test for the first and last row in a loop (i will explain the example in detail further down):
 
 .. code:: html
+
 	<!-- BEGIN l_block1 -->
 		<!-- IF l_block1.S_SELECTED -->
 			<strong>{l_block1.L_TITLE}</strong>
@@ -283,6 +303,7 @@ Sometimes it is necessary to break out of nested loops to be able to call anothe
 Let us first concentrate on this part of the example:
 
 .. code:: html
+
 	<!-- BEGIN l_block1 -->
 		<!-- IF l_block1.S_SELECTED -->
 			markup
@@ -296,6 +317,7 @@ Here we open the loop ``l_block1`` and do some things if the value ``S_SELECTED`
 Let's have a closer look at the markup:
 
 .. code:: html
+
 	<!-- BEGIN l_block1 -->
 	.
 	.
@@ -321,6 +343,7 @@ Let's have a closer look at the markup:
 The ``<!-- IF S_PRIVMSGS -->`` statement clearly checks a global variable and not one within the loop, since the loop is not given here. So, if ``S_PRIVMSGS`` is true we execute the shown markup. Now, you see the ``<!-- BEGIN !folder -->`` statement. The exclamation mark is responsible for instructing the template engine to iterate through the main loop folder. So, we are now within the loop folder - with ``<!-- BEGIN folder -->`` we would have been within the loop ``l_block1.folder`` automatically as is the case with ``l_block2``:
 
 .. code:: html
+
 	<!-- BEGIN l_block1 -->
 	.
 	.
@@ -344,6 +367,7 @@ You see the difference? The loop l_block2 is a member of the loop l_block1 but t
 Now back to our folder loop:
 
 .. code:: html
+
 	<!-- IF folder.S_FIRST_ROW -->
 		<ul class="nav">
 	<!-- ENDIF -->
@@ -357,6 +381,7 @@ Now back to our folder loop:
 You may have wondered what the comparison to S_FIRST_ROW and S_LAST_ROW is about. If you haven't guessed already - it is checking for the first iteration of the loop with S_FIRST_ROW and the last iteration with S_LAST_ROW. This can come in handy quite often if you want to open or close design elements, like the above list. Let us imagine a folder loop build with three iterations, it would go this way:
 
 .. code:: html
+
 	<ul class="nav"> <!-- written on first iteration -->
 		<li>first element</li> <!-- written on first iteration -->
 		<li>second element</li> <!-- written on second iteration -->
@@ -366,6 +391,7 @@ You may have wondered what the comparison to S_FIRST_ROW and S_LAST_ROW is about
 As you can see, all three elements are written down as well as the markup for the first iteration and the last one. Sometimes you want to omit writing the general markup - for example:
 
 .. code:: html
+
 	<!-- IF folder.S_FIRST_ROW -->
 		<ul class="nav">
 	<!-- ELSEIF folder.S_LAST_ROW -->
@@ -377,6 +403,7 @@ As you can see, all three elements are written down as well as the markup for th
 would result in the following markup:
 
 .. code:: html
+
 	<ul class="nav"> <!-- written on first iteration -->
 		<li>second element</li> <!-- written on second iteration -->
 	</ul> <!-- written on third iteration -->
@@ -389,6 +416,7 @@ Forms
 If a form is used for a non-trivial operation (i.e. more than a jumpbox), then it should include the {S_FORM_TOKEN} template variable.
 
 .. code:: html
+
 	<form method="post" id="mcp" action="{U_POST_ACTION}">
 
 		<fieldset class="submit-buttons">
@@ -411,6 +439,7 @@ The effect of doing so is that the template engine will use the template files i
 We strongly encourage the use of parent styles for styles based on the bundled styles, as it will ease the update procedure.
 
 .. code:: php
+
 	# General Information about this style
 	name = Custom Style
 	copyright = © phpBB Limited, 2007
@@ -450,6 +479,7 @@ Events must be documented in ``phpBB/docs/events.md`` in alphabetical order base
 - An event found in only one template file:
 
 .. code:: php
+
 	event_name
 	===
 	* Location: styles/<style_name>/template/filename.html
@@ -460,6 +490,7 @@ Events must be documented in ``phpBB/docs/events.md`` in alphabetical order base
 - An event found in multiple template files:
 
 .. code:: php
+
 	event_name
 	===
 	* Locations:
@@ -471,6 +502,7 @@ Events must be documented in ``phpBB/docs/events.md`` in alphabetical order base
 - An event that is found multiple times in a file should have the number of instances in parenthesis next to the filename.
 
 .. code:: php
+
 	event_name
 	===
 	* Locations:
@@ -482,6 +514,7 @@ Events must be documented in ``phpBB/docs/events.md`` in alphabetical order base
 - An actual example event documentation:
 
 .. code:: php
+
 	forumlist_body_last_post_title_prepend
 	====
 	* Locations:

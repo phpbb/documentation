@@ -29,6 +29,8 @@ We give support for the following installation types:
 
 Once installed, phpBB is easily managed via the Administration and Moderator Control Panels. If you need help or advice with phpBB, please see Section 3 below.
 
+.. _i-languages-internationalisation-i18n:
+
 2.i. Languages (Internationalisation - i18n)
 --------------------------------------------
 
@@ -130,6 +132,8 @@ http://area51.phpbb.com/phpBB/
 
 Please note that the development forums should **NOT** be used to seek support for phpBB, the main community forums are the place for this.
 
+.. _5. Reporting Bugs:
+
 5. Reporting Bugs
 ============================
 
@@ -167,7 +171,7 @@ If you find a potential security related vulnerability in phpBB please **DO NOT*
 https://www.phpbb.com/security/
 
 6. Overview of current bug list
-============================
+===============================
 
 This list is not complete but does represent those bugs which may affect users on a wider scale. Other bugs listed in the tracker have typically been shown to be limited to certain setups or methods of installation, updating and/or conversions.
 

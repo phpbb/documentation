@@ -198,7 +198,7 @@ We will use ``ext/acme/demo/adm/style/acp_demo_body.html``.
     Therefore, ACP template files must be stored in ``./adm/style/``
     while MCP and UCP template files are stored in ``./styles/prosilver/template/``.
 
-.. code-block:: html
+.. code-block::
 
     <!-- INCLUDE overall_header.html -->
 
