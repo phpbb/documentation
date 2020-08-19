@@ -60,7 +60,7 @@ require no changes for extensions, we only add a quick example here.
         protected $language;
         protected $template;
 
-        public function setUp()
+        public function setUp(): void
         {
             parent::setUp();
 
@@ -148,7 +148,7 @@ Using mocks
 In the ``setUp()`` method we create our controller object. However, we do not
 use the actual phpBB classes which are used by the controller when opening
 the page. Instead
-`phpunit mocks <https://phpunit.de/manual/current/en/test-doubles.html>`_ are
+`phpunit mocks <https://phpunit.readthedocs.io/en/7.5/test-doubles.html>`_ are
 injected.
 
 These mocks allow us to check how often a method is called, what the arguments
@@ -258,7 +258,7 @@ method:
                 ->willReturn($language_return);
 
 For more information about Mocks and phpunit, please have a look at the
-`phpunit Documentation <https://phpunit.de/manual/current/en/test-doubles.html>`_.
+`phpunit Documentation <https://phpunit.readthedocs.io/en/7.5/test-doubles.html>`_.
 
 phpunit configuration file
 --------------------------
@@ -271,6 +271,7 @@ The file should be stored as ``ext/acme/demo/phpunit.xml.dist``:
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
+
     <phpunit backupGlobals="true"
              backupStaticAttributes="true"
              colors="true"
@@ -279,7 +280,6 @@ The file should be stored as ``ext/acme/demo/phpunit.xml.dist``:
              convertWarningsToExceptions="true"
              processIsolation="false"
              stopOnFailure="false"
-             syntaxCheck="false"
              verbose="true"
              bootstrap="../../../../tests/bootstrap.php"
     >
@@ -289,14 +289,11 @@ The file should be stored as ``ext/acme/demo/phpunit.xml.dist``:
                 <exclude>./tests/functional</exclude>
             </testsuite>
             <testsuite name="Extension Functional Tests">
-                <directory suffix="_test.php" phpVersion="5.3.19" phpVersionOperator=">=">./tests/functional/</directory>
+                <directory suffix="_test.php">./tests/functional/</directory>
             </testsuite>
         </testsuites>
 
         <filter>
-            <blacklist>
-                <directory>./tests/</directory>
-            </blacklist>
             <whitelist processUncoveredFilesFromWhitelist="true">
                 <directory suffix=".php">./</directory>
                 <exclude>
@@ -308,28 +305,43 @@ The file should be stored as ``ext/acme/demo/phpunit.xml.dist``:
         </filter>
     </phpunit>
 
-Now we can finally run the test suite by executing the following command::
+Now we can finally run the test suite by executing the following command:
+
+.. code-block:: sh
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
-    PHPUnit 4.1.0 by Sebastian Bergmann.
 
-    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+Results:
 
-    ...
+.. code-block:: sh
+
+    PHPUnit 7.5.20 by Sebastian Bergmann and contributors.
+
+    Runtime:       PHP 7.1.33 with Xdebug 2.7.2
+    Configuration: /home/user/phpBB/phpBB/ext/acme/demo/phpunit.xml.dist
+
+    ...             3 / 3 (100%)
 
     Time: 101 ms, Memory: 9.00Mb
 
     OK (3 tests, 12 assertions)
 
-To run only the tests from one file just append the relative path to the call::
+To run only the tests from one file just append the relative path to the call:
 
+.. code-block:: sh
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist phpBB/ext/acme/demo/tests/controller/main_test.php
-    PHPUnit 4.1.0 by Sebastian Bergmann.
 
-    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+Results:
 
-    ...
+.. code-block:: sh
+
+    PHPUnit 7.5.20 by Sebastian Bergmann and contributors.
+
+    Runtime:       PHP 7.1.33 with Xdebug 2.7.2
+    Configuration: /home/user/phpBB/phpBB/ext/acme/demo/phpunit.xml.dist
+
+    ...             3 / 3 (100%)
 
     Time: 92 ms, Memory: 9.00Mb
 
@@ -453,7 +465,7 @@ that the test fails:
             return $this->createXMLDataSet(dirname(__FILE__) . '/fixtures/add_database_changes.xml');
         }
 
-        public function setUp()
+        public function setUp(): void
         {
             parent::setUp();
 
@@ -496,14 +508,17 @@ specify an empty config table
 Execution
 ---------
 
-When we now execute the tests again they will fail::
+When we now execute the tests again they will fail:
+
+.. code-block:: sh
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
-    PHPUnit 4.1.0 by Sebastian Bergmann.
+    PHPUnit 7.5.20 by Sebastian Bergmann and contributors.
 
-    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+    Runtime:       PHP 7.1.33 with Xdebug 2.7.2
+    Configuration: /home/user/phpBB/phpBB/ext/acme/demo/phpunit.xml.dist
 
-    ...FF
+    ...FF             5 / 5 (100%)
 
     Time: 5.27 seconds, Memory: 10.75Mb
 
@@ -513,13 +528,13 @@ When we now execute the tests again they will fail::
     Asserting that column "user_acme" exists
     Failed asserting that false is true.
 
-    /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/tests/migrations/add_database_changes_test.php:42
+    /home/user/phpBB/phpBB/ext/acme/demo/tests/migrations/add_database_changes_test.php:42
 
     2) acme\demo\tests\migrations\add_database_changes_test::test_acme_demo_table
     Asserting that column "phpbb_acme_demo" does not exist
     Failed asserting that false is true.
 
-    /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/tests/migrations/add_database_changes_test.php:47
+    /home/user/phpBB/phpBB/ext/acme/demo/tests/migrations/add_database_changes_test.php:47
 
     FAILURES!
     Tests: 5, Assertions: 14, Failures: 2.
@@ -540,14 +555,17 @@ test and returning an array with the extension name:
 
     ...
 
-and now the test passes successfully::
+and now the test passes successfully:
+
+.. code-block:: sh
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
-    PHPUnit 4.1.0 by Sebastian Bergmann.
+    PHPUnit 7.5.20 by Sebastian Bergmann and contributors.
 
-    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+    Runtime:       PHP 7.1.33 with Xdebug 2.7.2
+    Configuration: /home/user/phpBB/phpBB/ext/acme/demo/phpunit.xml.dist
 
-    .....
+    .....             5 / 5 (100%)
 
     Time: 5.45 seconds, Memory: 13.75Mb
 
@@ -689,7 +707,7 @@ right message, like the unit test we wrote in `unit tests`_ at the beginning:
             $this->add_lang_ext('acme/demo', 'demo');
 
             $crawler = self::request('GET', 'app.php/demo/world');
-            $this->assertContains($this->lang('DEMO_HELLO', 'world'), $crawler->filter('h2')->text());
+            $this->assertStringContainsString($this->lang('DEMO_HELLO', 'world'), $crawler->filter('h2')->text());
         }
 
         public function test_demo_bertie()
@@ -697,18 +715,21 @@ right message, like the unit test we wrote in `unit tests`_ at the beginning:
             $this->add_lang_ext('acme/demo', 'demo');
 
             $crawler = self::request('GET', 'app.php/demo/bertie');
-            $this->assertContains($this->lang('NO_AUTH_SPEAKING', 'bertie'), $crawler->filter('#message p')->text());
+            $this->assertStringContainsString($this->lang('NO_AUTH_SPEAKING', 'bertie'), $crawler->filter('#message p')->text());
         }
     }
 
-Running this test, however, will fail::
+Running this test, however, will fail:
+
+.. code-block:: sh
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
-    PHPUnit 4.1.0 by Sebastian Bergmann.
+    PHPUnit 7.5.20 by Sebastian Bergmann and contributors.
 
-    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+    Runtime:       PHP 7.1.33 with Xdebug 2.7.2
+    Configuration: /home/user/phpBB/phpBB/ext/acme/demo/phpunit.xml.dist
 
-    ........F
+    ........F             9 / 9 (100%)
 
     Time: 22.37 seconds, Memory: 17.25Mb
 
@@ -718,10 +739,10 @@ Running this test, however, will fail::
     HTTP status code does not match
     Failed asserting that 403 matches expected 200.
 
-    /home/nickv/phpBB/Ascraeus/tests/test_framework/phpbb_functional_test_case.php:900
-    /home/nickv/phpBB/Ascraeus/tests/test_framework/phpbb_functional_test_case.php:859
-    /home/nickv/phpBB/Ascraeus/tests/test_framework/phpbb_functional_test_case.php:138
-    /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/tests/functional/demo_test.php:38
+    /home/user/phpBB/tests/test_framework/phpbb_functional_test_case.php:900
+    /home/user/phpBB/tests/test_framework/phpbb_functional_test_case.php:859
+    /home/user/phpBB/tests/test_framework/phpbb_functional_test_case.php:138
+    /home/user/phpBB/phpBB/ext/acme/demo/tests/functional/demo_test.php:38
 
     FAILURES!
     Tests: 9, Assertions: 49, Failures: 1.
@@ -740,17 +761,20 @@ in the controller, if someone tries to talk to bertie:
 
             $crawler = self::request('GET', 'app.php/demo/bertie', [], false);
             self::assert_response_html(403);
-            $this->assertContains($this->lang('NO_AUTH_SPEAKING', 'bertie'), $crawler->filter('#message p')->text());
+            $this->assertStringContainsString($this->lang('NO_AUTH_SPEAKING', 'bertie'), $crawler->filter('#message p')->text());
         }
 
-Now the tests will pass correctly::
+Now the tests will pass correctly:
+
+.. code-block:: sh
 
     $ ./phpBB/vendor/bin/phpunit -c phpBB/ext/acme/demo/phpunit.xml.dist
-    PHPUnit 4.1.0 by Sebastian Bergmann.
+    PHPUnit 7.5.20 by Sebastian Bergmann and contributors.
 
-    Configuration read from /home/nickv/phpBB/Ascraeus/phpBB/ext/acme/demo/phpunit.xml.dist
+    Runtime:       PHP 7.1.33 with Xdebug 2.7.2
+    Configuration: /home/user/phpBB/phpBB/ext/acme/demo/phpunit.xml.dist
 
-    .........
+    .........             9 / 9 (100%)
 
     Time: 22.11 seconds, Memory: 17.00Mb
 
@@ -807,31 +831,25 @@ first file is the Travis CI configuration file, ``.travis.yml``:
 .. code-block:: yaml
 
     language: php
-    dist: trusty
+    dist: xenial
 
     matrix:
       include:
-        - php: 5.5
-          env: DB=none;NOTESTS=1
-        - php: 5.4
-          env: DB=mysqli #myisam
-        - php: 5.4
-          env: DB=mysql
-        - php: 5.4
-          env: DB=mariadb
-        - php: 5.4
-          env: DB=postgres
-        - php: 5.4
-          env: DB=sqlite3
-        - php: 5.5
-          env: DB=mysqli
-        - php: 5.6
-          env: DB=mysqli
-        - php: 7.0
-          env: DB=mysqli
         - php: 7.1
-          env: DB=mysqli
+          env: DB=none;NOTESTS=1
+        - php: 7.1
+          env: DB=mariadb
+        - php: 7.1
+          env: DB=postgres
+        - php: 7.1
+          env: DB=sqlite3
+        - php: 7.1
+          env: DB=mysqli # MyISAM
         - php: 7.2
+          env: DB=mysqli
+        - php: 7.3
+          env: DB=mysqli
+        - php: 7.4snapshot
           env: DB=mysqli
         - php: nightly
           env: DB=mysqli
@@ -845,7 +863,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
         - SNIFF="1"            # Should we run code sniffer on your code?
         - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
         - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-        - PHPBB_BRANCH="3.2.x"
+        - PHPBB_BRANCH="3.3.x" # Branch of phpBB to run tests against
 
     branches:
       only:
@@ -853,8 +871,12 @@ first file is the Travis CI configuration file, ``.travis.yml``:
         - develop
         - /^\d+(\.\d+)?\.x$/
 
+    services:
+      - postgresql
+      - mysql
+
     install:
-      - travis/prepare-phpbb.sh $EXTNAME $PHPBB_BRANCH
+      - travis/prepare-phpbb.sh $PHPBB_BRANCH
       - cd ../../phpBB3
       - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
       - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION
@@ -882,7 +904,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
             - SNIFF="1"            # Should we run code sniffer on your code?
             - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
             - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-            - PHPBB_BRANCH="3.2.x"
+            - PHPBB_BRANCH="3.3.x" # Branch of phpBB to run tests against
 
 Preparing phpBB
 ---------------
@@ -910,9 +932,7 @@ the phpBB installation from GitHub for us:
     set -e
     set -x
 
-    EXTNAME=$1
-    BRANCH=$2
-    EXTPATH_TEMP=$3
+    BRANCH=$1
 
     # Copy extension to a temp folder
     mkdir ../../tmp
@@ -920,7 +940,7 @@ the phpBB installation from GitHub for us:
     cd ../../
 
     # Clone phpBB
-    git clone --depth=1 "git://github.com/phpbb/phpbb.git" "phpBB3" --branch=$BRANCH
+    git clone --depth=1 "git://github.com/phpbb/phpbb.git" "phpBB3" --branch="$BRANCH"
 
 .. note::
 
