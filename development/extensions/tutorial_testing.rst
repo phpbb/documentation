@@ -849,7 +849,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
           env: DB=mysqli
         - php: 7.3
           env: DB=mysqli
-        - php: 7.4snapshot
+        - php: 7.4
           env: DB=mysqli
         - php: nightly
           env: DB=mysqli
