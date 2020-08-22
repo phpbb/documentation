@@ -20,7 +20,7 @@ migration.
 
     public function update_schema()
     {
-        return array();
+        return [];
     }
 
 revert_schema
@@ -40,7 +40,7 @@ was dropped)
 
     public function revert_schema()
     {
-        return array();
+        return [];
     }
 
 What to return
@@ -57,41 +57,41 @@ Examples
 
     public function update_schema()
     {
-        return array(
-            'add_columns'        => array(
-                $this->table_prefix . 'groups'        => array(
-                    'group_teampage'    => array('UINT', 0, 'after' => 'group_legend'),
-                ),
-                $this->table_prefix . 'styles'        => array(
-                    'style_path'             => array('VCHAR:100', ''),
-                    'bbcode_bitfield'        => array('VCHAR:255', 'kNg='),
-                    'style_parent_id'        => array('UINT:4', 0),
-                    'style_parent_tree'      => array('TEXT', ''),
-                ),
-            ),
-            'change_columns'    => array(
-                $this->table_prefix . 'groups'        => array(
-                    'group_legend'        => array('UINT', 0),
-                ),
-            ),
-        );
+        return [
+            'add_columns'        => [
+                $this->table_prefix . 'groups'        => [
+                    'group_teampage'    => ['UINT', 0, 'after' => 'group_legend'],
+                ],
+                $this->table_prefix . 'styles'        => [
+                    'style_path'             => ['VCHAR:100', ''],
+                    'bbcode_bitfield'        => ['VCHAR:255', 'kNg='],
+                    'style_parent_id'        => ['UINT:4', 0],
+                    'style_parent_tree'      => ['TEXT', ''],
+                ],
+            ],
+            'change_columns'    => [
+                $this->table_prefix . 'groups'        => [
+                    'group_legend'        => ['UINT', 0],
+                ],
+            ],
+        ];
     }
 
     public function revert_schema()
     {
-        return array(
-            'drop_columns'        => array(
-                $this->table_prefix . 'groups'        => array(
+        return [
+            'drop_columns'        => [
+                $this->table_prefix . 'groups'        => [
                     'group_teampage',
-                ),
-                $this->table_prefix . 'styles'        => array(
+                ],
+                $this->table_prefix . 'styles'        => [
                     'style_path',
                     'bbcode_bitfield',
                     'style_parent_id',
                     'style_parent_tree',
-                ),
-            ),
-        );
+                ],
+            ],
+        ];
     }
 
 **From style_update_p2:**
@@ -100,61 +100,61 @@ Examples
 
     public function update_schema()
     {
-        return array(
-            'drop_columns'    => array(
-                $this->table_prefix . 'styles'        => array(
+        return [
+            'drop_columns'    => [
+                $this->table_prefix . 'styles'        => [
                     'imageset_id',
                     'template_id',
                     'theme_id',
-                ),
-            ),
+                ],
+            ],
 
-            'drop_tables'    => array(
+            'drop_tables'    => [
                 $this->table_prefix . 'styles_imageset',
                 $this->table_prefix . 'styles_imageset_data',
-            ),
-        );
+            ],
+        ];
     }
 
     public function revert_schema()
     {
-        return array(
-            'add_columns'    => array(
-                $this->table_prefix . 'styles' => array(
-                    'imageset_id'    => array('UINT', 0),
-                    'template_id'    => array('UINT', 0),
-                    'theme_id'       => array('UINT', 0),
-                ),
-            ),
+        return [
+            'add_columns'    => [
+                $this->table_prefix . 'styles' => [
+                    'imageset_id'    => ['UINT', 0],
+                    'template_id'    => ['UINT', 0],
+                    'theme_id'       => ['UINT', 0],
+                ],
+            ],
 
-            'add_tables'    => array(
-                $this->table_prefix . 'styles_imageset' => array(
-                    'COLUMNS' => array(
-                        'imageset_id'                => array('UINT', NULL, 'auto_increment'),
-                        'imageset_name'              => array('VCHAR_UNI:255', ''),
-                        'imageset_copyright'         => array('VCHAR_UNI', ''),
-                        'imageset_path'              => array('VCHAR:100', ''),
-                    ),
+            'add_tables'    => [
+                $this->table_prefix . 'styles_imageset' => [
+                    'COLUMNS' => [
+                        'imageset_id'                => ['UINT', NULL, 'auto_increment'],
+                        'imageset_name'              => ['VCHAR_UNI:255', ''],
+                        'imageset_copyright'         => ['VCHAR_UNI', ''],
+                        'imageset_path'              => ['VCHAR:100', ''],
+                    ],
                     'PRIMARY_KEY' => 'imageset_id',
-                    'KEYS' => array(
-                        'imgset_nm'            => array('UNIQUE', 'imageset_name'),
-                    ),
-                ),
-                $this->table_prefix . 'styles_imageset_data' => array(
-                    'COLUMNS' => array(
-                        'image_id'              => array('UINT', NULL, 'auto_increment'),
-                        'image_name'            => array('VCHAR:200', ''),
-                        'image_filename'        => array('VCHAR:200', ''),
-                        'image_lang'            => array('VCHAR:30', ''),
-                        'image_height'          => array('USINT', 0),
-                        'image_width'           => array('USINT', 0),
-                        'imageset_id'           => array('UINT', 0),
-                    ),
+                    'KEYS' => [
+                        'imgset_nm'            => ['UNIQUE', 'imageset_name'],
+                    ],
+                ],
+                $this->table_prefix . 'styles_imageset_data' => [
+                    'COLUMNS' => [
+                        'image_id'              => ['UINT', NULL, 'auto_increment'],
+                        'image_name'            => ['VCHAR:200', ''],
+                        'image_filename'        => ['VCHAR:200', ''],
+                        'image_lang'            => ['VCHAR:30', ''],
+                        'image_height'          => ['USINT', 0],
+                        'image_width'           => ['USINT', 0],
+                        'imageset_id'           => ['UINT', 0],
+                    ],
                     'PRIMARY_KEY' => 'image_id',
-                    'KEYS' => array(
-                        'i_d'            => array('INDEX', 'imageset_id'),
-                    ),
-                ),
-            ),
-        );
+                    'KEYS' => [
+                        'i_d'            => ['INDEX', 'imageset_id'],
+                    ],
+                ],
+            ],
+        ];
     }

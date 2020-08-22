@@ -11,7 +11,7 @@ Add a new module
 
 .. code-block:: php
 
-    array('module.add', array( mixed $class [, mixed $parent [, array $data [, mixed $include_path ]]] ))
+    ['module.add', [ mixed $class [, mixed $parent [, array $data [, mixed $include_path ]]] ]]
 
 .. csv-table::
    :header: "Parameter", "Required/Default", "Usage"
@@ -19,7 +19,7 @@ Add a new module
 
    class | Required | The module class: acp, mcp, or ucp
    parent | default 0 | The parent module_id or module_langname (0 for no parent)
-   data | default array() | An array of the data on the new module. This can be setup in two different ways. (see below)
+   data | default [] | An array of the data on the new module. This can be setup in two different ways. (see below)
    include_path | default false | Optionally specify a custom include path (only works when using the automatic module add method)
 
 Manually specifying module info
@@ -32,7 +32,7 @@ just a category) you must send ``module_basename`` and ``module_mode``.
 
 .. code-block:: php
 
-    $data = array(
+    $data = [
         'module_enabled'    => 1,
         'module_display'    => 1,
         'module_basename'   => '',
@@ -41,7 +41,7 @@ just a category) you must send ``module_basename`` and ``module_mode``.
         'module_langname'   => '',
         'module_mode'       => '',
         'module_auth'       => '',
-    );
+    ];
 
 Automatically determining module info
 -------------------------------------
@@ -54,10 +54,10 @@ file):
 
 .. code-block:: php
 
-    $data = array(
+    $data = [
         'module_basename'   => 'acp_asacp',
-        'modes'             => array('settings', 'log', 'flag'),
-    );
+        'modes'             => ['settings', 'log', 'flag'],
+    ];
 
 Optionally you may omit 'modes' and it will insert all of the modules in that
 info file.
@@ -69,36 +69,36 @@ Example
 
     public function update_data()
     {
-        return array(
+        return [
             // Add a new category named ACP_CAT_TEST_MOD to ACP_CAT_DOT_MODS
-            array('module.add', array(
+            ['module.add', [
                 'acp',
                 'ACP_CAT_DOT_MODS',
                 'ACP_CAT_TEST_MOD'
-           )),
+           ]],
 
             // Add the settings and features modes from the acp_board module to the ACP_CAT_TEST_MOD category using the "automatic" method.
-            array('module.add', array(
+            ['module.add', [
                 'acp',
                 'ACP_CAT_TEST_MOD',
-                array(
+                [
                     'module_basename'       => 'acp_board',
-                    'modes'                 => array('settings', 'features'),
-                ),
-            )),
+                    'modes'                 => ['settings', 'features'],
+                ],
+            ]],
 
             // Add the avatar mode from acp_board to the ACP_CAT_TEST_MOD category using the "manual" method.
-            array('module.add', array(
+            ['module.add', [
                 'acp',
                 'ACP_CAT_TEST_MOD',
-                array(
+                [
                     'module_basename'   => 'acp_board',
                     'module_langname'   => 'ACP_AVATAR_SETTINGS',
                     'module_mode'       => 'avatar',
                     'module_auth'       => 'acl_a_board && ext_vendor/name',
-                ),
-            )),
-        ));
+                ],
+            ]],
+        ];
     }
 
 Remove Module
@@ -106,7 +106,7 @@ Remove Module
 
 .. code-block:: php
 
-    array('module.remove', array( mixed $class [, mixed $parent [, array $data [, mixed $include_path ]]] ))
+    ['module.remove', [ mixed $class [, mixed $parent [, array $data [, mixed $include_path ]]] ]]
 
 Parameters
 ----------
@@ -142,34 +142,34 @@ Example
 
     public function update_data()
     {
-        return array(
+        return [
             // Remove the avatar mode from acp_board to the ACP_CAT_TEST_MOD category using the "manual" method.
-            array('module.remove', array(
+            ['module.remove', [
                 'acp',
                 'ACP_CAT_TEST_MOD',
-                array(
+                [
                     'module_basename'   => 'acp_board',
                     'module_langname'   => 'ACP_AVATAR_SETTINGS',
                     'module_mode'       => 'avatar',
                     'module_auth'       => 'acl_a_board && ext_vendor/name',
-                ),
-            )),
+                ],
+            ]],
 
             // Remove the settings and features modes from the acp_board module to the ACP_CAT_TEST_MOD category using the "automatic" method.
-            array('module.remove', array(
+            ['module.remove', [
                 'acp',
                 'ACP_CAT_TEST_MOD',
-                array(
+                [
                     'module_basename'       => 'acp_board',
-                    'modes'                 => array('settings', 'features'),
-                ),
-            )),
+                    'modes'                 => ['settings', 'features'],
+                ],
+            ]],
 
             // Remove a new category named ACP_CAT_TEST_MOD to ACP_CAT_DOT_MODS
-            array('module.remove', array(
+            ['module.remove', [
                 'acp',
                 'ACP_CAT_DOT_MODS',
                 'ACP_CAT_TEST_MOD'
-            )),
-        ));
+            ]],
+        ];
     }

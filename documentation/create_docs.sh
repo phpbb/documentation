@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # set this to the correct path
-path="/var/www/phpbb.com/htdocs/support/documentation/3.2"
+path="/var/www/phpbb.com/htdocs/support/documentation/3.3"
 
 echo "Removing build directory"
 rm -rf build
 
 echo "Creating docs"
-xsltproc --xinclude xsl/rhea_php.xsl rhea_doc.xml
+xsltproc --xinclude xsl/proteus_php.xsl proteus_doc.xml
 
 if [ "$?" == "0" ]; then
 	echo "Successfully created documentation"

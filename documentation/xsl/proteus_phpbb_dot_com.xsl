@@ -3,7 +3,6 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!--
-	$Id: rhea_php_subsection.xsl 347 2010-01-09 23:40:51Z naderman $
 	Copyright 2006, 2008 phpBB Group
 	Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 license
 	http://creativecommons.org/licenses/by-nc-sa/3.0/
@@ -15,7 +14,7 @@
 <xsl:param name="html.ext" select="'.php'"/>
 
 <!-- Link to the stylesheet -->
-<xsl:param name="html.stylesheet" select="'/support/documentation/3.2/style.css'"/>
+<xsl:param name="html.stylesheet" select="'/support/documentation/3.3/style.css'"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
@@ -40,7 +39,7 @@
 <xsl:param name="chunker.output.doctype-public" select="''"/>
 <xsl:param name="chunker.output.doctype-system" select="''"/>
 
-<xsl:variable name="main.title.text" select="'phpBB 3.2 Rhea Documentation'"/>
+<xsl:variable name="main.title.text" select="'phpBB 3.3 Proteus Documentation'"/>
 
 <xsl:template name="user.preroot">
 

@@ -220,10 +220,10 @@ The Acme Demo extension's language file looks like:
 
     if (empty($lang) || !is_array($lang))
     {
-        $lang = array();
+        $lang = [];
     }
 
-    $lang = array_merge($lang, array(
+    $lang = array_merge($lang, [
         'DEMO_PAGE'              => 'Demo',
         'DEMO_HELLO'             => 'Hello %s!',
         'DEMO_GOODBYE'           => 'Goodbye %s!',
@@ -231,7 +231,7 @@ The Acme Demo extension's language file looks like:
         'ACP_DEMO'               => 'Settings',
         'ACP_DEMO_GOODBYE'       => 'Should say goodbye?',
         'ACP_DEMO_SETTING_SAVED' => 'Settings have been saved successfully!',
-    ));
+    ]);
 
 Loading language files in an extension is simple enough using the
 ``add_lang()`` method of the ``$language`` object. It takes two arguments, the first being the name of the language file (or an array of language file names)
@@ -251,7 +251,7 @@ and the second being the extension vendor/package.
     // Load multiple language files from
     // acme/demo/language/en/common.php
     // acme/demo/language/en/controller.php
-    $language->add_lang(array(‘common’, ‘controller’), ‘acme/demo’);
+    $language->add_lang([‘common’, ‘controller’], ‘acme/demo’);
 
 For performance reasons, it is preferred to use the above method to load language files at any point in your extension’s code
 execution where the language keys are needed. However, if it is absolutely necessary to load an extension's
