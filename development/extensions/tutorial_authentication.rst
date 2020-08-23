@@ -72,20 +72,20 @@ authentication provider class is show below:
             // do not allow empty password
             if (!$password)
             {
-                return array(
+                return [
                     'status'    => LOGIN_ERROR_PASSWORD,
                     'error_msg' => 'NO_PASSWORD_SUPPLIED',
-                    'user_row'  => array('user_id' => ANONYMOUS),
-                );
+                    'user_row'  => ['user_id' => ANONYMOUS],
+                ];
             }
 
             if (!$username)
             {
-                return array(
+                return [
                     'status'    => LOGIN_ERROR_USERNAME,
                     'error_msg' => 'LOGIN_ERROR_USERNAME',
-                    'user_row'  => array('user_id' => ANONYMOUS),
-                );
+                    'user_row'  => ['user_id' => ANONYMOUS],
+                ];
             }
 
             $username_clean = utf8_clean_string($username);
@@ -98,11 +98,11 @@ authentication provider class is show below:
             $this->db->sql_freeresult($result);
 
             // Successful login... set user_login_attempts to zero...
-            return array(
+            return [
                 'status'    => LOGIN_SUCCESS,
                 'error_msg' => false,
                 'user_row'  => $row,
-            );
+            ];
         }
     }
 
@@ -225,10 +225,10 @@ The Class file
         */
         public function get_service_credentials()
         {
-            return array(
+            return [
                 'key'     => $this->config['auth_oauth_bitly_key'],
                 'secret'  => $this->config['auth_oauth_bitly_secret'],
-            );
+            ];
         }
 
         /**

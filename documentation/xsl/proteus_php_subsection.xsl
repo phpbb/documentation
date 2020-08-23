@@ -15,11 +15,14 @@
 <xsl:param name="html.ext" select="'.php'"/>
 
 <!-- Link to the stylesheet -->
-<xsl:param name="html.stylesheet" select="'/support/documentation/3.2/style.css'"/>
+<xsl:param name="html.stylesheet" select="'/support/documentation/3.3/style.css'"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
 <xsl:param name="chunk.first.sections" select="1"/>
+
+<!-- Create a file for each subsection, too -->
+<xsl:param name="chunk.section.depth" select="2"/>
 
 <!-- Enumerate sections -->
 <xsl:param name="section.autolabel" select="1"/>
@@ -37,7 +40,7 @@
 <xsl:param name="chunker.output.doctype-public" select="''"/>
 <xsl:param name="chunker.output.doctype-system" select="''"/>
 
-<xsl:variable name="main.title.text" select="'phpBB 3.2 Rhea Documentation'"/>
+<xsl:variable name="main.title.text" select="'phpBB 3.3 Proteus Documentation'"/>
 
 <xsl:template name="user.preroot">
 
@@ -50,14 +53,7 @@
 		// The page title
 		$page_title = '</xsl:text>
 
-	<!-- use the substring replace template defined in Docbook XSL's lib to escape apostrophes -->
-	<xsl:call-template name="string.subst">
-		<xsl:with-param name="string">
-			<xsl:value-of select="$title"/>
-		</xsl:with-param>
-		<xsl:with-param name="target" select='"&apos;"'/>
-		<xsl:with-param name="replacement" select='"\&apos;"'/>
-	</xsl:call-template>
+	<xsl:copy-of select="$title"/>
 
 	<xsl:text disable-output-escaping="yes">';
 // Paths
@@ -78,8 +74,8 @@ define('IN_PHPBB', true);
 include($root_path . 'common.php');
 include($root_path . 'includes/functions_docbook.php');
 
-$template->set_filenames(array(
-	'body'	=> 'support/support_documentation_docbook.html')
+$template->set_filenames([
+	'body'	=> 'support/support_documentation_docbook.html']
 );
 
 </xsl:text>
@@ -100,10 +96,10 @@ $template->set_filenames(array(
 
 $content = str_replace(' xmlns="http://www.w3.org/1999/xhtml"', '', ob_get_clean());
 
-$template->assign_vars(array(
+$template->assign_vars([
 	'PAGE_TITLE'		=> $page_title,
 	'S_CONTENT'			=> $content,
-	'S_BODY_CLASS'		=> 'support documentation docbook')
+	'S_BODY_CLASS'		=> 'support documentation docbook']
 );
 
 page_header($page_title, false);
@@ -527,24 +523,13 @@ page_footer(false);
 	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">,
-	'toc'  =&gt; array(</xsl:text>
+	'toc'  =&gt; </xsl:text>
 
-	<xsl:for-each select="../*">
-		<xsl:variable name="ischunk"><xsl:call-template name="chunk"/></xsl:variable>
-		<xsl:if test="$ischunk='1'">
-			<xsl:text>
-</xsl:text>
-			<xsl:call-template name="phpdoc.nav.array">
-				<xsl:with-param name="node" select="."/>
-				<xsl:with-param name="useabbrev" select="'1'"/>
-				<xsl:with-param name="currenttitle" select="$titleclean"/>
-			</xsl:call-template>
-			<xsl:text>,</xsl:text>
-		</xsl:if>
-	</xsl:for-each>
+	<xsl:call-template name="header.recursive.toc">
+		<xsl:with-param name="titleclean" select="$titleclean"/>
+	</xsl:call-template>
 
 	<xsl:text disable-output-escaping="yes">
-	),
 );
 
 docbook_navigation($navigation);
@@ -555,11 +540,42 @@ ob_start();
 </xsl:text>
 </xsl:template>
 
+<xsl:template name="header.recursive.toc">
+	<xsl:param name="node" select="/"/>
+	<xsl:param name="titleclean" select="''"/>
+
+	<xsl:for-each select="$node/*">
+		<xsl:variable name="ischunk"><xsl:call-template name="chunk"/></xsl:variable>
+		<xsl:if test="$ischunk='1'">
+			<xsl:text>array(</xsl:text>
+
+			<xsl:call-template name="phpdoc.nav.array">
+				<xsl:with-param name="node" select="."/>
+				<xsl:with-param name="useabbrev" select="'1'"/>
+				<xsl:with-param name="currenttitle" select="$titleclean"/>
+				<xsl:with-param name="arraycode" select="'0'"/>
+			</xsl:call-template>
+			<xsl:text>,</xsl:text>
+
+			<!-- recurse -->
+			<xsl:text>array(</xsl:text>
+			<xsl:call-template name="header.recursive.toc">
+				<xsl:with-param name="node" select="."/>
+				<xsl:with-param name="titleclean" select="$titleclean"/>
+			</xsl:call-template>
+
+			<xsl:text>)),
+			</xsl:text>
+		</xsl:if>
+	</xsl:for-each>
+</xsl:template>
+
 <!-- Prints out one PHP array with page name and title -->
 <xsl:template name="phpdoc.nav.array">
 	<xsl:param name="node" select="/foo"/>
 	<xsl:param name="useabbrev" select="'0'"/>
 	<xsl:param name="currenttitle" select="''"/>
+	<xsl:param name="arraycode" select="'1'"/>
 
 	<!-- Get usual title -->
 	<xsl:variable name="title">
@@ -574,7 +590,10 @@ ob_start();
 	</xsl:variable>
 
 	<!-- Print out PHP array -->
-	<xsl:text>array('</xsl:text>
+	<xsl:if test="$arraycode='1'">
+		<xsl:text>array(</xsl:text>
+	</xsl:if>
+	<xsl:text>'</xsl:text>
 	<xsl:if test="$currenttitle != $main.title.text">
 		<xsl:text>../</xsl:text>
 	</xsl:if>
@@ -597,7 +616,10 @@ ob_start();
 		<xsl:with-param name="target" select='"&apos;"'/>
 		<xsl:with-param name="replacement" select='"\&apos;"'/>
 	</xsl:call-template>
-	<xsl:text>')</xsl:text>
+	<xsl:text>'</xsl:text>
+	<xsl:if test="$arraycode='1'">
+		<xsl:text>)</xsl:text>
+	</xsl:if>
 </xsl:template>
 
 <!-- Custom mode for titles for navigation without

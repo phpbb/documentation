@@ -158,9 +158,9 @@ we will subscribe a listener function to phpBB's ``core.user_setup`` event:
          */
         static public function getSubscribedEvents()
         {
-            return array(
+            return [
                 'core.user_setup' => 'load_language_on_setup',
-            );
+            ];
         }
 
         /**
@@ -172,10 +172,10 @@ we will subscribe a listener function to phpBB's ``core.user_setup`` event:
         public function load_language_on_setup($event)
         {
             $lang_set_ext = $event['lang_set_ext'];
-            $lang_set_ext[] = array(
+            $lang_set_ext[] = [
                 'ext_name' => 'acme/demo',
                 'lang_set' => 'demo',
-            );
+            ];
             $event['lang_set_ext'] = $lang_set_ext;
         }
     }
@@ -192,7 +192,7 @@ that when this event occurs, our function will execute.
 
     .. code-block:: php
 
-        'core.user_setup' => array(array('foo_method'), array('bar_method'))
+        'core.user_setup' => [['foo_method'], ['bar_method']]
 
 The ``load_language_on_setup()`` listener method simply adds
 our language file to phpBB's language data array. Generally speaking, a listener
@@ -273,9 +273,9 @@ setting a priority for event listener methods. For example:
 
     static public function getSubscribedEvents()
     {
-        return array(
-            'core.user_setup' => array('foo_method', $priority)
-        );
+        return [
+            'core.user_setup' => ['foo_method', $priority]
+        ];
     }
 
 In this example, ``$priority`` is an integer, the value of which defaults to 0.

@@ -14,7 +14,7 @@ Add a new config_text setting
 
 .. code-block:: php
 
-    array('config_text.add', array(config name, config value)),
+    ['config_text.add', [config name, config value]],
 
 Example
 -------
@@ -23,10 +23,10 @@ Example
 
     public function update_data()
     {
-        return array(
-             array('config_text.add', array('foo', 'bar')), // Add Config_Text 'foo' with value 'bar';
-             array('config_text.add', array('foo2', 1)), // Add Config_Text 'foo2' with value '1';
-        );
+        return [
+             ['config_text.add', ['foo', 'bar']], // Add Config_Text 'foo' with value 'bar';
+             ['config_text.add', ['foo2', 1]], // Add Config_Text 'foo2' with value '1';
+        ];
     }
 
 Update Config_Text Setting
@@ -36,7 +36,7 @@ Update a config_text setting
 
 .. code-block:: php
 
-    array('config_text.update', array(config name, new config value)),
+    ['config_text.update', [config name, new config value]],
 
 Example
 -------
@@ -45,9 +45,9 @@ Example
 
     public function update_data()
     {
-        return array(
-             array('config_text.update', array('foo', 'bar')), // Config_Text 'foo' updated to 'bar';
-        );
+        return [
+             ['config_text.update', ['foo', 'bar'], // Config_Text 'foo' updated to 'bar';
+        ];
     }
 
 Delete Config_Text Setting
@@ -57,7 +57,7 @@ Delete a config_text setting
 
 .. code-block:: php
 
-    array('config_text.remove', array(config name)),
+    ['config_text.remove', [config name]],
 
 Example
 -------
@@ -66,7 +66,7 @@ Example
 
     public function update_data()
     {
-        return array(
-             array('config_text.remove', array('foo')), // Config_Text 'foo' removed;
-        );
+        return [
+             ['config_text.remove', ['foo']], // Config_Text 'foo' removed;
+        ];
     }

@@ -56,17 +56,17 @@ For this tutorial, we will use ``ext/acme/demo/acp/main_info.php``:
     {
         public function module()
         {
-            return array(
+            return [
                 'filename'  => '\acme\demo\acp\main_module',
                 'title'     => 'ACP_DEMO_TITLE',
-                'modes'    => array(
-                    'settings'  => array(
+                'modes'    => [
+                    'settings'  => [
                         'title' => 'ACP_DEMO',
                         'auth'  => 'ext_acme/demo && acl_a_board',
-                        'cat'   => array('ACP_DEMO_TITLE'),
-                    ),
-                ),
-            );
+                        'cat'   => ['ACP_DEMO_TITLE'],
+                    ],
+                ],
+            ];
         }
     }
 
@@ -136,10 +136,10 @@ For this tutorial, we will use ``ext/acme/demo/acp/main_module.php``:
                 trigger_error($language->lang('ACP_DEMO_SETTING_SAVED') . adm_back_link($this->u_action));
             }
 
-            $template->assign_vars(array(
+            $template->assign_vars([
                 'ACME_DEMO_GOODBYE' => $config['acme_demo_goodbye'],
                 'U_ACTION'          => $this->u_action,
-            ));
+            ]);
         }
     }
 
@@ -285,33 +285,33 @@ For the Acme Demo, we need a migration that will install the following data:
          */
         static public function depends_on()
         {
-            return array('\phpbb\db\migration\data\v31x\v314');
+            return ['\phpbb\db\migration\data\v31x\v314'];
         }
 
         public function update_data()
         {
-            return array(
+            return [
 
                 // Add the config variable we want to be able to set
-                array('config.add', array('acme_demo_goodbye', 0)),
+                ['config.add', ['acme_demo_goodbye', 0]],
 
                 // Add a parent module (ACP_DEMO_TITLE) to the Extensions tab (ACP_CAT_DOT_MODS)
-                array('module.add', array(
+                ['module.add', [
                     'acp',
                     'ACP_CAT_DOT_MODS',
                     'ACP_DEMO_TITLE'
-                )),
+                ]],
 
                 // Add our main_module to the parent module (ACP_DEMO_TITLE)
-                array('module.add', array(
+                ['module.add', [
                     'acp',
                     'ACP_DEMO_TITLE',
-                    array(
+                    [
                         'module_basename'	=> '\acme\demo\acp\main_module',
-                        'modes'				=> array('settings'),
-                    ),
-                )),
-            );
+                        'modes'				=> ['settings'],
+                    ],
+                ]],
+            ];
         }
     }
 

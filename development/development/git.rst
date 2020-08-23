@@ -413,6 +413,46 @@ Merging to 3.2.x, 3.3.x and master with different patches
 12. Merger verifies the results
 13. Merger pushes 3.2.x, 3.3.x and master to phpbb
 
+Fixing merge conflicts
+^^^^^^^^^^^^^^^^^^^^^^
+Merge conflicts **must** always be solved by using the `git rebase` functionality.
+**Do not** merge the base branch, e.g. `master`, in order to solve potential merge conflicts
+or in order to update your branch.
+
+To update your branch, you can often run a simple rebase:
+
+1. Checkout your feature or bugfix branch
+2. Make sure there are no unstaged changes and that your branch has already been pushed to your remote (this can later allow you to undo your rebase changes)
+3. Run git rebase
+4. Force push your branch to your remote
+
+The commands for this are as follows:
+
+.. code-block:: shell
+
+    git checkout ticket/12345
+    git fetch upstream                      # ensure upstream is up to date
+    git rebase upstream/3.3.x               # rebase on top of upstream's 3.3.x branch
+    git push origin ticket/12345 -f
+
+In case you think something went wrong or there are too many merge conflicts, you can abort the rebase by running:
+
+.. code-block:: shell
+
+    git rebase --abort
+
+More difficult rebases and when switching the base branch, it makes sense to use the three-way `--onto` for rebasing:
+
+.. code-block:: shell
+
+    git rebase --onto new_base_branch old_base_branch ticket/12345
+
+Where
+
+- `new_base_branch` is the new base branch your bugfix branch should be based on
+- `old_base_branch` is the old base branch your bugfix branch is based on before the rebase
+- `ticket/12345` is the name of your bugfix or feature branch
+
 Windows
 =======
 

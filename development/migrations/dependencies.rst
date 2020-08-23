@@ -14,7 +14,7 @@ returning an array.
 
     static public function depends_on()
     {
-        return array();
+        return [];
     }
 
 All that is needed is to add the class name(s) of the Migration(s) that the
@@ -28,13 +28,13 @@ have already been installed.
 
     static public function depends_on()
     {
-        return array(
+        return [
             '\phpbb\db\migration\data\v310\extensions',
             '\phpbb\db\migration\data\v310\style_update_p2',
             '\phpbb\db\migration\data\v310\timezone_p2',
             '\phpbb\db\migration\data\v310\reported_posts_display',
             '\phpbb\db\migration\data\v310\migrations_table',
-        );
+        ];
     }
 
 .. note::
@@ -48,9 +48,9 @@ have already been installed.
 
     static public function depends_on()
     {
-        return array(
+        return [
             '\phpbb\db\migration\data\v31x\v314',
-        );
+        ];
     }
 
 depends_on creates a tree

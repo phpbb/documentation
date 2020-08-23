@@ -115,7 +115,7 @@ framework.
         $this->add_lang('ucp');
 
         // we can also include multiple ones:
-        $this->add_lang(array('memberlist', 'mcp'));
+        $this->add_lang(['memberlist', 'mcp']);
 
         // Let's use a language key
         $this->assertEquals('Login', $this->lang('LOGIN'));

@@ -122,10 +122,10 @@ language/{iso}/help/\*.php
 
     .. code-block:: php
 
-        array(
+        [
             0 => 'TextA',
             1 => 'TextB',
-        ),
+        ],
 
     + If TextA is ``--`` the entry is a headline.
     + If both, TextA and TextB, are ``--`` the entry causes a column switch for
