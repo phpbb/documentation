@@ -879,8 +879,8 @@ first file is the Travis CI configuration file, ``.travis.yml``:
       - travis/prepare-phpbb.sh $PHPBB_BRANCH
       - cd ../../phpBB3
       - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
-      - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION
-      - sh -c "if [ '$EPV' == '1' -a '$NOTESTS' == '1' ]; then cd phpBB; composer remove sami/sami --update-with-dependencies --dev --no-interaction; composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs; cd ../; fi"
+      - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
+      - sh -c "if [ '$EPV' = '1' -a '$NOTESTS' = '1' ]; then cd phpBB; composer remove sami/sami --dev --no-interaction; composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs; cd ../; fi"
 
     before_script:
       - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
@@ -958,10 +958,10 @@ Enable Travis CI on GitHub
 
 As a final step you need to enable Travis CI in your GitHub repository.
 
-    1. Open your repository, e.g. `<https://github.com/phpbb/phpbb-ext-acme-demo>`_,
-    2. Go to "Settings"
-    3. "Integrations & Services"
-    4. Press the "Add Service" button and search for ``Travis CI``
+    1. Go to `<https://travis-ci.org>`_ and sign in with your Github account.
+    2. If you have not yet signed up with Travis CI, you will be directed to Github where you will need to accept the Authorization of Travis CI.
+    3. Click on your Travis CI profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
+    4. Now when you push commits to your repo, or pull requests are created, your tests should automatically run.
 
 Now when you commit and push the travis files you created to the ``master``
 branch of your repository, the unit, database and functional tests will be executed.
