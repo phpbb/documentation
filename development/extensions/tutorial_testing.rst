@@ -880,7 +880,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
       - cd ../../phpBB3
       - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
       - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
-      - ../<authorname>/<reponame>/travis/prepare-epv.sh $EPV $NOTESTS
+      - sh -c "if [ '$EPV' = '1' -a '$NOTESTS' = '1' ]; then cd phpBB; composer remove sami/sami --dev --no-interaction; composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs; cd ../; fi"
 
     before_script:
       - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
@@ -894,7 +894,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
 .. note::
 
     You should not need to make any changes in this file, apart from the
-    following sections, which should be quite self explanatory:
+    following section, which should be quite self explanatory:
 
     .. code-block:: yaml
 
@@ -905,13 +905,6 @@ first file is the Travis CI configuration file, ``.travis.yml``:
             - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
             - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
             - PHPBB_BRANCH="3.3.x" # Branch of phpBB to run tests against
-
-    as well as this line, you need to replace ``<authorname>`` and ``<reponame>`` with the Github username
-    and the name of the repository e.g ``phpbb/phpbb-ext-acme-demo``
-
-    .. code-block:: yaml
-
-        - ../<authorname>/<reponame>/travis/prepare-epv.sh $EPV $NOTESTS
 
 Preparing phpBB
 ---------------
@@ -960,63 +953,15 @@ the phpBB installation from GitHub for us:
         $ cd path/to/your/extension
         $ git update-index --chmod=+x travis/prepare-phpbb.sh
 
-Preparing EPV
----------------
-
-The third file we need to create is a helper file called
-``travis/prepare-epv.sh``, which is a script used by Travis CI, to set up
-the phpBB extension prevalidator (EPV) for us:
-
-.. warning::
-
-    You should not edit the content of this file!
-
-.. code-block:: bash
-
-    #!/bin/bash
-    #
-    # This file is part of the phpBB Forum Software package.
-    #
-    # @copyright (c) phpBB Limited <https://www.phpbb.com>
-    # @license GNU General Public License, version 2 (GPL-2.0)
-    #
-    # For full copyright and license information, please see
-    # the docs/CREDITS.txt file.
-    #
-    set -e
-    set -x
-
-    EPV=$1
-    NOTESTS=$2
-
-    if [ "$EPV" == "1" ] && [ "$NOTESTS" == "1" ]
-    then
-        cd phpBB
-        composer remove sami/sami --update-with-dependencies --dev --no-interaction
-        composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs
-        cd ../
-    fi
-
-.. note::
-
-    The prepare-phpbb.sh file needs to have executable permissions or Travis CI
-    tests will fail. You can set the correct permission for this file from a
-    terminal command line interface, e.g.
-
-    .. code-block:: bash
-
-        $ cd path/to/your/extension
-        $ git update-index --chmod=+x travis/prepare-epv.sh
-
 Enable Travis CI on GitHub
 --------------------------
 
 As a final step you need to enable Travis CI in your GitHub repository.
 
-    1. Go to `<https://travis-ci.org/account/repositories>`_
-    2. Login with your Github account, which belongs to your repository `<https://github.com/phpbb/phpbb-ext-acme-demo>`_
-    3. Go to the line of your repository and change the switch to ``on``
-    4. Go to your `<https://github.com/phpbb/phpbb-ext-acme-demo>`_ and check if the tests are working
+    1. Go to `<https://travis-ci.org>`_ and sign in with your Github account.
+    2. If you have not yet signed up with Travis CI, you will be directed to Github where you will need to accept the Authorization of Travis CI.
+    3. Click on your Travis CI profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
+    4. Now when you push commits to your repo, or pull requests are created, your tests should automatically run.
 
 Now when you commit and push the travis files you created to the ``master``
 branch of your repository, the unit, database and functional tests will be executed.
