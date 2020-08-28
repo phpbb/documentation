@@ -980,7 +980,3 @@ in your code that must be fixed.
 Travis CI also provides Build Status badges. They provide you the code in markdown
 format so you can add the badge to your repository's README so visitors can see that
 the build status of your extension.
-
-    .. code-block:: txt
-
-        [![Build Status](https://travis-ci.org/phpbb/phpbb-ext-acme-demo.svg?branch=master)](https://travis-ci.org/phpbb/phpbb-ext-acme-demo)
