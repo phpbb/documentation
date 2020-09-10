@@ -880,7 +880,7 @@ first file is the Travis CI configuration file, ``.travis.yml``:
       - cd ../../phpBB3
       - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
       - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
-      - sh -c "if [ '$EPV' = '1' -a '$NOTESTS' = '1' ]; then cd phpBB; composer remove sami/sami --dev --no-interaction; composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs; cd ../; fi"
+      - sh -c "if [ '$EPV' = '1' -a '$NOTESTS' = '1' ]; then cd phpBB; composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs; cd ../; fi"
 
     before_script:
       - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
