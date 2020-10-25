@@ -64,6 +64,9 @@
 						<para>json</para>
 					</listitem>
 					<listitem>
+						<para>mbstring</para>
+					</listitem>
+					<listitem>
 						<para>XML support</para>
 					</listitem>
 					<listitem>
