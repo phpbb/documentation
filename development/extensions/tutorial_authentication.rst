@@ -22,7 +22,7 @@ time and the active one is chosen from the ACP.
 Creating an Authentication Provider
 -----------------------------------
 An authentication provider that comes with phpBB requires a minimum of two files:
-a class and an entry in a ``config/auth.yml`` file. Authentication providers that
+a class and an entry in a ``config/default/container/services_auth.yml`` file. Authentication providers that
 are part of an extension must provide their own YAML file defining the
 service in addition to all normal requirements of an extension.
 
@@ -149,6 +149,8 @@ This value can then be retrieved from the ``<provider>.php`` file like this:
 .. code-block:: php
 
     $domain = $this->config['https_server'];
+  
+You must also purge the cache in order the authentication provider become visible in the ACP under General tab.
 
 OAuth Providers
 ===============
