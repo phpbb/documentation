@@ -1266,9 +1266,9 @@ jobs based on the databases being tested:
 
 * MySQL Tests: The ``mysql-tests`` job runs PHPUnit tests in various MySQL and MariaDB and PHP combinations. They are all defined in the ``matrix`` section. This workflow only runs in versions of PHP 7 and PHP 8 but you could, for example, add tests for versions of PHP 5. (Note that to include PHP 5 in the test matrix you must change the ubuntu server for that job to ``runs-on: ubuntu-16.04``). You may delete or comment out some of the tests in the matrix if you do not want to test certain versions of PHP or MySQL or MariaDB.
 
-* PostgreSQL Tests: The ``postgres-tests`` job runs PHPUnit tests in various versions of PostgreSQL. The PHP version is consistent throughout since the mysql-checks job is the where we do most of our PHP environment checks. You may add additional checks to this matrix or you may either delete or comment out the entire ``postgres-tests`` job if you do not need to test PostgreSQL.
+* PostgreSQL Tests: The ``postgres-tests`` job runs PHPUnit tests in various versions of PostgreSQL. The PHP version is consistent throughout since the mysql-checks job is where we do most of our PHP environment checks. You may add additional checks to this matrix or you may either delete or comment out the entire ``postgres-tests`` job if you do not intend to test PostgreSQL.
 
-* MSSQL, SQLite: The ``other-tests`` job runs PHPUnit tests in various versions of MSSQL and SQLite3. You may either delete or comment out the MSSQL or SQLite3 checks in the matrix if you do not need to test on either of those databases, or delete or comment out the entire ``other-tests`` job if you do not need to test any of these databases.
+* MSSQL, SQLite: The ``other-tests`` job runs PHPUnit tests in various versions of MSSQL and SQLite3. You may either delete or comment out the MSSQL or SQLite3 checks in the matrix if you do not want to test on either of those databases, or delete or comment out the entire ``other-tests`` job if you do not intend to test any of these databases.
 
 Final Thoughts on Extension Testing
 -----------------------------------
@@ -1283,7 +1283,7 @@ but once you get used to reading them they can help you pinpoint unforeseen bugs
 and regressions in your code that must be fixed.
 
 Github Actions also provides Build Status badges. They provide you the code in markdown
-format so you can add the badge to your repository's README so visitors can see that
+format so you can add the badge to your repository's README so visitors can see
 the build status of your extension. For example (Just change ``GITHUB-USERNAME/REPO-NAME``
 to your repository):
 
