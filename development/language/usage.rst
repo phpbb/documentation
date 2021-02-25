@@ -97,7 +97,7 @@ Loading from an extension
 
 To load a file from an extension
 you need to use ``phpbb\language\language::add_lang()`` which takes
-the vendor + extension name as first argument and the array of language files as
+the array of language files as a first argument and the vendor + extension name as
 a second argument.
 
 .. code-block:: php

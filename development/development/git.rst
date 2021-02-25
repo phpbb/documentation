@@ -307,8 +307,7 @@ merging a topic branch into the phpBB repository.
 .. note::
 
     Note that tests should be run prior to merging to the official repository. Tests are run
-    for each push to a pull request by `Travis (Continuous Integration) <https://travis-ci.org/phpbb/phpbb>`_
-    and `AppVeyor <https://ci.appveyor.com/project/phpBB/phpbb/>`_
+    for each push to a pull request by `Github Actions <https://github.com/phpbb/phpbb/actions>`_
     but it is a good idea to run them yourself as well. For more information, read :doc:`../testing/index`.
 
 Merging only to master
