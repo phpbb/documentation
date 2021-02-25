@@ -788,14 +788,13 @@ Now the tests will pass correctly:
     the first functional tests. Subsequent functional tests **do not reinstall**
     the board, so they do not have the long setup time.
 
-Continuous integration with Travis CI
-=====================================
+Continuous integration with Github Actions
+==========================================
 
 As a final step in this tutorial, we want to explain how to set up automated
-testing of your extension on `Travis CI <https://travis-ci.org/>`_ (free of
-charge, when your project is public). In order to do that, your extension must
-first be set up as a project repository on `GitHub <https://github.com>`_ (also
-free of charge, when your project is public).
+testing of your extension using Github Actions. In order to do that, your extension must
+first be set up as a project repository on `GitHub <https://github.com>`_ (free of charge
+for public open source repositories).
 
 If you need help setting up git and creating your GitHub project, please have
 a look at the `Help section <https://help.github.com/>`_ on Github, particularly
@@ -806,177 +805,488 @@ the following two help topics:
 
 .. note::
 
-    It is recommended to use the root of the extension (``ext/acme/demo``) also
-    as root for the Git repository. Otherwise the scripts that phpBB provides for
+    It is recommended to use the root of the extension (``ext/acme/demo``) as
+    the root for the Git repository. Otherwise the scripts that phpBB provides for
     easy test execution on Travis CI will not work correctly.
 
     View one of phpBB's official extension repositories as an example:
     `Board Rules <https://github.com/phpbb-extensions/boardrules>`_.
 
-Travis CI configuration file
-----------------------------
+Create your Github Action Workflow file
+---------------------------------------
 
-When you are done with that, we need to add two files to our extension. The
-first file is the Travis CI configuration file, ``.travis.yml``:
+From your repository on GitHub.com, click **Add File** and select **Create new file**
+and name the file ``.github/workflows/tests.yml``.
 
-.. note::
-
-    If you have trouble generating the file, because it has a leading dot, try
-    naming the file ``.travis.yml.`` (with a leading and trailing dot). This
-    will allow you to create the file on most operating systems.
-
-    The file should now also be hidden. If you can not see it anymore, your
-    file explorer should have an option to make hidden files visible again.
+Copy the following into the ``tests.yml`` file:
 
 .. code-block:: yaml
 
-    language: php
-    dist: xenial
-
-    matrix:
-      include:
-        - php: 7.1
-          env: DB=none;NOTESTS=1
-        - php: 7.1
-          env: DB=mariadb
-        - php: 7.1
-          env: DB=postgres
-        - php: 7.1
-          env: DB=sqlite3
-        - php: 7.1
-          env: DB=mysqli # MyISAM
-        - php: 7.2
-          env: DB=mysqli
-        - php: 7.3
-          env: DB=mysqli
-        - php: 7.4
-          env: DB=mysqli
-        - php: nightly
-          env: DB=mysqli
-      allow_failures:
-        - php: nightly
-      fast_finish: true
+    name: Tests
 
     env:
-      global:
-        - EXTNAME="acme/demo"  # CHANGE name of the extension HERE
-        - SNIFF="1"            # Should we run code sniffer on your code?
-        - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
-        - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-        - PHPBB_BRANCH="3.3.x" # Branch of phpBB to run tests against
+        EXTNAME: acme/demo  # Your extension vendor/package name
+        SNIFF: 1            # Run code sniffer on your code? 1 or 0
+        IMAGE_ICC: 1        # Run icc profile sniffer on your images? 1 or 0
+        EPV: 1              # Run EPV (Extension Pre Validator) on your code? 1 or 0
+        EXECUTABLE_FILES: 1 # Run check for executable files? 1 or 0
+        PHPBB_BRANCH: 3.3.x # The phpBB branch to run tests on
 
-    branches:
-      only:
-        - master
-        - develop
-        - /^\d+(\.\d+)?\.x$/
+    on:
+        push:
+            branches:        # Run tests when commits are pushed to these branches in your repo
+                - master
+                - develop
+        pull_request:        # Run tests when pull requests are made on these branches in your repo
+            branches:
+                - master
+                - develop
 
-    services:
-      - postgresql
-      - mysql
+    jobs:
+        # START Basic Checks Job (EPV, code sniffer, images check, etc.)
+        basic-checks:
+            runs-on: ubuntu-18.04
+            strategy:
+                matrix:
+                    include:
+                        - php: '7.1'
+                          db: "none"
+                          NOTESTS: 1
 
-    install:
-      - travis/prepare-phpbb.sh $PHPBB_BRANCH
-      - cd ../../phpBB3
-      - travis/prepare-extension.sh $EXTNAME $PHPBB_BRANCH
-      - travis/setup-phpbb.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
-      - sh -c "if [ '$EPV' = '1' -a '$NOTESTS' = '1' ]; then cd phpBB; composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs; cd ../; fi"
+            name: PHP ${{ matrix.php }} - ${{ matrix.db }}
 
-    before_script:
-      - travis/setup-database.sh $DB $TRAVIS_PHP_VERSION $NOTESTS
+            steps:
+                - name: Checkout phpBB
+                  uses: actions/checkout@v2
+                  with:
+                      repository: phpbb/phpbb
+                      ref: ${{ env.PHPBB_BRANCH }}
+                      path: phpBB3
 
-    script:
-      - sh -c "if [ '$SNIFF' != '0' ]; then travis/ext-sniff.sh $DB $TRAVIS_PHP_VERSION $EXTNAME $NOTESTS; fi"
-      - sh -c "if [ '$IMAGE_ICC' != '0' ]; then travis/check-image-icc-profiles.sh $DB $TRAVIS_PHP_VERSION $NOTESTS; fi"
-      - sh -c "if [ '$EPV' != '0' -a '$NOTESTS' = '1' ]; then phpBB/vendor/bin/EPV.php run --dir='phpBB/ext/$EXTNAME/'; fi"
-      - sh -c "if [ '$NOTESTS' != '1' ]; then phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/travis/phpunit-$DB-travis.xml --bootstrap ./tests/bootstrap.php; fi"
+                - name: Checkout extension
+                  uses: actions/checkout@v2
+                  with:
+                      path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
+
+                - name: Setup PHP
+                  uses: shivammathur/setup-php@v2
+                  with:
+                      php-version: ${{ matrix.php }}
+                      extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, mysqli, sqlite, pdo_sqlite, intl, gd, exif, iconv, sqlsrv, pdo_sqlsrv, ldap
+                      coverage: none
+
+                - name: Setup environment for phpBB
+                  env:
+                      DB: ${{ matrix.db }}
+                      PHP_VERSION: ${{ matrix.php }}
+                      NOTESTS: '1'
+                  run: .github/setup-phpbb.sh $DB $PHP_VERSION $NOTESTS
+                  working-directory: ./phpBB3
+
+                - name: Setup EPV
+                  if: ${{ env.EPV != 0 }}
+                  run: composer require phpbb/epv:dev-master --dev --no-interaction --ignore-platform-reqs
+                  working-directory: ./phpBB3/phpBB
+
+                - name: Run code sniffer
+                  if: ${{ env.SNIFF != 0 }}
+                  env:
+                      NOTESTS: '1'
+                  run: .github/ext-sniff.sh $EXTNAME $NOTESTS
+                  working-directory: ./phpBB3
+
+                - name: Check image ICC profiles
+                  if: ${{ env.IMAGE_ICC != 0 }}
+                  run: .github/check-image-icc-profiles.sh
+                  working-directory: ./phpBB3
+
+                - name: Check executable files
+                  if: ${{ env.EXECUTABLE_FILES != 0 }}
+                  run: .github/ext-check-executable-files.sh ./ $EXTNAME
+                  working-directory: ./phpBB3
+
+                - name: Run EPV
+                  if: ${{ env.EPV != 0 }}
+                  run: phpBB/vendor/bin/EPV.php run --dir="phpBB/ext/$EXTNAME/"
+                  working-directory: ./phpBB3
+        # END Basic Checks Job
+
+        # START MySQL and MariaDB Job
+        mysql-tests:
+            runs-on: ubuntu-18.04
+            strategy:
+                matrix:
+                    include:
+                        - php: '7.1'
+                          db: "mariadb:10.1"
+                        - php: '7.1'
+                          db: "mariadb:10.2"
+                        - php: '7.1'
+                          db: "mariadb:10.3"
+                        - php: '7.1'
+                          db: "mariadb:10.4"
+                        - php: '7.1'
+                          db: "mariadb:10.5"
+                        - php: '7.1'
+                          db: "mysql:5.6"
+                          db_alias: "MyISAM Tests"
+                          MYISAM: 1
+                        - php: '7.1'
+                          db: "mysql:5.6"
+                        - php: '7.1'
+                          db: "mysql:5.7"
+                        - php: '7.2'
+                          db: "mysql:5.7"
+                        - php: '7.3'
+                          db: "mysql:5.7"
+                        - php: '7.4'
+                          db: "mysql:5.7"
+                        - php: '7.4'
+                          db: "mysql:8.0"
+                        - php: '8.0'
+                          db: "mysql:5.7"
+
+            name: PHP ${{ matrix.php }} - ${{ matrix.db_alias != '' && matrix.db_alias || matrix.db }}
+
+            services:
+                mysql:
+                    image: ${{ matrix.db }}
+                    env:
+                        MYSQL_ALLOW_EMPTY_PASSWORD: yes
+                        MYSQL_DATABASE: phpbb_tests
+                    ports:
+                        - 3306:3306
+                    options: >-
+                        --health-cmd="mysqladmin ping"
+                        --health-interval=10s
+                        --health-timeout=5s
+                        --health-retries=3
+
+                redis:
+                    image: redis
+                    options: >-
+                        --health-cmd "redis-cli ping"
+                        --health-interval 10s
+                        --health-timeout 5s
+                        --health-retries 5
+                    ports:
+                        - 6379:6379
+
+            steps:
+                - name: Checkout phpBB
+                  uses: actions/checkout@v2
+                  with:
+                      repository: phpbb/phpbb
+                      ref: ${{ env.PHPBB_BRANCH }}
+                      path: phpBB3
+
+                - name: Checkout extension
+                  uses: actions/checkout@v2
+                  with:
+                      path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
+
+                - id: database-type
+                  env:
+                      MATRIX_DB: ${{ matrix.db }}
+                  run: |
+                      db=$(echo "${MATRIX_DB%%:*}")
+                      echo "::set-output name=db::$db"
+
+                - name: Setup PHP
+                  uses: shivammathur/setup-php@v2
+                  with:
+                      php-version: ${{ matrix.php }}
+                      extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, mysqli, sqlite, pdo_sqlite, intl, gd, exif, iconv, sqlsrv, pdo_sqlsrv, ldap
+                      coverage: none
+
+                - name: Setup environment for phpBB
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                      PHP_VERSION: ${{ matrix.php }}
+                      NOTESTS: '0'
+                  run: .github/setup-phpbb.sh $DB $PHP_VERSION ${NOTESTS:-0}
+                  working-directory: ./phpBB3
+
+                - name: Setup database
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                      MYISAM: ${{ matrix.MYISAM != 1 && '0' || '1' }}
+                  run: .github/setup-database.sh $DB $MYISAM
+                  working-directory: ./phpBB3
+
+                - name: Setup PHPUnit files
+                  run: mkdir -p phpBB/ext/$EXTNAME/.github && cp .github/phpunit* $_
+                  working-directory: ./phpBB3
+
+                - name: Run unit tests
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                  run: phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/.github/phpunit-$DB-github.xml --bootstrap ./tests/bootstrap.php
+                  working-directory: ./phpBB3
+        # END MySQL and MariaDB Job
+
+        # START PostgreSQL Job
+        postgres-tests:
+            runs-on: ubuntu-18.04
+            strategy:
+                matrix:
+                    include:
+                        - php: '7.1'
+                          db: "postgres:9.5"
+                        - php: '7.1'
+                          db: "postgres:9.6"
+                        - php: '7.1'
+                          db: "postgres:10"
+                        - php: '7.1'
+                          db: "postgres:11"
+                        - php: '7.1'
+                          db: "postgres:12"
+                        - php: '7.1'
+                          db: "postgres:13"
+
+            name: PHP ${{ matrix.php }} - ${{ matrix.db }}
+
+            services:
+                postgres:
+                    image: ${{ matrix.db != 'postgres:9.5' && matrix.db != 'postgres:9.6' && matrix.db != 'postgres:10' && matrix.db != 'postgres:11' && matrix.db != 'postgres:12' && matrix.db != 'postgres:13' && 'postgres:10' || matrix.db }}
+                    env:
+                        POSTGRES_HOST: localhost
+                        POSTGRES_USER: postgres
+                        POSTGRES_PASSWORD: postgres
+                    ports:
+                        - 5432:5432
+                    options: >-
+                        -v /var/run/postgresql:/var/run/postgresql
+                        --health-cmd pg_isready
+                        --health-interval 10s
+                        --health-timeout 5s
+                        --health-retries 5
+
+                redis:
+                    image: redis
+                    options: >-
+                        --health-cmd "redis-cli ping"
+                        --health-interval 10s
+                        --health-timeout 5s
+                        --health-retries 5
+                    ports:
+                        - 6379:6379
+
+            steps:
+                - name: Checkout phpBB
+                  uses: actions/checkout@v2
+                  with:
+                      repository: phpbb/phpbb
+                      ref: ${{ env.PHPBB_BRANCH }}
+                      path: phpBB3
+
+                - name: Checkout extension
+                  uses: actions/checkout@v2
+                  with:
+                      path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
+
+                - id: database-type
+                  env:
+                      MATRIX_DB: ${{ matrix.db }}
+                  run: |
+                      db=$(echo "${MATRIX_DB%%:*}")
+                      echo "::set-output name=db::$db"
+
+                - name: Setup PHP
+                  uses: shivammathur/setup-php@v2
+                  with:
+                      php-version: ${{ matrix.php }}
+                      extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, mysqli, sqlite, pdo_sqlite, intl, gd, exif, iconv, sqlsrv, pdo_sqlsrv, ldap
+                      coverage: none
+
+                - name: Setup environment for phpBB
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                      PHP_VERSION: ${{ matrix.php }}
+                      NOTESTS: '0'
+                  run: .github/setup-phpbb.sh $DB $PHP_VERSION ${NOTESTS:-0}
+                  working-directory: ./phpBB3
+
+                - name: Setup database
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                      MYISAM: '0'
+                  run: .github/setup-database.sh $DB $MYISAM
+                  working-directory: ./phpBB3
+
+                - name: Setup PHPUnit files
+                  run: mkdir -p phpBB/ext/$EXTNAME/.github && cp .github/phpunit* $_
+                  working-directory: ./phpBB3
+
+                - name: Run unit tests
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                  run: phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/.github/phpunit-$DB-github.xml --bootstrap ./tests/bootstrap.php
+                  working-directory: ./phpBB3
+        # END PostgreSQL Job
+
+        # START Other Tests Job (SQLite 3 and mssql)
+        other-tests:
+            runs-on: ubuntu-18.04
+            strategy:
+                matrix:
+                    include:
+                        - php: '7.1'
+                          db: "sqlite3"
+                        - php: '7.2'
+                          db: "mcr.microsoft.com/mssql/server:2017-latest"
+                          db_alias: 'MSSQL 2017'
+                        - php: '7.2'
+                          db: "mcr.microsoft.com/mssql/server:2019-latest"
+                          db_alias: 'MSSQL 2019'
+
+            name: PHP ${{ matrix.php }} - ${{ matrix.db_alias != '' && matrix.db_alias || matrix.db }}
+
+            services:
+                mssql:
+                    image: ${{ matrix.db != 'mcr.microsoft.com/mssql/server:2017-latest' && matrix.db != 'mcr.microsoft.com/mssql/server:2019-latest' && 'mcr.microsoft.com/mssql/server:2017-latest' || matrix.db }}
+                    env:
+                        SA_PASSWORD: "Pssw0rd_12"
+                        ACCEPT_EULA: "y"
+                    ports:
+                        - 1433:1433
+                    options: >-
+                        --health-cmd="/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'Pssw0rd_12' -Q \"Use [master]; CREATE DATABASE [phpbb_tests] COLLATE Latin1_General_CI_AS\" || exit 1"
+                        --health-interval 10s
+                        --health-timeout 5s
+                        --health-retries 5
+                        --health-start-period 10s
+
+                redis:
+                    image: redis
+                    options: >-
+                        --health-cmd "redis-cli ping"
+                        --health-interval 10s
+                        --health-timeout 5s
+                        --health-retries 5
+                    ports:
+                        - 6379:6379
+
+            steps:
+                - name: Checkout phpBB
+                  uses: actions/checkout@v2
+                  with:
+                      repository: phpbb/phpbb
+                      ref: ${{ env.PHPBB_BRANCH }}
+                      path: phpBB3
+
+                - name: Checkout extension
+                  uses: actions/checkout@v2
+                  with:
+                      path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
+
+                - id: database-type
+                  env:
+                      MATRIX_DB: ${{ matrix.db }}
+                  run: |
+                      if [ $MATRIX_DB == 'mcr.microsoft.com/mssql/server:2017-latest' ] || [ $MATRIX_DB == 'mcr.microsoft.com/mssql/server:2019-latest' ]
+                      then
+                          db='mssql'
+                      else
+                          db=$(echo "${MATRIX_DB%%:*}")
+                      fi
+                      echo "::set-output name=db::$db"
+
+                - name: Setup PHP
+                  uses: shivammathur/setup-php@v2
+                  with:
+                      php-version: ${{ matrix.php }}
+                      extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, mysqli, sqlite, pdo_sqlite, intl, gd, exif, iconv, sqlsrv, pdo_sqlsrv, ldap
+                      coverage: none
+
+                - name: Setup environment for phpBB
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                      PHP_VERSION: ${{ matrix.php }}
+                      NOTESTS: '0'
+                  run: .github/setup-phpbb.sh $DB $PHP_VERSION ${NOTESTS:-0}
+                  working-directory: ./phpBB3
+
+                - name: Setup database
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                      MYISAM: '0'
+                  run: .github/setup-database.sh $DB $MYISAM
+                  working-directory: ./phpBB3
+
+                - name: Setup PHPUnit files
+                  run: mkdir -p phpBB/ext/$EXTNAME/.github && cp .github/phpunit* $_
+                  working-directory: ./phpBB3
+
+                - name: Run unit tests
+                  env:
+                      DB: ${{steps.database-type.outputs.db}}
+                  run: phpBB/vendor/bin/phpunit --configuration phpBB/ext/$EXTNAME/.github/phpunit-$DB-github.xml --bootstrap ./tests/bootstrap.php
+                  working-directory: ./phpBB3
+        # END Other Tests Job
 
 .. note::
 
-    You should not need to make any changes in this file, apart from the
-    following section, which should be quite self explanatory:
+    You must change the ``EXTNAME`` variable to your extension's name (as you defined it in
+    your composer.json file) in the ``env`` section at the top of this file:
 
     .. code-block:: yaml
 
         env:
-          global:
-            - EXTNAME="acme/demo"  # CHANGE name of the extension HERE
-            - SNIFF="1"            # Should we run code sniffer on your code?
-            - IMAGE_ICC="1"        # Should we run icc profile sniffer on your images?
-            - EPV="1"              # Should we run EPV (Extension Pre Validator) on your code?
-            - PHPBB_BRANCH="3.3.x" # Branch of phpBB to run tests against
+            EXTNAME: acme/demo  # Your extension vendor/package name
+            SNIFF: 1            # Run code sniffer on your code? 1 or 0
+            IMAGE_ICC: 1        # Run icc profile sniffer on your images? 1 or 0
+            EPV: 1              # Run EPV (Extension Pre Validator) on your code? 1 or 0
+            EXECUTABLE_FILES: 1 # Run check for executable files? 1 or 0
+            PHPBB_BRANCH: 3.3.x # The phpBB branch to run tests on
 
-Preparing phpBB
----------------
+To save and run your workflow, scroll to the bottom of the page and select
+**Create a new branch for this commit and start a pull request**. Then, to create a pull
+request, click **Propose new file**. After you merge this pull request, all future
+commits and pull requests on your master branch will trigger this CI workflow and
+your unit, database and functional tests will be executed.
 
-The second file we need to create is a helper file called
-``travis/prepare-phpbb.sh``, which is a script used by Travis CI, to set up
-the phpBB installation from GitHub for us:
+Customising Your Test Workflow
+------------------------------
 
-.. warning::
+You'll notice the ``env`` section of the workflow has options where you can enable or
+disable basic tests such as the EPV, Code Sniffer, checking any images in your extension
+for ICC profiles and checking for executable text files by changing their variables to
+either 1 or 0.
 
-    You should not edit the content of this file!
+You can also set the version of phpBB you want your extension tested in using the
+``PHPBB_BRANCH`` variable. This tutorial is using the current version of phpBB which
+is the 3.3.x branch. Older branches of phpBB are not being supported with Github Actions,
+but can instead be used with `Travis-CI.com <https://travis-ci.com>`_ .
 
-.. code-block:: bash
+Finally you may also make changes to the jobs. This tutorial's workflow is split up into several
+jobs based on the databases being tested:
 
-    #!/bin/bash
-    #
-    # This file is part of the phpBB Forum Software package.
-    #
-    # @copyright (c) phpBB Limited <https://www.phpbb.com>
-    # @license GNU General Public License, version 2 (GPL-2.0)
-    #
-    # For full copyright and license information, please see
-    # the docs/CREDITS.txt file.
-    #
-    set -e
-    set -x
+* Basic Checks: The ``basic-checks`` job does not do any PHPUnit testing. This is where EPV, Code Sniffer and Image Profile checks run. If you never intend to run these checks you may either delete or comment out the entire ``basic-checks`` job.
 
-    BRANCH=$1
+* MySQL Tests: The ``mysql-tests`` job runs PHPUnit tests in various MySQL and MariaDB and PHP combinations. They are all defined in the ``matrix`` section. This workflow only runs in versions of PHP 7 and PHP 8 but you could, for example, add tests for versions of PHP 5. (Note that to include PHP 5 in the test matrix you must change the ubuntu server for that job to ``runs-on: ubuntu-16.04``). You may delete or comment out some of the tests in the matrix if you do not want to test certain versions of PHP or MySQL or MariaDB.
 
-    # Copy extension to a temp folder
-    mkdir ../../tmp
-    cp -R . ../../tmp
-    cd ../../
+* PostgreSQL Tests: The ``postgres-tests`` job runs PHPUnit tests in various versions of PostgreSQL. The PHP version is consistent throughout since the mysql-checks job is where we do most of our PHP environment checks. You may add additional checks to this matrix or you may either delete or comment out the entire ``postgres-tests`` job if you do not intend to test PostgreSQL.
 
-    # Clone phpBB
-    git clone --depth=1 "git://github.com/phpbb/phpbb.git" "phpBB3" --branch="$BRANCH"
+* MSSQL, SQLite: The ``other-tests`` job runs PHPUnit tests in various versions of MSSQL and SQLite3. You may either delete or comment out the MSSQL or SQLite3 checks in the matrix if you do not want to test on either of those databases, or delete or comment out the entire ``other-tests`` job if you do not intend to test any of these databases.
 
-.. note::
-
-    The prepare-phpbb.sh file needs to have executable permissions or Travis CI
-    tests will fail. You can set the correct permission for this file from a
-    terminal command line interface, e.g.
-
-    .. code-block:: bash
-
-        $ cd path/to/your/extension
-        $ git update-index --chmod=+x travis/prepare-phpbb.sh
-
-Enable Travis CI on GitHub
---------------------------
-
-As a final step you need to enable Travis CI in your GitHub repository.
-
-    1. Go to `<https://travis-ci.org>`_ and sign in with your Github account.
-    2. If you have not yet signed up with Travis CI, you will be directed to Github where you will need to accept the Authorization of Travis CI.
-    3. Click on your Travis CI profile picture in the top right of your Travis Dashboard, click Settings and then the green Activate button, and select the repositories you want to use with Travis CI.
-    4. Now when you push commits to your repo, or pull requests are created, your tests should automatically run.
-
-Now when you commit and push the travis files you created to the ``master``
-branch of your repository, the unit, database and functional tests will be executed.
-All future commits pushed to your repository, including Pull Requests, will trigger
-your tests to execute.
+Final Thoughts on Extension Testing
+-----------------------------------
 
 Well written tests help prevent regressions (breaking other parts of your code)
 by alerting you to any problems resulting from changes to your code while fixing bugs,
 adding new features and other code changes to your extension.
 
 If your tests fail after committing changes, you will receive a notification email
-from Travis CI. The error logs from Travis CI can be a little daunting at first,
-but once you get used to them they can help you pinpoint unforeseen bugs and regressions
-in your code that must be fixed.
+from GitHub. The logs from your Github Actions can be a little daunting at first,
+but once you get used to reading them they can help you pinpoint unforeseen bugs
+and regressions in your code that must be fixed.
 
-Travis CI also provides Build Status badges. They provide you the code in markdown
-format so you can add the badge to your repository's README so visitors can see that
-the build status of your extension.
+Github Actions also provides Build Status badges. They provide you the code in markdown
+format so you can add the badge to your repository's README so visitors can see
+the build status of your extension. For example (Just change ``GITHUB-USERNAME/REPO-NAME``
+to your repository):
+
+    .. code-block:: text
+
+    [![Build Status](https://github.com/GITHUB-USERNAME/REPO-NAME/workflows/Tests/badge.svg)](https://github.com/GITHUB-USERNAME/REPO-NAME/actions)

@@ -399,7 +399,7 @@ are referencing the interface, you are not required to extend the original class
 and should instead implement the interface.
 
 .. warning::
-  If you are using EPV in travis, or during submission to the extensions database
+  If you are using EPV in a Github repository, or during submission to the extensions database
   at phpBB.com, you will receive a warning that your service configuration
   doesn't follow the extensions database policies. As you are overwriting a core
   service, you can simply ignore this message. However, in all cases you should
