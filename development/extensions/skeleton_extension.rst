@@ -730,6 +730,40 @@ functional tests:
     │   └── ...
     └── ...
 
+Github Actions CI configuration
+-------------------------------
+
+Github Actions is a platform for running your PHPUnit tests on a GitHub
+repository.
+
+The Skeleton Extension will generate the basic workflow script file
+needed to test your phpBB extension with each commit and pull request
+pushed to your GitHub repository:
+
+::
+
+    vendor
+    ├── package
+    │   ├── .github            # A hidden directory to contain Github related files
+    │   │   ├── workflows      # A directory to contain any test scripts
+    │   |   |   ├── tests.yml  # The test configuration script in YAML format
+    │   │   │   └── ...
+    │   │   └── ...
+    │   └── ...
+    └── ...
+
+.. warning::
+
+    The ``.github`` directory is a hidden folder. You can view and access it
+    using a Text Editor or IDE that is capable of displaying hidden folders.
+
+.. note::
+
+    The Skeleton Extension currently does not allow you to generate
+    the Github Actions CI component without also generating the PHPUnit tests
+    component. This is because without unit tests, there is little
+    benefit to using Github Actions.
+
 Travis CI configuration
 -----------------------
 
