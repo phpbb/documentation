@@ -10,7 +10,7 @@ This tutorial explains:
  * `Unit tests`_
  * `Unit tests with database interaction`_
  * `Functional testing`_
- * `Continuous integration with Travis CI`_
+ * `Continuous integration with Github Actions`_
 
 .. warning::
 
