@@ -76,8 +76,6 @@ The default inspection settings should work just fine. However there are a coupl
 
 .. note:: phpBB uses jQuery. The Javascript inspections need to be made aware of jQuery to avoid any false warnings/errors. To do this, simply go to **Languages & Frameworks > JavaScript > Libraries** and enable jQuery. If jQuery is not in the list, you can use the "Download" button to download a copy of jQuery to PhpStorm.
 
-.. seealso:: For your convenience we have provided an XML export of the above code inspection settings for phpBB (see `phpBB Inspection Profile`_). You can import these settings into your project and all the above inspection settings will be configured for you.
-
 Plugins
 =======
 
@@ -119,31 +117,24 @@ To set up PHPunit within PhpStorm, go to:
 PhpStorm Setting Exports for phpBB
 ==================================
 
-Copy and save these code blocks as XML files, and they can be imported into PhpStorm's settings to automatically set up most of the configuration recommendations mentioned in this documentation for phpBB.
+What follows is the code style we recommend for your phpBB project in PhpStorm. Copy and save this code block as ``phpbb.xml``. Then in PhpStorm, go to **Settings > Editor > Code Style**. Click the setting cog icon next to **Scheme** and choose **Import Scheme...** and import the ``phpbb.xml`` file.
 
 phpBB Code Style Scheme
 #######################
 
 .. code-block:: xml
 
-    <code_scheme name="phpBB">
+    <code_scheme name="phpBB" version="173">
       <option name="OTHER_INDENT_OPTIONS">
         <value>
-          <option name="INDENT_SIZE" value="4" />
-          <option name="CONTINUATION_INDENT_SIZE" value="8" />
-          <option name="TAB_SIZE" value="4" />
           <option name="USE_TAB_CHARACTER" value="true" />
-          <option name="SMART_TABS" value="false" />
-          <option name="LABEL_INDENT_SIZE" value="0" />
-          <option name="LABEL_INDENT_ABSOLUTE" value="false" />
-          <option name="USE_RELATIVE_INDENTS" value="false" />
         </value>
       </option>
-      <option name="HTML_TEXT_WRAP" value="0" />
       <CssCodeStyleSettings>
-        <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
+        <option name="HEX_COLOR_LOWER_CASE" value="true" />
+        <option name="HEX_COLOR_LONG_FORMAT" value="true" />
       </CssCodeStyleSettings>
-      <JSCodeStyleSettings>
+      <JSCodeStyleSettings version="0">
         <option name="SPACE_BEFORE_FUNCTION_LEFT_PARENTH" value="false" />
       </JSCodeStyleSettings>
       <PHPCodeStyleSettings>
@@ -203,18 +194,3 @@ phpBB Code Style Scheme
         </indentOptions>
       </codeStyleSettings>
     </code_scheme>
-
-phpBB Inspection Profile
-########################
-
-.. code-block:: xml
-
-    <?xml version="1.0" encoding="UTF-8"?>
-    <inspections version="1.0" is_locked="false">
-      <option name="myName" value="phpBB" />
-      <option name="myLocal" value="false" />
-      <inspection_tool class="JSHint" enabled="true" level="ERROR" enabled_by_default="true" />
-      <inspection_tool class="PhpUnnecessaryFullyQualifiedNameInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
-      <inspection_tool class="SqlDialectInspection" enabled="false" level="WARNING" enabled_by_default="false" />
-      <inspection_tool class="SqlNoDataSourceInspection" enabled="false" level="WARNING" enabled_by_default="false" />
-    </inspections>
