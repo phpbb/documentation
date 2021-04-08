@@ -18,4 +18,8 @@ Welcome to phpBB's extension development tutorial and documentation.
    tutorial_bbcodes
    tutorial_advanced
    tutorial_testing
-   *
+   modification_to_extension
+   new_in_rhea
+   new_in_proteus
+   skeleton_extension
+   events_list
