@@ -10,6 +10,10 @@
     max-width: none; /* use max-width: 800px for button navigation, not content */
 }
 
+.wy-table-responsive {
+    float: left;
+}
+
 .wy-table-responsive table td,
 .wy-table-responsive table th {
     white-space: normal;
@@ -17,4 +21,8 @@
 
 .rst-footer-buttons {
     max-width: 800px;
+}
+
+table.docutils td>p:nth-last-child(n+1) {
+    margin-top: 0.5rem;
 }

@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'phpBB'
-copyright = u'2015 - 2019, phpBB Limited'
+copyright = u'2015 - 2021, phpBB Limited'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -127,6 +127,13 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # Additional CSS files to include
 html_css_files = [
     'css/phpbb.css',
+    'css/jquery.dataTables.min.css',
+]
+
+# Additional JS files to include
+html_js_files = [
+    'js/jquery.dataTables.min.js',
+    'js/main.js'
 ]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
