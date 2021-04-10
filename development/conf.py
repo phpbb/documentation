@@ -33,7 +33,8 @@ extensions = [
     'sensio.sphinx.configurationblock',
     'sensio.sphinx.phpcode',
     'sensio.sphinx.bestpractice',
-    'sphinxcontrib.phpdomain'
+    'sphinxcontrib.phpdomain',
+    'sphinx_multiversion'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -99,6 +100,10 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
+# Options for sphinx_multiversion
+smv_tag_whitelist = 'None'
+smv_branch_whitelist = r'^(3.2.x|3.3.x|master)$'
+smv_latest_version = r"master"
 
 # -- Options for HTML output ----------------------------------------------
 import sphinx_rtd_theme
@@ -123,6 +128,11 @@ html_context = dict(
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+# Additional CSS files to include
+html_css_files = [
+    'css/phpbb.css',
+]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -159,7 +169,11 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'versioning.html',
+    ],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.

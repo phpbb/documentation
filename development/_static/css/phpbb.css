@@ -1,0 +1,24 @@
+.wy-side-nav-search {
+    background-color: #009BDF;
+}
+
+.wy-side-nav-search>div.version {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.wy-nav-content {
+    max-width: none; /* use max-width: 800px for button navigation, not content */
+}
+
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal;
+}
+
+.rst-footer-buttons {
+    max-width: 800px;
+}
+
+.rst-versions.shift-up  {
+    overflow: auto;
+}
