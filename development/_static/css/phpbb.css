@@ -11,7 +11,7 @@
 }
 
 .wy-table-responsive {
-    float: left;
+    width: 100%;
 }
 
 .wy-table-responsive table td,
