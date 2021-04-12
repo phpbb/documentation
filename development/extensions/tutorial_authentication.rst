@@ -15,16 +15,14 @@ This tutorial explains:
 
 Authentication Providers
 ========================
-phpBB 3.1 supports external authentication plugins that may be used in place of the
+phpBB 3.1 introduced support for external authentication plugins that may be used in place of the
 built-in authentication providers. Only one provider may currently be active at a
 time and the active one is chosen from the ACP.
 
 Creating an Authentication Provider
 -----------------------------------
-An authentication provider that comes with phpBB requires a minimum of two files:
-a class and an entry in a ``config/auth.yml`` file. Authentication providers that
-are part of an extension must provide their own YAML file defining the
-service in addition to all normal requirements of an extension.
+Authentication providers in phpBB require a minimum of two files: a PHP class
+and a YAML service file.
 
 The class file
 ++++++++++++++
