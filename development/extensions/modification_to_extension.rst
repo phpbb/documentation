@@ -764,7 +764,7 @@ to our extensions directory and add our html code into it.
 
 .. code-block:: html
 
-     <li class="icon-newspage"><a href="{U_NEWSPAGE}">{L_NEWSPAGE}</a></li>
+     <li class="icon-newspage"><a href="{{ U_NEWSPAGE }}">{{ lang('NEWSPAGE') }}</a></li>
 
 And that's it. No file edits required for the template files as well.
 

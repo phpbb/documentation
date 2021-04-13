@@ -79,9 +79,9 @@ to extend the template of an extension, so other
 extensions can manipulate the output of your extension. To create a template event you simply add
 the EVENT tag to your template:
 
-.. code-block:: html
+.. code-block:: twig
 
-  <!-- EVENT acme_demo_identifier -->
+  {% EVENT acme_demo_identifier %}
 
 The event can be used in the same way as the template events in the phpBB Core.
 See :doc:`tutorial_events` on how to use these events.
@@ -93,13 +93,6 @@ Make sure to only use underscores, numbers and lowercase letters.
   Like with PHP events you should not change the identifier of the event after
   a release of your extension. Other extensions might already be using your event
   and would risk breaking.
-
-.. tip::
-  If you prefer Twig instead of the phpBB template syntax, you can use:
-
-  .. code-block:: html
-
-    {% EVENT acme_demo_identifier %}
 
 .. caution::
   It is not recommended to reuse existing event names in different locations.
