@@ -200,32 +200,32 @@ We will use ``ext/acme/demo/adm/style/acp_demo_body.html``.
 
 .. code-block::
 
-    <!-- INCLUDE overall_header.html -->
+    {% INCLUDE 'overall_header.html' %}
 
-    <h1>{L_SETTINGS}</h1>
+    <h1>{{ lang('SETTINGS') }}</h1>
 
-    <form id="acp_board" method="post" action="{U_ACTION}">
+    <form id="acp_board" method="post" action="{{ U_ACTION }}">
         <fieldset>
             <dl>
-                <dt><label for="acme_demo_goodbye">{L_ACP_DEMO_GOODBYE}</label></dt>
-                <dd><input type="radio" class="radio" name="acme_demo_goodbye" value="1" <!-- IF ACME_DEMO_GOODBYE -->checked="checked" <!-- ENDIF -->/> {L_YES} &nbsp;
-                    <input type="radio" class="radio" name="acme_demo_goodbye" value="0" <!-- IF not ACME_DEMO_GOODBYE -->checked="checked" <!-- ENDIF -->/> {L_NO}</dd>
+                <dt><label for="acme_demo_goodbye">{{ lang('ACP_DEMO_GOODBYE') }}</label></dt>
+                <dd><input type="radio" class="radio" name="acme_demo_goodbye" value="1" {% if ACME_DEMO_GOODBYE %}checked="checked" {% endif %}/> {{ lang('YES') }} &nbsp;
+                    <input type="radio" class="radio" name="acme_demo_goodbye" value="0" {% if not ACME_DEMO_GOODBYE %}checked="checked" {% endif %}/> {{ lang('NO') }}</dd>
             </dl>
 
             <p class="submit-buttons">
-                <input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
-                <input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
+                <input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+                <input class="button2" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
             </p>
 
-            {S_FORM_TOKEN}
+            {{ S_FORM_TOKEN }}
         </fieldset>
     </form>
 
-    <!-- INCLUDE overall_footer.html -->
+    {% INCLUDE 'overall_footer.html' %}
 
 This template renders out a form with a single option for toggling the
 *acme_demo_goodbye* setting via two radio buttons, and two input buttons
-to submit or reset the form. Note that the ``{S_FORM_TOKEN}`` template
+to submit or reset the form. Note that the ``{{ S_FORM_TOKEN }}`` template
 variable is required as part of the `form key`_ security check.
 
 Module language keys
