@@ -188,11 +188,11 @@ with the following content including the phpBB header and footer:
 
 .. code-block:: html
 
-    <!-- INCLUDE overall_header.html -->
+    {% include 'overall_header.html' %}
 
-    <h2>{DEMO_MESSAGE}</h2>
+    <h2>{{ DEMO_MESSAGE }}</h2>
 
-    <!-- INCLUDE overall_footer.html -->
+    {% include 'overall_footer.html' %}
 
 .. note::
 

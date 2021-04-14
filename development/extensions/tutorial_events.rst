@@ -26,7 +26,7 @@ multiple useful injection points. A typical template event looks like:
 
 ::
 
-    <!-- EVENT event_name_and_position -->
+    {% EVENT event_name_and_position %}
 
 .. seealso::
 
@@ -66,8 +66,8 @@ simple list element, with a link and a description:
 .. code-block:: html
 
     <li class="small-icon icon-faq no-bulletin">
-        <a href="{U_DEMO_PAGE}">
-            {L_DEMO_PAGE}
+        <a href="{{ U_DEMO_PAGE }}">
+            {{ lang('DEMO_PAGE') }}
         </a>
     </li>
 

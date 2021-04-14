@@ -137,10 +137,10 @@ For example, the sample below is based on existing LDAP terms used to configure 
 .. code-block:: html
 
     <fieldset id="auth_test_settings">
-        <legend>{TEST}</legend>
+        <legend>{{ TEST }}</legend>
         <dl>
-            <dt><label for="https_server">{TEST_SERVER}{L_COLON}</label><br /><span>{TEST_SERVER_EXPLAIN}</span></dt>
-            <dd><input type="text" id="https_server" size="40" name="config[https_server]" value="{AUTH_HTTPS_SERVER}" /></dd>
+            <dt><label for="https_server">{{ TEST_SERVER ~ lang('COLON') }}</label><br /><span>{{ TEST_SERVER_EXPLAIN }}</span></dt>
+            <dd><input type="text" id="https_server" size="40" name="config[https_server]" value="{{ AUTH_HTTPS_SERVER }}" /></dd>
         </dl>
     </fieldset>
 

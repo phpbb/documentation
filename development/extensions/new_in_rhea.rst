@@ -367,7 +367,7 @@ If you are already using Twig template syntax, and you have been using loop stru
 
 .. code-block:: twig
 
-    # phpBB 3.1 and 3.2 compatible
+    {# phpBB 3.1 and 3.2 compatible #}
     {% for item in loops.items %}
        item.MY_VAR
     {% endfor %}
@@ -376,7 +376,7 @@ As of phpBB 3.2, this requirement has been removed, allowing you to use natural 
 
 .. code-block:: twig
 
-    # phpBB 3.2 or later only
+    {# phpBB 3.2 or later only #}
     {% for item in items %}
        item.MY_VAR
     {% endfor %}
