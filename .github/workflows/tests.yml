@@ -25,6 +25,7 @@ jobs:
           pip install sphinx
           pip install sphinx_rtd_theme
           pip install sphinxcontrib-phpdomain
+          pip install sphinx-multiversion
           pip install git+https://github.com/marc1706/sphinx-php.git
       - name: Test make html
         run: |
