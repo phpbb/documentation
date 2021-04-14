@@ -268,15 +268,15 @@ Javascript and CSS files
 
 Javascript and CSS files can be stored anywhere inside your extension. However, the most common locations are
 within your style folders. Adding these scripts to your extension's templates can be conveniently handled using
-phpBB's ``<!-- INCLUDECSS -->`` and ``<!-- INCLUDEJS -->`` template syntax.
+phpBB's ``{% INCLUDECSS %}`` and ``{% INCLUDEJS %}`` template syntax.
 
 The format for these INCLUDE tags takes the following form:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- INCLUDECSS @vendor_extname/scriptname.css -->
+    {% INCLUDECSS '@vendor_extname/scriptname.css' %}
 
-    <!-- INCLUDEJS @vendor_extname/scriptname.js -->
+    {% INCLUDEJS '@vendor_extname/scriptname.js' %}
 
 The INCLUDECSS tag will look in the extension's style **theme** folder for the named file, based on the current style
 of the user, or the all style folder if one exists. The INCLUDECSS tag will automatically generate a ``<link>``
@@ -292,15 +292,15 @@ for the supplied JS file in the footer of the HTML document.
 
 When including JavaScript/CSS libraries and frameworks such as jQuery-UI or Font Awesome, the potential
 for resource overlap between extensions can be mitigated using a simple work-around endorsed by the phpBB
-Extensions Team. Using the the ``<!-- DEFINE -->`` tag you should test if the script your extension wants to include
+Extensions Team. Using the the ``{% DEFINE %}`` tag you should test if the script your extension wants to include
 is already defined, and if not, then include your script and define the script. For example:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF not $INCLUDED_JQUERYUIJS -->
-        <!-- INCLUDEJS @vendor_extname/jquery-ui.js -->
-        <!-- DEFINE $INCLUDED_JQUERYUIJS = true -->
-    <!-- ENDIF -->
+    {% if not $INCLUDED_JQUERYUIJS %}
+        {% INCLUDEJS '@vendor_extname/jquery-ui.js' %}
+        {% DEFINE $INCLUDED_JQUERYUIJS = true %}
+    {% endif %}
 
 Some example template variable definitions to use with common libraries (the common practice should be to name
 the variable definition after the library filename, e.g. highslide.js becomes HIGHSLIDEJS):
