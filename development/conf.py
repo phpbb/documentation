@@ -33,7 +33,9 @@ extensions = [
     'sensio.sphinx.configurationblock',
     'sensio.sphinx.phpcode',
     'sensio.sphinx.bestpractice',
-    'sphinxcontrib.phpdomain'
+    'sphinxcontrib.phpdomain',
+    'sphinx_multiversion',
+    'sphinx_rtd_theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -91,7 +93,7 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'monokai'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
@@ -99,6 +101,10 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
 
+# Options for sphinx_multiversion
+smv_tag_whitelist = 'None'
+smv_branch_whitelist = r'^(3.2.x|3.3.x|master)$'
+smv_latest_version = r"master"
 
 # -- Options for HTML output ----------------------------------------------
 import sphinx_rtd_theme

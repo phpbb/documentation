@@ -26,3 +26,7 @@
 table.docutils td>p:nth-last-child(n+1) {
     margin-top: 0.5rem;
 }
+
+.rst-versions.shift-up  {
+    overflow: auto;
+}
