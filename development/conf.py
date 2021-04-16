@@ -123,7 +123,7 @@ html_context = dict(
     display_github=True,
     github_repo='documentation',
     github_user='phpbb',
-    github_version=version + ".x",
+    github_version=release,
     source_suffix='.rst',
 )
 
