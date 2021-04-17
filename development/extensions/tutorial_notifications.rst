@@ -490,7 +490,7 @@ It should return an array with the user identifiers as keys and the notification
 There are various helper functions that help you achieve the desired outcome.
 
 check_user_notification_options
-+++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You can send an array of user identifiers to this function.
 It will then check the available notification methods for each user.
 If the notification type is available in the :abbr:`UCP (User Control Panel)`, it will check the user's preferences.
@@ -498,7 +498,7 @@ Otherwise it will use the default notification methods; the board method and the
 The array that is returned by this function can be used as a return value for find_users_for_notification_.
 
 get_authorised_recipients
-+++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^
 If your notification is for an event within a specific forum, you might want to check the users' authentication.
 This can be done using this function, which will check all users' ``f_read`` permission for the provided ``forum_id``.
 The array that is returned by this function is already put through check_user_notification_options_.
@@ -1082,7 +1082,7 @@ mark_notifications
 ------------------
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -1098,7 +1098,7 @@ mark_notifications_by_parent
 ----------------------------
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -1119,7 +1119,7 @@ However, there can be times where it is more convenient or accurate to work dire
 For example, when the notifications are listed in the :abbr:`UCP (User Control Panel)` and a user can select specific notifications to be marked as read.
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
