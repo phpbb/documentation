@@ -1034,8 +1034,11 @@ such as when an action occurs that would make your notification irrelevant.
 
 This function is very simple to use, and requires only a few basic parameters:
 
+delete_notifications
+--------------------
+
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
