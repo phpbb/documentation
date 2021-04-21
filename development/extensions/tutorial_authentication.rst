@@ -27,7 +27,7 @@ are part of an extension must provide their own YAML file defining the
 service in addition to all normal requirements of an extension.
 
 The class file
-++++++++++++++
+^^^^^^^^^^^^^^
 The provider class must implement the ``\phpbb\auth\provider\provider_interface`` in order to
 ensure proper functionality. However, it is recommended to extend
 ``\phpbb\auth\provider\base`` so as to not implement unneeded methods and to ensure
@@ -107,7 +107,7 @@ authentication provider class is show below:
     }
 
 The service file
-++++++++++++++++
+^^^^^^^^^^^^^^^^
 For proper `dependency injection <https://wiki.phpbb.com/Dependency_Injection_Container>`_
 the provider must be added to ``services.yml``. The name of the service 
 must be in the form of ``auth.provider.<service name>`` in order for phpBB to register it.
@@ -126,7 +126,7 @@ for the class to be made available in phpBB.
                 - { name: auth.provider }
 
 The template file
-+++++++++++++++++
+^^^^^^^^^^^^^^^^^
 Following the above steps renders the authentication provider visible in the ACP.
 However, to allow an admin to configure your plugin the available fields need to
 be created in order to reach the configuration from the php-auth-provider plugin.
@@ -171,7 +171,7 @@ phpBB. They are copies of the bitly service implementation from phpBB3's
 develop branch.
 
 The Class file
-++++++++++++++
+^^^^^^^^^^^^^^
 .. code-block:: php
 
     <?php
@@ -270,7 +270,7 @@ The Class file
     }
 
 The Service File
-++++++++++++++++
+^^^^^^^^^^^^^^^^
 
 In the service file, the name of the service must be in the form of
 ``auth.provider.oauth.service.<service name>`` in order for phpBB to

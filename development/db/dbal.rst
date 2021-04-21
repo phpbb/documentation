@@ -50,7 +50,7 @@ Example using :class:`config.php`:
     unset($dbpasswd);
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Usage"
@@ -116,7 +116,7 @@ Example:
     $result = $db->sql_query($sql);
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: #
@@ -156,7 +156,7 @@ Example:
     $db->sql_query($sql);
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: #
@@ -180,7 +180,7 @@ Example:
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: |
@@ -205,7 +205,7 @@ Example:
     		AND post_text = '" . $db->sql_escape($string) . "'";
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: |
@@ -221,7 +221,7 @@ Defined in the base driver (``_sql_like_expression`` is defined in the specific 
 The ``sql_not_like_expression`` is identical to ``sql_like_expression`` apart from that it builds a NOT LIKE statement.
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: |
@@ -229,11 +229,11 @@ Parameters
    Expression | The expression to use. Every wildcard is escaped, except $db->get_any_char() and $db->get_one_char()
 
 get_one_char
-++++++++++++
+^^^^^^^^^^^^
 Wildcards for matching exactly one (``_``) character within LIKE expressions.
 
 get_any_char
-++++++++++++
+^^^^^^^^^^^^
 Wildcards for matching any (``%``) character within LIKE expressions
 
 Example:
@@ -267,7 +267,7 @@ Example:
     $result = $db->sql_query_limit($sql, 10);
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: |
@@ -296,7 +296,7 @@ Example:
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: |
@@ -321,7 +321,7 @@ Example:
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: |
@@ -357,7 +357,7 @@ Example:
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: |
@@ -418,7 +418,7 @@ Example:
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: #
@@ -433,7 +433,7 @@ Returns an array with the result of using the ``sql_fetchrow`` method on every r
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: #
@@ -471,7 +471,7 @@ Example with a while-loop:
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: #
@@ -484,7 +484,7 @@ Seeks to given row number. The row number is zero-based. Defined in the specific
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: #
@@ -514,7 +514,7 @@ Example:
 
 
 Parameters
-++++++++++
+^^^^^^^^^^
 .. csv-table::
    :header: "Parameter", "Usage"
    :delim: #
