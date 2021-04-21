@@ -10,6 +10,10 @@
     max-width: none; /* use max-width: 800px for button navigation, not content */
 }
 
+.wy-table-responsive {
+    clear: both;
+}
+
 .wy-table-responsive table {
     width: 100%;
 }
