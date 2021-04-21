@@ -22,7 +22,7 @@ phpBB Repository
 ----------------
 
 Forking and Cloning
-+++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^
 To contribute to phpBB development, you should sign up for a
 `GitHub <https://github.com>`_ user account if you don't already have one.
 
@@ -35,7 +35,7 @@ Clone your fork of phpBB's repository to your computer:
 See `Set Up Git <https://help.github.com/articles/set-up-git>`_ for help on setting up Git.
 
 Branches
-++++++++
+^^^^^^^^
 - `master <http://github.com/phpbb/phpbb/tree/master>`_ - The latest unstable development version with new features etc.
 - `3.3.x <http://github.com/phpbb/phpbb/tree/3.3.x>`_ - Development branch of the 3.3 line. Bug fixes and minor feature changes are applied here.
 - `3.2.x <http://github.com/phpbb/phpbb/tree/3.2.x>`_ - Development branch of the 3.2 line. Bug fixes and minor feature changes are applied here.
@@ -44,7 +44,7 @@ Branches
 - `2.0.x <http://github.com/phpbb/phpbb/tree/2.0.x>`_ - Development branch of the deprecated 2.0 line.
 
 Tags
-++++
+^^^^
 Tags are released versions. Stable ones get merged into the master branch.
 
 - release-3.Y.Z-aX - Alpha release X of the 3.Y.Z line.
@@ -58,7 +58,7 @@ will be merged into higher branches, including master. All feature development
 should take place in master. Read more about the workflow in the next section.
 
 How to contribute?
-++++++++++++++++++
+^^^^^^^^^^^^^^^^^^
 When fixing a bug, please post in the `bug tracker <https://tracker.phpbb.com>`__.
 When adding a feature to 3.x post your patch for review in a new topic on the
 `[3.x] Discussion forum <https://area51.phpbb.com/phpBB/viewforum.php?f=81>`__ at
@@ -139,7 +139,7 @@ Review `Forking and Cloning`_.
 Configuration
 -------------
 Git
-+++
+^^^
 Add your Username to Git on your system:
 
 ::
@@ -163,7 +163,7 @@ Add the upstream remote (you can change 'upstream' to whatever you like):
     fork of the phpBB GitHub repo will, by default, use the *origin* remote url.
 
 Composer
-++++++++
+^^^^^^^^
 To be able to run an installation from the repo (and not from a pre-built package) you
 need to run the following shell commands to install phpBB's dependencies.
 
@@ -180,7 +180,7 @@ Ignore any *abandoned package* warnings.
     further information.
 
 Hooks
-+++++
+^^^^^
 The phpBB repository contains some client-side hooks that can aid development. They are
 located in the ``git-tools/hooks`` directory. These hooks do things like preparing and
 validating commit messages, checking for PHP syntax errors. There is a script to set
@@ -214,7 +214,7 @@ Workflow
 ---------
 
 Pulling in upstream changes
-+++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You will need to merge in changes made to the upstream repository for them to appear in
 your fork, the steps to do this follow. We're assuming you are performing this on the **master**
 branch, but it could be a bug fix branch or a develop release branch, so ensure you are on
@@ -236,7 +236,7 @@ different branches this section refers to later.
 .. image:: images/Phpbb-git-workflow.png
 
 Bug fixing
-++++++++++
+^^^^^^^^^^
 Ensure you are using the correct develop branch (e.g. *3.2.x*) first and not the *master*
 branch. In this example we are using 3.2.x.
 
@@ -252,7 +252,7 @@ branch. In this example we are using 3.2.x.
     git push origin ticket/12345 # Push the branch back to GitHub
 
 Starting a new feature
-++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^
 Ensure you are using the correct develop branch (e.g. *master*) first.  In this example
 we are using master.
 
@@ -267,7 +267,7 @@ we are using master.
     git push origin feature/my-fancy-new-feature # Push the branch back to GitHub
 
 Collaborating with other developers on a feature
-++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 You have pushed a new feature to GitHub and another developer has worked on it. This is
 how you can integrate their changes into your own feature branch.
 
@@ -281,7 +281,7 @@ how you can integrate their changes into your own feature branch.
     git push origin feature/my-fancy-new-feature # Push the branch back to GitHub
 
 Merging a feature or bugfix branch
-++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Once a feature or bug-fix is complete it can be merged back into the master branch. To preserve
 history we never fast-forward such merges. In this example we will merge the bug-fix created
 earlier into 3.2.x. We then merge the changes into 3.3.x and then merge 3.3.x into master
@@ -300,7 +300,7 @@ to keep these branches up to date.
 Additionally the merge.log config setting of Git is set to true, producing a summary of merged commits.
 
 Merging into phpBB repository
-+++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 This *only* applies to Development Team Members. The following steps should be taken when
 merging a topic branch into the phpBB repository.
 

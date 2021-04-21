@@ -29,7 +29,7 @@ Database changes
 ----------------
 
 Schema changes
-++++++++++++++
+^^^^^^^^^^^^^^
 
 The ``update_schema()`` method is for facilitating schema changes,
 such as adding new tables, columns, keys and indexes.
@@ -42,7 +42,7 @@ We recommend putting schema changes in their own migration.
 Learn more: :doc:`../migrations/schema_changes`.
 
 Data changes
-++++++++++++
+^^^^^^^^^^^^
 
 The ``update_data()`` method is for inserting, updating and dropping
 field data.
@@ -81,7 +81,7 @@ Migration dependencies
 ----------------------
 
 depends_on()
-++++++++++++
+^^^^^^^^^^^^
 
 The ``depends_on()`` method is used to define a migration's dependencies.
 Dependencies tell the migrator what order migrations must be installed in.
@@ -89,7 +89,7 @@ Dependencies tell the migrator what order migrations must be installed in.
 Learn more: :doc:`../migrations/dependencies`.
 
 effectively_installed()
-+++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``effectively_installed()`` method is used primarily to help transition
 from a previous database installer method (such as a MOD that used UMIL)

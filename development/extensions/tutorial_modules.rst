@@ -229,7 +229,7 @@ to submit or reset the form. Note that the ``{{ S_FORM_TOKEN }}`` template
 variable is required as part of the `form key`_ security check.
 
 Module language keys
-++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^
 
 Between our module class and template files, we have added some new language keys.
 We can add them to our language array in ``acme/demo/language/en/demo.php``:
