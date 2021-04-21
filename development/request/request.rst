@@ -89,7 +89,7 @@ If no super global is specified, it will default to the ``REQUEST`` super global
    $session = $request->variable('user_sid', \phpbb\request\request_interface::COOKIE);
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -116,7 +116,7 @@ This is a short hand for ``$request->variable('variable', \phpbb\request\request
    }
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -203,7 +203,7 @@ The nesting increased with each value provided.
     */
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -234,7 +234,7 @@ So for ``<input name="attachment" type="file">`` the variable name is ``attachme
    }
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -263,7 +263,7 @@ This function is a shortcut to retrieve the value of the client's HTTP headers.
    }
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -289,7 +289,7 @@ It also provides a fallback to ``getenv()`` as some CGI setups may need it.
    $server_port = $request->server('SERVER_PORT', 0);
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -329,7 +329,7 @@ Changes which are performed on the super globals directly will **not** have any 
    }
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -376,7 +376,7 @@ It will then return all the names *(keys)* that exist for that super global.
    return $hidden;
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
@@ -414,7 +414,7 @@ It will then return the original array with all the variables for that super glo
    }
 
 Parameters
-++++++++++
+^^^^^^^^^^
 
 .. csv-table::
    :header: "Parameter", "Description"
