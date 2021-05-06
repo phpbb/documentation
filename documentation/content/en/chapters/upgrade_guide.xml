@@ -262,7 +262,7 @@
 		<orderedlist>
 			<listitem><para><xref linkend="update_full" /></para><para>If you have made no modifications to core files, this is the easiest approach.</para></listitem>
 			<listitem><para><xref linkend="update_changed" /></para><para>If you wish to only update the files that have changed between two releases, use this approach.</para></listitem>
-			<listitem><para><xref linkend="update_automatic" /></para><para>If you have made modifications to core files and do not want to manually re-apply them, use this approach.</para></listitem>
+			<listitem><para><xref linkend="update_advanced" /></para><para>If you have made modifications to core files and do not want to manually re-apply them, use this approach.</para></listitem>
 			<listitem><para><xref linkend="update_patch" /></para><para>For those comfortable using the <command>patch</command> utility, patch files are available.</para></listitem>
 		</orderedlist>
 
@@ -386,7 +386,7 @@
 			</orderedlist>
 		</section>
 
-		<section id="update_automatic">
+		<section id="update_advanced">
 			<sectioninfo>
 				<authorgroup>
 					<author>
@@ -394,15 +394,15 @@
 					</author>
 				</authorgroup>
 			</sectioninfo>
-			<title>Automatic Update</title>
+			<title>Advanced Update</title>
 			<para>This update method is only recommended for installations with modifications to core phpBB files. This package detects changed files automatically and merges in changes if needed.</para>
-			<para>A number of automatic update files are available, and you should choose the one that corresponds to the version of the board that you are currently running. For example, if your current version is 3.3.0 and you are updating to 3.3.1, you need the phpBB-3.3.0_to_3.3.1.zip/tar.bz2 file.</para>
+			<para>A number of advanced update files are available, and you should choose the one that corresponds to the version of the board that you are currently running. For example, if your current version is 3.3.0 and you are updating to 3.3.1, you need the phpBB-3.3.0_to_3.3.1.zip/tar.bz2 file.</para>
 			<orderedlist>
 				<listitem><para><emphasis role="bold">Make a backup of the original files</emphasis></para></listitem>
 				<listitem><para><emphasis role="bold">Make a backup of the database</emphasis></para></listitem>
 				<listitem><para>Locally, perform for the following steps:</para>
 					<orderedlist>
-						<listitem><para>Download the phpBB 3.3 <ulink url="https://www.phpbb.com/downloads/3.3/update">Automatic Update</ulink> archive</para></listitem>
+						<listitem><para>Download the phpBB 3.3 <ulink url="https://www.phpbb.com/downloads/3.3/update">Advanced Update</ulink> archive</para></listitem>
 						<listitem><para>Extract the <filename class="directory">install/</filename> directory</para></listitem>
 						<listitem><para>Extract the <filename class="directory">vendor/</filename> directory</para></listitem>
 					</orderedlist>
