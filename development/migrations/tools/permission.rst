@@ -171,7 +171,7 @@ Example
 
 Role Exists
 ===========
-Check if a permission role exists before attempting to set/unset permissions on it
+Check if a permission role exists before attempting to set/unset permissions on it (introduced in phpBB 3.3.2)
 
 .. code-block:: php
 
