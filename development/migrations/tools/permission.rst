@@ -63,7 +63,7 @@ Add a new permission role
 
 .. code-block:: php
 
-    ['permission.role_add', [role name, role type (u_, m_, a_), role description ]],
+    ['permission.role_add', [role name, role type (u_, m_, a_), role description]],
 
 Example
 -------
@@ -86,7 +86,7 @@ Update a permission role
 
 .. code-block:: php
 
-    ['permission.role_update', [old role name, new role name ]],
+    ['permission.role_update', [old role name, new role name]],
 
 Example
 -------
@@ -166,5 +166,33 @@ Example
         return [
              ['permission.permission_unset', ['ROLE_ADMIN_FULL', 'a_new']], // Remove a_new permission from role ROLE_ADMIN_FULL
              ['permission.permission_unset', ['REGISTERED', 'u_new', 'group']], // Remove u_new permission from group REGISTERED
+        ];
+    }
+
+Role Exists
+===========
+Check if a permission role exists before attempting to set/unset permissions on it (introduced in phpBB 3.3.2)
+
+.. code-block:: php
+
+    ['permission.role_exists', [role name]],
+
+Example
+-------
+
+.. code-block:: php
+
+    public function update_data()
+    {
+        return [
+            ['if', [
+                ['permission.role_exists', ['ROLE_ADMIN_FULL']], // Check if ROLE_ADMIN_FULL exists before updating it
+                ['permission.permission_set', ['ROLE_ADMIN_FULL', 'a_new']], // Give ROLE_ADMIN_FULL a_new permission
+            ]],
+
+            ['if', [
+                ['permission.role_exists', ['ROLE_MOD_FULL']], // Check if ROLE_MOD_FULL exists before updating it
+                ['permission.permission_unset', ['ROLE_MOD_FULL', 'm_new']], // Remove m_new permission from role ROLE_MOD_FULL
+            ]],
         ];
     }
