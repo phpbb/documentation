@@ -6,6 +6,7 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   development/processes
    development/git
    development/coding_guidelines
    cli/index
