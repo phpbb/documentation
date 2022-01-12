@@ -58,7 +58,10 @@ quicker, and should also result in overall better code and features.
 Implementation & Review
 ^^^^^^^^^^^^^^^^^^^^^^^
 Implementation of a feature or its intermediate steps usually follows the acceptance by the *phpBB Development Team*.
-Please make sure that your code follows our `Coding Guidelines <coding_guidelines.html>`_.
+All code needs to follow our `Coding Guidelines <coding_guidelines.html>`_. The implementation itself can be done by
+the requester, a *phpBB Development Team* member, or any other developer. Feature acceptance by the
+*phpBB Development Team* does not mean that implementation of it is mandatory or that it will have to be implemented
+by the *phpBB Development Team* itself.
 
 When using external libraries, please make sure that they are compatible with our license. If you are unsure about
 whether a certain type of license is acceptable, please ask the *phpBB Development Team*.
@@ -67,7 +70,7 @@ PHP libraries **MUST** be installed with composer and should generally be consid
 Once the code is ready to be reviewed, a pull request should be created in our `GitHub repository <https://github.com/phpbb/phpbb/pulls>`_.
 Target versions should be picked in accordance with `Target Versions`_.
 
-Finalization / Feature Merge
+Finalisation / Feature Merge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 After the code has been reviewed by the *phpBB Development Team*, it is typically approved and merged. In case there are
 issues with the code, these should be resolved as part of the code review. It can however also make sense to create
@@ -81,7 +84,7 @@ Target Versions
 ---------------
 The appropriate target version for any given change or feature usually depends on the following attributes:
 
-- Type: Bugfix, behavioral change, or new feature
+- Type: Bugfix, behavioural change, or new feature
 - Size & complexity
 - Backwards compatibility (BC)
 
@@ -90,7 +93,7 @@ Based on these and the semantic versioning scheme these general rules should app
 - **PATCH** version releases:
     - Bug fixes without BC breaks
     - Security fixes incl. BC breaks
-    - Minor behavioral changes without BC breaks
+    - Minor behavioural changes without BC breaks
     - Minor new features without BC breaks
     - Updates to third parties without BC breaks
 
@@ -98,14 +101,13 @@ Based on these and the semantic versioning scheme these general rules should app
     Same as in **PATCH** version releases with addition of:
 
     - Bug fixes incl. BC breaks
-    - Major behavioral changes without BC breaks
+    - Major behavioural changes without BC breaks
     - Major new features without BC breaks
     - Updates to third parties without *significant* BC breaks
 
 - **MAJOR** version releases:
     Same as in **PATCH** and **MINOR** version releases with addition of:
 
-    - Major behavioral changes incl. BC breaks
+    - Major behavioural changes incl. BC breaks
     - Major new features incl. BC breaks
     - Updates to third parties incl. *significant* BC breaks,
-
