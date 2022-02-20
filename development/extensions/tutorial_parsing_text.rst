@@ -8,7 +8,7 @@ phpBB uses the following database fields where BBCode is allowed (forum descript
 
 - **foo** - Text itself
 - **foo_bbcode_uid** - a randomly generated unique identifier to mark the BBCodes and used for quicker parsing
-- **foo_bbcode_bitfield** - a `bit field <https://en.wikipedia.org/wiki/Bit_field>`_ containing the information which bbcode is used in the text so only the relevant ones need to be loaded from the database.
+- **foo_bbcode_bitfield** - a `bit field <https://en.wikipedia.org/wiki/Bit_field>`_ containing the information which bbcode is used in the text so only the relevant ones need to be loaded from the database. **NOTE: No longer used in posts generated in phpBB 3.2+**
 - **foo_options** - a bit field containing the information whether bbcode, smilies and magic urls are enabled (OPTION_FLAG_BBCODE, OPTION_FLAG_SMILIES and OPTION_FLAG_LINKS). Sometimes you will find this separated into enable_bbcode, enable_smilies and enable_magic_url
 
 Column names will vary, replace ``foo`` with the respective column name (e.g. ``text``, ``text_bbcode_uid``, ...).
