@@ -396,6 +396,7 @@
 			</sectioninfo>
 			<title>Advanced Update (Expert users)</title>
 			<para>This update method should only be used for installations with modifications to core phpBB files. If you simply use Extensions or custom Styles and have not modified core files, please use the Full Package update.</para>
+			<para>This update was renamed from Automatic Update to Advanced Update to more clearly state that it should only be used by advanced users.</para>
 			<para>This package detects changed files and merges in changes if needed. Since this type of update has a potential to cause issues while upgrading, it is not recommended being used for updates and/or upgrades.</para>
 			<para>A number of advanced update files are available, and you should choose the one that corresponds to the version of the board that you are currently running. For example, if your current version is 3.3.0 and you are updating to 3.3.1, you need the phpBB-3.3.0_to_3.3.1.zip/tar.bz2 file.</para>
 			<orderedlist>
