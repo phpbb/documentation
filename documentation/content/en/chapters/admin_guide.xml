@@ -685,7 +685,7 @@
 						<listitem><para><guilabel>Indexer memory limit</guilabel>: The amount of memory the search server is allowed to use. This value should be less than the maximum amount of available memory on the system.</para></listitem>
 						<listitem><para><guilabel>Sphinx config file</guilabel>: The generated output for your sphinx.conf file for the search server.</para></listitem>
 					</itemizedlist>
-					After submitting the form, a Sphinx search table will be created in the database. The search indexers must still be started manually before the indices are created. The exact commands needed to do that and more can be found on the wiki: <ulink url="https://wiki.phpbb.com/Sphinx_Fulltext_Search">Development Wiki: Sphinx Fulltext Search</ulink>.
+					After submitting the form, a Sphinx search table will be created in the database. The search indexers must still be started manually before the indices are created. The exact commands needed to do that and more can be found in the server guide: <link linkend="server_sphinx">Sphinx search configuration</link>.
 				</para>
 			</section>
 		</section>
