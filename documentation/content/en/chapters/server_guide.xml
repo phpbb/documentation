@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+        "https://www.docbook.org/xml/4.4/docbookx.dtd">
+<chapter id="server_guide">
+    <?dbhtml dir="serverguide" filename="index.html" ?>
+    <chapterinfo>
+        <releaseinfo>$Id$</releaseinfo>
+        <copyright>
+            <year>2022</year>
+            <holder>phpBB Group</holder>
+        </copyright>
+    </chapterinfo>
+    <title>Server Guide</title>
+    <abstract>
+        <para>This chapter describes the server configuration related to phpBB.</para>
+    </abstract>
+
+    <section id="server_sphinx">
+        <title>Sphinx search configuration</title>
+        <para>
+            Sphinx fulltext search allows using the <ulink url="https://sphinxsearch.com/">Sphinx Open Source Search Server</ulink> for phpBB 3.1 search. Using Sphinx
+            will improve the performance of searching as well as indexing particularly in boards with large databases.
+            Sphinx server being both flexible and fast, provides a better alternative as a search backend.
+        </para>
+        <section id="server_sphinx_requirements">
+            <title>Minimum Requirements</title>
+            <para>The minimum requirements for using Sphinx are as follows:</para>
+            <itemizedlist>
+                <listitem><para>Sphinx Search server >2.0.1 &amp;&amp; &lt;3.0</para></listitem>
+                <listitem><para>phpBB 3.1+</para></listitem>
+                <listitem><para>MySQL or PostgreSQL Database</para></listitem>
+            </itemizedlist>
+        </section>
+        <section id="server_sphinx_installation">
+            <title>Installation Instructions</title>
+            <section id="server_sphinx_installation_sphinx">
+                <title>Sphinx Installation</title>
+                <para>Follow the <ulink url="https://sphinxsearch.com/docs/current.html#installation">Instructions</ulink> to install sphinx. Only the actual installation is required, no need to follow "Sphinx Quick Usage Tour" for phpBB search.</para>
+            </section>
+            <section id="server_sphinx_installation_config">
+                <title>Sphinx Configuration</title>
+                <para>
+                    Sphinx configuration file data can either be generated through ACP and then copy pasted into the
+                    <code>sphinx.conf</code> or the <ulink url="https://github.com/phpbb/phpbb/blob/master/phpBB/docs/sphinx.sample.conf">Sphinx Sample Config</ulink>
+                    can be manually edited and used. Following folders/files need to be created and defined in the sphinx.conf:
+                </para>
+                <itemizedlist>
+                    <listitem><para>Config directory which will have sphinx.conf and stopwords.txt (If defined).</para></listitem>
+                    <listitem><para>Data directory which will have binary and index files.</para></listitem>
+                    <listitem><para>Log directory as a sub directory of Data directory which will save all logs related to sphinx search server.</para></listitem>
+                </itemizedlist>
+            </section>
+            <section id="server_sphinx_installation_dirs">
+                <title>Creating Required Directories</title>
+                <itemizedlist>
+                    <listitem>
+                        <para>Data directory</para>
+                        <para><code>mkdir -p {DATA_PATH}</code></para>
+                    </listitem>
+                    <listitem>
+                        <para>Log directory</para>
+                        <para><code>mkdir -p {DATA_PATH}/log</code></para>
+                    </listitem>
+                </itemizedlist>
+            </section>
+            <section id="server_sphinx_installation_indexing">
+                <title>Indexing</title>
+                <para>
+                    Board administrator needs to select <code>Sphinx Fulltext Search</code> as the search backend and
+                    Create Search Index through the ACP UI. This will create a <code>SPHINX_TABLE</code> in the database.
+                    Then the sphinx indexer should be manually run from the shell.
+                </para>
+                <itemizedlist>
+                    <listitem>
+                        <para>Index Main</para>
+                        <para><code>indexer --config {CONFIG_PATH}/sphinx.conf index_phpbb_{SPHINX_ID}_main >> {DATA_PATH}/log/indexer.log 2>&amp;1 &amp;</code></para>
+                    </listitem>
+                    <listitem>
+                        <para>Index Delta</para>
+                        <para><code>indexer --config {CONFIG_PATH}/sphinx.conf index_phpbb_{SPHINX_ID}_delta >> {DATA_PATH}/log/indexer.log 2>&amp;1 &amp;</code></para>
+                    </listitem>
+                    <listitem>
+                        <para>Re-index</para>
+                        <para><code>indexer --rotate --config {CONFIG_PATH}/sphinx.conf index_phpbb_{SPHINX_ID}_delta >> {DATA_PATH}/log/indexer.log 2>&amp;1 &amp;</code></para>
+                    </listitem>
+                </itemizedlist>
+            </section>
+            <section id="server_sphinx_installation_test">
+                <title>Test Sphinx</title>
+                <para>Test whether sphinx is working. The following command will return the search result.</para>
+                <para><code>search --config {CONFIG_PATH}/sphinx.conf search string</code></para>
+            </section>
+            <section id="server_sphinx_installation_updates">
+                <title>Incremental Updates</title>
+                <para>Crontab file on most Unix Systems can be edited by</para>
+                <para><code>crontab -e</code></para>
+                <para>Add this line to update the delta index every five minutes</para>
+                <para><code>*/5 * * * * indexer --rotate --config {CONFIG_PATH}/sphinx.conf index_phpbb_{SPHINX_ID}_delta >> {DATA_PATH}/log/indexer.log 2>&amp;1 &amp;</code></para>
+                <para>Add this line to set up cron job for full index once every night</para>
+                <para><code>0 3 * * * indexer --rotate --config {CONFIG_PATH}/sphinx.conf index_phpbb_{SPHINX_ID}_main >> {DATA_PATH}/log/indexer.log 2>&amp;1 &amp;</code></para>
+            </section>
+            <section id="server_sphinx_installation_start">
+                <title>Start Searchd</title>
+                <para>Start sphinx daemon.</para>
+                <para><code>searchd --config {CONFIG_PATH}/sphinx.conf >> {DATA_PATH}/log/searchd-startup.log 2>&amp;1 &amp;</code></para>
+            </section>
+            <section id="server_sphinx_installation_trouble">
+                <title>Troubleshooting</title>
+                <para>Log files present in the <code>{DATA_PATH}/log/</code> directory can be checked for errors. See <ulink url="https://sphinxsearch.com/docs/">Sphinx Documentation</ulink> for details.</para>
+            </section>
+        </section>
+        <section id="server_sphinx_manual">
+            <title>Manual Configuration</title>
+            <para>
+                Sample Sphinx config file for phpBB sphinx search backend is available <ulink url="https://github.com/phpbb/phpbb/blob/master/phpBB/docs/sphinx.sample.conf">here</ulink>. It has many options
+                which include database details as well as the directory details for sphinx data and config folders.
+            </para>
+            <section id="server_sphinx_manual_db">
+                <title>Database Details</title>
+                <para>Database details on which sphinx daemon and the board are running.</para>
+                <itemizedlist>
+                    <listitem><para><emphasis role="bold">type</emphasis> - database type , default mysql.</para></listitem>
+                    <listitem><para><emphasis role="bold">sql_host</emphasis> - hostname, default localhost</para></listitem>
+                    <listitem><para><emphasis role="bold">sql_user</emphasis></para></listitem>
+                    <listitem><para><emphasis role="bold">sql_pass</emphasis></para></listitem>
+                    <listitem><para><emphasis role="bold">sql_port</emphasis> - database port, default 3306 for mysql</para></listitem>
+                    <listitem><para><emphasis role="bold">db_name</emphasis></para></listitem>
+                </itemizedlist>
+            </section>
+            <section id="server_sphinx_manual_searchd">
+                <title>Searchd Details</title>
+                <itemizedlist>
+                    <listitem><para><emphasis role="bold">listen</emphasis> - IP address : Sphinx Daemon port, default <code>127.0.0.1:3312</code></para></listitem>
+                    <listitem><para><emphasis role="bold">read_timeout</emphasis> - Network client request read timeout in seconds, default 5</para></listitem>
+                    <listitem><para><emphasis role="bold">max_children</emphasis> - Maximum amount of children to fork (concurrent searches to run in parallel), default 30</para></listitem>
+                    <listitem><para><emphasis role="bold">max_matches</emphasis> - the number of search hits to display per result page, default 20000</para></listitem>
+                </itemizedlist>
+            </section>
+            <section id="server_sphinx_manual_wildcard">
+                <title>Wildcard searching</title>
+                <para>By default, wildcard searching is DISABLED and use of * operator will not work. To enable wildcard searching, consider configuring the following parameters:</para>
+                <itemizedlist>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold">ignore_chars</emphasis> - characters (in Unicode format) ignored and truncated in search index. default none.
+                            <code>ignore_chars = U+00AD, U+002D</code> will truncate hyphenated words into single word eg "re-establish" will be indexed as "reestablish".
+                            Ignored characters cannot be listed in charset_table.
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold">min_prefix_len</emphasis> - minimum prefix length to index. Value greater than 0 will enable partial word match using wordstart* wildcard,
+                            default 0 (wildcards disabled). Suggested value 3 (tes* will find test, tested, testing etc)
+                        </para>
+                    </listitem>
+                    <listitem>
+                        <para>
+                            <emphasis role="bold">min_infix_len</emphasis> - minimum infix length to index. Value greater than 0 will enable partial word match using 'start*', '*end',
+                            and '*middle*' wildcards, default 0 (wildcards disabled). Suggested value 3 (*est* will find test, tested, testing, estimated, shortest etc).
+                        </para>
+                    </listitem>
+                </itemizedlist>
+                <note>Only use one of either min_prefix_len or min_infix_len, not both. The unused parameter should be set as 0. Enabling wildcard indexing will increase search index size.</note>
+            </section>
+            <section id="server_sphinx_manual_stopwords">
+                <title>Stopwords</title>
+                <para>
+                    Sphinx config file provides an option for specifying a file containing search stop words. Stop words are those common words like 'a' and 'the' that appear commonly in text
+                    and should really be ignored from searching. A somewhat complete list of English stop words can be found [# here]. These words can be copied into a text file and added
+                    to sphinx.conf under index_phpbb section as
+                </para>
+                <para><code>stopwords = path/to/stopwords.txt</code></para>
+            </section>
+        </section>
+    </section>
+</chapter>
