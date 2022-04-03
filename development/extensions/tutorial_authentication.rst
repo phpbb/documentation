@@ -108,7 +108,7 @@ authentication provider class is show below:
 
 The service file
 ^^^^^^^^^^^^^^^^
-For proper `dependency injection <https://wiki.phpbb.com/Dependency_Injection_Container>`_
+For proper :ref:`dependency injection <dependency-injection>`
 the provider must be added to ``services.yml``. The name of the service 
 must be in the form of ``auth.provider.<service name>`` in order for phpBB to register it.
 The arguments are those of the provider's constructor and may be empty if no arguments are
