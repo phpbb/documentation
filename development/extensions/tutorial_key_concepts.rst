@@ -16,6 +16,7 @@ This tutorial explains:
  * `Language files`_
  * `Javascript and CSS files`_
 
+.. _dependency-injection:
 
 Dependency injection
 ====================
@@ -74,8 +75,7 @@ controllers and event listeners. The exceptions to this are any ACP/MCP/UCP file
 
 .. seealso::
 
-    * `Dependency Injection Container Wiki <https://wiki.phpbb.com/Dependency_Injection_Container>`_
-    * `Symfony: The DependencyInjection Component <http://symfony.com/doc/2.3/components/dependency_injection/introduction.html>`_
+    * `Symfony: The DependencyInjection Component <https://symfony.com/doc/2.8/components/dependency_injection.html>`_
 
 
 PHP files
@@ -197,7 +197,7 @@ An example directory structure for an extension with universal (all) files and t
 .. seealso::
 
     * `Twig Template Syntax <http://twig.sensiolabs.org/>`_ at Sensio Labs.
-    * `phpBB Template Syntax <https://wiki.phpbb.com/Tutorial.Template_syntax#Syntax_elements>`_ Wiki page.
+    * :ref:`Tutorial: Template Syntax <tutorial-template-syntax>`.
     * The phpBB Customisation Database `Template Validation Policy <https://www.phpbb.com/extensions/rules-and-policies/validation-policy/#templates>`_.
 
 Language files
