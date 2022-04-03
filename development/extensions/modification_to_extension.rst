@@ -689,7 +689,7 @@ In the ``getSubscribedEvents()`` method we tell the system which events we
 want to subscribe our new custom functions to.
 In our case we want to subscribe to two events: the ``core.page_header`` event 
 and the ``core.user_setup`` event (a full list
-of events can be found `here <https://wiki.phpbb.com/Event_List>`_):
+of events can be found `here <https://area51.phpbb.com/docs/dev/3.3.x/extensions/events_list.html>`_):
 
 .. code-block:: php
 
@@ -756,7 +756,7 @@ you need one file per template event.
 The filename includes the event name. In order to add the Newspage link
 next to the FAQ link, we need to use the
 ``'overall_header_navigation_prepend'`` event (a full list of events can be
-found `here <https://wiki.phpbb.com/Event_List>`_).
+found `here <https://area51.phpbb.com/docs/dev/3.3.x/extensions/events_list.html>`_).
 
 So we add the
 ``styles/prosilver/template/event/overall_header_navigation_prepend_listener.html``
@@ -787,8 +787,7 @@ Compatibility
 =============
 
 In some cases the compatibility of functions and classes could not be kept,
-while increasing their power for 3.1. You can see a list of these in the Wiki-Article
-about `PhpBB3.1 <https://wiki.phpbb.com/PhpBB3.1>`_
+while increasing their power for 3.1.
 
 Pagination
 ----------

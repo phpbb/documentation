@@ -1,3 +1,5 @@
+.. _tutorial-template-syntax:
+
 =========================
 Tutorial: Template syntax
 =========================
