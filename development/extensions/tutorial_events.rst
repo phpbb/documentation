@@ -30,7 +30,7 @@ multiple useful injection points. A typical template event looks like:
 
 .. seealso::
 
-    View the full list of `Template events <https://area51.phpbb.com/docs/dev/3.3.x/extensions/events_list.html#template-events>`_ in our Wiki.
+    View the full list of `Template events <https://area51.phpbb.com/docs/dev/3.3.x/extensions/events_list.html#template-events>`_.
 
 Listening for an event
 ----------------------
@@ -115,7 +115,7 @@ Listeners
 
 .. seealso::
 
-    View the full list of supported `PHP events <https://area51.phpbb.com/docs/dev/3.3.x/extensions/events_list.html#php-events>`_ in our Wiki.
+    View the full list of supported `PHP events <https://area51.phpbb.com/docs/dev/3.3.x/extensions/events_list.html#php-events>`_.
 
 The event listener
 ------------------
