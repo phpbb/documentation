@@ -196,7 +196,7 @@ An example directory structure for an extension with universal (all) files and t
 
 .. seealso::
 
-    * `Twig Template Syntax <http://twig.sensiolabs.org/>`_ at Sensio Labs.
+    * `Twig Template Syntax <https://twig.symfony.com/>`_ at Symfony.
     * :ref:`Tutorial: Template Syntax <tutorial-template-syntax>`.
     * The phpBB Customisation Database `Template Validation Policy <https://www.phpbb.com/extensions/rules-and-policies/validation-policy/#templates>`_.
 
