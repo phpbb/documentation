@@ -110,7 +110,7 @@ Using the Language System in template files
 ===========================================
 
 Language entries in
-`Using the Template System <https://wiki.phpbb.com/Using_the_phpBB3.0_Template_System>`_
+:ref:`Template Syntax <tutorial-template-syntax>`
 are a major improvement since phpBB 3.0. There is no longer a need to manually
 assign these in the PHP file; language entries of loaded language files can be
 used automatically.
