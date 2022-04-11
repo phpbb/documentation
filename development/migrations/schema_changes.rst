@@ -10,6 +10,10 @@ Basics
 When performing schema changes, your Migrations class should contain two
 functions, ``update_schema`` and ``revert_schema``.
 
+.. seealso::
+
+    Refer to the :ref:`database-type-map` section to see all the available commands for the different column data types.
+
 update_schema
 -------------
 ``update_schema()`` will be called as the **first** step when installing a
