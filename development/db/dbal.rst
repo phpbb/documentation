@@ -524,3 +524,217 @@ Parameters
 .. |br| raw:: html
 
     <br>
+
+.. _database-type-map:
+
+Database Type Map
+=================
+
+The Database Type Map is used to create migration files using the `Database Abstraction Layer`_ and is used when altering tables.
+
+Introduction
+------------
+
+The Database Type Map was designed to make creating installations for multiple database systems a simple task. Instead of having to write specific install instructions for each separate database system you can write one set of instructions and, using the Database Type Map, alter any supported database system with a single command.
+
+Numeric
+-------
+
+.. list-table::
+	:header-rows: 1
+
+	* - Command
+	  - MySQL
+	  - PostgreSQL
+	  - Oracle
+	  - SQLite
+	* - ``TINT:%d``
+	  - ``tinyint(%d)``
+	  - ``int2``
+	  - ``number(%d)``
+	  - ``tinyint(%d)``
+	* - ``INT:%d``
+	  - ``int(%d)``
+	  - ``int4``
+	  - ``number(%d)``
+	  - ``int(%d)``
+	* - ``BINT``
+	  - ``bigint(20)``
+	  - ``int8``
+	  - ``number(20)``
+	  - ``bigint(20)``
+	* - ``USINT``
+	  - ``smallint(4) UNSIGNED``
+	  - ``int2``
+	  - ``number(4)``
+	  - ``integer UNSIGNED``
+	* - ``UINT``
+	  - ``mediumint(8) UNSIGNED``
+	  - ``int4``
+	  - ``number(8)``
+	  - ``integer UNSIGNED``
+	* - ``UINT:%d``
+	  - ``int(%d) UNSIGNED``
+	  - ``int4``
+	  - ``number(%d)``
+	  - ``integer UNSIGNED``
+	* - ``ULINT``
+	  - ``int(10) UNSIGNED``
+	  - ``int4``
+	  - ``number(10)``
+	  - ``integer UNSIGNED``
+
+Decimal
+-------
+
+.. list-table::
+	:header-rows: 1
+
+	* - Command
+	  - MySQL
+	  - PostgreSQL
+	  - Oracle
+	  - SQLite
+	* - ``DECIMAL``
+	  - ``decimal(5,2)``
+	  - ``decimal(5,2)``
+	  - ``number(5,2)``
+	  - ``decimal(5,2)``
+	* - ``DECIMAL:%d``
+	  - ``decimal(%d,2)``
+	  - ``decimal(%d,2)``
+	  - ``number(%d,2)``
+	  - ``decimal(%d,2)``
+	* - ``PDECIMAL``
+	  - ``decimal(6,3)``
+	  - ``decimal(6,3)``
+	  - ``number(6,3)``
+	  - ``decimal(6,3)``
+	* - ``PDECIMAL:%d``
+	  - ``decimal(%d,3)``
+	  - ``decimal(%d,3)``
+	  - ``number(%d,3)``
+	  - ``decimal(%d,3)``
+
+Text
+----
+
+These should only be used for ASCII characters. If you plan to use it for something like message text read the `Unicode text`_ section.
+
+.. list-table::
+	:header-rows: 1
+
+	* - Command
+	  - MySQL
+	  - PostgreSQL
+	  - Oracle
+	  - SQLite
+	* - ``VCHAR``
+	  - ``varchar(255)``
+	  - ``varchar(255)``
+	  - ``varchar2(255)``
+	  - ``varchar(255)``
+	* - ``VCHAR:%d``
+	  - ``varchar(%d)``
+	  - ``varchar(%d)``
+	  - ``varchar2(%d)``
+	  - ``varchar(%d)``
+	* - ``CHAR:%d``
+	  - ``char(%d)``
+	  - ``char(%d)``
+	  - ``char(%d)``
+	  - ``char(%d)``
+	* - ``XSTEXT``
+	  - ``text``
+	  - ``varchar(1000)``
+	  - ``varchar2(1000)``
+	  - ``text(65535)``
+	* - ``STEXT``
+	  - ``text``
+	  - ``varchar(3000)``
+	  - ``varchar2(3000)``
+	  - ``text(65535)``
+	* - ``TEXT``
+	  - ``text``
+	  - ``varchar(8000)``
+	  - ``clob``
+	  - ``text(65535)``
+	* - ``MTEXT``
+	  - ``mediumtext``
+	  - ``text``
+	  - ``clob``
+	  - ``mediumtext(16777215)``
+
+Unicode text
+------------
+
+.. list-table::
+	:header-rows: 1
+
+	* - Command
+	  - MySQL
+	  - PostgreSQL
+	  - Oracle
+	  - SQLite
+	* - ``VCHAR_UNI``
+	  - ``varchar(255)``
+	  - ``varchar(255)``
+	  - ``varchar2(765)``
+	  - ``varchar(255)``
+	* - ``VCHAR_UNI:%d``
+	  - ``varchar(%d)``
+	  - ``varchar(%d)``
+	  - ``varchar2(%d)`` / ``clob``
+	  - ``varchar(%d)``
+	* - ``XSTEXT_UNI``
+	  - ``text``
+	  - ``varchar(1000)``
+	  - ``varchar2(300)``
+	  - ``text(65535)``
+	* - ``STEXT_UNI``
+	  - ``text``
+	  - ``varchar(3000)``
+	  - ``varchar2(765)``
+	  - ``text(65535)``
+	* - ``TEXT_UNI``
+	  - ``text``
+	  - ``varchar(8000)``
+	  - ``clob``
+	  - ``text(65535)``
+	* - ``MTEXT_UNI``
+	  - ``mediumtext``
+	  - ``text``
+	  - ``clob``
+	  - ``mediumtext(16777215)``
+
+Miscellaneous
+-------------
+
+.. list-table::
+	:header-rows: 1
+
+	* - Command
+	  - MySQL
+	  - PostgreSQL
+	  - Oracle
+	  - SQLite
+	* - ``BOOL``
+	  - ``tinyint(1) UNSIGNED``
+	  - ``int2``
+	  - ``number(1)``
+	  - ``integer UNSIGNED``
+	* - ``TIMESTAMP``
+	  - ``int(11) UNSIGNED``
+	  - ``int4``
+	  - ``number(11)``
+	  - ``integer UNSIGNED``
+	* - ``VCHAR_CI``
+	  - ``varchar(255)``
+	  - ``varchar_ci``
+	  - ``varchar2(255)``
+	  - ``varchar(255)``
+	* - ``VARBINARY``
+	  - ``varbinary(255)``
+	  - ``bytea``
+	  - ``raw(255)``
+	  - ``blob``
