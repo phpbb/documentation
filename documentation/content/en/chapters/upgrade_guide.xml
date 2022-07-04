@@ -57,16 +57,16 @@
 			<listitem><para>Delete the following files from the package:</para>
 				<itemizedlist>
 					<listitem><para>The config.php file</para></listitem>
-					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The files/ directory</para></listitem>
+					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
 			<listitem><para>On your website, delete all files from your board <emphasis role="bold">EXCEPT</emphasis> for:</para>
 				<itemizedlist>
 					<listitem><para>The config.php file</para></listitem>
-					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The files/ directory</para></listitem>
+					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
@@ -200,8 +200,8 @@
 			<listitem><para>Delete the following files from the package:</para>
 				<itemizedlist>
 					<listitem><para>The config.php file</para></listitem>
-					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The files/ directory</para></listitem>
+					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
@@ -209,8 +209,8 @@
 				<itemizedlist>
 					<listitem><para>The config.php file</para></listitem>
 					<listitem><para>The ext/ directory</para></listitem>
-					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The files/ directory</para></listitem>
+					<listitem><para>The images/ directory</para></listitem>
 					<listitem><para>The store/ directory</para></listitem>
 				</itemizedlist>
 			</listitem>
@@ -294,8 +294,8 @@
 				<listitem><para>Delete the following files from the package:</para>
 					<itemizedlist>
 						<listitem><para>The <filename>config.php</filename> file</para></listitem>
-						<listitem><para>The <filename class="directory">images/</filename> directory</para></listitem>
 						<listitem><para>The <filename class="directory">files/</filename> directory</para></listitem>
+						<listitem><para>The <filename class="directory">images/</filename> directory</para></listitem>
 						<listitem><para>The <filename class="directory">store/</filename> directory</para></listitem>
 					</itemizedlist>
 				</listitem>
@@ -303,8 +303,8 @@
 					<itemizedlist>
 						<listitem><para>The <filename>config.php</filename> file</para></listitem>
 						<listitem><para>The <filename class="directory">ext/</filename> directory</para></listitem>
-						<listitem><para>The <filename class="directory">images/</filename> directory</para></listitem>
 						<listitem><para>The <filename class="directory">files/</filename> directory</para></listitem>
+						<listitem><para>The <filename class="directory">images/</filename> directory</para></listitem>
 						<listitem><para>The <filename class="directory">store/</filename> directory</para></listitem>
 						<listitem><para>The <filename class="directory">styles/</filename> directory</para></listitem>
 					</itemizedlist>
