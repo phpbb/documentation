@@ -166,7 +166,7 @@
                 <title>Stopwords</title>
                 <para>
                     Sphinx config file provides an option for specifying a file containing search stop words. Stop words are those common words like 'a' and 'the' that appear commonly in text
-                    and should really be ignored from searching. A somewhat complete list of English stop words can be found [# here]. These words can be copied into a text file and added
+                    and should really be ignored from searching. A somewhat complete list of English stop words can be found <ulink url="https://github.com/stopwords-iso/stopwords-en">here</ulink>. These words can be copied into a text file and added
                     to sphinx.conf under index_phpbb section as
                 </para>
                 <para><code>stopwords = path/to/stopwords.txt</code></para>
