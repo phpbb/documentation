@@ -95,7 +95,7 @@ Every controller should contain at least two methods:
             $l_message = !$this->config['acme_demo_goodbye'] ? 'DEMO_HELLO' : 'DEMO_GOODBYE';
             $this->template->assign_var('DEMO_MESSAGE', $this->language->lang($l_message, $name));
 
-            return $this->helper->render('demo_body.html', $name);
+            return $this->helper->render('@acme_demo/demo_body.html', $name);
         }
     }
 
@@ -153,6 +153,31 @@ page with the ``render()`` method. It takes the template filename, the page
 title, and the status code as its arguments. The page title defaults to an
 empty string and the status code defaults to 200. We are using the
 `Controller template`_ ``demo_body.html``.
+
+.. tip::
+
+    When calling a template file from PHP using ``phpbb\controller\helper:render()``
+    template files are searched for in two places (and in this order):
+
+        1. phpBB/styles/*style_name*/template/
+        2. phpBB/ext/*all_active_extensions*/styles/*style_name*/template/
+
+    The following code will load a template that could be located in any of the
+    above locations, i.e., in any phpBB style or active extension:
+
+    .. code-block:: php
+
+        $this->helper->render('demo_body.html', $name);
+
+    If you only need to load a template file from within your own extension,
+    we recommend using the ``@vendor_extension/`` prefix:
+
+    .. code-block:: php
+
+        $this->helper->render('@acme_demo/demo_body.html', $name);
+
+    It is also recommended to always use unique names for your templates to avoid possible
+    conflicts with phpBB's templates or other extensions.
 
 .. note::
 
