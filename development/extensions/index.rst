@@ -26,4 +26,5 @@ Welcome to phpBB's extension development tutorial and documentation.
    new_in_proteus
    skeleton_extension
    events_list
+   database_types_list
    permission_system
