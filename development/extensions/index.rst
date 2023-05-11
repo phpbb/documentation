@@ -27,4 +27,3 @@ Welcome to phpBB's extension development tutorial and documentation.
    skeleton_extension
    events_list
    database_types_list
-   permission_system
