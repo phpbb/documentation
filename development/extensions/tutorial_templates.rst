@@ -7,14 +7,14 @@ Tutorial: Template syntax
 Introduction
 ============
 
-Starting with version 3.1, phpBB is using the twig template engine that also provides extensive documentation:
-`Twig Documentation <https://twig.symfony.com/doc/2.x/>`_
+Starting with version 3.1, phpBB is using the Twig template engine. This tutorial will cover some of the details on
+the implementation of Twig's syntax in phpBB and its extensions, however more extensive documentation for Twig can
+be found here: `Twig Documentation <https://twig.symfony.com/doc/2.x/>`_.
 
-This tutorial will cover some of the details on the implementation of phpBB's own syntax as used before phpBB 3.2,
-as well as some specific phpBB specific implementations for using the template engine.
 
-Assigning data
-==============
+
+Assigning data in PHP
+=====================
 
 Variables
 ---------
@@ -116,148 +116,125 @@ The blocks and nested loops can then be used accordingly in HTML files (see `Syn
 Syntax elements
 ===============
 
-This section will highlight phpBB specific syntax elements in the template engine.
-The phpBB specific syntax will be deprecated in a later version of phpBB. It is therefore recommended to use
-the twig syntax instead:
-
-- `Twig Documentation <https://twig.symfony.com/doc/2.x/>`_
+This section will highlight Twig syntax elements in the template engine.
+The older phpBB specific syntax will be deprecated in a later version of phpBB. It is therefore recommended to use
+the documented Twig syntax instead:
 
 Comments
 --------
 
-To make comments inside the template you can use:
+To make comments inside the template you can use ``{# #}``:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF 0 -->
-    Your comments can go here, because "0" is always false.
-    <!-- ENDIF -->
+    {# Your comments can go here. #}
 
 Variables
 ---------
 
-Variables take the form ``{X_YYYYY}`` with the data being assigned from the source. Most language strings are not
-assigned from the source. When a language variable is found ``{L_YYYYYY}`` phpBB first looks if an assigned variable
-exists with that name. If it does, it uses that. If not it looks if an existing string defined in the language file
-exists.
+Variables in phpBB take the form of ``{{ X_YYYYY }}``, where the data is assigned from the source. However, most
+language strings are not assigned from the source. When a language variable is found, denoted as ``{{ lang('YYYYYY') }}``,
+phpBB first checks if an assigned variable with that name exists. If it does, it uses that. If not, it checks if an
+existing string defined in the language file exists.
+
+By using the language variable format, phpBB allows for more flexibility in the customization of language strings.
+This allows for easy modifications of language strings in the language files without having to modify the source code
+directly.
 
 Blocks
 ------
 
-The basic block level loop remains and takes the form:
+The basic block level loop takes the form:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- BEGIN loopname -->
-    markup, {loopname.X_YYYYY}, etc.
-    <!-- END loopname -->
+    {% for item in loops.loopname %}
+        markup, {{ item.xyyyy }}, etc.
+    {% endfor %}
 
-However this has now been extended with the following additions. Firstly you can set the start and end points of the loop.
-For example:
+A further extension to begin is to use ``else`` in a loop:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- BEGIN loopname(2) -->
-    markup
-    <!-- END loopname -->
+    {% for item in loops.loopname %}
+        markup, {{ item.xyyyy }}, etc.
+    {% else %}
+        alternate markup
+    {% endfor %}
 
-Will start the loop on the third entry (note that indexes start at *zero*). Extensions of this are:
-
-- ``loopname(2,4)``: Starts loop on third values, ends on fourth
-- ``loopname(-4)``: Starts loop fourth from last value
-- ``loopname(2,-4)``: Starts loop on third value, ends four from end
-
-A further extension to begin is BEGINELSE:
-
-.. code-block:: html
-
-    <!-- BEGIN loop -->
-    markup
-    <!-- BEGINELSE -->
-    markup
-    <!-- END loop -->
-
-This will cause the markup between ``BEGINELSE`` and ``END`` to be output if the loop contains no values.
+This will cause the markup between ``else`` and ``endfor`` to be output if the loop contains no values.
 This is useful for forums with no topics (for example) ... in some ways it replaces "bits of" the existing
 "switch" type control (the rest being replaced by conditionals, see below).
 
 You can also check if your loop has any content similar to using ``count()`` in PHP:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF .loopname -->
-    <!-- BEGIN loopname -->
-    markup, {loopname.X_YYYYY}, etc.
-    <!-- END loopname -->
-    <!-- ENDIF -->
+    {% if loops.loopname|length %}
+        {% for item in loops.loopname %}
+            {{ item.xyyyy }}
+        {% endfor %}
+    {% endif %}
 
-``.loopname`` will basically output the size of the block array. This makes sense if you want to prevent for example
-an empty <select> tag, which would not be XHTML valid.
+``loops.loopname|length`` will output the size of the block array. This makes sense if you want to prevent, for example,
+an empty ``<select>`` tag, which would not be HTML valid.
+
+You can also access specific iterations of a loop using the following special variables:
+
+.. list-table::
+    :widths: 20 80
+
+    * - ``loop.index``
+      - The current iteration of the loop. (1 indexed)
+    * - ``loop.index0``
+      - The current iteration of the loop. (0 indexed)
+    * - ``loop.revindex``
+      - The number of iterations from the end of the loop (1 indexed)
+    * - ``loop.revindex0``
+      - The number of iterations from the end of the loop (0 indexed)
+    * - ``loop.first``
+      - True if first iteration
+    * - ``loop.last``
+      - True if last iteration
+    * - ``loop.length``
+      - The number of items in the sequence
+    * - ``loop.parent``
+      - The parent context
 
 Including files
 ---------------
 
-phpBB has the ability to include other HTML files:
+phpBB has the ability to include other HTML, Javascript and CSS files:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- INCLUDE filename.html -->
-
-You will note in the phpBB templates the major sources start with ``<!-- INCLUDE overall_header.html -->`` or
-``<!-- INCLUDE simple_header.html -->``. That way template designers can specify directly reuse other parts like headers
-or footers.
+    {% INCLUDE 'filename.html' %}
+    {% INCLUDEJS 'filename.js' %}
+    {% INCLUDECSS 'filename.css' %}
 
 .. note:: You can introduce new templates (i.e. other than those in the default set) using this system and include them
     as you wish ... perhaps useful for a common "menu" bar or similar.
 
-PHP
----
-
-.. warning:: The ``PHP`` and ``INCLUDEPHP`` syntax elements are deprecated in phpBB 3.3 and will be removed in phpBB 4.0.
-
-It is possible to directly include PHP within pages. This is achieved by enclosing the PHP within relevant tags:
-
-.. code-block:: html
-
-    <!-- PHP -->
-    echo "hello!";
-    <!-- ENDPHP -->
-
-You may also include PHP from an external file using:
-
-.. code-block:: html
-
-    <!-- INCLUDEPHP somefile.php -->
-
-It will be included and executed inline.
-
-Please be aware that the path-information of the PHP-file to include, refers to your phpBB-installation's root-path and
-**NOT** to the path where your template-file lies in!
-
-.. warning:: It is very much discouraged to include PHP files in templates. The ability to include raw PHP was introduced
-    primarily to allow end users to include banner code, etc. without modifying multiple files. It was not intended for
-    general use. By default templates will have PHP disabled (the admin will need to specifically activate PHP for a template).
-
 Conditionals/Control structures
 -------------------------------
 
-Conditionals and control structures can be used similar to twig. A simple example of this is:
+Conditionals and control structures can be used similar to Twig. A simple example of this is:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF expr -->
-    markup
-    <!-- ENDIF -->
+    {% if expr %}
+        markup
+    {% endif %}
 
 The expression can take many forms:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF loop.S_ROW_COUNT is even -->
-    markup
-    <!-- ENDIF -->
+    {% if loop.index is even %}
+        markup
+    {% endif %}
 
-This will output the markup if the S_ROW_COUNT variable in the current iteration of loop is an even value (i.e. the expr is TRUE).
+This will output the markup if the current iteration of a loop is an even value.
 You can use various comparison methods (standard as well as equivalent textual versions noted in square brackets) including:
 
 - ``==`` [``eq``]
@@ -293,87 +270,85 @@ Basic parenthesis can also be used to enforce good old BODMAS rules. Additionall
 
 Beyond the simple use of IF you can also do a sequence of comparisons using the following:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF expr1 -->
-    markup
-    <!-- ELSEIF expr2 -->
-    markup
-    .
-    .
-    .
-    <!-- ELSEIF exprN -->
-    markup
-    <!-- ELSE -->
-    markup
-    <!-- ENDIF -->
+    {% if expr1 %}
+        markup
+    {% elseif expr2 %}
+        markup
+        .
+        .
+        .
+    {% elseif exprN %}
+        markup
+    {% else %}
+        markup
+    {% endif %}
 
 Each statement will be tested in turn and the relevant output generated when a match (if a match) is found.
-It is not necessary to always use ``ELSEIF``, ``ELSE`` can be used alone to match "everything else".
+It is not necessary to always use ``elseif``, ``else`` can be used alone to match "everything else".
 
 This can also be used to for example assign different stylesheets on even row count than on uneven ones:
 
-.. code-block:: html
+.. code-block:: twig
 
     <table>
-    <!-- IF loop.S_ROW_COUNT is even -->
-    <tr class="row1">
-    <!-- ELSE -->
-    <tr class="row2">
-    <!-- ENDIF -->
-    <td>HELLO!</td>
-    </tr>
+    {% if loop.index is even %}
+        <tr class="row1">
+    {% else %}
+        <tr class="row2">
+    {% endif %}
+            <td>HELLO!</td>
+        </tr>
     </table>
 
 Other elements can also be added:
 
-.. code-block:: html
+.. code-block:: twig
 
     <table>
-    <!-- IF loop.S_ROW_COUNT > 10 -->
-    <tr bgcolor="#FF0000">
-    <!-- ELSEIF loop.S_ROW_COUNT > 5 -->
-    <tr bgcolor="#00FF00">
-    <!-- ELSEIF loop.S_ROW_COUNT > 2 -->
-    <tr bgcolor="#0000FF">
-    <!-- ELSE -->
-    <tr bgcolor="#FF00FF">
-    <!-- ENDIF -->
-    <td>hello!</td>
-    </tr>
+    {% if loop.index > 10 %}
+        <tr bgcolor="#FF0000">
+    {% elseif loop.index > 5 %}
+        <tr bgcolor="#00FF00">
+    {% elseif loop.index > 2 %}
+        <tr bgcolor="#0000FF">
+    {% else %}
+        <tr bgcolor="#FF00FF">
+    {% endif %}
+            <td>hello!</td>
+        </tr>
     </table>
 
 This will output the row cell in purple for the first two rows, blue for rows 2 to 5, green for rows 5 to 10 and red
 for remainder. So, you could produce a "nice" gradient effect, for example.
 
-You could use ``IF`` to do common checks on for example the login state of a user:
+You could use ``if`` to do common checks on for example the login state of a user:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF S_USER_LOGGED_IN -->
-    markup
-    <!-- ENDIF -->
+    {% if S_USER_LOGGED_IN %}
+        markup
+    {% endif %}
 
 User variables
 --------------
 
 You can also define simple (boolean, integer or double) variables from inside the template. This is for example useful
-if you dont want to copy & paste complex ``IF`` expressions over and over again:
+if you dont want to copy & paste complex ``if`` expressions over and over again:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- IF expr1 -->
-    <!-- DEFINE $COLSPAN = 3 -->
-    <!-- ELSEIF expr2 -->
-    <!-- DEFINE $COLSPAN = 4 -->
-    <!-- ELSE -->
-    <!-- DEFINE $COLSPAN = 1 -->
-    <!-- ENDIF -->
+    {% if expr1 %}
+        {% DEFINE $COLSPAN = 3 %}
+    {% elseif expr2 %}
+        {% DEFINE $COLSPAN = 4 %}
+    {% else %}
+        {% DEFINE $COLSPAN = 1 %}
+    {% endif %}
 
-    ...
-
-    <tr><td colspan="{$COLSPAN}">...</td></tr>
-    <tr><rd colspan="{$COLSPAN}">...</td></tr>
+    <tr><td colspan="{{ $COLSPAN }}">...</td></tr>
+    <tr><td colspan="{{ $COLSPAN }}">...</td></tr>
 
 The ``DEFINE`` keyword does have some restrictions on its use:
 
@@ -382,18 +357,18 @@ The ``DEFINE`` keyword does have some restrictions on its use:
 
 An example of this:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- DEFINE $COLSPAN = 3 -->  //GOOD
-    <!-- DEFINE $COLSPAN=3 -->         //BAD
-    <!-- DEFINE $COLSPAN  =  3 -->     //BAD
+    {% DEFINE $COLSPAN = 3 %}   //GOOD
+    {% DEFINE $COLSPAN=3 %}     //BAD
+    {% DEFINE $COLSPAN  =  3 %} //BAD
 
 
-    <!-- DEFINE $CLASS = 'class1' -->  //GOOD
-    <!-- DEFINE $CLASS = "class1" -->  //BAD
+    {% DEFINE $CLASS = 'class1' %}  //GOOD
+    {% DEFINE $CLASS = "class1" %}  //BAD
 
 User variables can be cleared (unset) using:
 
-.. code-block:: html
+.. code-block:: twig
 
-    <!-- UNDEFINE $COLSPAN -->
+    {% UNDEFINE $COLSPAN %}
