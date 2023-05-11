@@ -845,11 +845,11 @@ Copy the following into the ``tests.yml`` file:
     jobs:
         # START Basic Checks Job (EPV, code sniffer, images check, etc.)
         basic-checks:
-            runs-on: ubuntu-18.04
+            runs-on: ubuntu-20.04
             strategy:
                 matrix:
                     include:
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "none"
                           NOTESTS: 1
 
@@ -857,14 +857,14 @@ Copy the following into the ``tests.yml`` file:
 
             steps:
                 - name: Checkout phpBB
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       repository: phpbb/phpbb
                       ref: ${{ env.PHPBB_BRANCH }}
                       path: phpBB3
 
                 - name: Checkout extension
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
 
@@ -913,7 +913,7 @@ Copy the following into the ``tests.yml`` file:
 
         # START MySQL and MariaDB Job
         mysql-tests:
-            runs-on: ubuntu-18.04
+            runs-on: ubuntu-20.04
             strategy:
                 matrix:
                     include:
@@ -945,6 +945,10 @@ Copy the following into the ``tests.yml`` file:
                           db: "mysql:8.0"
                         - php: '8.0'
                           db: "mysql:5.7"
+                        - php: '8.1'
+                          db: "mysql:5.7"
+                        - php: '8.2'
+                          db: "mysql:5.7"
 
             name: PHP ${{ matrix.php }} - ${{ matrix.db_alias != '' && matrix.db_alias || matrix.db }}
 
@@ -974,14 +978,14 @@ Copy the following into the ``tests.yml`` file:
 
             steps:
                 - name: Checkout phpBB
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       repository: phpbb/phpbb
                       ref: ${{ env.PHPBB_BRANCH }}
                       path: phpBB3
 
                 - name: Checkout extension
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
 
@@ -990,7 +994,7 @@ Copy the following into the ``tests.yml`` file:
                       MATRIX_DB: ${{ matrix.db }}
                   run: |
                       db=$(echo "${MATRIX_DB%%:*}")
-                      echo "::set-output name=db::$db"
+                      echo "db=$db" >> $GITHUB_OUTPUT
 
                 - name: Setup PHP
                   uses: shivammathur/setup-php@v2
@@ -1027,7 +1031,7 @@ Copy the following into the ``tests.yml`` file:
 
         # START PostgreSQL Job
         postgres-tests:
-            runs-on: ubuntu-18.04
+            runs-on: ubuntu-20.04
             strategy:
                 matrix:
                     include:
@@ -1043,6 +1047,20 @@ Copy the following into the ``tests.yml`` file:
                           db: "postgres:12"
                         - php: '7.1'
                           db: "postgres:13"
+                        - php: '7.2'
+                          db: "postgres:13"
+                        - php: '7.3'
+                          db: "postgres:13"
+                        - php: '7.4'
+                          db: "postgres:13"
+                        - php: '8.0'
+                          db: "postgres:12"
+                        - php: '8.0'
+                          db: "postgres:13"
+                        - php: '8.1'
+                          db: "postgres:14"
+                        - php: '8.2'
+                          db: "postgres:14"
 
             name: PHP ${{ matrix.php }} - ${{ matrix.db }}
 
@@ -1074,14 +1092,14 @@ Copy the following into the ``tests.yml`` file:
 
             steps:
                 - name: Checkout phpBB
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       repository: phpbb/phpbb
                       ref: ${{ env.PHPBB_BRANCH }}
                       path: phpBB3
 
                 - name: Checkout extension
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
 
@@ -1090,7 +1108,7 @@ Copy the following into the ``tests.yml`` file:
                       MATRIX_DB: ${{ matrix.db }}
                   run: |
                       db=$(echo "${MATRIX_DB%%:*}")
-                      echo "::set-output name=db::$db"
+                      echo "db=$db" >> $GITHUB_OUTPUT
 
                 - name: Setup PHP
                   uses: shivammathur/setup-php@v2
@@ -1127,7 +1145,7 @@ Copy the following into the ``tests.yml`` file:
 
         # START Other Tests Job (SQLite 3 and mssql)
         other-tests:
-            runs-on: ubuntu-18.04
+            runs-on: ubuntu-20.04
             strategy:
                 matrix:
                     include:
@@ -1169,14 +1187,14 @@ Copy the following into the ``tests.yml`` file:
 
             steps:
                 - name: Checkout phpBB
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       repository: phpbb/phpbb
                       ref: ${{ env.PHPBB_BRANCH }}
                       path: phpBB3
 
                 - name: Checkout extension
-                  uses: actions/checkout@v2
+                  uses: actions/checkout@v3
                   with:
                       path: phpBB3/phpBB/ext/${{ env.EXTNAME }}
 
@@ -1190,7 +1208,7 @@ Copy the following into the ``tests.yml`` file:
                       else
                           db=$(echo "${MATRIX_DB%%:*}")
                       fi
-                      echo "::set-output name=db::$db"
+                      echo "db=$db" >> $GITHUB_OUTPUT
 
                 - name: Setup PHP
                   uses: shivammathur/setup-php@v2

@@ -15,6 +15,7 @@
 	<xsl:param name="paper.type" select="'USletter'"></xsl:param>
 	<xsl:param name="section.autolabel" select="1"></xsl:param>
 	<xsl:param name="toc.section.depth" select="3"></xsl:param>
+	<xsl:param name="draft.mode" select="no"></xsl:param>
 	
 	<!-- xsl:param name="xep.extensions" select="1"></xsl:param -->
 	<xsl:param name="fop1.extensions" select="1"></xsl:param>

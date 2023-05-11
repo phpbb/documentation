@@ -659,7 +659,7 @@
 			<para>phpBB comes with several predefined searches to easily perform certain types of queries.</para>
 			<itemizedlist>
 				<listitem><para><guilabel>View your posts</guilabel> - Returns a list of topics that you have posted in, sorted by the time of the last post in the topic.</para></listitem>
-				<listitem><para><guilabel>View unanswered posts</guilabel> - Returns all posts which contain no replies.</para></listitem>
+				<listitem><para><guilabel>View unanswered topics</guilabel> - Returns all topics which contain no replies.</para></listitem>
 				<listitem><para><guilabel>View unread posts</guilabel> - Returns a list of topics containing posts which you have yet to read.</para></listitem>
 				<listitem><para><guilabel>View new posts</guilabel> - Returns a list of topics containing posts which have been made since the last time you logged in.</para></listitem>
 				<listitem><para><guilabel>View active topics</guilabel> - Returns a list of topics which have been posted in during the last few days. The number of days can be changed after loading the search page.</para></listitem>
