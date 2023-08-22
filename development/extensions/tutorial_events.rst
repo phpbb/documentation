@@ -26,7 +26,7 @@ multiple useful injection points. A typical template event looks like:
 
 ::
 
-    {% EVENT event_name_and_position %}
+    <!-- EVENT event_name_and_position -->
 
 .. seealso::
 
