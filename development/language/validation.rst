@@ -124,6 +124,7 @@ The ``composer.json`` from the default language `British English` looks like thi
 Main block
 ----------
 The main part of this ``composer.json`` has six different types of information:
+
 * ``"name":`` need to start with ``phpbb/phpbb-language-`` and followed by the language iso code e.g. ``phpbb/phpbb-language-de``
 * ``"description":`` should contain a short description for your translation e.g. ``phpBB Forum Software language package Dutch (Casual Honorifics)``
 * ``"type":`` must be: ``"phpbb-language",``. Just leave it as it is!
@@ -151,6 +152,7 @@ Extra
 -----
 The extra block contains necessary information so that your language package works correctly within a phpBB installation.
 Please don't leave out any of those lines out and fill them out carefully.
+
 * ``"language-iso":`` This needs to be your ISO code. In British English it is ``en``. This needs to be same as the directory name e.g. ``language/en/``.
 * ``"english-name":`` The english name of your language package e.g. ``"German (Casual Honorifics)"``. Former first line of ``language/{iso}/iso.txt``.
 * ``"local-name":`` The local name of your language package e.g. ``"Deutsch (Du)"``. Former second line of ``language/{iso}/iso.txt``.
