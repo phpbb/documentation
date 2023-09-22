@@ -23,7 +23,7 @@ specify them all, and get a loop in there.
 
 As we are not the first developers facing this problem, it was not really hard
 to find a suitable solution. We decided to use the system from
-`Mozilla <https://developer.mozilla.org/en/Localization_and_Plurals>`_.
+`Unicode.org`_, which is e.g. used by Mozilla.
 
 Plural Rules
 ============
@@ -219,3 +219,5 @@ The system is based on
 `Mozilla <https://developer.mozilla.org/en/Localization_and_Plurals>`_, which
 uses the "Plural Rules and Families" from
 `GNU gettext documentation <http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms>`_.
+
+.. _Unicode.org: https://www.unicode.org/cldr/charts/43/supplemental/language_plural_rules.html
