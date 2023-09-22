@@ -14,7 +14,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 2) Submissions have to be complete. Partial translations are not allowed and will be automatically denied. E-mails, text files and theme-images must also be fully translated.
 
-3) Language packs can contain five additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README.md`` (optional), ``AUTHORS.md`` (optional), ``VERSION.md`` (optional) and ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README.md`` file, you can list all the authors and contributors of your language pack in the ``AUTHORS.md`` file, you can put the version of your language pack in the ``VERSION.md`` file and you can list the entire version history in the ``CHANGELOG.md`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of `GNU General Public License 2.0`_ and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file(s) will be detected and your submission will be denied.
+3) Language packs can contain five additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README.md`` (optional) and ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README.md`` file and you can list the entire version history in the ``CHANGELOG.md`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of `GNU General Public License 2.0`_ and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file(s) will be detected and your submission will be denied.
 
 4) Submissions must have the following files and structure:
 
@@ -145,11 +145,11 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 6) All PHP and text files must be encoded in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
 
-7) The translation is mostly your work and you have a right to hold a copyright on the translation and put your name or the names of those on your team in the ``AUTHORS.md`` file.
+7) The translation is mostly your work and you have a right to hold a copyright on the translation and put your name or the names of those on your team in the ``composer.json`` file in the authors section.
 
 8) A maximum of 3 links can be included as an author credit in the footer, customisable via the ``'TRANSLATION_INFO'`` key in ``common.php``. Please note that the Translations Manager has complete discretion on what is acceptable as an author credit link.
 
-9) Submissions have to be submitted as a single zip file. The Customisations Database will automatically name your uploaded language pack using the format ``languagename_versionnumber.zip``. For example, if a Brazilian Portuguese language pack author uploads an archive named ``Brasileiro_1.0.5.zip``, it will be automatically changed to ``brazilian_portuguese_1_0_5.zip``.
+9) Submissions have to be submitted as a single zip file. The Customisations Database will automatically name your uploaded language pack using the format ``languagename_versionnumber.zip``. For example, if a Brazilian Portuguese language pack author uploads an archive named ``Brasileiro_4.0.5.zip``, it will be automatically changed to ``brazilian_portuguese_4_0_5.zip``.
 
 10) The contribution description for you language pack in the Customisations Database should be translated into English in addition to your local language. This will facilitate the download of your translation by administrators who do not speak the language.
 
