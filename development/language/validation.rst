@@ -316,4 +316,4 @@ License
 .. _Dutch language: https://www.phpbb.com/customise/db/translation/dutch_casual_honorifics/
 .. _Google ReCaptcha: https://developers.google.com/recaptcha/docs/language
 .. _plurals: https://area51.phpbb.com/docs/dev/master/language/plurals.html
-.. _composer.json validation: https://getcomposer.org/doc/03-cli.md#validate 
+.. _composer.json validation: https://getcomposer.org/doc/03-cli.md#validate

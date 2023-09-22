@@ -119,10 +119,10 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                     cli.php
                     CHANGELOG.md (optional)
                     common.php
+                    composer.json
                     groups.php
                     index.htm
                     install.php
-                    iso.txt (
                     LICENSE
                     mcp.php
                     memberlist.php
