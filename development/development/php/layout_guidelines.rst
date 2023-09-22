@@ -469,26 +469,57 @@ Class Members
 
 Use the explicit visibility qualifiers ``public``, ``private`` and ``protected`` for all properties instead of ``var``.
 
-Place the ``static`` qualifier before the visibility qualifiers.
+Place the ``static`` qualifier *after* the visibility qualifiers.
 
 **Wrong:**
 
 .. code:: php
 
     var $x;
-    private static function f()
+    static private function f()
 
 **Right:**
 
 .. code:: php
 
     public $x;
-    static private function f()
+    private static function f()
 
 Constants
 +++++++++
 
 Prefer class constants over global constants created with ``define()``.
+
+Type declarations
++++++++++++++++++
+
+Use type declarations for arguments, properties and return types.
+The declaration of return types is optional for ``void`` types but preferred for uniformity.
+
+There should be *no* space before the colon and *exactly* one space after the colon for type declarations.
+
+**Wrong:**
+
+.. code:: php
+
+    public $x;
+
+    private function do_stuff($input) : string
+    {
+        return $input . 'appended';
+    }
+
+**Right:**
+
+.. code:: php
+
+    public int $x;
+
+    private function do_stuff(string $input): string
+    {
+        return $input . 'appended';
+    }
+
 
 2.iii. SQL/SQL Layout
 ---------------------
