@@ -42,7 +42,7 @@ Package Validation
 ==================
 
 * Language packages must include all files that are included in the folders for
-  the English language. This includes the following folders:
+  the English language. This includes the following directories:
 
     + ``ext/phpbb/viglink/language/en/``
     + ``language/en/``
@@ -83,19 +83,93 @@ File Validation
   before ``<?php``. ``.php`` files must **not** contain the closing tag ``?>``,
   but just end with a new line
 
-language/{iso}/iso.txt
+language/{iso}/composer.json
 ----------------------
+It is the main configuration file of your translation and language packages.
 
-* The file must contain exactly 3 lines:
+The ``composer.json`` from the default language `British English` looks like this:
 
-    #. English language name
-    #. Language name in the spoken language
-    #. Author(-group) information (Plaintext only, no links allowed)
+.. code-block:: json
+
+{
+	"name": "phpbb/phpbb-language-en",
+	"description": "phpBB Forum Software default language",
+	"type": "phpbb-language",
+	"version": "4.0.0-a1-dev",
+	"homepage": "https://www.phpbb.com",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "phpBB Limited",
+			"email": "operations@phpbb.com",
+			"homepage": "https://www.phpbb.com/go/authors"
+		}
+	],
+	"support": {
+		"issues": "https://tracker.phpbb.com",
+		"forum": "https://www.phpbb.com/community/",
+		"wiki": "https://wiki.phpbb.com",
+		"irc": "irc://irc.freenode.org/phpbb"
+	},
+	"extra": {
+		"language-iso": "en",
+		"english-name": "British English",
+		"local-name": "British English",
+		"phpbb-version": "4.0.0-a1-dev",
+		"direction": "ltr",
+		"user-lang": "en-gb",
+		"plural-rule": 1,
+		"recaptcha-lang": "en-GB"
+	}
+}
+
+Main block
+----------
+The main part of this ``composer.json`` has six different types of information:
+* ``"name":`` need to start with ``phpbb/phpbb-language-`` and followed by the language iso code e.g. ``phpbb/phpbb-language-de``
+* ``"description":`` should contain a short description for your translation e.g. ``phpBB Forum Software language package Dutch (Casual Honorifics)``
+* ``"type":`` must be: ``"phpbb-language",``. Just leave it as it is!
+* ``"version":`` should be the version number of the language package. This can be different then the phpBB-version it is made for.
+* ``"homepage":`` if you want, you can put an url to your website. If not, left it empty.
+* ``"license":`` must be: ``"GPL-2.0",``. Just leave it as it is!
+
+Authors
+-------
+Allows you to mention the organisation or people who did and maintain the translation. You can just add repeating blocks like this to add more than one person:
+
+.. code-block:: json
+
+		{
+			"name": "Person A,
+			"email": "mail@example.org,
+			"homepage": "https://www.example.org"
+		}
+
+Support
+-------
+Give room to link to your websites or chat channels, you want to direct users to, to report bugs, typographical errors or get support.
+
+Extra
+-----
+The extra block contains necessary information so that your language package works correctly within a phpBB installation.
+Please don't leave out any of those lines out and fill them out carefully.
+* ``"language-iso":`` This needs to be your ISO code. In British English it is ``en``. This needs to be same as the directory name e.g. ``language/en/``.
+* ``"english-name":`` The english name of your language package e.g. ``"German (Casual Honorifics)"``. Former first line of ``language/{iso}/iso.txt``.
+* ``"local-name":`` The local name of your language package e.g. ``"Deutsch (Du)"``. Former second line of ``language/{iso}/iso.txt``.
+* ``"phpbb-version":`` This need to represent an existing phpBB release version e.g. ``4.0.1``. Individual naming is not allowed here!
+* ``"direction":`` Put in ``"ltr""`` for "left-to-right" languages (e.g. Italian, Dutch, German) and ``"rtl"`` for right-to-left language (e.g. Arabic).
+* ``"user-lang":`` Input the user language code e.g. "de". Formerly defined in the ``language/{iso}/common.php`` (e.g. ``'USER_LANG'    => 'de',``).
+* ``"plural-rule":`` Input the plural rule number of your language. Formerly defined in the ``language/{iso}/common.php`` (e.g. ``'PLURAL_RULE'	=> 1,``). Check the `plurals`_ section for more details.
+* ``"recaptcha-lang":`` Input the ReCaptcha-Language-Code here. Formerly defined in the ``language/{iso}/captcha_recaptcha.php`` (e.g. ``'RECAPTCHA_LANG' => 'de',``). Check `Google ReCaptcha`_ for further information which code to use.
+
+.. note::
+
+The composer.json needs be always validate JSON. You can validate it with ``composer.phar``, see: `composer.json validation`_
 
 \*/index.htm
 ------------
 
-The ``index.htm`` files in all folders must either be completly empty, or
+The ``index.htm`` files in all folders must either be completely empty, or
 contains the default html body:
 
 .. code-block:: html
@@ -236,7 +310,10 @@ License
 * All translations must be released under
   `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
 
-.. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/3.3
-.. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/3.3.x/language/guidelines.html#language-pack-submission-policy
+.. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/4.0
+.. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/master/language/guidelines.html#language-pack-submission-policy
 .. _officially: https://www.phpbb.com/support/intl/
 .. _Dutch language: https://www.phpbb.com/customise/db/translation/dutch_casual_honorifics/
+.. _Google ReCaptcha: https://developers.google.com/recaptcha/docs/language
+.. _plurals: https://area51.phpbb.com/docs/dev/master/language/plurals.html
+.. _composer.json validation: https://getcomposer.org/doc/03-cli.md#validate 

@@ -216,8 +216,8 @@ unexpected results if any keys are missing or out of order.
 Credits
 =======
 The system is based on
-`Mozilla <https://developer.mozilla.org/en/Localization_and_Plurals>`_, which
+`Unicode.org`_, which
 uses the "Plural Rules and Families" from
-`GNU gettext documentation <http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms>`_.
+`GNU gettext documentation <http://www.gnu.org/software/gettext/manual/html_node/gettext_150.html#Plural-forms>`_ and is used e.g. by Mozilla.
 
 .. _Unicode.org: https://www.unicode.org/cldr/charts/43/supplemental/language_plural_rules.html

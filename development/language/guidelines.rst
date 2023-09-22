@@ -143,7 +143,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           index.htm (optional)
                           stylesheet.css
 
-5) Submissions should follow the recommendations in the `3.3 Translation (i18n/L10n) Guidelines`_ as closely as possible, especially the `3.3 Writing style`_.
+5) Submissions should follow the recommendations in the `4.0 Translation (i18n/L10n) Guidelines`_ as closely as possible, especially the `4.0 Writing style`_.
 
 6) All PHP and text files must be encoded in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
 
@@ -157,15 +157,15 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 11) The contribution screenshot in the Customisations Database should only be the flag of the country where the primary spoken language is that of the language pack. For example, the flag of France for the French language.
 
-12) Revision name in the Customisations Database should be left blank, contain the phpBB package version, and/or package release name (e.g. "**3.3.10 / Bertie’s New Translation**" for 3.3.10).
+12) Revision name in the Customisations Database should be left blank, contain the phpBB package version, and/or package release name (e.g. "**4.0.0 / Bertie’s Future Translation**" for 4.0.0).
 
 13) The Demo URL in the Customisations Database must be empty, unless you want to put a link to an international community (`officially`_ listed or not) related to the language of the contribution. For example, https://www.phpbb.nl/ as Demo URL concerning the `Dutch language`_ is allowed.
 
-.. _Customisations Database: https://www.phpbb.com/go/customise/language-packs/3.3
+.. _Customisations Database: https://www.phpbb.com/go/customise/language-packs/4.0
 .. _Language Packs Database: https://www.phpbb.com/languages/
 .. _GNU General Public License 2.0: http://www.opensource.org/licenses/gpl-2.0.php
-.. _3.3 Translation (i18n/L10n) Guidelines: https://area51.phpbb.com/docs/33x/coding-guidelines.html#translation
-.. _3.3 Writing style: https://area51.phpbb.com/docs/33x/coding-guidelines.html#writingstyle
+.. _4.0 Translation (i18n/L10n) Guidelines: https://area51.phpbb.com/docs/40x/coding-guidelines.html#translation
+.. _4.0 Writing style: https://area51.phpbb.com/docs/40x/coding-guidelines.html#writingstyle
 .. _Notepad++: https://notepad-plus-plus.org/
 .. _PSPad: http://www.pspad.com/en/
 .. _officially: https://www.phpbb.com/support/intl/
