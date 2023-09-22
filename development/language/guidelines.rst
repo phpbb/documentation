@@ -51,6 +51,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        profile.php
                        prune.php
                        search.php
+                       storage.php
                        styles.php
                        users.php
                     email/
@@ -68,7 +69,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                           topic_disapproved.txt
                           topic_in_queue.txt
                           topic_notify.txt
-
                        admin_activate.txt
                        admin_send_email.txt
                        admin_welcome_activated.txt
@@ -97,13 +97,14 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        report_deleted.txt
                        report_pm.txt
                        report_post.txt
+                       test.txt
                        topic_approved.txt
                        topic_disapproved.txt
                        topic_in_queue.txt
                        topic_notify.txt
                        user_activate.txt
                        user_activate_inactive.txt
-                       user_activate_passwd.txt
+                       user_activate_password.txt
                        user_reactivate_account.txt
                        user_remind_inactive.txt
                        user_resend_inactive.txt
@@ -137,7 +138,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                  prosilver/
                     theme/
                        {iso}/
-                          icon_user_online.gif
                           index.htm (optional)
                           stylesheet.css
 
