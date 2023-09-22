@@ -24,12 +24,9 @@ Demo-Link
 ---------
 
 The Demo URL in the Customisation Database must be empty, unless you want to
-put a link to an international community (
-`officially <https://www.phpbb.com/support/intl/>`_ listed or not) related to
-the language of the contribution. For example, http://www.phpbbarabia.com/ as
-Demo URL concerning the
-`Arabic language <https://www.phpbb.com/customise/db/translation/arabic/>`_ is
-allowed.
+put a link to an international community (`officially`_ listed or not) related to
+the language of the contribution. For example, https://www.phpbb.nl/ as Demo
+URL concerning the `Dutch language`_ is allowed.
 
 Package
 -------
@@ -38,8 +35,8 @@ Package
   ``<languagename>_<version>`` folder. The files from above should be placed in
   this folder.
 * Revision name in the `Customisation Database`_ should be left blank, contain
-  the phpBB package version and/or package release name (e.g. ``3.0.12`` /
-  ``Richard 'D¡cky' Foote`` for 3.0.12) for more understanding.
+  the phpBB package version and/or package release name (e.g. ``3.3.10`` /
+  ``Bertie's translation` for 3.3.10) for more understanding.
 
 Package Validation
 ==================
@@ -239,5 +236,7 @@ License
 * All translations must be released under
   `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
 
-.. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/3.2
-.. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/3.2.x/language/guidelines.html#language-pack-submission-policy
+.. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/3.3
+.. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/3.3.x/language/guidelines.html#language-pack-submission-policy
+.. _officially: https://www.phpbb.com/support/intl/
+.. _Dutch language: https://www.phpbb.com/customise/db/translation/dutch_casual_honorifics/
