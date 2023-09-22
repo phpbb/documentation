@@ -494,7 +494,7 @@ Type declarations
 +++++++++++++++++
 
 Use type declarations for arguments, properties and return types.
-The declaration of return types is optional for ``void`` types but prefered for uniformity.
+The declaration of return types is optional for ``void`` types but preferred for uniformity.
 
 There should be *no* space before the colon and *exactly* one space after the colon for type declarations.
 
