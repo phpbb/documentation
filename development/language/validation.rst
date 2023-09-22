@@ -82,7 +82,7 @@ File Validation
   but just end with a new line
 
 language/{iso}/composer.json
-----------------------
+----------------------------
 It is the main configuration file of your translation and language packages.
 
 The ``composer.json`` from the default language `British English` looks like this:
@@ -122,7 +122,7 @@ The ``composer.json`` from the default language `British English` looks like thi
         }
 
 Main block
-----------
+^^^^^^^^^^
 The main part of this ``composer.json`` has six different types of information:
 
 * ``"name":`` need to start with ``phpbb/phpbb-language-`` and followed by the language iso code e.g. ``phpbb/phpbb-language-de``
@@ -133,7 +133,7 @@ The main part of this ``composer.json`` has six different types of information:
 * ``"license":`` must be: ``"GPL-2.0",``. Just leave it as it is!
 
 Authors
--------
+^^^^^^^
 Allows you to mention the organisation or people who did and maintain the translation. You can just add repeating blocks like this to add more than one person:
 
 .. code-block:: json
@@ -145,11 +145,11 @@ Allows you to mention the organisation or people who did and maintain the transl
 		}
 
 Support
--------
+^^^^^^^
 Give room to link to your websites or chat channels, you want to direct users to, to report bugs, typographical errors or get support.
 
 Extra
------
+^^^^^
 The extra block contains necessary information so that your language package works correctly within a phpBB installation.
 Please don't leave out any of those lines out and fill them out carefully.
 
