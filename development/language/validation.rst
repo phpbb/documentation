@@ -91,37 +91,37 @@ The ``composer.json`` from the default language `British English` looks like thi
 
 .. code-block:: json
 
-{
-	"name": "phpbb/phpbb-language-en",
-	"description": "phpBB Forum Software default language",
-	"type": "phpbb-language",
-	"version": "4.0.0-a1-dev",
-	"homepage": "https://www.phpbb.com",
-	"license": "GPL-2.0",
-	"authors": [
-		{
-			"name": "phpBB Limited",
-			"email": "operations@phpbb.com",
-			"homepage": "https://www.phpbb.com/go/authors"
-		}
-	],
-	"support": {
-		"issues": "https://tracker.phpbb.com",
-		"forum": "https://www.phpbb.com/community/",
-		"wiki": "https://wiki.phpbb.com",
-		"irc": "irc://irc.freenode.org/phpbb"
-	},
-	"extra": {
-		"language-iso": "en",
-		"english-name": "British English",
-		"local-name": "British English",
-		"phpbb-version": "4.0.0-a1-dev",
-		"direction": "ltr",
-		"user-lang": "en-gb",
-		"plural-rule": 1,
-		"recaptcha-lang": "en-GB"
-	}
-}
+        {
+            "name": "phpbb/phpbb-language-en",
+            "description": "phpBB Forum Software default language",
+            "type": "phpbb-language",
+            "version": "4.0.0-a1-dev",
+            "homepage": "https://www.phpbb.com",
+            "license": "GPL-2.0",
+            "authors": [
+                {
+                    "name": "phpBB Limited",
+                    "email": "operations@phpbb.com",
+                    "homepage": "https://www.phpbb.com/go/authors"
+                }
+            ],
+            "support": {
+                "issues": "https://tracker.phpbb.com",
+                "forum": "https://www.phpbb.com/community/",
+                "wiki": "https://wiki.phpbb.com",
+                "irc": "irc://irc.freenode.org/phpbb"
+            },
+            "extra": {
+                "language-iso": "en",
+                "english-name": "British English",
+                "local-name": "British English",
+                "phpbb-version": "4.0.0-a1-dev",
+                "direction": "ltr",
+                "user-lang": "en-gb",
+                "plural-rule": 1,
+                "recaptcha-lang": "en-GB"
+            }
+        }
 
 Main block
 ----------
@@ -140,8 +140,8 @@ Allows you to mention the organisation or people who did and maintain the transl
 .. code-block:: json
 
 		{
-			"name": "Person A,
-			"email": "mail@example.org,
+			"name": "Person A",
+			"email": "mail@example.org",
 			"homepage": "https://www.example.org"
 		}
 
@@ -164,7 +164,7 @@ Please don't leave out any of those lines out and fill them out carefully.
 
 .. note::
 
-The composer.json needs be always validate JSON. You can validate it with ``composer.phar``, see: `composer.json validation`_
+The composer.json needs be always validate JSON. You can validate it with ``composer.phar``, see: `composer.json validation`_.
 
 \*/index.htm
 ------------
