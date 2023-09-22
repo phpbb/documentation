@@ -52,15 +52,13 @@ Package Validation
 
     + ``language/{iso}/LICENSE``
 
-* Language packages may contain 4 more additional files:
+* Language packages may contain 2 more additional files:
 
-    + ``language/{iso}/AUTHORS.md``
     + ``language/{iso}/CHANGELOG.md``
     + ``language/{iso}/README.md``
-    + ``language/{iso}/VERSION.md``
 
 * No other additional files are allowed!
-* All folders within the language-directories must contain an ``index.htm`` file (e.g. ``language/en/acp/index.htm``, ``language/en/index.htm``, ``styles/prosilver/theme/de/index.htm``, see the `Language Pack Submission Policy`_ for a complete list.).
+* All folders within the language-directories must contain an ``index.htm`` file (e.g. ``language/en/acp/index.htm``, ``language/en/index.htm``, ``styles/prosilver/theme/en/index.htm``, see the `Language Pack Submission Policy`_ for a complete list.).
 * An exception from this rule are the the directories for the viglink-translation and the directories which belong the phpBB package (e.g. ``language/``, ``styles/``).
 
 File Validation

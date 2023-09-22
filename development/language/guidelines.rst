@@ -113,7 +113,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        bbcode.php
                        faq.php
                     app.php
-                    AUTHORS.md (optional)
                     captcha_qa.php
                     captcha_recaptcha.php
                     cli.php
@@ -132,7 +131,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                     README.md (optional)
                     search.php
                     ucp.php
-                    VERSION.md (optional)
                     viewforum.php
                     viewtopic.php
               styles/
