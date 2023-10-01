@@ -123,18 +123,18 @@ The ``composer.json`` from the default language `British English` looks like thi
 
 Main block
 ^^^^^^^^^^
-The main part of this ``composer.json`` has six different types of information:
+The main block of a language's ``composer.json`` file requires these six fields of information:
 
-* ``"name":`` need to start with ``phpbb/phpbb-language-`` and followed by the language iso code e.g. ``phpbb/phpbb-language-de``
-* ``"description":`` should contain a short description for your translation e.g. ``phpBB Forum Software language package Dutch (Casual Honorifics)``
-* ``"type":`` must be: ``"phpbb-language",``. Just leave it as it is!
-* ``"version":`` should be the version number of the language package. This can be different then the phpBB-version it is made for.
-* ``"homepage":`` if you want, you can put an url to your website. If not, left it empty.
-* ``"license":`` must be: ``"GPL-2.0",``. Just leave it as it is!
+* ``"name":`` Must start with ``phpbb/phpbb-language-`` and be followed by the language iso code e.g.: ``phpbb/phpbb-language-de``
+* ``"description":`` Must contain a short description for your translation e.g.: ``phpBB Forum Software language package Dutch (Casual Honorifics)``
+* ``"type":`` Must be: ``"phpbb-language",``. Do not change this!
+* ``"version":`` Should be the version number of the language package. This can be different than the phpBB-version it is made for.
+* ``"homepage":`` You may include a URL to your website, or leave this field empty using empty quotes ``""``
+* ``"license":`` Must be: ``"GPL-2.0",``. Do not change this!
 
 Authors
 ^^^^^^^
-Allows you to mention the organisation or people who did and maintain the translation. You can just add repeating blocks like this to add more than one person:
+Use this section to credit the authors and maintainers of this translation. You can add repeating blocks like this for each additional author.
 
 .. code-block:: json
 
@@ -146,31 +146,30 @@ Allows you to mention the organisation or people who did and maintain the transl
 
 Support
 ^^^^^^^
-Give room to link to your websites or chat channels, you want to direct users to, to report bugs, typographical errors or get support.
+Use this section to provide links to your websites, email, chat channels, etc. where you provide support for this translation.
 
 Extra
 ^^^^^
-The extra block contains necessary information so that your language package works correctly within a phpBB installation.
-Please don't leave out any of those lines out and fill them out carefully.
+The Extra block contains information required for the translation to function correctly within a phpBB installation.
+Please do not omit any of these lines, and fill them out carefully.
 
-* ``"language-iso":`` This needs to be your ISO code. In British English it is ``en``. This needs to be same as the directory name e.g. ``language/en/``.
-* ``"english-name":`` The english name of your language package e.g. ``"German (Casual Honorifics)"``. Former first line of ``language/{iso}/iso.txt``.
-* ``"local-name":`` The local name of your language package e.g. ``"Deutsch (Du)"``. Former second line of ``language/{iso}/iso.txt``.
-* ``"phpbb-version":`` This need to represent an existing phpBB release version e.g. ``4.0.1``. Individual naming is not allowed here!
-* ``"direction":`` Put in ``"ltr""`` for "left-to-right" languages (e.g. Italian, Dutch, German) and ``"rtl"`` for right-to-left language (e.g. Arabic).
-* ``"user-lang":`` Input the user language code e.g. "de". Formerly defined in the ``language/{iso}/common.php`` (e.g. ``'USER_LANG'    => 'de',``).
-* ``"plural-rule":`` Input the plural rule number of your language. Formerly defined in the ``language/{iso}/common.php`` (e.g. ``'PLURAL_RULE'	=> 1,``). Check the `plurals`_ section for more details.
-* ``"recaptcha-lang":`` Input the ReCaptcha-Language-Code here. Formerly defined in the ``language/{iso}/captcha_recaptcha.php`` (e.g. ``'RECAPTCHA_LANG' => 'de',``). Check `Google ReCaptcha`_ for further information which code to use.
+* ``"language-iso":`` This must be your ISO code. In British English it is ``en``. This is also the same as the directory name e.g. ``language/en/``.
+* ``"english-name":`` The English name of your language package e.g.: ``"German (Casual Honorifics)"``. (Formerly, this was the first line of ``language/{iso}/iso.txt``.)
+* ``"local-name":`` The local name of your language package e.g.: ``"Deutsch (Du)"``. (Formerly, this was the  second line of ``language/{iso}/iso.txt``.)
+* ``"phpbb-version":`` This must represent an existing phpBB release version e.g.: ``4.0.1``. Individual naming is not allowed here!
+* ``"direction":`` Use ``"ltr""`` for "left-to-right" languages (e.g.: Italian, Dutch, German) and ``"rtl"`` for right-to-left language (e.g.: Arabic).
+* ``"user-lang":`` Input the user language code, e.g.: "de". (Formerly defined in the ``language/{iso}/common.php`` e.g.: ``'USER_LANG'    => 'de',``.)
+* ``"plural-rule":`` Input the plural rule number of your language. (Formerly defined in the ``language/{iso}/common.php`` e.g.: ``'PLURAL_RULE'	=> 1,``.) Check the `plurals`_ section for more details.
+* ``"recaptcha-lang":`` Input the ReCaptcha-Language-Code here. (Formerly defined in the ``language/{iso}/captcha_recaptcha.php`` e.g.: ``'RECAPTCHA_LANG' => 'de',``.) Check `Google ReCaptcha`_ for further information which code to use.
 
 .. note::
 
-The composer.json needs be always validate JSON. You can validate it with ``composer.phar``, see: `composer.json validation`_.
+The ``composer.json`` must be valid JSON code. You can validate it using ``composer.phar``, see: `composer.json validation`_.
 
 \*/index.htm
 ------------
 
-The ``index.htm`` files in all folders must either be completely empty, or
-contains the default html body:
+The ``index.htm`` files in all folders must be either completely empty or contain the default html body:
 
 .. code-block:: html
 
