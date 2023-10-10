@@ -18,9 +18,12 @@ This documentation explains:
 PHP 7
 =====
 
-PHP 7.1.3 is the minimum version required by phpBB 3.3. It is unlikely that this should cause any problems for extensions. If your PHP code worked in phpBB 3.1 or 3.2, it should work in phpBB 3.3 as well.
+PHP 7.2.0 is the minimum version required by phpBB 3.3. It is unlikely that this should cause any problems for extensions. If your PHP code worked in phpBB 3.1 or 3.2, it should work in phpBB 3.3 as well.
 
 If you intend to start using some of the new language constructs introduced in PHP 7, you must make your extension's minimum PHP requirement known to your users. This can include setting the minimum PHP version in your extension's ``composer.json`` file as well as designating phpBB 3.3 as a minimum requirement. You can also use the ``ext.php`` file to check that the minimum PHP and phpBB version requirements are satisfied in the ``is_enableable()`` method, which will prevent users who do not meet the requirements from accidentally installing your extension. Examples of this can be found `here <tutorial_advanced.html#using-installation-commands-in-ext-php>`_.
+
+.. note::
+    The minimum required version of PHP was increased to 7.2.0 with the release of phpBB 3.3.11. Prior versions of phpBB 3.3 also supported a minimum PHP version of 7.1.3.
 
 Symfony 3.4
 ===========

@@ -917,24 +917,22 @@ Copy the following into the ``tests.yml`` file:
             strategy:
                 matrix:
                     include:
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "mariadb:10.1"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "mariadb:10.2"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "mariadb:10.3"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "mariadb:10.4"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "mariadb:10.5"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "mysql:5.6"
                           db_alias: "MyISAM Tests"
                           MYISAM: 1
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "mysql:5.6"
-                        - php: '7.1'
-                          db: "mysql:5.7"
                         - php: '7.2'
                           db: "mysql:5.7"
                         - php: '7.3'
@@ -1035,18 +1033,16 @@ Copy the following into the ``tests.yml`` file:
             strategy:
                 matrix:
                     include:
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "postgres:9.5"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "postgres:9.6"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "postgres:10"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "postgres:11"
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "postgres:12"
-                        - php: '7.1'
-                          db: "postgres:13"
                         - php: '7.2'
                           db: "postgres:13"
                         - php: '7.3'
@@ -1149,7 +1145,7 @@ Copy the following into the ``tests.yml`` file:
             strategy:
                 matrix:
                     include:
-                        - php: '7.1'
+                        - php: '7.2'
                           db: "sqlite3"
                         - php: '7.2'
                           db: "mcr.microsoft.com/mssql/server:2017-latest"
