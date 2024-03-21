@@ -134,6 +134,86 @@ In no particular order, here are the individual namespaces and a brief descripti
 
 Even from this short list alone, we can see just how much more information we can communicate to developers simply by placing a character or two at the front of our existing classes.
 
+CSS Variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Kebap-case
+^^^^^^^^^^
+
+We specifically use kebab-case (lowercase words separated by hyphens) for CSS variable names. This aligns with the convention used by Bootstrap itself and other CSS frameworks.
+Kebab-case improves readability and avoids naming conflicts, especially when working with custom properties.
+
+Here's an example:
+
+.. code:: css
+
+    :root {
+        --primary-color: #1abc9c;
+        --secondary-color: #34495e;
+        --text-color: #ecf0f1;
+    }
+
+    .btn {
+        background-color: var(--primary-color);
+        color: var(--text-color);
+    }
+
+Variable prefixed
+^^^^^^^^^^^^^^^^^
+
+To organize your CSS variables effectively, a prefix system shall be used:
+
+- Project-wide variables:
+    Use the --phpbb- prefix for variables that apply to all styles. These variables will likely define core aspects of the UI, like colors, spacing, and fonts.
+
+- Theme-specific variables:
+    For variables that are specific to a particular style (e.g. prosilver), use the style's name as a prefix followed by a hyphen (-). This helps distinguish theme-specific customizations from project-wide styles.
+
+**Example:**
+
+.. code:: css
+
+    :root {
+        /* Project-wide variables */
+        --phpbb-primary-color: #1abc9c;
+        --phpbb-secondary-color: #34495e;
+        --phpbb-text-color: #ecf0f1;
+
+        /* Prosilver-specific variables */
+        --prosilver-background-color: #f5f5f5;
+        --prosilver-border-color: #ddd;
+    }
+
+    .button {
+          background-color: var(--phpbb-primary-color);
+          color: var(--phpbb-text-color);
+    }
+
+    /* Prosilver-specific style */
+    .content {
+        background-color: var(--prosilver-background-color);
+        border: 1px solid var(--prosilver-border-color);
+    }
+
+In this example:
+
+- `--phpbb-primary-color`, `--phpbb-secondary-color` and `--phpbb-text-color` are project-wide variables that shall be accessed throughout the codebase.
+- `--prosilver-background-color` and `--prosilver-border-color` are specific to the prosilver style, allowing for easy customization without affecting other styles.
+
+**Benefits of Prefixed Variables:**
+
+- Improved Organization: Clearly separates project-wide styles from style-specific customizations.
+- Reduced Conflicts: Prevents naming clashes between variables of different scopes.
+- Maintainability: Makes it easier to find and manage variables across your CSS code.
+
+**Additional Tips:**
+
+- Keep variable names concise while maintaining clarity.
+- Consider using a linter (like `stylelint`) or code formatter to enforce consistent naming conventions.
+- Document your variables in a central location for easy reference.
+
+By following these guidelines, you'll create a well-structured and maintainable system for managing CSS variables in your phpBB Extension or Style.
+
 Further Reading
 ^^^^^^^^^^^^^^^
 
