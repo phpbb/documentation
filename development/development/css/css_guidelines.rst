@@ -247,6 +247,57 @@ When indenting Sass, we stick to the same four space tab indentation, and we als
 
 **N.B.** Nesting in Sass should be avoided in most cases. See the Specificity section for more data
 
+CSS Variables
+~~~~~~~~~~~~~
+
+CSS Variables allow you to store and reuse values throughout your stylesheets. This promotes maintainability and reduces the risk of inconsistencies.
+
+Here are some guidelines for using CSS variables effectively in phpBB styles:
+
+- Store project-wide values:
+
+    Use variables to define core UI aspects like colors, spacing, and fonts. Prefix these variables with `--phpbb-` in the phpBB core to avoid naming conflicts.
+    For example:
+
+    .. code:: css
+
+        :root {
+          --phpbb-primary-color: #1abc9c;
+          --phpbb-secondary-color: #34495e;
+          --phpbb-text-color: #ecf0f1;
+          --phpbb-font-size: 16px;
+          --phpbb-line-height: 1.5;
+        }
+
+- Create style-specific variables:
+    If styles differ or might differ between phpBB styles (e.g. prosilver), use the style's name as a prefix (e.g. --prosilver-) for style-specific variables.
+    This allows for customization without affecting other styles. For instance:
+
+    .. code:: css
+
+        :root {
+          --prosilver-background-color: #f5f5f5;
+          --prosilver-border-color: #ddd;
+        }
+
+        .content {
+          background-color: var(--prosilver-background-color);
+          border: 1px solid var(--prosilver-border-color);
+        }
+
+    In this example, `--phpbb-primary-color` defines the primary color used throughout the project, while `--prosilver-background-color` sets the background color specifically for the prosilver style.
+
+By following these recommendations, you can leverage the power of CSS variables to create a more maintainable and efficient codebase for your phpBB styles.
+
+Benefits of Using CSS Variables:
+
+- Improved Maintainability: Makes it easier to update core styles or style-specific customizations by changing the variable value in one place.
+- Reduced Repetition: Eliminates the need to repeat the same value throughout your stylesheets.
+- Flexibility: Provides greater control over styles and the ability to create themes with unique appearances.
+
+For a detailed explanation of CSS Variables, refer to the `MDN Web Docs: Using CSS custom properties (variables) <https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties>`_.
+
+
 Enforcing standardization
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
