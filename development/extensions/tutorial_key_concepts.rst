@@ -297,21 +297,21 @@ is already defined, and if not, then include your script and define the script. 
 
 .. code-block:: twig
 
-    {% if not $INCLUDED_JQUERYUIJS %}
+    {% if not definition.INCLUDED_JQUERYUIJS %}
         {% INCLUDEJS '@vendor_extname/jquery-ui.js' %}
-        {% DEFINE $INCLUDED_JQUERYUIJS = true %}
+        {% DEFINE INCLUDED_JQUERYUIJS = true %}
     {% endif %}
 
 Some example template variable definitions to use with common libraries (the common practice should be to name
 the variable definition after the library filename, e.g. highslide.js becomes HIGHSLIDEJS):
 
-* HighSlide JS: ``$INCLUDED_HIGHSLIDEJS``
-* Font Awesome CSS: ``$INCLUDED_FONTAWESOMECSS``
-* ColorBox JS: ``$INCLUDED_COLORBOXJS``
-* ColPick JS: ``$INCLUDED_COLPICKJS``
-* MoTools JS: ``$INCLUDED_MOTOOLSJS``
-* Dojo JS: ``$INCLUDED_DOJOJS``
-* Angular JS: ``$INCLUDED_ANGULARJS``
+* HighSlide JS: ``INCLUDED_HIGHSLIDEJS``
+* Font Awesome CSS: ``INCLUDED_FONTAWESOMECSS``
+* ColorBox JS: ``INCLUDED_COLORBOXJS``
+* ColPick JS: ``INCLUDED_COLPICKJS``
+* MoTools JS: ``INCLUDED_MOTOOLSJS``
+* Dojo JS: ``INCLUDED_DOJOJS``
+* Angular JS: ``INCLUDED_ANGULARJS``
 
 .. seealso::
 

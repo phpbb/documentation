@@ -108,13 +108,13 @@ In order to create an extension via the CLI, you need to open a console
 on your server and ``cd`` to the root directory of the phpBB board where
 you installed this extension:
 
-.. code:: bash
+.. code:: console
 
     $ cd ./path/to/phpBB
 
 To create an extension, run:
 
-.. code:: bash
+.. code:: console
 
     $ ./bin/phpbbcli.php extension:create
 
@@ -814,7 +814,7 @@ distribution such as unit tests and hidden Git files.
 
 To run the build script, use the following console commands:
 
-.. code:: bash
+.. code:: console
 
     # Navigate to the root of your extension
     $ cd ./path/to/phpBB/vendor/package
