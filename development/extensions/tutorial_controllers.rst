@@ -44,9 +44,9 @@ Every controller should contain at least two methods:
 
     <?php
 
-    use \Symfony\Component\HttpFoundation\Response;
-
     namespace acme\demo\controller;
+
+    use \Symfony\Component\HttpFoundation\Response;
 
     class main
     {
