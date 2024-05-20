@@ -5,13 +5,15 @@ on:
     branches:
       - master
       - '[34].[0-9]+.x'
+      - actions/build_pdf
   pull_request:
     branches:
       - master
       - '[34].[0-9]+.x'
 
 jobs:
-  build:
+  build-dev-docs:
+    name: 'Build development docs'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -31,3 +33,21 @@ jobs:
         run: |
           cd development
           make html
+
+  build-user-docs-pdf:
+    name: 'Build user docs PDF'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install fop
+        run: |
+          sudo apt-get install -y fop
+      - name: Build pdf documentation
+        working-directory: ${{ github.workspace }}/documentation
+        run: |
+          ./create_pdf.sh
+      - name: Archive PDF output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Documentation PDF
+          path: ${{ github.workspace }}/documentation/*.pdf
