@@ -60,4 +60,4 @@ jobs:
         working-directory: ${{ github.workspace }}/documentation
         run: |
           mkdir build_website
-          ./create_pdf.sh build_website
+          ./create_docs.sh build_website
