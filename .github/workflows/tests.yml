@@ -50,3 +50,14 @@ jobs:
         with:
           name: Documentation PDF
           path: ${{ github.workspace }}/documentation/*.pdf
+
+  build-user-docs-website:
+    name: 'Build user docs for website'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build documentation for website
+        working-directory: ${{ github.workspace }}/documentation
+        run: |
+          mkdir build_website
+          ./create_pdf.sh build_website
