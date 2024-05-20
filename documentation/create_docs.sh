@@ -8,8 +8,9 @@ rm -rf build
 
 echo "Creating docs"
 xsltproc --xinclude xsl/proteus_php.xsl proteus_doc.xml
+exit_code=$?  # Capture the exit code
 
-if [ "$?" == "0" ]; then
+if [ "$exit_code" == "0" ]; then
 	echo "Successfully created documentation"
 	echo "Removing $path"
 	rm -rf $path
@@ -24,3 +25,6 @@ if [ "$?" == "0" ]; then
 else
 	echo "Failed creating documentation"
 fi
+
+# Output exit code
+exit $exit_code
