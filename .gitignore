@@ -1,4 +1,5 @@
 Thumbs.db
 .DS_Store
+.idea/
 /development/_build
 /documentation/build
