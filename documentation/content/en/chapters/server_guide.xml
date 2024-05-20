@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
-        "https://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="server_guide">
     <?dbhtml dir="serverguide" filename="index.html" ?>
     <chapterinfo>
