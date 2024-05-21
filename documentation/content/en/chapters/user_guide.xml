@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
-                         "https://www.docbook.org/xml/4.4/docbookx.dtd">
 <chapter id="user_guide">
 	<?dbhtml dir="userguide" filename="index.html" ?>
 	<chapterinfo>
@@ -421,7 +419,7 @@
 			<title>Drafts</title>
 			<para>When creating a post, it can be saved or loaded using the drafts feature. If the board permissions allow drafts to be saved, then <guilabel>Save</guilabel> and <guilabel>Load</guilabel> buttons will appear on the posting page.</para>
 			<itemizedlist>
-				<listitem><para><guilabel>Save</guilabel> - Saves a post as a draft. When a draft is saved, only the subject and message of the post are stored. Topic icons, attachments, etc&hellip; will be lost.</para></listitem>
+				<listitem><para><guilabel>Save</guilabel> - Saves a post as a draft. When a draft is saved, only the subject and message of the post are stored. Topic icons, attachments, etc... will be lost.</para></listitem>
 				<listitem><para><guilabel>Load</guilabel> - Loads a saved draft. When clicked, a listing of available drafts will appear. Click the title of the desired post to load the draft. Any information in the current post will be lost and replaced with that of the draft.</para></listitem>
 			</itemizedlist>
 			<para>Once a draft is used, it is removed. For more information on managing drafts, please see <link linkend="ucp_drafts">UCP Drafts</link>.</para>
