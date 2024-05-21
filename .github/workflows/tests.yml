@@ -11,12 +11,13 @@ on:
       - '[34].[0-9]+.x'
 
 jobs:
-  build:
+  build-dev-docs:
+    name: 'Build development docs'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
       - name: Install dependencies
@@ -31,3 +32,35 @@ jobs:
         run: |
           cd development
           make html
+
+  build-user-docs-pdf:
+    name: 'Build user docs PDF'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install fop
+        run: |
+          sudo apt-get install -y fop
+      - name: Build pdf documentation
+        working-directory: ${{ github.workspace }}/documentation
+        run: |
+          ./create_pdf.sh
+      - name: Archive PDF output
+        uses: actions/upload-artifact@v4
+        with:
+          name: Documentation PDF
+          path: ${{ github.workspace }}/documentation/*.pdf
+
+  build-user-docs-website:
+    name: 'Build user docs for website'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install xsltproc
+        run: |
+          sudo apt-get install -y xsltproc
+      - name: Build documentation for website
+        working-directory: ${{ github.workspace }}/documentation
+        run: |
+          mkdir build_website
+          ./create_docs.sh build_website
