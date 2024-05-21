@@ -112,7 +112,7 @@ An example:
     implements the phpbb_request_interface which is available for easy mocking
     of input in tests.
 
-    PHPBB3-1234
+    PHPBB-1234
 
 The structure of a commit message which is verified by the commit-msg hook is as follows:
 
