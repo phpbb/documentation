@@ -1,0 +1,124 @@
+================
+phpBB 3.3 to 4.0
+================
+
+phpBB 4.0 is a major release that contains backward compatibility breaks and also introduces some deprecations.
+
+.. contents:: Table of Contents
+   :depth: 2
+   :local:
+   :backlinks: none
+
+Basics
+======
+
+PHP
+---
+The minimum required version of PHP for phpBB 4.0 is ``8.1`` with full support for versions ``8.2`` and ``8.3``.
+PHP code that worked with the supported versions of phpBB 3.3 should work with phpBB 4.0 as well but might require minor adjustments.Recommendation
+
+Symfony
+-------
+phpBB 4.0 ships with Symfony 6.4. There are quite a few changes to the standard Symfony version that came with phpBB 3.3.
+The following upgrade guides provides by Symfony might help with resolving some of the issues you might encounter when upgrading
+custom PHP or Extension code for phpBB 4.0:
+
+- `Upgrade Symfony from 3.x to 4.0 <https://github.com/symfony/symfony/blob/4.4/UPGRADE-4.0.md>`_
+- `Upgrade Symfony from 4.4 to 5.0 <https://github.com/symfony/symfony/blob/5.4/UPGRADE-5.0.md>`_
+- `Upgrade Symfony from 5.x to 6.0 <https://github.com/symfony/symfony/blob/6.4/UPGRADE-6.0.md>`_
+
+You can find more upgrade guides in the `Symfony Repository <https://github.com/symfony/symfony/tree/6.4>`_ on GitHub.
+
+Major changes
+=============
+
+Ban system
+----------
+The ban system has been greatly refactored for phpBB 4.0. As part of this, the following changes were introduced:
+
+- Added support for banning `CIDR blocks <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_blocks>`_
+- Added support for IPv6 banning
+- Removed "exclude" functionality which resulted in ambiguous settings
+
+Class and function changes
+==========================
+The following table lists class and function changes that might affect custom PHP or Extension code.
+Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/code/master/>`_ for further insight into the class and function API in phpBB 4.0.
+
+.. list-table::
+   :widths: 15 15 10 10 50
+   :header-rows: 1
+
+   * - Class or function
+     - Path
+     - Type of change
+     - Version
+     - Explanation
+   * - ``\phpbb\avatar\driver\remote``
+     - ``phpbb/avatar/driver/remote.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use alternative avatar like gravatar or upload avatar.
+   * - ``\phpbb\ban\*``
+     - ``phpbb/ban/*``
+     - Added
+     - ``4.0.0-a1``
+     - Added new refactored banning system. See the API docs for `\\phpbb\\ban <https://area51.phpbb.com/docs/code/master/phpbb/ban.html>`_ namespace.
+   * - ``\phpbb\captcha\plugins\incomplete``
+     - ``phpbb/captcha/plugins/incomplete.php``
+     - Added
+     - ``4.0.0-a1``
+     - Placeholder CAPTCHA that prevents e.g. registration until safer captcha like reCAPTCHA or QA is enabled.
+   * - ``\phpbb\captcha\plugins\gd``
+     - ``phpbb/captcha/plugins/gd.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use safer captcha like reCAPTCHA or QA.
+   * - ``\phpbb\captcha\plugins\gd_wave``
+     - ``phpbb/captcha/plugins/gd_wave.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use safer captcha like reCAPTCHA or QA.
+   * - ``\phpbb\captcha\plugins\nogd``
+     - ``phpbb/captcha/plugins/nogd.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use safer captcha like reCAPTCHA or QA.
+   * - ``\phpbb\captcha\char_cube3d``
+     - ``phpbb/captcha/char_cube3d.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used due to removal of gd & nogd CAPTCHAs.
+   * - ``\phpbb\captcha\colour_manager``
+     - ``phpbb/captcha/colour_manager.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used due to removal of gd & nogd CAPTCHAs.
+   * - ``\phpbb\captcha\gd``
+     - ``phpbb/captcha/gd.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used due to removal of gd & nogd CAPTCHAs.
+   * - ``\phpbb\captcha\gd_wave``
+     - ``phpbb/captcha/gd_wave.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used due to removal of gd & nogd CAPTCHAs.
+   * - ``\phpbb\captcha\non_gd``
+     - ``phpbb/captcha/non_gd.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used due to removal of gd & nogd CAPTCHAs.
+   * - ``\phpbb\form\form_helper``
+     - ``phpbb/form/form_helper.php``
+     - Added
+     - ``4.0.0-a1``
+     - Introduced form_helper for generating and checking form tokens.
+
+**Explanation of columns:**
+
+* **Class or function:**  The name of the class or function that was added, changed, deprecated, or removed in this version.
+* **Path:** Path to file.
+* **Type of change:** The type of change, e.g. added, changed, deprecated, or removed in this version.
+* **Version:** Version in which this change was introduced.
+* **Explanation:** The suggested approach to handle the change. This could involve using an alternative function, migrating code to a new approach, or providing additional information.
