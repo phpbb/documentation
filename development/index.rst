@@ -8,7 +8,7 @@ Contents:
 
    start/install
    start/getting_started
-   development/changes
+   development/upgrade
    development/processes
    development/git
    development/index

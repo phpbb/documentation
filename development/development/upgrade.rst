@@ -15,4 +15,4 @@ Contents:
 .. toctree::
    :maxdepth: 3
 
-   changes/400
+   upgrade/400
