@@ -42,7 +42,7 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Path
      - Type of change
      - Version
-     - Recommendation
+     - Explanation
    * - ``\phpbb\avatar\driver\remote``
      - ``phpbb/avatar/driver/remote.php``
      - Removed
@@ -93,6 +93,11 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Removed
      - ``4.0.0-a1``
      - No longer used due to removal of gd & nogd CAPTCHAs.
+   * - ``\phpbb\form\form_helper``
+     - ``phpbb/form/form_helper.php``
+     - Added
+     - ``4.0.0-a1``
+     - Introduced form_helper for generating and checking form tokens.
 
 **Explanation of columns:**
 
@@ -100,4 +105,4 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
 * **Path:** Path to file.
 * **Type of change:** The type of change, e.g. added, changed, deprecated, or removed in this version.
 * **Version:** Version in which this change was introduced.
-* **Recommendation:** The suggested approach to handle the change. This could involve using an alternative function, migrating code to a new approach, or providing additional information.
+* **Explanation:** The suggested approach to handle the change. This could involve using an alternative function, migrating code to a new approach, or providing additional information.
