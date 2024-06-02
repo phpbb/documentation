@@ -29,6 +29,17 @@ custom PHP or Extension code for phpBB 4.0:
 
 You can find more upgrade guides in the `Symfony Repository <https://github.com/symfony/symfony/tree/6.4>`_ on GitHub.
 
+Major changes
+=============
+
+Ban system
+----------
+The ban system has been greatly refactored for phpBB 4.0. As part of this, the following changes were introduced:
+
+- Added support for banning `CIDR blocks <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_blocks>`_
+- Added support for IPv6 banning
+- Removed "exclude" functionality which resulted in ambiguous settings
+
 Class and function changes
 ==========================
 The following table lists class and function changes that might affect custom PHP or Extension code.
@@ -48,6 +59,11 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Removed
      - ``4.0.0-a1``
      - Use alternative avatar like gravatar or upload avatar.
+   * - ``\phpbb\ban\*``
+     - ``phpbb/ban/*``
+     - Added
+     - ``4.0.0-a1``
+     - Added new refactored banning system. See the API docs for `\\phpbb\\ban <https://area51.phpbb.com/docs/code/master/phpbb/ban.html>`_ namespace.
    * - ``\phpbb\captcha\plugins\incomplete``
      - ``phpbb/captcha/plugins/incomplete.php``
      - Added
