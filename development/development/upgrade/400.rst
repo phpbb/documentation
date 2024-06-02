@@ -1,6 +1,6 @@
-=========
-phpBB 4.0
-=========
+================
+phpBB 3.3 to 4.0
+================
 
 phpBB 4.0 is a major release that contains backward compatibility breaks and also introduces some deprecations.
 
