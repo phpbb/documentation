@@ -114,6 +114,26 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Added
      - ``4.0.0-a1``
      - Introduced form_helper for generating and checking form tokens.
+   * - ``get_user_avatar``
+     - ``includes/functions_compatibility.php``
+     - Removed in ``4.0.0-a1``, deprecated in ``3.1.0-a1``
+     - ``4.0.0-a1``
+     - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
+   * - ``phpbb_get_user_avatar``
+     - ``includes/functions.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
+   * - ``phpbb_get_group_avatar``
+     - ``includes/functions.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
+   * - ``phpbb_get_avatar``
+     - ``includes/functions.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
 
    * - ``build_cfg_template``
      - ``includes/functions_acp.php``
