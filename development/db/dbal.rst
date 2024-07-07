@@ -383,6 +383,13 @@ Example:
 
     $affected_rows = $db->sql_affectedrows();
 
+.. warning::
+    Be cautious when using ``sql_affectedrows()`` to determine the number of rows affected by your query, especially with **SELECT** queries.
+    This function's behavior can differ depending on the used database driver and whether the query was cached.
+
+    Do not rely solely on ``sql_affectedrows()`` to confirm the number of impacted rows. Consider alternative approaches
+    like checking the number of rows returned by `sql_fetchrow`_ or `sql_fetchrowset`_.
+
 sql_nextid
 ----------
 Retrieves the ID generated for an AUTO_INCREMENT column by the previous INSERT query.
