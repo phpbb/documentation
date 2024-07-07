@@ -338,6 +338,7 @@ You can also define simple (boolean, integer or double) variables from inside th
 if you dont want to copy & paste complex ``if`` expressions over and over again:
 
 .. code-block:: twig
+    :force:
 
     {% if expr1 %}
         {% DEFINE $COLSPAN = 3 %}
@@ -372,3 +373,69 @@ User variables can be cleared (unset) using:
 .. code-block:: twig
 
     {% UNDEFINE $COLSPAN %}
+
+Language variables
+------------------
+
+You can use and interact with language variables in multiple ways. phpBB extends the standard twig syntax with the
+following functions to be able to use language variables within twig based template code:
+
+- ``lang``
+    Get output for a language variable similar to using ``{{ L_FOO }}``.
+    The following two lines output the same result:
+
+    .. code-block:: twig
+        :force:
+
+        {{ lang('FOO') }}
+        {{ L_FOO }}
+
+    It supports the same parameter syntax as ``$language->lang()``:
+
+    .. code-block:: twig
+
+        {{ lang('SOME_VAR', param1, param2) }}
+
+    For language variables in Javascript, please use ``lang_js``.
+
+- ``lang_js``
+    Get output for language variable in JS code. This should be used instead of the previously used ``LA_`` prefix.
+    The following two lines output the same result:
+
+    .. code-block:: twig
+        :force:
+
+        {{ lang_js('FOO') }}
+        {{ LA_FOO }}
+
+    It supports the same parameter syntax as ``$language->lang()``:
+
+    .. code-block:: twig
+
+        {{ lang_js('SOME_VAR', param1, param2) }}
+
+    Essentially this is the equivalent of:
+
+    .. code-block:: twig
+
+        {{ lang('SOME_VAR', param1, param2) | escape('js') }}
+
+- ``lang_defined``
+    Checks whether a language variable is defined. Can be used to check for existence of a language variable before
+    calling ``lang`` or ``lang_js``.
+
+    .. code-block:: twig
+
+        {% if lang_defined('MY_LANG_VAR') %}
+            <span>{{ lang('MY_LANG_VAR') }}</span>
+        {% endif %}
+
+- ``lang_raw``
+    Outputs the raw value of a language variable, e.g. a string or array. It can be used to access entries of a language
+    array in the template code.
+
+    .. code-block:: twig
+
+        {% for step in lang_raw('EXTENSION_UPDATING_EXPLAIN') %}
+            <li>{{ step }}</li>
+        {% endfor %}
