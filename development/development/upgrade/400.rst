@@ -223,6 +223,12 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - ``4.0.0-a1``
      - Use ``\phpbb\config\config::set()`` instead.
 
+   * - ``request_var``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\request\request::variable()`` instead.
+
    * - ``get_tables``
      - ``includes/functions_compatibility.php``
      - Removed
