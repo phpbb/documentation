@@ -121,6 +121,12 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - ``4.0.0-a1``
      - No longer used due to removal of gd & nogd CAPTCHAs.
 
+   * - ``\phpbb\filesystem``
+     - ``phpbb/filesystem.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\filesystem\filesystem`` instead.
+
    * - ``\phpbb\form\form_helper``
      - ``phpbb/form/form_helper.php``
      - Added
@@ -204,6 +210,18 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Removed
      - ``4.0.0-a1``
      - Use ``\phpbb\log\log`` instead.
+
+   * - ``set_config``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\config\config::increment()`` instead.
+
+   * - ``set_config_count``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\config\config::set()`` instead.
 
    * - ``get_tables``
      - ``includes/functions_compatibility.php``
