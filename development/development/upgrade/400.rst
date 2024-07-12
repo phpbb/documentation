@@ -133,6 +133,12 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - ``4.0.0-a1``
      - Introduced form_helper for generating and checking form tokens.
 
+   * - ``\phpbb\php\ini``
+     - ``phpbb/php/ini.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\bantu\IniGetWrapper\IniGetWrapper`` instead.
+
    * - ``get_user_avatar``
      - ``includes/functions_compatibility.php``
      - Removed in ``4.0.0-a1``, deprecated in ``3.1.0-a1``
@@ -228,6 +234,48 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Removed
      - ``4.0.0-a1``
      - Use ``\phpbb\request\request::variable()`` instead.
+
+   * - ``set_var``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\request\type_cast_helper::set_var()`` instead.
+
+   * - ``phpbb_email_hash``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_http_login``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_load_extensions_autoloaders``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_build_hidden_fields_for_query_params``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_delete_user_pms``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``phpbb_delete_user_pms`` instead. Pay attention to pay array instead of single user id.
+
+   * - ``phpbb_to_numeric``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
 
    * - ``get_tables``
      - ``includes/functions_compatibility.php``
