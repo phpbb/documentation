@@ -54,86 +54,330 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Type of change
      - Version
      - Explanation
+
    * - ``\phpbb\avatar\driver\remote``
      - ``phpbb/avatar/driver/remote.php``
      - Removed
      - ``4.0.0-a1``
      - Use alternative avatar like gravatar or upload avatar.
+
    * - ``\phpbb\ban\*``
      - ``phpbb/ban/*``
      - Added
      - ``4.0.0-a1``
      - Added new refactored banning system. See the API docs for `\\phpbb\\ban <https://area51.phpbb.com/docs/code/master/phpbb/ban.html>`_ namespace.
+
    * - ``\phpbb\captcha\plugins\incomplete``
      - ``phpbb/captcha/plugins/incomplete.php``
      - Added
      - ``4.0.0-a1``
      - Placeholder CAPTCHA that prevents e.g. registration until safer captcha like reCAPTCHA or QA is enabled.
+
    * - ``\phpbb\captcha\plugins\gd``
      - ``phpbb/captcha/plugins/gd.php``
      - Removed
      - ``4.0.0-a1``
      - Use safer captcha like reCAPTCHA or QA.
+
    * - ``\phpbb\captcha\plugins\gd_wave``
      - ``phpbb/captcha/plugins/gd_wave.php``
      - Removed
      - ``4.0.0-a1``
      - Use safer captcha like reCAPTCHA or QA.
+
    * - ``\phpbb\captcha\plugins\nogd``
      - ``phpbb/captcha/plugins/nogd.php``
      - Removed
      - ``4.0.0-a1``
      - Use safer captcha like reCAPTCHA or QA.
+
    * - ``\phpbb\captcha\char_cube3d``
      - ``phpbb/captcha/char_cube3d.php``
      - Removed
      - ``4.0.0-a1``
      - No longer used due to removal of gd & nogd CAPTCHAs.
+
    * - ``\phpbb\captcha\colour_manager``
      - ``phpbb/captcha/colour_manager.php``
      - Removed
      - ``4.0.0-a1``
      - No longer used due to removal of gd & nogd CAPTCHAs.
+
    * - ``\phpbb\captcha\gd``
      - ``phpbb/captcha/gd.php``
      - Removed
      - ``4.0.0-a1``
      - No longer used due to removal of gd & nogd CAPTCHAs.
+
    * - ``\phpbb\captcha\gd_wave``
      - ``phpbb/captcha/gd_wave.php``
      - Removed
      - ``4.0.0-a1``
      - No longer used due to removal of gd & nogd CAPTCHAs.
+
    * - ``\phpbb\captcha\non_gd``
      - ``phpbb/captcha/non_gd.php``
      - Removed
      - ``4.0.0-a1``
      - No longer used due to removal of gd & nogd CAPTCHAs.
+
+   * - ``\phpbb\filesystem``
+     - ``phpbb/filesystem.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\filesystem\filesystem`` instead.
+
    * - ``\phpbb\form\form_helper``
      - ``phpbb/form/form_helper.php``
      - Added
      - ``4.0.0-a1``
      - Introduced form_helper for generating and checking form tokens.
+
+   * - ``\phpbb\php\ini``
+     - ``phpbb/php/ini.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\bantu\IniGetWrapper\IniGetWrapper`` instead.
+
+   * - ``bbcode_second_pass_by_extension``
+     - ``includes/bbcode.php``
+     - Removed in ``4.0.0-a1``, deprecated in ``3.2.10``
+     - ``4.0.0-a1``
+     - Use s9e text_formatter instead.
+
    * - ``get_user_avatar``
      - ``includes/functions_compatibility.php``
      - Removed in ``4.0.0-a1``, deprecated in ``3.1.0-a1``
      - ``4.0.0-a1``
      - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
+
    * - ``phpbb_get_user_avatar``
      - ``includes/functions.php``
      - Removed
      - ``4.0.0-a1``
      - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
+
    * - ``phpbb_get_group_avatar``
      - ``includes/functions.php``
      - Removed
      - ``4.0.0-a1``
      - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
+
    * - ``phpbb_get_avatar``
      - ``includes/functions.php``
      - Removed
      - ``4.0.0-a1``
      - Use ``\phpbb\avatar\helper::get_user_avatar()`` instead.
+
+   * - ``phpbb_check_hash``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\passwords\manager::check()`` instead.
+
+   * - ``phpbb_clean_path``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\filesystem\helper::clean_path()`` instead.
+
+   * - ``phpbb_hash``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\passwords\manager::hash()`` instead.
+
+   * - ``tz_select``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``phpbb_timezone_select()`` from ``functions.php`` instead.
+
+   * - ``cache_moderators``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``phpbb_cache_moderators()`` from ``functions_admin.php`` instead.
+
+   * - ``update_foes``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``phpbb_update_foes()`` from ``functions_admin.php`` instead.
+
+   * - ``get_user_rank``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``phpbb_get_user_rank()`` from ``functions_display.php`` instead.
+
+   * - ``get_remote_file``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\file_downloader`` instead.
+
+   * - ``add_log``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\log\log`` instead.
+
+   * - ``set_config``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\config\config::increment()`` instead.
+
+   * - ``set_config_count``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\config\config::set()`` instead.
+
+   * - ``request_var``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\request\request::variable()`` instead.
+
+   * - ``set_var``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\request\type_cast_helper::set_var()`` instead.
+
+   * - ``phpbb_email_hash``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_http_login``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_load_extensions_autoloaders``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_build_hidden_fields_for_query_params``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``phpbb_delete_user_pms``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``phpbb_delete_user_pms`` instead. Pay attention to pay array instead of single user id.
+
+   * - ``phpbb_to_numeric``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - No longer used.
+
+   * - ``get_tables``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\db\tools\tools_interface`` classes instead.
+
+   * - ``phpbb_chmod``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\filesystem\filesystem::phpbb_chmod()`` instead.
+
+   * - ``phpbb_is_writable``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\filesystem\filesystem::is_writable()`` instead.
+
+   * - ``phpbb_is_absolute``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\filesystem\helper::is_absolute_path()`` instead.
+
+   * - ``phpbb_realpath``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\filesystem\helper::realpath()`` instead.
+
+   * - ``phpbb_get_plural_form``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\language\language::get_plural_form()`` instead.
+
+   * - ``phpbb_pcre_utf8_support``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Not used anymore.
+
+   * - ``delete_attachments``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\attachment\manager::delete()`` instead.
+
+   * - ``phpbb_unlink``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\attachment\manager::unlink()`` instead.
+
+   * - ``upload_attachment``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\attachment\manager::upload()`` instead.
+
+   * - ``display_reasons``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\report\report_reason_list_provider::display_reasons()`` instead.
+
+   * - ``phpbb_check_and_display_sql_report``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use ``\phpbb\controller\helper::display_sql_report()`` instead.
+
+   * - ``phpbb_checkdnsrr``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use PHP's ``checkdnsrr()`` instead.
+
+   * - ``phpbb_inet_ntop``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use PHP's ``inet_ntop()`` instead.
+
+   * - ``phpbb_inet_pton``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Use PHP's ``inet_pton()`` instead.
+
+   * - ``wrap_img_in_html``
+     - ``includes/functions_compatibility.php``
+     - Removed
+     - ``4.0.0-a1``
+     - Not used anymore.
 
    * - ``build_cfg_template``
      - ``includes/functions_acp.php``
