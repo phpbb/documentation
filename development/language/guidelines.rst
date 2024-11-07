@@ -143,7 +143,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 5) Submissions should follow the recommendations in the `4.0 Translation (i18n/L10n) Guidelines`_ as closely as possible, especially the `4.0 Writing style`_.
 
-6) All PHP and text files must be encoded in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
+6) All PHP and text files must be encoded in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ , `Codelobster`_ or `PSPad`_, both lightweight and free.
 
 7) The translation is mostly your work and you have a right to hold a copyright on the translation and put your name or the names of those on your team in the ``composer.json`` file in the authors section.
 
@@ -165,6 +165,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 .. _4.0 Translation (i18n/L10n) Guidelines: https://area51.phpbb.com/docs/40x/coding-guidelines.html#translation
 .. _4.0 Writing style: https://area51.phpbb.com/docs/40x/coding-guidelines.html#writingstyle
 .. _Notepad++: https://notepad-plus-plus.org/
+.. _Codelobster: https://codelobster.com/
 .. _PSPad: http://www.pspad.com/en/
 .. _officially: https://www.phpbb.com/support/intl/
 .. _Dutch language: https://www.phpbb.com/customise/db/translation/dutch_casual_honorifics/
