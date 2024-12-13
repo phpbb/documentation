@@ -16,6 +16,7 @@ This tutorial explains:
 * `Using service decoration`_
 * `Replacing the phpBB Datetime class`_
 * `Extension version checking`_
+* `Implementing Filesystem changes to phpBB`_
 
 Adding a PHP event to your extension
 ====================================
@@ -526,3 +527,177 @@ branch can be used to provide links to versions in development.
     ``download`` | "(Optional) A URL to download this version of the extension."
     ``eol`` | "This is currently not being used yet. Use ``null``"
     ``security`` | "This is currently not being used yet. Use ``false``"
+
+Implementing Filesystem changes to phpBB
+========================================
+In certain scenarios, an extension may need to implement filesystem changes within phpBB beyond the extension's
+self-contained structure. While this approach is generally discouraged, there are specific conditions where it
+may be appropriate. Extensions can safely add or remove files and folders within phpBB’s  ``files``, ``images``,
+and ``store`` directories, as these are designed to hold user-generated content and are typically not replaced
+during phpBB or extension updates.
+
+There are two primary methods for implementing filesystem changes in phpBB through an extension:
+
+	1.	Using Migrations
+	2.	Using the Extension Enabling Process (ext.php)
+
+Below are examples of how to create a directory named ``acme_demo_dir`` in the ``store`` directory for storing additional extension-related files.
+
+Using Migrations
+----------------
+While migrations are generally designed for database changes, they offer specific advantages when managing filesystem changes:
+
+  - Existence Check: Use the ``effectively_installed`` method to check if the files or directories exist already.
+  - Installation Order: Use the ``depends_on`` method to ensure the directory is created at the correct stage during the extension’s installation process.
+  - Run separate (optional) filesystem processes during installation and uninstallation.
+
+.. code-block:: php
+
+    <?php
+
+    namespace acme\demo\migrations;
+
+    class add_acme_demo_dir extends \phpbb\db\migration\container_aware_migration
+    {
+        /** @var \phpbb\filesystem\filesystem */
+        protected $filesystem;
+
+        /** @var string */
+        protected $acme_demo_dir;
+
+        /**
+         * Initialize class properties
+         */
+        protected function init()
+        {
+            if (!isset($this->filesystem))
+            {
+                $this->filesystem = $this->container->get('filesystem');
+                $this->acme_demo_dir = $this->container->getParameter('core.root_path') . 'store/acme_demo_dir';
+            }
+        }
+
+        public function effectively_installed()
+        {
+            $this->init();
+            return $this->filesystem->exists($this->acme_demo_dir);
+        }
+
+        public static function depends_on()
+        {
+            return ['\acme\demo\migrations\first_migration'];
+        }
+
+        public function update_data(): array
+        {
+            return [
+                ['custom', [[$this, 'add_dir']]],
+            ];
+        }
+
+        public function revert_data(): array
+        {
+            return [
+                ['custom', [[$this, 'remove_dir']]],
+            ];
+        }
+
+        public function add_dir()
+        {
+            $this->init();
+
+            try
+            {
+                $this->filesystem->mkdir($this->acme_demo_dir, 0755);
+                $this->filesystem->touch($this->acme_demo_dir . '/index.htm');
+            }
+            catch (\phpbb\filesystem\exception\filesystem_exception $e)
+            {
+                // log or handle any errors here using $e->get_filename() or $e->getMessage()
+            }
+        }
+
+        public function remove_dir()
+        {
+            $this->init();
+
+            try
+            {
+                $this->filesystem->remove($this->acme_demo_dir);
+            }
+            catch (\phpbb\filesystem\exception\filesystem_exception $e)
+            {
+                // log or handle any errors here using $e->get_filename() or $e->getMessage()
+            }
+        }
+    }
+
+Using ext.php
+-------------
+Filesystem changes can also be implemented within the extension’s ``ext.php`` file. This method is preferable if:
+
+  - The changes have no specific requirements or dependencies that need monitoring through a migration step.
+  - The changes should occur at a particular stage, such as enabling, disabling, or deleting the extension.
+
+.. code-block:: php
+
+    <?php
+
+    namespace acme\demo;
+
+    class ext extends \phpbb\extension\base
+    {
+        /**
+         * Create acme_demo_dir when extension is enabled
+         */
+        public function enable_step($old_state)
+        {
+            if ($old_state !== false)
+            {
+                return parent::enable_step($old_state);
+            }
+
+            $filesystem = $this->container->get('filesystem');
+            $my_dir_path = $this->container->getParameter('core.root_path') . 'store/acme_demo_dir';
+
+            try
+            {
+                $filesystem->mkdir($my_dir_path, 0755);
+                $filesystem->touch($my_dir_path . '/index.htm');
+            }
+            catch (\phpbb\filesystem\exception\filesystem_exception $e)
+            {
+                // log or handle any errors here using $e->get_filename() or $e->getMessage()
+            }
+
+            return 'added acme_demo_dir';
+        }
+
+        /**
+         * Delete acme_demo_dir when deleting extension data
+         */
+        public function purge_step($old_state)
+        {
+            if ($old_state !== false)
+            {
+                return parent::purge_step($old_state);
+            }
+
+            $filesystem = $this->container->get('filesystem');
+            $my_dir_path = $this->container->getParameter('core.root_path') . 'store/acme_demo_dir';
+
+            try
+            {
+                $filesystem->remove($my_dir_path);
+            }
+            catch (\phpbb\filesystem\exception\filesystem_exception $e)
+            {
+                // log or handle any errors here using $e->get_filename() or $e->getMessage()
+            }
+
+            return 'removed acme_demo_dir';
+        }
+    }
+
+By leveraging one of these methods, you can implement necessary filesystem changes while maintaining compatibility
+with phpBB’s structure and best practices.
