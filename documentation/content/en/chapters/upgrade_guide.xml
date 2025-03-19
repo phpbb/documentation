@@ -264,15 +264,6 @@
 			<listitem><para><xref linkend="update_patch" /></para><para>For those comfortable using the <command>patch</command> utility, patch files are available.</para></listitem>
 		</orderedlist>
 
-		<important>
-			<para>If you have previously abandoned an update attempt to try a different method, you will need to remove the following files from the server:
-			<itemizedlist>
-				<listitem><para><filename>store/install_config.php</filename></para></listitem>
-				<listitem><para><filename>store/io_lock.lock</filename></para></listitem>
-			</itemizedlist>
-			</para>
-		</important>
-
 
 		<section id="update_full">
 			<sectioninfo>
@@ -313,6 +304,14 @@
 				</listitem>
 				<listitem><para>Update the database:</para>
 					<orderedlist>
+						<important>
+							<para>If you have previously attempted to update using a different method, you will need to remove the following files from the server before updating the database:
+							<itemizedlist>
+								<listitem><para><filename>store/install_config.php</filename></para></listitem>
+								<listitem><para><filename>store/io_lock.lock</filename></para></listitem>
+							</itemizedlist>
+							</para>
+						</important>
 						<tip>
 							<para>For large boards, you may wish to update via the command line instead of using a web browser. From your board's root, execute the following command: <code>php ./bin/phpbbcli.php db:migrate --safe-mode</code></para>
 						</tip>
@@ -366,6 +365,14 @@
 				<listitem><para>Upload the contents of the selected sub-archive</para></listitem>
 				<listitem><para>Update the database:</para>
 					<orderedlist>
+						<important>
+							<para>If you have previously attempted to update using a different method, you will need to remove the following files from the server before updating the database:
+							<itemizedlist>
+								<listitem><para><filename>store/install_config.php</filename></para></listitem>
+								<listitem><para><filename>store/io_lock.lock</filename></para></listitem>
+							</itemizedlist>
+							</para>
+						</important>
 						<tip>
 							<para>For large boards, you may wish to update via the command line instead of using a web browser. From your board's root, execute the following command: <code>php ./bin/phpbbcli.php db:migrate --safe-mode</code></para>
 						</tip>
@@ -412,6 +419,14 @@
 				<listitem><para>Upload the <filename class="directory">vendor/</filename> directory</para></listitem>
 				<listitem><para>Run the updater:</para>
 					<orderedlist>
+						<important>
+							<para>If you have previously attempted to update using a different method, you will need to remove the following files from the server before updating the database:
+							<itemizedlist>
+								<listitem><para><filename>store/install_config.php</filename></para></listitem>
+								<listitem><para><filename>store/io_lock.lock</filename></para></listitem>
+							</itemizedlist>
+							</para>
+						</important>
 						<tip>
 							<para>For large boards, you may wish to update the database via the command line instead of using a web browser. From your board's root, execute the following command: <code>php ./bin/phpbbcli.php db:migrate --safe-mode</code></para>
 						</tip>
@@ -469,6 +484,14 @@
 				</listitem>
 				<listitem><para>Update the database:</para>
 					<orderedlist>
+						<important>
+							<para>If you have previously attempted to update using a different method, you will need to remove the following files from the server before updating the database:
+							<itemizedlist>
+								<listitem><para><filename>store/install_config.php</filename></para></listitem>
+								<listitem><para><filename>store/io_lock.lock</filename></para></listitem>
+							</itemizedlist>
+							</para>
+						</important>
 						<tip>
 							<para>For large boards, you may wish to update via the command line instead of using a web browser. From your board's root, execute the following command: <code>php ./bin/phpbbcli.php db:migrate --safe-mode</code></para>
 						</tip>
