@@ -40,6 +40,12 @@ The ban system has been greatly refactored for phpBB 4.0. As part of this, the f
 - Added support for IPv6 banning
 - Removed "exclude" functionality which resulted in ambiguous settings
 
+Removal of Jabber/XMPP
+----------------------
+The Jabber/XMPP functionality has been removed from phpBB 4.0. This includes the Jabber/XMPP settings in the ACP and the Jabber/XMPP notification system.
+Users with Jabber/XMPP accounts will no longer receive notifications via Jabber/XMPP and have instead been migrated to email notifications.
+The Jabber/XMPP functionality was removed due to the lack of support for the XMPP protocol in modern browsers and the fact that it was not widely used by phpBB users.
+
 Class and function changes
 ==========================
 The following table lists class and function changes that might affect custom PHP or Extension code.
@@ -390,6 +396,12 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - Removed
      - ``4.0.0-a1``
      - Use phpbb_build_radio() instead.
+
+   * - ``messenger``
+     - ``includes/functions_messenger.php``
+     - Refactored to new messenger system, removed jabber support
+     - ``4.0.0-a1``
+     - Added new refactored messenger system. See the API docs for `\\phpbb\\messenger <https://area51.phpbb.com/docs/code/master/phpbb/messenger.html>`_ namespace.
 
 **Explanation of columns:**
 
