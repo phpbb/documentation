@@ -36,15 +36,15 @@
 				</author>
 			</authorgroup>
 		</sectioninfo>
-		<title>Upgrading from 3.0 to 3.3</title>
+		<title>Upgrading from 3.0 to 4.0</title>
 		<warning>
-			<para>Upgrading to phpBB 3.3 will render previously installed MODifications and styles unusable.  If you have a custom logo, it will need to be redone after the upgrade.  See <ulink url="https://www.phpbb.com/support/docs/en/3.3/kb/article/how-to-change-your-board-logo/">Knowledge Base: How to Change your Board Logo</ulink>.</para>
+			<para>Upgrading to phpBB 4.0 will render previously installed MODifications and styles unusable.  If you have a custom logo, it will need to be redone after the upgrade.  See <ulink url="https://www.phpbb.com/support/docs/en/3.3/kb/article/how-to-change-your-board-logo/">Knowledge Base: How to Change your Board Logo</ulink>.</para>
 		</warning>
 
-		<para>phpBB 3.3 is not compatible with 3.0 and most of the previous files will need to be removed prior to upgrading.</para>
+		<para>phpBB 4.0 is not compatible with 3.0 and most of the previous files will need to be removed prior to upgrading.</para>
 		<para>To upgrade, perform the following steps:</para>
 		<orderedlist>
-			<listitem><para>Ensure that your server meets the requirements for running phpBB 3.3: <xref linkend="quick_requirements" /></para></listitem>
+			<listitem><para>Ensure that your server meets the requirements for running phpBB 4.0: <xref linkend="quick_requirements" /></para></listitem>
 			<listitem><para><emphasis role="bold">Make a backup of the original files</emphasis></para></listitem>
 			<listitem><para><emphasis role="bold">Make a backup of the database</emphasis></para></listitem>
 			<listitem><para>Deactivate all styles except for prosilver</para></listitem>

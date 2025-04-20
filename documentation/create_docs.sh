@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # set this to the correct path
-path=${1:-'/var/www/phpbb.com/htdocs/support/documentation/3.3'}
+path=${1:-'/var/www/phpbb.com/htdocs/support/documentation/4.0'}
 
 echo "Removing build directory"
 rm -rf build
 
 echo "Creating docs"
-xsltproc --xinclude xsl/proteus_php.xsl proteus_doc.xml
+xsltproc --xinclude xsl/triton_php.xsl triton_doc.xml
 exit_code=$?  # Capture the exit code
 
 if [ "$exit_code" == "0" ]; then

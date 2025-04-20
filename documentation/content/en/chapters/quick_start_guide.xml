@@ -98,7 +98,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Installation</title>
-		<para>phpBB 3.3 Proteus has an easy to use installation system that will guide you through the installation process.</para>
+		<para>phpBB has an easy to use installation system that will guide you through the installation process.</para>
 		<para>After you have decompressed the phpBB3 archive and uploaded the files to the location where you want it to be installed, you need to enter the <acronym>URL</acronym> into your browser to open the installation screen. The first time you point your browser to the <acronym>URL</acronym> (<uri>http://www.example.com/phpBB3</uri> for instance), phpBB will detect that it is not yet installed and automatically redirect you to the installation screen.</para>
 		<figure id="img_quick_installation_intro">
 			<title>Introduction</title>
@@ -302,7 +302,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Setting permissions</title>
-		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB 3.3 Proteus can be adjusted with permissions.</para>
+		<para>After you created your first forum, you have to decide who has access to it and what your users are allowed to do and what not. This is what Permissions are for. You can disallow guests to post or hand out moderating powers, for instance. Almost every aspect of user interaction with phpBB can be adjusted with permissions.</para>
 
 		<section id="quick_permissions_types">
 			<title>Permission types</title>
@@ -353,7 +353,7 @@
 			</figure>
 			<para>The <guilabel>Forum Permissions</guilabel> page shows you two columns, one for users and one for groups to select (see <xref linkend="img_quick_permissions_select" />). The top lists on both columns labelled as <guilabel>Manage Users</guilabel> and <guilabel> Manage Groups</guilabel> show users and groups that already have permissions on at least one of your selected forums set. You can select them and change their permissions with the <guilabel>Edit Permissions</guilabel> button, or use <guilabel>Remove Permissions</guilabel> to remove them which leads to them not having permissions set, and therefore not being able to see the forum or have any access to it (unless they have access to it through another group). The bottom boxes allow you to add new users or groups, that do not currently have permissions set on at least one of your selected forums.</para>
 			<para>To add permissions for groups, select one or more groups either in the <guilabel>Add Groups</guilabel> list (this works similar with users, but if you want to add new users, you have to type them in manually in the <guilabel>Add Users</guilabel> text box or use the <guilabel>Find a member</guilabel> function). <guilabel>Add Permissions</guilabel> will take you to the permission interface. Each forum you selected is listed, with the groups or users to change the permissions for below them. </para>
-			<para>There are two ways to assign permissions: You can set them manually or use predefined <guilabel>Permission Roles</guilabel> for a simpler but less powerful way. You can switch between both approaches any time you want. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running as quickly as possible. But remember that permission roles do only offer a small bit of what the permission system has to offer and we believe that to be a good Proteus administrator, you have to fully grasp permissions. </para>
+			<para>There are two ways to assign permissions: You can set them manually or use predefined <guilabel>Permission Roles</guilabel> for a simpler but less powerful way. You can switch between both approaches any time you want. You can skip the manual permission introduction and <link linkend="quick_permissions_roles">jump directly into the section on "Permissions Roles"</link>, if you are eager to get everything running as quickly as possible. But remember that permission roles do only offer a small bit of what the permission system has to offer and we believe that to be a good phpBB administrator, you have to fully grasp permissions. </para>
 			<para>Both ways only differ in the way you set them. They both share the same interface.</para>
 		</section>
 		<section id="quick_permissions_manual">
@@ -385,7 +385,7 @@
 		</section>
 		<section id="quick_permissions_roles">
 			<title>Permissions roles</title>
-			<para>phpBB 3.3 Proteus ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
+			<para>phpBB ships with a number of default permission roles, that offer you a wide variety of options for setting permissions. Instead of having to check each radio button manually, you can select a predefined role in the <guilabel>Role</guilabel>pull down list. Each role has a detailed description, that will pop up when you hover your mouse over it. Submit your changes with <guilabel>Apply Permissions</guilabel> or <guilabel>Apply All Permissions</guilabel> when you are satisfied with them. That will set the permissions and you are done.</para>
 			<figure id="img_quick_permissions_roles">
 				<title>Permission roles</title>
 				<mediaobject>

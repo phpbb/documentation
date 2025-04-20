@@ -10,7 +10,7 @@
 	</chapterinfo>
 	<title>Administration Guide</title>
 	<abstract>
-		<para>This chapter describes the phpBB 3.3 admin controls.</para>
+		<para>This chapter describes the phpBB admin controls.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -21,7 +21,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>The Administration Control Panel</title>
-		<para>Even more so than its predecessor, phpBB 3.3 &quot;Proteus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
+		<para>Even more so than its predecessor, phpBB is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 
@@ -146,7 +146,7 @@
 				<title>Private Messaging</title>
 				<para><glossterm>Private Messages</glossterm> are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
 				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
-				<para>Proteus allows users to create own personal folders to organise Private Messages. The <guilabel>Maximum private message folders</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
+				<para>phpBB allows users to create own personal folders to organise Private Messages. The <guilabel>Maximum private message folders</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
 				<para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
 				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the &quot;Full Folder Default Action&quot; list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
 				<para>When sending a private message, it is still possible to edit the message until the recipient reads it. After a sent private message has been read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0, which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
@@ -746,8 +746,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Subforums</title>
-			<para>One of the features in phpBB 3.3 is <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Proteus you can now put as many forums, links, or categories as you like inside other forums.</para>
-			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
+			<para>One of the features in phpBB is <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In phpBB you can now put as many forums, links, or categories as you like inside other forums.</para>
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 
 			<figure id="img_acp_subforums_list">
@@ -1906,7 +1905,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Permissions</title>
-		<para>On your board, you will need to control what users can and cannot do, and what they can and cannot see. With the flexible and detailed system that Proteus provides, you have an extensive ability to manage permissions. There are five types of permissions in phpBB3:</para>
+		<para>On your board, you will need to control what users can and cannot do, and what they can and cannot see. With the flexible and detailed system that phpBB provides, you have an extensive ability to manage permissions. There are five types of permissions in phpBB:</para>
 		<itemizedlist>
 			<listitem><para>Global User permissions</para></listitem>
 			<listitem><para>Global Moderator permissions</para></listitem>
