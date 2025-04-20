@@ -330,30 +330,37 @@
 				</itemizedlist>
 			</section>
 
-			<section id="acp_client_jabber">
+			<section id="acp_client_webpush">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>Marc</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Jabber settings</title>
+				<title>Web Push settings</title>
 
-				<para>phpBB3 also has the ability to communicate messages to users via <glossterm>Jabber</glossterm>, your board can be configured to board notifications via Jabber. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
-
-				<note>
-					<para>Some Jabber servers include gateways or transports which allow you to contact users on other networks. Not all servers offer all transports and changes in protocols can prevent transports from operating. Note that it may take several seconds to update Jabber account details, so do not stop the script until it has finished!</para>
-				</note>
+				<para>phpBB also has the ability to send notifications to users via <glossterm>Web Push</glossterm>. Your board can be configured to board notifications via Web Push.</para>
 
 				<itemizedlist>
-					<title>Jabber settings</title>
-					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
-					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
-					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
-					<listitem><para><guilabel>Jabber username or JID</guilabel>: The Jabber username or a complete Jabber ID (looks like an e-mail address) that your board will use when connecting to the specified Jabber server. You must specify an already registered account.</para></listitem>
-					<listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para><important><para>This password will be stored as plain text in the database, visible to everybody who can access your database or who can view this configuration page.</para></important></listitem>
-					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to &quot;0&quot;, messages will be sent immediately and is will not be queued for later sending.</para></listitem>
+					<title>Web Push settings</title>
+					<listitem>
+						<para><guilabel>Enable Web Push</guilabel>: Set this to <guilabel>Yes</guilabel> if you want to enable the use of Web Push for notifications.</para>
+					</listitem>
+					<listitem>
+						<para><guilabel>Server identification public key</guilabel>: The Voluntary Application Server Identification (VAPID) public key is shared to authenticate push messages from your site. You can set this manually or generate the key by clicking on the <guilabel>Generate Identification keys</guilabel> button.</para>
+						<important><para><emphasis>Caution:</emphasis> Modifying the VAPID public key will automatically render all Web Push subscriptions invalid.</para></important>
+					</listitem>
+					<listitem>
+						<para><guilabel>Server identification private key</guilabel>: The Voluntary Application Server Identification (VAPID) private key is used to generate authenticated push messages dispatched from your site. The VAPID private key must form a valid public-private key pair alongside the VAPID public key. You can set this manually or generate the key by clicking on the <guilabel>Generate Identification keys</guilabel> button.</para>
+						<important><para><emphasis>Caution:</emphasis> Modifying the VAPID private key will automatically render all Web Push subscriptions invalid.</para></important>
+					</listitem>
+					<listitem>
+						<para><guilabel>Enable all user-based web push notification options by default</guilabel>: When this setting is enabled, users who subscribe and allow browser notifications will start receiving them automatically. Users only need to visit the UCP Notification settings to disable any unwanted notifications. If this setting is disabled, users will not receive any notifications, even if they have subscribed, until they visit the UCP Notification settings to enable the specific notification options they wish to receive.</para>
+					</listitem>
+					<listitem>
+						<para><guilabel>Show “Subscribe” button in notification dropdown</guilabel>: Display a “Subscribe” button in the Notification dropdown, allowing users to easily subscribe to push notifications from anywhere in the forum.</para>
+					</listitem>
 				</itemizedlist>
 			</section>
 		</section>

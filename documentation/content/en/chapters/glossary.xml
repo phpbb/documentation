@@ -181,13 +181,6 @@
 			</varlistentry>
 			
 			<varlistentry>
-				<term>Jabber</term>
-				<listitem>
-					<para>Jabber is the former name of Extensible Messaging and Presence Protocol (XMPP) an open-source protocol that can be used for instant messenging. For more information on XMPP's role in phpBB, see <xref linkend="acp_client_jabber" />.</para>
-				</listitem>
-			</varlistentry>
-			
-			<varlistentry>
 				<term>Listener</term>
 				<listitem>
 					<para>A listeners are triggered by an <glossterm>event</glossterm>. They can be used by an <glossterm>extension</glossterm> to process incoming data and manipulate variables in the scope of the event. So they can change phpBB's behaviour, add or remove functionality or if used in the context of templates, modify the output. An alternative name for a listener is a &quot;hook&quot;.</para>
@@ -328,6 +321,13 @@
 				<term>Usergroup</term>
 				<listitem>
 					<para>Usergroups are a way of grouping users. This makes it easier to set permissions to many people at the same time (e.g. create a moderator group and give it moderating permissions to a certain forum instead of giving lots of individual people moderating permissions separately). A usergroup has a usergroup moderator (a leader, essentially), who has the ability to add or delete users from the group. Usergroups can be set to hidden, closed or open. If a usergroup is open, users can try requesting membership via the proper page within the <link linkend="user_control_panel">group control panel</link>. phpBB 3.3 has six pre-defined usergroups.</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term>Web Push</term>
+				<listitem>
+					<para>Web Push notifications are messages sent by a website to a user's browser, even when the user is not actively browsing the site. They deliver notifications to all subscribed devices in real-time. For more information on Web Push notifications in phpBB, see <xref linkend="acp_client_webpush" />.</para>
 				</listitem>
 			</varlistentry>
 		</variablelist>
