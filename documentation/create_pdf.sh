@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Removing previous PDF"
-if [ -f proteus_doc.pdf ]; then
-  rm proteus_doc.pdf
+if [ -f triton_doc.pdf ]; then
+  rm triton_doc.pdf
 fi
 
 echo "Creating new PDF"
-fop -xml proteus_doc.xml -xsl xsl/proteus_pdf.xsl -pdf proteus_doc.pdf
+fop -xml triton_doc.xml -xsl xsl/triton_pdf.xsl -pdf triton_doc.pdf
 
 echo "Done"

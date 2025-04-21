@@ -146,11 +146,6 @@
 				<title>Personal settings</title>
 				<para>Personal settings control the information that is displayed when a user views your profile. </para>
 				<itemizedlist>
-					<listitem><para><guilabel>ICQ Number</guilabel>: Your account number associated with <ulink url="http://www.icq.com/">ICQ</ulink> system.</para></listitem>
-					<listitem><para><guilabel>AOL Instant Messenger</guilabel>: Your screen name associated with <ulink url="http://aim.com">AOL Instant Messenger</ulink> system.</para></listitem>
-					<listitem><para><guilabel>Windows Live Messenger</guilabel>: Your email address associated with the <ulink url="http://home.live.com/">Windows Live</ulink> service.</para></listitem>
-					<listitem><para><guilabel>Yahoo Messenger</guilabel>: Your username associated with the <ulink url="http://messenger.yahoo.com/">Yahoo Messenger</ulink> service.</para></listitem>
-					<listitem><para><guilabel>Jabber Address</guilabel>: Your username associated with the <ulink url="http://www.jabber.org/">Jabber</ulink> service.</para></listitem>
 					<listitem><para><guilabel>Facebook</guilabel>: Your unique username/page name associated with the <ulink url="https://www.facebook.com/">Facebook</ulink> service.</para></listitem>
 					<listitem><para><guilabel>Twitter</guilabel>: Your username associated with the <ulink url="https://twitter.com/">Twitter</ulink> service.</para></listitem>
 					<listitem><para><guilabel>Skype</guilabel>: Your username associated with the <ulink url="http://www.skype.com/">Skype</ulink> service.</para></listitem>

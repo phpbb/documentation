@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <book>
 	<bookinfo>
-		<title>phpBB 3.3 <emphasis>Proteus</emphasis> Documentation</title>
+		<title>phpBB 4.0 <emphasis>Triton</emphasis> Documentation</title>
 		<abstract>
-			<para>The detailed documentation for phpBB 3.3 <emphasis>Proteus</emphasis>. </para>
+			<para>The detailed documentation for phpBB 4.0 <emphasis>Triton</emphasis>. </para>
 		</abstract>
 		<authorgroup>
 			<editor>
@@ -16,7 +16,7 @@
 			</editor>
 		</authorgroup>
 		<copyright>
-			<year>2005</year>
+			<year>2025</year>
 			<holder> phpBB Group </holder>
 		</copyright>
 		<orgname>phpBB Group</orgname>

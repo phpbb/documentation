@@ -10,7 +10,7 @@
 	</chapterinfo>
 	<title>Administration Guide</title>
 	<abstract>
-		<para>This chapter describes the phpBB 3.3 admin controls.</para>
+		<para>This chapter describes the phpBB admin controls.</para>
 	</abstract>
 	<section id="admin_control_panel">
 		<sectioninfo>
@@ -21,7 +21,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>The Administration Control Panel</title>
-		<para>Even more so than its predecessor, phpBB 3.3 &quot;Proteus&quot; is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
+		<para>Even more so than its predecessor, phpBB is highly configurable. You can tune, adjust, or turn off almost all features. To make this load of settings as accessible as possible, we redesigned the Administration Control Panel (ACP) completely. </para>
 		<para>Click on the <guilabel>Administration Control Panel</guilabel> link on the bottom of the default forum style to visit the <acronym>ACP</acronym>.</para>
 		<para>The <acronym>ACP</acronym> has seven different sections by default with each containing a number of subsections. We will discuss each section in this Admin Guide. </para>
 
@@ -146,7 +146,7 @@
 				<title>Private Messaging</title>
 				<para><glossterm>Private Messages</glossterm> are a way for registered members to communicate privately through your board without the need to fall back to e-mail or instant messaging. </para>
 				<para>You can disable this feature with the <guilabel>Private Messaging</guilabel> setting. This will keep the feature turned off for the whole board. You can disable private messages for selected users or groups with <link linkend="acp_permissions">Permissions</link>. Please see the <link linkend="acp_permissions">Permissions section</link> for more information. </para>
-				<para>Proteus allows users to create own personal folders to organise Private Messages. The <guilabel>Maximum private message folders</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
+				<para>phpBB allows users to create own personal folders to organise Private Messages. The <guilabel>Maximum private message folders</guilabel> setting defines the number of message folders they can create. The default value is 4. You can disable the feature with setting value to 0. </para>
 				<para><guilabel>Max Private Messages Per Box</guilabel> sets the number of Private Messages each folder can contain. The default value is <guilabel>50</guilabel>, Set it to 0 to allow unlimited messages per folder. </para>
 				<para>If you limit the number of messages users can store in their folders, you need to define a default action that is taken once a folder is full. This can be changed in the &quot;Full Folder Default Action&quot; list. The oldest message gets deleted or the new message will be held back until the folder has place for it. Note that users will be able to choose this for themselves in their PM options and this setting only changes the default value they face. This will not override the action a user chosen. </para>
 				<para>When sending a private message, it is still possible to edit the message until the recipient reads it. After a sent private message has been read, editing the message is no longer possible. To limit the time a message can be edited before the recipient reads it, you can set the <guilabel>Limit Editing Time</guilabel>. The default value is 0, which allows editing until the message is read. Note that you can disallow users or groups to edit Private Messages after sending through <link linkend="acp_permissions">Permissions</link>. If the permission to edit messages is denied, it will override this setting. </para>
@@ -330,30 +330,37 @@
 				</itemizedlist>
 			</section>
 
-			<section id="acp_client_jabber">
+			<section id="acp_client_webpush">
 				<sectioninfo>
 					<authorgroup>
 						<author>
-							<othername>MennoniteHobbit</othername>
+							<othername>Marc</othername>
 						</author>
 					</authorgroup>
 				</sectioninfo>
-				<title>Jabber settings</title>
+				<title>Web Push settings</title>
 
-				<para>phpBB3 also has the ability to communicate messages to users via <glossterm>Jabber</glossterm>, your board can be configured to board notifications via Jabber. Here, you can enable and control exactly how your board will use Jabber for communication.</para>
-
-				<note>
-					<para>Some Jabber servers include gateways or transports which allow you to contact users on other networks. Not all servers offer all transports and changes in protocols can prevent transports from operating. Note that it may take several seconds to update Jabber account details, so do not stop the script until it has finished!</para>
-				</note>
+				<para>phpBB also has the ability to send notifications to users via <glossterm>Web Push</glossterm>. Your board can be configured to board notifications via Web Push.</para>
 
 				<itemizedlist>
-					<title>Jabber settings</title>
-					<listitem><para><guilabel>Enable Jabber</guilabel>: Set this to <guilabel>Enabled</guilabel> if you want to enable the use of Jabber for messaging and notifications.</para></listitem>
-					<listitem><para><guilabel>Jabber server</guilabel>: The Jabber server that your board will use. For a list of public servers, see <ulink url="http://www.jabber.org">jabber.org</ulink>'s <ulink url="http://www.jabber.org/user/publicservers.shtml">list of open, public servers</ulink>.</para></listitem>
-					<listitem><para><guilabel>Jabber port</guilabel>: The port that the Jabber server specified above is located on. Port 5222 is the most common port; if you are unsure about this, leave this value alone.</para></listitem>
-					<listitem><para><guilabel>Jabber username or JID</guilabel>: The Jabber username or a complete Jabber ID (looks like an e-mail address) that your board will use when connecting to the specified Jabber server. You must specify an already registered account.</para></listitem>
-					<listitem><para><guilabel>Jabber password</guilabel>: The password for the Jabber username specified above. If the Jabber username is unregistered, phpBB3 will attempt to register the above Jabber username, with this specified value as the password.</para><important><para>This password will be stored as plain text in the database, visible to everybody who can access your database or who can view this configuration page.</para></important></listitem>
-					<listitem><para><guilabel>Jabber package size</guilabel>: This is the number of messages that can be sent in one package. If this is set to &quot;0&quot;, messages will be sent immediately and is will not be queued for later sending.</para></listitem>
+					<title>Web Push settings</title>
+					<listitem>
+						<para><guilabel>Enable Web Push</guilabel>: Set this to <guilabel>Yes</guilabel> if you want to enable the use of Web Push for notifications.</para>
+					</listitem>
+					<listitem>
+						<para><guilabel>Server identification public key</guilabel>: The Voluntary Application Server Identification (VAPID) public key is shared to authenticate push messages from your site. You can set this manually or generate the key by clicking on the <guilabel>Generate Identification keys</guilabel> button.</para>
+						<important><para><emphasis>Caution:</emphasis> Modifying the VAPID public key will automatically render all Web Push subscriptions invalid.</para></important>
+					</listitem>
+					<listitem>
+						<para><guilabel>Server identification private key</guilabel>: The Voluntary Application Server Identification (VAPID) private key is used to generate authenticated push messages dispatched from your site. The VAPID private key must form a valid public-private key pair alongside the VAPID public key. You can set this manually or generate the key by clicking on the <guilabel>Generate Identification keys</guilabel> button.</para>
+						<important><para><emphasis>Caution:</emphasis> Modifying the VAPID private key will automatically render all Web Push subscriptions invalid.</para></important>
+					</listitem>
+					<listitem>
+						<para><guilabel>Enable all user-based web push notification options by default</guilabel>: When this setting is enabled, users who subscribe and allow browser notifications will start receiving them automatically. Users only need to visit the UCP Notification settings to disable any unwanted notifications. If this setting is disabled, users will not receive any notifications, even if they have subscribed, until they visit the UCP Notification settings to enable the specific notification options they wish to receive.</para>
+					</listitem>
+					<listitem>
+						<para><guilabel>Show “Subscribe” button in notification dropdown</guilabel>: Display a “Subscribe” button in the Notification dropdown, allowing users to easily subscribe to push notifications from anywhere in the forum.</para>
+					</listitem>
 				</itemizedlist>
 			</section>
 		</section>
@@ -739,8 +746,7 @@
 				</authorgroup>
 			</sectioninfo>
 			<title>Subforums</title>
-			<para>One of the features in phpBB 3.3 is <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In Proteus you can now put as many forums, links, or categories as you like inside other forums.</para>
-			<!-- (TODO: Diagram of a 2.0 / 3.0 comparison) -->
+			<para>One of the features in phpBB is <glossterm>subforums</glossterm>. Especially bulletin boards with a high number of forums will benefit from this. In the simple flat category and forum approach in phpBB 2.0, all forums and categories were listed on the forum index. In phpBB you can now put as many forums, links, or categories as you like inside other forums.</para>
 			<para>If you have a forum about pets for instance, you are able to put subforums for cats, dogs, or guinea pigs inside it without making the parent "Pets" forum a category. In this example, only the "Pets" forum will be listed on the index like a normal forum. Its subforums will appear as simple links below the forum description (unless you disabled this).</para>
 
 			<figure id="img_acp_subforums_list">
@@ -1899,7 +1905,7 @@
 			</authorgroup>
 		</sectioninfo>
 		<title>Permissions</title>
-		<para>On your board, you will need to control what users can and cannot do, and what they can and cannot see. With the flexible and detailed system that Proteus provides, you have an extensive ability to manage permissions. There are five types of permissions in phpBB3:</para>
+		<para>On your board, you will need to control what users can and cannot do, and what they can and cannot see. With the flexible and detailed system that phpBB provides, you have an extensive ability to manage permissions. There are five types of permissions in phpBB:</para>
 		<itemizedlist>
 			<listitem><para>Global User permissions</para></listitem>
 			<listitem><para>Global Moderator permissions</para></listitem>

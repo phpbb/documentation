@@ -651,14 +651,10 @@ you will have to indicate that in the path, e.g.: ``@vendor_extension/subdirecto
        return '@vendor_extension/sample';
    }
 
-There is also a third notification method, Jabber, which uses the :class:`email/short` directory for its template files.
-This notification method is closely tied to the email method, so it is important to also supply that template file,
-even though the content might be identical to the email template.
+.. note::
 
-.. warning::
-
-   Make sure to have both :class:`language/en/email/sample.txt` and :class:`language/en/email/short/sample.txt`
-   in your extension's language directory to prevent errors.
+    The previously existing Jabber notification method has been removed in phpBB 4.0. A separate :class:`email/short` directory
+    for this notification method is no longer used and therefore you no longer need to create a separate template file for it.
 
 get_email_template_variables
 ----------------------------

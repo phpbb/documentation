@@ -15,7 +15,7 @@
 <xsl:param name="html.ext" select="'.php'"/>
 
 <!-- Link to the stylesheet -->
-<xsl:param name="html.stylesheet" select="'/support/documentation/3.3/style.css'"/>
+<xsl:param name="html.stylesheet" select="'/support/documentation/4.0/style.css'"/>
 
 <xsl:param name="chunk.fast" select="1"/>
 <!-- Do NOT add the first section into the starting chunk -->
@@ -40,7 +40,7 @@
 <xsl:param name="chunker.output.doctype-public" select="''"/>
 <xsl:param name="chunker.output.doctype-system" select="''"/>
 
-<xsl:variable name="main.title.text" select="'phpBB 3.3 Proteus Documentation'"/>
+<xsl:variable name="main.title.text" select="'phpBB 4.0 Triton Documentation'"/>
 
 <xsl:template name="user.preroot">
 
