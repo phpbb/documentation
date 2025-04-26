@@ -1,7 +1,15 @@
-1. Defaults
+1. Introduction
+===============
+
+The key words "**MUST**", "**MUST NOT**", "**REQUIRED**", "**SHALL**", "**SHALL NOT**",
+"**SHOULD**", "**SHOULD NOT**", "**RECOMMENDED**", "**NOT RECOMMENDED**", "**MAY**", and "**OPTIONAL**"
+in this document are to be interpreted as described in `BCP 14 <https://datatracker.ietf.org/doc/html/bcp14>` [`RFC2119 <https://datatracker.ietf.org/doc/html/rfc2119>`] [`RFC8174 <https://datatracker.ietf.org/doc/html/rfc8174>`] when,
+and only when, they appear in all capitals, as shown here.
+
+2. Defaults
 ===========
 
-1.i. Editor Settings
+2.i. Editor Settings
 --------------------
 
 Tabs vs Spaces
@@ -23,7 +31,7 @@ Linefeeds
 
 Ensure that your editor is saving files in the UNIX (LF) line ending format. This means that lines are terminated with a newline, not with Windows Line endings (CR/LF combo) as they are on Win32 or Classic Mac (CR) Line endings. Any decent editor should be able to do this, but it might not always be the default setting. Know your editor. If you want advice for an editor for your Operating System, just ask one of the developers. Some of them do their editing on Win32.
 
-1.ii. File Layout
+2.ii. File Layout
 -----------------
 
 Standard header for new files:
@@ -43,7 +51,7 @@ This template of the header must be included at the start of all phpBB files:
     *
     */
 
-Please see the `1.iii. File Locations`_ section for the correct package name.
+Please see the `2.iii. File Locations`_ section for the correct package name.
 
 PHP closing tags
 ++++++++++++++++
@@ -104,14 +112,14 @@ If this case is true, the best method to avoid documentation confusions is addin
     */
     class ...
 
-1.iii. File Locations
+2.iii. File Locations
 ---------------------
 
 Functions used by more than one page should be placed in functions.php, functions specific to one page should be placed on that page (at the bottom) or within the relevant sections functions file. Some files in /includes are holding functions responsible for special sections, for example uploading files, displaying "things", user related functions and so forth.
 
 The following packages are defined, and related new features/functions should be placed within the mentioned files/locations, as well as specifying the correct package name. The package names are bold within this list:
 
-**phpBB3**
+**phpBB**
 Core files and all files not assigned to a separate package
 **acm**
 ``/phpbb/cache``
@@ -160,7 +168,7 @@ Search System
 ``/styles``
 phpBB Styles/Templates/Themes
 
-1.iv. Special Constants
+2.iv. Special Constants
 -----------------------
 
 There are some special constants application developers are able to utilize to bend some of phpBB's internal functionality to suit their needs.
