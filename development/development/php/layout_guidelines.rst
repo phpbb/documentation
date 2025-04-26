@@ -545,7 +545,7 @@ There **SHALL BE** *no* space before the colon and *exactly* one space after the
     }
 
 `Union types <https://wiki.php.net/rfc/union_types_v2>` **SHALL** be used when more than one type is allowed. This does also include nullable types.
-The `null` type **SHOULD** be the last element, other types **SHOULD** follow alphabetical order.
+The `null` type **SHALL** be the last element, other types **SHALL** follow alphabetical order.
 
 **Wrong:**
 
