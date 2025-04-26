@@ -1,9 +1,9 @@
-2. Code Layout/Guidelines
+3. Code Layout/Guidelines
 =========================
 
 Please note that these guidelines apply to all php, html, javascript and css files.
 
-2.i. Variable/Function/Class Naming
+3.i. Variable/Function/Class Naming
 -----------------------------------
 
 We will not be using any form of hungarian notation in our naming conventions. Many of us believe that hungarian naming is one of the primary code obfuscation techniques currently in use.
@@ -84,7 +84,7 @@ Special Namings
 
 For all emoticons use the term ``smiley`` in singular and ``smilies`` in plural. For emails we use the term ``email`` (without dash between “e” and “m”).
 
-2.ii. Code Layout
+3.ii. Code Layout
 -----------------
 
 Always include the braces
@@ -241,6 +241,30 @@ Also, if you are using a string variable as part of a function call, you do not 
 
 In SQL statements mixing single and double quotes is partly allowed (following the guidelines listed here about SQL formatting), else one should try to only use one method - mostly single quotes.
 
+Array syntax
+++++++++++++
+
+Short array syntax is preferred over the classical array syntax and **SHOULD** be used.
+
+**Not recommended:**
+
+.. code:: php
+
+    $foo = array(
+        'bar' => 42,
+        'boo' => 23,
+    );
+
+**Recommended:**
+
+.. code:: php
+
+    $foo = [
+        'bar' => 42,
+        'boo' => 23,
+    ];
+
+
 Commas after every array element
 ++++++++++++++++++++++++++++++++
 
@@ -250,19 +274,19 @@ If an array is defined with each element on its own line, you still have to modi
 
 .. code:: php
 
-    $foo = array(
+    $foo = [
         'bar' => 42,
         'boo' => 23
-    );
+    ];
 
 **Right:**
 
 .. code:: php
 
-    $foo = array(
+    $foo = [
         'bar' => 42,
         'boo' => 23,
-    );
+    ];
 
 Associative array keys
 ++++++++++++++++++++++
@@ -349,7 +373,7 @@ Inline conditionals should only be used to do very simple things. Preferably, th
 Don't use uninitialized variables
 +++++++++++++++++++++++++++++++++
 
-For phpBB3, we intend to use a higher level of run-time error reporting. This will mean that the use of an uninitialized variable will be reported as a warning. These warnings can be avoided by using the built-in isset() function to check whether a variable has been set - but preferably the variable is always existing. For checking if an array has a key set this can come in handy though, examples:
+For phpBB, we intend to use a higher level of run-time error reporting. This will mean that the use of an uninitialized variable will be reported as a warning. These warnings can be avoided by using the built-in isset() function to check whether a variable has been set - but preferably the variable is always existing. For checking if an array has a key set this can come in handy though, examples:
 
 **Wrong:**
 
@@ -496,7 +520,7 @@ Type declarations
 Use type declarations for arguments, properties and return types.
 The declaration of return types is optional for ``void`` types but preferred for uniformity.
 
-There should be *no* space before the colon and *exactly* one space after the colon for type declarations.
+There **SHALL BE** *no* space before the colon and *exactly* one space after the colon for type declarations.
 
 **Wrong:**
 
@@ -520,8 +544,32 @@ There should be *no* space before the colon and *exactly* one space after the co
         return $input . 'appended';
     }
 
+`Union types <https://wiki.php.net/rfc/union_types_v2>` **SHALL** be used when more than one type is allowed. This does also include nullable types.
+The `null` type **SHALL** be the last element, other types **SHALL** follow alphabetical order.
 
-2.iii. SQL/SQL Layout
+**Wrong:**
+
+.. code:: php
+
+    public bool|int|null|string $x;
+
+    private function do_stuff(?string $input) : ?string
+    {
+        return $input !== null ? $input . 'appended' : null;
+    }
+
+**Right:**
+
+.. code:: php
+
+    public bool|int|string|null $x;
+
+    private function do_stuff(string|null $input): string|null
+    {
+        return $input !== null ? $input . 'appended' : null;
+    }
+
+3.iii. SQL/SQL Layout
 ---------------------
 
 Common SQL Guidelines
@@ -630,11 +678,11 @@ If you need to UPDATE or INSERT data, make use of the ``$db->sql_build_array()``
 
 .. code:: php
 
-    $sql_ary = array(
+    $sql_ary = [
         'somedata'		=> $my_string,
         'otherdata'		=> $an_int,
         'moredata'		=> $another_int,
-    );
+    ];
 
     $db->sql_query('INSERT INTO ' . SOME_TABLE . ' ' . $db->sql_build_array('INSERT', $sql_ary));
 
@@ -642,11 +690,11 @@ To complete the example, this is how an update statement would look like:
 
 .. code:: php
 
-    $sql_ary = array(
+    $sql_ary = [
         'somedata'		=> $my_string,
         'otherdata'		=> $an_int,
         'moredata'		=> $another_int,
-    );
+    ];
 
     $sql = 'UPDATE ' . SOME_TABLE . '
         SET ' . $db->sql_build_array('UPDATE', $sql_ary) . '
@@ -662,19 +710,19 @@ If you want to insert multiple statements at once, please use the separate ``sql
 
 .. code:: php
 
-    $sql_ary = array();
+    $sql_ary = [];
 
-    $sql_ary[] = array(
+    $sql_ary[] = [
         'somedata'		=> $my_string_1,
         'otherdata'		=> $an_int_1,
         'moredata'		=> $another_int_1,
-    );
+    ];
 
-    $sql_ary[] = array(
+    $sql_ary[] = [
         'somedata'		=> $my_string_2,
         'otherdata'		=> $an_int_2,
         'moredata'		=> $another_int_2,
-    );
+    ];
 
     $db->sql_multi_insert(SOME_TABLE, $sql_ary);
 
@@ -692,13 +740,13 @@ The ``$db->sql_in_set()`` function should be used for building ``IN ()`` and ``N
 
 Based on the number of values in $forum_ids, the query can look differently.
 
-**SQL Statement if $forum_ids = array(1, 2, 3);**
+**SQL Statement if $forum_ids = [1, 2, 3];**
 
 .. code:: php
 
     SELECT FROM phpbb_forums WHERE forum_id IN (1, 2, 3)
 
-**SQL Statement if $forum_ids = array(1) or $forum_ids = 1**
+**SQL Statement if $forum_ids = [1] or $forum_ids = 1**
 
 .. code:: php
 
@@ -715,13 +763,13 @@ Of course the same is possible for doing a negative match against a number of va
 
 Based on the number of values in $forum_ids, the query can look differently here too.
 
-**SQL Statement if $forum_ids = array(1, 2, 3);**
+**SQL Statement if $forum_ids = [1, 2, 3];**
 
 .. code:: php
 
     SELECT FROM phpbb_forums WHERE forum_id NOT IN (1, 2, 3)
 
-**SQL Statement if $forum_ids = array(1) or $forum_ids = 1**
+**SQL Statement if $forum_ids = [1] or $forum_ids = 1**
 
 .. code:: php
 
@@ -736,26 +784,26 @@ The ``$db->sql_build_query()`` function is responsible for building sql statemen
 
 .. code:: php
 
-    $sql_array = array(
+    $sql_array = [
         'SELECT'	=> 'f.*, ft.mark_time',
 
-        'FROM'		=> array(
+        'FROM'		=> [
             FORUMS_WATCH_TABLE	=> 'fw',
             FORUMS_TABLE		=> 'f',
-        ),
+        ],
 
-        'LEFT_JOIN'	=> array(
-            array(
-                'FROM'	=> array(FORUMS_TRACK_TABLE => 'ft'),
+        'LEFT_JOIN'	=> [
+            [
+                'FROM'	=> [FORUMS_TRACK_TABLE => 'ft'],
                 'ON'	=> 'ft.user_id = ' . $user->data['user_id'] . ' AND ft.forum_id = f.forum_id',
-            ),
-        ),
+            ],
+        ],
 
         'WHERE'		=> 'fw.user_id = ' . $user->data['user_id'] . '
             AND f.forum_id = fw.forum_id',
 
         'ORDER_BY'	=> 'left_id',
-    );
+    ];
 
     $sql = $db->sql_build_query('SELECT', $sql_array);
 
@@ -763,28 +811,28 @@ The possible first parameter for sql_build_query() is SELECT or SELECT_DISTINCT.
 
 .. code:: php
 
-    $sql_array = array(
+    $sql_array = [
         'SELECT'	=> 'f.*',
 
-        'FROM'		=> array(
+        'FROM'		=> [
             FORUMS_WATCH_TABLE	=> 'fw',
             FORUMS_TABLE		=> 'f',
-        ),
+        ],
 
         'WHERE'		=> 'fw.user_id = ' . $user->data['user_id'] . '
             AND f.forum_id = fw.forum_id',
 
         'ORDER_BY'	=> 'left_id',
-    );
+    ];
 
     if ($config['load_db_lastread'])
     {
-        $sql_array['LEFT_JOIN'] = array(
-            array(
-                'FROM'	=> array(FORUMS_TRACK_TABLE => 'ft'),
+        $sql_array['LEFT_JOIN'] = [
+            [
+                'FROM'	=> [FORUMS_TRACK_TABLE => 'ft'],
                 'ON'	=> 'ft.user_id = ' . $user->data['user_id'] . ' AND ft.forum_id = f.forum_id',
-            ),
-        );
+            ],
+        ];
 
         $sql_array['SELECT'] .= ', ft.mark_time ';
     }
@@ -795,7 +843,7 @@ The possible first parameter for sql_build_query() is SELECT or SELECT_DISTINCT.
 
     $sql = $db->sql_build_query('SELECT', $sql_array);
 
-2.iv. Optimizations
+3.iv. Optimizations
 -------------------
 
 Operations in loop definition:
@@ -826,7 +874,7 @@ Use of in_array()
 
 Try to avoid using ``in_array()`` on huge arrays, and try to not place them into loops if the array to check consist of more than 20 entries. ``in_array()`` can be very time consuming and uses a lot of cpu processing time. For little checks it is not noticeable, but if checked against a huge array within a loop those checks alone can take several seconds. If you need this functionality, try using ``isset()`` on the arrays keys instead, actually shifting the values into keys and vice versa. A call to ``isset($array[$var])`` is a lot faster than ``in_array($var, array_keys($array))`` for example.
 
-2.v. General Guidelines
+3.v. General Guidelines
 -----------------------
 
 General things
@@ -873,13 +921,13 @@ The $request->variable() method determines the type to set from the second param
 
 .. code:: php
 
-    $mark_array = $request->variable('mark', array(0));
+    $mark_array = $request->variable('mark', [0]);
 
 **Getting an array, keys are strings, value defaults to 0:**
 
 .. code:: php
 
-    $action_ary = $request->variable('action', array('' => 0));
+    $action_ary = $request->variable('action', ['' => 0]);
 
 Login checks/redirection
 ++++++++++++++++++++++++
@@ -915,7 +963,7 @@ For operations altering the state of the database, for instance posting, always 
 The string passed to ``add_form_key()`` needs to match the string passed to ``check_form_key()``. Another requirement for this to work correctly is that all forms include the ``{S_FORM_TOKEN}`` template variable.
 
 Sessions
---------
+++++++++
 
 Sessions should be initiated on each page, as near the top as possible using the following code:
 
@@ -976,7 +1024,7 @@ Exiting
 
 Your page should either call ``page_footer()`` in the end to trigger output through the template engine and terminate the script, or alternatively at least call the ``exit_handler()``. That call is necessary because it provides a method for external applications embedding phpBB to be called at the end of the script.
 
-2.vi. Restrictions on the Use of PHP
+3.vi. Restrictions on the Use of PHP
 ------------------------------------
 
 Dynamic code execution
