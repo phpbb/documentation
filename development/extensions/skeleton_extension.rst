@@ -24,7 +24,7 @@ represents the phpBB Extension Team's best practices for extension coding.
 
 Be sure to reference and familiarise yourself with phpBB's `extension
 validation policies <https://www.phpbb.com/extensions/rules-and-policies/validation-policy/>`_
-and `coding guidelines <https://area51.phpbb.com/docs/31x/coding-guidelines.html>`_.
+and `coding guidelines <https://area51.phpbb.com/docs/dev/master/development/index.html>`_.
 
 How to install
 ==============
@@ -39,8 +39,8 @@ installed into a phpBB board just the same as any other.
     not necessarily intended to be installed on live/production web
     sites.
 
-Requirements
-------------
+Installation Requirements
+-------------------------
 
 -  A phpBB board, version 3.2.3 or newer.
 -  PHP version 5.6 or newer.
@@ -814,7 +814,7 @@ distribution such as unit tests and hidden Git files.
 
 To run the build script, use the following console commands:
 
-.. code:: console
+.. code:: bash
 
     # Navigate to the root of your extension
     $ cd ./path/to/phpBB/vendor/package
