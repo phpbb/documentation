@@ -13,6 +13,7 @@ Contents:
    development/git
    development/index
    cli/index
+   auth/authentication
    db/dbal
    extensions/index
    files/index
