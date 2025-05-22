@@ -10,6 +10,7 @@ Contents:
    development/git
    development/coding_guidelines
    cli/index
+   auth/authentication
    db/dbal
    extensions/index
    files/index
