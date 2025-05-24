@@ -135,16 +135,21 @@ then the ``IN_PHPBB`` test is required prior to any executable code:
 
 .. seealso::
 
-    * The phpBB 3.1 `Coding Guidelines <https://area51.phpbb.com/docs/31x/coding-guidelines.html>`_.
+    * The phpBB :doc:`Coding Guidelines <../development/index>`.
     * The phpBB Customisation Database `PHP Validation Policy <https://www.phpbb.com/extensions/rules-and-policies/validation-policy/#php>`_.
 
 
 Template files
 ==============
 
-Templating for extensions is no different than templating for phpBB3 in general. phpBB 3.1 has switched to the
+Templating for extensions is no different than templating for phpBB in general. Since version 3.1, phpBB has switched to the
 Twig template engine but retains phpBB’s original templating syntax. Therefore, either phpBB or Twig template syntax
 is permissible in an extension. If you are not familiar with Twig, you may use phpBB’s syntax.
+
+.. note::
+
+    phpBB 4.0 will be deprecating the phpBB template syntax in favour of Twig. Therefore, it is recommended to use Twig syntax
+    in your extensions to future-proof them.
 
 An extension can contain two types of template files: custom templates and :ref:`template-events-label`.
 An extension's custom template files should have unique names, preferably prefixed with the vendor and extension

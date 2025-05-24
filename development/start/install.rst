@@ -5,23 +5,23 @@ Installation
 1. Quick install
 ================
 
-If you have basic knowledge of using FTP and are sure your hosting service or server will run phpBB3 you can use these steps to quickly get started. For a more detailed explanation you should skip this and go to `2. Requirements`_ below.
+If you have basic knowledge of using FTP and are sure your hosting service or server will run phpBB you can use these steps to quickly get started. For a more detailed explanation you should skip this and go to `2. Requirements`_ below.
 
-Decompress the phpBB3 archive to a local directory on your system.
+Decompress the phpBB archive to a local directory on your system.
 Upload all the files contained in this archive (retaining the directory structure) to a web accessible directory on your server or hosting account.
 Change the permissions on config.php to be writable by all (``666`` or ``-rw-rw-rw-`` within your FTP Client)
 Change the permissions on the following directories to be writable by all (``777`` or ``-rwxrwxrwx`` within your FTP Client):
 ``store/``, ``cache/``, ``files/`` and ``images/avatars/upload/``.
-Point your web browser to the location where you uploaded the phpBB3 files with the addition of ``install/app.php`` or simply ``install/``, e.g. ``http://www.example.com/phpBB3/install/app.php``, ``http://www.example.com/forum/install/``.
+Point your web browser to the location where you uploaded the phpBB files with the addition of ``install/app.php`` or simply ``install/``, e.g. ``http://www.example.com/phpBB/install/app.php``, ``http://www.example.com/forum/install/``.
 Click the **INSTALL** tab, follow the steps and fill out all the requested information.
 Change the permissions on config.php to be writable only by yourself (``644`` or ``-rw-r--r--`` within your FTP Client)
-phpBB3 should now be available, please **MAKE SURE** you read at least `6. Conversion from phpBB 2.0.x to phpBB 3.2.x`_ below for important, security related post-installation instructions, and also take note of `7. Important (security related) post-Install tasks for all installation methods`_ regarding anti-spam measures.
+phpBB should now be available, please **MAKE SURE** you read at least `6. Conversion from phpBB 2.0.x to phpBB 3.2.x`_ below for important, security related post-installation instructions, and also take note of `7. Important (security related) post-Install tasks for all installation methods`_ regarding anti-spam measures.
 If you experienced problems or do not know how to proceed with any of the steps above please read the rest of this document.
 
 2. Requirements
 ===============
 
-phpBB 3.2.x has a few requirements which must be met before you are able to install and use it.
+phpBB has a few requirements which must be met before you are able to install and use it.
 
 A webserver or web hosting account running on any major Operating System with support for PHP
 A SQL database system, **one of**:
@@ -53,7 +53,7 @@ All .php, .sql, .cfg, .css, .js, .html, .htaccess and .txt files should be uploa
 
 phpBB comes supplied with British English as its standard language. However, a number of separate packs for different languages are available. If you are not a native English speaker you may wish to install one or more of these packages before continuing. The installation process below will allow you to select a default language from those available (you can, of course, change this default at a later stage). For more details on language packs, where to obtain them and how to install them please see :ref:`i-languages-internationalisation-i18n`.
 
-Once all the files have been uploaded to your site, you should point your browser at this location with the addition of ``/install/``. For example, if your domain name is ``www.example.com`` and you placed the phpBB files in the directory ``/phpBB3`` off your web root you would enter ``http://www.example.com/phpBB3/install/`` or (alternatively) ``http://www.example.com/phpBB3/install/app.php`` into your browser. When you have done this, you should see the **phpBB Introduction** screen appear.
+Once all the files have been uploaded to your site, you should point your browser at this location with the addition of ``/install/``. For example, if your domain name is ``www.example.com`` and you placed the phpBB files in the directory ``/phpBB`` off your web root you would enter ``http://www.example.com/phpBB/install/`` or (alternatively) ``http://www.example.com/phpBB/install/app.php`` into your browser. When you have done this, you should see the **phpBB Introduction** screen appear.
 
 3.i. Introduction
 -------------------
@@ -166,7 +166,7 @@ To perform the update, either follow the instructions from the **Administration 
 - Go to the `downloads page <https://www.phpbb.com/downloads/>`_ and download the latest update package listed there, matching your current version.
 - Upload the uncompressed archive contents to your phpBB installation - only the ``install/`` and ``vendor/`` folders are required. Upload these folders in their entirety, retaining the file structure.
 - After the install folder is present, phpBB will go offline automatically.
-- Point your browser to the install directory, for example ``http://www.example.com/phpBB3/install/``
+- Point your browser to the install directory, for example ``http://www.example.com/phpBB/install/``
 - Choose the "Update" Tab and follow the instructions
 
 
@@ -198,23 +198,23 @@ Delete the ``install/`` directory
 6. Conversion from phpBB 2.0.x to phpBB 3.2.x
 =============================================
 
-This paragraph explains the steps necessary to convert your existing phpBB2 installation to phpBB3.
+This paragraph explains the steps necessary to convert your existing phpBB2 installation to the latest phpBB.
 
 6.i. Requirements before converting
 -----------------------------------
 
-Before converting, we heavily recommend you do a **full backup of your database and files!** If you are unsure how to achieve this, please ask your hosting provider for advice. You basically need to follow the instructions given for `3. New installation`_. Please **do not** overwrite any old files - install phpBB3 at a different location.
+Before converting, we heavily recommend you do a **full backup of your database and files!** If you are unsure how to achieve this, please ask your hosting provider for advice. You basically need to follow the instructions given for `3. New installation`_. Please **do not** overwrite any old files - install phpBB in a different location.
 
-Once you made a backup of everything and also have a brand new phpBB3 installation, you can now begin the conversion.
+Once you made a backup of everything and also have a brand new phpBB installation, you can now begin the conversion.
 
-Note that the conversion requires ``CREATE`` and ``DROP`` privileges for the phpBB3 database user account.
+Note that the conversion requires ``CREATE`` and ``DROP`` privileges for the phpBB database user account.
 
 6.ii. Converting
 ----------------
 
-To begin the conversion, visit the ``install/`` folder of your phpBB3 installation (the same as you have done for installing). Now you will see a new tab **Convert**. Click this tab.
+To begin the conversion, visit the ``install/`` folder of your phpBB installation (the same as you have done for installing). Now you will see a new tab **Convert**. Click this tab.
 
-As with install, the conversion is automated. Your previous 2.0.x database tables will not be changed and the original 2.0.x files will remain unaltered. The conversion is actually only filling your phpBB3 database tables and copying additional data over to your phpBB3 installation. This has the benefit that if something goes wrong, you are able to either re-run the conversion or continue a conversion, while your old board is still accessible. We really recommend that you disable your old installation while converting, else you may have inconsistent data after the conversion.
+As with install, the conversion is automated. Your previous 2.0.x database tables will not be changed and the original 2.0.x files will remain unaltered. The conversion is actually only filling your phpBB database tables and copying additional data over to your phpBB installation. This has the benefit that if something goes wrong, you are able to either re-run the conversion or continue a conversion, while your old board is still accessible. We really recommend that you disable your old installation while converting, else you may have inconsistent data after the conversion.
 
 Please note that this conversion process may take quite some time and depending on your hosting provider this may result in it failing (due to web server resource limits or other timeout issues). If this is the case, you should ask your provider if they are willing to allow the convert script to temporarily exceed their limits (be nice and they will probably be quite helpful). If your host is unwilling to increase the limits to run the convertor, please see this article for performing the conversion on your local machine: `Knowledge Base - Offline Conversions <https://www.phpbb.com/kb/article/offline-conversions/>`_
 
@@ -231,7 +231,7 @@ During the conversion, the search index is not created or transferred. This mean
 
 After verifying the settings in the ACP, you can delete the install directory to enable the board. The board will stay disabled until you do so.
 
-Once you are pleased with your new installation, you may want to give it the name of your old installation, changing the directory name. With phpBB3 this is possible without any problems, but you may still want to check your cookie settings within the administration panel; in case your cookie path needs to be adjusted prior to renaming.
+Once you are pleased with your new installation, you may want to give it the name of your old installation, changing the directory name. With phpBB this is possible without any problems, but you may still want to check your cookie settings within the administration panel; in case your cookie path needs to be adjusted prior to renaming.
 
 6.iv. Common conversion problems
 --------------------------------
@@ -240,9 +240,9 @@ Once you are pleased with your new installation, you may want to give it the nam
 
 **http 500 / white pages** The conversion is a load-heavy procedure. Restrictions imposed by some server hosting providers can cause problems. The most common causes are: values too low for the PHP settings ``memory_limit`` and ``max_execution_time``. Limits on the allowed CPU time are also a frequent cause for such errors, as are limits on the number of database queries allowed. If you cannot change such settings, then contact your hosting provider or run the conversion procedure on a different computer. The phpBB.com forums are also an excellent location to ask for support.
 
-**Password conversion** Due to the utf-8 based handling of passwords in phpBB3, it is not always possible to transfer all passwords. For passwords "lost in translation" the easiest workaround is to use the **I forgot my password** link on the login page.
+**Password conversion** Due to the utf-8 based handling of passwords in phpBB, it is not always possible to transfer all passwords. For passwords "lost in translation" the easiest workaround is to use the **I forgot my password** link on the login page.
 
-**Path to your former board** The convertor expects the relative path to your old board's files. So, for instance, if the old board is located at ``http://www.yourdomain.com/forum`` and the phpBB3 installation is located at ``http://www.yourdomain.com/phpBB3``, then the correct value would be ``../forum``. Note that the webserver user must be able to access the source installation's files.
+**Path to your former board** The convertor expects the relative path to your old board's files. So, for instance, if the old board is located at ``http://www.yourdomain.com/forum`` and the phpBB installation is located at ``http://www.yourdomain.com/phpBB``, then the correct value would be ``../forum``. Note that the webserver user must be able to access the source installation's files.
 
 **Missing images** If your default board language's language pack does not include all images, then some images might be missing in your installation. Always use a complete language pack as default language.
 

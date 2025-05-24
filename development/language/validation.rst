@@ -36,7 +36,7 @@ Package
   this folder.
 * Revision name in the `Customisation Database`_ should be left blank, contain
   the phpBB package version and/or package release name (e.g. ``3.3.10`` /
-  ``Bertie's translation` for 3.3.10) for more understanding.
+  ``Bertie's translation`` for 3.3.10) for more understanding.
 
 Package Validation
 ==================
@@ -164,7 +164,7 @@ Please do not omit any of these lines, and fill them out carefully.
 
 .. note::
 
-The ``composer.json`` must be valid JSON code. You can validate it using ``composer.phar``, see: `composer.json validation`_.
+    The ``composer.json`` must be valid JSON code. You can validate it using ``composer.phar``, see: `composer.json validation`_.
 
 \*/index.htm
 ------------

@@ -39,7 +39,7 @@ authentication provider class is show below:
     namespace acme\demo\auth\provider;
 
     /**
-     * Database authentication provider for phpBB3
+     * Database authentication provider for phpBB
      *
      * This is for authentication via the integrated user table
      */
@@ -162,10 +162,10 @@ get the data it needs from the service, and the service file which allows
 phpBB to find the class. To find out how you should most likely make calls
 to the OAuh service, it is recommended that you refer to the included OAuth
 services and to the examples provided by
-`Lusitanian/PHPoAuthLib <https://github.com/Lusitanian/PHPoAuthLib>`_.
+`carlos-mg89/PHPoAuthLib <https://github.com/carlos-mg89/PHPoAuthLib>`_.
 
 The example files below show the minimum needed to enable an OAuth service in
-phpBB. They are copies of the bitly service implementation from phpBB3's
+phpBB. They are copies of the bitly service implementation from phpBB's
 develop branch.
 
 The Class file

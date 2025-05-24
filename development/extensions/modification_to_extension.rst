@@ -774,7 +774,7 @@ Adding Events
 There are already numerous events available. However, if your extension needs to
 make use of an event which is not yet in the phpBB code, you can request the
 event be added to the core by creating a ticket in the
-`phpBB Bug Tracker <https://tracker.phpbb.com/projects/PHPBB3>`_ and we will
+`phpBB Bug Tracker <https://tracker.phpbb.com/projects/PHPBB>`_ and we will
 endeavour to include it in the next release.
 
 Basics finished!
