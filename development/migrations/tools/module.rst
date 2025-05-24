@@ -14,7 +14,7 @@ Add a new module
     ['module.add', [ mixed $class [, mixed $parent [, array $data [, mixed $include_path ]]] ]]
 
 .. csv-table::
-   :header: "Parameter", "Required/Default", "Usage"
+   :header: Parameter, Required/Default, Usage
    :delim: |
 
    class | Required | The module class: acp, mcp, or ucp
@@ -112,7 +112,7 @@ Parameters
 ----------
 
 .. csv-table::
-   :header: "Parameter", "Required/Default", "Usage"
+   :header: Parameter, Required/Default, Usage
    :delim: |
 
    class | Required | The module class: acp, mcp, or ucp

@@ -61,7 +61,7 @@ General options
 Common options that can be used with any of phpBB's CLI commands.
 
 .. csv-table::
-   :header: "Option", "Usage"
+   :header: Option, Usage
    :delim: |
 
    ``--help, -h`` | Display a help message

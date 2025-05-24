@@ -23,7 +23,7 @@ Toggle BBCodes On / Off
 BBCodes and other tags can be toggled before or after parsing using any of the following events:
 
 .. csv-table::
-   :header: "Event", "Description"
+   :header: Event, Description
    :delim: |
 
    ``core.text_formatter_s9e_parser_setup`` | Triggers once, when the text Parser service is first created.
@@ -34,7 +34,7 @@ Most common operations are available through the Parser service using the ``phpb
 This includes the functions:
 
 .. csv-table::
-    :header: "Function", "Description"
+    :header: Function, Description
     :delim: |
 
     ``disable_bbcode($name)`` | Disable a BBCode
@@ -147,7 +147,7 @@ that will only show its content to registered users.
 Default phpBB template parameters:
 
 .. csv-table::
-    :header: "Variable", "Description"
+    :header: Variable, Description
     :delim: |
 
     ``S_IS_BOT`` | Whether the current user is a bot.
@@ -210,7 +210,7 @@ users can see the contents of:
 Template parameters can also be set using any of the following events:
 
 .. csv-table::
-    :header: "Event", "Description"
+    :header: Event, Description
     :delim: |
 
     ``core.text_formatter_s9e_renderer_setup`` | Triggers once, when the renderer service is created.

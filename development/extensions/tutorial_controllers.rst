@@ -280,7 +280,7 @@ our route definition:
             name: \d+
 
 .. csv-table::
-   :header: "Item", "Description"
+   :header: Item, Description
    :delim: |
 
        route | "The route name is a unique name and must be prefixed with the vendor and extension names. Use only lowercase letters and underscores."

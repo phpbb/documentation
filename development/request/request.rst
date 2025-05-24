@@ -92,7 +92,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable**     # The name of the variable to check
@@ -119,7 +119,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the variable to check
@@ -206,7 +206,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable**     # The name of the variable to retrieve
@@ -237,7 +237,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the HTML file input's name attribute
@@ -266,7 +266,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the header to retrieve
@@ -292,7 +292,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the variable to retrieve
@@ -332,7 +332,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable**     # The name of the variable that should be overwritten
@@ -379,7 +379,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **super_global** # The super global to get the variable names from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
@@ -417,7 +417,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **super_global** # The super global to get the original array from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.

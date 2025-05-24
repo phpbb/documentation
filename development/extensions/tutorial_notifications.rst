@@ -309,7 +309,7 @@ Base Services
 The base notification type class (:class:`\\phpbb\\notification\\type\\base`) already has a few available services which can be used in our class's functions.
 
 .. csv-table::
-    :header: "Object", "Class"
+    :header: Object, Class
     :delim: |
 
     ``$auth`` | :class:`\\phpbb\\auth\\auth`
@@ -663,7 +663,7 @@ But if you are using the email method, then you should use this function to defi
 However, note that the phpBB core already defines some *default* variables for you:
 
 .. csv-table::
-    :header: "Variable", "Description", "Defined in"
+    :header: Variable, Description, Defined in
     :delim: #
 
     ``USERNAME`` # The recipient's username # :class:`\\phpbb\\notification\\method\\messenger_base` ``notify_using_messenger()``
@@ -964,7 +964,7 @@ Optionally you can send a third argument, ``$options``, to specify which notific
 The options that can be defined are listed below:
 
 .. csv-table::
-    :header: "Object", "Class"
+    :header: Object, Class
     :delim: #
 
     ``item_id``        # The item identifier for the notification. |br| Defaults to get_item_id_
@@ -1037,7 +1037,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **notification_type** # The notification service identifier. |br| Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
@@ -1084,7 +1084,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **notification_type** # Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
@@ -1100,7 +1100,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **notification_type** # Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
@@ -1121,7 +1121,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **method_name**       # The notification method service identifier |br| For example: ``notification.method.board``

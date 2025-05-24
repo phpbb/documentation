@@ -29,7 +29,7 @@ New Language Object
 A new Language object has been introduced that decouples language functions from the User object. That is to say, the following language functions now belong to the ``\phpbb\language\language`` class:
 
 .. csv-table::
-   :header: "Function", "Description"
+   :header: Function, Description
    :delim: |
 
    ``lang`` | "Advanced language substitution."
@@ -79,7 +79,7 @@ As of phpBB 3.2, a new and more powerful BBCode formatting engine has been integ
 The new engine has already been equipped with many PHP events making it even easier than before for extensions to configure BBCodes and BBCode formatted text. The following are the new PHP events:
 
 .. csv-table::
-   :header: "Event", "Description"
+   :header: Event, Description
    :delim: |
 
    ``core.text_formatter_s9e_configure_before`` | "Modify the s9e\TextFormatter configurator before the default settings are set."

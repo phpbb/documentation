@@ -471,7 +471,7 @@ file:
     }
 
 .. csv-table::
-    :header: "Parameter", "Description"
+    :header: Parameter, Description
     :delim: |
 
     ``host`` | "Full URL to the host domain server."
@@ -519,7 +519,7 @@ used for stable release versions suitable for a live forum. The unstable
 branch can be used to provide links to versions in development.
 
 .. csv-table::
-    :header: "Parameter", "Description"
+    :header: Parameter, Description
     :delim: |
 
     ``current`` | "The current version of the extension in a given branch."

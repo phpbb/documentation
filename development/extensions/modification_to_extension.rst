@@ -25,7 +25,7 @@ matter which files, may it be styles, language or ACP module files. All of them
 should be moved into your extension's directory:
 
 .. csv-table::
-   :header: "new directory", "current directory"
+   :header: new directory, current directory
    :delim: |
 
    ``acp/*_module.php`` | ``phpBB/includes/acp/``

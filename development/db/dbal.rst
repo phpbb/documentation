@@ -53,7 +53,7 @@ Parameters
 ^^^^^^^^^^
 
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Host # The host of the database. |br| When using config.php you should use $dbhost instead.
@@ -118,7 +118,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Query Type # Type of query which needs to be created (SELECT, SELECT_DISTINCT)
@@ -158,7 +158,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Query Type # Type of query which needs to be created (UPDATE, INSERT, INSERT_SELECT or SELECT)
@@ -182,7 +182,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Column | Name of the sql column that shall be compared
@@ -207,7 +207,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    String | The string that needs to be escaped.
@@ -223,7 +223,7 @@ The ``sql_not_like_expression`` is identical to ``sql_like_expression`` apart fr
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Expression | The expression to use. Every wildcard is escaped, except $db->get_any_char() and $db->get_one_char()
@@ -269,7 +269,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Column name | The column name to LOWER the value for.
@@ -298,7 +298,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Query | Contains the SQL query which shall be executed
@@ -323,7 +323,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Query | Contains the SQL query which shall be executed.
@@ -359,7 +359,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Table name | Table name to run the statements on.
@@ -427,7 +427,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Field # Name of the field that needs to be fetched.
@@ -442,7 +442,7 @@ Returns an array with the result of using the ``sql_fetchrow`` method on every r
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Result (Optional) # The result that is being evaluated. |br| This result comes from a call to the sql_query method. |br| If left empty the last result will be called.
@@ -480,7 +480,7 @@ Example with a while-loop:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Result (Optional) # The result that is being evaluated. |br| The result comes from a call to the sql_query method. |br| If left empty the last result will be called.
@@ -493,7 +493,7 @@ Seeks to given row number. The row number is zero-based. Defined in the specific
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Row number # The number of the row which needs to be found (zero-based).
@@ -523,7 +523,7 @@ Example:
 Parameters
 ^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Result (Optional) # The result that is being evaluated. |br| This result comes from a call to the sql_query method. |br| If left empty the last result will be called.
