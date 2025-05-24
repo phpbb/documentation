@@ -123,7 +123,7 @@ Most important to know for db-tests is:
 
 1. All data from the database is truncated first.
 2. The data from the getDataSet function is loaded into the database. **No data from any other test is available!**
-3. If you use a table that has a column which has no default value specified (such as text columns), be sure to specify them. (see `PHPBB3-10667 <http://tracker.phpbb.com/browse/PHPBB3-10667>`_)
+3. If you use a table that has a column which has no default value specified (such as text columns), be sure to specify them. (see `PHPBB3-10667 <https://tracker.phpbb.com/browse/PHPBB3-10667>`_)
 
 Code of a DB-DataSet
 --------------------

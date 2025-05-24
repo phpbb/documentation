@@ -151,7 +151,7 @@ directory.
 
     When writing or editing a language file, make sure to save it using
     utf-8 encoding **without BOM**
-    (`Byte Order Mark <http://en.wikipedia.org/wiki/Byte_Order_Mark>`_).
+    (`Byte Order Mark <https://en.wikipedia.org/wiki/Byte_Order_Mark>`_).
     Otherwise the forum will not function properly. Some editors call that mode
     "utf8 cookie".
 

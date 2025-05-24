@@ -8,7 +8,7 @@ Migrations was built because of the difficulties of distributed development
 and maintaining an updated database setup across all developers.
 
 RFC Topic if you're interested in the reasons:
-`<http://area51.phpbb.com/phpBB/viewtopic.php?t=41337>`_
+`<https://area51.phpbb.com/phpBB/viewtopic.php?t=41337>`_
 
 .. toctree::
    :maxdepth: 1

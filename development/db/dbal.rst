@@ -2,7 +2,7 @@
 Database Abstraction Layer
 ==========================
 
-phpBB uses a **D**\ ata\ **B**\ ase **A**\ bstraction **L**\ ayer to access the database instead of directly calling e.g. `mysql_query <http://php.net/manual/en/function.mysql-query.php>`_ functions.
+phpBB uses a **D**\ ata\ **B**\ ase **A**\ bstraction **L**\ ayer to access the database instead of directly calling e.g. `mysql_query <https://php.net/manual/en/function.mysql-query.php>`_ functions.
 You usually access the :abbr:`DBAL (Database Abstraction Layer)` using the global variable ``$db``.
 This variable is included from :class:`common.php` through :class:`includes/compatibility_globals.php`:
 

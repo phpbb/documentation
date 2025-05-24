@@ -88,8 +88,8 @@ you will catch early.
 
 For more information what you can do with Goutte, check out the
 `GitHub project <https://github.com/fabpot/Goutte>`_,
-`Ryan Weaver's Goutte tutorial <http://www.phparch.com/2010/04/four-new-php-5-3-components-and-goutte-a-simple-web-scraper/>`_
-and `Symfony's testing documentation <http://symfony.com/doc/2.0/book/testing.html#the-test-client>`_.
+`Ryan Weaver's Goutte tutorial <https://www.phparch.com/2010/04/four-new-php-5-3-components-and-goutte-a-simple-web-scraper/>`_
+and `Symfony's testing documentation <https://symfony.com/doc/current/testing.html>`_.
 
 Authentication
 --------------

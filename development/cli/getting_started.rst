@@ -4,7 +4,7 @@ Getting started
 
 The command line interface (CLI) is a useful utility for phpBB administrators who have access to a shell (or SSH) on the server they run phpBB on, as well as for extension developers. It provides CLI commands for managing config values, extensions, running database migration, purging the cache, and more.
 
-Most operating systems ship with a built in command line application. For Mac OS and Ubuntu it is called "Terminal" and for Windows it is called "Command Prompt". Third party software such as `PuTTY <http://www.putty.org>`_ and `iTerm <https://www.iterm2.com>`_ can also be used.
+Most operating systems ship with a built in command line application. For Mac OS and Ubuntu it is called "Terminal" and for Windows it is called "Command Prompt". Third party software such as `PuTTY <https://www.putty.org>`_ and `iTerm <https://www.iterm2.com>`_ can also be used.
 
 To use phpBB's CLI on a web server, you will need SSH access to your web server. You can find out from your web hosting company if they offer SSH access and how to log into your web server from the CLI.
 
@@ -111,7 +111,7 @@ The phpBB CLI installer uses a YAML file populated with the data needed to confi
 
             server:
                 cookie_secure: false
-                server_protocol: http://
+                server_protocol: https://
                 force_server_vars: false
                 server_name: localhost
                 server_port: 80

@@ -255,4 +255,4 @@ Preprocessor Comments
 
 With most—if not all—preprocessors, we have the option to write comments that will not get compiled out into our resulting CSS file. As a rule, use these comments to speed up and prevent errors in the minification step.
 
-.. _EditorConfig: http://editorconfig.org/
+.. _EditorConfig: https://editorconfig.org/

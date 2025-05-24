@@ -307,7 +307,7 @@ License
 -------
 
 * All translations must be released under
-  `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
+  `GNU General Public License 2.0 <https://opensource.org/license/gpl-2-0>`_
 
 .. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/4.0
 .. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/master/language/guidelines.html#language-pack-submission-policy

@@ -5,9 +5,9 @@ Tutorial: Controllers and Routes
 Introduction
 ============
 
-phpBB 3.1 introduced Symfony's `HttpKernel <http://symfony.com/doc/current/components/http_kernel.html>`__,
+phpBB 3.1 introduced Symfony's `HttpKernel <https://symfony.com/doc/current/components/http_kernel.html>`__,
 `Controller <https://symfony.com/doc/current/controller.html>`__ and
-`Routing <http://symfony.com/doc/current/routing.html>`__ systems which
+`Routing <https://symfony.com/doc/current/routing.html>`__ systems which
 allow extensions to handle custom "front-facing" pages that users are able
 to view and interact with.
 

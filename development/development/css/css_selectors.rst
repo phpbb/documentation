@@ -248,9 +248,9 @@ Further Reading
 -  `Writing efficient CSS selectors`_
 
 
-.. _Shoot to kill; CSS selector intent: http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/
-.. _‘Scope’ in CSS: http://csswizardry.com/2013/05/scope-in-css/
-.. _Keep your CSS selectors short: http://csswizardry.com/2012/05/keep-your-css-selectors-short/
-.. _About HTML semantics and front-end architecture: http://nicolasgallagher.com/about-html-semantics-front-end-architecture/
-.. _Naming UI components in OOCSS: http://csswizardry.com/2014/03/naming-ui-components-in-oocss/
-.. _Writing efficient CSS selectors: http://csswizardry.com/2011/09/writing-efficient-css-selectors/
+.. _Shoot to kill; CSS selector intent: https://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/
+.. _‘Scope’ in CSS: https://csswizardry.com/2013/05/scope-in-css/
+.. _Keep your CSS selectors short: https://csswizardry.com/2012/05/keep-your-css-selectors-short/
+.. _About HTML semantics and front-end architecture: https://nicolasgallagher.com/about-html-semantics-front-end-architecture/
+.. _Naming UI components in OOCSS: https://csswizardry.com/2014/03/naming-ui-components-in-oocss/
+.. _Writing efficient CSS selectors: https://csswizardry.com/2011/09/writing-efficient-css-selectors/
