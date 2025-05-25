@@ -129,10 +129,10 @@ To make comments inside the template you can use ``{# #}``:
 
     {# Your comments can go here. #}
 
-Variables
----------
+Template variables
+------------------
 
-Variables in phpBB take the form of ``{{ X_YYYYY }}``, where the data is assigned from the source. However, most
+Template variables in phpBB take the form of ``{{ X_YYYYY }}``, where the data is assigned from the source. However, most
 language strings are not assigned from the source. When a language variable is found, denoted as ``{{ lang('YYYYYY') }}``,
 phpBB first checks if an assigned variable with that name exists. If it does, it uses that. If not, it checks if an
 existing string defined in the language file exists.
@@ -141,8 +141,8 @@ By using the language variable format, phpBB allows for more flexibility in the 
 This allows for easy modifications of language strings in the language files without having to modify the source code
 directly.
 
-Blocks
-------
+Template blocks
+---------------
 
 The basic block level loop takes the form:
 

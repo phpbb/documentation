@@ -35,7 +35,8 @@ extensions = [
     'sensio.sphinx.bestpractice',
     'sphinxcontrib.phpdomain',
     'sphinx_multiversion',
-    'sphinx_rtd_theme'
+    'sphinx_rtd_theme',
+    'sphinx.ext.autosectionlabel'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -100,6 +101,8 @@ pygments_style = 'monokai'
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False
+
+autosectionlabel_prefix_document = True
 
 # Options for sphinx_multiversion
 smv_tag_whitelist = 'None'

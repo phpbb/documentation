@@ -1033,8 +1033,7 @@ This function is very simple to use, and requires only a few basic parameters:
 delete_notifications
 --------------------
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
    :header: Parameter, Description
@@ -1080,8 +1079,7 @@ The following is a quick summary of the three methods available for marking noti
 mark_notifications
 ------------------
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
    :header: Parameter, Description
@@ -1096,8 +1094,7 @@ Parameters
 mark_notifications_by_parent
 ----------------------------
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
    :header: Parameter, Description
@@ -1117,8 +1114,7 @@ as most of the notification handling is done through the distinct item and/or pa
 However, there can be times where it is more convenient or accurate to work directly with the notification's unique id.
 For example, when the notifications are listed in the :abbr:`UCP (User Control Panel)` and a user can select specific notifications to be marked as read.
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
    :header: Parameter, Description

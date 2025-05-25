@@ -49,8 +49,7 @@ Example using :class:`config.php`:
     // We do not need this any longer, unset for safety purposes
     unset($dbpasswd);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
    :header: Parameter, Usage
@@ -115,8 +114,8 @@ Example:
     // Now run the query...
     $result = $db->sql_query($sql);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: #
@@ -155,8 +154,8 @@ Example:
     $sql = 'INSERT INTO ' . USERS_TABLE . ' ' . $db->sql_build_array('INSERT', $data);
     $db->sql_query($sql);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: #
@@ -179,8 +178,8 @@ Example:
     	WHERE ' . $db->sql_in_set('user_id', $sql_in);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: |
@@ -204,8 +203,8 @@ Example:
     	WHERE post_id = ' . (int) $integer . "
     		AND post_text = '" . $db->sql_escape($string) . "'";
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: |
@@ -220,8 +219,8 @@ Defined in the base driver (``_sql_like_expression`` is defined in the specific 
 
 The ``sql_not_like_expression`` is identical to ``sql_like_expression`` apart from that it builds a NOT LIKE statement.
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: |
@@ -266,8 +265,8 @@ Example:
     	WHERE ' . $db->sql_lower_text('log_data') . ' ' . $like;
     $result = $db->sql_query_limit($sql, 10);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: |
@@ -295,8 +294,8 @@ Example:
     $result = $db->sql_query($sql);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: |
@@ -320,8 +319,8 @@ Example:
     $result = $db->sql_query_limit($sql, $config['topics_per_page'], $start);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: |
@@ -356,8 +355,8 @@ Example:
     $db->sql_multi_insert(USER_GROUP_TABLE, $sql_ary);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: |
@@ -424,8 +423,8 @@ Example:
     $total_posts = (int) $db->sql_fetchfield('num_posts');
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
    :header: Parameter, Usage
    :delim: #
@@ -438,9 +437,8 @@ sql_fetchrowset
 ---------------
 Returns an array with the result of using the ``sql_fetchrow`` method on every row. Defined in the base driver.
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
    :header: Parameter, Usage
    :delim: #
@@ -476,9 +474,8 @@ Example with a while-loop:
     	$config[$row['config_name']] = $row['config_value'];
     }
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
    :header: Parameter, Usage
    :delim: #
@@ -489,9 +486,8 @@ sql_rowseek
 -----------
 Seeks to given row number. The row number is zero-based. Defined in the specific drivers.
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
    :header: Parameter, Usage
    :delim: #
@@ -519,9 +515,8 @@ Example:
     // We don't need to do anything with our query anymore, so lets set it free
     $db->sql_freeresult($result);
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
    :header: Parameter, Usage
    :delim: #

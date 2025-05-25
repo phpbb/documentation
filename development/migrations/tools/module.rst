@@ -22,8 +22,7 @@ Add a new module
    data | default [] | An array of the data on the new module. This can be setup in two different ways. (see below)
    include_path | default false | Optionally specify a custom include path (only works when using the automatic module add method)
 
-Manually specifying module info
--------------------------------
+.. rubric:: Manually specifying module info
 
 The "manual" way for inserting a category or one module at a time. It will be
 merged with the base array shown a bit below, but at the very least requires
@@ -43,8 +42,7 @@ just a category) you must send ``module_basename`` and ``module_mode``.
         'module_auth'       => '',
     ];
 
-Automatically determining module info
--------------------------------------
+.. rubric:: Automatically determining module info
 
 The "automatic" way. For inserting multiple modules at a time based on the specs
 in the ``_info`` file for the module(s). For this to work the modules must be
@@ -62,8 +60,7 @@ file):
 Optionally you may omit 'modes' and it will insert all of the modules in that
 info file.
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -120,14 +117,12 @@ Parameters
    module | default '' | The module_id or module_langname of the module to remove (more information below)
    include_path | default false | Optionally specify a custom include path (only works when using the automatic module add method)
 
-Manually specifying module info
--------------------------------
+.. rubric:: Manually specifying module info
 
 The "manual" way. When removing the module using the manual method you may
 specify a string (module_langname) or an integer (module_id)
 
-Automatically determining module info
--------------------------------------
+.. rubric:: Automatically determining module info
 
 The "automatic" way. When removing the module using the automatic method you
 may use the same information sent through the $data array when using the
@@ -135,8 +130,7 @@ automatic method of the module_add function. Just as with the automatic add
 method, this will automatically find the modules listed according to the given
 module_basename and modes from the _info file.
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 

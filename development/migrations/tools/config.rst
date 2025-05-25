@@ -13,8 +13,7 @@ Add a new config setting
 
     ['config.add', [config name, config value, is dynamic (default: false) ]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -35,8 +34,7 @@ Update a config setting
 
     ['config.update', [config name, new config value]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -57,8 +55,7 @@ value
 
     ['config.update_if_equals', [compare to, config name, new config value]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -78,8 +75,7 @@ Delete a config setting
 
     ['config.remove', [config name]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 

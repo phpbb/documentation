@@ -138,8 +138,10 @@ Review `Forking and Cloning`_.
 
 Configuration
 -------------
-Git
-^^^
+
+.. rubric:: Git
+    :heading-level: 4
+
 Add your Username to Git on your system:
 
 ::
@@ -162,8 +164,9 @@ Add the upstream remote (you can change 'upstream' to whatever you like):
     The *upstream* remote url **is** the phpBB GitHub repo. Your cloned
     fork of the phpBB GitHub repo will, by default, use the *origin* remote url.
 
-Composer
-^^^^^^^^
+.. rubric:: Composer
+    :heading-level: 4
+
 To be able to run an installation from the repo (and not from a pre-built package) you
 need to run the following shell commands to install phpBB's dependencies.
 
@@ -179,8 +182,9 @@ Ignore any *abandoned package* warnings.
     `Introduction - Composer <https://getcomposer.org/doc/00-intro.md>`_ for
     further information.
 
-Hooks
-^^^^^
+.. rubric:: Hooks
+    :heading-level: 4
+
 The phpBB repository contains some client-side hooks that can aid development. They are
 located in the ``git-tools/hooks`` directory. These hooks do things like preparing and
 validating commit messages, checking for PHP syntax errors. There is a script to set

@@ -16,8 +16,7 @@ Add a new config_text setting
 
     ['config_text.add', [config name, config value]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -38,8 +37,7 @@ Update a config_text setting
 
     ['config_text.update', [config name, new config value]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -59,8 +57,7 @@ Delete a config_text setting
 
     ['config_text.remove', [config name]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
