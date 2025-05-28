@@ -25,7 +25,7 @@ matter which files, may it be styles, language or ACP module files. All of them
 should be moved into your extension's directory:
 
 .. csv-table::
-   :header: "new directory", "current directory"
+   :header: new directory, current directory
    :delim: |
 
    ``acp/*_module.php`` | ``phpBB/includes/acp/``
@@ -188,7 +188,7 @@ In this example my **controller/main.php** would look like the following:
       *
       * @package NV Newspage Extension
       * @copyright (c) 2013 nickvergessen
-      * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+      * @license https://opensource.org/license/gpl-2-0 GNU General Public License v2
       *
       */
 
@@ -282,7 +282,7 @@ As for the ``main_info.php`` we need to adjust the class name from
       *
       * @package NV Newspage Extension
       * @copyright (c) 2013 nickvergessen
-      * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+      * @license https://opensource.org/license/gpl-2-0 GNU General Public License v2
       *
       */
 
@@ -325,7 +325,7 @@ In case of the module, just adjust the class name:
       *
       * @package NV Newspage Extension
       * @copyright (c) 2013 nickvergessen
-      * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+      * @license https://opensource.org/license/gpl-2-0 GNU General Public License v2
       *
       */
 
@@ -550,7 +550,7 @@ A complete file could look like this:
       *
       * @package migration
       * @copyright (c) 2013 phpBB Group
-      * @license http://opensource.org/licenses/gpl-license.php GNU Public License v2
+      * @license https://opensource.org/license/gpl-2-0 GNU Public License v2
       *
       */
 
@@ -652,7 +652,7 @@ implements a Symfony class:
       *
       * @package NV Newspage Extension
       * @copyright (c) 2013 nickvergessen
-      * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
+      * @license https://opensource.org/license/gpl-2-0 GNU General Public License v2
       *
       */
 
@@ -774,7 +774,7 @@ Adding Events
 There are already numerous events available. However, if your extension needs to
 make use of an event which is not yet in the phpBB code, you can request the
 event be added to the core by creating a ticket in the
-`phpBB Bug Tracker <https://tracker.phpbb.com/projects/PHPBB3>`_ and we will
+`phpBB Bug Tracker <https://tracker.phpbb.com/projects/PHPBB>`_ and we will
 endeavour to include it in the next release.
 
 Basics finished!

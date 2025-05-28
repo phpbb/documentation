@@ -184,7 +184,7 @@ executed until such time as false is returned.
 Using service collections
 =========================
 In 3.1, a new concept is that of "services". You can read up on exactly what a
-service is `here <http://symfony.com/doc/current/book/service_container.html>`_.
+service is `here <https://symfony.com/doc/current/service_container.html>`_.
 The rest of this guide will assume you have basic knowledge of services and how
 to use them. A service
 collection is basically what it sounds like: a collection of services. Basically,
@@ -255,7 +255,7 @@ loaded, which is especially useful in cases where service priority and/or depend
 requires they be loaded in a specified order.
 
 Ordered service collections are based on a normal service collection, but the
-collection is sorted with `ksort <http://php.net/ksort>`_. The usage of the
+collection is sorted with `ksort <https://php.net/ksort>`_. The usage of the
 sorted service collection is nearly the same as a normal service collection,
 except instead of using ``service_collection`` you should use ``ordered_service_collection``:
 
@@ -403,7 +403,7 @@ Using service decoration
 ========================
 .. seealso::
   Read about Service Decoration at
-  `Symfony <http://symfony.com/doc/current/components/dependency_injection/advanced.html#decorating-services>`_
+  `Symfony <https://symfony.com/doc/current/service_container/alias_private.html#decorating-services>`_
   for complete documentation.
 
 From phpBB 3.2, you can use service decoration as the preferred method to replace
@@ -471,7 +471,7 @@ file:
     }
 
 .. csv-table::
-    :header: "Parameter", "Description"
+    :header: Parameter, Description
     :delim: |
 
     ``host`` | "Full URL to the host domain server."
@@ -519,7 +519,7 @@ used for stable release versions suitable for a live forum. The unstable
 branch can be used to provide links to versions in development.
 
 .. csv-table::
-    :header: "Parameter", "Description"
+    :header: Parameter, Description
     :delim: |
 
     ``current`` | "The current version of the extension in a given branch."

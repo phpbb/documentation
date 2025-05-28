@@ -36,12 +36,12 @@ See `Set Up Git <https://help.github.com/articles/set-up-git>`_ for help on sett
 
 Branches
 ^^^^^^^^
-- `master <http://github.com/phpbb/phpbb/tree/master>`_ - The latest unstable development version with new features etc.
-- `3.3.x <http://github.com/phpbb/phpbb/tree/3.3.x>`_ - Development branch of the 3.3 line. Bug fixes and minor feature changes are applied here.
-- `3.2.x <http://github.com/phpbb/phpbb/tree/3.2.x>`_ - Development branch of the 3.2 line. Bug fixes and minor feature changes are applied here.
-- `3.1.x <http://github.com/phpbb/phpbb/tree/3.1.x>`_ - Development branch of the stable 3.1 line. phpBB 3.1 has reached its End of Life and is therefore no longer maintained.
-- `3.0.x <http://github.com/phpbb/phpbb/tree/3.0.x>`_ - Development branch of the stable 3.0 line. phpBB 3.0 has reached its End of Life and is therefore no longer maintained.
-- `2.0.x <http://github.com/phpbb/phpbb/tree/2.0.x>`_ - Development branch of the deprecated 2.0 line.
+- `master <https://github.com/phpbb/phpbb/tree/master>`_ - The latest unstable development version with new features etc.
+- `3.3.x <https://github.com/phpbb/phpbb/tree/3.3.x>`_ - Development branch of the 3.3 line. Bug fixes and minor feature changes are applied here.
+- `3.2.x <https://github.com/phpbb/phpbb/tree/3.2.x>`_ - Development branch of the 3.2 line. Bug fixes and minor feature changes are applied here.
+- `3.1.x <https://github.com/phpbb/phpbb/tree/3.1.x>`_ - Development branch of the stable 3.1 line. phpBB 3.1 has reached its End of Life and is therefore no longer maintained.
+- `3.0.x <https://github.com/phpbb/phpbb/tree/3.0.x>`_ - Development branch of the stable 3.0 line. phpBB 3.0 has reached its End of Life and is therefore no longer maintained.
+- `2.0.x <https://github.com/phpbb/phpbb/tree/2.0.x>`_ - Development branch of the deprecated 2.0 line.
 
 Tags
 ^^^^
@@ -138,8 +138,10 @@ Review `Forking and Cloning`_.
 
 Configuration
 -------------
-Git
-^^^
+
+.. rubric:: Git
+    :heading-level: 4
+
 Add your Username to Git on your system:
 
 ::
@@ -162,8 +164,9 @@ Add the upstream remote (you can change 'upstream' to whatever you like):
     The *upstream* remote url **is** the phpBB GitHub repo. Your cloned
     fork of the phpBB GitHub repo will, by default, use the *origin* remote url.
 
-Composer
-^^^^^^^^
+.. rubric:: Composer
+    :heading-level: 4
+
 To be able to run an installation from the repo (and not from a pre-built package) you
 need to run the following shell commands to install phpBB's dependencies.
 
@@ -179,8 +182,9 @@ Ignore any *abandoned package* warnings.
     `Introduction - Composer <https://getcomposer.org/doc/00-intro.md>`_ for
     further information.
 
-Hooks
-^^^^^
+.. rubric:: Hooks
+    :heading-level: 4
+
 The phpBB repository contains some client-side hooks that can aid development. They are
 located in the ``git-tools/hooks`` directory. These hooks do things like preparing and
 validating commit messages, checking for PHP syntax errors. There is a script to set
@@ -196,8 +200,8 @@ and re-run the install command.
 
 Once these hooks are installed, you simply need to run ``git commit`` to commit new
 changes. Depending on your environment, you will be prompted to add a commit message
-using `Vim <http://vimdoc.sourceforge.net/htmldoc/>`__ or
-`Emacs <https://www.gnu.org/software/emacs/manual/html_node/emacs/Help.html>`__. The
+using `Vim <https://vimhelp.org/>`__ or
+`Emacs <https://www.gnu.org/software/emacs/manual/html_node/emacs/Help-Summary.html>`__. The
 hooks will take care of formatting your entire commit message in the required format
 (see `Commit Messages`_).
 
@@ -474,7 +478,7 @@ The difference is that, if you don't use the global option, any new repository y
 create will not have this option properly set for phpBB development which may cause
 errors to occur while committing or when executing any php file.
 
-**For those who use** `TortoiseGit <http://code.google.com/p/tortoisegit/>`_
+**For those who use** `TortoiseGit <https://tortoisegit.org/>`_
 **(and used to work with TortoiseSVN):**
 
 When you use TortoiseGit the first time, you need to disable ``AutoCrlf`` in
@@ -489,9 +493,6 @@ can correctly merge branches (*you need to do that on every git repository you h
 
 Create your own SSH key
 -----------------------
-.. seealso::
-
-    http://help.github.com/win-set-up-git/
 
 TortoiseGit will automatically use the SSH key
 
@@ -525,16 +526,11 @@ Commands
 Further reading
 ===============
 
-* `Git Community Book (online) <http://book.git-scm.com/>`__
-* `Pro Git Book (online) <http://progit.org/book/>`__
-* `GitCasts <http://gitcasts.com/>`__
-* `Getting Git <http://www.techscreencast.com/tool/versioncontrol/railsconf-git-talk/810>`__
-* `RailsConf 2008 <http://en.oreilly.com/rails2008/public/content/home>`__ Git Talk by Scott Chacon
-* `Official Git Documentation <http://git-scm.com/documentation>`__
-* `Git Crash Course for SVN users <http://git-scm.com/course/svn.html>`__
-* `GitHub Guides <http://github.com/guides/home>`__
-* `Learn.GitHub <http://learn.github.com/>`__
-* `Git for the lazy <http://www.spheredev.org/wiki/Git_for_the_lazy>`__
+* `Git Community Book (online) <https://git-scm.com/book/en/v2>`__
+* `Official Git Documentation <https://git-scm.com/doc>`__
+* `GitHub Git Guide <https://github.com/git-guides>`__
+* `Git and GitHub learning resources <https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources>`__
+* `Git for the lazy <https://wiki.spheredev.org/index.php/Git_for_the_lazy>`__
 
 External links
 ==============
@@ -545,4 +541,4 @@ External links
 * `phpBB Extensions GitHub account <https://github.com/phpbb-extensions>`__
 * `TortoiseGit <https://tortoisegit.org/>`__ - A windows Git client based on TortoiseSVN
 * `TortoiseGit on github <https://github.com/TortoiseGit/TortoiseGit/>`__ - GitHub repository
-* `Open Source Contribution Etiquette <http://tirania.org/blog/archive/2010/Dec-31.html>`__
+* `Open Source Contribution Etiquette <https://tirania.org/blog/archive/2010/Dec-31.html>`__

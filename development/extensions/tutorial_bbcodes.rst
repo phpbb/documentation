@@ -23,7 +23,7 @@ Toggle BBCodes On / Off
 BBCodes and other tags can be toggled before or after parsing using any of the following events:
 
 .. csv-table::
-   :header: "Event", "Description"
+   :header: Event, Description
    :delim: |
 
    ``core.text_formatter_s9e_parser_setup`` | Triggers once, when the text Parser service is first created.
@@ -34,7 +34,7 @@ Most common operations are available through the Parser service using the ``phpb
 This includes the functions:
 
 .. csv-table::
-    :header: "Function", "Description"
+    :header: Function, Description
     :delim: |
 
     ``disable_bbcode($name)`` | Disable a BBCode
@@ -80,7 +80,7 @@ The following sample code shows how BBCodes can be toggled and manipulated using
 .. seealso::
 
     https://area51.phpbb.com/docs/code/3.2.x/phpbb/textformatter/parser_interface.html
-    http://s9etextformatter.readthedocs.io/Getting_started/Runtime_configuration/
+    https://s9etextformatter.readthedocs.io/Getting_started/Runtime_configuration/
 
 
 Executing PHP Code With BBCodes
@@ -133,9 +133,9 @@ method to read and change its attributes during parsing based on who is being qu
 
 .. seealso::
 
-    http://s9etextformatter.readthedocs.io/Filters/Attribute_filters/
-    http://s9etextformatter.readthedocs.io/Filters/Tag_filters/
-    http://s9etextformatter.readthedocs.io/Filters/Callback_signature/
+    https://s9etextformatter.readthedocs.io/Filters/Attribute_filters/
+    https://s9etextformatter.readthedocs.io/Filters/Tag_filters/
+    https://s9etextformatter.readthedocs.io/Filters/Callback_signature/
 
 
 Template Parameters
@@ -147,7 +147,7 @@ that will only show its content to registered users.
 Default phpBB template parameters:
 
 .. csv-table::
-    :header: "Variable", "Description"
+    :header: Variable, Description
     :delim: |
 
     ``S_IS_BOT`` | Whether the current user is a bot.
@@ -210,7 +210,7 @@ users can see the contents of:
 Template parameters can also be set using any of the following events:
 
 .. csv-table::
-    :header: "Event", "Description"
+    :header: Event, Description
     :delim: |
 
     ``core.text_formatter_s9e_renderer_setup`` | Triggers once, when the renderer service is created.
@@ -242,8 +242,8 @@ your own template parameters, in addition to the default one's already available
 
 .. seealso::
 
-    http://s9etextformatter.readthedocs.io/Templating/Template_parameters/
-    http://s9etextformatter.readthedocs.io/Plugins/BBCodes/Use_template_parameters/
+    https://s9etextformatter.readthedocs.io/Templating/Template_parameters/
+    https://s9etextformatter.readthedocs.io/Plugins/BBCodes/Use_template_parameters/
 
 
 Registering Custom Variables
@@ -301,9 +301,9 @@ set the value before each parsing.
 .. seealso::
 
     https://area51.phpbb.com/docs/code/3.2.x/phpbb/textformatter/parser_interface.html
-    http://s9etextformatter.readthedocs.io/Filters/Callback_signature/
-    http://s9etextformatter.readthedocs.io/Filters/Attribute_filters/
-    http://s9etextformatter.readthedocs.io/Filters/Tag_filters/
+    https://s9etextformatter.readthedocs.io/Filters/Callback_signature/
+    https://s9etextformatter.readthedocs.io/Filters/Attribute_filters/
+    https://s9etextformatter.readthedocs.io/Filters/Tag_filters/
 
 Enable Text Formatter Plugins
 =============================
@@ -354,4 +354,4 @@ settings are configured.
 
 .. seealso::
 
-    http://s9etextformatter.readthedocs.io
+    https://s9etextformatter.readthedocs.io

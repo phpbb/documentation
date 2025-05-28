@@ -161,7 +161,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 .. _Customisations Database: https://www.phpbb.com/go/customise/language-packs/4.0
 .. _Language Packs Database: https://www.phpbb.com/languages/
-.. _GNU General Public License 2.0: http://www.opensource.org/licenses/gpl-2.0.php
+.. _GNU General Public License 2.0: https://opensource.org/license/gpl-2-0
 .. _4.0 Translation (i18n/L10n) Guidelines: https://area51.phpbb.com/docs/40x/coding-guidelines.html#translation
 .. _4.0 Writing style: https://area51.phpbb.com/docs/40x/coding-guidelines.html#writingstyle
 .. _Notepad++: https://notepad-plus-plus.org/

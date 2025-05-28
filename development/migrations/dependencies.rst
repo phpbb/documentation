@@ -59,7 +59,7 @@ depends_on creates a tree
 Imagine the following situation:
 
 .. csv-table::
-   :header: "Migration", "Dependencies", "Note"
+   :header: Migration, Dependencies, Note
    :delim: |
 
    ``migration_1`` | ``phpbb\db\migration\data\\v310\\dev`` | Initial release, 1.0.0, requires phpBB 3.1.0
@@ -74,7 +74,7 @@ installed when an individual Migration was installed manually. *Assumes*
 
 
 .. csv-table::
-   :header: "Install", "Migrations that are installed"
+   :header: Install, Migrations that are installed
    :delim: |
 
    ``migration_1`` | ``migration_1``

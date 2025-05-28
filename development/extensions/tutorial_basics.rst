@@ -92,7 +92,7 @@ The details of the meta data are explained below the sample, but for now let's h
     It is important to remember that the last item or object in any JSON array must not contain a trailing comma.
 
 .. csv-table::
-   :header: "Field", "Required", "Content"
+   :header: Field, Required, Content
    :delim: |
 
    ``name`` | Yes | "The vendor name and extension name, separated by ``/``, matching the folder
@@ -124,7 +124,7 @@ authors
 You may have unlimited authors. At least one author is highly recommended.
 
 .. csv-table::
-   :header: "Field", "Required", "Content"
+   :header: Field, Required, Content
    :delim: |
 
    ``name`` | Yes | "The name of an author."
@@ -140,7 +140,7 @@ List the dependencies required by the extension, i.e. the PHP version and
 `third party libraries <https://packagist.org/>`_.
 
 .. csv-table::
-   :header: "Field", "Content"
+   :header: Field, Content
    :delim: |
 
    ``php`` | "The minimum-stability version of PHP required by the extension. phpBB 3.2 requires PHP 5.4.0 or higher,
@@ -163,7 +163,7 @@ This section can contain virtually any arbitrary data according to the composer 
 two special entries in this array for extensions:
 
 .. csv-table::
-   :header: "Field", "Content"
+   :header: Field, Content
    :delim: |
 
    ``display-name`` | "The name of your extension, e.g. Acme Demo Extension."

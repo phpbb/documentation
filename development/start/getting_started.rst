@@ -51,7 +51,7 @@ Although we are rather proud of the included styles, we realise that they may no
 
 For more information about styles, please see: https://www.phpbb.com/styles/
 
-**Please note** that 3rd party styles downloaded for versions of phpBB2 will **not** work in phpBB3. It is also important to ensure that the style is updated to match the current version of the phpBB software you are using.
+**Please note** that 3rd party styles downloaded for previous versions of phpBB will **not** work. It is important to ensure that the style is updated to match the current version of the phpBB software you are using.
 
 Once you have downloaded a style, the usual next step is to unarchive (or upload the unarchived contents of) the package into your ``styles/`` directory. You then need to visit ``Administration Control Panel -> Customise tab -> Style management -> Install Styles`` where you should see the new style available. Click "Install style" to install the style.
 
@@ -128,7 +128,7 @@ This is a stable release of phpBB. The 3.2.x line is feature frozen, with point 
 
 Those interested in the development of phpBB should keep an eye on the development forums to see how things are progressing:
 
-http://area51.phpbb.com/phpBB/
+https://area51.phpbb.com/phpBB/
 
 Please note that the development forums should **NOT** be used to seek support for phpBB, the main community forums are the place for this.
 
@@ -139,7 +139,7 @@ Please note that the development forums should **NOT** be used to seek support f
 
 The phpBB developers use a bug tracking system to store, list and manage all reported bugs, it can be found at the location listed below. Please **DO NOT** post bug reports to our forums. In addition please **DO NOT** use the bug tracker for support requests. Posting such a request will only see you directed to the support forums (while taking time away from working on real bugs).
 
-http://tracker.phpbb.com/browse/PHPBB3
+https://tracker.phpbb.com/browse/PHPBB
 
 While we very much appreciate receiving bug reports (the more reports the more stable phpBB will be) we ask you carry out a few steps before adding new entries:
 
@@ -159,7 +159,7 @@ The relevant database type/version is listed within the administration control p
 
 Please be as detailed as you can in your report, and if possible, list the steps required to duplicate the problem. If you have a patch that fixes the issue, please attach it to the ticket or submit a pull request to our repository on `GitHub <https://github.com/phpbb/phpbb>`_.
 
-If you create a patch, it is very much appreciated (but not required) if you follow the phpBB coding guidelines. Please note that the coding guidelines are somewhat different between different versions of phpBB. For phpBB 3.2.x the coding guidelines may be found here: http://area51.phpbb.com/docs/32x/coding-guidelines.html
+If you create a patch, it is very much appreciated (but not required) if you follow the phpBB coding guidelines. Please note that the coding guidelines are somewhat different between different versions of phpBB. For phpBB 3.2.x the coding guidelines may be found here: https://area51.phpbb.com/docs/32x/coding-guidelines.html
 
 Once a bug has been submitted you will be emailed any follow up comments added to it. **Please** if you are requested to supply additional information, do so! It is frustrating for us to receive bug reports, ask for additional information but get nothing. In these cases we have a policy of closing the bug, which may leave a very real problem in place. Obviously we would rather not have this situation arise.
 

@@ -2,7 +2,7 @@
 Database Abstraction Layer
 ==========================
 
-phpBB uses a **D**\ ata\ **B**\ ase **A**\ bstraction **L**\ ayer to access the database instead of directly calling e.g. `mysql_query <http://php.net/manual/en/function.mysql-query.php>`_ functions.
+phpBB uses a **D**\ ata\ **B**\ ase **A**\ bstraction **L**\ ayer to access the database instead of directly calling e.g. `mysql_query <https://php.net/manual/en/function.mysql-query.php>`_ functions.
 You usually access the :abbr:`DBAL (Database Abstraction Layer)` using the global variable ``$db``.
 This variable is included from :class:`common.php` through :class:`includes/compatibility_globals.php`:
 
@@ -49,11 +49,10 @@ Example using :class:`config.php`:
     // We do not need this any longer, unset for safety purposes
     unset($dbpasswd);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Host # The host of the database. |br| When using config.php you should use $dbhost instead.
@@ -115,10 +114,10 @@ Example:
     // Now run the query...
     $result = $db->sql_query($sql);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Query Type # Type of query which needs to be created (SELECT, SELECT_DISTINCT)
@@ -155,10 +154,10 @@ Example:
     $sql = 'INSERT INTO ' . USERS_TABLE . ' ' . $db->sql_build_array('INSERT', $data);
     $db->sql_query($sql);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Query Type # Type of query which needs to be created (UPDATE, INSERT, INSERT_SELECT or SELECT)
@@ -179,10 +178,10 @@ Example:
     	WHERE ' . $db->sql_in_set('user_id', $sql_in);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Column | Name of the sql column that shall be compared
@@ -204,10 +203,10 @@ Example:
     	WHERE post_id = ' . (int) $integer . "
     		AND post_text = '" . $db->sql_escape($string) . "'";
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    String | The string that needs to be escaped.
@@ -220,10 +219,10 @@ Defined in the base driver (``_sql_like_expression`` is defined in the specific 
 
 The ``sql_not_like_expression`` is identical to ``sql_like_expression`` apart from that it builds a NOT LIKE statement.
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Expression | The expression to use. Every wildcard is escaped, except $db->get_any_char() and $db->get_one_char()
@@ -266,10 +265,10 @@ Example:
     	WHERE ' . $db->sql_lower_text('log_data') . ' ' . $like;
     $result = $db->sql_query_limit($sql, 10);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Column name | The column name to LOWER the value for.
@@ -295,10 +294,10 @@ Example:
     $result = $db->sql_query($sql);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Query | Contains the SQL query which shall be executed
@@ -320,10 +319,10 @@ Example:
     $result = $db->sql_query_limit($sql, $config['topics_per_page'], $start);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Query | Contains the SQL query which shall be executed.
@@ -356,10 +355,10 @@ Example:
     $db->sql_multi_insert(USER_GROUP_TABLE, $sql_ary);
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: |
 
    Table name | Table name to run the statements on.
@@ -424,10 +423,10 @@ Example:
     $total_posts = (int) $db->sql_fetchfield('num_posts');
 
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
+
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Field # Name of the field that needs to be fetched.
@@ -438,11 +437,10 @@ sql_fetchrowset
 ---------------
 Returns an array with the result of using the ``sql_fetchrow`` method on every row. Defined in the base driver.
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Result (Optional) # The result that is being evaluated. |br| This result comes from a call to the sql_query method. |br| If left empty the last result will be called.
@@ -476,11 +474,10 @@ Example with a while-loop:
     	$config[$row['config_name']] = $row['config_value'];
     }
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Result (Optional) # The result that is being evaluated. |br| The result comes from a call to the sql_query method. |br| If left empty the last result will be called.
@@ -489,11 +486,10 @@ sql_rowseek
 -----------
 Seeks to given row number. The row number is zero-based. Defined in the specific drivers.
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Row number # The number of the row which needs to be found (zero-based).
@@ -519,11 +515,10 @@ Example:
     // We don't need to do anything with our query anymore, so lets set it free
     $db->sql_freeresult($result);
 
+.. rubric:: Parameters
 
-Parameters
-^^^^^^^^^^
 .. csv-table::
-   :header: "Parameter", "Usage"
+   :header: Parameter, Usage
    :delim: #
 
    Result (Optional) # The result that is being evaluated. |br| This result comes from a call to the sql_query method. |br| If left empty the last result will be called.

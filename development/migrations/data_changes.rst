@@ -63,8 +63,7 @@ If (Conditional)
 If call allows you to create a basic if statement which will be checked and,
 if true, the attached statement will be parsed.
 
-How it works
-------------
+.. rubric:: How it works
 
 .. code-block:: php
 
@@ -73,8 +72,7 @@ How it works
         [/* Call to make if the statement is true */],
     ]],
 
-Examples
---------
+.. rubric:: Examples
 
 if config "captcha_gd" is true, update "captcha_plugin" with "phpbb_captcha_gd"
 
@@ -105,8 +103,7 @@ Custom
 
 Custom calls allow you to specify the callable to your own function to be called.
 
-How it works
-------------
+.. rubric:: How it works
 
 .. code-block:: php
 
@@ -114,8 +111,7 @@ How it works
         [/* Callable function */]
     ]],
 
-Example
--------
+.. rubric:: Example
 
 Call a function within the migrations file named some_function
 
@@ -141,8 +137,7 @@ until null or true is returned.
     This should be used when something needs to be run that can take
     longer than the time limit (for example, resyncing topics).
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -192,8 +187,7 @@ Passing parameters to custom functions
         array(/* Callable function */), array(/* Parameters to the function */),
     )),
 
-Example
--------
+.. rubric:: Example
 
 Call a function within the migrations file named some_function, passing it some parameters
 
@@ -207,8 +201,7 @@ Call a function within the migrations file named some_function, passing it some 
 
     The function called must accept the specified parameters
 
-Example
--------
+.. rubric:: Example
 
 Fully compatible with multi step process
 

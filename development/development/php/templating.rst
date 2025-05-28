@@ -7,422 +7,396 @@
 File naming
 +++++++++++
 
-Firstly templates now take the suffix ".html" rather than ".tpl". This was done simply to make the lives of some people easier wrt syntax highlighting, etc.
+Templates **SHALL** use the suffix ``.html`` and **MAY** use the ``.twig`` suffix for non-HTML files interpreted by twig or twig macros. Other suffixes like ``.tpl`` or ``.html5`` **SHALL NOT** be used.
 
 Variables
 +++++++++
 
-All template variables should be named appropriately (using underscores for spaces), language entries should be prefixed with ``L_``, system data with ``S_``, urls with ``U_``, javascript urls with ``UA_``, language to be put in javascript statements with ``LA_``, all other variables should be presented 'as is'.
+All template variables **SHALL** be named appropriately using underscores for spaces (`snake_case`).
 
-``L_*`` template variables are automatically mapped to the corresponding language entry if the code does not set (and therefore overwrite) this variable specifically and if the language entry exists. For example ``{L_USERNAME}`` maps to ``$user->lang['USERNAME']``. The ``LA_*`` template variables are handled within the same way, but properly escaped so they can be put in javascript code. This should reduce the need to assign loads of new language variables in MODifications.
+Previous versions of phpBB used prefixes for special handling of variables, e.g. ``L_`` for language variables, ``S_`` for system variables, etc. This has been deprecated in phpBB 4.0 and will be dropped in a later version of phpBB.
+``UA_`` and ``LA`` prefixes resulted in special inside JavaScript.
+
+Appropriate escaping needs to be done in template files using the provided escape functions. Variables can be escaped inside JavaScript using the standard ``e('js')`` twig function:
+
+.. code-block:: js
+
+    {{ username|e('js') }}
+
+This will escape the variable for JavaScript usage. A helper function for language variables inside JavaScript without the need for ``e('js')`` has been introduced:
+
+.. code-block:: js
+
+    {{ lang_js('USERNAME') }}
+
+The ``L_`` prefix or ``LA`` prefix is not needed anymore. The function will automatically escape the variable for JavaScript usage.
+
+.. warning::
+
+    Support for the ``L_`` prefix and ``LA`` prefix have been deprecated in phpBB 4.0 will be removed in a later version of phpBB. Please use the new functions instead.
+
+.. seealso::
+
+    - `escape - Filters - Documentation <https://twig.symfony.com/doc/3.x/filters/escape.html>`_
+    - `Twig for Template Designers - Variables <https://twig.symfony.com/doc/3.x/templates.html#variables>`_
 
 Blocks/Loops
 ++++++++++++
 
-The basic block level loop remains and takes the form:
+The basic block level loop **SHALL** use the twig syntax as follows:
 
-.. code:: html
+.. code-block:: html
 
-	<!-- BEGIN loopname -->
-		markup, {loopname.X_YYYYY}, etc.
-	<!-- END loopname -->
+    {% for item in loopname %}
+        markup, {{ item.X_YYYYY }}, etc.
+    {% endfor %}
 
-A bit later loops will be explained further. To not irritate you we will explain conditionals as well as other statements first.
+Further instructions on how to use loops will follow in section `Extended syntax for Blocks/Loops`_.
+
+.. warning::
+
+    The old style of loops using ``<!-- BEGIN loopname -->`` and ``<!-- END loopname -->`` is deprecated in phpBB 4.0 and will be removed in a later version of phpBB. Please use the new twig syntax instead.
+
+    .. code:: html
+
+        <!-- BEGIN loopname -->
+            markup, {loopname.X_YYYYY}, etc.
+        <!-- END loopname -->
+
+.. seealso::
+
+    - `for - Tags - Twig Documentation <https://twig.symfony.com/doc/3.x/tags/for.html>`_
 
 Including files
 +++++++++++++++
 
-Something that existed in 2.0.x which no longer exists in 3.x is the ability to assign a template to a variable. This was used (for example) to output the jumpbox. Instead (perhaps better, perhaps not but certainly more flexible) we now have INCLUDE. This takes the simple form:
+In phpBB 3.1 and later, template inclusion **SHALL** be handled using Twig syntax. To include another template file, use the following Twig statement:
 
-.. code:: html
+.. code-block:: twig
 
-	<!-- INCLUDE filename -->
+    {% include 'filename' %}
 
-You will note in the 3.x templates the major sources start with <!-- INCLUDE overall_header.html --> or <!-- INCLUDE simple_header.html -->, etc. In 2.0.x control of "which" header to use was defined entirely within the code. In 3.x the template designer can output what they like. Note that you can introduce new templates (i.e. other than those in the default set) using this system and include them as you wish ... perhaps useful for a common "menu" bar or some such. No need to modify loads of files as with 2.0.x.
+For example, to include the overall header or a custom menu bar:
 
-Added in **3.0.6** is the ability to include a file using a template variable to specify the file, this functionality only works for root variables (i.e. not block variables).
+.. code-block:: twig
 
-.. code:: html
+    {% include 'overall_header.html' %}
+    {% include 'simple_header.html' %}
 
-	<!-- INCLUDE {FILE_VAR} -->
+You can also include a template file using a variable:
 
-Template defined variables can also be utilised.
+.. code-block:: twig
 
-.. code:: html
+    {% include FILE_VAR %}
 
-	<!-- DEFINE $SOME_VAR = 'my_file.html' -->
-	<!-- INCLUDE {$SOME_VAR} -->
+Template-defined variables can be used as well:
 
-PHP
-+++
+.. code-block:: twig
 
-A contentious decision has seen the ability to include PHP within the template introduced. This is achieved by enclosing the PHP within relevant tags:
+    {% set SOME_VAR = 'my_file.html' %}
+    {% include SOME_VAR %}
 
-.. code:: html
+.. seealso::
 
-	<!-- PHP -->
-		echo "hello!";
-	<!-- ENDPHP -->
-
-You may also include PHP from an external file using:
-
-.. code:: html
-
-	<!-- INCLUDEPHP somefile.php -->
-
-it will be included and executed inline.
-
-.. note:: it is very much encouraged that template designers do not include PHP. The ability to include raw PHP was introduced primarily to allow end users to include banner code, etc. without modifying multiple files (as with 2.0.x). It was not intended for general use ... hence htps://www.phpbb.com will **not** make available template sets which include PHP. And by default templates will have PHP disabled (the admin will need to specifically activate PHP for a template).
+    - `Twig for Template Designers - Including other templates <https://twig.symfony.com/doc/3.x/templates.html#including-other-templates>`_
 
 Conditionals/Control structures
 +++++++++++++++++++++++++++++++
 
-The most significant addition to 3.x are conditions or control structures, "if something then do this else do that". The system deployed is very similar to Smarty. This may confuse some people at first but it offers great potential and great flexibility with a little imagination. In their most simple form these constructs take the form:
+Starting with phpBB 3.1, the template engine uses Twig for control structures and conditionals. This allows for a more powerful and flexible way to handle logic in templates compared to the previous phpBB template syntax.
+All conditionals **SHALL** use the Twig syntax starting with phpBB 4.0.
 
-.. code:: html
+.. warning::
 
-	<!-- IF expr -->
-		markup
-	<!-- ENDIF -->
+    The old style of conditionals using ``<!-- IF expr -->`` and ``<!-- ENDIF -->`` is deprecated in phpBB 4.0 and will be removed in a later version of phpBB. Please use the new Twig syntax instead.
 
-expr can take many forms, for example:
+    .. code:: html
 
-.. code:: html
+        <!-- IF expr -->
+            markup
+        <!-- ENDIF -->
 
-	<!-- IF loop.S_ROW_COUNT is even -->
-		markup
-	<!-- ENDIF -->
+Twig offers a clear and flexible way to handle logic in templates. The basic form of a conditional in Twig is:
 
-This will output the markup if the S_ROW_COUNT variable in the current iteration of loop is an even value (i.e. the expr is TRUE). You can use various comparison methods (standard as well as equivalent textual versions noted in square brackets) including (``not, or, and, eq, neq, is`` should be used if possible for better readability):
+.. code-block:: twig
 
-.. code:: php
+    {% if expr %}
+        markup
+    {% endif %}
 
-	== [eq]
-	!= [neq, ne]
-	<> (same as !=)
-	!== (not equivalent in value and type)
-	=== (equivalent in value and type)
-	> [gt]
-	< [lt]
-	>= [gte]
-	<= [lte]
-	&& [and]
-	|| [or]
-	% [mod]
-	! [not]
-	+
-	-
-	*
-	/
-	,
-	<< (bitwise shift left)
-	>> (bitwise shift right)
-	| (bitwise or)
-	^ (bitwise xor)
-	& (bitwise and)
-	~ (bitwise not)
-	is (can be used to join comparison operations)
+The `expr` can take many forms. For example, to check if the current loop iteration is even:
 
-Basic parenthesis can also be used to enforce good old BODMAS rules. Additionally some basic comparison types are defined:
+.. code-block:: twig
 
-.. code:: text
+    {% if loop.index is even %}
+        markup
+    {% endif %}
 
-	even
-	odd
-	div
+This will output the markup if the current loop index is even. Twig supports a wide range of comparison and logical operators, including:
 
-Beyond the simple use of IF you can also do a sequence of comparisons using the following:
+.. code-block:: text
 
-.. code:: html
+    ==, !=, ==, >, <, >=, <=, and, or, not, in, is, matches, starts with, ends with, contains, has some, has every
 
-	<!-- IF expr1 -->
-		markup
-	<!-- ELSEIF expr2 -->
-		markup
-		.
-		.
-		.
-	<!-- ELSEIF exprN -->
-		markup
-	<!-- ELSE -->
-		markup
-	<!-- ENDIF -->
+You can also use parentheses to group expressions and enforce operator precedence.
 
-Each statement will be tested in turn and the relevant output generated when a match (if a match) is found. It is not necessary to always use ELSEIF, ELSE can be used alone to match "everything else".
+Twig provides special tests for common checks:
 
-So what can you do with all this? Well take for example the colouration of rows in viewforum. In 2.0.x row colours were predefined within the source as either row color1, row color2 or row class1, row class2. In 3.x this is moved to the template, it may look a little daunting at first but remember control flows from top to bottom and it's not too difficult:
+.. code-block:: text
 
-.. code:: html
+    even, odd, divisible by, defined, iterable, empty, null, same as
 
-	<table>
-		<!-- IF loop.S_ROW_COUNT is even -->
-			<tr class="row1">
-		<!-- ELSE -->
-			<tr class="row2">
-		<!-- ENDIF -->
-			<td>HELLO!</td>
-		</tr>
-	</table>
+For example:
 
-This will cause the row cell to be output using class row1 when the row count is even, and class row2 otherwise. The S_ROW_COUNT parameter gets assigned to loops by default. Another example would be the following:
+.. code-block:: twig
 
-.. code:: html
+    {% if loop.index is divisible by(3) %}
+        markup
+    {% endif %}
 
-	<table>
-		<!-- IF loop.S_ROW_COUNT > 10 -->
-			<tr bgcolor="#FF0000">
-		<!-- ELSEIF loop.S_ROW_COUNT > 5 -->
-			<tr bgcolor="#00FF00">
-		<!-- ELSEIF loop.S_ROW_COUNT > 2 -->
-			<tr bgcolor="#0000FF">
-		<!-- ELSE -->
-			<tr bgcolor="#FF00FF">
-		<!-- ENDIF -->
-			<td>hello!</td>
-		</tr>
-	</table>
+Twig also supports `if`/`elseif`/`else` chains:
 
-This will output the row cell in purple for the first two rows, blue for rows 2 to 5, green for rows 5 to 10 and red for remainder. So, you could produce a "nice" gradient effect, for example.
+.. code-block:: twig
 
-What else can you do? Well, you could use IF to do common checks on for example the login state of a user:
+    {% if expr1 %}
+        markup
+    {% elseif expr2 %}
+        markup
+    {% else %}
+        markup
+    {% endif %}
 
-.. code:: html
+Each condition is checked in order, and the first matching block is rendered.
 
-	<!-- IF S_USER_LOGGED_IN -->
-		markup
-	<!-- ENDIF -->
+Here are some practical examples:
 
-This replaces the existing (fudged) method in 2.0.x using a zero length array and BEGIN/END.
+**Row coloration in a table:**
+
+.. code-block:: twig
+
+    <table>
+        {% for row in rows %}
+            {% if loop.index is even %}
+                <tr class="row1">
+            {% else %}
+                <tr class="row2">
+            {% endif %}
+                <td>HELLO!</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+This will use `row1` for even rows and `row2` for odd rows.
+
+**Gradient effect based on row count:**
+
+.. code-block:: twig
+
+    <table>
+        {% for row in rows %}
+            {% if loop.index > 10 %}
+                <tr style="background-color:#FF0000">
+            {% elseif loop.index > 5 %}
+                <tr style="background-color:#00FF00">
+            {% elseif loop.index > 2 %}
+                <tr style="background-color:#0000FF">
+            {% else %}
+                <tr style="background-color:#FF00FF">
+            {% endif %}
+                <td>hello!</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+This will output different background colors depending on the row index.
+
+**Checking user login state:**
+
+.. code-block:: twig
+
+    {% if S_USER_LOGGED_IN %}
+        markup
+    {% endif %}
+
+.. seealso::
+
+    - `Twig for Template Designers - Control Structures <https://twig.symfony.com/doc/3.x/templates.html#control-structure>`_
+    - `Twig for Template Designers - Operators <https://twig.symfony.com/doc/3.x/templates.html#operators>`_
 
 Extended syntax for Blocks/Loops
 ++++++++++++++++++++++++++++++++
 
-Back to our loops - they had been extended with the following additions. Firstly you can set the start and end points of the loop. For example:
+Twig provides powerful features for working with loops, including setting start and end points, handling empty loops, and working with nested loops.
 
-.. code:: html
+**Setting start and end points of a loop:**
 
-	<!-- BEGIN loopname(2) -->
-		markup
-	<!-- END loopname -->
+You can use the `slice` filter to control which items are iterated over:
 
-Will start the loop on the third entry (note that indexes start at zero). Extensions of this are:
+.. code-block:: twig
 
-``loopname(2)``: Will start the loop on the 3rd entry
-``loopname(-2)``: Will start the loop two entries from the end
-``loopname(3,4)``: Will start the loop on the fourth entry and end it on the fifth
-``loopname(3,-4)``: Will start the loop on the fourth entry and end it four from last
+    {# Start loop on the third entry (index 2) #}
+    {% for item in loopname|slice(2) %}
+        {{ item }}
+    {% endfor %}
 
-A further extension to begin is ``BEGINELSE``:
+    {# Start two entries from the end #}
+    {% for item in loopname|slice(-2) %}
+        {{ item }}
+    {% endfor %}
 
-.. code:: html
+    {# Start at index 3 and end at index 4 (2 items) #}
+    {% for item in loopname|slice(3, 2) %}
+        {{ item }}
+    {% endfor %}
 
-	<!-- BEGIN loop -->
-		markup
-	<!-- BEGINELSE -->
-		markup
-	<!-- END loop -->
+    {# Start at index 3 and end four from last #}
+    {% for item in loopname|slice(3, loopname|length - 3 - 4) %}
+        {{ item }}
+    {% endfor %}
 
-This will cause the markup between ``BEGINELSE`` and ``END`` to be output if the loop contains no values. This is useful for forums with no topics (for example) ... in some ways it replaces "bits of" the existing `switch_` type control (the rest being replaced by conditionals).
+**Handling empty loops:**
 
-Another way of checking if a loop contains values is by prefixing the loops name with a dot:
+Twig provides the `else` block for loops:
 
-.. code:: html
+.. code-block:: twig
 
-	<!-- IF .loop -->
-		<!-- BEGIN loop -->
-			markup
-		<!-- END loop -->
-	<!-- ELSE -->
-		markup
-	<!-- ENDIF -->
+    {% for item in loop %}
+        {{ item }}
+    {% else %}
+        No items found.
+    {% endfor %}
 
-You are even able to check the number of items within a loop by comparing it with values within the IF condition:
+**Checking if a loop contains values:**
 
-.. code:: html
+You can use an `if` statement with the `length` filter:
 
-	<!-- IF .loop > 2 -->
-		<!-- BEGIN loop -->
-			markup
-		<!-- END loop -->
-	<!-- ELSE -->
-		markup
-	<!-- ENDIF -->
+.. code-block:: twig
 
-Nesting loops cause the conditionals needing prefixed with all loops from the outer one to the inner most. An illustration of this:
+    {% if loop|length > 0 %}
+        {% for item in loop %}
+            {{ item }}
+        {% endfor %}
+    {% else %}
+        No items found.
+    {% endif %}
 
-.. code:: html
+Or simply use the `else` block as above.
 
-	<!-- BEGIN firstloop -->
-		{firstloop.MY_VARIABLE_FROM_FIRSTLOOP}
+**Checking the number of items in a loop:**
 
-		<!-- BEGIN secondloop -->
-			{firstloop.secondloop.MY_VARIABLE_FROM_SECONDLOOP}
-		<!-- END secondloop -->
-	<!-- END firstloop -->
+.. code-block:: twig
 
-Sometimes it is necessary to break out of nested loops to be able to call another loop within the current iteration. This sounds a little bit confusing and it is not used very often. The following (rather complex) example shows this quite good - it also shows how you test for the first and last row in a loop (i will explain the example in detail further down):
+    {% if loop|length > 2 %}
+        {% for item in loop %}
+            {{ item }}
+        {% endfor %}
+    {% else %}
+        Not enough items.
+    {% endif %}
 
-.. code:: html
+**Nesting loops:**
 
-	<!-- BEGIN l_block1 -->
-		<!-- IF l_block1.S_SELECTED -->
-			<strong>{l_block1.L_TITLE}</strong>
-			<!-- IF S_PRIVMSGS -->
+Twig supports nested loops naturally:
 
-				<!-- the ! at the beginning of the loop name forces the loop to be not a nested one of l_block1 -->
-				<!-- BEGIN !folder -->
-					<!-- IF folder.S_FIRST_ROW -->
-						<ul class="nav">
-					<!-- ENDIF -->
+.. code-block:: html
 
-					<li><a href="{folder.U_FOLDER}">{folder.FOLDER_NAME}</a></li>
+    {% for first in firstloop %}
+        {{ first.MY_VARIABLE_FROM_FIRSTLOOP }}
 
-					<!-- IF folder.S_LAST_ROW -->
-						</ul>
-					<!-- ENDIF -->
-				<!-- END !folder -->
+        {% for second in first.secondloop %}
+            {{ second.MY_VARIABLE_FROM_SECONDLOOP }}
+        {% endfor %}
+    {% endfor %}
 
-			<!-- ENDIF -->
+**Breaking out of nested loops and working with special variables:**
 
-			<ul class="nav">
-			<!-- BEGIN l_block2 -->
-				<li>
-					<!-- IF l_block1.l_block2.S_SELECTED -->
-						<strong>{l_block1.l_block2.L_TITLE}</strong>
-					<!-- ELSE -->
-						<a href="{l_block1.l_block2.U_TITLE}">{l_block1.l_block2.L_TITLE}</a>
-					<!-- ENDIF -->
-				</li>
-			<!-- END l_block2 -->
-			</ul>
-		<!-- ELSE -->
-			<a class="nav" href="{l_block1.U_TITLE}">{l_block1.L_TITLE}</a>
-		<!-- ENDIF -->
-	<!-- END l_block1 -->
+Twig does not support breaking out of multiple nested loops directly, and child loops will not be directly interpreted as child loop inside `for` statements.
+It is possible to use the `loop` variable to access the current loop's properties, such as `loop.index`, `loop.length`, and `loop.first`. This will however only work for the current loop, not for parent loops.
 
-Let us first concentrate on this part of the example:
+.. code-block:: html
 
-.. code:: html
+    {% for l_block1 in l_block1_list %}
+        {% if l_block1.S_SELECTED %}
+            <strong>{{ l_block1.L_TITLE }}</strong>
+            {% if S_PRIVMSGS %}
+                <ul class="nav">
+                {% for folder in folders %}
+                    {% if loop.first %}
+                        <ul class="nav">
+                    {% endif %}
 
-	<!-- BEGIN l_block1 -->
-		<!-- IF l_block1.S_SELECTED -->
-			markup
-		<!-- ELSE -->
-			<a class="nav" href="{l_block1.U_TITLE}">{l_block1.L_TITLE}</a>
-		<!-- ENDIF -->
-	<!-- END l_block1 -->
+                    <li><a href="{{ folder.U_FOLDER }}">{{ folder.FOLDER_NAME }}</a></li>
 
-Here we open the loop ``l_block1`` and do some things if the value ``S_SELECTED`` within the current loop iteration is true, else we write the blocks link and title. Here, you see ``{l_block1.L_TITLE}`` referenced - you remember that ``L_*`` variables get automatically assigned the corresponding language entry? This is true, but not within loops. The ``L_TITLE`` variable within the loop l_block1 is assigned within the code itself.
+                    {% if loop.last %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            {% endif %}
 
-Let's have a closer look at the markup:
+            <ul class="nav">
+            {% for l_block2 in l_block1.l_block2 %}
+                <li>
+                    {% if l_block2.S_SELECTED %}
+                        <strong>{{ l_block2.L_TITLE }}</strong>
+                    {% else %}
+                        <a href="{{ l_block2.U_TITLE }}">{{ l_block2.L_TITLE }}</a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <a class="nav" href="{{ l_block1.U_TITLE }}">{{ l_block1.L_TITLE }}</a>
+        {% endif %}
+    {% endfor %}
 
-.. code:: html
+**Checking for first and last iteration:**
 
-	<!-- BEGIN l_block1 -->
-	.
-	.
-		<!-- IF S_PRIVMSGS -->
+Use `loop.first` and `loop.last`:
 
-			<!-- BEGIN !folder -->
-				<!-- IF folder.S_FIRST_ROW -->
-					<ul class="nav">
-				<!-- ENDIF -->
+.. code-block:: html
 
-				<li><a href="{folder.U_FOLDER}">{folder.FOLDER_NAME}</a></li>
+    {% for folder in folders %}
+        {% if loop.first %}
+            <ul class="nav">
+        {% endif %}
 
-				<!-- IF folder.S_LAST_ROW -->
-					</ul>
-				<!-- ENDIF -->
-			<!-- END !folder -->
+        <li><a href="{{ folder.U_FOLDER }}">{{ folder.FOLDER_NAME }}</a></li>
 
-		<!-- ENDIF -->
-	.
-	.
-	<!-- END l_block1 -->
+        {% if loop.last %}
+            </ul>
+        {% endif %}
+    {% endfor %}
 
-The ``<!-- IF S_PRIVMSGS -->`` statement clearly checks a global variable and not one within the loop, since the loop is not given here. So, if ``S_PRIVMSGS`` is true we execute the shown markup. Now, you see the ``<!-- BEGIN !folder -->`` statement. The exclamation mark is responsible for instructing the template engine to iterate through the main loop folder. So, we are now within the loop folder - with ``<!-- BEGIN folder -->`` we would have been within the loop ``l_block1.folder`` automatically as is the case with ``l_block2``:
+**Alternative: Only output markup for certain iterations:**
 
-.. code:: html
+.. code-block:: html
 
-	<!-- BEGIN l_block1 -->
-	.
-	.
-		<ul class="nav">
-		<!-- BEGIN l_block2 -->
-			<li>
-				<!-- IF l_block1.l_block2.S_SELECTED -->
-					<strong>{l_block1.l_block2.L_TITLE}</strong>
-				<!-- ELSE -->
-					<a href="{l_block1.l_block2.U_TITLE}">{l_block1.l_block2.L_TITLE}</a>
-				<!-- ENDIF -->
-			</li>
-		<!-- END l_block2 -->
-		</ul>
-	.
-	.
-	<!-- END l_block1 -->
-
-You see the difference? The loop l_block2 is a member of the loop l_block1 but the loop folder is a main loop.
-
-Now back to our folder loop:
-
-.. code:: html
-
-	<!-- IF folder.S_FIRST_ROW -->
-		<ul class="nav">
-	<!-- ENDIF -->
-
-	<li><a href="{folder.U_FOLDER}">{folder.FOLDER_NAME}</a></li>
-
-	<!-- IF folder.S_LAST_ROW -->
-		</ul>
-	<!-- ENDIF -->
-
-You may have wondered what the comparison to S_FIRST_ROW and S_LAST_ROW is about. If you haven't guessed already - it is checking for the first iteration of the loop with S_FIRST_ROW and the last iteration with S_LAST_ROW. This can come in handy quite often if you want to open or close design elements, like the above list. Let us imagine a folder loop build with three iterations, it would go this way:
-
-.. code:: html
-
-	<ul class="nav"> <!-- written on first iteration -->
-		<li>first element</li> <!-- written on first iteration -->
-		<li>second element</li> <!-- written on second iteration -->
-		<li>third element</li> <!-- written on third iteration -->
-	</ul> <!-- written on third iteration -->
-
-As you can see, all three elements are written down as well as the markup for the first iteration and the last one. Sometimes you want to omit writing the general markup - for example:
-
-.. code:: html
-
-	<!-- IF folder.S_FIRST_ROW -->
-		<ul class="nav">
-	<!-- ELSEIF folder.S_LAST_ROW -->
-		</ul>
-	<!-- ELSE -->
-		<li><a href="{folder.U_FOLDER}">{folder.FOLDER_NAME}</a></li>
-	<!-- ENDIF -->
-
-would result in the following markup:
-
-.. code:: html
-
-	<ul class="nav"> <!-- written on first iteration -->
-		<li>second element</li> <!-- written on second iteration -->
-	</ul> <!-- written on third iteration -->
+    {% for folder in folders %}
+        {% if loop.first %}
+            <ul class="nav">
+        {% elseif loop.last %}
+            </ul>
+        {% else %}
+            <li><a href="{{ folder.U_FOLDER }}">{{ folder.FOLDER_NAME }}</a></li>
+        {% endif %}
+    {% endfor %}
 
 Just always remember that processing is taking place from top to bottom.
 
 Forms
 +++++
 
-If a form is used for a non-trivial operation (i.e. more than a jumpbox), then it should include the {S_FORM_TOKEN} template variable.
+If a form is used for a non-trivial operation (i.e. more than a jumpbox), then it **SHALL** include the ``{{ S_FORM_TOKEN }}`` template variable.
 
 .. code:: html
 
-	<form method="post" id="mcp" action="{U_POST_ACTION}">
+	<form method="post" id="mcp" action="{{ U_POST_ACTION }}">
 
 		<fieldset class="submit-buttons">
-			<input type="reset" value="{L_RESET}" name="reset" class="button2" />
-			<input type="submit" name="action[add_warning]" value="{L_SUBMIT}" class="button1" />
-			{S_FORM_TOKEN}
+			<input type="reset" value="{{ lang('RESET') }}" name="reset" class="button2">
+			<input type="submit" name="action[add_warning]" value="{{ lang('SUBMIT') }}" class="button1">
+			{{ S_FORM_TOKEN }}
 		</fieldset>
 	</form>
 
@@ -430,35 +404,84 @@ If a form is used for a non-trivial operation (i.e. more than a jumpbox), then i
 4.ii. Styles Tree
 -----------------
 
-When basing a new style on an existing one, it is not necessary to provide all the template files. By declaring the base style name in the **parent** field in the **Style configuration file(cfg)**, the style can be set to reuse template files from the parent style.
+Style configuration ``composer.json`` files are derived from the standard `composer` file format, but with a few additional fields specific to phpBB styles.
+An important part of the style is assigning a unique name both in the ``name`` field and in the ``display-name`` field in the ``extra`` section of the ``composer.json``:
 
-Style cfg files are simple name-value lists with the information necessary for installing a style. The important part of the style configuration file is assigning an unique name.
+.. code:: json
+
+    {
+        "name": "phpbb/phpbb-style-prosilver",
+        "description": "phpBB Forum Software default style",
+        "type": "phpbb-style",
+        "version": "4.0.0-a1-dev",
+        "homepage": "https://www.phpbb.com",
+        "license": "GPL-2.0",
+        "authors": [
+            {
+                "name": "phpBB Limited",
+                "email": "operations@phpbb.com",
+                "homepage": "https://www.phpbb.com/go/authors"
+            }
+        ],
+        "support": {
+            "issues": "https://tracker.phpbb.com",
+            "forum": "https://www.phpbb.com/community/",
+            "docs": "https://www.phpbb.com/support/docs/",
+            "irc": "irc://irc.libera.chat/phpbb",
+            "chat": "https://www.phpbb.com/support/chat/"
+        },
+        "extra": {
+            "display-name": "prosilver",
+            "phpbb-version": "4.0.0-a1-dev",
+            "parent-style":  ""
+        }
+    }
+
+When basing a new style on an existing one, it is not necessary to provide all the template files.
+By declaring the base style name in the **parent** field in the **Style configuration file (composer.json)**, the style can be set to reuse template files from the parent style:
+
+.. code:: json
+
+    {
+        "name": "acme-author/my-custom-style",
+        "description": "My custom style based on prosilver",
+        "type": "phpbb-style",
+        "version": "1.0.0",
+        "homepage": "https://www.some-site.com",
+        "license": "GPL-2.0",
+        "authors": [
+            {
+                "name": "ACME Author",
+                "email": "acme@some-site.com",
+                "homepage": "https://www.some-site.com"
+            }
+        ],
+        "extra": {
+            "display-name": "My Custom Style Acme Style",
+            "phpbb-version": "4.0.0",
+            "parent-style":  "prosilver"
+        }
+    }
 
 The effect of doing so is that the template engine will use the template files in the new style where they exist, but fall back to files in the parent style otherwise.
+In the above example, if the new style does not have a file named ``overall_header.html``, the template engine will use the one from the ``prosilver`` style.
 
 We strongly encourage the use of parent styles for styles based on the bundled styles, as it will ease the update procedure.
 
-.. code:: php
+.. note::
 
-	# General Information about this style
-	name = Custom Style
-	copyright = © phpBB Limited, 2007
-	style_version = 3.2.0-b1
-	phpbb_version = 3.2.0-b1
-
-	# Defining a different template bitfield
-	# template_bitfield = lNg=
-
-	# Parent style
-	# Set value to empty or to this style's name if this style does not have a parent style
-	parent = prosilver
+    The previously used ``style.cfg`` file has been replaced with ``composer.json`` in phpBB 4.0. The new format is more flexible and allows for better integration.
 
 4.iii. Template Events
 ----------------------
 
-Template events must follow this format: ``<!-- EVENT event_name -->``
+Template events **SHALL** follow this format: ``{% EVENT event_name %}``.
 
 Using the above example, files named ``event_name.html`` located within extensions will be injected into the location of the event.
+
+.. note::
+
+    The previously used ``<!-- EVENT event_name -->`` syntax has been deprecated in phpBB 4.0 and will be removed in a later version of phpBB. Please use the new Twig syntax instead.
 
 Template event naming guidelines
 ++++++++++++++++++++++++++++++++

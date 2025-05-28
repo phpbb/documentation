@@ -36,7 +36,7 @@ Package
   this folder.
 * Revision name in the `Customisation Database`_ should be left blank, contain
   the phpBB package version and/or package release name (e.g. ``3.3.10`` /
-  ``Bertie's translation` for 3.3.10) for more understanding.
+  ``Bertie's translation`` for 3.3.10) for more understanding.
 
 Package Validation
 ==================
@@ -164,7 +164,7 @@ Please do not omit any of these lines, and fill them out carefully.
 
 .. note::
 
-The ``composer.json`` must be valid JSON code. You can validate it using ``composer.phar``, see: `composer.json validation`_.
+    The ``composer.json`` must be valid JSON code. You can validate it using ``composer.phar``, see: `composer.json validation`_.
 
 \*/index.htm
 ------------
@@ -307,7 +307,7 @@ License
 -------
 
 * All translations must be released under
-  `GNU General Public License 2.0 <http://www.opensource.org/licenses/gpl-2.0.php>`_
+  `GNU General Public License 2.0 <https://opensource.org/license/gpl-2-0>`_
 
 .. _Customisation Database: https://www.phpbb.com/go/customise/language-packs/4.0
 .. _Language Pack Submission Policy: https://area51.phpbb.com/docs/dev/master/language/guidelines.html#language-pack-submission-policy

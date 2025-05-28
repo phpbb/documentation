@@ -14,8 +14,7 @@ Add a new permission
 
     ['permission.add', [permission name, global (default: true) , copy from (default: false) ]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -41,8 +40,7 @@ Delete a permission
 
     ['permission.remove', [permission name, global (default: true) ]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -65,8 +63,7 @@ Add a new permission role
 
     ['permission.role_add', [role name, role type (u_, m_, a_), role description]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -88,8 +85,7 @@ Update a permission role
 
     ['permission.role_update', [old role name, new role name]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -109,8 +105,7 @@ Remove a permission role
 
     ['permission.role_remove', [role name]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -132,8 +127,7 @@ Set a permission (to Yes or Never)
 
     ['permission.permission_set', [role/group name, permission name(s), type ('role', 'group', default: role), has permission (default: true) ]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -156,8 +150,7 @@ Remove a permission (set to No)
 
     ['permission.permission_unset', [role/group name, permission name(s), type ('role', 'group', default: role) ]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 
@@ -177,8 +170,7 @@ Check if a permission role exists before attempting to set/unset permissions on 
 
     ['permission.role_exists', [role name]],
 
-Example
--------
+.. rubric:: Example
 
 .. code-block:: php
 

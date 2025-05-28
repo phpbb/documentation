@@ -323,12 +323,12 @@ Our project makes use of several tools to lint and keep code up to standards.
 
 .. note:: This is used to help automatically re-format your code on-the-fly to meet standards during the build process via ``gulp`` as well as on save in your editor.
 
-.. note:: Our editors of choice are `PhpStorm`_ & `ATOM`_ which provide useful plugins to make use of these tools. Check out the `Editor Setup`_ section of the docs for more information
+.. note:: Our editors of choice are `PhpStorm`_ & `Visual Studio Code`_ which provide useful plugins to make use of these tools. Check out the `Editor Setup`_ section of the docs for more information
 
-.. _stylelint.io: http://www.stylelint.io
+.. _stylelint.io: https://stylelint.io/
 .. _postcss-sorting: https://github.com/hudochenkov/postcss-sorting
 .. _postcss-pxtorem: https://github.com/cuth/postcss-pxtorem
 .. _stylefmt: https://github.com/morishitter/stylefmt
 .. _PhpStorm: https://www.jetbrains.com/phpstorm/
-.. _ATOM: http://www.atom.io
+.. _Visual Studio Code: https://code.visualstudio.com/
 .. _Editor Setup: /editor-setup

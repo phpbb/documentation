@@ -88,11 +88,10 @@ If no super global is specified, it will default to the ``REQUEST`` super global
    $submit = $request->variable('submit', \phpbb\request\request_interface::POST);
    $session = $request->variable('user_sid', \phpbb\request\request_interface::COOKIE);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable**     # The name of the variable to check
@@ -115,11 +114,10 @@ This is a short hand for ``$request->variable('variable', \phpbb\request\request
       // The form was submitted with a POST request
    }
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the variable to check
@@ -202,11 +200,10 @@ The nesting increased with each value provided.
     * Please note that the last array is 0-based.
     */
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable**     # The name of the variable to retrieve
@@ -233,11 +230,10 @@ So for ``<input name="attachment" type="file">`` the variable name is ``attachme
        $file = $upload->handle_upload('files.types.form', 'avatar_upload_file');
    }
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the HTML file input's name attribute
@@ -262,11 +258,10 @@ This function is a shortcut to retrieve the value of the client's HTTP headers.
        // ...
    }
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the header to retrieve
@@ -288,11 +283,10 @@ It also provides a fallback to ``getenv()`` as some CGI setups may need it.
 
    $server_port = $request->server('SERVER_PORT', 0);
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable** # The name of the variable to retrieve
@@ -328,11 +322,10 @@ Changes which are performed on the super globals directly will **not** have any 
        $request->overwrite('confirm_key', null, \phpbb\request\request_interface::POST);
    }
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **variable**     # The name of the variable that should be overwritten
@@ -375,11 +368,10 @@ It will then return all the names *(keys)* that exist for that super global.
 
    return $hidden;
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **super_global** # The super global to get the variable names from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.
@@ -413,11 +405,10 @@ It will then return the original array with all the variables for that super glo
        $auth_provider->unlink_account($link_data);
    }
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **super_global** # The super global to get the original array from. |br| Can be any of ``GET|POST|REQUEST|COOKIE|SERVER|FILES``. |br| Defaults to ``REQUEST``.

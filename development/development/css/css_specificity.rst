@@ -169,10 +169,9 @@ This goes some way to providing our CSS with scope and encapsulation, but does s
 
 Now we have better scoped CSS with minimal specificity—the best of both worlds.
 
-Further Reading
-^^^^^^^^^^^^^^^
+.. seealso::
 
--  `‘Scope’ in CSS`_
+    -  `‘Scope’ in CSS`_
 
 ``!important``
 ~~~~~~~~~~~~~~
@@ -272,12 +271,11 @@ Here we are selecting based on an attribute rather than an ID, and attribute sel
 
 Do keep in mind that these are hacks, and should not be used unless you have no better alternative.
 
-Further Reading
-^^^^^^^^^^^^^^^
+.. seealso::
 
--  `Hacks for dealing with specificity`_
+    -  `Hacks for dealing with specificity`_
 
-.. _jsfiddle.net/0yb7rque: http://jsfiddle.net/csswizardry/0yb7rque/
-.. _known bug: https://twitter.com/codepo8/status/505004085398224896
-.. _‘Scope’ in CSS: http://csswizardry.com/2013/05/scope-in-css/
-.. _Hacks for dealing with specificity: http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/
+    .. _jsfiddle.net/0yb7rque: https://jsfiddle.net/csswizardry/0yb7rque/
+    .. _known bug: https://web.archive.org/web/20200512073642/https://twitter.com/codepo8/status/505004085398224896
+    .. _‘Scope’ in CSS: https://csswizardry.com/2013/05/scope-in-css/
+    .. _Hacks for dealing with specificity: https://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/

@@ -309,7 +309,7 @@ Base Services
 The base notification type class (:class:`\\phpbb\\notification\\type\\base`) already has a few available services which can be used in our class's functions.
 
 .. csv-table::
-    :header: "Object", "Class"
+    :header: Object, Class
     :delim: |
 
     ``$auth`` | :class:`\\phpbb\\auth\\auth`
@@ -663,7 +663,7 @@ But if you are using the email method, then you should use this function to defi
 However, note that the phpBB core already defines some *default* variables for you:
 
 .. csv-table::
-    :header: "Variable", "Description", "Defined in"
+    :header: Variable, Description, Defined in
     :delim: #
 
     ``USERNAME`` # The recipient's username # :class:`\\phpbb\\notification\\method\\messenger_base` ``notify_using_messenger()``
@@ -964,7 +964,7 @@ Optionally you can send a third argument, ``$options``, to specify which notific
 The options that can be defined are listed below:
 
 .. csv-table::
-    :header: "Object", "Class"
+    :header: Object, Class
     :delim: #
 
     ``item_id``        # The item identifier for the notification. |br| Defaults to get_item_id_
@@ -1033,11 +1033,10 @@ This function is very simple to use, and requires only a few basic parameters:
 delete_notifications
 --------------------
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **notification_type** # The notification service identifier. |br| Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
@@ -1080,11 +1079,10 @@ The following is a quick summary of the three methods available for marking noti
 mark_notifications
 ------------------
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **notification_type** # Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
@@ -1096,11 +1094,10 @@ Parameters
 mark_notifications_by_parent
 ----------------------------
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **notification_type** # Can be a single string or an array of service identifiers. |br| In this example: ``vendor.extension.notification.type.sample``.
@@ -1117,11 +1114,10 @@ as most of the notification handling is done through the distinct item and/or pa
 However, there can be times where it is more convenient or accurate to work directly with the notification's unique id.
 For example, when the notifications are listed in the :abbr:`UCP (User Control Panel)` and a user can select specific notifications to be marked as read.
 
-Parameters
-^^^^^^^^^^
+.. rubric:: Parameters
 
 .. csv-table::
-   :header: "Parameter", "Description"
+   :header: Parameter, Description
    :delim: #
 
    **method_name**       # The notification method service identifier |br| For example: ``notification.method.board``

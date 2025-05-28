@@ -29,7 +29,7 @@ New Language Object
 A new Language object has been introduced that decouples language functions from the User object. That is to say, the following language functions now belong to the ``\phpbb\language\language`` class:
 
 .. csv-table::
-   :header: "Function", "Description"
+   :header: Function, Description
    :delim: |
 
    ``lang`` | "Advanced language substitution."
@@ -79,7 +79,7 @@ As of phpBB 3.2, a new and more powerful BBCode formatting engine has been integ
 The new engine has already been equipped with many PHP events making it even easier than before for extensions to configure BBCodes and BBCode formatted text. The following are the new PHP events:
 
 .. csv-table::
-   :header: "Event", "Description"
+   :header: Event, Description
    :delim: |
 
    ``core.text_formatter_s9e_configure_before`` | "Modify the s9e\TextFormatter configurator before the default settings are set."
@@ -131,7 +131,7 @@ A major change introduced by the new engine is how text (in posts, PMs, signatur
 Extensions that are storing their own messages with BBCodes and smilies should consider adding a TextReparser class to ensure their messages are updated to the new XML format. See `New Text Reparser`_ for more information.
 
 .. seealso::
-    The s9e/TextFormatter library `documentation and cookbook <http://s9etextformatter.readthedocs.io>`_.
+    The s9e/TextFormatter library `documentation and cookbook <https://s9etextformatter.readthedocs.io/>`_.
 
 New Text Reparser
 =================
@@ -274,7 +274,7 @@ phpBB 3.2 includes the Font Awesome toolkit. It is used by the default style Pro
 
 The result of this is significant template changes to Prosilver, including some new CSS classes. Extensions written for phpBB 3.1 that make use of any of Prosilver's icons may need to be adjusted to be compatible with phpBB 3.2.
 
-The benefit of the new `Font Awesome icons <http://fontawesome.io/icons/>`_ is they make it easy to improve GUI elements of your extension. For example, if an extension has a "Delete" link or button, you can easily add a nice little Trash Can icon to the link or button:
+The benefit of the new `Font Awesome icons <https://fontawesome.com/v4/icons/>`_ is they make it easy to improve GUI elements of your extension. For example, if an extension has a "Delete" link or button, you can easily add a nice little Trash Can icon to the link or button:
 
 .. code-block:: html
 

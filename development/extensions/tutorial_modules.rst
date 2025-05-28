@@ -74,7 +74,7 @@ The ``main_info`` class has only one method ``module()`` which returns an array
 with the following information:
 
 .. csv-table::
-    :header: "Key", "Content"
+    :header: Key, Content
     :delim: |
 
     ``filename`` | "Fully name-spaced path to the `Module class`_, starting with a leading slash."
@@ -86,7 +86,7 @@ with the following information:
 Note that we have defined one mode named ``settings`` with the following information:
 
 .. csv-table::
-    :header: "Key", "Content"
+    :header: Key, Content
     :delim: |
 
     ``title`` | "Language key of the mode-title that is displayed in the ACP module
