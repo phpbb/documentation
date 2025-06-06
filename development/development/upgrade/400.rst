@@ -145,6 +145,12 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - ``4.0.0-a1``
      - Use ``\bantu\IniGetWrapper\IniGetWrapper`` instead.
 
+   * - ``\phpbb\event\dispatcher::dispatch()``
+     - ``phpbb/event/dispatcher.php``
+     - Refactored
+     - ``4.0.0-a1``
+     - Use ``\phpbb\event\dispatcher::trigger_event()`` instead.
+
    * - ``bbcode_second_pass_by_extension``
      - ``includes/bbcode.php``
      - Removed in ``4.0.0-a1``, deprecated in ``3.2.10``
