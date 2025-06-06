@@ -281,7 +281,7 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - ``includes/functions_compatibility.php``
      - Removed
      - ``4.0.0-a1``
-     - Use ``phpbb_delete_user_pms`` instead. Pay attention to pay array instead of single user id.
+     - Use ``phpbb_delete_users_pms()`` instead. Expects an array of users ids instead of single user id.
 
    * - ``phpbb_to_numeric``
      - ``includes/functions_compatibility.php``
@@ -389,13 +389,13 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - ``includes/functions_acp.php``
      - Removed
      - ``4.0.0-a1``
-     - Use phpbb_build_cfg_template() instead.
+     - Use ``phpbb_build_cfg_template()`` instead.
 
    * - ``h_radio``
      - ``includes/functions_acp.php``
      - Removed
      - ``4.0.0-a1``
-     - Use phpbb_build_radio() instead.
+     - Use ``phpbb_build_radio()`` instead.
 
    * - ``build_select``
      - ``includes/functions_acp.php``
