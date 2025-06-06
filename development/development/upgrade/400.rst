@@ -397,6 +397,12 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
      - ``4.0.0-a1``
      - Use phpbb_build_radio() instead.
 
+   * - ``build_select``
+     - ``includes/functions_acp.php``
+     - Refactored
+     - ``4.0.0-a1``
+     - Now ``build_select()`` returns an array of select options instead of a string of HTML.
+
    * - ``messenger``
      - ``includes/functions_messenger.php``
      - Refactored to new messenger system, removed jabber support
