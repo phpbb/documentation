@@ -410,3 +410,30 @@ Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/
 * **Type of change:** The type of change, e.g. added, changed, deprecated, or removed in this version.
 * **Version:** Version in which this change was introduced.
 * **Explanation:** The suggested approach to handle the change. This could involve using an alternative function, migrating code to a new approach, or providing additional information.
+
+Template function changes
+=========================
+The following table lists function changes that might affect custom Style or Extension code.
+
+.. list-table::
+   :widths: 15 10 10 65
+   :header-rows: 1
+
+   * - Function
+     - Type of change
+     - Version
+     - Explanation
+   * - ``Icon()``
+     - Added
+     - ``4.0.0-a1``
+     - Icons may be rendered using ``{{ Icon('font', 'bold') }}`` in Twig instead of manually writing HTML like ``<i class="fa-bold icon"></i>``
+
+       Arguments:
+
+       - Icon type ('font' | 'png' | 'svg')
+       - Icon name (e.g.: 'bold')
+       - Icon title; optional, default: empty ``''``
+       - Hide the icon title from view; optional, default: ``false``
+       - Additional classes (e.g.: 'fa-fw'); optional, defaul:t ``'fas'``
+       - Additional attributes for the icon, where the key is the attribute, ``{'data-ajax': 'mark_forums'}`` results in ``data-ajax="mark_forums"``; optional, default: ``{}``
+
