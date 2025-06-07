@@ -29,6 +29,13 @@ changes across versions, we recommend reviewing the following Symfony upgrade gu
 
 Additional guides are available in the `Symfony GitHub repository <https://github.com/symfony/symfony/tree/6.4>`_.
 
+Twig
+----
+phpBB 4.0 uses Twig 3.14, which introduces deprecations that may impact extension and style development.
+We recommend reviewing the official Twig deprecation guide when updating your custom templates or Twig-related code:
+
+- `Twig 3.x Deprecated Features <https://twig.symfony.com/doc/3.x/deprecated.html>`_
+
 Major changes
 =============
 
