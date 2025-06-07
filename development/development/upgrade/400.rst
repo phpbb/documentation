@@ -438,7 +438,7 @@ The following table lists function changes that might affect custom Style or Ext
    * - ``Icon()``
      - Added
      - ``4.0.0-a1``
-     - Icons may be rendered using ``{{ Icon('font', 'bold') }}`` in Twig instead of manually writing HTML like ``<i class="fa-bold icon"></i>``
+     - Icons may be rendered using ``{{ Icon('font', 'bold') }}`` in Twig instead of manually writing HTML like ``<i class="fa-bold icon"></i>``.
 
        Arguments:
 
@@ -446,6 +446,5 @@ The following table lists function changes that might affect custom Style or Ext
        - Icon name (e.g.: 'bold')
        - Icon title; optional, default: empty ``''``
        - Hide the icon title from view; optional, default: ``false``
-       - Additional classes (e.g.: 'fa-fw'); optional, defaul:t ``'fas'``
+       - Additional classes (e.g.: 'fa-fw'); optional, default: ``'fas'``
        - Additional attributes for the icon, where the key is the attribute, ``{'data-ajax': 'mark_forums'}`` results in ``data-ajax="mark_forums"``; optional, default: ``{}``
-
