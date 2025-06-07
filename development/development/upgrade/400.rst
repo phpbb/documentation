@@ -2,7 +2,8 @@
 phpBB 3.3 to 4.0
 ================
 
-phpBB 4.0 is a major release that contains backward compatibility breaks and also introduces some deprecations.
+phpBB 4.0 is a major release that includes backward-incompatible changes and new deprecations.
+This guide highlights the most important changes and resources to help extension and style developers adapt their code.
 
 .. contents:: Table of Contents
    :depth: 2
@@ -14,42 +15,49 @@ Basics
 
 PHP
 ---
-The minimum required version of PHP for phpBB 4.0 is ``8.1`` with full support for versions ``8.2`` and ``8.3``.
-PHP code that worked with the supported versions of phpBB 3.3 should work with phpBB 4.0 as well but might require minor adjustments.Recommendation
+phpBB 4.0 requires PHP 8.1 or higher. Most PHP code compatible with phpBB 3.3 should work in phpBB 4.0 with minimal changes,
+but you may need to make adjustments depending on deprecated or changed functionality.
 
 Symfony
 -------
-phpBB 4.0 ships with Symfony 6.4. There are quite a few changes to the standard Symfony version that came with phpBB 3.3.
-The following upgrade guides provides by Symfony might help with resolving some of the issues you might encounter when upgrading
-custom PHP or Extension code for phpBB 4.0:
+phpBB 4.0 uses Symfony 6.4, a significant upgrade from the version bundled with phpBB 3.3. As Symfony introduced breaking
+changes across versions, we recommend reviewing the following Symfony upgrade guides when updating custom code or extensions:
 
 - `Upgrade Symfony from 3.x to 4.0 <https://github.com/symfony/symfony/blob/4.4/UPGRADE-4.0.md>`_
 - `Upgrade Symfony from 4.4 to 5.0 <https://github.com/symfony/symfony/blob/5.4/UPGRADE-5.0.md>`_
 - `Upgrade Symfony from 5.x to 6.0 <https://github.com/symfony/symfony/blob/6.4/UPGRADE-6.0.md>`_
 
-You can find more upgrade guides in the `Symfony Repository <https://github.com/symfony/symfony/tree/6.4>`_ on GitHub.
+Additional guides are available in the `Symfony GitHub repository <https://github.com/symfony/symfony/tree/6.4>`_.
 
 Major changes
 =============
 
 Ban system
 ----------
-The ban system has been greatly refactored for phpBB 4.0. As part of this, the following changes were introduced:
+The ban system has been significantly refactored in phpBB 4.0. Key changes include:
 
-- Added support for banning `CIDR blocks <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_blocks>`_
-- Added support for IPv6 banning
-- Removed "exclude" functionality which resulted in ambiguous settings
+- `CIDR block <https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_blocks>`_ support for banning IP ranges.
+- IPv6 banning is now supported.
+- “Exclude” functionality has been removed due to ambiguity and inconsistent behavior.
 
 Removal of Jabber/XMPP
 ----------------------
-The Jabber/XMPP functionality has been removed from phpBB 4.0. This includes the Jabber/XMPP settings in the ACP and the Jabber/XMPP notification system.
-Users with Jabber/XMPP accounts will no longer receive notifications via Jabber/XMPP and have instead been migrated to email notifications.
-The Jabber/XMPP functionality was removed due to the lack of support for the XMPP protocol in modern browsers and the fact that it was not widely used by phpBB users.
+All Jabber/XMPP features have been removed in phpBB 4.0:
+
+- Jabber/XMPP settings in the ACP are gone.
+- XMPP-based notifications have been discontinued.
+- Users who previously used Jabber/XMPP will now receive notifications via email.
+
+This removal was driven by lack of browser support for XMPP and limited adoption within the phpBB community.
 
 Class and function changes
 ==========================
+Several classes and functions have been changed or removed. If your extension or code uses phpBB internals, you’ll want to:
+
+- Review the updated `phpBB 4.0 API documentation <https://area51.phpbb.com/docs/code/master/>`_
+- Audit your code for usages of deprecated or removed methods/classes
+
 The following table lists class and function changes that might affect custom PHP or Extension code.
-Also have a look at the `phpBB API documentation <https://area51.phpbb.com/docs/code/master/>`_ for further insight into the class and function API in phpBB 4.0.
 
 .. list-table::
    :widths: 15 15 10 10 50
