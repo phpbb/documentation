@@ -82,13 +82,55 @@ text ``DEMO_PAGE``. We will fix the link text in the next section.
     ``config.php`` file, which will force the template engine to always
     look for template listeners when a page is being rendered.
 
-It's important to understand that when phpBB compiles the templates,
-there is no current system for determining the priority in which template
-listeners from different extensions subscribed to the same event are
-compiled. In rare cases some extensions could cause a conflict, in which case
-the recommendation is for the extension authors to work together on a solution for their
-conflicting template listeners.
+Prioritising template event listeners (optional)
+------------------------------------------------
 
+In rare cases, conflicts may occur when multiple extensions subscribe to the same template
+event using template listeners. To resolve such conflicts, phpBB allows you to control the
+order in which template event listeners are compiled by assigning them priorities.
+
+This is done by subscribing a PHP event listener to the 
+``core.twig_event_tokenparser_constructor`` event and using the 
+``template_event_priority_array`` variable to define listener priorities.
+
+Example:
+
+.. code-block:: php
+
+    <?php
+
+    namespace acme\demo\event;
+
+    use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+
+    class main_listener implements EventSubscriberInterface
+    {
+		// Subscribe an event listener function to the core.twig_event_tokenparser_constructor
+        static public function getSubscribedEvents()
+        {
+            return [
+                'core.twig_event_tokenparser_constructor' => 'set_template_event_priority',
+            ];
+        }
+
+		// Give your extension a high priority when rendering the navbar_header_quick_links_after template event.
+        public function set_template_event_priority($event)
+        {
+            $template_event_priority_array = $event['template_event_priority_array'];
+            $template_event_priority_array['acme_demo'] = [
+                'event/navbar_header_quick_links_after' => 100,
+            ];
+            $event['template_event_priority_array'] = $template_event_priority_array;
+        }
+    }
+
+In this example, ``100`` is an integer implying the template event priority. Higher values 
+indicate greater importance, meaning the corresponding template event listener 
+will be compiled earlier than others listening to the same event.
+For example, the content of template event listener which has a priority value of ``100``
+will be rendered above/before the same template event listener which has a priority value of ``99``.
+If multiple listeners share the same priority value, they will be rendered in the order they were read 
+from their respective filesystem locations. If no priority value set, it defaults to ``0``.
 
 PHP Core Events & Listeners
 ===========================
