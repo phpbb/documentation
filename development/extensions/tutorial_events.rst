@@ -96,7 +96,7 @@ This can be accomplished using PHP core event listener subscribed to the
 
 ::
 
-	'<author>_<extension_name>' => [
+	'<vendor>_<name>' => [
 		'event/<template_event_name>' => <priority_number>,
 	],
 
