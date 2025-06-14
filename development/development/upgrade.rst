@@ -2,13 +2,11 @@
 Upgrade Guide
 =============
 
-This document outlines changes introduced in different versions of phpBB. These changes may require adjustments to your
-existing custom PHP code or Extension code when upgrading to specific versions from a prior versions of phpBB.
-It is mainly meant to be used by core and Extension developers and does not provide end user documentation for upgrading.
+This guide summarizes code-level changes introduced in various phpBB versions that may require updates to your custom PHP code, extensions, or styles during an upgrade.
 
-Unless explicitly stated otherwise, each version describes the changes compared to the previous major or minor version
-that directly preceded it. For example the upgrade guide for 4.0 will describe the changes compared to 3.3 whereas an upgrade guide
-for 4.1 will describe the changes compared to 4.0.
+It is intended primarily for core developers, extension authors, and style creators. **It does not cover instructions for end users performing a board upgrade.**
+
+Unless otherwise noted, each upgrade entry documents changes relative to the immediately preceding major or minor release.
 
 Contents:
 
