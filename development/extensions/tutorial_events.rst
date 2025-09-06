@@ -256,7 +256,7 @@ the link in the navigation bar should now display ``Demo`` instead of
     phpBB’s core PHP and template files have been prepared with dozens of event locations.
     However, if there are no events where your extension may need one, the phpBB development
     team welcomes event requests at the
-    `area51.com Event Requests <http://area51.phpbb.com/phpBB/viewforum.php?f=111>`_ forum.
+    `area51.com Event Requests <https://area51.phpbb.com/phpBB/viewforum.php?f=111>`_ forum.
 
 Prioritising event listeners (optional)
 ---------------------------------------

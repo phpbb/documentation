@@ -131,7 +131,7 @@ A major change introduced by the new engine is how text (in posts, PMs, signatur
 Extensions that are storing their own messages with BBCodes and smilies should consider adding a TextReparser class to ensure their messages are updated to the new XML format. See `New Text Reparser`_ for more information.
 
 .. seealso::
-    The s9e/TextFormatter library `documentation and cookbook <http://s9etextformatter.readthedocs.io>`_.
+    The s9e/TextFormatter library `documentation and cookbook <https://s9etextformatter.readthedocs.io>`_.
 
 New Text Reparser
 =================
@@ -274,7 +274,7 @@ phpBB 3.2 includes the Font Awesome toolkit. It is used by the default style Pro
 
 The result of this is significant template changes to Prosilver, including some new CSS classes. Extensions written for phpBB 3.1 that make use of any of Prosilver's icons may need to be adjusted to be compatible with phpBB 3.2.
 
-The benefit of the new `Font Awesome icons <http://fontawesome.io/icons/>`_ is they make it easy to improve GUI elements of your extension. For example, if an extension has a "Delete" link or button, you can easily add a nice little Trash Can icon to the link or button:
+The benefit of the new `Font Awesome icons <https://fontawesome.com>`_ is they make it easy to improve GUI elements of your extension. For example, if an extension has a "Delete" link or button, you can easily add a nice little Trash Can icon to the link or button:
 
 .. code-block:: html
 
