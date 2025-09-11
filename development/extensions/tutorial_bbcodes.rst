@@ -79,8 +79,8 @@ The following sample code shows how BBCodes can be toggled and manipulated using
 
 .. seealso::
 
-    https://area51.phpbb.com/docs/code/3.2.x/phpbb/textformatter/parser_interface.html
-    https://s9etextformatter.readthedocs.io/Getting_started/Runtime_configuration/
+    - `phpBB API Documentation <https://area51.phpbb.com/docs/code/master/phpbb/textformatter/parser_interface.html>`_
+    - `Runtime configuration - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Getting_started/Runtime_configuration/>`_
 
 
 Executing PHP Code With BBCodes
@@ -133,9 +133,9 @@ method to read and change its attributes during parsing based on who is being qu
 
 .. seealso::
 
-    https://s9etextformatter.readthedocs.io/Filters/Attribute_filters/
-    https://s9etextformatter.readthedocs.io/Filters/Tag_filters/
-    https://s9etextformatter.readthedocs.io/Filters/Callback_signature/
+    - `Attribute filters - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Filters/Attribute_filters/>`_
+    - `Tag filters - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Filters/Tag_filters/>`_
+    - `Callback signatures - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Filters/Callback_signature/>`_
 
 
 Template Parameters
@@ -242,8 +242,8 @@ your own template parameters, in addition to the default one's already available
 
 .. seealso::
 
-    https://s9etextformatter.readthedocs.io/Templating/Template_parameters/
-    https://s9etextformatter.readthedocs.io/Plugins/BBCodes/Use_template_parameters/
+    - `Template parameters - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Templating/Template_parameters/>`_
+    - `Use template parameters - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Plugins/BBCodes/Use_template_parameters/>`_
 
 
 Registering Custom Variables
@@ -300,10 +300,10 @@ set the value before each parsing.
 
 .. seealso::
 
-    https://area51.phpbb.com/docs/code/3.2.x/phpbb/textformatter/parser_interface.html
-    https://s9etextformatter.readthedocs.io/Filters/Callback_signature/
-    https://s9etextformatter.readthedocs.io/Filters/Attribute_filters/
-    https://s9etextformatter.readthedocs.io/Filters/Tag_filters/
+    - `phpBB API Documentation <https://area51.phpbb.com/docs/code/master/phpbb/textformatter/parser_interface.html>`_
+    - `Callback signature - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Filters/Callback_signature/>`_
+    - `Attribute filters - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Filters/Attribute_filters/>`_
+    - `Tag filters - s9e\\TextFormatter <https://s9etextformatter.readthedocs.io/Filters/Tag_filters/>`_
 
 Enable Text Formatter Plugins
 =============================
@@ -354,4 +354,4 @@ settings are configured.
 
 .. seealso::
 
-    https://s9etextformatter.readthedocs.io
+    `s9e\\TextFormatter  <https://s9etextformatter.readthedocs.io>`_
