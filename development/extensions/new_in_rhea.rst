@@ -131,7 +131,7 @@ A major change introduced by the new engine is how text (in posts, PMs, signatur
 Extensions that are storing their own messages with BBCodes and smilies should consider adding a TextReparser class to ensure their messages are updated to the new XML format. See `New Text Reparser`_ for more information.
 
 .. seealso::
-    The s9e/TextFormatter library `documentation and cookbook <https://s9etextformatter.readthedocs.io/>`_.
+    The s9e/TextFormatter library `documentation and cookbook <https://s9etextformatter.readthedocs.io>`_.
 
 New Text Reparser
 =================
