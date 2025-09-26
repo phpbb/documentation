@@ -35,8 +35,8 @@ Package
   ``<languagename>_<version>`` folder. The files from above should be placed in
   this folder.
 * Revision name in the `Customisation Database`_ should be left blank, contain
-  the phpBB package version and/or package release name (e.g. ``3.3.10`` /
-  ``Bertie's translation`` for 3.3.10) for more understanding.
+  the phpBB package version and/or package release name (e.g. ``4.0.0`` /
+  ``Bertie's translation`` for 4.0.0) for more understanding.
 
 Package Validation
 ==================
@@ -48,7 +48,7 @@ Package Validation
     + ``language/en/``
     + ``styles/prosilver/theme/en/``
 
-* Language packages must contain 1 additional files:
+* Language packages must contain 1 additional file:
 
     + ``language/{iso}/LICENSE``
 
@@ -58,13 +58,13 @@ Package Validation
     + ``language/{iso}/README.md``
 
 * No other additional files are allowed!
-* All folders within the language-directories must contain an ``index.htm`` file (e.g. ``language/en/acp/index.htm``, ``language/en/index.htm``, ``styles/prosilver/theme/en/index.htm``, see the `Language Pack Submission Policy`_ for a complete list.).
-* An exception from this rule are the the directories for the viglink-translation and the directories which belong the phpBB package (e.g. ``language/``, ``styles/``).
+* The following folders within the language-directories must contain an ``index.htm`` file: ``language/en/acp/index.htm``, ``language/en/index.htm``, ``styles/prosilver/theme/en/index.htm``.
+* No ``index.htm`` is need in the directories for the viglink-translation and the directories which belong the phpBB package: ``language/``, ``styles/``)
 
 File Validation
 ===============
 
-* All files must be stored using ``LF`` (LineFeed / UNIX) line endings.
+* All files must be saved with ``LF`` (LineFeed / UNIX) line endings.
 * All ``.php`` files must have a check for the ``IN_PHPBB`` constant:
 
     .. code-block:: php
@@ -79,7 +79,7 @@ File Validation
   BOM*.
 * ``.php`` files must **not** produce any output. There should be no characters
   before ``<?php``. ``.php`` files must **not** contain the closing tag ``?>``,
-  but just end with a new line
+  but just end with an empty new line.
 
 language/{iso}/composer.json
 ----------------------------
@@ -93,9 +93,9 @@ The ``composer.json`` from the default language `British English` looks like thi
             "name": "phpbb/phpbb-language-en",
             "description": "phpBB Forum Software default language",
             "type": "phpbb-language",
-            "version": "4.0.0-a1-dev",
+            "version": "4.0.0-RC1",
             "homepage": "https://www.phpbb.com",
-            "license": "GPL-2.0",
+            "license": "GPL-2.0-only",
             "authors": [
                 {
                     "name": "phpBB Limited",
@@ -113,11 +113,12 @@ The ``composer.json`` from the default language `British English` looks like thi
                 "language-iso": "en",
                 "english-name": "British English",
                 "local-name": "British English",
-                "phpbb-version": "4.0.0-a1-dev",
+                "phpbb-version": "4.0.0-RC1",
                 "direction": "ltr",
                 "user-lang": "en-gb",
                 "plural-rule": 1,
-                "recaptcha-lang": "en-GB"
+                "recaptcha-lang": "en-GB",
+                "turnstile-lang": "en"
             }
         }
 
@@ -126,11 +127,11 @@ Main block
 The main block of a language's ``composer.json`` file requires these six fields of information:
 
 * ``"name":`` Must start with ``phpbb/phpbb-language-`` and be followed by the language iso code e.g.: ``phpbb/phpbb-language-de``
-* ``"description":`` Must contain a short description for your translation e.g.: ``phpBB Forum Software language package Dutch (Casual Honorifics)``
+* ``"description":`` Must contain a short description for your translation e.g.: ``phpBB Forum Software language package Dutch (Casual Honorifics)``. URLs are not allowed. 
 * ``"type":`` Must be: ``"phpbb-language",``. Do not change this!
 * ``"version":`` Should be the version number of the language package. This can be different than the phpBB-version it is made for.
 * ``"homepage":`` You may include a URL to your website, or leave this field empty using empty quotes ``""``
-* ``"license":`` Must be: ``"GPL-2.0",``. Do not change this!
+* ``"license":`` Must be: ``"GPL-2.0-only",``. Do not change this!
 
 Authors
 ^^^^^^^
@@ -146,21 +147,22 @@ Use this section to credit the authors and maintainers of this translation. You 
 
 Support
 ^^^^^^^
-Use this section to provide links to your websites, email, chat channels, etc. where you provide support for this translation.
+Use this section to provide links to your websites, email, chat channels, etc. where you provide support for this translation. You should have at least one contact URL e.g. the support section in the Customisation Database on www.phpBB.com
 
 Extra
 ^^^^^
 The Extra block contains information required for the translation to function correctly within a phpBB installation.
 Please do not omit any of these lines, and fill them out carefully.
 
-* ``"language-iso":`` This must be your ISO code. In British English it is ``en``. This is also the same as the directory name e.g. ``language/en/``.
+* ``"language-iso":`` This must be your ISO code. In British English it is ``en``. This is also the same as the directory name e.g. ``language/en/`` or ``language/de_x_sie/``. 
 * ``"english-name":`` The English name of your language package e.g.: ``"German (Casual Honorifics)"``. (Formerly, this was the first line of ``language/{iso}/iso.txt``.)
 * ``"local-name":`` The local name of your language package e.g.: ``"Deutsch (Du)"``. (Formerly, this was the  second line of ``language/{iso}/iso.txt``.)
-* ``"phpbb-version":`` This must represent an existing phpBB release version e.g.: ``4.0.1``. Individual naming is not allowed here!
+* ``"phpbb-version":`` This must represent an existing phpBB release version e.g.: ``4.0.0``. Individual naming is not allowed here!
 * ``"direction":`` Use ``"ltr""`` for "left-to-right" languages (e.g.: Italian, Dutch, German) and ``"rtl"`` for right-to-left language (e.g.: Arabic).
-* ``"user-lang":`` Input the user language code, e.g.: "de". (Formerly defined in the ``language/{iso}/common.php`` e.g.: ``'USER_LANG'    => 'de',``.)
+* ``"user-lang":`` Input the user language code, e.g.: "de". (Formerly defined in the ``language/{iso}/common.php`` e.g.: ``'USER_LANG'    => 'de',`` or ``'USER_LANG'    => 'de-x-sie',``.)
 * ``"plural-rule":`` Input the plural rule number of your language. (Formerly defined in the ``language/{iso}/common.php`` e.g.: ``'PLURAL_RULE'	=> 1,``.) Check the `plurals`_ section for more details.
 * ``"recaptcha-lang":`` Input the ReCaptcha-Language-Code here. (Formerly defined in the ``language/{iso}/captcha_recaptcha.php`` e.g.: ``'RECAPTCHA_LANG' => 'de',``.) Check `Google ReCaptcha`_ for further information which code to use.
+* ``"turnstile-lang":`` Input the Turnstile-Language-Code here. Check `Cloudflare Turnstile`_ for further information which code to use.
 
 .. note::
 
@@ -314,5 +316,6 @@ License
 .. _officially: https://www.phpbb.com/support/intl/
 .. _Dutch language: https://www.phpbb.com/customise/db/translation/dutch_casual_honorifics/
 .. _Google ReCaptcha: https://developers.google.com/recaptcha/docs/language
+.. _Cloudflare Turnstile: https://developers.cloudflare.com/turnstile/reference/supported-languages/
 .. _plurals: https://area51.phpbb.com/docs/dev/master/language/plurals.html
 .. _composer.json validation: https://getcomposer.org/doc/03-cli.md#validate
