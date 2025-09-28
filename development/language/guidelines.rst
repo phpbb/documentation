@@ -132,7 +132,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 5) Submissions should follow the recommendations in the `Coding Guidelines`_ as closely as possible.
 
-6) All PHP and text files must be encoded in UTF-8 without BOM and have new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
+6) All PHP and text files must be encoded in UTF-8 without BOM and have an empty new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
 
 7) The translation is mostly your work and you have a right to hold a copyright on the translation and put your name or the names of those on your team in the ``composer.json`` file in the authors section.
 

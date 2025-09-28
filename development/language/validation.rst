@@ -147,7 +147,7 @@ Use this section to credit the authors and maintainers of this translation. You 
 
 Support
 ^^^^^^^
-Use this section to provide links to your websites, email, chat channels, etc. where you provide support for this translation. You should have at least one contact URL e.g. the support section in the Customisation Database on www.phpBB.com
+Use this section to provide links to your websites, email, chat channels, etc. where you provide support for this translation. You should have at least one contact URL, e.g. the support section in the Customisation Database on www.phpBB.com.
 
 Extra
 ^^^^^
