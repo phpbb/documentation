@@ -14,7 +14,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 
 2) Submissions have to be complete. Partial translations are not allowed and will be automatically denied. E-mails, text files and theme-images must also be fully translated.
 
-3) Language packs can contain three additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README.md`` (optional) and ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README.md`` file and you can list the entire version history in the ``CHANGELOG.md`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of `GNU General Public License 2.0`_ and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``iso.txt`` file. Any other additional file(s) will be detected and your submission will be denied.
+3) Language packs can contain three additional files (one mandatory and four optionals) that are not present in the British English language pack: ``LICENSE`` (mandatory), ``README.md`` (optional) and ``CHANGELOG.md`` (optional). You are free to write whatever you want in the ``README.md`` file and you can list the entire version history in the ``CHANGELOG.md`` file. The ``LICENSE`` file is automatically added during the upload process so you do not have to manually add the file. Its purpose is to inform the user what license is used. Language packs inherit phpBB's license of `GNU General Public License 2.0`_ and no additional or alternative licenses are allowed. All of these additional files must be placed in the ``language/{iso}/`` directory, next to the ``composer.json`` file. Any other additional file(s) will be detected and your submission will be denied.
 
 4) Submissions must have the following files and structure:
 
@@ -55,20 +55,6 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        styles.php
                        users.php
                     email/
-                       short/
-                          bookmark.txt
-                          newtopic_notify.txt
-                          post_approved.txt
-                          post_disapproved.txt
-                          post_in_queue.txt
-                          privmsg_notify.txt
-                          quote.txt
-                          report_pm.txt
-                          report_post.txt
-                          topic_approved.txt
-                          topic_disapproved.txt
-                          topic_in_queue.txt
-                          topic_notify.txt
                        admin_activate.txt
                        admin_send_email.txt
                        admin_welcome_activated.txt
@@ -83,6 +69,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        group_request.txt
                        index.htm
                        installed.txt
+                       mention.txt
                        newtopic_notify.txt
                        pm_report_closed.txt
                        pm_report_deleted.txt
@@ -96,6 +83,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        report_closed.txt
                        report_deleted.txt
                        report_pm.txt
+                       report_pm_closed.txt
                        report_post.txt
                        test.txt
                        topic_approved.txt
@@ -104,7 +92,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                        topic_notify.txt
                        user_activate.txt
                        user_activate_inactive.txt
-                       user_activate_password.txt
+                       user_forgot_password.txt
                        user_reactivate_account.txt
                        user_remind_inactive.txt
                        user_resend_inactive.txt
@@ -116,6 +104,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                     app.php
                     captcha_qa.php
                     captcha_recaptcha.php
+                    captcha_turnstile.php
                     cli.php
                     CHANGELOG.md (optional)
                     common.php
@@ -138,12 +127,12 @@ If your language pack is denied and then resubmitted, it is placed at the end of
                  prosilver/
                     theme/
                        {iso}/
-                          index.htm (optional)
+                          index.htm
                           stylesheet.css
 
-5) Submissions should follow the recommendations in the `4.0 Translation (i18n/L10n) Guidelines`_ as closely as possible, especially the `4.0 Writing style`_.
+5) Submissions should follow the recommendations in the `Coding Guidelines`_ as closely as possible.
 
-6) All PHP and text files must be encoded in UTF-8 without BOM and a new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
+6) All PHP and text files must be encoded in UTF-8 without BOM and have an empty new line at the end of the file. Many modern text editors use this as a default setting, but we recommend checking it in your editor's settings. We recommend you use `Notepad++`_ or `PSPad`_, both lightweight and free.
 
 7) The translation is mostly your work and you have a right to hold a copyright on the translation and put your name or the names of those on your team in the ``composer.json`` file in the authors section.
 
@@ -162,8 +151,7 @@ If your language pack is denied and then resubmitted, it is placed at the end of
 .. _Customisations Database: https://www.phpbb.com/go/customise/language-packs/4.0
 .. _Language Packs Database: https://www.phpbb.com/languages/
 .. _GNU General Public License 2.0: https://opensource.org/license/gpl-2-0
-.. _4.0 Translation (i18n/L10n) Guidelines: https://area51.phpbb.com/docs/40x/coding-guidelines.html#translation
-.. _4.0 Writing style: https://area51.phpbb.com/docs/40x/coding-guidelines.html#writingstyle
+.. _Coding Guidelines: https://area51.phpbb.com/docs/dev/master/development/index.html
 .. _Notepad++: https://notepad-plus-plus.org/
 .. _PSPad: http://www.pspad.com/en/
 .. _officially: https://www.phpbb.com/support/intl/
