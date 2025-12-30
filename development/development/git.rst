@@ -68,13 +68,20 @@ consider adding it as an idea to `phpBB Ideas <https://www.phpbb.com/community/i
 
 Branch Names
 ============
-Feature branches should be called **feature/feature-name**. Bug or minor
-improvements do not need a name, their branches should be called **ticket/1234**
-with the correct ticket id. If you want to give something a name that is not a
-feature you may use **task/task-name**. When these branches go into the main
-phpBB repository they are renamed **<category>/<user>/<name-or-id>** or
-**user/<category>/<name-or-id>** to make clear from which developer's repository
-the branch was merged.
+Branch names must have a prefix ending with a slash. There are only 3 types of prefixes allowed:
+
+- ``feature/`` followed by a feature name for branches adding a feature.
+- ``task/`` followed by a task name for branches which neither adding a feature nor fixing bugs.
+- ``ticket/`` followed by a ticket number for branches fixing bugs.
+
+Branch naming examples:
+
+- ``feature/feature-name`` for features.
+- ``task/task-name`` for tasks.
+- ``ticket/12345`` for bugs fixes.
+
+| When branches go into the main phpBB repository they are renamed to **<category>/<user>/<name-or-id>**
+| or **user/<category>/<name-or-id>** to make clear from which developer's repository the branch was merged.
 
 Commit Messages
 ===============
