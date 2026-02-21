@@ -21,6 +21,7 @@ Contents:
    migrations/index
    request/request
    testing/index
+   update_system/maintenance_page
    development/phpstorm
 
 Indices and tables
