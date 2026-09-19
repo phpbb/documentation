@@ -409,7 +409,7 @@
 				<listitem><para><emphasis role="bold">Make a backup of the database</emphasis></para></listitem>
 				<listitem><para>Locally, perform for the following steps:</para>
 					<orderedlist>
-						<listitem><para>Download the phpBB 3.3 <ulink url="https://www.phpbb.com/downloads/3.3/update">Advanced Update</ulink> archive</para></listitem>
+						<listitem><para>Download the phpBB 3.3 <ulink url="https://www.phpbb.com/downloads/3.3/advanced_update">Advanced Update</ulink> archive</para></listitem>
 						<listitem><para>Extract the <filename class="directory">install/</filename> directory</para></listitem>
 						<listitem><para>Extract the <filename class="directory">vendor/</filename> directory</para></listitem>
 					</orderedlist>
